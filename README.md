@@ -10,10 +10,16 @@ Ein Pen&Paper Rollenspiel, das das Pathfinder2e Universum in ein modernes Settin
 
 ### ✅ Implementierte Inhalte
 
-#### **Klassen** (`classes/`)
+#### **Klassen** (`classes/`) - **9 Klassen**
 - **Söldner** - Professionelle Kämpfer für Geld und Aufträge
 - **Wächter** - Disziplinierte Verteidiger mit moralischen Prinzipien  
 - **Agent** - Geheimdienstler und Infiltratoren
+- **Magier** - Intellektuelle Zauberwirker mit wissenschaftlichem Ansatz
+- **Okkultist** - Zauberwirker des Verbotenen mit Ritualen und Pakten
+- **Schamane** - Spirituelle Praktiker mit Naturverbindung
+- **Raufbold** - Straßenkämpfer und Untergrundkrieger
+- **Ingenieur** - Technische Erfinder und Handwerker
+- **Mediziner** - Heiler und medizinische Spezialisten
 
 #### **Rassen** (`races/`)
 - **Elfen** - Magische Aristokraten mit langer Lebensspanne
@@ -32,13 +38,29 @@ Ein Pen&Paper Rollenspiel, das das Pathfinder2e Universum in ein modernes Settin
 #### **Regeln** (`rules/`)
 - Struktur vorbereitet für zukünftige Spielmechaniken
 
-#### **Zauber** (`spells/`)
+#### **Bestiary** (`bestiary/`)
+- Struktur für Kreaturen und NPCs vorbereitet
+- Unterordner für verschiedene Kreaturentypen
+
+#### **Ausrüstung** (`gear/`)
+- Struktur für Waffen und Ausrüstung vorbereitet
+- Unterordner für verschiedene Ausrüstungskategorien
+
+#### **Zauber** (`spells/`) - **14 Zauber**
 - **Feuerball** - Zerstörerischer Feuerzauber mit Explosionspotential
 - **Schutzschild** - Defensiver Zauber gegen physische Angriffe
 - **Unsichtbarkeit** - Versteckzauber für Spione und Agenten
 - **Heilung** - Wiederherstellung von Trefferpunkten und Krankheiten
 - **Gedankenlesen** - Mentale Invasion und Informationsgewinnung
 - **Blitzschlag** - Elektrischer Angriffszauber mit Ketteneffekt
+- **Benommenheit** - Mentaler Verwirrungszauber (Cantrip)
+- **Flamme Erschaffen** - Feuer-Cantrip für Elementarschule
+- **Magie Erkennen** - Magieerkennungs-Cantrip
+- **Magie Aufheben** - Anti-Magie-Zauber für fortgeschrittene Magier
+- **Licht** - Beleuchtungs-Cantrip
+- **Nachricht** - Telepathische Kommunikation
+- **Gedankenkontrolle** - Mentale Dominationszauber
+- **Teleportation** - Fernreisezauber für hohe Stufen
 
 ## Die Welt: Zeitalter des Goldes (1990)
 
@@ -98,13 +120,30 @@ Das Spiel erweitert Pathfinder2e um moderne Elemente:
 - **Konzern-Politik** und Geheimdienstoperationen
 - **Magie im Schatten** - versteckte magische Praktiken in einer technologischen Welt
 
+## Projektstruktur
+
+Das Projekt ist modular organisiert mit klarer Trennung der Systeme:
+
+```
+ShadowsOfTheCity/
+├── classes/          # 9 Charakterklassen mit TOC.md
+├── races/            # 8 Spielerrassen
+├── spells/           # 14 Zauber (Cantrips bis hohe Stufen)
+├── lore/             # Weltgeschichte und Mächte
+├── rules/            # Spielmechaniken (in Entwicklung)
+├── bestiary/         # Kreaturen und NPCs (in Entwicklung)
+├── gear/             # Waffen und Ausrüstung (in Entwicklung)
+└── README.md         # Projektübersicht
+```
+
 ## Entwicklung
 
 Das Projekt folgt einem modularen, dokumentationsgetriebenen Entwicklungsansatz:
 - **Modularität**: Jedes System ist als unabhängiges Modul mit klaren Schnittstellen konzipiert
-- **Dokumentation**: Jeder Ordner enthält umfassende README.md-Dateien
-- **Konsistenz**: Alle Elemente sind darauf ausgelegt, nahtlos zusammenzuarbeiten
+- **Dokumentation**: Jeder Ordner enthält umfassende README.md-Dateien und Strukturdefinitionen
+- **Konsistenz**: Alle Klassen folgen einem einheitlichen Schema (siehe `classes/TOC.md`)
 - **Balance**: Spielmechaniken sind sorgfältig ausbalanciert für faires und fesselndes Gameplay
+- **Setting-Integration**: Alle Inhalte sind perfekt in das Zeitalter des Goldes (1990) integriert
 
 ## Lizenz
 

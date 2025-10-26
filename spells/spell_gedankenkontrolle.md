@@ -1,4 +1,4 @@
-# **Mind Control**
+# **Gedankenkontrolle**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

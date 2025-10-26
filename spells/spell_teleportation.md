@@ -1,4 +1,4 @@
-# **Teleport**
+# **Teleportation**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

@@ -1,4 +1,4 @@
-# **Daze**
+# **Benommenheit**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

@@ -1,4 +1,4 @@
-# **Detect Magic**
+# **Magie Erkennen**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

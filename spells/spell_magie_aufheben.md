@@ -1,4 +1,4 @@
-# **Dispel Magic**
+# **Magie Aufheben**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

@@ -1,4 +1,4 @@
-# **Light**
+# **Licht**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

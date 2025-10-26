@@ -1,4 +1,4 @@
-# **Message**
+# **Nachricht**
 **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)
 
 ---

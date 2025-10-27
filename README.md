@@ -21,7 +21,7 @@ Ein Pen&Paper Rollenspiel, das das Pathfinder2e Universum in ein modernes Settin
 - **Ingenieur** - Technische Erfinder und Handwerker
 - **Mediziner** - Heiler und medizinische Spezialisten
 
-#### **Rassen** (`races/`)
+#### **Rassen** (`races/`) - **8 Rassen**
 - **Elfen** - Magische Aristokraten mit langer Lebensspanne
 - **Menschen** - Vielseitige Technologie-Träger
 - **Zwerge** - Industrielle Meister und Handwerker
@@ -127,8 +127,8 @@ Das Projekt ist modular organisiert mit klarer Trennung der Systeme:
 ```
 ShadowsOfTheCity/
 ├── classes/          # 9 Charakterklassen mit TOC.md
-├── races/            # 8 Spielerrassen
-├── spells/           # 14 Zauber (Cantrips bis hohe Stufen)
+├── races/            # 8 Spielerrassen mit TOC.md
+├── spells/           # 14 Zauber mit TOC.md (Cantrips bis hohe Stufen)
 ├── lore/             # Weltgeschichte und Mächte
 ├── rules/            # Spielmechaniken (in Entwicklung)
 ├── bestiary/         # Kreaturen und NPCs (in Entwicklung)
@@ -140,8 +140,8 @@ ShadowsOfTheCity/
 
 Das Projekt folgt einem modularen, dokumentationsgetriebenen Entwicklungsansatz:
 - **Modularität**: Jedes System ist als unabhängiges Modul mit klaren Schnittstellen konzipiert
-- **Dokumentation**: Jeder Ordner enthält umfassende README.md-Dateien und Strukturdefinitionen
-- **Konsistenz**: Alle Klassen folgen einem einheitlichen Schema (siehe `classes/TOC.md`)
+- **Dokumentation**: Jeder Ordner enthält umfassende TOC.md-Dateien und Strukturdefinitionen
+- **Konsistenz**: Alle Klassen, Rassen und Zauber folgen einem einheitlichen Schema (siehe `classes/TOC.md`, `races/TOC.md`, `spells/TOC.md`)
 - **Balance**: Spielmechaniken sind sorgfältig ausbalanciert für faires und fesselndes Gameplay
 - **Setting-Integration**: Alle Inhalte sind perfekt in das Zeitalter des Goldes (1990) integriert
 

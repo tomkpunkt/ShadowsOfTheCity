@@ -35,16 +35,27 @@ Ein Pen&Paper Rollenspiel, das das Pathfinder2e Universum in ein modernes Settin
 - **Welt-Timeline** - Chronologie von Jahr -2000 bis 1990
 - **Mächte der Welt** - Konzerne, Organisationen und Staaten im Jahr 1990
 
-#### **Regeln** (`rules/`)
-- Struktur vorbereitet für zukünftige Spielmechaniken
+#### **Regeln** (`rules/`) - **Kernmechaniken implementiert**
+- **Kernmechaniken** - Grundlegende Spielmechaniken und Attribute
+- **Kampfsystem** - Initiative, Aktionen und Schaden
+- **Magiesystem** - Magie im Schatten und Zauberstufen
+- **Technologie** - Moderne Ausrüstung und Fertigkeiten
+- **Soziale Mechaniken** - Rassenhierarchie und Konzern-Politik
 
-#### **Bestiary** (`bestiary/`)
-- Struktur für Kreaturen und NPCs vorbereitet
-- Unterordner für verschiedene Kreaturentypen
+#### **Bestiary** (`bestiary/`) - **Kreaturen und NPCs implementiert**
+- **Bestiary-Übersicht** - Kreaturentypen und Schwierigkeitsgrade
+- **Menschliche NPCs** - Konzernangestellte, Geheimdienstler, Polizisten, Kriminelle
+- **Magische Wesen** - Geister, Dämonen, Elementare
+- **Technologische Kreaturen** - KI-Systeme, Roboter, Cyborgs
+- **Hybride Wesen** - Magitech-Konstrukte, Biotechnologische Wesen
 
-#### **Ausrüstung** (`gear/`)
-- Struktur für Waffen und Ausrüstung vorbereitet
-- Unterordner für verschiedene Ausrüstungskategorien
+#### **Ausrüstung** (`gear/`) - **Waffen und Ausrüstung implementiert**
+- **Ausrüstungsübersicht** - Waffen, Rüstung und Ausrüstung
+- **Nahkampfwaffen** - Einfache, kriegerische und zweihändige Waffen
+- **Fernkampfwaffen** - Projektilwaffen und traditionelle Waffen
+- **Magische Waffen** - Verzauberte Waffen und Artefakte
+- **Rüstung** - Leichte, mittlere und schwere Rüstung
+- **Technologie** - Kommunikation, Überwachung und Transport
 
 #### **Zauber** (`spells/`) - **14 Zauber**
 - **Feuerball** - Zerstörerischer Feuerzauber mit Explosionspotential
@@ -130,9 +141,9 @@ ShadowsOfTheCity/
 ├── races/            # 8 Spielerrassen
 ├── spells/           # 14 Zauber (Cantrips bis hohe Stufen)
 ├── lore/             # Weltgeschichte und Mächte
-├── rules/            # Spielmechaniken (in Entwicklung)
-├── bestiary/         # Kreaturen und NPCs (in Entwicklung)
-├── gear/             # Waffen und Ausrüstung (in Entwicklung)
+├── rules/            # Spielmechaniken (Kernmechaniken implementiert)
+├── bestiary/         # Kreaturen und NPCs (Bestiary implementiert)
+├── gear/             # Waffen und Ausrüstung (Ausrüstungssystem implementiert)
 └── README.md         # Projektübersicht
 ```
 
@@ -144,6 +155,22 @@ Das Projekt folgt einem modularen, dokumentationsgetriebenen Entwicklungsansatz:
 - **Konsistenz**: Alle Klassen folgen einem einheitlichen Schema (siehe `classes/TOC.md`)
 - **Balance**: Spielmechaniken sind sorgfältig ausbalanciert für faires und fesselndes Gameplay
 - **Setting-Integration**: Alle Inhalte sind perfekt in das Zeitalter des Goldes (1990) integriert
+
+## Changelog
+
+| Version | Datum | Änderungen |
+|:--|:--|:--|
+| 1.1 | [Aktuell] | **Major Update - Kernsysteme implementiert** |
+| | | - **Regeln:** Kernmechaniken, Kampfsystem, Magiesystem, Technologie, Soziale Mechaniken |
+| | | - **Bestiary:** Kreaturentypen, menschliche NPCs, magische Wesen, technologische Kreaturen |
+| | | - **Ausrüstung:** Waffensystem, Rüstungssystem, Technologie, magische Gegenstände |
+| | | - **Bugfixes:** Typo in bestiary/creatues -> creatures korrigiert |
+| 1.0 | [Datum] | Initiale Erstellung mit 9 Klassen |
+| | | - Kampfklassen: Söldner, Wächter, Raufbold |
+| | | - Zauberwirker: Magier, Okkultist, Schamane |
+| | | - Unterstützer: Agent, Ingenieur, Mediziner |
+
+---
 
 ## Lizenz
 

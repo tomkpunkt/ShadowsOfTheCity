@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du einen Gegner triffst, erhält dieser –1 auf Angriffswürfe für 1 Runde.
 examples: []

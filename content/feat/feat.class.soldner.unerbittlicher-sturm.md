@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du einen Gegner zu Boden bringst, erhältst du eine Bonusaktion (Schritt, Angriff oder Einschüchtern).
 examples: []

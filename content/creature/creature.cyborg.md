@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Humanoid (Cyborg), neutral - Stufe: 1 (200 EP) - TP: 55 (11d8 + 11) - RK: 16 (Technologische Verbesserungen) - Fertigkeiten: Technologie +6, Athletik +6 - Spezialfähigkeiten: Technologische Verbesserungen, Interface - Schwächen: EMP-Angriffe, Systemfehler - Aktionen: Technologische Angriffe, Interface"
 examples: []

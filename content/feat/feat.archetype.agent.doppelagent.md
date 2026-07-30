@@ -3,7 +3,8 @@ category: archetype
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du arbeitest für mehr als eine Macht. Du kannst einmal pro Woche eine verdeckte Agenda wechseln, ohne Loyalitätsmalus zu erleiden. Du erhältst +2 auf Täuschung gegen Organisationen oder Behörden. ---
 examples: []

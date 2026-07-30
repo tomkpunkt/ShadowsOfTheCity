@@ -3,7 +3,16 @@ choiceIds: []
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.medicine
+    rank: trained
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.science
+    rank: trained
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist ausgebildeter Arzt oder Sanitäter. Du erhältst Fertigkeitstraining in Medizin und Wissenschaft (Biologie oder Chemie). Wenn du einen Wurf zur Heilung, Diagnose oder Behandlung von Giften/Krankheiten ablegst, erhältst +1 auf das Ergebnis. Du kannst medizinische Ausrüstung improvisieren (z. B. Verband, Schiene, Desinfektionsmittel). ---
 examples: []

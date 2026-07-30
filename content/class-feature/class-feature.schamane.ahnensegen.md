@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Ahnen schützen dich. Einmal pro Tag kannst du einen misslungenen Willenswurf wiederholen. Wenn du dies tust, erscheint ein geisterhafter Schimmer um dich. Außerdem erhältst du Resistenz 2 gegen mentale Effekte. ---
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Einmal pro Tag kannst du Informationen enthüllen, die einem Ziel –2 auf Willenswürfe geben.
 examples: []

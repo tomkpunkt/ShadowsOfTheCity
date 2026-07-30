@@ -2,7 +2,8 @@
 ancestryId: ancestry.mensch
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Blut trägt Spuren alter Magie. Einmal pro Tag kannst du einen arkane oder göttlichen Cantrip wirken (Wurf + Intelligenz oder Charisma, je nach Wahl). ---
 examples: []

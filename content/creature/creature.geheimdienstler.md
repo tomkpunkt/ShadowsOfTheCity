@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Menschlicher NPC (Geheimdienstler), neutral - Stufe: 1 (200 EP) - TP: 50 (10d8 + 10) - RK: 16 (Tarnkleidung) - Fertigkeiten: Heimlichkeit +8, Täuschen +6, Wahrnehmung +6 - Spezialfähigkeiten: Infiltration, Spionage - Aktionen: Nahkampfwaffe, Fernkampfwaffe, Infiltration"
 examples: []

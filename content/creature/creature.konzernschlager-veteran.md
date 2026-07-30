@@ -2,7 +2,8 @@
 armorClass: 15
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 1 - TP: 50 (10d8 + 10) - RK: 15 (Verbesserte Schutzweste) - Fertigkeiten: +2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Erweiterter Konzernschutz"
 examples: []

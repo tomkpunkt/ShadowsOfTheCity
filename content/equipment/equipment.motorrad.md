@@ -5,7 +5,8 @@ category: vehicle
 categoryId: trait.item.equipment.technology
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: Schneller Straßenverkehr
 examples: []

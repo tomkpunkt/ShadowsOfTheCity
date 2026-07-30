@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du kannst Verletzungen gezielt behandeln. Wenn du 10 Minuten mit einem Verwundeten verbringst, kann dieser zusätzlich 1W10 TP heilen. Bei kritischem Erfolg: + Konstitutionsmodifikator. Wenn du dies auf dich selbst anwendest, halbiert sich die Zeit. ---"
 examples: []

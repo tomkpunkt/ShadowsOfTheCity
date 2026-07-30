@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Einmal pro Runde kannst du den Schaden um 2 reduzieren, wenn du Rüstung trägst.
 examples: []

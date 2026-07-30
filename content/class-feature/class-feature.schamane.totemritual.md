@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du trägst ein Totem oder ein Symbol, das dich mit deinem Geist verbindet. Wenn du ein Ritual mit einem Totem durchführst, erhältst +1 auf den Zauberwurf und kannst Verbündeten in 10 Fuß +1 auf Willenswürfe gewähren (1 Minute). Das Ritual kann 10 Minuten dauern und hat keine Kosten. ---
 examples: []

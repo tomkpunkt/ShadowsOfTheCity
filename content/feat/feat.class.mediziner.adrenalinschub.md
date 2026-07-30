@@ -3,7 +3,8 @@ category: class
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst einem Verbündeten +1 auf Initiative geben (1/Tag).
 examples: []

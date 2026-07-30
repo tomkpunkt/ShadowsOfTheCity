@@ -3,7 +3,8 @@ category: class
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +1 auf Zähigkeit, +2 auf AC, wenn du stillstehst.
 examples: []

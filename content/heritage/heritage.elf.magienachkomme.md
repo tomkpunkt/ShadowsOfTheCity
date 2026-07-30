@@ -2,7 +2,8 @@
 ancestryId: ancestry.elf
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Blut trägt alte Macht. Du erhältst einen arkane Cantrip deiner Wahl. Der Attributsmodifikator für diesen Zauber ist Intelligenz.
 examples: []

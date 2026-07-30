@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 1W4 TP opfern, um +1 auf einen Zauberwurf zu erhalten.
 examples: []

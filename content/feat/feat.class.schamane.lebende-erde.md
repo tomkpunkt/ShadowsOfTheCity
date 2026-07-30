@@ -3,7 +3,8 @@ category: class
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du stillstehst, erhältst Resistenz 2 gegen physischen Schaden.
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Dein Name steht in Lehrbüchern – oder auf schwarzen Listen. Du erhältst: - +2 auf alle Handwerks- und Wissenschaftsproben, - Resistenz 5 gegen Feuer und Elektrizität, - und kannst einmal pro Tag ein technisches „Wunder“ erschaffen – ein Gerät, das für 1 Minute einen Effekt wie ein Zauber (Stufe 5 oder niedriger) simuliert. Nach dieser Minute fällt das Gerät auseinander. ---"
 examples: []

@@ -2,7 +2,8 @@
 armorClass: 15
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Konstrukt (Roboter), neutral - Stufe: 1/2 (100 EP) - TP: 40 (8d8 + 8) - RK: 15 (Metallische Rüstung) - Fertigkeiten: Athletik +6, Technologie +4 - Spezialfähigkeiten: Konstruktimmunität, Präzision - Schwächen: Elektromagnetische Pulse - Aktionen: Mechanische Angriffe, Präzision"
 examples: []

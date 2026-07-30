@@ -3,7 +3,8 @@ category: archetype
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du hast das Studium der Magie fern der Welt betrieben. Du erhältst +1 auf Überleben und Weisheitssaves gegen mentale Effekte. Einmal pro Tag kannst du Detect Magic und Light ohne Komponenten wirken.
 examples: []

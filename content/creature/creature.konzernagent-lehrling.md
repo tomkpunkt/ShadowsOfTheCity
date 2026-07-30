@@ -2,7 +2,8 @@
 armorClass: 14
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 1/2 - TP: 30 (6d8 + 6) - RK: 14 (Tarnkleidung) - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernzugang"
 examples: []

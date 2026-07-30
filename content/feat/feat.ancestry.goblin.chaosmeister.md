@@ -3,7 +3,8 @@ ancestryId: ancestry.goblin
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Erfindungsgeist kennt keine Grenzen. Einmal pro Tag kannst du einen misslungenen Handwerkswurf automatisch in einen Erfolg verwandeln – das Ergebnis ist jedoch unvorhersehbar und kann kleine Nebenwirkungen haben.
 examples: []

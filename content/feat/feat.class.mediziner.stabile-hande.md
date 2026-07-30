@@ -3,7 +3,8 @@ category: class
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Erste Hilfe unter Druck ohne Malus durchführen.
 examples: []

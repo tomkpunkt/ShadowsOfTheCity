@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Medium zwischen den Welten. - Du erhältst Fertigkeitstraining in Diplomatie oder Einschüchtern. - Einmal pro Tag kannst du Speak with Dead wirken.
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erhältst +1 auf Handwerksproben bei Operationen.
 examples: []

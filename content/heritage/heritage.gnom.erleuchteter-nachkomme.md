@@ -2,7 +2,8 @@
 ancestryId: ancestry.gnom
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du entstammst einer Linie der „Erleuchteten“. Du erhältst Fertigkeitstraining in Arkane Kunde und Mechanik sowie einen Bonus von +1 auf Würfe, um magische Geräte zu identifizieren.
 examples: []

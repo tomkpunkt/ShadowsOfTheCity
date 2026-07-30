@@ -2,7 +2,15 @@
 category: general
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    selector: reflex
+    target: save
+    value: 1
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +1 Reflex
 examples: []

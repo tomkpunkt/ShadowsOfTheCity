@@ -3,7 +3,8 @@ category: archetype
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du handelst mit Wissen und Gerüchten. Einmal pro Tag kannst du eine Probe auf Gesellschaft oder Täuschung wiederholen. Bei Erfolg erfährst du ein relevantes Detail über eine Organisation oder Person.
 examples: []

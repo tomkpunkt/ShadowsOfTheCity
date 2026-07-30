@@ -2,7 +2,8 @@
 ancestryId: ancestry.ork
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du entstammst einem stolzen Kriegerklan. Du erhältst Fertigkeitstraining in Einschüchtern und Athletik.
 examples: []

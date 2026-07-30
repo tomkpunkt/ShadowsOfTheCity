@@ -2,7 +2,8 @@
 ancestryId: ancestry.goblin
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Blut reagiert auf Hitze und Energie. Einmal pro Tag kannst du beim Einsatz von Feuer oder Elektrizität zusätzlichen Schaden in Höhe deines Stufenbonus verursachen. ---
 examples: []

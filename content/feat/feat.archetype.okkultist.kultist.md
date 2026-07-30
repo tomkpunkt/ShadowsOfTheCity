@@ -3,7 +3,8 @@ category: archetype
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Teil einer Sekte, die Wissen und Macht aus der Dunkelheit zieht. Du erhältst Fertigkeitstraining in Religion und Einschüchtern. Wenn du an einem Ritual mit anderen teilnimmst, erhöht sich dessen Effekt um +1 auf SG oder Schaden.
 examples: []

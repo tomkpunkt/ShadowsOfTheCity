@@ -3,7 +3,8 @@ ancestryId: ancestry.ork
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du weigerst dich zu sterben. Wenn du auf 0 Trefferpunkte fällst, kannst du sofort einen Konstitutionswurf (SG 15) ablegen. Bei Erfolg bleibst du mit 1 TP stehen und erleidest keine Bewusstlosigkeit (einmal pro Tag). ---
 examples: []

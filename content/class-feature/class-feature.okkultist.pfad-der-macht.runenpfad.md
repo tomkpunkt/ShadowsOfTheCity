@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du beherrschst uralte Zeichen, die Realität beeinflussen. - Du erhältst Fertigkeitstraining in Handwerk (Runen). - Du kannst einmal pro Stunde eine Rune aktivieren, die +1 auf AC oder Angriffe gewährt (1 Runde). ---
 examples: []

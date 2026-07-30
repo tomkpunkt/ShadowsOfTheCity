@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du arbeitest an der Front – schnell, präzise, unerschütterlich. - Du erhältst +1 auf Medizin in stressigen Situationen (Kampf, Chaos). - Du kannst Erste Hilfe als eine Aktion anwenden (statt zwei). - Du erhältst Resistenz 2 gegen Blutungs- und Erschöpfungseffekte.
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst einen misslungenen Rettungswurf wiederholen (1/Tag).
 examples: []

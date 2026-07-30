@@ -3,7 +3,8 @@ ancestryId: ancestry.halbling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du Schaden erleidest, der dich auf 0 Trefferpunkte reduzieren würde, kannst du einmal pro Tag einen Konstitutionswurf (SG 15) ablegen. Bei Erfolg bleibst du mit 1 TP stehen. ---
 examples: []

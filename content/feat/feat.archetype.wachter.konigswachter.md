@@ -3,7 +3,8 @@ category: archetype
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du schützt eine Person, nicht eine Idee. Wenn du die Aktion Verteidigen auf denselben Verbündeten anwendest, erhält dieser Resistenz 3 gegen physischen Schaden.
 examples: []

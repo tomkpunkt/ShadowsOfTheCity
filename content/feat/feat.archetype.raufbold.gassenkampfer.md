@@ -3,7 +3,8 @@ category: archetype
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kämpfst mit allem, was du findest. Du erhältst +2 auf Improvisationswürfe und kannst improvisierte Waffen als magisch zählen, wenn du sie unter Spannung setzt (z. B. Stromleitung, Hitze).
 examples: []

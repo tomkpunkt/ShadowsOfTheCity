@@ -2,7 +2,8 @@
 ancestryId: ancestry.tiefling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist in Dunkelheit geboren oder mutiert. Du erhältst Dunkelsicht und einen Bonus von +1 auf Heimlichkeitsproben in schwachem Licht.
 examples: []

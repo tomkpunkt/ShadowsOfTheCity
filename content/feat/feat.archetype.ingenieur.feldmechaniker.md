@@ -3,7 +3,8 @@ category: archetype
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Spezialist für schnelle Reparaturen. Einmal pro Stunde kannst du eine beschädigte Maschine oder Waffe um 1W8 TP reparieren. Wenn du eine Maschine während eines Kampfes stabilisierst, erhält sie Resistenz 2 gegen Schaden.
 examples: []

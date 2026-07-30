@@ -3,7 +3,8 @@ category: class
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du stirbst, kannst du 1W6 TP zurückgewinnen (1/Tag).
 examples: []

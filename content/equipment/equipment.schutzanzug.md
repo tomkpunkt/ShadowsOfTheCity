@@ -5,7 +5,8 @@ category: protective-clothing
 categoryId: trait.item.equipment.clothing
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: +2 Rüstungsschutz, +2 Widerstand
 examples: []

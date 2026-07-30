@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Dein Name ist Legende unter Soldaten und Söldnern. Du erhältst: - Resistenz 5 gegen physischen Schaden, - +2 auf Angriffswürfe mit deiner bevorzugten Waffenart, - und Immunität gegen Furcht. ---"
 examples: []

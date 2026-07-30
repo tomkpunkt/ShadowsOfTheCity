@@ -5,7 +5,8 @@ category: magical-item
 categoryId: trait.item.equipment.magic
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: +1 Magie, +1 Fokus
 examples: []

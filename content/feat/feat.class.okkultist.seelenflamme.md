@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 1W6 Schaden verursachen, wenn du Schaden erleidest (1/Tag).
 examples: []

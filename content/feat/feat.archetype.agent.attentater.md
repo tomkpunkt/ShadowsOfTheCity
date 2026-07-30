@@ -3,7 +3,8 @@ category: archetype
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Spezialisierung liegt im lautlosen Töten. Du erhältst +1W6 zusätzlichen Schaden bei Angriffen aus dem Hinterhalt. Wenn dein Angriff einen Gegner auf 0 TP reduziert, kannst du dich sofort wieder verbergen.
 examples: []

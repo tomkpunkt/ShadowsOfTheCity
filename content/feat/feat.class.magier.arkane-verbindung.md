@@ -3,7 +3,8 @@ category: class
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst über dein Geflecht mit einem bekannten Magier kommunizieren.
 examples: []

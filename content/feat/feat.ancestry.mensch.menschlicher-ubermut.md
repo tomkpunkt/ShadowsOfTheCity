@@ -3,7 +3,8 @@ ancestryId: ancestry.mensch
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Einmal pro Tag kannst du dich nach einem verpatzten Angriffswurf oder Rettungswurf sofort erneut würfeln. Du musst das zweite Ergebnis verwenden.
 examples: []

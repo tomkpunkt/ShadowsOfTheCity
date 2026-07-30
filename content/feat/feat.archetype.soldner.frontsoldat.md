@@ -3,7 +3,8 @@ category: archetype
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Ein Veteran der großen Kriege. Du bist auf Disziplin und Formation trainiert. Erhalte zusätzliche +1 AC, wenn du dich neben einem Verbündeten befindest.
 examples: []

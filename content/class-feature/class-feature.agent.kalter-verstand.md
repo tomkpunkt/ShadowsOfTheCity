@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Geist ist scharf und unerschütterlich. Einmal pro Tag kannst du einen Willenswurf wiederholen. Bei Erfolg auf eine Täuschungsprobe gegenüber einer Behörde oder Machtperson wird sie automatisch als kritischer Erfolg gewertet. ---
 examples: []

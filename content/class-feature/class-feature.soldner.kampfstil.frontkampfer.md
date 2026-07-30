@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du stürzt dich in den Nahkampf und hältst die Linie. - Erhalte den Feat Power Attack. - Wenn du eine Rüstung trägst, erhältst du +1 AC gegen Nahkampfangriffe.
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.gnom
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst magische Muster in Energiequellen erkennen. Du erhältst den Zauber Detect Magic als angeborene Fähigkeit, unbegrenzt oft einsetzbar.
 examples: []

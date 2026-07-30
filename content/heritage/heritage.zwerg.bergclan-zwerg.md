@@ -2,7 +2,8 @@
 ancestryId: ancestry.zwerg
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist tief unter der Erde geboren. Du erhältst Dunkelsicht und einen Bonus von +1 auf Wahrnehmungswürfe in Dunkelheit oder schwachem Licht.
 examples: []

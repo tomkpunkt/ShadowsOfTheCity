@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +1 auf Angriffe beschworener Wesen.
 examples: []

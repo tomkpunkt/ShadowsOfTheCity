@@ -3,7 +3,8 @@ category: archetype
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Forscher und Mediziner in einem zivilen Umfeld. Du erhältst Fertigkeitstraining in Wissenschaft und Diplomatie. Einmal pro Tag kannst du ein Heilmittel herstellen, das +2 auf Zähigkeit und Willen gewährt (1 Stunde).
 examples: []

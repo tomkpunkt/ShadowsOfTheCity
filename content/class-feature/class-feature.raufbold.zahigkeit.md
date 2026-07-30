@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist härter als du aussiehst. Du erhältst einen Bonus von +1 auf Zähigkeitswürfe und Rettungswürfe gegen Gifte, Krankheiten und Erschöpfung. Einmal pro Stunde kannst du 1W6 TP regenerieren, wenn du eine volle Runde nicht kämpfst. ---
 examples: []

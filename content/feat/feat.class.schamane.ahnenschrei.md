@@ -3,7 +3,8 @@ category: class
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 1/Tag einen Gegner mit einem Geisterruf in Furcht versetzen (SG 20).
 examples: []

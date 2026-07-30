@@ -3,7 +3,8 @@ category: class
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Sand, Staub oder Blut nutzen, um einen Gegner zu blenden (1/Tag, SG 20).
 examples: []

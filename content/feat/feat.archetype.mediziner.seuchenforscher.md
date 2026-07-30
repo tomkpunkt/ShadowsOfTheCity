@@ -3,7 +3,8 @@ category: archetype
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist geübt im Umgang mit Krankheiten und biologischen Gefahren. Du erhältst Resistenz 2 gegen Krankheiten und +1 auf Proben gegen Gifte. Einmal pro Woche kannst du eine Probe auf Wissenschaft (SG 25) ablegen, um den Verlauf einer Krankheit dauerhaft zu beenden. ---
 examples: []

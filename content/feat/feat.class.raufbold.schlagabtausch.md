@@ -3,7 +3,8 @@ category: class
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du getroffen wirst, kannst du sofort einen Gegenangriff ausführen.
 examples: []

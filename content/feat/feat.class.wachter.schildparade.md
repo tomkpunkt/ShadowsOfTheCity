@@ -3,7 +3,8 @@ category: class
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du den Schildblock nutzt, reduziere zusätzlichen Schaden um 2.
 examples: []

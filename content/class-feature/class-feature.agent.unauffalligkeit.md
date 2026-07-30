@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du wirst zur Schattenfigur. Wenn du dich in einer Stadt oder Menschenmenge bewegst, erhältst du +2 auf Heimlichkeitsproben und kannst dich doppelt so schnell verbergen. ---
 examples: []

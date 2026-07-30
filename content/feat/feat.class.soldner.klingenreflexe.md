@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du im Nahkampf angegriffen wirst, kannst du sofort 1 Schritt zurückweichen.
 examples: []

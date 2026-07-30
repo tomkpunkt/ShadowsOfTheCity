@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist geübt darin, aus begrenzten Mitteln funktionierende Dinge zu bauen. Du erhältst Fertigkeitstraining in Handwerk und Mechanik. Wenn du ein Werkzeug oder Gerät reparierst, halbiert sich die Zeit. Einmal pro Stunde kannst du improvisierte Materialien im Wert von 1W6 GP finden (SG 15). ---
 examples: []

@@ -3,7 +3,12 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - grantType: spell
+    id: spell.schutzschild
+    kind: grant
+    quantity: 1
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du webst Energie in Schilde und Barrieren. - Du erhältst den Cantrip Shield. - Du erhältst +1 auf Rettungswürfe gegen magische Effekte. ---
 examples: []

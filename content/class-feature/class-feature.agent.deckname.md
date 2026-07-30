@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du arbeitest selten unter deinem echten Namen. Effekt: Du kannst in sozialen Situationen oder Behörden mit einem falschen Namen auftreten. Solange du dich erfolgreich tarnst (Täuschung gegen SG 15 + Stufe des Ziels), erhältst du +1 auf Diplomatie und Gesellschaft. Wirst du enttarnt, erhältst du für 24 Stunden –1 auf diese Proben. ---"
 examples: []

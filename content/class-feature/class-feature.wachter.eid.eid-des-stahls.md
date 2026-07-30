@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du vertraust allein auf die Waffe in deiner Hand. - Du erhältst den Feat Power Attack. - Wenn du einen Gegner besiegst, erhältst bis zum Ende deines nächsten Zuges +1 auf Angriffswürfe. ---
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du ignorierst Mali durch Verwundung oder Erschöpfung für 1 Minute.
 examples: []

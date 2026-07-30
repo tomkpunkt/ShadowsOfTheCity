@@ -3,7 +3,8 @@ category: class
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du 50 % TP verlierst, erhältst +1 auf Schaden für 1 Minute.
 examples: []

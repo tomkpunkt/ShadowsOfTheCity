@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Elementar, neutral - Stufe: 1 (200 EP) - TP: 45 (9d8 + 9) - RK: 16 (Natürliche Rüstung) - Fertigkeiten: Athletik +6, Überleben +6 - Spezialfähigkeiten: Elementare Immunität, Naturkontrolle - Schwächen: Gegen-Elemente - Aktionen: Elementare Angriffe, Naturkontrolle"
 examples: []

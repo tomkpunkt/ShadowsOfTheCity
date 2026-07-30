@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist ein Relikt in einer Welt, die vergessen hat, was Krieg bedeutet. Wenn du auf 0 Trefferpunkte fällst, bleibst du stattdessen bei 1 Trefferpunkt (einmal pro Tag). Zusätzlich kannst du einmal täglich eine misslungene Einschüchterungsprobe automatisch als Erfolg werten. ---
 examples: []

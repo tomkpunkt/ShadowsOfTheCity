@@ -3,7 +3,8 @@ ancestryId: ancestry.zwerg
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist im Umgang mit Maschinen und Werkzeugen unschlagbar. Du erhältst Fertigkeitstraining in Handwerk (oder Expertenrang, falls bereits trainiert) und einen Bonus von +1 auf Reparaturproben.
 examples: []

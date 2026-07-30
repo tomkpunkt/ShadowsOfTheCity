@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst bei einem Angriffswurf 1W20 erneut würfeln, wenn du einen kritischen Fehlschlag erzielst (1/Tag).
 examples: []

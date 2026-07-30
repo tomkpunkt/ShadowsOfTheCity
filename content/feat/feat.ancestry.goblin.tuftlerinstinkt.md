@@ -3,7 +3,8 @@ ancestryId: ancestry.goblin
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst eine einfache Maschine oder Vorrichtung in der halben üblichen Zeit reparieren oder modifizieren. Wenn du improvisierte Sprengsätze oder Fallen baust, erhalten sie +1 auf Angriffs- oder SG-Würfe.
 examples: []

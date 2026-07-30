@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +2 auf Rettungswürfe gegen Gifte, Krankheiten und Erschöpfung.
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.zwerg
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist nahezu unerschütterlich. Wenn du einen kritischen Erfolg bei einem Rettungswurf erzielst, erleidest du keinerlei Effekte. Wenn du einen Erfolg erzielst, zählt er als kritischer Erfolg. ---
 examples: []

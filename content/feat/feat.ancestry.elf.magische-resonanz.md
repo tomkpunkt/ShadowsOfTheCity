@@ -3,7 +3,8 @@ ancestryId: ancestry.elf
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du spürst die Schwingungen des Geflechts. Du erhältst Fertigkeitstraining in Arkane Kunde. Wenn du bereits trainiert bist, erhältst du stattdessen Expertenrang.
 examples: []

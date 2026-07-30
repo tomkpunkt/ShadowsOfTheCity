@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.science
     rank: trained
-    skillId: skill.science
 examples: []
 flavorText: Archive, Labore und Fachdebatten haben deinen Blick geschärft, auch wenn Erkenntnis in der Stadt selten frei von Interessen bleibt.
 freeBoosts: 1

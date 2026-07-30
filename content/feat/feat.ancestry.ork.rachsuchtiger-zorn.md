@@ -3,7 +3,8 @@ ancestryId: ancestry.ork
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du kritischen Schaden erleidest, erhältst du bis zum Ende deines nächsten Zuges +2 auf Schadenswürfe. Dieser Effekt tritt nur einmal pro Minute auf.
 examples: []

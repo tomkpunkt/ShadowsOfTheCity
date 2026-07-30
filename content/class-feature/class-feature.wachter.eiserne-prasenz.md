@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine bloße Anwesenheit inspiriert Mut. Alle Verbündeten im Umkreis von 10 Fuß erhalten +1 auf Willenswürfe gegen Furcht und mentale Effekte. ---
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du darfst bei Täuschung 1W20 erneut würfeln (1/Tag).
 examples: []

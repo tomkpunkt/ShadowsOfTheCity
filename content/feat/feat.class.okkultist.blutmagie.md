@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du Schaden durch eigene Zauber erleidest, reduziere ihn um 1 pro Zaubergrad.
 examples: []

@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.crafting
     rank: trained
-    skillId: skill.crafting
 examples: []
 flavorText: Schichtpläne, Sicherheitsvorschriften und improvisierte Reparaturen haben dir gezeigt, wie die Stadt tatsächlich am Laufen gehalten wird.
 freeBoosts: 1

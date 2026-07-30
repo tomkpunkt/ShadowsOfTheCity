@@ -2,7 +2,8 @@
 ancestryId: ancestry.ork
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist im Untergrund groß geworden – in Slums, Tunneln oder alten Kriegsanlagen. Du erhältst Dunkelsicht und einen Bonus von +1 auf Heimlichkeit.
 examples: []

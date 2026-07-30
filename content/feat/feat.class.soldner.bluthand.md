@@ -3,7 +3,8 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du heilst 1W8 TP, wenn du einen Gegner mit einem kritischen Treffer besiegst.
 examples: []

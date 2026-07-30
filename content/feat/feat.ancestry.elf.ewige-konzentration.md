@@ -3,7 +3,8 @@ ancestryId: ancestry.elf
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Geist ist nahezu unerschütterlich. Du erhältst Resistenz 5 gegen mentale und emotionale Effekte. Wenn du einen kritischen Erfolg bei einem Willenswurf erzielst, erleidest du keinerlei negative Nachwirkung. ---
 examples: []

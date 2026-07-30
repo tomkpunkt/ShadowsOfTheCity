@@ -3,7 +3,8 @@ category: class
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist immun gegen Magieunterdrückung und Zauberresistenz.
 examples: []

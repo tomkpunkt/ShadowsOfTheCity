@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.survival
     rank: trained
-    skillId: skill.survival
 examples: []
 flavorText: Jenseits kontrollierter Bezirke hast du gelernt, Wetter, Spuren und knappe Vorräte ernster zu nehmen als offizielle Karten.
 freeBoosts: 1

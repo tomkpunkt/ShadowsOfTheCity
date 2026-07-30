@@ -4,7 +4,7 @@ import path from "node:path";
 
 import { afterEach, describe, expect, it } from "vitest";
 
-import { compileContent } from "./compiler.js";
+import { collectReferences, compileContent } from "./compiler.js";
 import { ContentValidationError } from "./validation.js";
 
 const temporaryDirectories: string[] = [];
@@ -45,6 +45,24 @@ afterEach(async () => {
 });
 
 describe("compileContent", () => {
+  it("does not resolve rules decision IDs as content entities", () => {
+    const references = collectReferences({
+      id: "feat.example",
+      description: "",
+      effects: [
+        {
+          kind: "text",
+          text: "Die Kernregel benötigt eine redaktionelle Entscheidung.",
+          machineReadable: false,
+          classification: "requires-rules-decision",
+          decisionId: "rules-decision.feat.example"
+        }
+      ]
+    } as never);
+
+    expect(references).not.toContain("rules-decision.feat.example");
+  });
+
   it("compiles valid entities and writes deterministic output", async () => {
     const contentDirectory = await createFixture({
       "skills/athletics.md": skill()
@@ -291,18 +309,57 @@ choice:
     });
   });
 
-  it("rejects unsupported schema versions until an explicit migration runs", async () => {
+  it("migrates schema version 0 through the explicit content migration", async () => {
     const contentDirectory = await createFixture({
       "legacy.md": skill().replace("schemaVersion: 1", "schemaVersion: 0")
+    });
+
+    const result = await compileContent({ contentDirectory });
+
+    expect(result.catalog.entities[0]?.schemaVersion).toBe(1);
+  });
+
+  it("rejects unsupported future schema versions", async () => {
+    const contentDirectory = await createFixture({
+      "future.md": skill().replace("schemaVersion: 1", "schemaVersion: 99")
+    });
+
+    await expect(compileContent({ contentDirectory })).rejects.toBeInstanceOf(
+      ContentValidationError
+    );
+  });
+
+  it("includes validated legacy aliases in the deterministic catalog", async () => {
+    const contentDirectory = await createFixture({
+      "skill.md": skill(),
+      "legacy-aliases.json": JSON.stringify({
+        "legacy.skill.athletik": "skill.athletics"
+      })
+    });
+
+    const result = await compileContent({ contentDirectory });
+
+    expect(result.catalog.aliases).toEqual({
+      "legacy.skill.athletik": "skill.athletics"
+    });
+    expect(result.manifest.aliasCount).toBe(1);
+  });
+
+  it("rejects alias cycles and unresolved alias targets", async () => {
+    const contentDirectory = await createFixture({
+      "skill.md": skill(),
+      "legacy-aliases.json": JSON.stringify({
+        "legacy.one": "legacy.two",
+        "legacy.two": "legacy.one",
+        "legacy.missing": "skill.missing"
+      })
     });
 
     await expect(compileContent({ contentDirectory })).rejects.toMatchObject({
       report: {
         issues: expect.arrayContaining([
-          expect.objectContaining({
-            code: "SCHEMA_VALIDATION_FAILED",
-            path: expect.stringContaining("schemaVersion")
-          })
+          expect.objectContaining({ code: "LEGACY_ALIAS_CYCLE" }),
+          expect.objectContaining({ code: "UNRESOLVED_LEGACY_ALIAS" })
         ])
       }
     });

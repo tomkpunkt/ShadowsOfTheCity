@@ -3,7 +3,8 @@ category: archetype
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kombinierst Mechanik und Chemie. Du kannst einfache Reagenzien oder Explosivstoffe herstellen (z. B. Rauch, Flamme, Neutralisator). Einmal pro Tag kannst du ein Gebräu herstellen, das +2 auf Zähigkeit oder Reflex gewährt (1 Minute).
 examples: []

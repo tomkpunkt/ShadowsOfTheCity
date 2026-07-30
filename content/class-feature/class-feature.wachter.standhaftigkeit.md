@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist selbst unter Schmerz und Blutverlust unbeirrbar. Einmal pro Tag kannst du einen misslungenen Zähigkeitswurf wiederholen. Außerdem ignorierst du Mali durch Erschöpfung 1. ---
 examples: []

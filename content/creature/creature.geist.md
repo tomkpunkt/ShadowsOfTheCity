@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Undead (Geist), chaotisch böse - Stufe: 1 (200 EP) - TP: 40 (8d8 + 8) - RK: 16 (Geisterhaftigkeit) - Fertigkeiten: Heimlichkeit +8, Täuschen +6 - Spezialfähigkeiten: Phasenwandlung, Geisterhaftigkeit - Schwächen: Heilige Gegenstände, Exorzismus - Aktionen: Geisterhaftigkeit, Psychische Angriffe"
 examples: []

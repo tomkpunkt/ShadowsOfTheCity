@@ -5,7 +5,8 @@ category: surveillance
 categoryId: trait.item.equipment.technology
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: Akustische Überwachung
 examples: []

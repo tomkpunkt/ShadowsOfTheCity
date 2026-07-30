@@ -2,7 +2,8 @@
 ancestryId: ancestry.mensch
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist in dicht besiedelten Gebieten aufgewachsen. Du erhältst einen Bonus von +1 auf Wahrnehmungs- und Diplomatieproben in urbaner Umgebung.
 examples: []

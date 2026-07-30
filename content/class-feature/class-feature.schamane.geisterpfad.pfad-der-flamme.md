@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du ehrst den Kreislauf von Zerstörung und Wiedergeburt. - Du erhältst den Cantrip Produce Flame. - Wenn du einen Gegner mit einem Feuerschaden-Zauber triffst, erhältst 1 TP Heilung.
 examples: []

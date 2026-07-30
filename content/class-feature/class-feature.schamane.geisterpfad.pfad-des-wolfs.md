@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du folgst dem Ruf der Jagd und der Gemeinschaft. - Du erhältst Fertigkeitstraining in Heimlichkeit oder Diplomatie. - Wenn du einen Verbündeten heilst, erhält dieser +1 auf Angriffswürfe für 1 Runde.
 examples: []

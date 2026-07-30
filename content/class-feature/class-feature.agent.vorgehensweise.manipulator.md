@@ -3,7 +3,16 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - kind: proficiency-rule
+    operation: increase
+    proficiencyId: skill.diplomacy
+    steps: 1
+  - kind: proficiency-rule
+    operation: increase
+    proficiencyId: skill.deception
+    steps: 1
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du nutzt Worte statt Waffen. - Du erhältst Fertigkeitstraining in Diplomatie und Täuschung (oder Expertenrang, falls trainiert). - Einmal pro Stunde kannst du eine misslungene soziale Probe wiederholen.
 examples: []

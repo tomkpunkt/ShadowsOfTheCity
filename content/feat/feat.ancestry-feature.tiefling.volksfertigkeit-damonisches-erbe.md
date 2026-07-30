@@ -3,7 +3,8 @@ ancestryId: ancestry.tiefling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Die fremde Energie in deinem Blut schützt dich. Effekt: Du erhältst Resistenz 2 gegen Feuer und Elektrizität. Wenn du Schaden durch magische Energie erleidest, reduziere ihn um 1 (Pfeil oder Zauber). ---"
 examples: []

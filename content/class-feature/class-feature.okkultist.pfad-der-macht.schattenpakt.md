@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du hast einen Vertrag mit einem Wesen aus der Dunkelheit geschlossen. - Du erhältst Dunkelsicht. - Du kannst einmal pro Tag Fear wirken (Attribut: Charisma)."
 examples: []

@@ -2,7 +2,8 @@
 armorClass: 13
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Ork (Ork-Schläger-Lehrling), chaotisch böse - Stufe: 1/2 (100 EP) - TP: 30 (6d8 + 6) - RK: 13 (Lederjacke + natürliche Rüstung) - Geschwindigkeit: 30 Fuß - Stärke: 15 (+2) | Geschicklichkeit: 12 (+1) | Konstitution: 14 (+2) | Intelligenz: 8 (-1) | Weisheit: 11 (+0) | Charisma: 13 (+1) - Rettungswürfe: Stärke +4, Konstitution +4 - Fertigkeiten: Einschüchtern +3, Athletik +4, Wahrnehmung +2 - Sinne: Dunkelsicht 60 Fuß, Passive Wahrnehmung 12 - Sprachen: Orkisch, Deutsch, Straßenslang - Spezialfähigkeiten: Begrenzte Territoriale Kontrolle, Gang-Mentalität, Ork-Stärke - Aktionen: Kampfhammer, Faust, Einschüchtern"
 examples: []

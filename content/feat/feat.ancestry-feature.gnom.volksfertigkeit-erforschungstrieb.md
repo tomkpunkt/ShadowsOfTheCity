@@ -3,7 +3,8 @@ ancestryId: ancestry.gnom
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Dein unstillbarer Drang, Neues zu entdecken, treibt dich an. Effekt: Du erhältst einen +1 Situationsbonus auf Würfe für Wissen (Wahrnehmung, Arkane Kunde, Handwerk), wenn du etwas Neues untersuchst oder eine unbekannte Technologie analysierst. ---"
 examples: []

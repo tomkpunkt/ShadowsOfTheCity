@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erkennst Schwächen und Gelegenheiten. Wenn du in einer Runde Schaden erleidest, erhältst du im nächsten Zug +1 auf Angriff und Schaden gegen denselben Gegner. Wenn du einen Gegner zu Boden bringst, erhältst du +2 auf Einschüchtern für 1 Minute. ---
 examples: []

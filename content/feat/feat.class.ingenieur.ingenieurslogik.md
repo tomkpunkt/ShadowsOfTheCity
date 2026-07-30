@@ -3,7 +3,8 @@ category: class
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 1/Tag eine Probe automatisch bestehen, wenn du genug Zeit (1 Minute) hast.
 examples: []

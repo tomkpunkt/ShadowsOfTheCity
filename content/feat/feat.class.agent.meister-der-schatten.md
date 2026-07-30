@@ -3,7 +3,8 @@ category: class
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erhältst permanent Dunkelsicht und +2 auf Heimlichkeit.
 examples: []

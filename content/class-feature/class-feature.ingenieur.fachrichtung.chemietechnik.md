@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Alchemist der Moderne. - Du erhältst Fertigkeitstraining in Naturkunde oder Wissenschaft. - Du kannst einmal pro Stunde ein einfaches chemisches Präparat (z. B. Rauch, Brandgemisch, Neutralisator) herstellen. - Bei Explosionen oder chemischen Effekten erhältst du Resistenz 2 gegen Schaden.
 examples: []

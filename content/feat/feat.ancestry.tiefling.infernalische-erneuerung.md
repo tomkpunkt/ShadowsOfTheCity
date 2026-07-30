@@ -3,7 +3,8 @@ ancestryId: ancestry.tiefling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du auf 0 Trefferpunkte fällst, kannst du einmal pro Tag sofort 1W6 + deinen Konstitutionsmodifikator Trefferpunkte zurückerlangen. Dabei erscheinen kurz Flammen oder Schatten um dich. ---
 examples: []

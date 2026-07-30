@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Dein Geist verschmilzt mit dem deiner Vorfahren. Du erhältst: - Immunität gegen Furcht und mentale Effekte, - Resistenz 5 gegen Elementarschaden, - und kannst einmal pro Tag Resurrect oder Nature’s Avatar wirken, ohne Materialien. Wenn du stirbst, bleibt dein Geist 1 Minute lang als schützende Präsenz bestehen (+1 auf alle Würfe deiner Verbündeten). ---"
 examples: []

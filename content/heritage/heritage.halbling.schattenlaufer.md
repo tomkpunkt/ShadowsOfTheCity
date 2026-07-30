@@ -2,7 +2,8 @@
 ancestryId: ancestry.halbling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du bist Teil einer jener Halblingsfamilien, die zwischen den Welten handeln – manchmal wörtlich. Du erhältst Dunkelsicht und kannst einmal pro Tag Message wirken (Attribut: Charisma). ---"
 examples: []

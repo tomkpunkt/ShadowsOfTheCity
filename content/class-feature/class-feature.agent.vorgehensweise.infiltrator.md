@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du schleichst, beobachtest und schlägst lautlos zu. - Du erhältst Dunkelsicht (wenn du sie bereits besitzt, +1 auf Wahrnehmung). - Wenn du einen Gegner überraschst, erhältst du +1 auf den ersten Angriffswurf dieser Runde.
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du ignorierst schwieriges Gelände durch Wind oder Wasser.
 examples: []

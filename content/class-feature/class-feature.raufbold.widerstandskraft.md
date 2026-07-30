@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du ignorierst Mali durch Erschöpfung 1 und Blutung. Einmal pro Tag kannst du 1W8 TP regenerieren, wenn du einen Gegner im Nahkampf besiegst. ---
 examples: []

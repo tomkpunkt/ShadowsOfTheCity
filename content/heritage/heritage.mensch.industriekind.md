@@ -2,7 +2,8 @@
 ancestryId: ancestry.mensch
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist in Fabriken oder Werkstätten großgeworden. Du erhältst Fertigkeitstraining in Handwerk und Immunität gegen einfache Gifte oder Rauch.
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.ork
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Ork Du erhältst einen +2 Bonus auf Rettungswürfe gegen Furcht. Wenn du erfolgreich einem Effekt widerstehst, der dich erschrecken würde, erhältst du für 1 Runde +1 auf Angriffswürfe."
 examples: []

@@ -3,7 +3,8 @@ category: archetype
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du rufst Geister vergangener Krieger oder Heiler. Einmal pro Tag kannst du Summon Spirit oder Bless wirken. Wenn du einen Geist rufst, erhältst +1 auf Angriff und Schaden für 1 Minute.
 examples: []

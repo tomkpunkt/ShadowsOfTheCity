@@ -3,7 +3,8 @@ category: archetype
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Wächter der einfachen Leute. Du erhältst +1 auf Wahrnehmung und Diplomatie in städtischen Gebieten und kannst „Bedrohung“ ohne Mali einschätzen. ---
 examples: []

@@ -4,7 +4,8 @@ choiceIds:
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Wähle deine Spezialisierung innerhalb des Geflechts. Jede Schule bietet einzigartige Boni. #### Schule der Elemente Du kanalisiert rohe Energie. - Du erhältst den Cantrip Produce Flame oder Electric Arc. - Wenn du einen Zauber wirkst, der Schaden verursacht, erhältst +1 auf den Schadenswurf. #### Schule der Erkenntnis Du suchst Wissen über Macht. - Du erhältst den Cantrip Detect Magic. - Du erhältst +1 auf Arkane Kunde und Wahrnehmung. #### Schule der Schatten Du nutzt das Unsichtbare als Waffe. - Du erhältst den Cantrip Daze oder Message. - Einmal pro Stunde kannst du dich für 1 Runde teilweise unsichtbar machen (Heimlichkeitsbonus +2). #### Schule des Schutzes Du webst Energie in Schilde und Barrieren. - Du erhältst den Cantrip Shield. - Du erhältst +1 auf Rettungswürfe gegen magische Effekte. ---"
 examples: []

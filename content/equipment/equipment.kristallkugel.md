@@ -5,7 +5,8 @@ category: magical-item
 categoryId: trait.item.equipment.magic
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: +2 Magie, +2 Wahrsagerei
 examples: []

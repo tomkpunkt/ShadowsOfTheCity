@@ -2,7 +2,8 @@
 category: profession
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Erste Hilfe, Wundbehandlung
 examples: []

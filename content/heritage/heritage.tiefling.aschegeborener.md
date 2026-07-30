@@ -2,7 +2,8 @@
 ancestryId: ancestry.tiefling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Blut trägt Spuren feuriger Energien. Du erhältst Resistenz 2 gegen Feuer und kannst einmal pro Tag eine kleine Flamme entzünden (wie Produce Flame).
 examples: []

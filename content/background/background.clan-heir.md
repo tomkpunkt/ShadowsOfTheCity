@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.diplomacy
     rank: trained
-    skillId: skill.diplomacy
 examples: []
 flavorText: Dein Name ist Versprechen und Verpflichtung zugleich; jede Entscheidung fällt auf jene zurück, deren Erwartungen du geerbt hast.
 freeBoosts: 1

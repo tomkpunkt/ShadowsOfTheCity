@@ -3,7 +3,8 @@ category: class
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Alle Geräte, die du herstellst, erhalten +1 auf Haltbarkeit.
 examples: []

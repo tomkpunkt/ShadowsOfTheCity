@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du lernst, Magie auf neue Weise zu verweben. Einmal pro Tag kannst du einen bekannten Zauber spontan auf einen höheren Grad wirken, ohne ihn vorzubereiten. ---
 examples: []

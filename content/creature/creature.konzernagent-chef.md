@@ -2,7 +2,8 @@
 armorClass: 17
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 3 - TP: 80 (16d8 + 16) - RK: 17 (Schwere Tarnkleidung) - Fertigkeiten: +4 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Vollständiger Konzernzugang, Kommando ---"
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.halbling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Halbling Du bewegst dich mit bemerkenswerter Leichtigkeit. Du kannst dich durch das Feld eines Verbündeten bewegen, ohne Bewegungsstrafen zu erleiden."
 examples: []

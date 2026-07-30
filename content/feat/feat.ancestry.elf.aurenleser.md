@@ -3,7 +3,8 @@ ancestryId: ancestry.elf
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst feine emotionale und magische Schwingungen wahrnehmen. Du erhältst den Zauber Detect Magic als arkane Fähigkeit, die du unbegrenzt oft einsetzen kannst.
 examples: []

@@ -2,7 +2,8 @@
 ancestryId: ancestry.goblin
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist zwischen Metall und Maschinen aufgewachsen. Du erhältst Resistenz 2 gegen Feuer und Immunität gegen Rauchinhalation.
 examples: []

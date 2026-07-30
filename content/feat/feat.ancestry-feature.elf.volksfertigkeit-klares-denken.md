@@ -3,7 +3,8 @@ ancestryId: ancestry.elf
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Geist ist scharf und diszipliniert. Du erhältst einen +1 Situationsbonus auf Willenswürfe gegen mentale Effekte und Illusionen. ---
 examples: []

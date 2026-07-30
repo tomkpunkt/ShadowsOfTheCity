@@ -2,7 +2,16 @@
 ancestryId: ancestry.elf
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.survival
+    rank: trained
+  - grantType: spell
+    id: spell.nachricht
+    kind: grant
+    quantity: 1
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Einige Elfen haben ihre alte Verbindung zur Natur bewahrt. Du erhältst Fertigkeitstraining in Überleben und kannst den Zauber Message als angeborene arkane Fähigkeit wirken.
 examples: []

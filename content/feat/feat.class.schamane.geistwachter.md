@@ -3,7 +3,8 @@ category: class
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 1 Geistwesen dauerhaft an dich binden (Bonus auf Initiative +1).
 examples: []

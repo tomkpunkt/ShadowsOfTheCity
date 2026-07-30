@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.society
     rank: trained
-    skillId: skill.society
 examples: []
 flavorText: Du bist zwischen Zugangskarten, Vorstandsetagen und sorgfältig gepflegten Netzwerken aufgewachsen; Privilegien öffnen Türen, machen dich aber auch sichtbar.
 freeBoosts: 1

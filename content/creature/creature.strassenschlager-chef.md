@@ -2,7 +2,8 @@
 armorClass: 15
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Menschlicher NPC (Straßenschläger-Chef), chaotisch böse - Stufe: 2 (400 EP) - TP: 60 (12d8 + 12) - RK: 15 (Schwere Lederjacke) - Geschwindigkeit: 30 Fuß - Stärke: 17 (+3) | Geschicklichkeit: 16 (+3) | Konstitution: 16 (+3) | Intelligenz: 12 (+1) | Weisheit: 14 (+2) | Charisma: 15 (+2) - Rettungswürfe: Stärke +6, Konstitution +6, Charisma +5 - Fertigkeiten: Einschüchtern +5, Athletik +6, Wahrnehmung +5, Überleben +5, Täuschen +5 - Sinne: Passive Wahrnehmung 15 - Sprachen: Deutsch, Straßenslang, Englisch - Spezialfähigkeiten: Vollständige Territoriale Kontrolle, Straßenschläger-Instinkt, Gang-Mentalität, Kommando - Aktionen: Messer, Faust, Schlagstock, Pistole, Einschüchtern, Kommando - Legendenaktionen: Verstärkung rufen, Wutausbruch, Kommando"
 examples: []

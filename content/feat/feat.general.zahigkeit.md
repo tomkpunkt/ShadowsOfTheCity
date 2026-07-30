@@ -1,8 +1,15 @@
 ---
 category: general
-editorialStatus: reviewed
+editorialStatus: needs-rules-decision
 effects:
-  - kind: text
+  - kind: value
+    operation: add
+    scale: per-level
+    target: hit-points
+    value: 1
+  - classification: requires-rules-decision
+    decisionId: rules-decision.feat.zahigkeit-prerequisite
+    kind: text
     machineReadable: false
     text: +1 TP pro Stufe
 examples: []
@@ -261,7 +268,7 @@ rulesText: "# Zähigkeit\r
   Diese Fähigkeit repräsentiert nicht nur physische Robustheit, sondern auch mentale Stärke und den Willen zu überleben. Charaktere mit Zähigkeit haben gelernt, Schmerz zu ignorieren und auch unter extremen Bedingungen weiterzukämpfen."
 schemaVersion: 1
 source: legacy.world-rules
-status: legacy
+status: draft
 summary: Zähigkeit ist eine grundlegende Überlebensfähigkeit, die es Charakteren ermöglicht, mehr Schaden zu ertragen und länger im Kampf zu bestehen.
 traits:
   - trait.general

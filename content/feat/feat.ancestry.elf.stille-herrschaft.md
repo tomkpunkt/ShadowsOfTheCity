@@ -3,7 +3,8 @@ ancestryId: ancestry.elf
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Meister subtiler Kontrolle. Einmal pro Stunde kannst du eine soziale Probe wiederholen, wenn du versuchst, jemanden zu beeinflussen oder zu täuschen.
 examples: []

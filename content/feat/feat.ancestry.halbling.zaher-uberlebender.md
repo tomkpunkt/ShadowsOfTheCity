@@ -3,7 +3,8 @@ ancestryId: ancestry.halbling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erhältst Resistenz 3 gegen Gifte und Krankheit sowie +1 auf Rettungswürfe gegen Erschöpfung oder Hunger.
 examples: []

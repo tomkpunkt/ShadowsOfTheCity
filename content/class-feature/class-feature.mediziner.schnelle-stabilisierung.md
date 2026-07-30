@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst einen sterbenden Verbündeten in einer Aktion stabilisieren. Wenn du dies tust, erhält das Ziel sofort 1W8 TP. Einmal pro Stunde kannst du stattdessen eine Adrenalininjektion einsetzen, um +1 auf Angriff und Schaden für 1 Minute zu gewähren (danach 1W6 Erschöpfungsschaden). ---
 examples: []

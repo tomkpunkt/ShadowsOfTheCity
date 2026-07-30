@@ -2,7 +2,14 @@
 category: general
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    target: perception
+    value: 2
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +2 Wahrnehmung
 examples: []

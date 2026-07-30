@@ -2,7 +2,8 @@
 armorClass: 15
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Menschlicher NPC (Polizist), rechtschaffen neutral - Stufe: 1/2 (100 EP) - TP: 35 (7d8 + 7) - RK: 15 (Uniform) - Fertigkeiten: Einschüchtern +5, Wahrnehmung +5 - Spezialfähigkeiten: Verhaftung, Zeugenbefragung - Aktionen: Schlagstock, Pistole, Verhaftung"
 examples: []

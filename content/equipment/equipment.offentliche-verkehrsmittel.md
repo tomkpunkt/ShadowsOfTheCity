@@ -5,7 +5,8 @@ category: service
 categoryId: trait.item.equipment.technology
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: Massentransport
 examples: []

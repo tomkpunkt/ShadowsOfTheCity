@@ -3,7 +3,8 @@ category: class
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Einmal pro Stunde kannst du 1W8 + CHA-Mod TP wiederherstellen.
 examples: []

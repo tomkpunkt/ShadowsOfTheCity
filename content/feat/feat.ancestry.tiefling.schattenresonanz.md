@@ -3,7 +3,8 @@ ancestryId: ancestry.tiefling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du ziehst Energie aus Dunkelheit. Wenn du dich in Schatten oder völliger Dunkelheit befindest, erhältst du +1 auf Rettungswürfe gegen Zauber und magische Effekte.
 examples: []

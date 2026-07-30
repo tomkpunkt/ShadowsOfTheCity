@@ -3,7 +3,8 @@ category: archetype
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du opferst dich für Macht. Du erhältst +1 auf Zauber-SGs, wenn du bei der Vorbereitung 1W6 TP opferst. Einmal pro Woche kannst du ein Blutritual durchführen, das dir Resistenz 5 gegen Tod und Krankheit gibt (1 Tag).
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 2 Geräte gleichzeitig aktiv halten, ohne Malus.
 examples: []

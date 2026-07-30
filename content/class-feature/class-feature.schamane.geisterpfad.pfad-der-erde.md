@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist fest verwurzelt in der Welt. - Du erhältst den Cantrip Tanglefoot. - Du erhältst Resistenz 2 gegen physische Schäden.
 examples: []

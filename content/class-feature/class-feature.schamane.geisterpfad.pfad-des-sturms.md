@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du verkörperst Zorn und Erneuerung. - Du erhältst den Cantrip Electric Arc oder Gust. - Wenn du einen Zauber mit Blitz- oder Windschaden wirkst, verursachst +1 Schaden.
 examples: []

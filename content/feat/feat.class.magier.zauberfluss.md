@@ -3,7 +3,8 @@ category: class
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 2 Zauber pro Runde wirken, solange einer ein Cantrip ist.
 examples: []

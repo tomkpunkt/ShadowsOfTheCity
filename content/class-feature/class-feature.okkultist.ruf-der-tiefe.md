@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Die Dunkelheit antwortet deinem Willen. Einmal pro Tag kannst du Summon Entity oder Banish wirken. Wenn du ein beschworenes Wesen kontrollierst, erhält es +1 auf Angriffe, solange du Schaden erleidest. ---
 examples: []

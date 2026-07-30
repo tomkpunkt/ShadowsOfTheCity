@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du nimmst eine Position ein, um Verbündete zu schützen. Effekt: Wenn du die Aktion Verteidigen ausführst, erhältst zusätzlich Resistenz 2 gegen physischen Schaden bis zum Beginn deines nächsten Zuges. Wenn du einen Schild führst, erhöhst du dessen Härte um 2. ---"
 examples: []

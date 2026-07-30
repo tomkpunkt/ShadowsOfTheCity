@@ -2,7 +2,8 @@
 ancestryId: ancestry.tiefling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Körper reagiert sensibel auf magische Felder. Du erhältst Fertigkeitstraining in Arkane Kunde und kannst einmal pro Stunde erkennen, ob ein Gebiet magisch instabil ist (SG 15).
 examples: []

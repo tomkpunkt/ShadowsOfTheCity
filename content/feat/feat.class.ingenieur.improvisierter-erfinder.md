@@ -3,7 +3,8 @@ category: class
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Werkzeuge aus Müll herstellen (SG 15).
 examples: []

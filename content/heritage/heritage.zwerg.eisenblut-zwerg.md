@@ -2,7 +2,8 @@
 ancestryId: ancestry.zwerg
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Clan ist für seine Härte bekannt. Du erhältst Resistenz 2 gegen Feuer- und Hitzeschaden.
 examples: []

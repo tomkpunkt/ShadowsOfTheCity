@@ -3,7 +3,16 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.religion
+    rank: trained
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.survival
+    rank: trained
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du trägst die Stimmen deiner Ahnen in dir. Einmal pro Tag kannst du bei einer Probe auf Überleben, Religion oder Diplomatie +2 hinzufügen, wenn du dich von ihnen leiten lässt. Du erhältst Fertigkeitstraining in Religion und Überleben. ---
 examples: []

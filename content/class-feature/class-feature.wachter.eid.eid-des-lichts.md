@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du dienst dem Schutz Unschuldiger oder einem göttlichen Prinzip. - Du erhältst Fertigkeitstraining in Religion und Medizin. - Einmal pro Tag kannst du Lay on Hands wirken (Attribut: Charisma)."
 examples: []

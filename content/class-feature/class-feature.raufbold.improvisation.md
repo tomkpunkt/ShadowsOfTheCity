@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst aus allem eine Waffe machen. Wenn du mit einem improvisierten Gegenstand (z. B. Stuhl, Rohr, Flasche) angreifst, erhältst du +1 auf Angriffswürfe und verursachst zusätzlichen Schaden in Höhe deines STÄ-Modifikators. Du kannst außerdem jede Runde eine Aktion verwenden, um eine Umgebungssituation zu deinem Vorteil zu nutzen (SG 15; z. B. Licht, Geräusch, Deckung). ---
 examples: []

@@ -2,7 +2,8 @@
 armorClass: 18
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Fiend (Dämon), chaotisch böse - Stufe: 2 (400 EP) - TP: 70 (14d8 + 14) - RK: 18 (Natürliche Rüstung) - Fertigkeiten: Einschüchtern +8, Täuschen +6 - Spezialfähigkeiten: Feuerresistenz, Verderbnis - Schwächen: Heilige Magie, Silber - Aktionen: Feuerangriffe, Verderbnis"
 examples: []

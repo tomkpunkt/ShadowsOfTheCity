@@ -3,7 +3,8 @@ ancestryId: ancestry.tiefling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du kannst andere mit bloßen Worten beeinflussen. Du erhältst Fertigkeitstraining in Diplomatie oder Täuschung und kannst den Zauber Charm einmal pro Tag wirken (Attribut: Charisma)."
 examples: []

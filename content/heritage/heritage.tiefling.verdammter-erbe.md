@@ -2,7 +2,8 @@
 ancestryId: ancestry.tiefling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du trägst das Erbe eines uralten Dämons oder einer magischen Katastrophe. Du kannst einmal pro Tag Fear wirken (Attribut: Charisma), erleidest aber −1 auf Diplomatie gegen religiöse Charaktere. ---"
 examples: []

@@ -3,7 +3,8 @@ category: archetype
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du wandelst zwischen Leben und Tod. Du erhältst Fertigkeitstraining in Medizin und Religion. Einmal pro Tag kannst du einen gefallenen Verbündeten stabilisieren, ohne Materialkomponenten. ---
 examples: []

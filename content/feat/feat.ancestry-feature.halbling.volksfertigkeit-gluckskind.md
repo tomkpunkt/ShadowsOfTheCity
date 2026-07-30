@@ -3,7 +3,8 @@ ancestryId: ancestry.halbling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Das Schicksal scheint dir gewogen zu sein. Effekt: Einmal pro Tag kannst du einen fehlgeschlagenen Angriffswurf oder Rettungswurf wiederholen. Du musst das zweite Ergebnis verwenden. ---"
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Körper reagiert schneller als dein Verstand. Einmal pro Runde kannst du einen unbewaffneten Schlag als Reaktion ausführen, wenn dich jemand im Nahkampf angreift. Wenn du triffst, erhältst du Resistenz 2 gegen den Schaden dieses Angriffs. ---
 examples: []

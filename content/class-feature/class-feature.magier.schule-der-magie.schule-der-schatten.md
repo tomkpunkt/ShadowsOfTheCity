@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du nutzt das Unsichtbare als Waffe. - Du erhältst den Cantrip Daze oder Message. - Einmal pro Stunde kannst du dich für 1 Runde teilweise unsichtbar machen (Heimlichkeitsbonus +2).
 examples: []

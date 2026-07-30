@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Wenn ein Verbündeter innerhalb von 5 Fuß von dir angegriffen wird, kannst du als Reaktion versuchen, den Schlag abzufangen. Würfle einen Reflexwurf gegen SG des Angriffs: bei Erfolg nimmst du die Hälfte des Schadens auf dich. ---"
 examples: []

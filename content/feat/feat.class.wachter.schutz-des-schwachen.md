@@ -3,7 +3,8 @@ category: class
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du einen Verbündeten verteidigst, erhält dieser Resistenz 2 gegen Schaden.
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.ork
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du spürst Gefahr, bevor sie dich erreicht. Du erhältst einen +1 Situationsbonus auf Initiative und Wahrnehmungswürfe gegen versteckte Feinde.
 examples: []

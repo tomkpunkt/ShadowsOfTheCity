@@ -2,7 +2,8 @@
 armorClass: 17
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Aberration (Psychisch), chaotisch neutral - Stufe: 1 (200 EP) - TP: 35 (7d8 + 7) - RK: 17 (Psychische Abwehr) - Fertigkeiten: Täuschen +8, Magie +6 - Spezialfähigkeiten: Gedankenkontrolle, Psychische Projektion - Schwächen: Psychische Abwehr, Mentale Disziplin - Aktionen: Gedankenkontrolle, Psychische Projektion ---"
 examples: []

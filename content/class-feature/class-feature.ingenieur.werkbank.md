@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du besitzt eine persönliche Werkzeugtasche oder mobile Werkbank. Du kannst einfache Geräte (bis Stufe 2) oder provisorische Mechanismen bauen, solange du passende Teile hast. Beispiele: Funkscanner, Signalverstärker, Gasmesser, primitive Alarmvorrichtungen. Für den Bau gilt: 10 Minuten × Stufe des Geräts, Kosten: 10 % des Materialwerts. ---"
 examples: []

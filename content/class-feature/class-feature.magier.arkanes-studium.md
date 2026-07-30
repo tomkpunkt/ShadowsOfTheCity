@@ -3,7 +3,16 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.arcana
+    rank: trained
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.science
+    rank: trained
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du hast jahrelang das Geflecht studiert. Du erhältst Fertigkeitstraining in Arkane Kunde und Wissenschaft. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle eine andere Wissensfertigkeit. Zusätzlich kannst du die Präsenz aktiver Magie in einem Umkreis von 30 Fuß automatisch spüren. ---
 examples: []

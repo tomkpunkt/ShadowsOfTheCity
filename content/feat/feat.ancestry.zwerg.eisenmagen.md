@@ -3,7 +3,8 @@ ancestryId: ancestry.zwerg
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Zwerg Du erhältst Resistenz 2 gegen Gift und Krankheit. Wenn du eine Mahlzeit oder ein Getränk zu dir nimmst, das andere krank machen würde, erleidest du keine negativen Effekte."
 examples: []

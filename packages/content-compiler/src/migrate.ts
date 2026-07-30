@@ -189,6 +189,298 @@ const allEntities: ContentEntity[] = [];
 const entitiesById = new Map<string, ContentEntity>();
 const manifestByPath = new Map<string, ManifestSource>();
 
+const formalizedEffects: Record<string, unknown[]> = {
+  "feat.general.reflextraining": [
+    {
+      kind: "value",
+      target: "save",
+      selector: "reflex",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    }
+  ],
+  "feat.general.verbesserte-wahrnehmung": [
+    {
+      kind: "value",
+      target: "perception",
+      operation: "add",
+      value: 2,
+      bonusType: "untyped"
+    }
+  ],
+  "feat.general.mechaniker": [
+    {
+      kind: "value",
+      target: "skill",
+      selector: "skill.technology",
+      operation: "add",
+      value: 2,
+      bonusType: "untyped"
+    }
+  ],
+  "feat.class.wachter.wachsamkeit": [
+    {
+      kind: "value",
+      target: "perception",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    },
+    {
+      kind: "value",
+      target: "initiative",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    }
+  ],
+  "feat.class.soldner.veteraneninstinkt": [
+    {
+      kind: "value",
+      target: "perception",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    },
+    {
+      kind: "value",
+      target: "initiative",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    }
+  ],
+  "class-feature.agent.schnelle-reaktion": [
+    {
+      kind: "value",
+      target: "initiative",
+      operation: "add",
+      value: 2,
+      bonusType: "untyped"
+    }
+  ],
+  "class-feature.soldner.kriegsinstinkt": [
+    {
+      kind: "value",
+      target: "initiative",
+      operation: "add",
+      value: 2,
+      bonusType: "untyped"
+    }
+  ],
+  "class-feature.agent.spionageausbildung": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.stealth",
+      operation: "at-least",
+      rank: "trained"
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.deception",
+      operation: "at-least",
+      rank: "trained"
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.society",
+      operation: "at-least",
+      rank: "trained"
+    }
+  ],
+  "class-feature.agent.vorgehensweise.manipulator": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.diplomacy",
+      operation: "increase",
+      steps: 1
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.deception",
+      operation: "increase",
+      steps: 1
+    }
+  ],
+  "class-feature.magier.arkanes-studium": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.arcana",
+      operation: "at-least",
+      rank: "trained"
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.science",
+      operation: "at-least",
+      rank: "trained"
+    }
+  ],
+  "class-feature.mediziner.medizinische-ausbildung": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.medicine",
+      operation: "at-least",
+      rank: "trained"
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.science",
+      operation: "at-least",
+      rank: "trained"
+    }
+  ],
+  "class-feature.schamane.ahnenverbindung": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.religion",
+      operation: "at-least",
+      rank: "trained"
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.survival",
+      operation: "at-least",
+      rank: "trained"
+    }
+  ],
+  "heritage.elf.hochhaus-erbe": [
+    {
+      kind: "value",
+      target: "skill",
+      selector: "skill.society",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    },
+    {
+      kind: "value",
+      target: "skill",
+      selector: "skill.diplomacy",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    }
+  ],
+  "heritage.mensch.verdrangter": [
+    {
+      kind: "value",
+      target: "skill",
+      selector: "skill.stealth",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    },
+    {
+      kind: "value",
+      target: "skill",
+      selector: "skill.deception",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    }
+  ],
+  "heritage.elf.verborgener-wachter": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.stealth",
+      operation: "at-least",
+      rank: "trained"
+    },
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "proficiency.perception",
+      operation: "at-least",
+      rank: "trained"
+    }
+  ],
+  "heritage.elf.waldhuter-der-dammerung": [
+    {
+      kind: "proficiency-rule",
+      proficiencyId: "skill.survival",
+      operation: "at-least",
+      rank: "trained"
+    },
+    { kind: "grant", grantType: "spell", id: "spell.nachricht" }
+  ],
+  "class-feature.magier.schule-der-magie.schule-der-erkenntnis": [
+    { kind: "grant", grantType: "spell", id: "spell.magie-erkennen" },
+    {
+      kind: "value",
+      target: "skill",
+      selector: "skill.arcana",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    },
+    {
+      kind: "value",
+      target: "perception",
+      operation: "add",
+      value: 1,
+      bonusType: "untyped"
+    }
+  ],
+  "class-feature.magier.schule-der-magie.schule-des-schutzes": [
+    { kind: "grant", grantType: "spell", id: "spell.schutzschild" }
+  ],
+  "feat.general.zahigkeit": [
+    {
+      kind: "value",
+      target: "hit-points",
+      operation: "add",
+      value: 1,
+      scale: "per-level"
+    }
+  ]
+};
+
+const applyFormalization = (entity: ContentEntity): ContentEntity => {
+  const additions = formalizedEffects[entity.id];
+  if (!("effects" in entity)) {
+    return entity;
+  }
+  const effects = entity.effects.map((effect): unknown => {
+    if (
+      effect !== null &&
+      typeof effect === "object" &&
+      "kind" in effect &&
+      effect.kind === "skill-training" &&
+      "skillId" in effect &&
+      "rank" in effect
+    ) {
+      return {
+        kind: "proficiency-rule",
+        proficiencyId: effect.skillId,
+        operation: "at-least",
+        rank: effect.rank
+      };
+    }
+    if (
+      entity.id === "feat.general.zahigkeit" &&
+      effect !== null &&
+      typeof effect === "object" &&
+      "kind" in effect &&
+      effect.kind === "text"
+    ) {
+      return {
+        ...(effect as Record<string, unknown>),
+        classification: "requires-rules-decision",
+        decisionId: "rules-decision.feat.zahigkeit-prerequisite"
+      };
+    }
+    return effect;
+  });
+  return ContentEntitySchema.parse({
+    ...entity,
+    ...(entity.id === "feat.general.zahigkeit"
+      ? { status: "draft", editorialStatus: "needs-rules-decision" }
+      : {}),
+    effects: [...(additions ?? []), ...effects]
+  });
+};
+
 const sourceEntry = (relativePath: string): ManifestSource => {
   const normalized = normalizePath(relativePath);
   const existing = manifestByPath.get(normalized);
@@ -213,7 +505,7 @@ const addEntity = (
     summary = `${input.name}: ${summary}`;
   }
   const sourceRulesText = typeof input["rulesText"] === "string" ? input["rulesText"] : body.trim();
-  const candidate = ContentEntitySchema.parse({
+  const candidate = applyFormalization(ContentEntitySchema.parse({
     schemaVersion: SCHEMA_VERSION,
     source: sourceId,
     status: "legacy",
@@ -229,7 +521,7 @@ const addEntity = (
       paths: normalizedPaths,
       notes: options.warnings ?? []
     }
-  });
+  }));
   if (entitiesById.has(candidate.id)) {
     throw new Error(`Migration produced duplicate ID ${candidate.id}`);
   }
@@ -288,10 +580,19 @@ const parseLevel = (value: string, fallback = 1): number => {
   return match === null ? fallback : Math.max(1, Math.min(20, Number(match[1])));
 };
 
-const textEffect = (text: string): Record<string, unknown> => ({
+const textEffect = (
+  text: string,
+  classification:
+    | "partially-structured"
+    | "display-only"
+    | "requires-rules-decision",
+  decisionId?: string
+): Record<string, unknown> => ({
   kind: "text",
   text: normalizeText(text).slice(0, 2000) || "Siehe erhaltene Beschreibung.",
-  machineReadable: false
+  machineReadable: false,
+  classification,
+  ...(decisionId === undefined ? {} : { decisionId })
 });
 
 const migrateSupportingEntities = (): void => {
@@ -645,7 +946,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
               level: parseLevel(featureHeading.title),
               traits: ["trait.class-option", optionTraitId],
               prerequisites: [],
-              effects: [textEffect(sectionBody(document, optionHeading))],
+              effects: [textEffect(sectionBody(document, optionHeading), "partially-structured")],
               choiceIds: []
             },
             [document.relativePath],
@@ -692,7 +993,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           level: parseLevel(featureHeading.title),
           traits: ["trait.legacy"],
           prerequisites: [],
-          effects: [textEffect(sectionBody(document, featureHeading))],
+          effects: [textEffect(sectionBody(document, featureHeading), "partially-structured")],
           choiceIds
         },
         [document.relativePath],
@@ -725,7 +1026,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           classId,
           traits: ["trait.legacy"],
           prerequisites: [{ class: { id: classId } }],
-          effects: [textEffect(effectText ?? featName)]
+          effects: [textEffect(effectText ?? featName, "partially-structured")]
         },
         [document.relativePath],
         effectText ?? "",
@@ -774,7 +1075,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           classId,
           traits: ["trait.legacy"],
           prerequisites: [{ class: { id: classId } }],
-          effects: [textEffect(sectionBody(document, archetypeHeading))]
+          effects: [textEffect(sectionBody(document, archetypeHeading), "partially-structured")]
         },
         [document.relativePath],
         sectionBody(document, archetypeHeading),
@@ -1003,7 +1304,7 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
           ancestryId,
           traits: ["trait.ancestry"],
           prerequisites: [{ ancestry: { id: ancestryId } }],
-          effects: [textEffect(sectionBody(document, featureHeading))]
+          effects: [textEffect(sectionBody(document, featureHeading), "partially-structured")]
         },
         [document.relativePath],
         sectionBody(document, featureHeading),
@@ -1027,7 +1328,7 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
           ancestryId,
           traits: ["trait.ancestry"],
           prerequisites: [{ ancestry: { id: ancestryId } }],
-          effects: [textEffect(sectionBody(document, featHeading))]
+          effects: [textEffect(sectionBody(document, featHeading), "partially-structured")]
         },
         [document.relativePath],
         sectionBody(document, featHeading),
@@ -1050,7 +1351,7 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
           ancestryId,
           traits: ["trait.ancestry"],
           prerequisites: [{ ancestry: { id: ancestryId } }],
-          effects: [textEffect(sectionBody(document, heritageHeading))]
+          effects: [textEffect(sectionBody(document, heritageHeading), "partially-structured")]
         },
         [document.relativePath],
         sectionBody(document, heritageHeading),
@@ -1185,7 +1486,7 @@ const migrateGeneralFeats = (documents: IndexedDocument[]): void => {
           level: parseLevel(levelText ?? "1"),
           traits: ["trait.general"],
           prerequisites,
-          effects: [textEffect(effectText ?? name)]
+          effects: [textEffect(effectText ?? name, "partially-structured")]
         },
         detail === undefined
           ? [overview.relativePath]
@@ -1351,7 +1652,7 @@ const migrateSpells = (documents: IndexedDocument[]): void => {
         duration: "Siehe Legacy-Beschreibung",
         defense: config.defense,
         traits: ["trait.magic"],
-        effects: [textEffect(document.source)],
+        effects: [textEffect(document.source, "partially-structured")],
         heightened: []
       },
       [document.relativePath, "spells/TOC.md"],
@@ -2352,7 +2653,13 @@ const migrateEquipment = (documents: IndexedDocument[]): void => {
           origins: editorial.origins,
           categoryId,
           traits: ["trait.legacy", ...(editorial.traits ?? [])],
-          effects: [textEffect(row[1] ?? name)]
+          effects: [
+            textEffect(
+              row[1] ?? name,
+              needsRulesDecision ? "requires-rules-decision" : "display-only",
+              needsRulesDecision ? "rules-decision.equipment.artefakt-special-plus-four" : undefined
+            )
+          ]
         },
         [overview.relativePath],
         row.join(" | "),
@@ -2432,7 +2739,7 @@ const migrateCreatures = (documents: IndexedDocument[]): void => {
         speed,
         legacySystem: "dnd5e",
         traits: ["trait.humanoid", "trait.legacy"],
-        effects: [textEffect(candidate.body)]
+        effects: [textEffect(candidate.body, "partially-structured")]
       },
       candidate.paths,
       candidate.body,

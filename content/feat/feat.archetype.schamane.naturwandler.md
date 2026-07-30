@@ -3,7 +3,8 @@ category: archetype
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du verschmilzt mit der Umwelt. Einmal pro Tag kannst du dich 10 Minuten lang in einen Tiergeist verwandeln (+10 Fuß Bewegung, +2 auf Wahrnehmung). Du erhältst +1 auf Heimlichkeit in natürlicher Umgebung. ---
 examples: []

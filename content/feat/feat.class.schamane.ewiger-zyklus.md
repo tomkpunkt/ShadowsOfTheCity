@@ -3,7 +3,8 @@ category: class
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du stirbst, hinterlässt du eine heilende Aura (1W6 pro Runde, 1 Minute).
 examples: []

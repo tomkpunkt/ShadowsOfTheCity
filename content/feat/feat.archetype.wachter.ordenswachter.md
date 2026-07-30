@@ -3,7 +3,8 @@ category: archetype
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Teil eines heiligen Ordens wie dem Ordo Lux Aeterna. Du erhältst Fertigkeitstraining in Religion und Einschüchtern. Wenn du gegen dämonische oder magische Kreaturen kämpfst, erhältst +1 auf Schaden.
 examples: []

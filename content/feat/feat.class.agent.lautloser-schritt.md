@@ -3,7 +3,8 @@ category: class
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst dich selbst bei schneller Bewegung verstecken.
 examples: []

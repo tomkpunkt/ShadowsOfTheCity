@@ -2,7 +2,8 @@
 armorClass: 14
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Menschlicher NPC (Straßenschläger-Veteran), chaotisch böse - Stufe: 1 (200 EP) - TP: 45 (9d8 + 9) - RK: 14 (Verstärkte Lederjacke) - Geschwindigkeit: 30 Fuß - Stärke: 16 (+3) | Geschicklichkeit: 15 (+2) | Konstitution: 15 (+2) | Intelligenz: 11 (+0) | Weisheit: 13 (+1) | Charisma: 14 (+2) - Rettungswürfe: Stärke +5, Konstitution +5 - Fertigkeiten: Einschüchtern +4, Athletik +5, Wahrnehmung +4, Überleben +4 - Sinne: Passive Wahrnehmung 14 - Sprachen: Deutsch, Straßenslang - Spezialfähigkeiten: Erweiterte Territoriale Kontrolle, Straßenschläger-Instinkt, Gang-Mentalität - Aktionen: Messer, Faust, Schlagstock, Einschüchtern, Verstärkung rufen"
 examples: []

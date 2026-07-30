@@ -3,7 +3,14 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    target: initiative
+    value: 2
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Wahrnehmung von Gefahr ist fast übernatürlich. Du erhältst +2 auf Initiativewürfe und Wahrnehmung gegen Überraschungsangriffe. ---
 examples: []

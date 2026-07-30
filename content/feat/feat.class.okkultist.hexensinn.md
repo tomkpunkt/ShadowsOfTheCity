@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du spürst aktive Magie und Flüche im Umkreis von 30 Fuß.
 examples: []

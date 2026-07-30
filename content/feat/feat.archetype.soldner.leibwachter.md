@@ -3,7 +3,8 @@ category: archetype
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Spezialist im Schutz anderer. Wenn du die Aktion Verteidigen auf einen Verbündeten anwendest, erhält dieser zusätzlich Resistenz 2 gegen physischen Schaden.
 examples: []

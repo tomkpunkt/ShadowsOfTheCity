@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Medium zwischen den Welten. - Du erhältst Fertigkeitstraining in Diplomatie oder Einschüchtern. - Du kannst einmal pro Tag Speak with Spirits oder Detect Magic wirken. ---
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du 0 TP erreichst, kannst du einmal 1W10 TP zurückgewinnen (1/Tag).
 examples: []

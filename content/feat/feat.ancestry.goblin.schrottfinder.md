@@ -3,7 +3,8 @@ ancestryId: ancestry.goblin
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Goblin Du kannst überall etwas Nützliches entdecken. Einmal pro Stunde kannst du eine Handwerksprobe ablegen (SG 15), um ein einfaches Werkzeug, Ersatzteil oder 1W6 GP an brauchbarem Material zu finden."
 examples: []

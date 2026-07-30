@@ -3,7 +3,8 @@ category: class
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst einmal pro Tag einen Zauber, der dich betrifft, reflektieren (Willenswurf SG 20).
 examples: []

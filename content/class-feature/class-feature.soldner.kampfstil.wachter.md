@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Verteidiger und Schildträger. - Erhalte den Feat Shield Block. - Wenn du erfolgreich einen Verbündeten verteidigst, erhält dieser bis zum Ende deines nächsten Zuges +1 AC. ---
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst eine Konstruktion erschaffen, die über dein normales Können hinausgeht. Einmal pro Woche kannst du ein „Meisterwerk“ erschaffen – ein technisches Gerät, das einen magischen Effekt nachahmt (z. B. Alarm, Light, Healing Burst). Das Gerät hält 1 Tag, bevor es zerfällt. ---
 examples: []

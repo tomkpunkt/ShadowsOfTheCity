@@ -3,7 +3,8 @@ category: class
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Geräte oder Waffen anderer Spieler stabilisieren (+1 auf Angriff oder SG).
 examples: []

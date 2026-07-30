@@ -2,7 +2,8 @@
 armorClass: 18
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Konstrukt (Magitech), neutral - Stufe: 2 (400 EP) - TP: 80 (16d8 + 16) - RK: 18 (Magische Technologie) - Fertigkeiten: Magie +8, Technologie +6 - Spezialfähigkeiten: Magische Technologie, Elementare Fusion - Schwächen: Anti-Magie, Technologische Störungen - Aktionen: Magische Technologie, Elementare Fusion"
 examples: []

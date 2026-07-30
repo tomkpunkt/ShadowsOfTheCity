@@ -3,7 +3,8 @@ ancestryId: ancestry.gnom
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Einmal pro Tag kannst du eine fehlgeschlagene Handwerks- oder Wissensprobe automatisch als Erfolg werten. Dies gilt nur, wenn du mindestens 10 Minuten an dem Gegenstand oder Thema gearbeitet hast.
 examples: []

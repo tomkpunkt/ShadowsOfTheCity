@@ -3,7 +3,8 @@ category: class
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst zweimal mit unbewaffnetem Angriff angreifen (–4 Mali).
 examples: []

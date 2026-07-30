@@ -479,11 +479,11 @@ begutachten lassen.
 |:--|:--|:--|:--|
 | 0 - Ausgangszustand | complete | reproduzierbare technische Baseline | 737 Entitäten, 410 Text-Effekte, 8 strukturierte Effekte, 52 Unit- und 16 E2E-Tests dokumentiert |
 | 1 - Legacy-Inventar | complete | jeder Altbestand mit Zielstatus | 18 Bestände mit Strategie und Entfernungskriterium in `docs/review/05-legacy-inventory.md` |
-| 2 - Regelmodell | active | vollständige formale Regeltypen | bestehendes Modell und reale Lücken erfasst |
-| 3 - Ausdrucksmodell | pending | ein rekursiver Prädikatvertrag | noch offen |
-| 4 - Effektformalisierung | pending | zentrale Charakterwirkungen ausführbar | noch offen |
-| 5 - Systemkonventionen | pending | explizite, testbare globale Regeln | noch offen |
-| 6 - Rules Engine | pending | deterministische vollständige Auswertung | noch offen |
+| 2 - Regelmodell | complete | vollständige formale Regeltypen | geschlossene Typen für Werte, Kompetenz, Grants, Ressourcen, Bewegung, Aktionen, Angriffe und Zauber |
+| 3 - Ausdrucksmodell | complete | ein rekursiver Prädikatvertrag | 18 atomare Klassen sowie `all`, `any` und `not`, strikt validiert und getestet |
+| 4 - Effektformalisierung | complete | zentrale Charakterwirkungen ausführbar | 41 strukturierte Knoten, 410 Textregeln vollständig klassifiziert, 2 Entscheidungs-IDs |
+| 5 - Systemkonventionen | complete | explizite, testbare globale Regeln | Stapelung, Reihenfolge, Rundung, Choices, Grants und Legacy-IDs dokumentiert |
+| 6 - Rules Engine | active | deterministische vollständige Auswertung | erweiterte Ausgabe und neue Effektfamilien implementiert; End-to-End-Abnahme noch offen |
 | 7 - Legacy-Charaktere | pending | versionierte verlustarme Migration | noch offen |
 | 8 - Builder-Integration | pending | UI ohne eigene Regelberechnung | noch offen |
 | 9 - Contenthärtung | pending | Templates, Versionierung und CLI | noch offen |
@@ -521,8 +521,40 @@ Prüfungen:
 
 Offene Punkte:
 
-- Phase 2 beginnt mit Schema-Version 2, Character-Format 2 und dem erweiterten
-  Effekt- und Ausdrucksmodell.
+- Phase 6 schließt als Nächstes Engine-Abnahme, Blockerbehandlung und
+  Integrationsregressionen ab.
+
+### Phase 2 bis 5
+
+Geänderte Bereiche:
+
+- `packages/shared/src/schemas.ts` und `types.ts`
+- `packages/rules-engine/src/predicate.ts`, `effects.ts`, `engine.ts`
+- `packages/content-compiler/src/compiler.ts` und `migrate.ts`
+- `content/legacy-aliases.json` und reproduzierbar migrierte Contentdateien
+- `docs/rules/system-conventions.md`
+- `docs/review/06-rule-formalization.md`
+
+Entscheidungen:
+
+- Das Content-Schema bleibt bei Version 1, weil alle Erweiterungen additive,
+  rückwärtskompatible Felder sind; das kanonische Character-Format steigt auf 2.
+- Situative Zahlen werden nicht in permanente Charakterwerte eingerechnet.
+- Alte `skill-training`-Knoten werden in das einheitliche Kompetenzmodell
+  migriert.
+- Entscheidungs-IDs sind syntaktisch geprüfte Prozess-IDs, keine
+  Katalogreferenzen.
+
+Prüfungen:
+
+- 70 Unit- und Integrationstests erfolgreich
+- Contentmigration, Validierung, Kompilierung und Stale-Check erfolgreich
+- TypeScript Strict Mode für alle Workspaces erfolgreich
+
+Offene Punkte:
+
+- Phase 6: blockierte Entitäten in allen Auswahlwegen abweisen und die
+  erweiterte Engine-Ausgabe mit realen Charakteren abnehmen.
 
 ## Folgeauftrag: Redaktion und Ausrüstungskatalog
 

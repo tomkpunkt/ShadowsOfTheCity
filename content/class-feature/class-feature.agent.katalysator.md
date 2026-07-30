@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du verstehst es, Situationen zu deinen Gunsten zu verändern. Einmal pro Tag kannst du eine Probe eines Verbündeten um +2 modifizieren, wenn du anwesend bist und einen plausiblen Einfluss nimmst (z. B. Ablenkung, Bestechung, Unterstützung). ---
 examples: []

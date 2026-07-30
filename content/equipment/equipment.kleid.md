@@ -5,7 +5,8 @@ category: everyday
 categoryId: trait.item.equipment.clothing
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: +1 Charisma, +1 Eleganz
 examples: []

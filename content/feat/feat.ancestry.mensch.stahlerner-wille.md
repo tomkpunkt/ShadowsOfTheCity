@@ -3,7 +3,8 @@ ancestryId: ancestry.mensch
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du hast gelernt, der Angst in all ihren Formen zu widerstehen. Du erhältst einen +1 Statusbonus auf Willenswürfe gegen Furcht.
 examples: []

@@ -3,7 +3,20 @@ category: class
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    target: perception
+    value: 1
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    target: initiative
+    value: 1
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erkennst feindliche Taktiken. +1 auf Wahrnehmung und Initiative.
 examples: []

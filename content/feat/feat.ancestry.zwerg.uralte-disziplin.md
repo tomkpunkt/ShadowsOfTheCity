@@ -3,7 +3,8 @@ ancestryId: ancestry.zwerg
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine innere Ruhe macht dich widerstandsfähig gegen geistige Beeinflussung. Du erhältst einen +2 Bonus auf Willenswürfe gegen mentale Effekte.
 examples: []

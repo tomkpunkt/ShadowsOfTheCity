@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kämpfst aus der Distanz mit Präzision. - Erhalte den Feat Point-Blank Shot. - Wenn du auf eine stationäre Position zielst (keine Bewegung in dieser Runde), erhältst du +1 auf Angriffswürfe mit Fernkampfwaffen.
 examples: []

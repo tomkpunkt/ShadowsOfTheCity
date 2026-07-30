@@ -3,7 +3,14 @@ choiceIds: []
 classId: class.agent
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    target: initiative
+    value: 2
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du reagierst blitzschnell auf Bedrohungen. Du erhältst +2 auf Initiative und kannst in der ersten Runde eines Kampfes eine Bewegung von bis zu 10 Fuß als freie Aktion ausführen. ---
 examples: []

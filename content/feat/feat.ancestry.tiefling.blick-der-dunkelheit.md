@@ -3,7 +3,8 @@ ancestryId: ancestry.tiefling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Tiefling Du besitzt Dunkelsicht und erhältst einen Bonus von +1 auf Wahrnehmung in dämmriger Umgebung."
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kennst die verborgenen Symbole und Sprachen der alten Welt. Du erhältst Fertigkeitstraining in Okkultismus und Religion. Einmal pro Stunde kannst du eine Probe auf Arkane Kunde oder Religion wiederholen, wenn sie mit Ritualen, Geistern oder Flüchen zu tun hat. ---
 examples: []

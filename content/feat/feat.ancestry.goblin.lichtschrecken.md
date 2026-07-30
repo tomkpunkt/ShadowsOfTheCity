@@ -3,7 +3,8 @@ ancestryId: ancestry.goblin
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist an grelles Licht gewöhnt. Du ignorierst Blendung durch künstliches oder magisches Licht und erhältst Dunkelsicht.
 examples: []

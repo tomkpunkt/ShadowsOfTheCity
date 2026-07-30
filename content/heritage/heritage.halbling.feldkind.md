@@ -2,7 +2,8 @@
 ancestryId: ancestry.halbling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist in ländlicher Umgebung aufgewachsen. Du erhältst Fertigkeitstraining in Überleben und einen +1 Bonus auf Wahrnehmungswürfe in der Natur.
 examples: []

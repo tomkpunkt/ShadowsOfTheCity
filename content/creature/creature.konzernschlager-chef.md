@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 2 - TP: 70 (14d8 + 14) - RK: 16 (Schwere Schutzweste) - Fertigkeiten: +4 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Vollständiger Konzernschutz, Kommando ---"
 examples: []

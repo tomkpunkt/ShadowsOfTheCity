@@ -3,7 +3,8 @@ category: archetype
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du führst andere im Kampf. Einmal pro Tag kannst du allen Verbündeten in 30 Fuß Reichweite einen +1 Bonus auf Angriff und Schaden für 1 Minute verleihen. ---
 examples: []

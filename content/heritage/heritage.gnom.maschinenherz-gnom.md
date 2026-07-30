@@ -2,7 +2,8 @@
 ancestryId: ancestry.gnom
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Körper enthält kleine Implantate oder kybermagische Mechanismen. Du erhältst Resistenz 2 gegen elektrische Effekte und Immunität gegen Erschöpfung durch Überlastung.
 examples: []

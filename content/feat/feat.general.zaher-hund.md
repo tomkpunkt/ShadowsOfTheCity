@@ -2,7 +2,8 @@
 category: general
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +1 Angriff/Schaden <50% TP
 examples: []

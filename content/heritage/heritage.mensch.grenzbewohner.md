@@ -2,7 +2,8 @@
 ancestryId: ancestry.mensch
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kennst dich in unwirtlichen Regionen aus. Du ignorierst schwieriges Gelände natürlichen Ursprungs und erhältst einen Bonus von +1 auf Überlebenswürfe.
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.schamane
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist eins mit deiner Umgebung. Du erhältst +2 auf Überleben und Wahrnehmung in der Natur. Einmal pro Tag kannst du Entangle oder Water Walk wirken, ohne Materialien. ---
 examples: []

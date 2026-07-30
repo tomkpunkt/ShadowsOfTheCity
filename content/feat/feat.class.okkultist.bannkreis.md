@@ -3,7 +3,8 @@ category: class
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst 1/Tag einen Schutzkreis gegen eine Kreaturenart ziehen (SG 20).
 examples: []

@@ -3,7 +3,25 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - grantType: spell
+    id: spell.magie-erkennen
+    kind: grant
+    quantity: 1
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    selector: skill.arcana
+    target: skill
+    value: 1
+  - bonusType: untyped
+    kind: value
+    operation: add
+    scale: flat
+    target: perception
+    value: 1
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du suchst Wissen über Macht. - Du erhältst den Cantrip Detect Magic. - Du erhältst +1 auf Arkane Kunde und Wahrnehmung.
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Alle Verbündeten im Umkreis von 20 Fuß erhalten +1 auf Rettungswürfe.
 examples: []

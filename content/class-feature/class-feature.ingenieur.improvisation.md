@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Werkzeuge, Waffen oder Geräte improvisieren, auch wenn dir Materialien fehlen. Wenn du improvisierte Ausrüstung verwendest, erleidest du keinen Malus. Einmal pro Tag kannst du eine Probe auf Handwerk oder Wissenschaft automatisch als Erfolg werten, wenn du eine kreative Lösung einsetzt. ---
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.mensch
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Mensch Du kannst deine Erfahrung auf unzählige Weise anwenden. Du erhältst einen zusätzlichen Klassen- oder Fertigkeits-Feat deiner Wahl."
 examples: []

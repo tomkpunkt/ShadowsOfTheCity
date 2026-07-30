@@ -2,7 +2,8 @@
 ancestryId: ancestry.tiefling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Ergebnis experimenteller Genfusion oder Forschung. Du erhältst Resistenz 2 gegen Elektrizität und Immunität gegen Strahlungseffekte.
 examples: []

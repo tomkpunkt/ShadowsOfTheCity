@@ -5,7 +5,8 @@ category: medical
 categoryId: trait.item.equipment.magic
 editorialStatus: rewritten
 effects:
-  - kind: text
+  - classification: display-only
+    kind: text
     machineReadable: false
     text: +1 Heilung, +1 Natur
 examples: []

@@ -2,7 +2,8 @@
 ancestryId: ancestry.goblin
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Körper ist widerstandsfähiger als gewöhnlich. Du erhältst Resistenz 2 gegen Säure- und Korrosionsschaden.
 examples: []

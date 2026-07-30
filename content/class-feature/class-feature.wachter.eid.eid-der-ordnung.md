@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.wachter
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du glaubst an Gesetz und Struktur. - Erhalte +1 auf Willenswürfe gegen mentale Effekte. - Wenn du ein Verbündeten verteidigst, erhält dieser +1 AC.
 examples: []

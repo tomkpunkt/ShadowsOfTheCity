@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist im Nahkampf zuhause. Du erhältst Fertigkeitstraining in Athletik und Einschüchtern. Deine unbewaffneten Angriffe verursachen 1W6 Schaden (statt 1W4) und gelten als bewaffnet. Wenn du improvisierte Waffen einsetzt, erleidest du keinen Malus. ---
 examples: []

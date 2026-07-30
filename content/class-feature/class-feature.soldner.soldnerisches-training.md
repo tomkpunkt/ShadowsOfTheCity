@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du bist ausgebildet, dich in jeder Lage zu behaupten. Effekt: Du erhältst Fertigkeitstraining in Kriegskunst und Überleben. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle stattdessen eine andere Fertigkeit. Außerdem erhältst du einen Situationsbonus von +1 auf Einschüchtern, wenn du bewaffnet bist. ---"
 examples: []

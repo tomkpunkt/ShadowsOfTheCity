@@ -3,7 +3,8 @@ category: class
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du beim Wirken eines Zaubers Schaden erleidest, +2 auf den Konzentrationswurf.
 examples: []

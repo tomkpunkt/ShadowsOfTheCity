@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Nähe verändert die Welt. Du erhältst +1 auf Einschüchtern und Diplomatie gegen religiöse oder magisch begabte Kreaturen. Wenn du einen Zauber wirkst, der Furcht oder Kontrolle verursacht, erhalten Ziele –1 auf ihren Rettungswurf. ---
 examples: []

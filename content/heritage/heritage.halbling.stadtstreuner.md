@@ -2,7 +2,8 @@
 ancestryId: ancestry.halbling
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kennst jede Gasse deiner Heimatstadt. Du erhältst Fertigkeitstraining in Heimlichkeit und Diebeskunst.
 examples: []

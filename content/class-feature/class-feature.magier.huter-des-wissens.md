@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Dein Name ist in den geheimen Archiven der Welt vermerkt. Du erhältst: - Resistenz 5 gegen magischen Schaden, - Immunität gegen geistige Kontrolle, - und die Fähigkeit, Dispel Magic einmal pro Stunde kostenlos zu wirken. ---"
 examples: []

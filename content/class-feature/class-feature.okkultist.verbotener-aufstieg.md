@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Du bist kein Sterblicher mehr, sondern ein Knotenpunkt des Geflechts. Du erhältst: - Immunität gegen mentale und Furchteffekte, - Resistenz 5 gegen magischen Schaden, - und kannst einmal pro Tag Wish oder ein äquivalentes Ritual ausführen – doch jedes Mal steigt das Risiko, dauerhaft 1 Attributspunkt zu verlieren. ---"
 examples: []

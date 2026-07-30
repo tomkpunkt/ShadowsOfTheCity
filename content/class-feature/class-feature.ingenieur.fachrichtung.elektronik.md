@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du arbeitest mit Strom, Frequenzen und Schaltkreisen. - Du erhältst Fertigkeitstraining in Wissenschaft (Elektrik). - Du kannst einfache Schaltungen oder Signalgeräte (z. B. Funk, Sicherungssystem) bauen. - Einmal pro Tag kannst du ein Gerät „überladen“, um einen Bonus von +2 auf seinen Effekt zu erzielen (dafür erhält es 1 Stufe Erschöpfung).
 examples: []

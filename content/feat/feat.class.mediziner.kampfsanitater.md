@@ -3,7 +3,8 @@ category: class
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst dich während der Heilung bewegen, ohne die Aktion zu verlieren.
 examples: []

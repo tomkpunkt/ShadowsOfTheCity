@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Geist ist durch Schmerz gestählt. Du erhältst Resistenz 2 gegen mentale Effekte und bist immun gegen Furcht 1 Minute pro Tag (freie Aktion, 1/Tag). ---
 examples: []

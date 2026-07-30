@@ -3,7 +3,8 @@ category: archetype
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Spezialist in der Erstversorgung. Du kannst Erste Hilfe im Kampf anwenden (keine Gelegenheitsangriffe). Einmal pro Stunde kannst du 1W8 TP sofort heilen.
 examples: []

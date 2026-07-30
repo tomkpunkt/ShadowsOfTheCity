@@ -2,7 +2,8 @@
 ancestryId: ancestry.goblin
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.
 examples: []

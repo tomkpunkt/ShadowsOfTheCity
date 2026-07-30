@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.mediziner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erkennst Symptome, bevor sie auftreten. Du erhältst +2 auf Medizin und Wahrnehmung, wenn du Krankheiten, Gifte oder Täuschung erkennst. Einmal pro Tag kannst du sofort den Effekt eines Giftes neutralisieren (SG 20). ---
 examples: []

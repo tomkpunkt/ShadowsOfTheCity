@@ -2,7 +2,8 @@
 category: skill
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +2 Gesellschaft/Diplomatie
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Kontrolle über das Geflecht ist nahezu perfekt. Einmal pro Tag kannst du einen Zauber ohne Materialkomponenten wirken. Zauber mit einer Wirkzeit von „1 Minute“ oder weniger kannst du in 3 Aktionen wirken. ---
 examples: []

@@ -3,7 +3,8 @@ ancestryId: ancestry.halbling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Wenn du einem Verbündeten hilfst, erhält dieser zusätzlich +1 auf den entsprechenden Wurf. Wenn du den Helfen-Wurf kritisch bestehst, steigt der Bonus stattdessen auf +3.
 examples: []

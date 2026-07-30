@@ -2,7 +2,8 @@
 ancestryId: ancestry.ork
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Dein Blut trägt die Stimme der Alten. Einmal pro Tag kannst du den Zauber Guidance oder Detect Magic als angeborene Fähigkeit wirken (Attribut: Weisheit). ---"
 examples: []

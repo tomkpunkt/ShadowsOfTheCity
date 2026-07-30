@@ -2,7 +2,8 @@
 armorClass: 12
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Menschlicher NPC (Straßenschläger-Lehrling), chaotisch böse - Stufe: 1/4 (50 EP) - TP: 20 (4d8 + 4) - RK: 12 (Lederjacke) - Geschwindigkeit: 30 Fuß - Stärke: 13 (+1) | Geschicklichkeit: 12 (+1) | Konstitution: 12 (+1) | Intelligenz: 9 (-1) | Weisheit: 11 (+0) | Charisma: 12 (+1) - Rettungswürfe: Stärke +3, Konstitution +3 - Fertigkeiten: Einschüchtern +2, Athletik +3, Wahrnehmung +2 - Sinne: Passive Wahrnehmung 12 - Sprachen: Deutsch, Straßenslang - Spezialfähigkeiten: Begrenzte Territoriale Kontrolle, Gang-Mentalität - Aktionen: Messer, Faust, Einschüchtern"
 examples: []

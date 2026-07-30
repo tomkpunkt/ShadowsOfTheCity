@@ -2,7 +2,8 @@
 ancestryId: ancestry.zwerg
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Blut trägt die uralten Zeichen der Schmiedemagie. Du erhältst den Cantrip Mending als angeborene arkane Fähigkeit. Der Attributsmodifikator für diesen Zauber ist Weisheit. ---
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du hast gelernt, aus jedem Schlag zu lernen. Wenn du einen Angriff verfehlst, erhältst du bis zu deinem nächsten Zug +1 auf Angriffswürfe gegen dasselbe Ziel. ---
 examples: []

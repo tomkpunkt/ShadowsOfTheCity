@@ -2,7 +2,8 @@
 armorClass: 12
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 1/8 - TP: 15 (3d8 + 3) - SG: 12 - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernzugang"
 examples: []

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du erkennst sofort, wie Dinge funktionieren – oder wie man sie zerstört. Du erhältst +2 auf Wahrnehmung und Handwerk, wenn du Geräte, Waffen oder Gebäude untersuchst. Einmal pro Stunde kannst du die Schwachstelle eines mechanischen Gegners oder Fahrzeugs aufdecken (+2 auf Angriffe dagegen für 1 Minute). ---
 examples: []

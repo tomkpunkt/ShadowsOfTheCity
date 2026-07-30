@@ -3,7 +3,8 @@ category: archetype
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du baust, pflegst und modifizierst Waffen. Du erhältst Fertigkeitstraining in Kriegsführung oder Mechanik. Einmal pro Tag kannst du eine Waffe so modifizieren, dass sie +1 auf Schaden für 1 Stunde erhält. ---
 examples: []

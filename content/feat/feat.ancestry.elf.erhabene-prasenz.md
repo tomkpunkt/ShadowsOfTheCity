@@ -3,7 +3,8 @@ ancestryId: ancestry.elf
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Elf Dein Auftreten ist makellos. Du erhältst einen +1 Bonus auf Diplomatie- und Einschüchternproben. Wenn du dich vorstellst oder einen Befehl gibst, erhältst du bei Erfolg +1 auf den nächsten Wurf derselben Kategorie innerhalb der nächsten Minute."
 examples: []

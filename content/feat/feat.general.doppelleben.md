@@ -2,7 +2,8 @@
 category: skill
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Zweite Identität
 examples: []

@@ -2,7 +2,8 @@
 ancestryId: ancestry.goblin
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bewegst dich mühelos durch enge Räume. Du kannst dich durch Felder von beengtem Gelände ohne Malus bewegen und erhältst +1 auf Wahrnehmung in Dunkelheit.
 examples: []

@@ -3,7 +3,8 @@ category: class
 classId: class.raufbold
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +1 auf Einschüchtern und Diplomatie in städtischen Umgebungen.
 examples: []

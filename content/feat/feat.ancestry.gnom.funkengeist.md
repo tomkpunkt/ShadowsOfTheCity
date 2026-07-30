@@ -3,7 +3,8 @@ ancestryId: ancestry.gnom
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "Voraussetzung: Gnom Deine Kreativität lässt dich blitzschnell Lösungen finden. Du kannst einmal pro Stunde eine Handwerks- oder Wissensprobe wiederholen. Du musst das zweite Ergebnis verwenden."
 examples: []

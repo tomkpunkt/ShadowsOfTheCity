@@ -3,7 +3,8 @@ category: archetype
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist Gelehrter einer Universität oder Forschungsanstalt. Du erhältst Fertigkeitstraining in Wissenschaft und Gesellschaft. Einmal pro Woche kannst du auf Bibliotheksressourcen zugreifen, um eine Wissensprobe automatisch erfolgreich zu machen.
 examples: []

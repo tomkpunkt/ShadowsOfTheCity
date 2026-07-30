@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.okkultist
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du hast Macht durch Opfer erhalten. - Du erhältst Resistenz 2 gegen Blutungs- und Krankheitseffekte. - Du kannst 1 Mal pro Tag 1W4 TP opfern, um +1 auf einen Zauberwurf zu erhalten.
 examples: []

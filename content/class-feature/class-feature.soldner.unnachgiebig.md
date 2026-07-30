@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.soldner
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Willenskraft ist so stark wie dein Körper. Einmal pro Tag kannst du einen misslungenen Zähigkeits- oder Willenswurf wiederholen. Du musst das zweite Ergebnis verwenden. ---
 examples: []

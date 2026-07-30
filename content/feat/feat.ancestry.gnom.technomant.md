@@ -3,7 +3,8 @@ ancestryId: ancestry.gnom
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Magie in Maschinen lenken. Du erhältst Fertigkeitstraining in Arkane Kunde oder Ingenieurwesen. Wenn du bereits trainiert bist, erhältst du Expertenrang. Zusätzlich kannst du den Cantrip Prestidigitation wirken.
 examples: []

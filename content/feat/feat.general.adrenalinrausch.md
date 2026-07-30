@@ -2,7 +2,8 @@
 category: general
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: +10 Fuß Bewegung 1x/Kampf
 examples: []

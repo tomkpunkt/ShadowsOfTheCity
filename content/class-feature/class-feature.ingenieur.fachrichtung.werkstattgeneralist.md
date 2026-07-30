@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.ingenieur
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du bist in allem bewandert, aber in nichts spezialisiert. - Du kannst jedes Gerät einmal pro Tag mit einem zufälligen Bonus (Angriff, Verteidigung, Geschwindigkeit oder Analyse) verbessern. - Wenn du eine Probe auf Handwerk oder Mechanik wiederholst, darfst du das bessere Ergebnis behalten. ---
 examples: []

@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.stealth
     rank: trained
-    skillId: skill.stealth
 examples: []
 flavorText: Du hast gelernt, in Randzonen zu verschwinden, sichere Orte früh zu erkennen und nur wenigen Menschen deine Geschichte anzuvertrauen.
 freeBoosts: 1

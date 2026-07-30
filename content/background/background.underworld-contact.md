@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.deception
     rank: trained
-    skillId: skill.deception
 examples: []
 flavorText: Du kennst Treffpunkte ohne Adressen und Absprachen ohne Papier; Vertrauen ist knapp und jede Information hat ihren Preis.
 freeBoosts: 1

@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du kannst Magie durch ein Artefakt, einen Ring oder ein Symbol kanalisieren. Wenn du einen Zauber wirkst, der Schaden oder Heilung verursacht, kannst du einmal pro Runde +1 auf den Effektwurf addieren. Wenn dein Fokus zerstört wird, kannst du ihn innerhalb einer Stunde neu binden. ---
 examples: []

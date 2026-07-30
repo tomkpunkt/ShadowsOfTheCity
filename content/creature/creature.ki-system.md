@@ -2,7 +2,8 @@
 armorClass: 18
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Konstrukt (KI), neutral - Stufe: 1 (200 EP) - TP: 30 (6d8 + 6) - RK: 18 (Technologische Rüstung) - Fertigkeiten: Technologie +10, Wissenschaft +8 - Spezialfähigkeiten: Datenanalyse, Systemkontrolle - Schwächen: Elektromagnetische Störungen - Aktionen: Datenanalyse, Systemkontrolle"
 examples: []

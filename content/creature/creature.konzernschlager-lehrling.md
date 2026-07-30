@@ -2,7 +2,8 @@
 armorClass: 13
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 1/4 - TP: 20 (4d8 + 4) - RK: 13 (Schutzweste) - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernschutz"
 examples: []

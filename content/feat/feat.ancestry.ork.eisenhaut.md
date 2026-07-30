@@ -3,7 +3,8 @@ ancestryId: ancestry.ork
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Deine Haut ist hart und widerstandsfähig. Du erhältst Resistenz 3 gegen physischen Schaden (außer Energie). Wenn du keine Rüstung trägst, erhöht sich diese Resistenz auf 4.
 examples: []

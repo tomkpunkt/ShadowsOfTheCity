@@ -5,6 +5,7 @@ import path from "node:path";
 import {
   CatalogSchema,
   ContentEntitySchema,
+  EntityIdSchema,
   SCHEMA_VERSION,
   type Catalog,
   type ContentEntity
@@ -33,6 +34,7 @@ export interface CatalogManifest {
   schemaVersion: number;
   contentHash: string;
   entityCount: number;
+  aliasCount: number;
   countsByType: Record<string, number>;
   sourceFiles: string[];
 }
@@ -77,6 +79,17 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
 
 const issuePath = (pathParts: PropertyKey[]): string =>
   pathParts.map((part) => String(part)).join(".");
+
+export const migrateContentData = (input: Record<string, unknown>): Record<string, unknown> => {
+  const version = input["schemaVersion"];
+  if (version === undefined || version === 0) {
+    return {
+      ...input,
+      schemaVersion: SCHEMA_VERSION
+    };
+  }
+  return input;
+};
 
 const deriveSummary = (name: string, markdown: string): string => {
   const prose = markdown
@@ -157,12 +170,13 @@ const parseEntityFile = async (
     };
   }
 
+  const migratedData = migrateContentData(parsedMatter.data);
   const validation = ContentEntitySchema.safeParse({
-    ...parsedMatter.data,
+    ...migratedData,
     summary:
-      typeof parsedMatter.data["summary"] === "string"
-        ? parsedMatter.data["summary"]
-        : deriveSummary(String(parsedMatter.data["name"] ?? "Entität"), parsedMatter.content),
+      typeof migratedData["summary"] === "string"
+        ? migratedData["summary"]
+        : deriveSummary(String(migratedData["name"] ?? "Entität"), parsedMatter.content),
     description: parsedMatter.content.trim()
   });
   if (!validation.success) {
@@ -171,7 +185,7 @@ const parseEntityFile = async (
         code: "SCHEMA_VALIDATION_FAILED",
         severity: "error" as const,
         file: relativeFile,
-        entityId: typeof parsedMatter.data["id"] === "string" ? parsedMatter.data["id"] : undefined,
+        entityId: typeof migratedData["id"] === "string" ? migratedData["id"] : undefined,
         path: issuePath(schemaIssue.path),
         message: schemaIssue.message
       }))
@@ -184,6 +198,108 @@ const parseEntityFile = async (
       file: relativeFile
     },
     issues: []
+  };
+};
+
+const readAliases = async (
+  contentDirectory: string,
+  entityIds: Set<string>
+): Promise<{ aliases: Record<string, string>; issues: ValidationIssue[] }> => {
+  const aliasFile = path.join(contentDirectory, "legacy-aliases.json");
+  let input: unknown;
+  try {
+    input = JSON.parse(await readFile(aliasFile, "utf8")) as unknown;
+  } catch (error) {
+    if (
+      error !== null &&
+      typeof error === "object" &&
+      "code" in error &&
+      error.code === "ENOENT"
+    ) {
+      return { aliases: {}, issues: [] };
+    }
+    return {
+      aliases: {},
+      issues: [
+        {
+          code: "LEGACY_ALIAS_READ_FAILED",
+          severity: "error",
+          file: "legacy-aliases.json",
+          message: error instanceof Error ? error.message : String(error)
+        }
+      ]
+    };
+  }
+  if (input === null || typeof input !== "object" || Array.isArray(input)) {
+    return {
+      aliases: {},
+      issues: [
+        {
+          code: "INVALID_LEGACY_ALIASES",
+          severity: "error",
+          file: "legacy-aliases.json",
+          message: "Alias file must contain an object"
+        }
+      ]
+    };
+  }
+  const aliases: Record<string, string> = {};
+  const issues: ValidationIssue[] = [];
+  for (const [alias, target] of Object.entries(input)) {
+    if (!EntityIdSchema.safeParse(alias).success || !EntityIdSchema.safeParse(target).success) {
+      issues.push({
+        code: "INVALID_LEGACY_ALIAS_ID",
+        severity: "error",
+        file: "legacy-aliases.json",
+        path: alias,
+        message: "Alias and target must be valid entity IDs"
+      });
+      continue;
+    }
+    if (entityIds.has(alias)) {
+      issues.push({
+        code: "LEGACY_ALIAS_SHADOWS_ENTITY",
+        severity: "error",
+        file: "legacy-aliases.json",
+        path: alias,
+        message: `Alias shadows canonical entity ${alias}`
+      });
+    }
+    aliases[alias] = target;
+  }
+
+  for (const alias of Object.keys(aliases)) {
+    const visited = new Set<string>();
+    let current = alias;
+    while (aliases[current] !== undefined) {
+      if (visited.has(current)) {
+        issues.push({
+          code: "LEGACY_ALIAS_CYCLE",
+          severity: "error",
+          file: "legacy-aliases.json",
+          path: alias,
+          message: `Alias cycle contains ${current}`
+        });
+        break;
+      }
+      visited.add(current);
+      current = aliases[current] as string;
+    }
+    if (!entityIds.has(current)) {
+      issues.push({
+        code: "UNRESOLVED_LEGACY_ALIAS",
+        severity: "error",
+        file: "legacy-aliases.json",
+        path: alias,
+        message: `Alias target does not resolve: ${current}`
+      });
+    }
+  }
+  return {
+    aliases: Object.fromEntries(
+      Object.entries(aliases).sort(([left], [right]) => left.localeCompare(right))
+    ),
+    issues
   };
 };
 
@@ -209,7 +325,7 @@ const addPotentialReferences = (value: unknown, references: Set<string>, key?: s
     return;
   }
   for (const [nestedKey, nestedValue] of Object.entries(value)) {
-    if (nestedKey === "id" || nestedKey === "source") {
+    if (nestedKey === "id" || nestedKey === "source" || nestedKey === "decisionId") {
       continue;
     }
     addPotentialReferences(nestedValue, references, nestedKey);
@@ -504,9 +620,14 @@ export const compileContent = async (options: CompileOptions): Promise<CompileRe
   const parsed = parseResults.flatMap((result) =>
     result.parsed === undefined ? [] : [result.parsed]
   );
+  const aliasResult = await readAliases(
+    options.contentDirectory,
+    new Set(parsed.map(({ entity }) => entity.id))
+  );
   const issues = [
     ...parseResults.flatMap((result) => result.issues),
-    ...validateEntities(parsed)
+    ...validateEntities(parsed),
+    ...aliasResult.issues
   ].sort((left, right) => {
     const fileComparison = (left.file ?? "").localeCompare(right.file ?? "");
     return fileComparison !== 0 ? fileComparison : left.message.localeCompare(right.message);
@@ -524,17 +645,22 @@ export const compileContent = async (options: CompileOptions): Promise<CompileRe
     countsByType
   };
 
-  const hashInput = stableStringify({ schemaVersion: SCHEMA_VERSION, entities }, 0);
+  const hashInput = stableStringify(
+    { schemaVersion: SCHEMA_VERSION, aliases: aliasResult.aliases, entities },
+    0
+  );
   const contentHash = createHash("sha256").update(hashInput).digest("hex");
   const catalog = CatalogSchema.parse({
     schemaVersion: SCHEMA_VERSION,
     contentHash,
+    aliases: aliasResult.aliases,
     entities
   });
   const manifest: CatalogManifest = {
     schemaVersion: SCHEMA_VERSION,
     contentHash,
     entityCount: entities.length,
+    aliasCount: Object.keys(aliasResult.aliases).length,
     countsByType,
     sourceFiles: parsed.map(({ file }) => file).sort((left, right) => left.localeCompare(right))
   };

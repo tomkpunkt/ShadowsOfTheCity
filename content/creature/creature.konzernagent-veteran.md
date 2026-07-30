@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Stufe: 2 - TP: 60 (12d8 + 12) - RK: 16 (Verbesserte Tarnkleidung) - Fertigkeiten: +2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Erweiterter Konzernzugang"
 examples: []

@@ -2,7 +2,8 @@
 armorClass: 16
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Monstrosität (Biotech), neutral - Stufe: 1 (200 EP) - TP: 50 (10d8 + 10) - RK: 16 (Natürliche Rüstung) - Fertigkeiten: Überleben +6, Wissenschaft +6 - Spezialfähigkeiten: Genetische Anpassung, Regeneration - Schwächen: Genetische Instabilität, Krankheiten - Aktionen: Genetische Anpassung, Regeneration"
 examples: []

@@ -5,9 +5,10 @@ boosts:
 choiceIds: []
 editorialStatus: rewritten
 effects:
-  - kind: skill-training
+  - kind: proficiency-rule
+    operation: at-least
+    proficiencyId: skill.religion
     rank: trained
-    skillId: skill.religion
 examples: []
 flavorText: Dein Orden gab dir Regeln, Verbündete und eine Aufgabe; ob du noch überzeugt bist, ändert nichts an den Zeichen, die du trägst.
 freeBoosts: 1

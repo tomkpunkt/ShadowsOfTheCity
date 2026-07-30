@@ -3,7 +3,8 @@ ancestryId: ancestry.tiefling
 category: ancestry
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Dein Körper kanalisiert Hitze und Schmerz. Du erhältst Resistenz 5 gegen Feuer und Immunität gegen Hitzeerschöpfung.
 examples: []

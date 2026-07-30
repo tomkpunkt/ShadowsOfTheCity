@@ -5,7 +5,9 @@ category: magical-item
 categoryId: trait.item.equipment.magic
 editorialStatus: needs-rules-decision
 effects:
-  - kind: text
+  - classification: requires-rules-decision
+    decisionId: rules-decision.equipment.artefakt-special-plus-four
+    kind: text
     machineReadable: false
     text: +4 Magie, +4 Spezial
 examples: []

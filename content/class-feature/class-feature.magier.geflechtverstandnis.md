@@ -3,7 +3,8 @@ choiceIds: []
 classId: class.magier
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: Du begreifst die Strömungen des Unsichtbaren. Du erhältst Resistenz 2 gegen arkane Effekte und kannst Detect Magic unbegrenzt oft wirken. Außerdem erkennst du magische Instabilitäten automatisch (SG 15). ---
 examples: []

@@ -2,7 +2,8 @@
 armorClass: 14
 editorialStatus: reviewed
 effects:
-  - kind: text
+  - classification: partially-structured
+    kind: text
     machineReadable: false
     text: "- Typ: Menschlicher NPC (Krimineller), chaotisch böse - Stufe: 1/2 (100 EP) - TP: 30 (6d8 + 6) - RK: 14 (Tarnkleidung) - Fertigkeiten: Heimlichkeit +6, Einschüchtern +4 - Spezialfähigkeiten: Diebstahl, Erpressung - Aktionen: Messer, Pistole, Diebstahl"
 examples: []

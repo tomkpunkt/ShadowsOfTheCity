@@ -451,6 +451,53 @@ describe("calculateCharacter", () => {
     expect(result.bulk.value).toBe(2);
   });
 
+  it("replaces a target with a deterministic derived value", () => {
+    const derivedCatalog = structuredClone(catalog);
+    const feature = derivedCatalog.entities.find(
+      (entity) => entity.id === "class-feature.test.guard"
+    ) as { effects?: unknown[] } | undefined;
+    if (feature?.effects !== undefined) {
+      feature.effects.push({
+        kind: "derived",
+        target: "temporary-hit-points",
+        from: "attribute-score",
+        fromSelector: "strength",
+        multiplier: 0.5,
+        offset: 1
+      });
+    }
+
+    const result = calculateCharacter(derivedCatalog, character());
+
+    expect(result.temporaryHitPoints.value).toBe(9);
+    expect(result.temporaryHitPoints.breakdown).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ sourceId: "class-feature.test.guard", value: 9 })
+      ])
+    );
+  });
+
+  it("blocks a selected draft without deleting the selection", () => {
+    const blockedCatalog = structuredClone(catalog);
+    const feat = blockedCatalog.entities.find((entity) => entity.id === "feat.test.strong");
+    if (feat !== undefined) {
+      feat.status = "draft";
+    }
+
+    const result = calculateCharacter(blockedCatalog, character());
+
+    expect(result.state).toBe("blocked");
+    expect(result.featIds).toContain("feat.test.strong");
+    expect(result.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: "RULES_DECISION_REQUIRED",
+          entityId: "feat.test.strong"
+        })
+      ])
+    );
+  });
+
   it("is deterministic for equal catalog and decisions", () => {
     expect(calculateCharacter(catalog, character())).toEqual(
       calculateCharacter(catalog, character())

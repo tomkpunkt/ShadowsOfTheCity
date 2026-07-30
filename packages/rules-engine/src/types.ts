@@ -7,6 +7,7 @@ export type SaveId = "fortitude" | "reflex" | "will";
 export type ProficiencyRank = "untrained" | "trained" | "expert" | "master" | "legendary";
 export type BonusType = "status" | "circumstance" | "item" | "untyped";
 export type ValidationState = "valid" | "incomplete" | "invalid" | "blocked";
+export type SectionState = ValidationState | "not-relevant";
 export type ValueOperation = "set" | "add" | "minimum" | "maximum" | "replace";
 export type ValueTarget =
   | "armor-class"
@@ -209,8 +210,8 @@ export interface ExplainedValue {
 export interface RequirementFailure {
   code: string;
   message: string;
-  expected?: string | number;
-  actual?: string | number;
+  expected?: string | number | boolean;
+  actual?: string | number | boolean;
   predicate: PredicateNode;
 }
 
@@ -230,7 +231,7 @@ export interface BuildIssue {
 
 export interface ChoiceOption {
   entity: ContentEntity;
-  status: "available" | "selected" | "locked" | "invalid";
+  status: "available" | "selected" | "locked" | "invalid" | "blocked";
   failures: RequirementFailure[];
 }
 
@@ -277,6 +278,8 @@ export interface CalculatedCharacter {
     backgroundId?: string;
     classId?: string;
   };
+  expectedAttributeBoosts: number;
+  sectionStatuses: Record<string, SectionState>;
   attributes: Record<AttributeId, ExplainedValue>;
   hitPoints: ExplainedValue;
   armorClass: ExplainedValue;
@@ -293,7 +296,7 @@ export interface CalculatedCharacter {
     {
       attack: ExplainedValue;
       damage: { dice: string; flat: ExplainedValue; type: string };
-      range?: { increment: number; maximum: number };
+      range?: { increment: number; maximum: number } | number;
       capacity?: number;
       reload?: number;
       traits: string[];
@@ -331,6 +334,13 @@ export interface CalculatedCharacter {
     traditions: string[];
     knownIds: string[];
     slots: Array<{ rank: number; slots: ExplainedValue }>;
+    rules: Array<{
+      sourceId: string;
+      tradition: string;
+      operation: string;
+      rank?: number;
+      value?: number;
+    }>;
   };
   explanations: Array<{ key: string; value: ExplainedValue }>;
   resources: Record<string, ExplainedValue>;

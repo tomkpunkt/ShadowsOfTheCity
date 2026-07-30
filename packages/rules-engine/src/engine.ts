@@ -23,8 +23,10 @@ import type {
   EngineOptions,
   ExplainedValue,
   ProficiencyRank,
+  RequirementFailure,
   ResolvedChoice,
   SaveId,
+  SectionState,
   ValidationState,
   ValueTarget
 } from "./types.js";
@@ -65,8 +67,7 @@ const applyStructuredValueRules = (
   const rules = accumulator.valueRules
     .filter(
       (rule) =>
-        rule.target === target &&
-        (rule.selector === undefined || rule.selector === selector)
+        rule.target === target && (rule.selector === undefined || rule.selector === selector)
     )
     .sort(
       (left, right) =>
@@ -86,6 +87,9 @@ const applyStructuredValueRules = (
   }
   return { value: current, breakdown };
 };
+
+const calculatedValueKey = (target: ValueTarget, selector?: string): string =>
+  `${target}:${selector ?? ""}`;
 
 const rankAtLevel = (
   progression: Record<string, ProficiencyRank>,
@@ -116,6 +120,34 @@ const entityPrerequisites = (entity: ContentEntity): unknown[] => {
     return entity.prerequisites;
   }
   return [];
+};
+
+const rulesDecisionFailures = (entity: ContentEntity): RequirementFailure[] => {
+  if (entity.status !== "draft" && entity.editorialStatus !== "needs-rules-decision") {
+    return [];
+  }
+  const decisionId = entityEffects(entity)
+    .map((effect) =>
+      effect !== null &&
+      typeof effect === "object" &&
+      "kind" in effect &&
+      effect.kind === "text" &&
+      "decisionId" in effect &&
+      typeof effect.decisionId === "string"
+        ? effect.decisionId
+        : undefined
+    )
+    .find((value): value is string => value !== undefined);
+  const key = decisionId ?? `rules-decision.${entity.id}`;
+  return [
+    {
+      code: "RULES_DECISION_REQUIRED",
+      message: `${entity.name} benötigt die fachliche Entscheidung ${key}.`,
+      expected: true,
+      actual: false,
+      predicate: { characterOption: { key, value: true } }
+    }
+  ];
 };
 
 const entityLevel = (entity: ContentEntity): number | undefined =>
@@ -254,17 +286,24 @@ const resolveChoice = (
   const options: ChoiceOption[] = [...context.entities.values()]
     .filter((entity) => entityMatchesChoice(entity, choice))
     .map((entity): ChoiceOption => {
-      const failures = evaluatePredicates(entityPrerequisites(entity), context);
+      const decisionFailures = rulesDecisionFailures(entity);
+      const failures = [
+        ...decisionFailures,
+        ...evaluatePredicates(entityPrerequisites(entity), context)
+      ];
       const selected = selectedIds.includes(entity.id);
       return {
         entity,
-        status: selected
-          ? failures.length === 0
-            ? "selected"
-            : "invalid"
-          : failures.length === 0
-            ? "available"
-            : "locked",
+        status:
+          decisionFailures.length > 0
+            ? "blocked"
+            : selected
+              ? failures.length === 0
+                ? "selected"
+                : "invalid"
+              : failures.length === 0
+                ? "available"
+                : "locked",
         failures
       };
     })
@@ -275,6 +314,12 @@ const resolveChoice = (
     state = "blocked";
   } else if (selectedIds.length < choice.choice.min) {
     state = "incomplete";
+  } else if (
+    selectedIds.some((id) =>
+      options.some((option) => option.entity.id === id && option.status === "blocked")
+    )
+  ) {
+    state = "blocked";
   } else if (
     selectedIds.length > choice.choice.max ||
     selectedIds.some((id) => !options.some((option) => option.entity.id === id)) ||
@@ -302,6 +347,23 @@ const issueState = (issues: BuildIssue[]): ValidationState => {
     return "blocked";
   }
   if (issues.some((issue) => issue.state === "incomplete")) {
+    return "incomplete";
+  }
+  return "valid";
+};
+
+const aggregateSectionState = (states: Array<ValidationState | "not-relevant">): SectionState => {
+  const relevant = states.filter((state): state is ValidationState => state !== "not-relevant");
+  if (relevant.length === 0) {
+    return "not-relevant";
+  }
+  if (relevant.includes("invalid")) {
+    return "invalid";
+  }
+  if (relevant.includes("blocked")) {
+    return "blocked";
+  }
+  if (relevant.includes("incomplete")) {
     return "incomplete";
   }
   return "valid";
@@ -362,6 +424,17 @@ export const calculateCharacter = (
   addCoreSelectionIssue(issues, character.backgroundId, "background", "Hintergrund");
   addCoreSelectionIssue(issues, character.classId, "class", "Klasse");
   validateSelectionReferences(character, entities, issues);
+  for (const id of selectedEntityIds(character)) {
+    const entity = entities.get(id);
+    if (entity?.status === "draft" || entity?.editorialStatus === "needs-rules-decision") {
+      issues.push({
+        code: "RULES_DECISION_REQUIRED",
+        state: "blocked",
+        entityId: id,
+        message: `${entity.name} ist bis zu einer fachlichen Regelentscheidung blockiert.`
+      });
+    }
+  }
   if (character.catalogHash !== catalog.contentHash) {
     issues.push({
       code: "CATALOG_HASH_MISMATCH",
@@ -959,19 +1032,19 @@ export const calculateCharacter = (
 
   const baseSpeed = applyStructuredValueRules(
     sumBreakdown([
-    {
-      sourceId: ancestry?.id ?? "missing.ancestry",
-      label: "Abstammungsbewegung",
-      value: ancestry?.type === "ancestry" ? ancestry.speed : 0,
-      kind: "base"
-    },
-    ...accumulator.speedChanges.map((entry): BreakdownEntry => ({
-      sourceId: entry.sourceId,
-      label: entities.get(entry.sourceId)?.name ?? entry.sourceId,
-      value: entry.value,
-      kind: "rule"
-    })),
-    ...stackedModifierBreakdown(accumulator.modifiers, "speed")
+      {
+        sourceId: ancestry?.id ?? "missing.ancestry",
+        label: "Abstammungsbewegung",
+        value: ancestry?.type === "ancestry" ? ancestry.speed : 0,
+        kind: "base"
+      },
+      ...accumulator.speedChanges.map((entry): BreakdownEntry => ({
+        sourceId: entry.sourceId,
+        label: entities.get(entry.sourceId)?.name ?? entry.sourceId,
+        value: entry.value,
+        kind: "rule"
+      })),
+      ...stackedModifierBreakdown(accumulator.modifiers, "speed")
     ]),
     accumulator,
     "speed",
@@ -1113,8 +1186,24 @@ export const calculateCharacter = (
                   rule.damageType !== undefined
               )?.damageType ?? weapon.damage.type
           },
-          ...(weapon.range === undefined ? {} : { range: weapon.range }),
-          ...(weapon.capacity === undefined ? {} : { capacity: weapon.capacity }),
+          ...(() => {
+            const matchingRules = accumulator.attackRules
+              .filter((rule) => rule.selector === undefined || rule.selector === weapon.id)
+              .sort((left, right) => left.sourceId.localeCompare(right.sourceId));
+            const reversedRules = [...matchingRules].reverse();
+            const range = reversedRules.find((rule) => rule.range !== undefined)?.range;
+            const capacity = reversedRules.find((rule) => rule.capacity !== undefined)?.capacity;
+            const reload = reversedRules.find((rule) => rule.reload !== undefined)?.reload;
+            return {
+              ...(range === undefined && weapon.range === undefined
+                ? {}
+                : { range: range ?? weapon.range }),
+              ...(capacity === undefined && weapon.capacity === undefined
+                ? {}
+                : { capacity: capacity ?? weapon.capacity }),
+              ...(reload === undefined ? {} : { reload })
+            };
+          })(),
           traits: [
             ...new Set([
               ...weapon.traits,
@@ -1188,7 +1277,124 @@ export const calculateCharacter = (
         )
       ])
   );
+
+  const calculatedValues = new Map<string, ExplainedValue>();
+  for (const [attribute, value] of Object.entries(explainedAttributes)) {
+    calculatedValues.set(calculatedValueKey("attribute-score", attribute), value);
+  }
+  calculatedValues.set(calculatedValueKey("hit-points"), hitPoints);
+  calculatedValues.set(calculatedValueKey("temporary-hit-points"), temporaryHitPoints);
+  calculatedValues.set(calculatedValueKey("armor-class"), armorClass);
+  calculatedValues.set(calculatedValueKey("perception"), perception);
+  calculatedValues.set(calculatedValueKey("initiative"), initiative);
+  calculatedValues.set(calculatedValueKey("speed"), speed);
+  calculatedValues.set(calculatedValueKey("bulk"), bulk);
+  for (const [save, value] of Object.entries(calculatedSaves)) {
+    calculatedValues.set(calculatedValueKey("save", save), value);
+  }
+  for (const [skillId, value] of Object.entries(calculatedSkills)) {
+    calculatedValues.set(calculatedValueKey("skill", skillId), value);
+  }
+  if (classDc !== undefined) {
+    calculatedValues.set(calculatedValueKey("class-dc"), classDc);
+  }
+  if (spellDc !== undefined) {
+    calculatedValues.set(calculatedValueKey("spell-dc"), spellDc);
+  }
+  if (spellAttack !== undefined) {
+    calculatedValues.set(calculatedValueKey("spell-attack"), spellAttack);
+  }
+  for (const slot of spellSlots) {
+    calculatedValues.set(
+      calculatedValueKey("spell-slot", `spell-rank.${String(slot.rank)}`),
+      slot.slots
+    );
+  }
+  for (const [weaponId, attack] of Object.entries(weaponAttacks)) {
+    calculatedValues.set(calculatedValueKey("weapon-attack", weaponId), attack.attack);
+    calculatedValues.set(calculatedValueKey("weapon-damage", weaponId), attack.damage.flat);
+  }
+  for (const [resourceId, value] of Object.entries(calculatedResources)) {
+    calculatedValues.set(calculatedValueKey("resource", resourceId), value);
+  }
+
+  for (const rule of accumulator.derivedRules.sort((left, right) =>
+    left.sourceId.localeCompare(right.sourceId)
+  )) {
+    const targetKey = calculatedValueKey(rule.target, rule.selector);
+    const sourceKey = calculatedValueKey(rule.from, rule.fromSelector);
+    const target = calculatedValues.get(targetKey);
+    const source = calculatedValues.get(sourceKey);
+    if (target === undefined || source === undefined || targetKey === sourceKey) {
+      issues.push({
+        code: targetKey === sourceKey ? "DERIVED_VALUE_CYCLE" : "DERIVED_VALUE_UNRESOLVED",
+        state: "blocked",
+        entityId: rule.sourceId,
+        message: `${rule.label} kann ${sourceKey} nicht eindeutig nach ${targetKey} ableiten.`
+      });
+      continue;
+    }
+    const next = source.value * rule.multiplier + rule.offset;
+    target.breakdown.push({
+      sourceId: rule.sourceId,
+      label: rule.label,
+      value: next - target.value,
+      kind: "rule"
+    });
+    target.value = next;
+  }
+
   const state = issueState(issues);
+  const coreSectionState = (ids: Array<string | undefined>): ValidationState => {
+    const relevantIssues = issues.filter(
+      (issue) =>
+        issue.entityId !== undefined &&
+        ids.includes(issue.entityId) &&
+        (issue.state === "invalid" || issue.state === "blocked")
+    );
+    if (relevantIssues.length > 0) {
+      return issueState(relevantIssues);
+    }
+    return ids[0] === undefined ? "incomplete" : "valid";
+  };
+  const choiceSectionState = (kinds: string[]): SectionState => {
+    const states = resolvedChoices
+      .filter((choice) => {
+        const entity = entities.get(choice.choiceId);
+        return entity?.type === "choice" && kinds.includes(entity.choice.kind);
+      })
+      .map((choice) => choice.state);
+    return states.length === 0 ? "not-relevant" : aggregateSectionState(states);
+  };
+  const attributeState: ValidationState =
+    character.attributeBoosts.length === expectedFreeBoosts
+      ? "valid"
+      : character.attributeBoosts.length < expectedFreeBoosts
+        ? "incomplete"
+        : "invalid";
+  const sectionStatuses: Record<string, SectionState> = {
+    overview: state,
+    ancestry: aggregateSectionState([
+      coreSectionState([character.ancestryId, character.heritageId]),
+      choiceSectionState(["heritage"])
+    ]),
+    background: coreSectionState([character.backgroundId]),
+    class: aggregateSectionState([
+      coreSectionState([character.classId]),
+      choiceSectionState(["class-option"])
+    ]),
+    attributes: attributeState,
+    skills: choiceSectionState(["skill"]),
+    feats: choiceSectionState(["feat"]),
+    spells:
+      progression?.type === "spellcasting-progression"
+        ? aggregateSectionState([choiceSectionState(["spell"])])
+        : "not-relevant",
+    equipment: character.inventoryIds.some((id) => !entities.has(id)) ? "invalid" : "valid",
+    compendium: "not-relevant",
+    review: state,
+    sheet: state
+  };
   const allFeatIds = [...new Set([...featIds, ...accumulator.grantedFeatIds])].sort();
   const allFeatureIds = [...new Set([...featureIds, ...accumulator.grantedFeatureIds])].sort();
   const allSpellIds = [...new Set([...spellIds, ...accumulator.grantedSpellIds])].sort();
@@ -1226,6 +1432,8 @@ export const calculateCharacter = (
       ...(character.backgroundId === undefined ? {} : { backgroundId: character.backgroundId }),
       ...(character.classId === undefined ? {} : { classId: character.classId })
     },
+    expectedAttributeBoosts: expectedFreeBoosts,
+    sectionStatuses,
     attributes: explainedAttributes,
     hitPoints,
     temporaryHitPoints,
@@ -1282,7 +1490,16 @@ export const calculateCharacter = (
     spells: {
       traditions: [...traditions].sort(),
       knownIds: allSpellIds,
-      slots: spellSlots
+      slots: spellSlots,
+      rules: accumulator.spellcastingRules
+        .map((rule) => ({
+          sourceId: rule.sourceId,
+          tradition: rule.tradition,
+          operation: rule.operation,
+          ...(rule.rank === undefined ? {} : { rank: rule.rank }),
+          ...(rule.value === undefined ? {} : { value: rule.value })
+        }))
+        .sort((left, right) => left.sourceId.localeCompare(right.sourceId))
     },
     explanations,
     resources: calculatedResources,

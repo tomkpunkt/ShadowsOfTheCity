@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { ChoiceSchema, ContentEntitySchema, EntityIdSchema, PredicateSchema } from "./schemas.js";
+import {
+  CharacterDocumentSchema,
+  ChoiceSchema,
+  ContentEntitySchema,
+  EffectSchema,
+  EntityIdSchema,
+  PredicateSchema
+} from "./schemas.js";
 
 describe("EntityIdSchema", () => {
   it("accepts stable lowercase IDs", () => {
@@ -33,6 +40,127 @@ describe("PredicateSchema", () => {
 
   it("rejects unknown operators", () => {
     expect(PredicateSchema.safeParse({ maybe: [] }).success).toBe(false);
+  });
+
+  it("supports upper bounds and character-state predicates", () => {
+    expect(
+      PredicateSchema.safeParse({
+        all: [
+          { characterLevel: { gte: 2, lte: 8 } },
+          { heritage: { id: "heritage.test" } },
+          { equippedItem: { id: "weapon.test" } },
+          { previousChoice: { choiceId: "choice.test", optionId: "feat.test" } },
+          { characterOption: { key: "option.stance", value: "defensive" } }
+        ]
+      }).success
+    ).toBe(true);
+    expect(PredicateSchema.safeParse({ characterLevel: {} }).success).toBe(false);
+  });
+});
+
+describe("EffectSchema", () => {
+  it("supports every canonical effect family", () => {
+    const effects = [
+      {
+        kind: "value",
+        target: "armor-class",
+        operation: "add",
+        value: 1,
+        bonusType: "status"
+      },
+      {
+        kind: "derived",
+        target: "class-dc",
+        from: "attribute-score",
+        fromSelector: "intelligence",
+        multiplier: 1,
+        offset: 10
+      },
+      {
+        kind: "proficiency-rule",
+        proficiencyId: "skill.athletics",
+        operation: "increase",
+        steps: 1
+      },
+      { kind: "grant", grantType: "feat", id: "feat.test", quantity: 1 },
+      {
+        kind: "resource-rule",
+        resourceId: "resource.focus",
+        operation: "set",
+        value: 1,
+        capacity: 3,
+        refresh: "day"
+      },
+      { kind: "movement", movementType: "climb", operation: "set", value: 15 },
+      {
+        kind: "action",
+        actionId: "action.test",
+        actionType: "activity",
+        actions: 2,
+        parameters: {}
+      },
+      {
+        kind: "attack-rule",
+        selector: "weapon.test",
+        attackModifier: 1,
+        damageDice: "2d6"
+      },
+      {
+        kind: "spellcasting-rule",
+        tradition: "arcane",
+        operation: "known-spells",
+        spellIds: ["spell.test"],
+        value: 1
+      }
+    ];
+
+    expect(effects.every((effect) => EffectSchema.safeParse(effect).success)).toBe(true);
+  });
+
+  it("requires a decision ID for unresolved text rules", () => {
+    expect(
+      EffectSchema.safeParse({
+        kind: "text",
+        text: "Die Kernwirkung ist noch nicht festgelegt.",
+        machineReadable: false,
+        classification: "requires-rules-decision"
+      }).success
+    ).toBe(false);
+  });
+});
+
+describe("CharacterDocumentSchema", () => {
+  const character = {
+    formatVersion: 2,
+    contentSchemaVersion: 1,
+    catalogHash: "a".repeat(64),
+    createdWithVersion: "0.1.0",
+    lastSavedWithVersion: "0.1.0",
+    name: "Ada",
+    level: 1,
+    choices: {},
+    attributeBoosts: [],
+    inventoryIds: ["weapon.test"],
+    equippedItemIds: ["weapon.test"],
+    options: {},
+    migrations: [],
+    legacyValues: {}
+  };
+
+  it("validates the canonical versioned character format", () => {
+    expect(CharacterDocumentSchema.safeParse(character).success).toBe(true);
+  });
+
+  it("rejects equipped items outside the inventory and unknown fields", () => {
+    expect(
+      CharacterDocumentSchema.safeParse({
+        ...character,
+        equippedItemIds: ["weapon.other"]
+      }).success
+    ).toBe(false);
+    expect(CharacterDocumentSchema.safeParse({ ...character, hiddenRule: true }).success).toBe(
+      false
+    );
   });
 });
 

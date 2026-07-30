@@ -1,13 +1,15 @@
-import { CatalogSchema, type ContentEntity } from "@sotc/shared";
+import { CatalogSchema, CharacterDocumentSchema, type ContentEntity } from "@sotc/shared";
 
 import {
+  applyValueOperation,
   applyEffect,
   attributeModifier,
   createAccumulator,
   higherRank,
   proficiencyBonus,
   saveAttribute,
-  stackedModifierBreakdown
+  stackedModifierBreakdown,
+  type EffectAccumulator
 } from "./effects.js";
 import { evaluatePredicates } from "./predicate.js";
 import type {
@@ -23,7 +25,8 @@ import type {
   ProficiencyRank,
   ResolvedChoice,
   SaveId,
-  ValidationState
+  ValidationState,
+  ValueTarget
 } from "./types.js";
 
 const attributes: AttributeId[] = [
@@ -41,6 +44,48 @@ const sumBreakdown = (breakdown: BreakdownEntry[]): ExplainedValue => ({
   value: breakdown.reduce((total, entry) => total + entry.value, 0),
   breakdown
 });
+
+const valueRuleOrder = {
+  set: 0,
+  replace: 0,
+  add: 1,
+  minimum: 2,
+  maximum: 3
+} as const;
+
+const applyStructuredValueRules = (
+  value: ExplainedValue,
+  accumulator: EffectAccumulator,
+  target: ValueTarget,
+  level: number,
+  selector?: string
+): ExplainedValue => {
+  const breakdown = [...value.breakdown];
+  let current = value.value;
+  const rules = accumulator.valueRules
+    .filter(
+      (rule) =>
+        rule.target === target &&
+        (rule.selector === undefined || rule.selector === selector)
+    )
+    .sort(
+      (left, right) =>
+        valueRuleOrder[left.operation] - valueRuleOrder[right.operation] ||
+        left.sourceId.localeCompare(right.sourceId)
+    );
+  for (const rule of rules) {
+    const operand = rule.scale === "per-level" ? rule.value * level : rule.value;
+    const next = applyValueOperation(current, rule.operation, operand);
+    breakdown.push({
+      sourceId: rule.sourceId,
+      label: rule.label,
+      value: next - current,
+      kind: "rule"
+    });
+    current = next;
+  }
+  return { value: current, breakdown };
+};
 
 const rankAtLevel = (
   progression: Record<string, ProficiencyRank>,
@@ -279,6 +324,9 @@ const addCoreSelectionIssue = (
 
 const selectedEntityIds = (character: CharacterState): Set<string> =>
   new Set([
+    ...(character.ancestryId === undefined ? [] : [character.ancestryId]),
+    ...(character.backgroundId === undefined ? [] : [character.backgroundId]),
+    ...(character.classId === undefined ? [] : [character.classId]),
     ...Object.values(character.choices).flat(),
     ...character.inventoryIds,
     ...(character.heritageId === undefined ? [] : [character.heritageId])
@@ -303,10 +351,11 @@ const validateSelectionReferences = (
 
 export const calculateCharacter = (
   catalogInput: unknown,
-  character: CharacterState,
+  characterInput: CharacterState,
   options: EngineOptions = {}
 ): CalculatedCharacter => {
   const catalog = CatalogSchema.parse(catalogInput);
+  const character = CharacterDocumentSchema.parse(characterInput);
   const entities = new Map(catalog.entities.map((entity) => [entity.id, entity]));
   const issues: BuildIssue[] = [];
   addCoreSelectionIssue(issues, character.ancestryId, "ancestry", "Abstammung");
@@ -473,6 +522,9 @@ export const calculateCharacter = (
   const traitIds = new Set<string>();
   const traditions = new Set<string>();
   const inventoryIds = new Set(character.inventoryIds);
+  const equippedItemIds = new Set(character.equippedItemIds);
+  const selectedOptionIds = new Set(Object.values(character.choices).flat());
+  const characterOptions = new Map(Object.entries(character.options));
   const resources = new Map<string, number>();
 
   if (ancestry?.type === "ancestry") {
@@ -535,6 +587,9 @@ export const calculateCharacter = (
     spellIds,
     traditions,
     inventoryIds,
+    equippedItemIds,
+    selectedOptionIds,
+    characterOptions,
     resources
   };
   const accumulator = createAccumulator();
@@ -543,7 +598,7 @@ export const calculateCharacter = (
     ...(heritage?.type === "heritage" ? [heritage.id] : []),
     ...featIds,
     ...featureIds,
-    ...inventoryIds
+    ...equippedItemIds
   ].sort();
   const processedSources = new Set<string>();
   while (sourceQueue.length > 0) {
@@ -578,6 +633,35 @@ export const calculateCharacter = (
   const explainedAttributes = Object.fromEntries(
     attributes.map((attribute) => [attribute, sumBreakdown(attributeBreakdowns[attribute])])
   ) as Record<AttributeId, ExplainedValue>;
+
+  spellSlots = spellSlots.map((slot) => ({
+    ...slot,
+    slots: applyStructuredValueRules(
+      slot.slots,
+      accumulator,
+      "spell-slot",
+      character.level,
+      `spell-rank.${String(slot.rank)}`
+    )
+  }));
+  for (const rule of accumulator.spellcastingRules) {
+    if (rule.operation !== "slots" || rule.rank === undefined || rule.value === undefined) {
+      continue;
+    }
+    const existing = spellSlots.find((slot) => slot.rank === rule.rank);
+    const entry: BreakdownEntry = {
+      sourceId: rule.sourceId,
+      label: entities.get(rule.sourceId)?.name ?? rule.sourceId,
+      value: rule.value,
+      kind: "rule"
+    };
+    if (existing === undefined) {
+      spellSlots.push({ rank: rule.rank, slots: sumBreakdown([entry]) });
+    } else {
+      existing.slots = sumBreakdown([...existing.slots.breakdown, entry]);
+    }
+  }
+  spellSlots.sort((left, right) => left.rank - right.rank);
 
   const resolvedChoices = [...entities.values()]
     .filter(
@@ -657,8 +741,20 @@ export const calculateCharacter = (
     })),
     ...stackedModifierBreakdown(accumulator.modifiers, "hit-points")
   ];
+  const hitPoints = applyStructuredValueRules(
+    sumBreakdown(hitPointBreakdown),
+    accumulator,
+    "hit-points",
+    character.level
+  );
+  const temporaryHitPoints = applyStructuredValueRules(
+    sumBreakdown([]),
+    accumulator,
+    "temporary-hit-points",
+    character.level
+  );
 
-  const armor = character.inventoryIds
+  const armor = character.equippedItemIds
     .map((id) => entities.get(id))
     .find(
       (entity): entity is Extract<ContentEntity, { type: "armor" }> => entity?.type === "armor"
@@ -671,49 +767,59 @@ export const calculateCharacter = (
   const dexterityModifier = attributeModifier(attributeValues.dexterity);
   const dexterityContribution =
     armor === undefined ? dexterityModifier : Math.min(dexterityModifier, armor.dexterityCap);
-  const armorClass = sumBreakdown([
-    { sourceId: "base", label: "Basis-RK", value: 10, kind: "base" },
-    {
-      sourceId: "attribute.dexterity",
-      label: "Geschicklichkeitsmodifikator",
-      value: dexterityContribution,
-      kind: "attribute"
-    },
-    {
-      sourceId: armorProficiencyId,
-      label: `Rüstungs-Proficiency (${armorRank})`,
-      value: proficiencyBonus(armorRank, character.level),
-      kind: "proficiency"
-    },
-    ...(armor === undefined
-      ? []
-      : [
-          {
-            sourceId: armor.id,
-            label: armor.name,
-            value: armor.itemBonus,
-            kind: "item" as const
-          }
-        ]),
-    ...stackedModifierBreakdown(accumulator.modifiers, "armor-class")
-  ]);
+  const armorClass = applyStructuredValueRules(
+    sumBreakdown([
+      { sourceId: "base", label: "Basis-RK", value: 10, kind: "base" },
+      {
+        sourceId: "attribute.dexterity",
+        label: "Geschicklichkeitsmodifikator",
+        value: dexterityContribution,
+        kind: "attribute"
+      },
+      {
+        sourceId: armorProficiencyId,
+        label: `Rüstungs-Proficiency (${armorRank})`,
+        value: proficiencyBonus(armorRank, character.level),
+        kind: "proficiency"
+      },
+      ...(armor === undefined
+        ? []
+        : [
+            {
+              sourceId: armor.id,
+              label: armor.name,
+              value: armor.itemBonus,
+              kind: "item" as const
+            }
+          ]),
+      ...stackedModifierBreakdown(accumulator.modifiers, "armor-class")
+    ]),
+    accumulator,
+    "armor-class",
+    character.level
+  );
 
   const perceptionRank = proficiencyRanks.get("proficiency.perception") ?? "untrained";
-  const perception = sumBreakdown([
-    {
-      sourceId: "attribute.wisdom",
-      label: "Weisheitsmodifikator",
-      value: attributeModifier(attributeValues.wisdom),
-      kind: "attribute"
-    },
-    {
-      sourceId: "proficiency.perception",
-      label: `Wahrnehmungs-Proficiency (${perceptionRank})`,
-      value: proficiencyBonus(perceptionRank, character.level),
-      kind: "proficiency"
-    },
-    ...stackedModifierBreakdown(accumulator.modifiers, "perception")
-  ]);
+  const perception = applyStructuredValueRules(
+    sumBreakdown([
+      {
+        sourceId: "attribute.wisdom",
+        label: "Weisheitsmodifikator",
+        value: attributeModifier(attributeValues.wisdom),
+        kind: "attribute"
+      },
+      {
+        sourceId: "proficiency.perception",
+        label: `Wahrnehmungs-Proficiency (${perceptionRank})`,
+        value: proficiencyBonus(perceptionRank, character.level),
+        kind: "proficiency"
+      },
+      ...stackedModifierBreakdown(accumulator.modifiers, "perception")
+    ]),
+    accumulator,
+    "perception",
+    character.level
+  );
 
   const calculatedSaves = Object.fromEntries(
     saves.map((save) => {
@@ -721,21 +827,27 @@ export const calculateCharacter = (
       const attribute = saveAttribute[save];
       return [
         save,
-        sumBreakdown([
-          {
-            sourceId: `attribute.${attribute}`,
-            label: `${attribute}-Modifikator`,
-            value: attributeModifier(attributeValues[attribute]),
-            kind: "attribute"
-          },
-          {
-            sourceId: `proficiency.save.${save}`,
-            label: `${save}-Proficiency (${rank})`,
-            value: proficiencyBonus(rank, character.level),
-            kind: "proficiency"
-          },
-          ...stackedModifierBreakdown(accumulator.modifiers, "save", save)
-        ])
+        applyStructuredValueRules(
+          sumBreakdown([
+            {
+              sourceId: `attribute.${attribute}`,
+              label: `${attribute}-Modifikator`,
+              value: attributeModifier(attributeValues[attribute]),
+              kind: "attribute"
+            },
+            {
+              sourceId: `proficiency.save.${save}`,
+              label: `${save}-Proficiency (${rank})`,
+              value: proficiencyBonus(rank, character.level),
+              kind: "proficiency"
+            },
+            ...stackedModifierBreakdown(accumulator.modifiers, "save", save)
+          ]),
+          accumulator,
+          "save",
+          character.level,
+          save
+        )
       ];
     })
   ) as Record<SaveId, ExplainedValue>;
@@ -749,21 +861,27 @@ export const calculateCharacter = (
         const rank = proficiencyRanks.get(skill.id) ?? "untrained";
         return [
           skill.id,
-          sumBreakdown([
-            {
-              sourceId: `attribute.${skill.attribute}`,
-              label: `${skill.attribute}-Modifikator`,
-              value: attributeModifier(attributeValues[skill.attribute]),
-              kind: "attribute"
-            },
-            {
-              sourceId: skill.id,
-              label: `${skill.name}-Proficiency (${rank})`,
-              value: proficiencyBonus(rank, character.level),
-              kind: "proficiency"
-            },
-            ...stackedModifierBreakdown(accumulator.modifiers, "skill", skill.id)
-          ])
+          applyStructuredValueRules(
+            sumBreakdown([
+              {
+                sourceId: `attribute.${skill.attribute}`,
+                label: `${skill.attribute}-Modifikator`,
+                value: attributeModifier(attributeValues[skill.attribute]),
+                kind: "attribute"
+              },
+              {
+                sourceId: skill.id,
+                label: `${skill.name}-Proficiency (${rank})`,
+                value: proficiencyBonus(rank, character.level),
+                kind: "proficiency"
+              },
+              ...stackedModifierBreakdown(accumulator.modifiers, "skill", skill.id)
+            ]),
+            accumulator,
+            "skill",
+            character.level,
+            skill.id
+          )
         ];
       })
   );
@@ -774,22 +892,27 @@ export const calculateCharacter = (
   const classDc =
     keyAttribute === undefined
       ? undefined
-      : sumBreakdown([
-          { sourceId: "base", label: "Basis-SG", value: 10, kind: "base" },
-          {
-            sourceId: `attribute.${keyAttribute}`,
-            label: `${keyAttribute}-Modifikator`,
-            value: attributeModifier(attributeValues[keyAttribute]),
-            kind: "attribute"
-          },
-          {
-            sourceId: "proficiency.class-dc",
-            label: `Klassen-Proficiency (${classRank})`,
-            value: proficiencyBonus(classRank, character.level),
-            kind: "proficiency"
-          },
-          ...stackedModifierBreakdown(accumulator.modifiers, "class-dc")
-        ]);
+      : applyStructuredValueRules(
+          sumBreakdown([
+            { sourceId: "base", label: "Basis-SG", value: 10, kind: "base" },
+            {
+              sourceId: `attribute.${keyAttribute}`,
+              label: `${keyAttribute}-Modifikator`,
+              value: attributeModifier(attributeValues[keyAttribute]),
+              kind: "attribute"
+            },
+            {
+              sourceId: "proficiency.class-dc",
+              label: `Klassen-Proficiency (${classRank})`,
+              value: proficiencyBonus(classRank, character.level),
+              kind: "proficiency"
+            },
+            ...stackedModifierBreakdown(accumulator.modifiers, "class-dc")
+          ]),
+          accumulator,
+          "class-dc",
+          character.level
+        );
 
   const progression =
     characterClass?.type === "class" && characterClass.spellcastingProgressionId !== undefined
@@ -813,18 +936,29 @@ export const calculateCharacter = (
         kind: "proficiency"
       }
     ];
-    spellAttack = sumBreakdown([
-      ...commonSpellBreakdown,
-      ...stackedModifierBreakdown(accumulator.modifiers, "spell-attack")
-    ]);
-    spellDc = sumBreakdown([
-      { sourceId: "base", label: "Basis-SG", value: 10, kind: "base" },
-      ...commonSpellBreakdown,
-      ...stackedModifierBreakdown(accumulator.modifiers, "spell-dc")
-    ]);
+    spellAttack = applyStructuredValueRules(
+      sumBreakdown([
+        ...commonSpellBreakdown,
+        ...stackedModifierBreakdown(accumulator.modifiers, "spell-attack")
+      ]),
+      accumulator,
+      "spell-attack",
+      character.level
+    );
+    spellDc = applyStructuredValueRules(
+      sumBreakdown([
+        { sourceId: "base", label: "Basis-SG", value: 10, kind: "base" },
+        ...commonSpellBreakdown,
+        ...stackedModifierBreakdown(accumulator.modifiers, "spell-dc")
+      ]),
+      accumulator,
+      "spell-dc",
+      character.level
+    );
   }
 
-  const speed = sumBreakdown([
+  const baseSpeed = applyStructuredValueRules(
+    sumBreakdown([
     {
       sourceId: ancestry?.id ?? "missing.ancestry",
       label: "Abstammungsbewegung",
@@ -838,9 +972,50 @@ export const calculateCharacter = (
       kind: "rule"
     })),
     ...stackedModifierBreakdown(accumulator.modifiers, "speed")
-  ]);
+    ]),
+    accumulator,
+    "speed",
+    character.level
+  );
+  const movement = Object.fromEntries(
+    ["land", "climb", "swim", "fly", "other"].map((movementType) => {
+      let current = movementType === "land" ? baseSpeed : sumBreakdown([]);
+      for (const rule of accumulator.movementRules
+        .filter((candidate) => candidate.movementType === movementType)
+        .sort(
+          (left, right) =>
+            valueRuleOrder[left.operation] - valueRuleOrder[right.operation] ||
+            left.sourceId.localeCompare(right.sourceId)
+        )) {
+        const next = applyValueOperation(current.value, rule.operation, rule.value);
+        current = {
+          value: next,
+          breakdown: [
+            ...current.breakdown,
+            {
+              sourceId: rule.sourceId,
+              label: rule.label,
+              value: next - current.value,
+              kind: "rule"
+            }
+          ]
+        };
+      }
+      return [movementType, current];
+    })
+  );
+  const speed = movement["land"] ?? baseSpeed;
+  const initiative = applyStructuredValueRules(
+    sumBreakdown([
+      ...perception.breakdown,
+      ...stackedModifierBreakdown(accumulator.modifiers, "initiative")
+    ]),
+    accumulator,
+    "initiative",
+    character.level
+  );
 
-  const weapons = character.inventoryIds
+  const weapons = character.equippedItemIds
     .map((id) => entities.get(id))
     .filter(
       (entity): entity is Extract<ContentEntity, { type: "weapon" }> => entity?.type === "weapon"
@@ -854,69 +1029,135 @@ export const calculateCharacter = (
       return [
         weapon.id,
         {
-          attack: sumBreakdown([
-            {
-              sourceId: `attribute.${attackAttribute}`,
-              label: `${attackAttribute}-Modifikator`,
-              value: attributeModifier(attributeValues[attackAttribute]),
-              kind: "attribute"
-            },
-            {
-              sourceId: proficiencyId,
-              label: `Waffen-Proficiency (${rank})`,
-              value: proficiencyBonus(rank, character.level),
-              kind: "proficiency"
-            },
-            ...stackedModifierBreakdown(accumulator.modifiers, "weapon-attack", weapon.id)
-          ]),
-          damage: {
-            dice: `${String(weapon.damage.dice)}${weapon.damage.die}`,
-            flat: sumBreakdown([
+          attack: applyStructuredValueRules(
+            sumBreakdown([
               {
-                sourceId: weapon.id,
-                label: "Fester Waffenschaden",
-                value: weapon.damage.flat,
-                kind: "item"
+                sourceId: `attribute.${attackAttribute}`,
+                label: `${attackAttribute}-Modifikator`,
+                value: attributeModifier(attributeValues[attackAttribute]),
+                kind: "attribute"
               },
-              ...(damageAttribute === undefined
-                ? []
-                : [
-                    {
-                      sourceId: `attribute.${damageAttribute}`,
-                      label: `${damageAttribute}-Modifikator`,
-                      value: attributeModifier(attributeValues[damageAttribute]),
-                      kind: "attribute" as const
-                    }
-                  ]),
-              ...stackedModifierBreakdown(accumulator.modifiers, "weapon-damage", weapon.id)
+              {
+                sourceId: proficiencyId,
+                label: `Waffen-Proficiency (${rank})`,
+                value: proficiencyBonus(rank, character.level),
+                kind: "proficiency"
+              },
+              ...stackedModifierBreakdown(accumulator.modifiers, "weapon-attack", weapon.id),
+              ...accumulator.attackRules
+                .filter(
+                  (rule) =>
+                    (rule.selector === undefined || rule.selector === weapon.id) &&
+                    rule.attackModifier !== undefined
+                )
+                .map((rule) => ({
+                  sourceId: rule.sourceId,
+                  label: entities.get(rule.sourceId)?.name ?? rule.sourceId,
+                  value: rule.attackModifier ?? 0,
+                  kind: "rule" as const
+                }))
+            ]),
+            accumulator,
+            "weapon-attack",
+            character.level,
+            weapon.id
+          ),
+          damage: {
+            dice:
+              accumulator.attackRules.find(
+                (rule) =>
+                  (rule.selector === undefined || rule.selector === weapon.id) &&
+                  rule.damageDice !== undefined
+              )?.damageDice ?? `${String(weapon.damage.dice)}${weapon.damage.die}`,
+            flat: applyStructuredValueRules(
+              sumBreakdown([
+                {
+                  sourceId: weapon.id,
+                  label: "Fester Waffenschaden",
+                  value: weapon.damage.flat,
+                  kind: "item"
+                },
+                ...(damageAttribute === undefined
+                  ? []
+                  : [
+                      {
+                        sourceId: `attribute.${damageAttribute}`,
+                        label: `${damageAttribute}-Modifikator`,
+                        value: attributeModifier(attributeValues[damageAttribute]),
+                        kind: "attribute" as const
+                      }
+                    ]),
+                ...stackedModifierBreakdown(accumulator.modifiers, "weapon-damage", weapon.id),
+                ...accumulator.attackRules
+                  .filter(
+                    (rule) =>
+                      (rule.selector === undefined || rule.selector === weapon.id) &&
+                      rule.damageModifier !== undefined
+                  )
+                  .map((rule) => ({
+                    sourceId: rule.sourceId,
+                    label: entities.get(rule.sourceId)?.name ?? rule.sourceId,
+                    value: rule.damageModifier ?? 0,
+                    kind: "rule" as const
+                  }))
+              ]),
+              accumulator,
+              "weapon-damage",
+              character.level,
+              weapon.id
+            ),
+            type:
+              accumulator.attackRules.find(
+                (rule) =>
+                  (rule.selector === undefined || rule.selector === weapon.id) &&
+                  rule.damageType !== undefined
+              )?.damageType ?? weapon.damage.type
+          },
+          ...(weapon.range === undefined ? {} : { range: weapon.range }),
+          ...(weapon.capacity === undefined ? {} : { capacity: weapon.capacity }),
+          traits: [
+            ...new Set([
+              ...weapon.traits,
+              ...accumulator.attackRules
+                .filter(
+                  (rule) =>
+                    (rule.selector === undefined || rule.selector === weapon.id) &&
+                    rule.weaponTraitId !== undefined
+                )
+                .map((rule) => rule.weaponTraitId as string)
             ])
-          }
+          ].sort()
         }
       ];
     })
   );
 
-  const bulk = sumBreakdown(
-    character.inventoryIds
-      .map((id) => entities.get(id))
-      .filter(
-        (
-          entity
-        ): entity is Extract<
-          ContentEntity,
-          { type: "weapon" | "armor" | "equipment" | "cyberware" }
-        > =>
-          entity?.type === "weapon" ||
-          entity?.type === "armor" ||
-          entity?.type === "equipment" ||
-          entity?.type === "cyberware"
-      )
-      .map((entity) => ({
-        sourceId: entity.id,
-        label: entity.name,
-        value: entity.bulk,
-        kind: "item" as const
-      }))
+  const bulk = applyStructuredValueRules(
+    sumBreakdown(
+      character.inventoryIds
+        .map((id) => entities.get(id))
+        .filter(
+          (
+            entity
+          ): entity is Extract<
+            ContentEntity,
+            { type: "weapon" | "armor" | "equipment" | "cyberware" }
+          > =>
+            entity?.type === "weapon" ||
+            entity?.type === "armor" ||
+            entity?.type === "equipment" ||
+            entity?.type === "cyberware"
+        )
+        .map((entity) => ({
+          sourceId: entity.id,
+          label: entity.name,
+          value: entity.bulk,
+          kind: "item" as const
+        }))
+    ),
+    accumulator,
+    "bulk",
+    character.level
   );
 
   if (options.includeLegacyTextWarnings === true) {
@@ -930,15 +1171,67 @@ export const calculateCharacter = (
     }
   }
 
+  const calculatedResources = Object.fromEntries(
+    [...resources.keys()]
+      .sort((left, right) => left.localeCompare(right))
+      .map((resourceId) => [
+        resourceId,
+        sumBreakdown(
+          accumulator.resourceChanges
+            .filter((change) => change.resourceId === resourceId)
+            .map((change) => ({
+              sourceId: change.sourceId,
+              label: entities.get(change.sourceId)?.name ?? change.sourceId,
+              value: change.value,
+              kind: "rule" as const
+            }))
+        )
+      ])
+  );
+  const state = issueState(issues);
+  const allFeatIds = [...new Set([...featIds, ...accumulator.grantedFeatIds])].sort();
+  const allFeatureIds = [...new Set([...featureIds, ...accumulator.grantedFeatureIds])].sort();
+  const allSpellIds = [...new Set([...spellIds, ...accumulator.grantedSpellIds])].sort();
+  const allInventoryIds = [...new Set([...inventoryIds, ...accumulator.grantedItemIds])].sort();
+  const explanations = [
+    ...Object.entries(explainedAttributes).map(([key, value]) => ({
+      key: `attribute.${key}`,
+      value
+    })),
+    { key: "hit-points", value: hitPoints },
+    { key: "temporary-hit-points", value: temporaryHitPoints },
+    { key: "armor-class", value: armorClass },
+    { key: "perception", value: perception },
+    { key: "initiative", value: initiative },
+    ...Object.entries(calculatedSaves).map(([key, value]) => ({ key: `save.${key}`, value })),
+    ...Object.entries(calculatedSkills).map(([key, value]) => ({ key, value })),
+    ...(classDc === undefined ? [] : [{ key: "class-dc", value: classDc }]),
+    ...(spellDc === undefined ? [] : [{ key: "spell-dc", value: spellDc }]),
+    ...(spellAttack === undefined ? [] : [{ key: "spell-attack", value: spellAttack }]),
+    { key: "speed", value: speed },
+    { key: "bulk", value: bulk }
+  ].sort((left, right) => left.key.localeCompare(right.key));
+
   return {
-    state: issueState(issues),
+    state,
+    status: state,
     catalogHash: catalog.contentHash,
     name: character.name,
     level: character.level,
+    identity: {
+      name: character.name,
+      level: character.level,
+      ...(character.ancestryId === undefined ? {} : { ancestryId: character.ancestryId }),
+      ...(character.heritageId === undefined ? {} : { heritageId: character.heritageId }),
+      ...(character.backgroundId === undefined ? {} : { backgroundId: character.backgroundId }),
+      ...(character.classId === undefined ? {} : { classId: character.classId })
+    },
     attributes: explainedAttributes,
-    hitPoints: sumBreakdown(hitPointBreakdown),
+    hitPoints,
+    temporaryHitPoints,
     armorClass,
     perception,
+    initiative,
     saves: calculatedSaves,
     skills: calculatedSkills,
     ...(classDc === undefined ? {} : { classDc }),
@@ -947,30 +1240,52 @@ export const calculateCharacter = (
     spellSlots,
     weaponAttacks,
     speed,
+    movement,
     bulk,
-    languages: ancestry?.type === "ancestry" ? ancestry.languageIds : [],
+    languages: [
+      ...new Set([
+        ...(ancestry?.type === "ancestry" ? ancestry.languageIds : []),
+        ...accumulator.grantedLanguageIds
+      ])
+    ].sort(),
     traits: [...traitIds].sort(),
-    featIds: [...featIds, ...accumulator.grantedFeatIds].sort(),
-    featureIds: [...featureIds, ...accumulator.grantedFeatureIds].sort(),
-    spellIds: [...spellIds].sort(),
-    inventoryIds: [...inventoryIds].sort(),
-    resources: Object.fromEntries(
-      [...resources.keys()]
-        .sort((left, right) => left.localeCompare(right))
-        .map((resourceId) => [
-          resourceId,
-          sumBreakdown(
-            accumulator.resourceChanges
-              .filter((change) => change.resourceId === resourceId)
-              .map((change) => ({
-                sourceId: change.sourceId,
-                label: entities.get(change.sourceId)?.name ?? change.sourceId,
-                value: change.value,
-                kind: "rule" as const
-              }))
-          )
-        ])
+    featIds: allFeatIds,
+    featureIds: allFeatureIds,
+    spellIds: allSpellIds,
+    inventoryIds: allInventoryIds,
+    inventory: allInventoryIds.map((id) => ({
+      id,
+      equipped: equippedItemIds.has(id),
+      known: entities.has(id)
+    })),
+    proficiencies: Object.fromEntries(
+      [...proficiencyRanks.entries()].sort(([left], [right]) => left.localeCompare(right))
     ),
+    grants: {
+      featIds: [...accumulator.grantedFeatIds].sort(),
+      featureIds: [...accumulator.grantedFeatureIds].sort(),
+      spellIds: [...accumulator.grantedSpellIds].sort(),
+      itemIds: [...accumulator.grantedItemIds].sort(),
+      languageIds: [...accumulator.grantedLanguageIds].sort(),
+      actionIds: [...accumulator.grantedActionIds].sort(),
+      choiceIds: [...accumulator.unlockedChoiceIds].sort()
+    },
+    actions: accumulator.actionGrants
+      .map((action) => ({
+        id: action.actionId,
+        sourceId: action.sourceId,
+        type: action.actionType,
+        ...(action.actions === undefined ? {} : { actions: action.actions }),
+        parameters: action.parameters
+      }))
+      .sort((left, right) => left.id.localeCompare(right.id)),
+    spells: {
+      traditions: [...traditions].sort(),
+      knownIds: allSpellIds,
+      slots: spellSlots
+    },
+    explanations,
+    resources: calculatedResources,
     choices: resolvedChoices,
     issues,
     ignoredTextEffects: accumulator.ignoredTextEffects

@@ -1,4 +1,4 @@
-import type { Catalog, ContentEntity } from "@sotc/shared";
+import type { Catalog, CharacterDocument, ContentEntity } from "@sotc/shared";
 
 export type AttributeId =
   "strength" | "dexterity" | "constitution" | "intelligence" | "wisdom" | "charisma";
@@ -7,16 +7,36 @@ export type SaveId = "fortitude" | "reflex" | "will";
 export type ProficiencyRank = "untrained" | "trained" | "expert" | "master" | "legendary";
 export type BonusType = "status" | "circumstance" | "item" | "untyped";
 export type ValidationState = "valid" | "incomplete" | "invalid" | "blocked";
+export type ValueOperation = "set" | "add" | "minimum" | "maximum" | "replace";
+export type ValueTarget =
+  | "armor-class"
+  | "class-dc"
+  | "spell-dc"
+  | "spell-attack"
+  | "perception"
+  | "initiative"
+  | "speed"
+  | "hit-points"
+  | "skill"
+  | "save"
+  | "weapon-attack"
+  | "weapon-damage"
+  | "attribute-score"
+  | "temporary-hit-points"
+  | "bulk"
+  | "resource"
+  | "spell-slot";
 
 export type PredicateNode =
   | { all: PredicateNode[] }
   | { any: PredicateNode[] }
   | { not: PredicateNode }
-  | { characterLevel: { gte: number } }
-  | { attribute: { id: AttributeId; gte: number } }
+  | { characterLevel: { gte?: number; lte?: number } }
+  | { attribute: { id: AttributeId; gte?: number; lte?: number } }
   | { proficiency: { id: string; rankAtLeast: ProficiencyRank } }
   | { class: { id: string } }
   | { ancestry: { id: string } }
+  | { heritage: { id: string } }
   | { background: { id: string } }
   | { hasTrait: { id: string } }
   | { hasFeat: { id: string } }
@@ -24,9 +44,92 @@ export type PredicateNode =
   | { spellTradition: { id: "arcane" | "divine" | "occult" | "primal" } }
   | { knowsSpell: { id: string } }
   | { hasItem: { id: string } }
+  | { equippedItem: { id: string } }
+  | { itemTrait: { id: string } }
+  | { weaponCategory: { id: string } }
+  | { armorCategory: { id: string } }
+  | { previousChoice: { choiceId: string; optionId?: string } }
+  | { characterOption: { key: string; value: string | number | boolean } }
   | { resource: { id: string; gte: number } };
 
 export type EffectNode =
+  | {
+      kind: "value";
+      target: ValueTarget;
+      selector?: string;
+      operation: ValueOperation;
+      value: number;
+      scale: "flat" | "per-level";
+      bonusType?: BonusType;
+      label?: string;
+    }
+  | {
+      kind: "derived";
+      target: ValueTarget;
+      selector?: string;
+      from: ValueTarget;
+      fromSelector?: string;
+      multiplier: number;
+      offset: number;
+      label?: string;
+    }
+  | {
+      kind: "proficiency-rule";
+      proficiencyId: string;
+      operation: "set" | "at-least" | "increase";
+      rank?: ProficiencyRank;
+      steps?: number;
+    }
+  | {
+      kind: "grant";
+      grantType: "feat" | "feature" | "spell" | "item" | "language" | "choice" | "action";
+      id: string;
+      quantity: number;
+    }
+  | {
+      kind: "resource-rule";
+      resourceId: string;
+      operation: "set" | "add" | "minimum" | "maximum";
+      value: number;
+      capacity?: number;
+      refresh?: "never" | "encounter" | "hour" | "day" | "week";
+    }
+  | {
+      kind: "movement";
+      movementType: "land" | "climb" | "swim" | "fly" | "other";
+      operation: ValueOperation;
+      value: number;
+      label?: string;
+    }
+  | {
+      kind: "action";
+      actionId: string;
+      actionType: "action" | "reaction" | "free-action" | "activity";
+      actions?: number;
+      parameters: Record<string, string | number | boolean>;
+    }
+  | {
+      kind: "attack-rule";
+      selector?: string;
+      attackModifier?: number;
+      damageModifier?: number;
+      damageDice?: string;
+      damageType?: string;
+      weaponTraitId?: string;
+      range?: number;
+      capacity?: number;
+      reload?: number;
+      criticalText?: string;
+    }
+  | {
+      kind: "spellcasting-rule";
+      tradition: "arcane" | "divine" | "occult" | "primal";
+      castingAttribute?: AttributeId;
+      operation: "grant-access" | "known-spells" | "prepared-spells" | "repertoire" | "slots";
+      spellIds: string[];
+      value?: number;
+      rank?: number;
+    }
   | { kind: "attribute"; attribute: AttributeId; value: number }
   | {
       kind: "modifier";
@@ -66,28 +169,21 @@ export type EffectNode =
   | { kind: "resource"; resourceId: string; delta: number }
   | { kind: "unlock-choice"; choiceId: string }
   | { kind: "conditional"; when: PredicateNode; effects: EffectNode[] }
-  | { kind: "text"; text: string; machineReadable: false };
+  | {
+      kind: "text";
+      text: string;
+      machineReadable: false;
+      classification:
+        | "fully-structured"
+        | "partially-structured"
+        | "display-only"
+        | "requires-rules-decision"
+        | "obsolete"
+        | "duplicate";
+      decisionId?: string;
+    };
 
-export interface CharacterState {
-  formatVersion: 1;
-  catalogHash: string;
-  name: string;
-  level: number;
-  ancestryId?: string;
-  heritageId?: string;
-  backgroundId?: string;
-  classId?: string;
-  choices: Record<string, string[]>;
-  attributeBoosts: AttributeId[];
-  inventoryIds: string[];
-  notes?: string;
-  migrations?: Array<{
-    fromCatalogHash: string;
-    toCatalogHash: string;
-    migratedAt: string;
-    conflicts: string[];
-  }>;
-}
+export type CharacterState = CharacterDocument;
 
 export interface BreakdownEntry {
   sourceId: string;
@@ -161,18 +257,31 @@ export interface EngineContext {
   spellIds: Set<string>;
   traditions: Set<string>;
   inventoryIds: Set<string>;
+  equippedItemIds: Set<string>;
+  selectedOptionIds: Set<string>;
+  characterOptions: Map<string, string | number | boolean>;
   resources: Map<string, number>;
 }
 
 export interface CalculatedCharacter {
   state: ValidationState;
+  status: ValidationState;
   catalogHash: string;
   name: string;
   level: number;
+  identity: {
+    name: string;
+    level: number;
+    ancestryId?: string;
+    heritageId?: string;
+    backgroundId?: string;
+    classId?: string;
+  };
   attributes: Record<AttributeId, ExplainedValue>;
   hitPoints: ExplainedValue;
   armorClass: ExplainedValue;
   perception: ExplainedValue;
+  initiative: ExplainedValue;
   saves: Record<SaveId, ExplainedValue>;
   skills: Record<string, ExplainedValue>;
   classDc?: ExplainedValue;
@@ -183,10 +292,16 @@ export interface CalculatedCharacter {
     string,
     {
       attack: ExplainedValue;
-      damage: { dice: string; flat: ExplainedValue };
+      damage: { dice: string; flat: ExplainedValue; type: string };
+      range?: { increment: number; maximum: number };
+      capacity?: number;
+      reload?: number;
+      traits: string[];
     }
   >;
   speed: ExplainedValue;
+  movement: Record<string, ExplainedValue>;
+  temporaryHitPoints: ExplainedValue;
   bulk: ExplainedValue;
   languages: string[];
   traits: string[];
@@ -194,6 +309,30 @@ export interface CalculatedCharacter {
   featureIds: string[];
   spellIds: string[];
   inventoryIds: string[];
+  inventory: Array<{ id: string; equipped: boolean; known: boolean }>;
+  proficiencies: Record<string, ProficiencyRank>;
+  grants: {
+    featIds: string[];
+    featureIds: string[];
+    spellIds: string[];
+    itemIds: string[];
+    languageIds: string[];
+    actionIds: string[];
+    choiceIds: string[];
+  };
+  actions: Array<{
+    id: string;
+    sourceId: string;
+    type: "action" | "reaction" | "free-action" | "activity";
+    actions?: number;
+    parameters: Record<string, string | number | boolean>;
+  }>;
+  spells: {
+    traditions: string[];
+    knownIds: string[];
+    slots: Array<{ rank: number; slots: ExplainedValue }>;
+  };
+  explanations: Array<{ key: string; value: ExplainedValue }>;
   resources: Record<string, ExplainedValue>;
   choices: ResolvedChoice[];
   issues: BuildIssue[];

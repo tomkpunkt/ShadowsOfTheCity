@@ -1,6 +1,8 @@
 import { z } from "zod";
 
 export const SCHEMA_VERSION = 1 as const;
+export const CHARACTER_FORMAT_VERSION = 2 as const;
+export const APP_VERSION = "0.1.0" as const;
 
 export const EntityIdSchema = z
   .string()
@@ -55,6 +57,31 @@ export const SaveIdSchema = z.enum(["fortitude", "reflex", "will"]);
 export const BonusTypeSchema = z.enum(["status", "circumstance", "item", "untyped"]);
 export const SpellTraditionSchema = z.enum(["arcane", "divine", "occult", "primal"]);
 
+const boundedNumberPredicate = <T extends z.ZodRawShape>(shape: T) =>
+  z
+    .object(shape)
+    .strict()
+    .superRefine((value, context) => {
+      if (!("gte" in value) && !("lte" in value)) {
+        context.addIssue({
+          code: "custom",
+          message: "At least one of gte or lte is required"
+        });
+      }
+      if (
+        "gte" in value &&
+        "lte" in value &&
+        typeof value.gte === "number" &&
+        typeof value.lte === "number" &&
+        value.gte > value.lte
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: "gte cannot exceed lte"
+        });
+      }
+    });
+
 export const PredicateSchema: z.ZodType<unknown> = z.lazy(() =>
   z.union([
     z.object({ all: z.array(PredicateSchema).min(1) }).strict(),
@@ -62,17 +89,19 @@ export const PredicateSchema: z.ZodType<unknown> = z.lazy(() =>
     z.object({ not: PredicateSchema }).strict(),
     z
       .object({
-        characterLevel: z.object({ gte: z.number().int().min(1).max(20) }).strict()
+        characterLevel: boundedNumberPredicate({
+          gte: z.number().int().min(1).max(20).optional(),
+          lte: z.number().int().min(1).max(20).optional()
+        })
       })
       .strict(),
     z
       .object({
-        attribute: z
-          .object({
-            id: AttributeIdSchema,
-            gte: z.number().int().min(1).max(30)
-          })
-          .strict()
+        attribute: boundedNumberPredicate({
+          id: AttributeIdSchema,
+          gte: z.number().int().min(1).max(30).optional(),
+          lte: z.number().int().min(1).max(30).optional()
+        })
       })
       .strict(),
     z
@@ -87,6 +116,7 @@ export const PredicateSchema: z.ZodType<unknown> = z.lazy(() =>
       .strict(),
     z.object({ class: z.object({ id: EntityIdSchema }).strict() }).strict(),
     z.object({ ancestry: z.object({ id: EntityIdSchema }).strict() }).strict(),
+    z.object({ heritage: z.object({ id: EntityIdSchema }).strict() }).strict(),
     z.object({ background: z.object({ id: EntityIdSchema }).strict() }).strict(),
     z.object({ hasTrait: z.object({ id: EntityIdSchema }).strict() }).strict(),
     z.object({ hasFeat: z.object({ id: EntityIdSchema }).strict() }).strict(),
@@ -98,6 +128,30 @@ export const PredicateSchema: z.ZodType<unknown> = z.lazy(() =>
       .strict(),
     z.object({ knowsSpell: z.object({ id: EntityIdSchema }).strict() }).strict(),
     z.object({ hasItem: z.object({ id: EntityIdSchema }).strict() }).strict(),
+    z.object({ equippedItem: z.object({ id: EntityIdSchema }).strict() }).strict(),
+    z.object({ itemTrait: z.object({ id: EntityIdSchema }).strict() }).strict(),
+    z.object({ weaponCategory: z.object({ id: EntityIdSchema }).strict() }).strict(),
+    z.object({ armorCategory: z.object({ id: EntityIdSchema }).strict() }).strict(),
+    z
+      .object({
+        previousChoice: z
+          .object({
+            choiceId: EntityIdSchema,
+            optionId: EntityIdSchema.optional()
+          })
+          .strict()
+      })
+      .strict(),
+    z
+      .object({
+        characterOption: z
+          .object({
+            key: EntityIdSchema,
+            value: z.union([z.string(), z.number(), z.boolean()])
+          })
+          .strict()
+      })
+      .strict(),
     z
       .object({
         resource: z
@@ -126,8 +180,180 @@ const ModifierTargetSchema = z.enum([
   "weapon-damage"
 ]);
 
+export const RuleAutomationSchema = z.enum([
+  "fully-structured",
+  "partially-structured",
+  "display-only",
+  "requires-rules-decision",
+  "obsolete",
+  "duplicate"
+]);
+
+export const ValueOperationSchema = z.enum([
+  "set",
+  "add",
+  "minimum",
+  "maximum",
+  "replace"
+]);
+
+const ValueTargetSchema = z.enum([
+  ...ModifierTargetSchema.options,
+  "attribute-score",
+  "temporary-hit-points",
+  "bulk",
+  "resource",
+  "spell-slot"
+]);
+
+const StructuredValueEffectSchema = z
+  .object({
+    kind: z.literal("value"),
+    target: ValueTargetSchema,
+    selector: EntityIdSchema.optional(),
+    operation: ValueOperationSchema,
+    value: z.number(),
+    scale: z.enum(["flat", "per-level"]).default("flat"),
+    bonusType: BonusTypeSchema.optional(),
+    label: z.string().min(1).optional()
+  })
+  .strict();
+
+const DerivedValueEffectSchema = z
+  .object({
+    kind: z.literal("derived"),
+    target: ValueTargetSchema,
+    selector: EntityIdSchema.optional(),
+    from: ValueTargetSchema,
+    fromSelector: EntityIdSchema.optional(),
+    multiplier: z.number().default(1),
+    offset: z.number().default(0),
+    label: z.string().min(1).optional()
+  })
+  .strict();
+
+const StructuredProficiencyEffectSchema = z
+  .object({
+    kind: z.literal("proficiency-rule"),
+    proficiencyId: EntityIdSchema,
+    operation: z.enum(["set", "at-least", "increase"]),
+    rank: ProficiencyRankSchema.optional(),
+    steps: z.number().int().min(1).max(4).optional()
+  })
+  .strict()
+  .superRefine((effect, context) => {
+    if (effect.operation === "increase" && effect.steps === undefined) {
+      context.addIssue({
+        code: "custom",
+        path: ["steps"],
+        message: "increase requires steps"
+      });
+    }
+    if (effect.operation !== "increase" && effect.rank === undefined) {
+      context.addIssue({
+        code: "custom",
+        path: ["rank"],
+        message: `${effect.operation} requires rank`
+      });
+    }
+  });
+
+const GrantEffectSchema = z
+  .object({
+    kind: z.literal("grant"),
+    grantType: z.enum([
+      "feat",
+      "feature",
+      "spell",
+      "item",
+      "language",
+      "choice",
+      "action"
+    ]),
+    id: EntityIdSchema,
+    quantity: z.number().int().positive().default(1)
+  })
+  .strict();
+
+const ResourceRuleEffectSchema = z
+  .object({
+    kind: z.literal("resource-rule"),
+    resourceId: EntityIdSchema,
+    operation: z.enum(["set", "add", "minimum", "maximum"]),
+    value: z.number(),
+    capacity: z.number().nonnegative().optional(),
+    refresh: z.enum(["never", "encounter", "hour", "day", "week"]).optional()
+  })
+  .strict();
+
+const MovementEffectSchema = z
+  .object({
+    kind: z.literal("movement"),
+    movementType: z.enum(["land", "climb", "swim", "fly", "other"]),
+    operation: ValueOperationSchema,
+    value: z.number().nonnegative(),
+    label: z.string().min(1).optional()
+  })
+  .strict();
+
+const ActionGrantEffectSchema = z
+  .object({
+    kind: z.literal("action"),
+    actionId: EntityIdSchema,
+    actionType: z.enum(["action", "reaction", "free-action", "activity"]),
+    actions: z.number().int().min(1).max(3).optional(),
+    parameters: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).default({})
+  })
+  .strict()
+  .superRefine((effect, context) => {
+    if (effect.actionType === "activity" && effect.actions === undefined) {
+      context.addIssue({
+        code: "custom",
+        path: ["actions"],
+        message: "activity requires an action count"
+      });
+    }
+  });
+
+const AttackRuleEffectSchema = z
+  .object({
+    kind: z.literal("attack-rule"),
+    selector: EntityIdSchema.optional(),
+    attackModifier: z.number().optional(),
+    damageModifier: z.number().optional(),
+    damageDice: z.string().regex(/^\d+d(?:4|6|8|10|12)$/).optional(),
+    damageType: EntityIdSchema.optional(),
+    weaponTraitId: EntityIdSchema.optional(),
+    range: z.number().positive().optional(),
+    capacity: z.number().int().positive().optional(),
+    reload: z.number().int().min(0).optional(),
+    criticalText: z.string().min(1).optional()
+  })
+  .strict();
+
+const SpellcastingRuleEffectSchema = z
+  .object({
+    kind: z.literal("spellcasting-rule"),
+    tradition: SpellTraditionSchema,
+    castingAttribute: AttributeIdSchema.optional(),
+    operation: z.enum(["grant-access", "known-spells", "prepared-spells", "repertoire", "slots"]),
+    spellIds: z.array(EntityIdSchema).default([]),
+    value: z.number().int().min(0).optional(),
+    rank: z.number().int().min(0).max(10).optional()
+  })
+  .strict();
+
 export const EffectSchema: z.ZodType<unknown> = z.lazy(() =>
   z.union([
+    StructuredValueEffectSchema,
+    DerivedValueEffectSchema,
+    StructuredProficiencyEffectSchema,
+    GrantEffectSchema,
+    ResourceRuleEffectSchema,
+    MovementEffectSchema,
+    ActionGrantEffectSchema,
+    AttackRuleEffectSchema,
+    SpellcastingRuleEffectSchema,
     z
       .object({
         kind: z.literal("attribute"),
@@ -218,9 +444,23 @@ export const EffectSchema: z.ZodType<unknown> = z.lazy(() =>
       .object({
         kind: z.literal("text"),
         text: z.string().min(1),
-        machineReadable: z.literal(false)
+        machineReadable: z.literal(false),
+        classification: RuleAutomationSchema.default("display-only"),
+        decisionId: EntityIdSchema.optional()
       })
       .strict()
+      .superRefine((effect, context) => {
+        if (
+          effect.classification === "requires-rules-decision" &&
+          effect.decisionId === undefined
+        ) {
+          context.addIssue({
+            code: "custom",
+            path: ["decisionId"],
+            message: "requires-rules-decision requires a decisionId"
+          });
+        }
+      })
   ])
 );
 
@@ -270,6 +510,56 @@ export const ChoiceSchema = z
         code: "custom",
         message: "Choice min cannot exceed max"
       });
+    }
+  });
+
+const CharacterMigrationSchema = z
+  .object({
+    migrationId: EntityIdSchema,
+    fromFormatVersion: z.number().int().min(0),
+    toFormatVersion: z.number().int().min(1),
+    fromCatalogHash: z.string().optional(),
+    toCatalogHash: z.string().optional(),
+    conflicts: z.array(z.string()).default([]),
+    preservedValues: z.record(z.string(), z.unknown()).default({})
+  })
+  .strict();
+
+export const CharacterDocumentSchema = z
+  .object({
+    formatVersion: z.literal(CHARACTER_FORMAT_VERSION),
+    contentSchemaVersion: z.literal(SCHEMA_VERSION),
+    catalogHash: z.string().regex(/^[a-f0-9]{64}$/),
+    createdWithVersion: z.string().regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/),
+    lastSavedWithVersion: z.string().regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/),
+    name: z.string(),
+    level: z.number().int().min(1).max(20),
+    ancestryId: EntityIdSchema.optional(),
+    heritageId: EntityIdSchema.optional(),
+    backgroundId: EntityIdSchema.optional(),
+    classId: EntityIdSchema.optional(),
+    choices: z.record(EntityIdSchema, z.array(EntityIdSchema)),
+    attributeBoosts: z.array(AttributeIdSchema),
+    inventoryIds: z.array(EntityIdSchema),
+    equippedItemIds: z.array(EntityIdSchema).default([]),
+    options: z
+      .record(EntityIdSchema, z.union([z.string(), z.number(), z.boolean()]))
+      .default({}),
+    notes: z.string().optional(),
+    migrations: z.array(CharacterMigrationSchema).default([]),
+    legacyValues: z.record(z.string(), z.unknown()).default({})
+  })
+  .strict()
+  .superRefine((character, context) => {
+    const inventory = new Set(character.inventoryIds);
+    for (const itemId of character.equippedItemIds) {
+      if (!inventory.has(itemId)) {
+        context.addIssue({
+          code: "custom",
+          path: ["equippedItemIds"],
+          message: `Equipped item is not in inventory: ${itemId}`
+        });
+      }
     }
   });
 
@@ -664,20 +954,7 @@ const CreatureSchema = BaseEntitySchema.extend({
 
 const CharacterBuildSchema = BaseEntitySchema.extend({
   type: z.literal("character-build"),
-  formatVersion: z.literal(1),
-  catalogHash: z.string().min(1),
-  character: z
-    .object({
-      name: z.string(),
-      level: z.number().int().min(1).max(20),
-      ancestryId: EntityIdSchema.optional(),
-      heritageId: EntityIdSchema.optional(),
-      backgroundId: EntityIdSchema.optional(),
-      classId: EntityIdSchema.optional(),
-      choices: z.record(EntityIdSchema, z.array(EntityIdSchema)),
-      notes: z.string().optional()
-    })
-    .strict()
+  character: CharacterDocumentSchema
 }).strict();
 
 export const ContentEntitySchema = z.discriminatedUnion("type", [
@@ -710,6 +987,7 @@ export const CatalogSchema = z
   .object({
     schemaVersion: z.literal(SCHEMA_VERSION),
     contentHash: z.string().regex(/^[a-f0-9]{64}$/),
+    aliases: z.record(EntityIdSchema, EntityIdSchema).default({}),
     entities: z.array(ContentEntitySchema)
   })
   .strict();

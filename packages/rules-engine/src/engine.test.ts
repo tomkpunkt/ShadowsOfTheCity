@@ -8,6 +8,7 @@ const hash = "a".repeat(64);
 const catalog = {
   schemaVersion: 1,
   contentHash: hash,
+  aliases: {},
   entities: [
     {
       schemaVersion: 1,
@@ -316,8 +317,11 @@ const catalog = {
 };
 
 const character = (overrides: Partial<CharacterState> = {}): CharacterState => ({
-  formatVersion: 1,
+  formatVersion: 2,
+  contentSchemaVersion: 1,
   catalogHash: hash,
+  createdWithVersion: "0.1.0",
+  lastSavedWithVersion: "0.1.0",
   name: "Ada",
   level: 1,
   ancestryId: "ancestry.test",
@@ -328,6 +332,10 @@ const character = (overrides: Partial<CharacterState> = {}): CharacterState => (
   },
   attributeBoosts: ["strength", "dexterity"],
   inventoryIds: ["armor.leather", "weapon.club"],
+  equippedItemIds: ["armor.leather", "weapon.club"],
+  options: {},
+  migrations: [],
+  legacyValues: {},
   ...overrides
 });
 

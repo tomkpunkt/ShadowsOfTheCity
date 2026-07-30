@@ -8,7 +8,9 @@ import type {
   EffectNode,
   EngineContext,
   ProficiencyRank,
-  SaveId
+  SaveId,
+  ValueOperation,
+  ValueTarget
 } from "./types.js";
 
 export interface AppliedModifier {
@@ -26,9 +28,44 @@ export interface EffectAccumulator {
   hpPerLevel: Array<{ sourceId: string; value: number }>;
   speedChanges: Array<{ sourceId: string; value: number }>;
   resourceChanges: Array<{ sourceId: string; resourceId: string; value: number }>;
+  valueRules: Array<{
+    sourceId: string;
+    target: ValueTarget;
+    selector?: string;
+    operation: ValueOperation;
+    value: number;
+    scale: "flat" | "per-level";
+    label: string;
+  }>;
+  derivedRules: Array<{
+    sourceId: string;
+    target: ValueTarget;
+    selector?: string;
+    from: ValueTarget;
+    fromSelector?: string;
+    multiplier: number;
+    offset: number;
+    label: string;
+  }>;
+  movementRules: Array<{
+    sourceId: string;
+    movementType: "land" | "climb" | "swim" | "fly" | "other";
+    operation: ValueOperation;
+    value: number;
+    label: string;
+  }>;
+  attackRules: Array<Extract<EffectNode, { kind: "attack-rule" }> & { sourceId: string }>;
+  spellcastingRules: Array<
+    Extract<EffectNode, { kind: "spellcasting-rule" }> & { sourceId: string }
+  >;
+  actionGrants: Array<Extract<EffectNode, { kind: "action" }> & { sourceId: string }>;
   ignoredTextEffects: Array<{ sourceId: string; text: string }>;
   grantedFeatIds: Set<string>;
   grantedFeatureIds: Set<string>;
+  grantedSpellIds: Set<string>;
+  grantedItemIds: Set<string>;
+  grantedLanguageIds: Set<string>;
+  grantedActionIds: Set<string>;
   unlockedChoiceIds: Set<string>;
 }
 
@@ -51,11 +88,48 @@ export const createAccumulator = (): EffectAccumulator => ({
   hpPerLevel: [],
   speedChanges: [],
   resourceChanges: [],
+  valueRules: [],
+  derivedRules: [],
+  movementRules: [],
+  attackRules: [],
+  spellcastingRules: [],
+  actionGrants: [],
   ignoredTextEffects: [],
   grantedFeatIds: new Set(),
   grantedFeatureIds: new Set(),
+  grantedSpellIds: new Set(),
+  grantedItemIds: new Set(),
+  grantedLanguageIds: new Set(),
+  grantedActionIds: new Set(),
   unlockedChoiceIds: new Set()
 });
+
+export const applyValueOperation = (
+  current: number,
+  operation: ValueOperation,
+  value: number
+): number => {
+  switch (operation) {
+    case "set":
+    case "replace":
+      return value;
+    case "add":
+      return current + value;
+    case "minimum":
+      return Math.max(current, value);
+    case "maximum":
+      return Math.min(current, value);
+  }
+};
+
+const rankByValue = Object.entries(rankOrder).sort((left, right) => left[1] - right[1]) as Array<
+  [ProficiencyRank, number]
+>;
+
+export const increaseRank = (rank: ProficiencyRank | undefined, steps: number): ProficiencyRank => {
+  const current = rankOrder[rank ?? "untrained"];
+  return rankByValue[Math.min(current + steps, rankByValue.length - 1)]?.[0] ?? "legendary";
+};
 
 const addModifier = (
   accumulator: EffectAccumulator,
@@ -84,6 +158,142 @@ export const applyEffect = (
 ): void => {
   const effect = EffectSchema.parse(input) as EffectNode;
   switch (effect.kind) {
+    case "value": {
+      if (
+        effect.target === "attribute-score" &&
+        effect.selector !== undefined &&
+        effect.selector in context.attributes
+      ) {
+        const attribute = effect.selector as AttributeId;
+        const previous = context.attributes[attribute];
+        const next = applyValueOperation(previous, effect.operation, effect.value);
+        context.attributes[attribute] = next;
+        accumulator.attributeChanges.push({
+          sourceId,
+          attribute,
+          value: next - previous
+        });
+        return;
+      }
+      if (effect.operation === "add" && effect.bonusType !== undefined) {
+        addModifier(
+          accumulator,
+          sourceId,
+          effect.target,
+          effect.bonusType,
+          effect.value,
+          effect.selector,
+          effect.label
+        );
+        return;
+      }
+      accumulator.valueRules.push({
+        sourceId,
+        target: effect.target,
+        operation: effect.operation,
+        value: effect.value,
+        scale: effect.scale,
+        label: effect.label ?? sourceId,
+        ...(effect.selector === undefined ? {} : { selector: effect.selector })
+      });
+      return;
+    }
+    case "derived":
+      accumulator.derivedRules.push({
+        sourceId,
+        target: effect.target,
+        from: effect.from,
+        multiplier: effect.multiplier,
+        offset: effect.offset,
+        label: effect.label ?? sourceId,
+        ...(effect.selector === undefined ? {} : { selector: effect.selector }),
+        ...(effect.fromSelector === undefined ? {} : { fromSelector: effect.fromSelector })
+      });
+      return;
+    case "proficiency-rule":
+      if (effect.operation === "increase") {
+        context.proficiencyRanks.set(
+          effect.proficiencyId,
+          increaseRank(context.proficiencyRanks.get(effect.proficiencyId), effect.steps ?? 1)
+        );
+      } else if (effect.operation === "set") {
+        context.proficiencyRanks.set(effect.proficiencyId, effect.rank ?? "untrained");
+      } else {
+        context.proficiencyRanks.set(
+          effect.proficiencyId,
+          higherRank(context.proficiencyRanks.get(effect.proficiencyId), effect.rank ?? "untrained")
+        );
+      }
+      return;
+    case "grant":
+      switch (effect.grantType) {
+        case "feat":
+          accumulator.grantedFeatIds.add(effect.id);
+          context.featIds.add(effect.id);
+          return;
+        case "feature":
+          accumulator.grantedFeatureIds.add(effect.id);
+          context.featureIds.add(effect.id);
+          return;
+        case "spell":
+          accumulator.grantedSpellIds.add(effect.id);
+          context.spellIds.add(effect.id);
+          return;
+        case "item":
+          accumulator.grantedItemIds.add(effect.id);
+          context.inventoryIds.add(effect.id);
+          return;
+        case "language":
+          accumulator.grantedLanguageIds.add(effect.id);
+          return;
+        case "choice":
+          accumulator.unlockedChoiceIds.add(effect.id);
+          return;
+        case "action":
+          accumulator.grantedActionIds.add(effect.id);
+          return;
+      }
+    case "resource-rule": {
+      const current = context.resources.get(effect.resourceId) ?? 0;
+      const operation =
+        effect.operation === "set"
+          ? "set"
+          : effect.operation === "add"
+            ? "add"
+            : effect.operation;
+      const next = applyValueOperation(current, operation, effect.value);
+      context.resources.set(effect.resourceId, next);
+      accumulator.resourceChanges.push({
+        sourceId,
+        resourceId: effect.resourceId,
+        value: next - current
+      });
+      return;
+    }
+    case "movement":
+      accumulator.movementRules.push({
+        sourceId,
+        movementType: effect.movementType,
+        operation: effect.operation,
+        value: effect.value,
+        label: effect.label ?? sourceId
+      });
+      return;
+    case "action":
+      accumulator.actionGrants.push({ sourceId, ...effect });
+      accumulator.grantedActionIds.add(effect.actionId);
+      return;
+    case "attack-rule":
+      accumulator.attackRules.push({ sourceId, ...effect });
+      return;
+    case "spellcasting-rule":
+      context.traditions.add(effect.tradition);
+      for (const spellId of effect.spellIds) {
+        context.spellIds.add(spellId);
+        accumulator.grantedSpellIds.add(spellId);
+      }
+      accumulator.spellcastingRules.push({ sourceId, ...effect });
+      return;
     case "attribute":
       context.attributes[effect.attribute] += effect.value;
       accumulator.attributeChanges.push({
@@ -193,6 +403,7 @@ export const applyEffect = (
       return;
     case "text":
       accumulator.ignoredTextEffects.push({ sourceId, text: effect.text });
+      return;
   }
 };
 

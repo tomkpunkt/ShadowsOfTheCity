@@ -31,6 +31,35 @@ const success = (): PredicateResult => ({ met: true, failures: [] });
 
 const idName = (context: EngineContext, id: string): string => context.entities.get(id)?.name ?? id;
 
+const boundedResult = (
+  predicate: PredicateNode,
+  actual: number,
+  bounds: { gte?: number; lte?: number },
+  lowerCode: string,
+  upperCode: string,
+  label: string
+): PredicateResult => {
+  if (bounds.gte !== undefined && actual < bounds.gte) {
+    return failure(
+      predicate,
+      lowerCode,
+      `Benötigt ${label} mindestens ${String(bounds.gte)}; aktuell: ${String(actual)}.`,
+      bounds.gte,
+      actual
+    );
+  }
+  if (bounds.lte !== undefined && actual > bounds.lte) {
+    return failure(
+      predicate,
+      upperCode,
+      `Benötigt ${label} höchstens ${String(bounds.lte)}; aktuell: ${String(actual)}.`,
+      bounds.lte,
+      actual
+    );
+  }
+  return success();
+};
+
 export const evaluatePredicate = (input: unknown, context: EngineContext): PredicateResult => {
   const predicate = PredicateSchema.parse(input) as PredicateNode;
   if ("all" in predicate) {
@@ -64,31 +93,25 @@ export const evaluatePredicate = (input: unknown, context: EngineContext): Predi
       : success();
   }
   if ("characterLevel" in predicate) {
-    return context.character.level >= predicate.characterLevel.gte
-      ? success()
-      : failure(
-          predicate,
-          "LEVEL_TOO_LOW",
-          `Benötigt Stufe ${String(predicate.characterLevel.gte)}; aktuell: ${String(
-            context.character.level
-          )}.`,
-          predicate.characterLevel.gte,
-          context.character.level
-        );
+    return boundedResult(
+      predicate,
+      context.character.level,
+      predicate.characterLevel,
+      "LEVEL_TOO_LOW",
+      "LEVEL_TOO_HIGH",
+      "Stufe"
+    );
   }
   if ("attribute" in predicate) {
     const actual = context.attributes[predicate.attribute.id];
-    return actual >= predicate.attribute.gte
-      ? success()
-      : failure(
-          predicate,
-          "ATTRIBUTE_TOO_LOW",
-          `Benötigt ${predicate.attribute.id} ${String(
-            predicate.attribute.gte
-          )}; aktuell: ${String(actual)}.`,
-          predicate.attribute.gte,
-          actual
-        );
+    return boundedResult(
+      predicate,
+      actual,
+      predicate.attribute,
+      "ATTRIBUTE_TOO_LOW",
+      "ATTRIBUTE_TOO_HIGH",
+      predicate.attribute.id
+    );
   }
   if ("proficiency" in predicate) {
     const actual = context.proficiencyRanks.get(predicate.proficiency.id) ?? "untrained";
@@ -122,6 +145,17 @@ export const evaluatePredicate = (input: unknown, context: EngineContext): Predi
           `Benötigt Abstammung ${idName(context, predicate.ancestry.id)}.`,
           predicate.ancestry.id,
           context.character.ancestryId ?? "none"
+        );
+  }
+  if ("heritage" in predicate) {
+    return context.character.heritageId === predicate.heritage.id
+      ? success()
+      : failure(
+          predicate,
+          "WRONG_HERITAGE",
+          `Benötigt Herkunft ${idName(context, predicate.heritage.id)}.`,
+          predicate.heritage.id,
+          context.character.heritageId ?? "none"
         );
   }
   if ("background" in predicate) {
@@ -187,6 +221,91 @@ export const evaluatePredicate = (input: unknown, context: EngineContext): Predi
           predicate,
           "MISSING_ITEM",
           `Benötigt Gegenstand ${idName(context, predicate.hasItem.id)}.`
+        );
+  }
+  if ("equippedItem" in predicate) {
+    return context.equippedItemIds.has(predicate.equippedItem.id)
+      ? success()
+      : failure(
+          predicate,
+          "ITEM_NOT_EQUIPPED",
+          `Benötigt ausgerüsteten Gegenstand ${idName(context, predicate.equippedItem.id)}.`
+        );
+  }
+  if ("itemTrait" in predicate) {
+    const met = [...context.inventoryIds].some((itemId) =>
+      context.entities.get(itemId)?.traits.includes(predicate.itemTrait.id)
+    );
+    return met
+      ? success()
+      : failure(
+          predicate,
+          "MISSING_ITEM_TRAIT",
+          `Benötigt einen Gegenstand mit Merkmal ${idName(context, predicate.itemTrait.id)}.`
+        );
+  }
+  if ("weaponCategory" in predicate) {
+    const met = [...context.equippedItemIds].some((itemId) => {
+      const entity = context.entities.get(itemId);
+      return entity?.type === "weapon" && entity.categoryId === predicate.weaponCategory.id;
+    });
+    return met
+      ? success()
+      : failure(
+          predicate,
+          "WRONG_WEAPON_CATEGORY",
+          `Benötigt eine ausgerüstete Waffe der Kategorie ${idName(
+            context,
+            predicate.weaponCategory.id
+          )}.`
+        );
+  }
+  if ("armorCategory" in predicate) {
+    const met = [...context.equippedItemIds].some((itemId) => {
+      const entity = context.entities.get(itemId);
+      return entity?.type === "armor" && entity.categoryId === predicate.armorCategory.id;
+    });
+    return met
+      ? success()
+      : failure(
+          predicate,
+          "WRONG_ARMOR_CATEGORY",
+          `Benötigt eine ausgerüstete Rüstung der Kategorie ${idName(
+            context,
+            predicate.armorCategory.id
+          )}.`
+        );
+  }
+  if ("previousChoice" in predicate) {
+    const selected = context.character.choices[predicate.previousChoice.choiceId] ?? [];
+    const met =
+      predicate.previousChoice.optionId === undefined
+        ? selected.length > 0
+        : selected.includes(predicate.previousChoice.optionId);
+    return met
+      ? success()
+      : failure(
+          predicate,
+          "MISSING_PREVIOUS_CHOICE",
+          `Benötigt eine frühere Auswahl in ${idName(
+            context,
+            predicate.previousChoice.choiceId
+          )}.`,
+          predicate.previousChoice.optionId
+        );
+  }
+  if ("characterOption" in predicate) {
+    const actual = context.characterOptions.get(predicate.characterOption.key);
+    return actual === predicate.characterOption.value
+      ? success()
+      : failure(
+          predicate,
+          "WRONG_CHARACTER_OPTION",
+          `Benötigt Charakteroption ${predicate.characterOption.key} = ${String(
+            predicate.characterOption.value
+          )}; aktuell: ${String(actual ?? "nicht gesetzt")}.`,
+          String(predicate.characterOption.value),
+          actual === undefined ? "nicht gesetzt" : String(actual)
         );
   }
   const actual = context.resources.get(predicate.resource.id) ?? 0;

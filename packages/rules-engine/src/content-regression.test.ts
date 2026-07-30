@@ -34,8 +34,11 @@ const completeLevelOneCharacter = (
   );
   const freeBoosts = ancestry.freeBoosts + background.freeBoosts;
   const character: CharacterState = {
-    formatVersion: 1,
+    formatVersion: 2,
+    contentSchemaVersion: 1,
     catalogHash: catalog.contentHash,
+    createdWithVersion: "0.1.0",
+    lastSavedWithVersion: "0.1.0",
     name: `Regression ${classId}`,
     level: 1,
     ancestryId,
@@ -44,7 +47,11 @@ const completeLevelOneCharacter = (
     classId,
     choices: {},
     attributeBoosts: preferredBoosts.slice(0, freeBoosts),
-    inventoryIds: []
+    inventoryIds: [],
+    equippedItemIds: [],
+    options: {},
+    migrations: [],
+    legacyValues: {}
   };
 
   for (let pass = 0; pass < 10; pass += 1) {

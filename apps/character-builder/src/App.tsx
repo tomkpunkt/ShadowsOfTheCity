@@ -38,7 +38,7 @@ import {
   type SaveId,
   type ValidationState
 } from "@sotc/rules-engine";
-import type { ContentEntity } from "@sotc/shared";
+import { APP_VERSION, type ContentEntity } from "@sotc/shared";
 
 import { catalog, entities, entitiesOfType, entityName } from "./catalog.js";
 import { EntityDetails } from "./EntityDetails.js";
@@ -75,7 +75,8 @@ import {
   importCharacter,
   loadCharacter,
   saveCharacter,
-  toggleAttributeBoost
+  toggleAttributeBoost,
+  type CatalogCompatibility
 } from "./storage.js";
 
 type StepId =
@@ -546,7 +547,7 @@ const ChoiceGroup = ({
               key={option.entity.id}
               entity={option.entity}
               selected={selected}
-              locked={option.status === "locked"}
+              locked={option.status === "locked" || option.status === "blocked"}
               invalid={option.status === "invalid"}
               reason={firstFailure}
               onSelect={() => onChange(choice.choiceId, option.entity.id, choice.max)}
@@ -602,9 +603,8 @@ const DetailDrawer = ({
 );
 
 export const App = () => {
-  const [character, setCharacter] = useState<CharacterState>(() =>
-    loadCharacter(catalog.contentHash)
-  );
+  const [initialLoad] = useState(() => loadCharacter(catalog));
+  const [character, setCharacter] = useState<CharacterState>(initialLoad.character);
   const [activeStep, setActiveStep] = useState<StepId>("overview");
   const [sidebarOpen, setSidebarOpen] = useState(
     () =>
@@ -613,23 +613,14 @@ export const App = () => {
       window.matchMedia("(min-width: 761px)").matches
   );
   const [detailId, setDetailId] = useState<string>();
-  const [importConflicts, setImportConflicts] = useState<string[]>([]);
+  const [importConflicts, setImportConflicts] = useState<string[]>(initialLoad.conflicts);
+  const [compatibility, setCompatibility] = useState<CatalogCompatibility>(
+    initialLoad.compatibility
+  );
   const [saved, setSaved] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
   const result = useMemo(() => calculateCharacter(catalog, character), [character]);
-  const expectedBoosts =
-    (entities.get(character.ancestryId ?? "")?.type === "ancestry"
-      ? (entities.get(character.ancestryId ?? "") as Extract<ContentEntity, { type: "ancestry" }>)
-          .freeBoosts
-      : 0) +
-    (entities.get(character.backgroundId ?? "")?.type === "background"
-      ? (
-          entities.get(character.backgroundId ?? "") as Extract<
-            ContentEntity,
-            { type: "background" }
-          >
-        ).freeBoosts
-      : 0);
+  const expectedBoosts = result.expectedAttributeBoosts;
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -721,11 +712,13 @@ export const App = () => {
       const imported = importCharacter(await file.text(), catalog);
       setCharacter(imported.character);
       setImportConflicts(imported.conflicts);
+      setCompatibility(imported.compatibility);
       setActiveStep(imported.conflicts.length === 0 ? "overview" : "review");
     } catch (error) {
       setImportConflicts([
         error instanceof Error ? error.message : "Import konnte nicht gelesen werden."
       ]);
+      setCompatibility("unreadable");
       setActiveStep("review");
     }
   };
@@ -991,7 +984,10 @@ export const App = () => {
           update({
             inventoryIds: character.inventoryIds.includes(id)
               ? character.inventoryIds.filter((itemId) => itemId !== id)
-              : [...character.inventoryIds, id]
+              : [...character.inventoryIds, id],
+            equippedItemIds: character.inventoryIds.includes(id)
+              ? character.equippedItemIds.filter((itemId) => itemId !== id)
+              : [...character.equippedItemIds, id]
           })
         }
         onDetails={setDetailId}
@@ -1019,6 +1015,23 @@ export const App = () => {
           ))}
         </div>
       ) : null}
+      <div className={`compatibility compatibility--${compatibility}`}>
+        <FileJson size={18} />
+        <div>
+          <strong>Katalog-Kompatibilität</strong>
+          <p>
+            {
+              {
+                compatible: "Kompatibel mit dem aktuellen Katalog.",
+                migrated: "Erfolgreich auf den aktuellen Katalog migriert.",
+                "partially-incompatible":
+                  "Teilweise inkompatibel; erhaltene Altwerte müssen geprüft werden.",
+                unreadable: "Nicht lesbar; der gespeicherte Stand wurde nicht übernommen."
+              }[compatibility]
+            }
+          </p>
+        </div>
+      </div>
       <div className="review-list">
         {result.issues.map((issue, index) => (
           <article key={`${issue.code}-${String(index)}`}>
@@ -1156,6 +1169,13 @@ export const App = () => {
           {steps.map((step) => {
             const Icon = step.icon;
             const active = step.id === activeStep;
+            const sectionState = result.sectionStatuses[step.id] ?? "not-relevant";
+            const SectionStatusIcon =
+              sectionState === "valid"
+                ? Check
+                : sectionState === "not-relevant"
+                  ? Info
+                  : AlertTriangle;
             const problem =
               step.id === "review" && result.issues.length > 0 ? result.issues.length : undefined;
             return (
@@ -1174,14 +1194,24 @@ export const App = () => {
                 >
                   <Icon size={18} strokeWidth={1.8} />
                   <span>{step.label}</span>
-                  {problem === undefined ? null : <b>{problem}</b>}
+                  <span
+                    className={`sidebar__state sidebar__state--${sectionState}`}
+                    title={
+                      sectionState === "not-relevant"
+                        ? "Nicht relevant"
+                        : validationStateLabels[sectionState]
+                    }
+                  >
+                    <SectionStatusIcon size={13} />
+                    {problem === undefined ? null : <b>{problem}</b>}
+                  </span>
                 </button>
               </li>
             );
           })}
         </ol>
         <footer>
-          <span>Geprüfter Katalog</span>
+          <span>Version {APP_VERSION} · Geprüfter Katalog</span>
           <strong>{String(catalog.entities.length)} Inhalte</strong>
         </footer>
       </nav>

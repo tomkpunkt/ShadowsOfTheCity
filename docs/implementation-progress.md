@@ -483,9 +483,9 @@ begutachten lassen.
 | 3 - Ausdrucksmodell | complete | ein rekursiver Prädikatvertrag | 18 atomare Klassen sowie `all`, `any` und `not`, strikt validiert und getestet |
 | 4 - Effektformalisierung | complete | zentrale Charakterwirkungen ausführbar | 41 strukturierte Knoten, 410 Textregeln vollständig klassifiziert, 2 Entscheidungs-IDs |
 | 5 - Systemkonventionen | complete | explizite, testbare globale Regeln | Stapelung, Reihenfolge, Rundung, Choices, Grants und Legacy-IDs dokumentiert |
-| 6 - Rules Engine | active | deterministische vollständige Auswertung | erweiterte Ausgabe und neue Effektfamilien implementiert; End-to-End-Abnahme noch offen |
-| 7 - Legacy-Charaktere | pending | versionierte verlustarme Migration | noch offen |
-| 8 - Builder-Integration | pending | UI ohne eigene Regelberechnung | noch offen |
+| 6 - Rules Engine | complete | deterministische vollständige Auswertung | Werte, Proficiencies, Grants, Choices, Zauber, Angriffe, Inventar, Ressourcen, Issues und Erklärungen |
+| 7 - Legacy-Charaktere | complete | versionierte verlustarme Migration | Format 0/1/2, 10 Aliase, Konflikterhalt und vier Kompatibilitätszustände unit- und browsergetestet |
+| 8 - Builder-Integration | complete | UI ohne eigene Regelberechnung | Engine-Abschnittsstatus, Kompatibilität, v2-Speicherung, Ausrüstung und Blockerhinweise integriert |
 | 9 - Contenthärtung | pending | Templates, Versionierung und CLI | noch offen |
 | 10 - Bereinigung | pending | unnötigen Parallelbestand entfernen | noch offen |
 | 11 - Architektur | pending | Abhängigkeitsrichtung automatisiert sichern | noch offen |

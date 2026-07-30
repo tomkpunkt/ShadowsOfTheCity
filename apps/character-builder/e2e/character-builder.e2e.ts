@@ -89,3 +89,53 @@ test("builds and persists a complete level-one wizard", async ({ page }) => {
   await openStep(page, "review");
   await expect(page.locator(".review-success")).toBeVisible();
 });
+
+test("imports a format-one character and exposes migration compatibility", async ({ page }) => {
+  await page.goto("/");
+  await page.locator('input[type="file"]').setInputFiles({
+    name: "legacy-character.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(
+      JSON.stringify({
+        formatVersion: 1,
+        name: "Legacy Nyx",
+        level: 1,
+        ancestryId: "ancestry.elf",
+        backgroundId: "background.academic",
+        classId: "class.magier",
+        choices: {},
+        attributeBoosts: [],
+        inventoryIds: ["legacy.weapon.schwert"]
+      })
+    )
+  });
+
+  await openStep(page, "review");
+  await expect(page.getByText("Erfolgreich auf den aktuellen Katalog migriert.")).toBeVisible();
+  await expect(page.locator(".sidebar__character strong")).toHaveText("Legacy Nyx");
+
+  await openStep(page, "equipment");
+  await expect(page.locator('[data-entity-id="weapon.schwert"]')).toHaveClass(
+    /entity-card--selected/
+  );
+});
+
+test("blocks unresolved rules and invokes the printable character sheet", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.print = () => {
+      document.body.dataset["printed"] = "true";
+    };
+  });
+  await page.goto("/");
+
+  await openStep(page, "feats");
+  const blockedFeat = page.locator('[data-entity-id="feat.general.zahigkeit"]').first();
+  await expect(blockedFeat.locator(".entity-card__select")).toBeDisabled();
+  await expect(blockedFeat.locator(".entity-card__reason")).toContainText(
+    "rules-decision.feat.zahigkeit-prerequisite"
+  );
+
+  await openStep(page, "sheet");
+  await page.getByTitle("Charakterbogen drucken").click();
+  await expect(page.locator("body")).toHaveAttribute("data-printed", "true");
+});

@@ -322,10 +322,26 @@ export const formatPrerequisite = (
     return `Nicht: ${formatPrerequisite(prerequisite.not, resolveName)}`;
   }
   if ("characterLevel" in prerequisite) {
-    return `Mindestens Stufe ${String(prerequisite.characterLevel.gte)}`;
+    const bounds = [
+      prerequisite.characterLevel.gte === undefined
+        ? undefined
+        : `mindestens Stufe ${String(prerequisite.characterLevel.gte)}`,
+      prerequisite.characterLevel.lte === undefined
+        ? undefined
+        : `höchstens Stufe ${String(prerequisite.characterLevel.lte)}`
+    ].filter((value): value is string => value !== undefined);
+    return bounds.join(" und ");
   }
   if ("attribute" in prerequisite) {
-    return `${formatAttribute(prerequisite.attribute.id)} mindestens ${String(prerequisite.attribute.gte)}`;
+    const bounds = [
+      prerequisite.attribute.gte === undefined
+        ? undefined
+        : `mindestens ${String(prerequisite.attribute.gte)}`,
+      prerequisite.attribute.lte === undefined
+        ? undefined
+        : `höchstens ${String(prerequisite.attribute.lte)}`
+    ].filter((value): value is string => value !== undefined);
+    return `${formatAttribute(prerequisite.attribute.id)} ${bounds.join(" und ")}`;
   }
   if ("proficiency" in prerequisite) {
     return `${formatEntityReference(prerequisite.proficiency.id, resolveName)} mindestens ${formatProficiencyRank(prerequisite.proficiency.rankAtLeast)}`;
@@ -335,6 +351,9 @@ export const formatPrerequisite = (
   }
   if ("ancestry" in prerequisite) {
     return `Abstammung ${formatEntityReference(prerequisite.ancestry.id, resolveName)}`;
+  }
+  if ("heritage" in prerequisite) {
+    return `Herkunft ${formatEntityReference(prerequisite.heritage.id, resolveName)}`;
   }
   if ("background" in prerequisite) {
     return `Hintergrund ${formatEntityReference(prerequisite.background.id, resolveName)}`;
@@ -356,6 +375,30 @@ export const formatPrerequisite = (
   }
   if ("hasItem" in prerequisite) {
     return `Besitzt ${formatEntityReference(prerequisite.hasItem.id, resolveName)}`;
+  }
+  if ("equippedItem" in prerequisite) {
+    return `Ausgerüstet: ${formatEntityReference(prerequisite.equippedItem.id, resolveName)}`;
+  }
+  if ("itemTrait" in prerequisite) {
+    return `Gegenstandsmerkmal ${formatEntityReference(prerequisite.itemTrait.id, resolveName)}`;
+  }
+  if ("weaponCategory" in prerequisite) {
+    return `Waffenkategorie ${formatEntityReference(prerequisite.weaponCategory.id, resolveName)}`;
+  }
+  if ("armorCategory" in prerequisite) {
+    return `Rüstungskategorie ${formatEntityReference(prerequisite.armorCategory.id, resolveName)}`;
+  }
+  if ("previousChoice" in prerequisite) {
+    return `Frühere Auswahl ${formatEntityReference(prerequisite.previousChoice.choiceId, resolveName)}${
+      prerequisite.previousChoice.optionId === undefined
+        ? ""
+        : `: ${formatEntityReference(prerequisite.previousChoice.optionId, resolveName)}`
+    }`;
+  }
+  if ("characterOption" in prerequisite) {
+    return `Charakteroption ${prerequisite.characterOption.key} = ${String(
+      prerequisite.characterOption.value
+    )}`;
   }
   return `${formatEntityReference(prerequisite.resource.id, resolveName)} mindestens ${String(prerequisite.resource.gte)}`;
 };
@@ -387,6 +430,26 @@ export const formatEffect = (
   resolveName: (id: string) => string | undefined
 ): string => {
   switch (effect.kind) {
+    case "value":
+      return `${effect.target}${effect.selector === undefined ? "" : ` (${formatEntityReference(effect.selector, resolveName)})`}: ${effect.operation} ${String(effect.value)}`;
+    case "derived":
+      return `${effect.target} aus ${effect.from} × ${String(effect.multiplier)} ${effect.offset >= 0 ? "+" : ""}${String(effect.offset)}`;
+    case "proficiency-rule":
+      return `${formatEntityReference(effect.proficiencyId, resolveName)}: ${effect.operation}${
+        effect.rank === undefined ? "" : ` ${formatProficiencyRank(effect.rank)}`
+      }${effect.steps === undefined ? "" : ` ${String(effect.steps)} Stufe(n)`}`;
+    case "grant":
+      return `Gewährt ${formatEntityReference(effect.id, resolveName)}`;
+    case "resource-rule":
+      return `${formatEntityReference(effect.resourceId, resolveName)}: ${effect.operation} ${String(effect.value)}`;
+    case "movement":
+      return `${effect.movementType}: ${effect.operation} ${String(effect.value)} Fuß`;
+    case "action":
+      return `Gewährt ${effect.actionType} ${formatEntityReference(effect.actionId, resolveName)}`;
+    case "attack-rule":
+      return `Angriffsregel${effect.selector === undefined ? "" : ` für ${formatEntityReference(effect.selector, resolveName)}`}`;
+    case "spellcasting-rule":
+      return `${formatTradition(effect.tradition)}: ${effect.operation}`;
     case "attribute":
       return `${formatAttribute(effect.attribute)} ${effect.value >= 0 ? "+" : ""}${String(effect.value)}`;
     case "modifier":

@@ -356,6 +356,26 @@ code {
   place-items: center;
 }
 
+.sidebar__state {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #7e8b87;
+}
+
+.sidebar__state--valid {
+  color: #70c6bc;
+}
+
+.sidebar__state--incomplete {
+  color: var(--gold);
+}
+
+.sidebar__state--invalid,
+.sidebar__state--blocked {
+  color: #e27279;
+}
+
 .sidebar footer {
   display: grid;
   gap: 3px;
@@ -1033,6 +1053,42 @@ code {
   margin: 7px 0 0 26px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
+}
+
+.compatibility {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  color: #34403d;
+  background: #edf0ed;
+  border-left: 3px solid #71817d;
+}
+
+.compatibility--compatible {
+  border-color: var(--teal);
+}
+
+.compatibility--migrated {
+  border-color: var(--gold);
+}
+
+.compatibility--partially-incompatible,
+.compatibility--unreadable {
+  color: #852e35;
+  background: var(--red-soft);
+  border-color: var(--red);
+}
+
+.compatibility strong,
+.compatibility p {
+  margin: 0;
+}
+
+.compatibility p {
+  margin-top: 3px;
+  font-size: 11px;
 }
 
 .review-list {

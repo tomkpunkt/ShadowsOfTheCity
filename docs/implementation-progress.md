@@ -7,7 +7,7 @@ validen Zustand ist.
 | Phase | Status | Ergebnis |
 |:--|:--|:--|
 | 0 - Baseline | complete | 64 Ausgangsdateien und alle erkannten Entitätstypen inventarisiert |
-| 1 - Review | pending | |
+| 1 - Review | complete | 32 priorisierte Befunde aus der vollständigen Quellenprüfung dokumentiert |
 | 2 - Datenmodell | pending | |
 | 3 - Migration | pending | |
 | 4 - Content Compiler | pending | |
@@ -50,7 +50,42 @@ Offene Punkte:
 
 - keine
 
+## Phase 1 - Fachliches und strukturelles Review
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `docs/review/01-content-and-rules-review.md`
+- `docs/implementation-progress.md`
+
+Entscheidungen:
+
+- PF2e-nahe Drei-Aktionen-Ökonomie wird die kanonische Basis.
+- Wahrnehmung wird als eigener Proficiency-Wert behandelt.
+- Proficiency verwendet fünf geschlossene Ränge.
+- Trefferpunkte verwenden Abstammungs-TP plus klassenbasierte TP pro Level.
+- Bestiary-Inhalte werden erhalten, ihre D&D-5e-Mechanik wird jedoch nicht
+  unbemerkt in die Character-Rules-Engine übernommen.
+- Konflikte in Zauberrängen, Skills und Referenzen bleiben bis zur expliziten
+  Migrationsentscheidung offen.
+
+Ausgeführte Prüfungen:
+
+- alle 64 Ausgangsdateien vollständig gelesen
+- Klassen, Abstammungen, Feats, Zauber, Ausrüstung, Bestiary, Regeln, Lore und
+  TOCs jeweils miteinander verglichen
+- freie Zauber- und Feat-Referenzen extrahiert
+- Regelbereiche aus dem Masterauftrag einzeln bewertet
+- Befunde nach BLOCKER, CRITICAL, MAJOR, MINOR und EDITORIAL priorisiert
+- 32 Befund-IDs auf Eindeutigkeit geprüft
+- `git diff --check` ohne Befund ausgeführt
+
+Offene Punkte:
+
+- keine
+
 ## Nächster konkreter Schritt
 
-Jede relevante Quelldatei für Phase 1 vollständig inhaltlich prüfen und Befunde
-mit stabilen Review-IDs erfassen.
+Versioniertes Datenmodell, ID-Konventionen, Prädikate, Effekte und Choices für
+Phase 2 implementieren.

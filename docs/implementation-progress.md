@@ -9,16 +9,16 @@ validen Zustand ist.
 | 0 - Baseline | complete | 64 Ausgangsdateien und alle erkannten Entitätstypen inventarisiert |
 | 1 - Review | complete | 32 priorisierte Befunde aus der vollständigen Quellenprüfung dokumentiert |
 | 2 - Datenmodell | complete | Versioniertes Zod-Modell für 24 Entitätstypen, Prädikate, Effekte und Choices |
-| 3 - Migration | complete | 64 Quellen reproduzierbar auf 681 validierte Entitäten migriert |
+| 3 - Migration | complete | 64 Quellen reproduzierbar auf 734 validierte Entitäten migriert |
 | 4 - Content Compiler | complete | Deterministischer Katalog, Referenzprüfung, Hash und harte Fehler |
 | 5 - Rules Engine | complete | Frameworkfreie Neuberechnung, Prädikate, Effekte, Choices und Herkunftsnachweise |
-| 6 - Character Builder | pending | |
-| 7 - Speicherung/Import/Export | pending | |
-| 8 - Start- und Build-Aktualisierung | pending | |
-| 9 - Tests | pending | |
-| 10 - CI | pending | |
-| 11 - Dokumentation | pending | |
-| 12 - Abschlussprüfung | pending | |
+| 6 - Character Builder | complete | Responsive React-App mit elf datengetriebenen Arbeitsbereichen |
+| 7 - Speicherung/Import/Export | complete | Versioniertes LocalStorage, JSON-Import/-Export und sichtbare Migrationen |
+| 8 - Start- und Build-Aktualisierung | complete | Compile-before-start, Content-Watch und Stale-Katalog-Prüfung |
+| 9 - Tests | complete | 35 Unit-/Integrationstests, vier reale Builds und ein vollständiger Playwright-Workflow |
+| 10 - CI | complete | GitHub Actions prüft Audit, Content, Code, Build und Chromium-E2E |
+| 11 - Dokumentation | complete | Architektur, Authoring, Migration, Tests und Contribution vollständig dokumentiert |
+| 12 - Abschlussprüfung | complete | Vollständige Verify-Kette grün und Abschlussbericht erstellt |
 
 ## Phase 0 - Baseline
 
@@ -178,7 +178,7 @@ Entscheidungen:
 
 Ausgeführte Prüfungen:
 
-- 681 Entitäten aus 681 Authoring-Dateien kompiliert
+- 734 Entitäten aus 734 Authoring-Dateien kompiliert
 - Referenzen und geschlossene Traits vollständig aufgelöst
 - deterministische Ausgabe und Compilerfehler in Vitest geprüft
 - `npm run content:compile`
@@ -228,7 +228,230 @@ Offene Punkte:
 - Content-basierte Regressionstests mit mehreren realen Builds folgen in
   Phase 9.
 
+## Phase 6 - Character Builder
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `apps/character-builder/src/App.tsx`
+- `apps/character-builder/src/styles.css`
+- `apps/character-builder/src/catalog.ts`
+- `apps/character-builder/src/assets/city-builder.png`
+- `apps/character-builder/vite.config.ts`
+- `docs/character-builder.md`
+
+Entscheidungen:
+
+- Die UI importiert ausschließlich kompilierten Katalog und Rules Engine.
+- Elf Arbeitsbereiche decken Aufbau, Abschlussprüfung und Charakterbogen ab.
+- Gesperrte und ungültige Optionen bleiben sichtbar und begründet.
+- Das eigenständige visuelle System nutzt ein lokal erzeugtes Stadtmotiv,
+  Petrol, Gold und Rot auf einer neutralen Arbeitsfläche.
+- Mobile Navigation startet geschlossen; der Charakterbogen besitzt
+  Print-Styles.
+
+Ausgeführte Prüfungen:
+
+- Desktop bei 1440 × 900 im Browser geprüft
+- Mobile bei 390 × 844 im Browser geprüft
+- Kartenraster, Textüberlauf, Bildasset und Charakterbogen geprüft
+- keine Browser-Konsolenfehler
+- Testing-Library-Auswahl gegen den realen Katalog erfolgreich
+- Vite-Produktionsbuild erfolgreich
+
+Offene Punkte:
+
+- Bundle-Splitting des vollständig eingebetteten Offline-Katalogs ist eine
+  optionale spätere Optimierung.
+
+## Phase 7 - Speicherung, Import und Export
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `apps/character-builder/src/storage.ts`
+- `apps/character-builder/src/storage.test.ts`
+
+Entscheidungen:
+
+- LocalStorage und Export verwenden dasselbe Format Version 1.
+- Katalogmigrationen werden mit Quell-/Zielhash, Zeitpunkt und Konflikten
+  gespeichert.
+- Unbekannte IDs werden nie entfernt oder ersetzt.
+- Ein Hash wird nur automatisch aktualisiert, wenn sämtliche referenzierten IDs
+  noch auflösbar sind.
+
+Ausgeführte Prüfungen:
+
+- Speichern und Laden round-trip getestet
+- beschädigten LocalStorage getestet
+- Import mit unbekannten IDs und abweichendem Hash getestet
+- konfliktfreie Katalogmigration getestet
+
+Offene Punkte:
+
+- keine
+
+## Phase 8 - Aktualisierung bei Start und Build
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `apps/character-builder/vite.config.ts`
+- `package.json`
+- `packages/content-compiler/src/cli.ts`
+
+Entscheidungen:
+
+- Development kompiliert vor Start und beobachtet anschließend
+  `content/**/*.md`.
+- Production kompiliert Content und führt Typecheck sowie Tests vor dem
+  Workspace-Build aus.
+- `content:check-generated` vergleicht Katalog, Manifest und Report bytegenau.
+
+Ausgeführte Prüfungen:
+
+- Dev-Server auf `http://127.0.0.1:4173/` gestartet
+- Hot-Reload-Pipeline und aktuellen Katalog im Browser geprüft
+- Vite-Produktionsbuild erfolgreich
+- Stale-Katalog-Prüfung gegen aktuelle generierte Dateien ausgeführt
+
+Offene Punkte:
+
+- keine
+
+## Phase 9 - Tests
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `packages/content-compiler/src/compiler.test.ts`
+- `packages/rules-engine/src/content-regression.test.ts`
+- `apps/character-builder/src/App.test.tsx`
+- `apps/character-builder/src/storage.test.ts`
+- `apps/character-builder/e2e/character-builder.spec.ts`
+- `playwright.config.ts`
+
+Entscheidungen:
+
+- Referenzen werden neben ihrer Existenz auch auf den erwarteten Entitätstyp
+  geprüft.
+- Level-Filter verwenden bei Zaubern deren Rang.
+- Content-Regressionen vervollständigen Pflicht-Choices ausschließlich aus
+  verfügbaren Optionen des realen Katalogs.
+- Der E2E-Test umfasst den kompletten Build sowie Sperrgrund, Zauber,
+  Export/Import, ungültige Zwischenlage, Korrektur und Reload.
+
+Ausgeführte Prüfungen:
+
+- 11 Content-Compiler-Tests erfolgreich
+- 12 Rules-Engine- und Content-Regressions-Tests erfolgreich
+- 12 Shared-, Storage- und UI-Tests erfolgreich
+- Playwright Chromium: 1 vollständiger Workflow erfolgreich
+
+Offene Punkte:
+
+- keine
+
+## Phase 10 - CI und Qualitätskontrolle
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `.github/workflows/ci.yml`
+- `package.json`
+- `package-lock.json`
+
+Entscheidungen:
+
+- CI verwendet Node 22 und `npm ci`.
+- `npm run verify` ist lokal und in CI derselbe Merge-Vertrag.
+- Der Produktionsaudit ist hart; ein nur per Breaking Change behebbarer
+  ESLint-Entwicklungsbefund ist dokumentiert.
+- Playwright installiert Chromium in CI und lädt den Bericht nur bei Fehlern
+  hoch.
+
+Ausgeführte Prüfungen:
+
+- `npm audit --omit=dev --audit-level=high`: 0 Schwachstellen
+- lokaler Chromium-E2E-Lauf erfolgreich
+- Workflow-Syntax und verwendete npm-Kommandos gegengeprüft
+
+Offene Punkte:
+
+- ESLint 10 separat evaluieren, sobald der TypeScript-ESLint-Stack dafür
+  freigegeben ist.
+
+## Phase 11 - Dokumentation
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `docs/architecture.md`
+- `docs/content-authoring.md`
+- `docs/content-schema.md`
+- `docs/rules-engine.md`
+- `docs/character-builder.md`
+- `docs/testing.md`
+- `docs/migration.md`
+- `CONTRIBUTING.md`
+
+Entscheidungen:
+
+- Dokumentation beschreibt nur implementierte Kommandos und Datenverträge.
+- Authoring enthält vollständige Beispiele für Klasse, Background, Feat,
+  Skill und Zauber sowie Choice-, Prädikat-, Effekt- und Versionsregeln.
+- Sicherheitsbefunde werden nach Produktions- und Entwicklungsabhängigkeiten
+  getrennt ausgewiesen.
+
+Ausgeführte Prüfungen:
+
+- geforderte Dokumentliste gegen den Masterauftrag geprüft
+- Beispiele mit den Zod-Feldern und realen Contentdateien abgeglichen
+- Architektur-, Build- und Testkommandos gegen `package.json` geprüft
+
+Offene Punkte:
+
+- `docs/review/03-final-verification.md` wird als Ergebnis von Phase 12 erzeugt.
+
+## Phase 12 - Abschlussprüfung
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `docs/review/03-final-verification.md`
+- `docs/implementation-progress.md`
+
+Entscheidungen:
+
+- Offene fachliche Regeln bleiben sichtbar und werden nicht als implementiert
+  ausgegeben.
+- Der nicht blockierende Bundle-Hinweis und der ESLint-Entwicklungsbefund sind
+  im Abschlussbericht festgehalten.
+- `npm run verify` ist der abschließende reproduzierbare Qualitätsvertrag.
+
+Ausgeführte Prüfungen:
+
+- `npm run verify` vollständig erfolgreich
+- 64 Ausgangsquellen und 734 Entitäten durch Migration geprüft
+- 35 Vitest-Tests und ein Playwright-E2E erfolgreich
+- Vite-Produktionsbuild und Prettier-Check erfolgreich
+- Produktionsaudit mit 0 Schwachstellen
+- `git diff --check` ohne Whitespace-Fehler
+
+Offene Punkte:
+
+- keine für den Masterauftrag; fachliche Playtest-Themen stehen im
+  Abschlussbericht.
+
 ## Nächster konkreter Schritt
 
-Responsive React-/Vite-Anwendung erstellen, die ausschließlich den kompilierten
-Katalog und die Rules Engine verwendet.
+Den Branch veröffentlichen und die Änderungen per Pull Request gegen `main`
+prüfen lassen.

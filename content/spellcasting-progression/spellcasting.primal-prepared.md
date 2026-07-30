@@ -39,9 +39,10 @@ slotsByLevel:
     - 2
 source: legacy.world-rules
 status: playtest
+summary: Vorbereitete Naturprogression; Progression als ausdrückliche Testannahme ergänzt.
 tradition: primal
 traits: []
 type: spellcasting-progression
 ---
 
-Vorbereitete Naturprogression; Progression als explizite Playtest-Annahme ergänzt.
+Vorbereitete Naturprogression; Progression als ausdrückliche Testannahme ergänzt.

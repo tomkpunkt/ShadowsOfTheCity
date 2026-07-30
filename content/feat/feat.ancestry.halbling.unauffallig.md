@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist es gewohnt, dich im Schatten der Großen zu bewegen.
 traits:
   - trait.ancestry
 type: feat

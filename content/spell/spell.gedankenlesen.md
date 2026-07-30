@@ -28,6 +28,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du dringst in den Geist einer Kreatur ein und kannst ihre oberflächlichen Gedanken lesen.
 target:
   count: 1
   kind: creature

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Rituale doppelt so schnell ausführen.
 traits:
   - trait.legacy
 type: feat

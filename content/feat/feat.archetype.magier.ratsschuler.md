@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du wurdest in einem elfischen Zirkel des Gleichgewichts ausgebildet.
 traits:
   - trait.legacy
 type: feat

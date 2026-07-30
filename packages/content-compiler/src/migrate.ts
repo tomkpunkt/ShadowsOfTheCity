@@ -67,6 +67,59 @@ const normalizePath = (value: string): string => value.split(path.sep).join("/")
 const normalizeText = (value: string): string =>
   value.replaceAll("**", "").replaceAll("*", "").replace(/\s+/g, " ").trim();
 
+const deriveSummary = (name: string, markdown: string): string => {
+  const prose = markdown
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(
+      (line) =>
+        line.length > 0 &&
+        line !== "---" &&
+        !line.startsWith("#") &&
+        !line.startsWith("|") &&
+        !line.startsWith(">") &&
+        !/^\*{0,2}Quelle:/i.test(line)
+    )
+    .map((line) => normalizeText(line))
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const firstSentence = prose.match(/^.{20,220}?[.!?](?:\s|$)/)?.[0]?.trim();
+  const summary = firstSentence ?? prose.slice(0, 220).trim();
+  return summary.length >= 20
+    ? summary
+    : `${name}: ${summary || "Inhalt aus dem bestehenden Regelwerk."}`;
+};
+
+const deriveEntitySummary = (input: EntityInput, markdown: string): string => {
+  if (input.type === "skill" && typeof input["attribute"] === "string") {
+    const attribute = {
+      strength: "Stärke",
+      dexterity: "Geschicklichkeit",
+      constitution: "Konstitution",
+      intelligence: "Intelligenz",
+      wisdom: "Weisheit",
+      charisma: "Charisma"
+    }[input["attribute"]];
+    return `${input.name} ist eine Fertigkeit mit ${attribute ?? "einem festgelegten Attribut"} als typischem Attribut.`;
+  }
+  if (input.type === "weapon" && input["damage"] !== null && typeof input["damage"] === "object") {
+    const damage = input["damage"] as Record<string, unknown>;
+    return `${input.name} ist eine Waffe und verursacht ${String(damage["dice"])}${String(damage["die"])} Schaden.`;
+  }
+  if (input.type === "armor" && typeof input["itemBonus"] === "number") {
+    return `${input.name} gewährt einen Gegenstandsbonus von +${String(input["itemBonus"])} auf die Rüstungsklasse.`;
+  }
+  if (
+    input.type === "equipment" &&
+    typeof input["priceGp"] === "number" &&
+    typeof input["bulk"] === "number"
+  ) {
+    return `${input.name} ist Ausrüstung mit einem Preis von ${String(input["priceGp"])} GP und einer Last von ${String(input["bulk"])}.`;
+  }
+  return deriveSummary(input.name, markdown);
+};
+
 const slug = (value: string): string => {
   const normalized = value
     .normalize("NFKD")
@@ -149,7 +202,9 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
         }
         return findMarkdownFiles(absolute);
       }
-      return entry.isFile() && entry.name.endsWith(".md") ? [absolute] : [];
+      return entry.isFile() && entry.name.endsWith(".md") && entry.name !== "CONTRIBUTING.md"
+        ? [absolute]
+        : [];
     })
   );
   return children.flat().sort((left, right) => left.localeCompare(right));
@@ -184,6 +239,7 @@ const addEntity = (
     traits: [],
     references: [],
     ...input,
+    summary: deriveEntitySummary(input, body),
     description: body.trim(),
     legacy: {
       paths: normalizedPaths,
@@ -387,7 +443,7 @@ const migrateSupportingEntities = (): void => {
     {
       id: "choice.general-feat.1",
       type: "choice",
-      name: "Allgemeines Feat Stufe 1",
+      name: "Allgemeines Talent Stufe 1",
       status: "playtest",
       choice: {
         id: "choice.general-feat.1",
@@ -407,10 +463,10 @@ const migrateSupportingEntities = (): void => {
       }
     },
     [sourcePath],
-    "Wähle auf Stufe 1 ein allgemeines Feat.",
+    "Wähle auf Stufe 1 ein allgemeines Talent.",
     {
       warnings: [
-        "Der Altbestand definiert keinen vollständigen Feat-Zeitplan; diese Auswahl ist Playtest."
+        "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
       ],
       manualFields: ["level", "min", "max"]
     }
@@ -574,7 +630,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
         {
           id: choiceId,
           type: "choice",
-          name: `${className}-Feat Stufe ${String(level)}`,
+          name: `${className}-Talent Stufe ${String(level)}`,
           choice: {
             id: choiceId,
             level,
@@ -594,7 +650,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           }
         },
         [document.relativePath],
-        `Wähle ein verfügbares ${className}-Feat.`
+        `Wähle ein verfügbares ${className}-Talent.`
       );
       classChoices.push(choiceId);
     }
@@ -948,7 +1004,7 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
         {
           id: featChoiceId,
           type: "choice",
-          name: `${name}-Feat Stufe ${String(level)}`,
+          name: `${name}-Talent Stufe ${String(level)}`,
           choice: {
             id: featChoiceId,
             level,
@@ -968,7 +1024,7 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
           }
         },
         [document.relativePath],
-        `Wähle ein verfügbares ${name}-Feat.`
+        `Wähle ein verfügbares ${name}-Talent.`
       );
     }
   }
@@ -1028,7 +1084,8 @@ const migrateGeneralFeats = (documents: IndexedDocument[]): void => {
         detail === undefined
           ? [overview.relativePath]
           : [overview.relativePath, detail.relativePath],
-        detail?.source ?? effectText ?? "",
+        detail?.source ??
+          `${name} gewährt den im Altbestand beschriebenen Effekt: ${effectText ?? name}.`,
         {
           warnings:
             detail === undefined ? ["Für dieses Katalog-Feat existiert keine Detaildatei."] : [],
@@ -1585,7 +1642,7 @@ const migrateBackgroundsAndProgressions = (): void => {
           : {})
       },
       [`classes/klasse_${classId.split(".")[1]}.md`],
-      `${name}; Progression als explizite Playtest-Annahme ergänzt.`,
+      `${name}; Progression als ausdrückliche Testannahme ergänzt.`,
       {
         warnings: ["Slot- und Proficiency-Progression benötigt Playtest-Balancing."],
         manualFields: ["proficiencyByLevel", "slotsByLevel"]

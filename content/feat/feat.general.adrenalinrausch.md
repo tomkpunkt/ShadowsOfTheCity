@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Adrenalinrausch gewährt den im Altbestand beschriebenen Effekt: +10 Fuß Bewegung 1x/Kampf."
 traits:
   - trait.general
 type: feat
 ---
 
-+10 Fuß Bewegung 1x/Kampf
+Adrenalinrausch gewährt den im Altbestand beschriebenen Effekt: +10 Fuß Bewegung 1x/Kampf.

@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Clan ist für seine Härte bekannt.
 traits:
   - trait.ancestry
 type: heritage

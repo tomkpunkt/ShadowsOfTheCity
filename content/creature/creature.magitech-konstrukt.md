@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Konstrukt (Magitech), neutral - Stufe: 2 (400 EP) - TP: 80 (16d8 + 16) - RK: 18 (Magische Technologie) - Fertigkeiten: Magie +8, Technologie +6 - Spezialfähigkeiten: Magische Technologie, Elementare Fusion - Schwä"
 traits:
   - trait.humanoid
   - trait.legacy

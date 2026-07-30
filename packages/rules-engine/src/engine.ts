@@ -310,7 +310,7 @@ export const calculateCharacter = (
   const entities = new Map(catalog.entities.map((entity) => [entity.id, entity]));
   const issues: BuildIssue[] = [];
   addCoreSelectionIssue(issues, character.ancestryId, "ancestry", "Abstammung");
-  addCoreSelectionIssue(issues, character.backgroundId, "background", "Background");
+  addCoreSelectionIssue(issues, character.backgroundId, "background", "Hintergrund");
   addCoreSelectionIssue(issues, character.classId, "class", "Klasse");
   validateSelectionReferences(character, entities, issues);
   if (character.catalogHash !== catalog.contentHash) {

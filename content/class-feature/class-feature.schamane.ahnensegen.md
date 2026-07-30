@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Ahnen schützen dich.
 traits:
   - trait.legacy
 type: class-feature

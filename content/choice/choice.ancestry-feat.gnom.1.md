@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/gnome_zeitalter_des_goldes.md
-name: Gnom-Feat Stufe 1
+name: Gnom-Talent Stufe 1
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Gnom-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Gnom-Feat.
+Wähle ein verfügbares Gnom-Talent.

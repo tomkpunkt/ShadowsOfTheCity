@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Zäher Hund gewährt den im Altbestand beschriebenen Effekt: +1 Angriff/Schaden <50% TP."
 traits:
   - trait.general
 type: feat
 ---
 
-+1 Angriff/Schaden <50% TP
+Zäher Hund gewährt den im Altbestand beschriebenen Effekt: +1 Angriff/Schaden <50% TP.

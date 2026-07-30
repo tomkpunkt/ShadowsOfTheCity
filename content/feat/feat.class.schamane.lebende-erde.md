@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du stillstehst, erhältst Resistenz 2 gegen physischen Schaden.
 traits:
   - trait.legacy
 type: feat

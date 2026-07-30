@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du Schaden erleidest, der dich auf 0 Trefferpunkte reduzieren würde, kannst du einmal pro Tag einen Konstitutionswurf (SG 15) ablegen.
 traits:
   - trait.ancestry
 type: feat

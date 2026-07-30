@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst kritische Verletzungen in der halben Zeit behandeln.
 traits:
   - trait.legacy
 type: feat

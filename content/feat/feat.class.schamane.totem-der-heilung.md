@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: +1 auf Heilzauber, die du auf andere wirkst.
 traits:
   - trait.legacy
 type: feat

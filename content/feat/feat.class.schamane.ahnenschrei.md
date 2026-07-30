@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1/Tag einen Gegner mit einem Geisterruf in Furcht versetzen (SG 20).
 traits:
   - trait.legacy
 type: feat

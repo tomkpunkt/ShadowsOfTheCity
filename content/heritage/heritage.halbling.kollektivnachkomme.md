@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du stammst aus einer Familie, die gemeinsam alles teilt.
 traits:
   - trait.ancestry
 type: heritage

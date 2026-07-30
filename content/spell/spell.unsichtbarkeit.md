@@ -25,6 +25,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du machst das Ziel unsichtbar, sodass es für das bloße Auge nicht mehr sichtbar ist.
 target:
   count: 1
   kind: creature

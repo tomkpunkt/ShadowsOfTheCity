@@ -55,6 +55,7 @@ schemaVersion: 1
 source: legacy.world-rules
 spellcastingProgressionId: spellcasting.occult-spontaneous
 status: legacy
+summary: Okkultisten sind die Grenzgänger zwischen Leben und Tod, Wissenschaft und Aberglaube.
 trainedSkillChoices: 4
 traits: []
 type: class

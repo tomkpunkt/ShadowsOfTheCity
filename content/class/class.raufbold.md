@@ -49,6 +49,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Raufbolde sind Kämpfer des Volkes – Söldner ohne Sold, Boxer ohne Bühne, Überlebenskünstler ohne Plan.
 trainedSkillChoices: 4
 traits: []
 type: class

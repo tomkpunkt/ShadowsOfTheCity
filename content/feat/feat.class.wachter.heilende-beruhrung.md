@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Einmal pro Stunde kannst du 1W8 + CHA-Mod TP wiederherstellen.
 traits:
   - trait.legacy
 type: feat

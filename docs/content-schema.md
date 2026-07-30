@@ -21,6 +21,7 @@ Jede Entität besitzt:
 - `id`: stabile ASCII-ID aus Segmenten, zum Beispiel `spell.feuerball`
 - `type`: geschlossener Entitätstyp
 - `name`: lokalisierbarer Anzeigename, nicht Teil der Referenzlogik
+- `summary`: verständliche Kurzbeschreibung für Karten und Suchergebnisse
 - `source`: stabile Quellen-ID
 - `status`: `draft`, `playtest`, `canonical` oder `legacy`
 - `traits`: auflösbare Trait-IDs
@@ -34,9 +35,9 @@ gelten nach der Migration als unveränderlich.
 ## Referenzen
 
 Referenzen verwenden ausschließlich IDs. Der Compiler durchsucht typisierte
-ID-Felder, Traits, Ausschlüsse und explizite Referenzlisten. Jede Referenz muss
-auf genau eine Entität zeigen. Doppelte IDs und tote Referenzen sind harte
-Buildfehler.
+ID-Felder, Traits, Ausschlüsse, explizite Referenzlisten und interne
+Markdown-Referenzen. Jede Referenz muss auf genau eine Entität zeigen. Doppelte
+IDs und tote Referenzen sind harte Buildfehler.
 
 ```yaml
 trainedSkillIds:
@@ -44,6 +45,10 @@ trainedSkillIds:
 grantedFeatIds:
   - feat.general.zaehigkeit
 ```
+
+Im Markdown-Body sind `[[feat.general.zaehigkeit]]` und
+`[[feat.general.zaehigkeit|Zähigkeit]]` zulässig. Beide Formen werden beim
+Kompilieren aufgelöst und im Builder als interne Detailverknüpfung dargestellt.
 
 ## Voraussetzungen
 

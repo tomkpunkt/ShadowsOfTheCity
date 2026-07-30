@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Motorrad ist Ausrüstung mit einem Preis von 1500 GP und einer Last von 10.
 traits:
   - trait.legacy
 type: equipment

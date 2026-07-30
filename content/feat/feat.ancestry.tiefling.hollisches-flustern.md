@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst andere mit bloßen Worten beeinflussen.
 traits:
   - trait.ancestry
 type: feat

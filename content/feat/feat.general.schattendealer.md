@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Schattendealer ist eine Fähigkeit, die es Charakteren ermöglicht, in der Unterwelt und auf Schwarzmärkten zu operieren.
 traits:
   - trait.general
 type: feat

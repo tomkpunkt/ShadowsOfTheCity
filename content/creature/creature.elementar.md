@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Elementar, neutral - Stufe: 1 (200 EP) - TP: 45 (9d8 + 9) - RK: 16 (Natürliche Rüstung) - Fertigkeiten: Athletik +6, Überleben +6 - Spezialfähigkeiten: Elementare Immunität, Naturkontrolle - Schwächen: Gegen-Eleme"
 traits:
   - trait.humanoid
   - trait.legacy

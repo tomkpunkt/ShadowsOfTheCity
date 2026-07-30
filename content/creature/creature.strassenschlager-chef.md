@@ -20,6 +20,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Menschlicher NPC (Straßenschläger-Chef), chaotisch böse - Stufe: 2 (400 EP) - TP: 60 (12d8 + 12) - RK: 15 (Schwere Lederjacke) - Geschwindigkeit: 30 Fuß - Stärke: 17 (+3) | Geschicklichkeit: 16 (+3) | Konstitution"
 traits:
   - trait.humanoid
   - trait.legacy

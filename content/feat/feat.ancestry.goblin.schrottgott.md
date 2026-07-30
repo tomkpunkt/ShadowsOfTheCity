@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist eins mit dem Lärm und der Bewegung der Welt.
 traits:
   - trait.ancestry
 type: feat

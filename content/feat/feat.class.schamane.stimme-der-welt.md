@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1/Tag direkt mit dem Geflecht sprechen (freie Vision oder Weissagung).
 traits:
   - trait.legacy
 type: feat

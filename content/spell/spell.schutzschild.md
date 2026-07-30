@@ -25,6 +25,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erschaffst einen unsichtbaren magischen Schild um das Ziel, der es vor physischen Angriffen schützt.
 target:
   kind: self
 traditions:

@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Willenskraft ist so stark wie dein Körper.
 traits:
   - trait.legacy
 type: class-feature

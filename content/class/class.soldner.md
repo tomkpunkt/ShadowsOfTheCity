@@ -52,6 +52,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Söldner sind Männer und Frauen, die gelernt haben, mit Waffen zu leben – und mit ihren Konsequenzen.
 trainedSkillChoices: 4
 traits: []
 type: class

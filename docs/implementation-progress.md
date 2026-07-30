@@ -451,7 +451,24 @@ Offene Punkte:
 - keine für den Masterauftrag; fachliche Playtest-Themen stehen im
   Abschlussbericht.
 
+## Folgeauftrag: Content- und UI-Qualitätsaudit
+
+| Phase | Status | Analysierte Bereiche | Befunde | Geänderte Dateien | Prüfungen | Offene Entscheidungen |
+|:--|:--|:--|:--|:--|:--|:--|
+| 1 - aktueller Stand | complete | Content, Schemas, Compiler, Katalog, Engine, UI, Tests | 734 Entitäten; 208 kurze Alttexte; kein Markdown-Renderer; 56 zuvor unsichtbare Katalogfelder | `scripts/audit-content-quality.ts`, `docs/review/04-content-ui-quality-baseline.md` | automatisiertes Inventar, Katalogstatistik, TODO-/FIXME-Suche | keine |
+| 2 - Builder-Vollständigkeit | complete | Choices, Referenzen, automatische Vergaben, Details | 80 Entitäten ohne direkten Builder-Pfad | `scripts/audit-builder-reachability.ts`, `scripts/audit-allowlist.json`, `docs/review/05-builder-reachability.md` | 734 Einzelpfade, 168 Choices, Rückreferenzen | keine Ausnahmen erforderlich |
+| 3 - Inhaltsqualität | complete | Namen, Kurz- und Langtexte, Platzhalter, Rohdaten, Markdown | 0 aktive Platzhalter; 0 technische Anzeigenamen; 410 Textregeln | `scripts/audit-content-quality.ts`, `docs/review/06-content-quality-audit.md` | Muster-, Längen-, Syntax- und Sicherheitsprüfung | Textregeln nur nach fachlicher Freigabe weiter formalisieren |
+| 4 - deutsche Labels | complete | Typen, Status, Attribute, Ränge, Aktionen, Effekte, Fehler | rohe Enum-Werte und englische Fallbacks in regulären Ansichten | `apps/character-builder/src/i18n/de.ts`, `packages/rules-engine/src/engine.ts` | vollständige Record-Typen, Unit- und E2E-Prüfung | keine |
+| 5 - Contenttexte | complete | alle 734 Authoring-Dateien und typspezifische Kurztexte | fehlendes `summary`; fünf fragmentarische Talenttexte | `packages/shared/src/schemas.ts`, `packages/content-compiler/src/migrate.ts`, `content/` | deterministische Migration, 734 vollständige sichtbare Beschreibungen | 208 knappe Alttexte können später atmosphärisch erweitert werden |
+| 6 - Markdown | complete | tatsächlich verwendete GFM-Strukturen, Links, HTML | Markdown wurde zuvor als Klartext gezeigt | `MarkdownContent.tsx`, `MarkdownContent.test.tsx`, `compiler.ts` | GFM, Sanitizing, interne Links, Tabellen, verschachtelte Listen | Definitionslisten, Fußnoten und Callouts derzeit nicht benötigt |
+| 7 - Detailansichten | complete | Klassen, Hintergründe, Abstammungen, Zauber, Ausrüstung, Choices, Skills, Kreaturen | generische Ansicht ließ strukturierte Werte und Herkunft aus | `EntityDetails.tsx`, `entity-presentation.ts`, `styles.css` | typspezifische UI- und Browsertests | keine |
+| 8 - Listen und Suche | complete | Karten, Kompendium, Volltextsuche, Typ-/Statusfilter | kein Gesamtzugang; Suche nur in Name und Beschreibung | `App.tsx`, `styles.css`, `App.test.tsx` | Suche in sechs Feldgruppen, Filterkombination, Reset, Leerzustand | keine |
+| 9 - Progression | complete | neun Klassen, Stufen 1 bis 20, Features, Choices, Talente, Skills, Zauber | 0 strukturelle Lücken oder widersprüchliche Choices | `scripts/audit-class-progression.ts`, `docs/review/07-class-progression-audit.md` | 180 Klassenstufen automatisiert geprüft | Balance oberhalb Stufe 1 bleibt Spieltestthema |
+| 10 - Tests | complete | Compiler, i18n, Markdown, UI, Storage, reale Katalogpfade | fehlende Sicherheits-, Lokalisierungs- und Mehrstufenszenarien | `compiler.test.ts`, `de.test.ts`, `App.test.tsx`, `quality-audit.e2e.ts` | 45 Vitest- und 9 Playwright-Tests | keine |
+| 11 - visuelle Prüfung | complete | 13 Desktop- und Mobile-Zustände | englische Begriffe, rohe Attributwerte, leere Rasterfläche | `visual-review.e2e.ts`, `docs/review/screenshots/`, `docs/review/08-visual-quality-review.md` | Playwright-Screenshots und manuelle Bildprüfung | keine |
+| 12 - Abschlussprüfung | complete | vollständiger Qualitätsvertrag und Dokumentation | keine blockierenden Restbefunde | `package.json`, `docs/review/09-content-ui-final-verification.md`, mehrere Fachdocs | alle geforderten Einzelkommandos, `npm run verify`, `git diff --check` | fachliche Textregel- und Balanceentscheidungen getrennt dokumentiert |
+
 ## Nächster konkreter Schritt
 
-Den Branch veröffentlichen und die Änderungen per Pull Request gegen `main`
-prüfen lassen.
+Den geprüften Commit veröffentlichen und per Pull Request gegen `main`
+begutachten lassen.

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst 1W8 Heilung, wenn du Zauber der Natur wirkst.
 traits:
   - trait.legacy
 type: feat

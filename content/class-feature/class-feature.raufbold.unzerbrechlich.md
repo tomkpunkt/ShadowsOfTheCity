@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist das Sinnbild des Überlebens.
 traits:
   - trait.legacy
 type: class-feature

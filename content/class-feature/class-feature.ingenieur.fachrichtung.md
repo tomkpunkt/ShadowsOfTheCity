@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle deine technische Spezialisierung.
 traits:
   - trait.legacy
 type: class-feature

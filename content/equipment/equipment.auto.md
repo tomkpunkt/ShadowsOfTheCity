@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Auto ist Ausrüstung mit einem Preis von 2000 GP und einer Last von 10.
 traits:
   - trait.legacy
 type: equipment

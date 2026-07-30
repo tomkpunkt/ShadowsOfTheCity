@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_okkultist.md
-name: Okkultist-Feat Stufe 2
+name: Okkultist-Talent Stufe 2
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Okkultist-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Okkultist-Feat.
+Wähle ein verfügbares Okkultist-Talent.

@@ -52,6 +52,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wächter sind die letzten Idealisten in einer Welt der Kompromisse.
 trainedSkillChoices: 4
 traits: []
 type: class

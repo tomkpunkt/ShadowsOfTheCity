@@ -54,6 +54,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Agenten sind die Schatten zwischen den Fronten.
 trainedSkillChoices: 4
 traits: []
 type: class

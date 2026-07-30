@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/zwerge_zeitalter_des_goldes.md
-name: Zwerg-Feat Stufe 1
+name: Zwerg-Talent Stufe 1
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Zwerg-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Zwerg-Feat.
+Wähle ein verfügbares Zwerg-Talent.

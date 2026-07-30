@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Aberration (Psychisch), chaotisch neutral - Stufe: 1 (200 EP) - TP: 35 (7d8 + 7) - RK: 17 (Psychische Abwehr) - Fertigkeiten: Täuschen +8, Magie +6 - Spezialfähigkeiten: Gedankenkontrolle, Psychische Projektion -"
 traits:
   - trait.humanoid
   - trait.legacy

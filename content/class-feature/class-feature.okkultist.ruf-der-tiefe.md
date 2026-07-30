@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Die Dunkelheit antwortet deinem Willen.
 traits:
   - trait.legacy
 type: class-feature

@@ -12,7 +12,10 @@
 - `packages/rules-engine/src/content-regression.test.ts`: vier vollständige
   Builds aus dem echten Katalog
 - `apps/character-builder/src/*.test.tsx`: UI- und Storage-Integration
-- `apps/character-builder/e2e`: vollständiger Browserworkflow
+- `apps/character-builder/e2e`: Browserworkflows und visuelle Regression
+- `scripts/audit-content-quality.ts`: Platzhalter, Kurztexte, Labels und Markdown
+- `scripts/audit-builder-reachability.ts`: Einzelpfad für jede Runtime-Entität
+- `scripts/audit-class-progression.ts`: jede Klasse auf allen Stufen bis 20
 
 Die vier Regressionsfiguren verwenden Ork/Söldner, Mensch/Agent, Elf/Magier
 und Gnom/Ingenieur. Damit werden Kampf-, Skill-, Zauber- und Technikpfade mit
@@ -24,8 +27,12 @@ tatsächlich migrierten Optionen geprüft.
 npm run lint
 npm run typecheck
 npm run content:validate
+npm run content:compile
 npm run content:migration:verify
 npm run content:check-generated
+npm run content:quality
+npm run content:reachability
+npm run progression:audit
 npm run test
 npm run build
 npm run test:e2e
@@ -38,11 +45,16 @@ selbst oder verwendet einen bereits laufenden Server auf Port 4173.
 
 ## E2E-Vertrag
 
-Der zentrale Test startet mit einem leeren Charakter, prüft eine konkret
-begründete gesperrte Option, baut einen vollständigen Magier, wählt Skill,
-Feat und Zauber, erreicht den validen Abschluss, exportiert JSON, erzeugt
-absichtlich einen ungültigen Build, importiert und korrigiert ihn und prüft
-Persistenz nach Reload.
+Die Browsertests starten mit einem leeren Charakter, prüfen eine konkret
+begründete gesperrte Option, bauen einen vollständigen Magier, wählen
+Fertigkeit, Talent und Zauber, erreichen den validen Abschluss, exportieren
+JSON, erzeugen absichtlich einen ungültigen Build, importieren und korrigieren
+ihn und prüfen Persistenz nach Reload. Weitere Szenarien prüfen mehrere Stufen,
+das Kompendium, Suche und Filter, komplexes Markdown sowie mobile Grenzen.
+
+Die visuelle Suite erzeugt 13 feste Zustände unter
+`docs/review/screenshots/`. Ihr manueller Prüfbericht steht in
+`docs/review/08-visual-quality-review.md`.
 
 ## CI
 

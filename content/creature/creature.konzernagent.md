@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Konzernagenten sind die Spione und Infiltratoren der großen Konzerne.
 traits:
   - trait.humanoid
   - trait.legacy

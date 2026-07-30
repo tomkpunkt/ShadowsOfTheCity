@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Du kannst einmal pro Tag zwischen Leben und Tod wählen: Einen Gefallenen retten oder einen Gegner endgültig bannen."
 traits:
   - trait.legacy
 type: feat

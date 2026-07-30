@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Söldner gewährt den im Altbestand beschriebenen Effekt: Kampferprobung, Initiative."
 traits:
   - trait.general
 type: feat
 ---
 
-Kampferprobung, Initiative
+Söldner gewährt den im Altbestand beschriebenen Effekt: Kampferprobung, Initiative.

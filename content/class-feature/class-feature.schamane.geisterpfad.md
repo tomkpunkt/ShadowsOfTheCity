@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle, welcher Geist dich leitet.
 traits:
   - trait.legacy
 type: class-feature

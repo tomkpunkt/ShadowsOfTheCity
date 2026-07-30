@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du spürst aktive Magie und Flüche im Umkreis von 30 Fuß.
 traits:
   - trait.legacy
 type: feat

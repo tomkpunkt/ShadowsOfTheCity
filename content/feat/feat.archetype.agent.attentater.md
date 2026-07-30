@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Spezialisierung liegt im lautlosen Töten.
 traits:
   - trait.legacy
 type: feat

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1W6 Schaden verursachen, wenn du Schaden erleidest (1/Tag).
 traits:
   - trait.legacy
 type: feat

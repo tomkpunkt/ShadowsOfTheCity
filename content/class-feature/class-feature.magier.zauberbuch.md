@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du besitzt ein persönliches Grimoire, in dem du Zauberformeln, Notizen und Theorien aufzeichnest.
 traits:
   - trait.legacy
 type: class-feature

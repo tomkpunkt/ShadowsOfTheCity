@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Geist verschmilzt mit dem deiner Vorfahren.
 traits:
   - trait.legacy
 type: class-feature

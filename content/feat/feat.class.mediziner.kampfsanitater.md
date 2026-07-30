@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst dich während der Heilung bewegen, ohne die Aktion zu verlieren.
 traits:
   - trait.legacy
 type: feat

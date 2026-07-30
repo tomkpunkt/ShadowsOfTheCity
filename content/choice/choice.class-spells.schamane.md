@@ -28,6 +28,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle Zauber aus der primal-Tradition.
 traits: []
 type: choice
 ---

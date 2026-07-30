@@ -36,6 +36,7 @@ size: medium
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Tieflinge sind die Kinder einer verfluchten Ära – Nachfahren jener, deren Blut während des Großen Krieges mit Magie, Strahlung oder dämonischen Kräften vermischt wurde.
 traits: []
 type: ancestry
 ---

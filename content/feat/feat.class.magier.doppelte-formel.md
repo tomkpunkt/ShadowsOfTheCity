@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst zwei verschiedene Cantrips gleichzeitig vorbereiten.
 traits:
   - trait.legacy
 type: feat

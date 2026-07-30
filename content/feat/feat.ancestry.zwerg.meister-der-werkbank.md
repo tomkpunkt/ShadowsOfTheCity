@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist im Umgang mit Maschinen und Werkzeugen unschlagbar.
 traits:
   - trait.ancestry
 type: feat

@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/mensch_zeitalter_des_goldes.md
-name: Mensch-Feat Stufe 1
+name: Mensch-Talent Stufe 1
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Mensch-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Mensch-Feat.
+Wähle ein verfügbares Mensch-Talent.

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst zweimal mit unbewaffnetem Angriff angreifen (–4 Mali).
 traits:
   - trait.legacy
 type: feat

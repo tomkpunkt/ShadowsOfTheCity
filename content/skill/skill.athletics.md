@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Athletik ist eine Fertigkeit mit Stärke als typischem Attribut.
 traits: []
 type: skill
 ---

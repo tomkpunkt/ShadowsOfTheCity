@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Metalle ist Ausrüstung mit einem Preis von 75 GP und einer Last von 1.
 traits:
   - trait.legacy
 type: equipment

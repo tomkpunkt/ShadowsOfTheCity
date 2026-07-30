@@ -20,6 +20,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Konstrukt (Roboter), neutral - Stufe: 1/2 (100 EP) - TP: 40 (8d8 + 8) - RK: 15 (Metallische Rüstung) - Fertigkeiten: Athletik +6, Technologie +4 - Spezialfähigkeiten: Konstruktimmunität, Präzision - Schwächen: Ele"
 traits:
   - trait.humanoid
   - trait.legacy

@@ -16,6 +16,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Magische Vollrüstung gewährt einen Gegenstandsbonus von +6 auf die Rüstungsklasse.
 traits:
   - trait.legacy
 type: armor

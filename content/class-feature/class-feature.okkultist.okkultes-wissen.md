@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kennst die verborgenen Symbole und Sprachen der alten Welt.
 traits:
   - trait.legacy
 type: class-feature

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: In Dunkelheit erhältst du +1 auf AC und Heimlichkeit.
 traits:
   - trait.legacy
 type: feat

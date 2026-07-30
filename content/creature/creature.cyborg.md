@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Humanoid (Cyborg), neutral - Stufe: 1 (200 EP) - TP: 55 (11d8 + 11) - RK: 16 (Technologische Verbesserungen) - Fertigkeiten: Technologie +6, Athletik +6 - Spezialfähigkeiten: Technologische Verbesserungen, Interfa"
 traits:
   - trait.humanoid
   - trait.legacy

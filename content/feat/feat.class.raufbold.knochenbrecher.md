@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine unbewaffneten Schläge verursachen +1W6 zusätzlichen Schaden.
 traits:
   - trait.legacy
 type: feat

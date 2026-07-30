@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Schnelle Erholung ist eine Fähigkeit, die es Charakteren ermöglicht, sich schneller von Verletzungen und Erschöpfung zu erholen.
 traits:
   - trait.general
 type: feat

@@ -36,6 +36,7 @@ size: medium
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Elfen sind das älteste noch existierende Volk und die wahren Architekten der Zivilisation.
 traits: []
 type: ancestry
 ---

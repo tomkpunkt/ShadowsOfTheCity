@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_ingenieur.md
-name: Ingenieur-Feat Stufe 20
+name: Ingenieur-Talent Stufe 20
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Ingenieur-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Ingenieur-Feat.
+Wähle ein verfügbares Ingenieur-Talent.

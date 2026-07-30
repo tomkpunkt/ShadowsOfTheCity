@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du ignorierst Mali durch Erschöpfung 1 und Blutung.
 traits:
   - trait.legacy
 type: class-feature

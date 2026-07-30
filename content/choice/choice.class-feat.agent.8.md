@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_agent.md
-name: Agent-Feat Stufe 8
+name: Agent-Talent Stufe 8
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Agent-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Agent-Feat.
+Wähle ein verfügbares Agent-Talent.

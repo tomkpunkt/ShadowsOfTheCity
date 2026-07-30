@@ -6,11 +6,12 @@
 2. Vergib eine dauerhafte ASCII-ID in Kleinbuchstaben, etwa
    `feat.general.taktiker`. Namen und Dateinamen dürfen später wechseln, die ID
    nicht.
-3. Setze `schemaVersion`, `type`, `name`, `source`, `status`, `traits` und
-   `references`.
+3. Setze `schemaVersion`, `type`, `name`, `summary`, `source`, `status`,
+   `traits` und `references`.
 4. Referenziere ausschließlich IDs, niemals Anzeigenamen.
 5. Schreibe Spielmechanik in typisierte Felder, Prädikate und Effekte. Der
-   Markdown-Body bleibt die ausführliche Beschreibung.
+   Markdown-Body bleibt die ausführliche Beschreibung. Interne Verweise
+   verwenden `[[id]]` oder `[[id|Anzeigetext]]`.
 6. Führe `npm run content:validate` und `npm run content:compile` aus.
 7. Committe Authoring-Datei und aktualisierte Dateien unter `generated/`
    gemeinsam.
@@ -28,6 +29,7 @@ schemaVersion: 1
 id: class.beispiel
 type: class
 name: Beispielklasse
+summary: Eine vielseitige Beispielklasse für die Authoring-Dokumentation.
 source: source.core
 status: playtest
 traits: []
@@ -67,6 +69,7 @@ schemaVersion: 1
 id: background.beispiel
 type: background
 name: Beispielbackground
+summary: Dieser Hintergrund verbindet Wissen mit praktischer Forschung.
 source: source.core
 status: playtest
 traits: []
@@ -98,6 +101,7 @@ schemaVersion: 1
 id: feat.general.beispiel
 type: feat
 name: Beispiel-Feat
+summary: Dieses Talent verbessert die taktische Wahrnehmung.
 source: source.core
 status: playtest
 traits:
@@ -134,6 +138,7 @@ schemaVersion: 1
 id: skill.beispiel
 type: skill
 name: Beispielskill
+summary: Diese Fertigkeit deckt ein klar abgegrenztes Wissensgebiet ab.
 source: source.core
 status: playtest
 traits: []
@@ -154,6 +159,7 @@ schemaVersion: 1
 id: spell.beispiel
 type: spell
 name: Beispielzauber
+summary: Dieser Zauber verlangsamt ein Ziel für kurze Zeit.
 source: source.core
 status: playtest
 traits:

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Magie in Maschinen lenken.
 traits:
   - trait.ancestry
 type: feat

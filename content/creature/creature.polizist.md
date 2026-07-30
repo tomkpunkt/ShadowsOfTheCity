@@ -20,6 +20,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Menschlicher NPC (Polizist), rechtschaffen neutral - Stufe: 1/2 (100 EP) - TP: 35 (7d8 + 7) - RK: 15 (Uniform) - Fertigkeiten: Einschüchtern +5, Wahrnehmung +5 - Spezialfähigkeiten: Verhaftung, Zeugenbefragung - A"
 traits:
   - trait.humanoid
   - trait.legacy

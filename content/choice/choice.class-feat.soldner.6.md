@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_soeldner.md
-name: Söldner-Feat Stufe 6
+name: Söldner-Talent Stufe 6
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Söldner-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Söldner-Feat.
+Wähle ein verfügbares Söldner-Talent.

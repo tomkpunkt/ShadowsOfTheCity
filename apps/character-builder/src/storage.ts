@@ -116,12 +116,15 @@ export const importCharacter = (source: string, catalog: Catalog): ImportResult 
   ]);
   const conflicts = [...referencedIds]
     .filter((id) => !knownIds.has(id))
-    .map((id) => `Unbekannte ID: ${id}`);
+    .map(
+      (_, index) =>
+        `Gespeicherte Auswahl ${String(index + 1)} konnte im aktuellen Katalog nicht zugeordnet werden.`
+    );
   if (input.catalogHash !== catalog.contentHash) {
     const migrationMessage =
       conflicts.length === 0
-        ? `Katalog migriert: ${input.catalogHash.slice(0, 12)} → ${catalog.contentHash.slice(0, 12)}`
-        : `Katalog abweichend: Import ${input.catalogHash.slice(0, 12)}, aktuell ${catalog.contentHash.slice(0, 12)}`;
+        ? "Der Charakter wurde auf den aktuellen Katalogstand migriert."
+        : "Der importierte Charakter verwendet einen abweichenden Katalogstand.";
     conflicts.unshift(migrationMessage);
     return {
       character: {

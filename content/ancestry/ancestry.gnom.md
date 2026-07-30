@@ -36,6 +36,7 @@ size: small
 source: legacy.world-rules
 speed: 25
 status: legacy
+summary: Gnome sind die Schöpfer zwischen den Welten – neugierig, rastlos und unerschütterlich kreativ.
 traits: []
 type: ancestry
 ---

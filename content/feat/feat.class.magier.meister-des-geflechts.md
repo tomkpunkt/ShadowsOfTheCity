@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist immun gegen Magieunterdrückung und Zauberresistenz.
 traits:
   - trait.legacy
 type: feat

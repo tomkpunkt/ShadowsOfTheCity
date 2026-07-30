@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/halblinge_zeitalter_des_goldes.md
-name: Halbling-Feat Stufe 17
+name: Halbling-Talent Stufe 17
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Halbling-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Halbling-Feat.
+Wähle ein verfügbares Halbling-Talent.

@@ -55,6 +55,7 @@ schemaVersion: 1
 source: legacy.world-rules
 spellcastingProgressionId: spellcasting.primal-prepared
 status: legacy
+summary: Schamanen sind die Bewahrer des alten Wissens – Vermittler zwischen Körper und Geist, zwischen den Lebenden und den Ahnen.
 trainedSkillChoices: 4
 traits: []
 type: class

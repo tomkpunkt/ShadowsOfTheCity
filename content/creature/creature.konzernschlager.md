@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Konzernschläger sind die muskulösen Vollstrecker der großen Konzerne.
 traits:
   - trait.humanoid
   - trait.legacy

@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du handelst mit Wissen und Gerüchten.
 traits:
   - trait.legacy
 type: feat

@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Kampfstil ist chaotisch, aber effektiv.
 traits:
   - trait.legacy
 type: feat

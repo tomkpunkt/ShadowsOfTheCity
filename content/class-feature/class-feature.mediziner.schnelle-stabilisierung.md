@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst einen sterbenden Verbündeten in einer Aktion stabilisieren.
 traits:
   - trait.legacy
 type: class-feature

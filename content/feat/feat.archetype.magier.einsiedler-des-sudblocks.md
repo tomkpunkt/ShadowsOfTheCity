@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du hast das Studium der Magie fern der Welt betrieben.
 traits:
   - trait.legacy
 type: feat

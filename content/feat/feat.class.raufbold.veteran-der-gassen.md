@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1 Fehlschlag pro Tag wiederholen.
 traits:
   - trait.legacy
 type: feat

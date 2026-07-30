@@ -29,6 +29,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du schleuderst einen flammenden Ball aus reiner Magie auf dein Ziel.
 target:
   area:
     shape: burst

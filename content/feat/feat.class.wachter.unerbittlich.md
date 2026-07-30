@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du Schaden erleidest, reduziere ihn um 1 pro 5 Stufen.
 traits:
   - trait.legacy
 type: feat

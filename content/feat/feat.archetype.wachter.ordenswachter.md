@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist Teil eines heiligen Ordens wie dem Ordo Lux Aeterna.
 traits:
   - trait.legacy
 type: feat

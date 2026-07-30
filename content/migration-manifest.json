@@ -77,7 +77,10 @@
         "creature.strassenschlager-lehrling",
         "creature.strassenschlager-veteran"
       ],
-      "manualFields": ["effects", "level"],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/bestiary_overview.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -91,8 +94,13 @@
       "warnings": []
     },
     {
-      "entityIds": ["creature.junior-manager"],
-      "manualFields": ["effects", "level"],
+      "entityIds": [
+        "creature.junior-manager"
+      ],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/junior_manager.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -106,7 +114,10 @@
         "creature.konzernagent-lehrling",
         "creature.konzernagent-veteran"
       ],
-      "manualFields": ["effects", "level"],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/konzernagent.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -120,7 +131,10 @@
         "creature.konzernvorstand",
         "creature.senior-manager"
       ],
-      "manualFields": ["effects", "level"],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/konzernangestellter.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -134,7 +148,10 @@
         "creature.konzernschlager-lehrling",
         "creature.konzernschlager-veteran"
       ],
-      "manualFields": ["effects", "level"],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/konzernschlaeger.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -142,8 +159,13 @@
       ]
     },
     {
-      "entityIds": ["creature.konzernvorstand"],
-      "manualFields": ["effects", "level"],
+      "entityIds": [
+        "creature.konzernvorstand"
+      ],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/konzernvorstand.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert."
@@ -157,7 +179,10 @@
         "creature.ork-schlager-lehrling",
         "creature.ork-schlager-veteran"
       ],
-      "manualFields": ["effects", "level"],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/ork_schlaeger.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -165,8 +190,13 @@
       ]
     },
     {
-      "entityIds": ["creature.senior-manager"],
-      "manualFields": ["effects", "level"],
+      "entityIds": [
+        "creature.senior-manager"
+      ],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/senior_manager.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert."
@@ -180,7 +210,10 @@
         "creature.strassenschlager-lehrling",
         "creature.strassenschlager-veteran"
       ],
-      "manualFields": ["effects", "level"],
+      "manualFields": [
+        "effects",
+        "level"
+      ],
       "path": "bestiary/humanoid/strassenschlaeger.md",
       "warnings": [
         "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
@@ -732,68 +765,112 @@
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.athletischer-kampfstil"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.athletischer-kampfstil"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_athletischer_kampfstil.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.arzt"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.arzt"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_beruf_arzt.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.mechaniker"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.mechaniker"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_beruf_mechaniker.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.defensiver-kampfer"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.defensiver-kampfer"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_defensiver_kaempfer.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.netzwerker"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.netzwerker"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_netzwerker.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.reflextraining"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.reflextraining"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_reflextraining.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.schattendealer"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.schattendealer"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_schattendealer.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.schnelle-erholung"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.schnelle-erholung"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_schnelle_erholung.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.taktiker"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.taktiker"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_taktiker.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.verbesserte-wahrnehmung"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.verbesserte-wahrnehmung"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_verbesserte_wahrnehmung.md",
       "warnings": []
     },
     {
-      "entityIds": ["feat.general.zahigkeit"],
-      "manualFields": ["effects"],
+      "entityIds": [
+        "feat.general.zahigkeit"
+      ],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feat_zaehigkeit.md",
       "warnings": []
     },
@@ -821,9 +898,13 @@
         "feat.general.zaher-hund",
         "feat.general.zahigkeit"
       ],
-      "manualFields": ["effects"],
+      "manualFields": [
+        "effects"
+      ],
       "path": "feats/feats_overview.md",
-      "warnings": ["Für dieses Katalog-Feat existiert keine Detaildatei."]
+      "warnings": [
+        "Für dieses Katalog-Feat existiert keine Detaildatei."
+      ]
     },
     {
       "entityIds": [
@@ -962,7 +1043,13 @@
         "weapon.zweihandaxt",
         "weapon.zweihandschwert"
       ],
-      "manualFields": ["bulk", "categoryId", "groupId", "hands", "level"],
+      "manualFields": [
+        "bulk",
+        "categoryId",
+        "groupId",
+        "hands",
+        "level"
+      ],
       "path": "gear/weapons/melee/melee_weapons.md",
       "warnings": []
     },
@@ -999,7 +1086,10 @@
         "heritage.elf.verfallener-erbe",
         "heritage.elf.waldhuter-der-dammerung"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/elfen_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1024,7 +1114,10 @@
         "heritage.gnom.traumfanger",
         "heritage.gnom.wildfunken-gnom"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/gnome_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1049,7 +1142,10 @@
         "heritage.goblin.sprengfunken",
         "heritage.goblin.tunnelratte"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/goblins_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1074,7 +1170,10 @@
         "heritage.halbling.schattenlaufer",
         "heritage.halbling.stadtstreuner"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/halblinge_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1099,7 +1198,10 @@
         "heritage.mensch.stadtmensch",
         "heritage.mensch.verdrangter"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/mensch_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1124,7 +1226,10 @@
         "heritage.ork.klanblut-ork",
         "heritage.ork.schattengeborener"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/orks_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1149,7 +1254,10 @@
         "heritage.tiefling.schattenkind",
         "heritage.tiefling.verdammter-erbe"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/tieflinge_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1180,7 +1288,10 @@
         "heritage.zwerg.runenschmied",
         "heritage.zwerg.stadtzwerg"
       ],
-      "manualFields": ["attribute boosts and flaws", "effects"],
+      "manualFields": [
+        "attribute boosts and flaws",
+        "effects"
+      ],
       "path": "races/zwerge_zeitalter_des_goldes.md",
       "warnings": []
     },
@@ -1255,10 +1366,14 @@
         "trait.legacy",
         "trait.magic"
       ],
-      "manualFields": ["level", "max", "min"],
+      "manualFields": [
+        "level",
+        "max",
+        "min"
+      ],
       "path": "rules/core_mechanics.md",
       "warnings": [
-        "Der Altbestand definiert keinen vollständigen Feat-Zeitplan; diese Auswahl ist Playtest.",
+        "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt.",
         "Der alte Wahrnehmungsblock wurde getrennt: Wahrnehmung ist eine eigene Proficiency."
       ]
     },
@@ -1273,119 +1388,206 @@
         "background.underworld-contact",
         "background.worker"
       ],
-      "manualFields": ["boosts", "trainedSkillIds"],
+      "manualFields": [
+        "boosts",
+        "trainedSkillIds"
+      ],
       "path": "rules/social_mechanics.md",
       "warnings": [
         "Neu ergänzter Playtest-Background; im Altbestand existieren keine formalen Backgrounds."
       ]
     },
     {
-      "entityIds": ["spell.benommenheit"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.benommenheit"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_benommenheit.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.blitzschlag"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.blitzschlag"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_blitzschlag.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.feuerball"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.feuerball"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_feuerball.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.flamme-erschaffen"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.flamme-erschaffen"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_flamme_erschaffen.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.gedankenkontrolle"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.gedankenkontrolle"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_gedankenkontrolle.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.gedankenlesen"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.gedankenlesen"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_gedankenlesen.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.heilung"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.heilung"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_heilung.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.licht"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.licht"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_licht.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.magie-aufheben"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.magie-aufheben"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_magie_aufheben.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.magie-erkennen"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.magie-erkennen"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_magie_erkennen.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.nachricht"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.nachricht"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_nachricht.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.schutzschild"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.schutzschild"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_schutzschild.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.teleportation"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.teleportation"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_teleportation.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
       ]
     },
     {
-      "entityIds": ["spell.unsichtbarkeit"],
-      "manualFields": ["duration", "effects", "heightened"],
+      "entityIds": [
+        "spell.unsichtbarkeit"
+      ],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/spell_unsichtbarkeit.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
@@ -1408,7 +1610,11 @@
         "spell.teleportation",
         "spell.unsichtbarkeit"
       ],
-      "manualFields": ["duration", "effects", "heightened"],
+      "manualFields": [
+        "duration",
+        "effects",
+        "heightened"
+      ],
       "path": "spells/TOC.md",
       "warnings": [
         "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: +1 auf Zauber-SGs, wenn du zuvor ein Ritual vollzogen hast.
 traits:
   - trait.legacy
 type: feat

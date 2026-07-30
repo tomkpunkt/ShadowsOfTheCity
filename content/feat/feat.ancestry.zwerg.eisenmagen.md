@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Zwerg Du erhältst Resistenz 2 gegen Gift und Krankheit."
 traits:
   - trait.ancestry
 type: feat

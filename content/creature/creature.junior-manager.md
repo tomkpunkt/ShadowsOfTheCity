@@ -22,6 +22,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Stufe: 1/8 - TP: 15 (3d8 + 3) - SG: 12 - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernzugang"
 traits:
   - trait.humanoid
   - trait.legacy

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du stirbst, kannst du 1W6 TP zurückgewinnen (1/Tag).
 traits:
   - trait.legacy
 type: feat

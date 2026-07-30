@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du einen Verbündeten verteidigst, erhält dieser Resistenz 2 gegen Schaden.
 traits:
   - trait.legacy
 type: feat

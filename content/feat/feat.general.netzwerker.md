@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Netzwerker ist eine Fähigkeit, die es Charakteren ermöglicht, ihre sozialen Verbindungen und Kontakte optimal zu nutzen.
 traits:
   - trait.general
 type: feat

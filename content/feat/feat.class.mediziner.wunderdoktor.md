@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1 gefährliche Krankheit oder Zustand pro Tag heilen, unabhängig vom SG.
 traits:
   - trait.legacy
 type: feat

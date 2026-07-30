@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Erfindungsgeist kennt keine Grenzen.
 traits:
   - trait.ancestry
 type: feat

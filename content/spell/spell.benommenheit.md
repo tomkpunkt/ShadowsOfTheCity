@@ -28,6 +28,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du greifst in den Geist deines Ziels ein und verursachst Verwirrung.
 target:
   count: 1
   kind: creature

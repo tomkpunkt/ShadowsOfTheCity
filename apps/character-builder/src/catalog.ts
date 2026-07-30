@@ -16,4 +16,4 @@ export const entitiesOfType = <T extends ContentEntity["type"]>(
   );
 
 export const entityName = (id: string | undefined): string =>
-  id === undefined ? "Nicht gewählt" : (entities.get(id)?.name ?? id);
+  id === undefined ? "Nicht gewählt" : (entities.get(id)?.name ?? "Unbekannter Katalogeintrag");

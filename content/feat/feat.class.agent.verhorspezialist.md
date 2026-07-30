@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: +2 auf Diplomatie und Einschüchtern bei Informationsgewinn.
 traits:
   - trait.legacy
 type: feat

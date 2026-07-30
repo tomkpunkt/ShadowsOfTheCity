@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du stirbst, hinterlässt du eine heilende Aura (1W6 pro Runde, 1 Minute).
 traits:
   - trait.legacy
 type: feat

@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist in der Lage, auch unter widrigen Bedingungen zu arbeiten.
 traits:
   - trait.legacy
 type: class-feature

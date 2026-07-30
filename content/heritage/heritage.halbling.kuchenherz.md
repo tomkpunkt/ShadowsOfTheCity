@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Familie ist bekannt für Nahrung, Heiltränke oder Getränke.
 traits:
   - trait.ancestry
 type: heritage

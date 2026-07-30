@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du einen Gegner zu Boden bringst, erhältst du eine Bonusaktion (Schritt, Angriff oder Einschüchtern).
 traits:
   - trait.legacy
 type: feat

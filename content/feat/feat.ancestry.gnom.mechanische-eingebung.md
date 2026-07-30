@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Einmal pro Tag kannst du eine fehlgeschlagene Handwerks- oder Wissensprobe automatisch als Erfolg werten.
 traits:
   - trait.ancestry
 type: feat

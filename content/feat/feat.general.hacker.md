@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Hacker gewährt den im Altbestand beschriebenen Effekt: Digitale Netzwerke."
 traits:
   - trait.general
 type: feat
 ---
 
-Digitale Netzwerke
+Hacker gewährt den im Altbestand beschriebenen Effekt: Digitale Netzwerke.

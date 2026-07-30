@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Blut trägt die Stimme der Alten.
 traits:
   - trait.ancestry
 type: heritage

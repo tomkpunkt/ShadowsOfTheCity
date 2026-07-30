@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du spürst die Schwingungen des Geflechts.
 traits:
   - trait.ancestry
 type: feat

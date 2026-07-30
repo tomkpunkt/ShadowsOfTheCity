@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Okkulte Zauber verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 traits: []
 type: proficiency
 ---

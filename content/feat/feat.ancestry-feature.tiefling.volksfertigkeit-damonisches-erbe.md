@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Die fremde Energie in deinem Blut schützt dich.
 traits:
   - trait.ancestry
 type: feat

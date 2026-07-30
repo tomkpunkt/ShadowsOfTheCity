@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Menschen sind dafür bekannt, sich blitzschnell an neue Situationen anzupassen.
 traits:
   - trait.ancestry
 type: feat

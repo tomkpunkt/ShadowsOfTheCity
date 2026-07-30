@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kämpfst mit allem, was du findest.
 traits:
   - trait.legacy
 type: feat

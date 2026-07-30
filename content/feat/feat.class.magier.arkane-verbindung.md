@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst über dein Geflecht mit einem bekannten Magier kommunizieren.
 traits:
   - trait.legacy
 type: feat

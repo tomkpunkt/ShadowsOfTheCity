@@ -4,35 +4,42 @@
 
 Die Webanwendung liegt unter `apps/character-builder` und verwendet React 19
 mit Vite. Sie importiert ausschließlich `generated/catalog.json`,
-`@sotc/shared` und `@sotc/rules-engine`. Klassen, Abstammungen, Backgrounds,
-Choices, Feats, Zauber und Ausrüstung werden nicht in Komponenten definiert.
+`@sotc/shared` und `@sotc/rules-engine`. Klassen, Abstammungen, Hintergründe,
+Choices, Talente, Zauber und Ausrüstung werden nicht in Komponenten definiert.
 
-Die Oberfläche besitzt elf Arbeitsbereiche:
+Die Oberfläche besitzt zwölf Arbeitsbereiche:
 
 1. Übersicht
 2. Abstammung und Herkunft
-3. Background
+3. Hintergrund
 4. Klasse und Klassenoption
 5. Attribute
-6. Skills
-7. Feats und automatische Features
+6. Fertigkeiten
+7. Talente und automatische Merkmale
 8. Zauber
 9. Ausrüstung
-10. Abschlussprüfung
-11. druckbarer Charakterbogen
+10. vollständiges Kompendium
+11. Abschlussprüfung
+12. druckbarer Charakterbogen
 
 ## Interaktion
 
 Jede Änderung erzeugt einen neuen `CharacterState` und ruft die Rules Engine
-erneut auf. Choice-Karten zeigen `available`, `selected`, `locked` oder
-`invalid`. Gesperrte beziehungsweise ungültige Optionen enthalten den ersten
-konkreten Requirement-Failure; die Detailansicht zeigt vollständigen
-Markdown-Body, Traits, Quelle, Status und stabile ID.
+erneut auf. Choice-Karten unterscheiden verfügbare, ausgewählte, gesperrte und
+ungültige Zustände. Gesperrte beziehungsweise ungültige Optionen enthalten den
+ersten konkreten, deutsch formatierten Sperrgrund. Typabhängige Detailansichten
+zeigen vollständigen Markdown-Body, strukturierte Regelwerte, Traits, Quelle,
+Status und Herkunft, aber keine technische ID.
 
-Suche und kontextabhängige Filter arbeiten auf dem kompilierten Katalog.
-Levelnavigation blendet nur aktuell relevante Choices ein. Eine frühere,
-inzwischen ungültige Auswahl wird weder beim Klassen- noch beim
-Abstammungswechsel gelöscht.
+Die Volltextsuche berücksichtigt Name, Kurzbeschreibung, Regeltext, Traits,
+Typ und Quelle. Das Kompendium macht alle 734 Runtime-Entitäten erreichbar und
+bietet Typ- und Statusfilter, aktive Filteranzeige, Zurücksetzen und
+schrittweises Nachladen. Levelnavigation blendet nur aktuell relevante Choices
+ein. Eine frühere, inzwischen ungültige Auswahl wird weder beim Klassen- noch
+beim Abstammungswechsel gelöscht.
+
+Markdown wird mit `react-markdown` und `remark-gfm` sicher gerendert. Interne
+Referenzen öffnen den Detaildialog; eingebettetes HTML wird nicht ausgeführt.
 
 ## Speicherung
 

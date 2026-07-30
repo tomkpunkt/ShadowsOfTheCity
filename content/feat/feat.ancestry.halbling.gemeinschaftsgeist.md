@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du einem Verbündeten hilfst, erhält dieser zusätzlich +1 auf den entsprechenden Wurf.
 traits:
   - trait.ancestry
 type: feat

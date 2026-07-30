@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Doppelleben gewährt den im Altbestand beschriebenen Effekt: Zweite Identität."
 traits:
   - trait.general
 type: feat
 ---
 
-Zweite Identität
+Doppelleben gewährt den im Altbestand beschriebenen Effekt: Zweite Identität.

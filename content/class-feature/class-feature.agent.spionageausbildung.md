@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst Fertigkeitstraining in Heimlichkeit, Täuschung und Gesellschaft.
 traits:
   - trait.legacy
 type: class-feature

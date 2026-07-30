@@ -25,6 +25,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du teleportierst dich und deine Verbündeten an einen bekannten Ort.
 target:
   kind: mixed
   text: Du und bis zu acht bereitwillige Kreaturen.

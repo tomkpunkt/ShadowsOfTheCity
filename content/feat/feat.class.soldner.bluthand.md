@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du heilst 1W8 TP, wenn du einen Gegner mit einem kritischen Treffer besiegst.
 traits:
   - trait.legacy
 type: feat

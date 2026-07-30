@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn ein Verbündeter innerhalb von 5 Fuß von dir angegriffen wird, kannst du als Reaktion versuchen, den Schlag abzufangen.
 traits:
   - trait.legacy
 type: class-feature

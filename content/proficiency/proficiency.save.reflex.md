@@ -11,6 +11,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Reflexwurf verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 traits: []
 type: proficiency
 ---

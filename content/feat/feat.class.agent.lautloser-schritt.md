@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst dich selbst bei schneller Bewegung verstecken.
 traits:
   - trait.legacy
 type: feat

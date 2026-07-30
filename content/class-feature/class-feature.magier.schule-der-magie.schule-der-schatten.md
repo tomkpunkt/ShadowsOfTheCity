@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du nutzt das Unsichtbare als Waffe.
 traits:
   - trait.class-option
   - trait.class-option.magier.schule-der-magie

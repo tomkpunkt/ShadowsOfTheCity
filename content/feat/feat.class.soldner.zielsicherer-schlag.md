@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du dich in derselben Runde nicht bewegst, +2 auf den nächsten Angriff.
 traits:
   - trait.legacy
 type: feat

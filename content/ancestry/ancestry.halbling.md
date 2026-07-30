@@ -36,6 +36,7 @@ size: small
 source: legacy.world-rules
 speed: 25
 status: legacy
+summary: Halblinge sind die stillen Überlebenskünstler des Zeitalters des Goldes.
 traits: []
 type: ancestry
 ---

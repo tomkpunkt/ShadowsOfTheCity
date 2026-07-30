@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Reflextraining ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Reflexe zu verbessern und schneller auf Gefahren zu reagieren.
 traits:
   - trait.general
 type: feat

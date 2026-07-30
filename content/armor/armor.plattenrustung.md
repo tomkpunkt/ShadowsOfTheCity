@@ -16,6 +16,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Plattenrüstung gewährt einen Gegenstandsbonus von +4 auf die Rüstungsklasse.
 traits:
   - trait.legacy
 type: armor

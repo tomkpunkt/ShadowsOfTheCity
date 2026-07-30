@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist Wächter der einfachen Leute.
 traits:
   - trait.legacy
 type: feat

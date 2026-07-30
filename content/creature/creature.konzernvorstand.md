@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Konzernvorstände sind die mächtigsten Angestellten in den Konzernhierarchien.
 traits:
   - trait.humanoid
   - trait.legacy

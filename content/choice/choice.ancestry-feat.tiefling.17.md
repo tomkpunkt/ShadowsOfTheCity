@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/tieflinge_zeitalter_des_goldes.md
-name: Tiefling-Feat Stufe 17
+name: Tiefling-Talent Stufe 17
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Tiefling-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Tiefling-Feat.
+Wähle ein verfügbares Tiefling-Talent.

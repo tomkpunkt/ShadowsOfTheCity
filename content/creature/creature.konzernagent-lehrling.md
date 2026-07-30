@@ -20,6 +20,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Stufe: 1/2 - TP: 30 (6d8 + 6) - RK: 14 (Tarnkleidung) - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernzugang"
 traits:
   - trait.humanoid
   - trait.legacy

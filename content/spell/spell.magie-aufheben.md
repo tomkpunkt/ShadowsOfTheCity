@@ -27,6 +27,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du unterbrichst einen aktiven magischen Effekt und beendest ihn vorzeitig.
 target:
   count: 1
   kind: effect

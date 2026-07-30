@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1W6 Schaden verhindern, wenn du ein Ziel behandelst.
 traits:
   - trait.legacy
 type: feat

@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist Forscher und Mediziner in einem zivilen Umfeld.
 traits:
   - trait.legacy
 type: feat

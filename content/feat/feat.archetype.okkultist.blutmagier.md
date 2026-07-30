@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du opferst dich für Macht.
 traits:
   - trait.legacy
 type: feat

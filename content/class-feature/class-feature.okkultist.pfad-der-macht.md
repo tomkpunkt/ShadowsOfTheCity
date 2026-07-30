@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle, welche Quelle dich verändert hat.
 traits:
   - trait.legacy
 type: class-feature

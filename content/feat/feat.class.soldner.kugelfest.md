@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Resistenz 3 gegen Schusswaffenschaden.
 traits:
   - trait.legacy
 type: feat

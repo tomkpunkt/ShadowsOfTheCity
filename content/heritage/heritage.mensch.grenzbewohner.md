@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kennst dich in unwirtlichen Regionen aus.
 traits:
   - trait.ancestry
 type: heritage

@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du schützt eine Person, nicht eine Idee.
 traits:
   - trait.legacy
 type: feat

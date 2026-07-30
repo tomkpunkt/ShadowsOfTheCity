@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Ork-Schläger sind die muskulösen Vollstrecker der Ork-Gemeinschaften in den Stadtvierteln.
 traits:
   - trait.humanoid
   - trait.legacy

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 2 Geräte gleichzeitig aktiv halten, ohne Malus.
 traits:
   - trait.legacy
 type: feat

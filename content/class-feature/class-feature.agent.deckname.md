@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du arbeitest selten unter deinem echten Namen.
 traits:
   - trait.legacy
 type: class-feature

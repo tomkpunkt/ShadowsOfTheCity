@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist geübt im Umgang mit Krankheiten und biologischen Gefahren.
 traits:
   - trait.legacy
 type: feat

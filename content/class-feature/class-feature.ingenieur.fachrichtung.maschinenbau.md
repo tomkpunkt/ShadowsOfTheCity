@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du verstehst dich auf Zahnräder, Motoren und Energieübertragung.
 traits:
   - trait.class-option
   - trait.class-option.ingenieur.fachrichtung

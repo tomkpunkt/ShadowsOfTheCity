@@ -14,6 +14,8 @@
     "build": "npm run content:compile && npm run typecheck && npm run test && npm run build --workspaces --if-present",
     "content:compile": "npm run compile --workspace @sotc/content-compiler",
     "content:check-generated": "npm run check-generated --workspace @sotc/content-compiler",
+    "content:quality": "tsx scripts/audit-content-quality.ts",
+    "content:reachability": "tsx scripts/audit-builder-reachability.ts",
     "content:migrate": "npm run migrate --workspace @sotc/content-compiler",
     "content:migration:verify": "npm run migrate:verify --workspace @sotc/content-compiler",
     "content:report": "npm run report --workspace @sotc/content-compiler",
@@ -25,8 +27,9 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:watch": "vitest",
-    "typecheck": "npm run typecheck --workspaces --if-present",
-    "verify": "npm run lint && npm run content:migration:verify && npm run content:check-generated && npm run build && npm run test:e2e && npm run format:check"
+    "progression:audit": "tsx scripts/audit-class-progression.ts",
+    "typecheck": "npm run typecheck --workspaces --if-present && tsc --noEmit -p scripts/tsconfig.json",
+    "verify": "npm run lint && npm run content:migration:verify && npm run content:check-generated && npm run content:quality && npm run content:reachability && npm run progression:audit && npm run build && npm run test:e2e && npm run format:check"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",

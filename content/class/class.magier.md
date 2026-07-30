@@ -55,6 +55,7 @@ schemaVersion: 1
 source: legacy.world-rules
 spellcastingProgressionId: spellcasting.arcane-prepared
 status: legacy
+summary: Magier sind die Erben des alten Wissens – jene wenigen, die die Sprache der Magie noch verstehen.
 trainedSkillChoices: 4
 traits: []
 type: class

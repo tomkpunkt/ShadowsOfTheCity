@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du getroffen wirst, kannst du sofort einen Gegenangriff ausführen.
 traits:
   - trait.legacy
 type: feat

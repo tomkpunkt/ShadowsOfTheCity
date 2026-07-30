@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Kontrolle über das Geflecht ist nahezu perfekt.
 traits:
   - trait.legacy
 type: class-feature

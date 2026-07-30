@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Alle Verbündeten im Umkreis von 20 Fuß erhalten +1 auf Rettungswürfe.
 traits:
   - trait.legacy
 type: feat

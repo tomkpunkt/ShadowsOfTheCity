@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst einen Zauberähnlichen Effekt („Lesser Restoration“) einmal täglich anwenden.
 traits:
   - trait.legacy
 type: feat

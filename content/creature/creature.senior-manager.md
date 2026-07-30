@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Senior Manager sind erfahrene Konzernangestellte, die bereits eine beträchtliche Position in der Hierarchie erreicht haben.
 traits:
   - trait.humanoid
   - trait.legacy

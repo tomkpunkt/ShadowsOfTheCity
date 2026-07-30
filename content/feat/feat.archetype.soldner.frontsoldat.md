@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Ein Veteran der großen Kriege.
 traits:
   - trait.legacy
 type: feat

@@ -29,6 +29,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du schleuderst einen Blitz aus reiner Energie auf dein Ziel.
 target:
   area:
     shape: line

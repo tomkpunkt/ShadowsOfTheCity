@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist ausgebildet, dich in jeder Lage zu behaupten.
 traits:
   - trait.legacy
 type: class-feature

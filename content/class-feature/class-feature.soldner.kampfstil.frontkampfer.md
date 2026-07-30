@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du stürzt dich in den Nahkampf und hältst die Linie.
 traits:
   - trait.class-option
   - trait.class-option.soldner.kampfstil

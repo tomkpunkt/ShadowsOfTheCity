@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Körper reagiert sensibel auf magische Felder.
 traits:
   - trait.ancestry
 type: heritage

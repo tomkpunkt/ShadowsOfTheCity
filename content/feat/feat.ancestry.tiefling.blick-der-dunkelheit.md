@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Tiefling Du besitzt Dunkelsicht und erhältst einen Bonus von +1 auf Wahrnehmung in dämmriger Umgebung."
 traits:
   - trait.ancestry
 type: feat

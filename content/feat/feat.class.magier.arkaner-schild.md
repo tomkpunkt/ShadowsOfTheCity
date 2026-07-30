@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst +1 auf AC gegen magische Angriffe.
 traits:
   - trait.legacy
 type: feat

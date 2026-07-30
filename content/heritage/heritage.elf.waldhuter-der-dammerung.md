@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Einige Elfen haben ihre alte Verbindung zur Natur bewahrt.
 traits:
   - trait.ancestry
 type: heritage

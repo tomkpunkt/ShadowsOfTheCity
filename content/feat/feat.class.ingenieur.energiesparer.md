@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Materialien halten doppelt so lange.
 traits:
   - trait.legacy
 type: feat

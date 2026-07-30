@@ -6,6 +6,7 @@ import {
   ChevronRight,
   CircleUserRound,
   ClipboardCheck,
+  Compass,
   Download,
   FileJson,
   Filter,
@@ -16,6 +17,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
   Printer,
+  RotateCcw,
   Save,
   Search,
   Shield,
@@ -33,11 +35,23 @@ import {
   type AttributeId,
   type CharacterState,
   type ResolvedChoice,
+  type SaveId,
   type ValidationState
 } from "@sotc/rules-engine";
 import type { ContentEntity } from "@sotc/shared";
 
 import { catalog, entities, entitiesOfType, entityName } from "./catalog.js";
+import { EntityDetails } from "./EntityDetails.js";
+import { entityMeta, searchableEntityText } from "./entity-presentation.js";
+import {
+  attributeLabels,
+  formatContentStatus,
+  formatEntityType,
+  formatRequirementFailure,
+  formatSave,
+  formatValidationIssue,
+  validationStateLabels
+} from "./i18n/de.js";
 import {
   downloadCharacter,
   importCharacter,
@@ -56,6 +70,7 @@ type StepId =
   | "feats"
   | "spells"
   | "equipment"
+  | "compendium"
   | "review"
   | "sheet";
 
@@ -68,58 +83,17 @@ interface Step {
 const steps: Step[] = [
   { id: "overview", label: "Übersicht", icon: CircleUserRound },
   { id: "ancestry", label: "Abstammung", icon: Languages },
-  { id: "background", label: "Background", icon: Archive },
+  { id: "background", label: "Hintergrund", icon: Archive },
   { id: "class", label: "Klasse", icon: UserRoundCog },
   { id: "attributes", label: "Attribute", icon: Sparkles },
-  { id: "skills", label: "Skills", icon: ClipboardCheck },
-  { id: "feats", label: "Feats & Features", icon: Swords },
+  { id: "skills", label: "Fertigkeiten", icon: ClipboardCheck },
+  { id: "feats", label: "Talente und Merkmale", icon: Swords },
   { id: "spells", label: "Zauber", icon: WandSparkles },
   { id: "equipment", label: "Ausrüstung", icon: PackageOpen },
+  { id: "compendium", label: "Kompendium", icon: Compass },
   { id: "review", label: "Abschlussprüfung", icon: Check },
   { id: "sheet", label: "Charakterbogen", icon: BookOpen }
 ];
-
-const attributeLabels: Record<AttributeId, string> = {
-  strength: "Stärke",
-  dexterity: "Geschicklichkeit",
-  constitution: "Konstitution",
-  intelligence: "Intelligenz",
-  wisdom: "Weisheit",
-  charisma: "Charisma"
-};
-
-const stateLabels: Record<ValidationState, string> = {
-  valid: "Gültig",
-  incomplete: "Offen",
-  invalid: "Ungültig",
-  blocked: "Blockiert"
-};
-
-const plainText = (markdown: string): string =>
-  markdown
-    .replace(/<[^>]+>/g, " ")
-    .replace(/[`*_>#|~-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-const entityLevel = (entity: ContentEntity): number | undefined =>
-  "level" in entity && typeof entity.level === "number"
-    ? entity.level
-    : entity.type === "spell"
-      ? entity.rank
-      : undefined;
-
-const entityMeta = (entity: ContentEntity): string[] => {
-  const meta: string[] = [entity.type];
-  const level = entityLevel(entity);
-  if (level !== undefined) {
-    meta.push(`Stufe ${String(level)}`);
-  }
-  if ("traditions" in entity) {
-    meta.push(...entity.traditions);
-  }
-  return meta;
-};
 
 const AppButton = ({
   children,
@@ -150,7 +124,7 @@ const AppButton = ({
 );
 
 const StatusPill = ({ state }: { state: ValidationState }) => (
-  <span className={`status status--${state}`}>{stateLabels[state]}</span>
+  <span className={`status status--${state}`}>{validationStateLabels[state]}</span>
 );
 
 const Metric = ({
@@ -181,7 +155,8 @@ const EntityCard = ({
   invalid = false,
   onSelect,
   onDetails,
-  reason
+  reason,
+  showSelect = true
 }: {
   entity: ContentEntity;
   selected: boolean;
@@ -190,12 +165,13 @@ const EntityCard = ({
   onSelect: () => void;
   onDetails: () => void;
   reason?: string;
+  showSelect?: boolean;
 }) => (
   <article
     data-entity-id={entity.id}
     className={`entity-card${selected ? " entity-card--selected" : ""}${
       locked ? " entity-card--locked" : ""
-    }${invalid ? " entity-card--invalid" : ""}`}
+    }${invalid ? " entity-card--invalid" : ""}${showSelect ? "" : " entity-card--detail-only"}`}
   >
     <button className="entity-card__body" type="button" onClick={onDetails}>
       <span className="entity-card__topline">
@@ -203,8 +179,16 @@ const EntityCard = ({
         {selected ? <Check size={17} /> : locked ? <Shield size={16} /> : null}
       </span>
       <span className="entity-card__meta">{entityMeta(entity).join(" · ")}</span>
-      <span className="entity-card__description">
-        {plainText(entity.description).slice(0, 180) || "Keine Kurzbeschreibung"}
+      <span className="entity-card__description">{entity.summary}</span>
+      {entity.traits.length === 0 ? null : (
+        <span className="entity-card__traits">
+          {entity.traits.slice(0, 3).map((trait) => (
+            <span key={trait}>{entityName(trait)}</span>
+          ))}
+        </span>
+      )}
+      <span className={`content-status content-status--${entity.status}`}>
+        {formatContentStatus(entity.status)}
       </span>
       {reason === undefined ? null : (
         <span className="entity-card__reason">
@@ -213,14 +197,16 @@ const EntityCard = ({
         </span>
       )}
     </button>
-    <button
-      className="entity-card__select"
-      type="button"
-      onClick={onSelect}
-      disabled={locked && !selected}
-    >
-      {selected ? "Entfernen" : "Auswählen"}
-    </button>
+    {showSelect ? (
+      <button
+        className="entity-card__select"
+        type="button"
+        onClick={onSelect}
+        disabled={locked && !selected}
+      >
+        {selected ? "Entfernen" : "Auswählen"}
+      </button>
+    ) : null}
   </article>
 );
 
@@ -228,12 +214,14 @@ const SearchBar = ({
   value,
   onChange,
   onlyAvailable,
-  onAvailabilityChange
+  onAvailabilityChange,
+  onReset
 }: {
   value: string;
   onChange: (value: string) => void;
   onlyAvailable?: boolean;
   onAvailabilityChange?: (value: boolean) => void;
+  onReset?: () => void;
 }) => (
   <div className="search-row">
     <label className="search">
@@ -255,6 +243,12 @@ const SearchBar = ({
         Nur verfügbar
       </label>
     )}
+    {onReset === undefined ? null : (
+      <button className="filter-reset" type="button" onClick={onReset}>
+        <RotateCcw size={16} />
+        Zurücksetzen
+      </button>
+    )}
   </div>
 );
 
@@ -275,7 +269,9 @@ const EntitySelection = ({
 }) => {
   const [search, setSearch] = useState("");
   const visible = candidates.filter((entity) =>
-    `${entity.name} ${entity.description}`.toLowerCase().includes(search.toLowerCase())
+    searchableEntityText(entity, (id) => entities.get(id)?.name).includes(
+      search.toLocaleLowerCase("de")
+    )
   );
   return (
     <section className="workspace-section">
@@ -286,7 +282,11 @@ const EntitySelection = ({
         </div>
         <span className="count">{String(visible.length)}</span>
       </header>
-      <SearchBar value={search} onChange={setSearch} />
+      <SearchBar
+        value={search}
+        onChange={setSearch}
+        onReset={search.length === 0 ? undefined : () => setSearch("")}
+      />
       <div className="entity-grid">
         {visible.map((entity) => (
           <EntityCard
@@ -316,9 +316,10 @@ const ChoiceGroup = ({
   const [search, setSearch] = useState("");
   const [onlyAvailable, setOnlyAvailable] = useState(false);
   const visible = choice.options.filter((option) => {
-    const matchesSearch = `${option.entity.name} ${option.entity.description}`
-      .toLowerCase()
-      .includes(search.toLowerCase());
+    const matchesSearch = searchableEntityText(
+      option.entity,
+      (id) => entities.get(id)?.name
+    ).includes(search.toLocaleLowerCase("de"));
     return matchesSearch && (!onlyAvailable || ["available", "selected"].includes(option.status));
   });
   return (
@@ -340,11 +341,22 @@ const ChoiceGroup = ({
         onChange={setSearch}
         onlyAvailable={onlyAvailable}
         onAvailabilityChange={setOnlyAvailable}
+        onReset={
+          search.length === 0 && !onlyAvailable
+            ? undefined
+            : () => {
+                setSearch("");
+                setOnlyAvailable(false);
+              }
+        }
       />
       <div className="entity-grid entity-grid--compact">
         {visible.map((option) => {
           const selected = choice.selectedIds.includes(option.entity.id);
-          const firstFailure = option.failures[0]?.message;
+          const firstFailure =
+            option.failures[0] === undefined
+              ? undefined
+              : formatRequirementFailure(option.failures[0], (id) => entities.get(id)?.name);
           return (
             <EntityCard
               key={option.entity.id}
@@ -363,13 +375,23 @@ const ChoiceGroup = ({
         <p className="empty-state">Keine Optionen entsprechen den Filtern.</p>
       ) : null}
       {character.choices[choice.choiceId]?.some((id) => !entities.has(id)) === true ? (
-        <p className="inline-alert">Die Auswahl enthält IDs aus einem anderen Katalog.</p>
+        <p className="inline-alert">Die Auswahl enthält einen Eintrag aus einem anderen Katalog.</p>
       ) : null}
     </section>
   );
 };
 
-const DetailDrawer = ({ entity, onClose }: { entity?: ContentEntity; onClose: () => void }) => (
+const DetailDrawer = ({
+  entity,
+  provenance,
+  onClose,
+  onOpenEntity
+}: {
+  entity?: ContentEntity;
+  provenance: string[];
+  onClose: () => void;
+  onOpenEntity: (id: string) => void;
+}) => (
   <aside className={`detail-drawer${entity === undefined ? "" : " detail-drawer--open"}`}>
     {entity === undefined ? null : (
       <>
@@ -387,15 +409,9 @@ const DetailDrawer = ({ entity, onClose }: { entity?: ContentEntity; onClose: ()
             <span key={trait}>{entityName(trait)}</span>
           ))}
         </div>
-        <div className="detail-drawer__body">{entity.description}</div>
-        <footer>
-          <span>Quelle</span>
-          <strong>{entity.source}</strong>
-          <span>Status</span>
-          <strong>{entity.status}</strong>
-          <span>ID</span>
-          <code>{entity.id}</code>
-        </footer>
+        <div className="detail-drawer__body">
+          <EntityDetails entity={entity} provenance={provenance} onOpenEntity={onOpenEntity} />
+        </div>
       </>
     )}
   </aside>
@@ -477,6 +493,45 @@ export const App = () => {
           .kind === kind
     );
 
+  const detailProvenance = (id: string): string[] => {
+    const entries: string[] = [];
+    if (character.ancestryId === id) {
+      entries.push("Manuell als Abstammung gewählt.");
+    }
+    if (character.heritageId === id) {
+      entries.push("Manuell als Herkunft gewählt.");
+    }
+    if (character.backgroundId === id) {
+      entries.push("Manuell als Hintergrund gewählt.");
+    }
+    if (character.classId === id) {
+      entries.push("Manuell als Klasse gewählt.");
+    }
+    if (character.inventoryIds.includes(id)) {
+      entries.push("Manuell zur Ausrüstung hinzugefügt.");
+    }
+    for (const [choiceId, selectedIds] of Object.entries(character.choices)) {
+      if (selectedIds.includes(id)) {
+        const choice = entities.get(choiceId);
+        entries.push(
+          `Manuell über ${choice?.name ?? "eine Charakterauswahl"} gewählt${
+            choice?.type === "choice" ? ` (Stufe ${String(choice.choice.level)})` : ""
+          }.`
+        );
+      }
+    }
+    if (result.featureIds.includes(id)) {
+      entries.push(`Automatisch durch Klasse oder Stufe ${String(character.level)} gewährt.`);
+    }
+    if (result.featIds.includes(id) && entries.length === 0) {
+      entries.push("Automatisch durch Abstammung, Hintergrund oder Regel gewährt.");
+    }
+    if (result.spellIds.includes(id) && entries.length === 0) {
+      entries.push("Über den Zauberzugang der gewählten Klasse verfügbar.");
+    }
+    return entries;
+  };
+
   const handleImport = async (file: File): Promise<void> => {
     try {
       const imported = importCharacter(await file.text(), catalog);
@@ -506,7 +561,7 @@ export const App = () => {
           <strong>{entityName(character.ancestryId)}</strong>
         </div>
         <div>
-          <span>Background</span>
+          <span>Hintergrund</span>
           <strong>{entityName(character.backgroundId)}</strong>
         </div>
         <div>
@@ -520,16 +575,16 @@ export const App = () => {
         <Metric label="Wahrnehmung" value={`+${String(result.perception.value)}`} icon={Search} />
         <Metric
           label="Geschwindigkeit"
-          value={`${String(result.speed.value)} ft`}
+          value={`${String(result.speed.value)} Fuß`}
           icon={ChevronRight}
         />
         <Metric
           label="Offene Punkte"
           value={result.issues.length}
-          detail={stateLabels[result.state]}
+          detail={validationStateLabels[result.state]}
           icon={AlertTriangle}
         />
-        <Metric label="Bulk" value={result.bulk.value} icon={PackageOpen} />
+        <Metric label="Last" value={result.bulk.value} icon={PackageOpen} />
       </section>
       <section className="workspace-section overview-columns">
         <div>
@@ -556,7 +611,7 @@ export const App = () => {
           <header className="section-heading">
             <div>
               <h2>Prüfstatus</h2>
-              <p>{stateLabels[result.state]}</p>
+              <p>{validationStateLabels[result.state]}</p>
             </div>
             <StatusPill state={result.state} />
           </header>
@@ -568,7 +623,7 @@ export const App = () => {
                 onClick={() => setActiveStep("review")}
               >
                 <AlertTriangle size={16} />
-                <span>{issue.message}</span>
+                <span>{formatValidationIssue(issue, (id) => entities.get(id)?.name)}</span>
                 <ChevronRight size={16} />
               </button>
             ))}
@@ -713,11 +768,11 @@ export const App = () => {
 
   const renderFeats = () => (
     <>
-      {renderChoices("feat", "Feats", "Allgemeine, Abstammungs- und Klassen-Feats nach Stufe")}
+      {renderChoices("feat", "Talente", "Allgemeine, Abstammungs- und Klassentalente nach Stufe")}
       <section className="workspace-section">
         <header className="section-heading">
           <div>
-            <h2>Automatische Features</h2>
+            <h2>Automatische Merkmale</h2>
             <p>Durch Klasse und Stufe gewährt</p>
           </div>
           <span className="count">{String(result.featureIds.length)}</span>
@@ -785,10 +840,11 @@ export const App = () => {
           <article key={`${issue.code}-${String(index)}`}>
             <AlertTriangle size={18} />
             <div>
-              <span>{issue.code}</span>
-              <strong>{issue.message}</strong>
+              <strong>{formatValidationIssue(issue, (id) => entities.get(id)?.name)}</strong>
               {issue.failures?.map((failure) => (
-                <p key={`${failure.code}-${failure.message}`}>{failure.message}</p>
+                <p key={`${failure.code}-${failure.message}`}>
+                  {formatRequirementFailure(failure, (id) => entities.get(id)?.name)}
+                </p>
               ))}
             </div>
             <StatusPill state={issue.state} />
@@ -798,7 +854,7 @@ export const App = () => {
           <div className="review-success">
             <Check size={28} />
             <strong>Charakter ist vollständig und gültig.</strong>
-            <span>Katalog {catalog.contentHash.slice(0, 12)}</span>
+            <span>{String(catalog.entities.length)} geprüfte Inhalte</span>
           </div>
         ) : null}
       </div>
@@ -814,7 +870,7 @@ export const App = () => {
     ancestry: renderAncestry,
     background: () => (
       <EntitySelection
-        title="Background"
+        title="Hintergrund"
         subtitle="Herkunft, Training und soziale Verankerung"
         candidates={entitiesOfType("background")}
         selectedId={character.backgroundId}
@@ -824,10 +880,12 @@ export const App = () => {
     ),
     class: renderClass,
     attributes: renderAttributes,
-    skills: () => renderChoices("skill", "Skills", "Wähle die Fertigkeitstrainings deiner Klasse"),
+    skills: () =>
+      renderChoices("skill", "Fertigkeiten", "Wähle die Fertigkeitstrainings deiner Klasse"),
     feats: renderFeats,
     spells: () => renderChoices("spell", "Zauber", "Verfügbare Zauber nach Tradition und Rang"),
     equipment: renderEquipment,
+    compendium: () => <Compendium onDetails={setDetailId} />,
     review: renderReview,
     sheet: renderSheet
   };
@@ -900,7 +958,7 @@ export const App = () => {
           />
         </div>
       </header>
-      <nav className="sidebar" aria-label="Character Builder">
+      <nav className="sidebar" aria-label="Charakterbau">
         <div className="sidebar__character">
           <div>{character.name.trim().slice(0, 1).toUpperCase() || "?"}</div>
           <span>
@@ -939,15 +997,14 @@ export const App = () => {
           })}
         </ol>
         <footer>
-          <span>Katalog</span>
-          <code>{catalog.contentHash.slice(0, 12)}</code>
-          <span>{String(catalog.entities.length)} Entitäten</span>
+          <span>Geprüfter Katalog</span>
+          <strong>{String(catalog.entities.length)} Inhalte</strong>
         </footer>
       </nav>
       <main className="workspace">
         <header className="workspace__header">
           <div>
-            <span>Character Builder</span>
+            <span>Charakterbau</span>
             <h1>{steps.find((step) => step.id === activeStep)?.label}</h1>
           </div>
           {activeStep === "sheet" ? (
@@ -970,7 +1027,12 @@ export const App = () => {
         </header>
         <div className="workspace__content">{stepContent[activeStep]()}</div>
       </main>
-      <DetailDrawer entity={entities.get(detailId ?? "")} onClose={() => setDetailId(undefined)} />
+      <DetailDrawer
+        entity={entities.get(detailId ?? "")}
+        provenance={detailProvenance(detailId ?? "")}
+        onClose={() => setDetailId(undefined)}
+        onOpenEntity={setDetailId}
+      />
     </div>
   );
 };
@@ -991,7 +1053,9 @@ const EquipmentSelection = ({
   const visible = candidates.filter(
     (entity) =>
       (type === "all" || entity.type === type) &&
-      `${entity.name} ${entity.description}`.toLowerCase().includes(search.toLowerCase())
+      searchableEntityText(entity, (id) => entities.get(id)?.name).includes(
+        search.toLocaleLowerCase("de")
+      )
   );
   return (
     <section className="workspace-section">
@@ -1003,7 +1067,18 @@ const EquipmentSelection = ({
         <span className="count">{String(visible.length)}</span>
       </header>
       <div className="filter-bar">
-        <SearchBar value={search} onChange={setSearch} />
+        <SearchBar
+          value={search}
+          onChange={setSearch}
+          onReset={
+            search.length === 0 && type === "all"
+              ? undefined
+              : () => {
+                  setSearch("");
+                  setType("all");
+                }
+          }
+        />
         <div className="segmented-control">
           {[
             ["all", "Alle"],
@@ -1033,6 +1108,117 @@ const EquipmentSelection = ({
           />
         ))}
       </div>
+    </section>
+  );
+};
+
+const Compendium = ({ onDetails }: { onDetails: (id: string) => void }) => {
+  const [search, setSearch] = useState("");
+  const [type, setType] = useState<ContentEntity["type"] | "all">("all");
+  const [status, setStatus] = useState<ContentEntity["status"] | "all">("all");
+  const [limit, setLimit] = useState(96);
+  const normalizedSearch = search.toLocaleLowerCase("de");
+  const visible = catalog.entities.filter(
+    (entity) =>
+      (type === "all" || entity.type === type) &&
+      (status === "all" || entity.status === status) &&
+      searchableEntityText(entity, (id) => entities.get(id)?.name).includes(normalizedSearch)
+  );
+  const activeFilters =
+    Number(type !== "all") + Number(status !== "all") + Number(search.length > 0);
+  const reset = (): void => {
+    setSearch("");
+    setType("all");
+    setStatus("all");
+    setLimit(96);
+  };
+  return (
+    <section className="workspace-section compendium" data-testid="compendium">
+      <header className="section-heading">
+        <div>
+          <h2>Kompendium</h2>
+          <p>Alle Regeln, Optionen, Gegenstände und Settinginhalte des geprüften Katalogs</p>
+        </div>
+        <span className="count">{String(visible.length)}</span>
+      </header>
+      <div className="compendium__filters">
+        <SearchBar
+          value={search}
+          onChange={(value) => {
+            setSearch(value);
+            setLimit(96);
+          }}
+          onReset={activeFilters === 0 ? undefined : reset}
+        />
+        <label>
+          <span>Inhaltstyp</span>
+          <select
+            aria-label="Inhaltstyp"
+            value={type}
+            onChange={(event) => {
+              setType(event.target.value as ContentEntity["type"] | "all");
+              setLimit(96);
+            }}
+          >
+            <option value="all">Alle Inhaltstypen</option>
+            {(
+              [...new Set(catalog.entities.map((entity) => entity.type))] as ContentEntity["type"][]
+            )
+              .sort((left, right) => formatEntityType(left).localeCompare(formatEntityType(right)))
+              .map((entityType) => (
+                <option key={entityType} value={entityType}>
+                  {formatEntityType(entityType)}
+                </option>
+              ))}
+          </select>
+        </label>
+        <label>
+          <span>Inhaltsstatus</span>
+          <select
+            aria-label="Inhaltsstatus"
+            value={status}
+            onChange={(event) => {
+              setStatus(event.target.value as ContentEntity["status"] | "all");
+              setLimit(96);
+            }}
+          >
+            <option value="all">Alle Statuswerte</option>
+            {(["canonical", "playtest", "legacy", "draft"] as ContentEntity["status"][]).map(
+              (contentStatus) => (
+                <option key={contentStatus} value={contentStatus}>
+                  {formatContentStatus(contentStatus)}
+                </option>
+              )
+            )}
+          </select>
+        </label>
+      </div>
+      {activeFilters > 0 ? (
+        <div className="active-filters">
+          <Filter size={15} />
+          {String(activeFilters)} aktive {activeFilters === 1 ? "Eingrenzung" : "Eingrenzungen"}
+        </div>
+      ) : null}
+      <div className="entity-grid">
+        {visible.slice(0, limit).map((entity) => (
+          <EntityCard
+            key={entity.id}
+            entity={entity}
+            selected={false}
+            showSelect={false}
+            onSelect={() => undefined}
+            onDetails={() => onDetails(entity.id)}
+          />
+        ))}
+      </div>
+      {visible.length === 0 ? (
+        <p className="empty-state">Keine Einträge entsprechen den gewählten Filtern.</p>
+      ) : null}
+      {visible.length > limit ? (
+        <button className="load-more" type="button" onClick={() => setLimit(visible.length)}>
+          Alle {String(visible.length)} Einträge anzeigen
+        </button>
+      ) : null}
     </section>
   );
 };
@@ -1076,7 +1262,7 @@ const CharacterSheet = ({
       </div>
       <div>
         <span>Bewegung</span>
-        <strong>{result.speed.value} ft</strong>
+        <strong>{result.speed.value} Fuß</strong>
       </div>
     </section>
     <section className="sheet-columns">
@@ -1093,7 +1279,7 @@ const CharacterSheet = ({
         <h3>Rettungswürfe</h3>
         {Object.entries(result.saves).map(([id, value]) => (
           <p key={id}>
-            <span>{id}</span>
+            <span>{formatSave(id as SaveId)}</span>
             <strong>+{value.value}</strong>
           </p>
         ))}
@@ -1108,7 +1294,7 @@ const CharacterSheet = ({
         </p>
       </div>
       <div>
-        <h3>Skills</h3>
+        <h3>Fertigkeiten</h3>
         {Object.entries(result.skills)
           .filter(([, value]) =>
             value.breakdown.some((entry) => entry.kind === "proficiency" && entry.value > 0)
@@ -1123,7 +1309,7 @@ const CharacterSheet = ({
     </section>
     <section className="sheet-lists">
       <div>
-        <h3>Feats & Features</h3>
+        <h3>Talente und Merkmale</h3>
         <p>{[...result.featIds, ...result.featureIds].map(entityName).join(" · ") || "–"}</p>
       </div>
       <div>
@@ -1137,7 +1323,8 @@ const CharacterSheet = ({
     </section>
     <footer>
       <Info size={14} />
-      Katalog {result.catalogHash.slice(0, 12)} · Status {stateLabels[result.state]}
+      {String(catalog.entities.length)} geprüfte Inhalte · Status{" "}
+      {validationStateLabels[result.state]}
     </footer>
   </article>
 );

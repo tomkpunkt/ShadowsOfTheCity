@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Straßenschläger sind die lokalen Schläger und Gangster der Stadtviertel.
 traits:
   - trait.humanoid
   - trait.legacy

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1/Tag einen Trank herstellen, der +2 gegen Gifte gewährt.
 traits:
   - trait.legacy
 type: feat

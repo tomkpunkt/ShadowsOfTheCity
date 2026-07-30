@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/goblins_zeitalter_des_goldes.md
-name: Goblin-Feat Stufe 9
+name: Goblin-Talent Stufe 9
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Goblin-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Goblin-Feat.
+Wähle ein verfügbares Goblin-Talent.

@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Der Beruf des Mechanikers ist eine Spezialisierung, die es Charakteren ermöglicht, technische Geräte zu reparieren, zu modifizieren und zu verbessern.
 traits:
   - trait.general
 type: feat

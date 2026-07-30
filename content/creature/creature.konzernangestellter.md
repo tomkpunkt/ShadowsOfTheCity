@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Konzernangestellte sind die Bürokraten und Manager des Zeitalters des Goldes.
 traits:
   - trait.humanoid
   - trait.legacy

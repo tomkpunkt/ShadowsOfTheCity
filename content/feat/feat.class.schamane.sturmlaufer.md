@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du ignorierst schwieriges Gelände durch Wind oder Wasser.
 traits:
   - trait.legacy
 type: feat

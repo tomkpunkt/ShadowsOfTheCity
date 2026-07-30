@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1/Tag eine Probe automatisch bestehen, wenn du genug Zeit (1 Minute) hast.
 traits:
   - trait.legacy
 type: feat

@@ -60,9 +60,10 @@ slotsByLevel:
     - 2
 source: legacy.world-rules
 status: legacy
+summary: Spontane okkulte Progression; Progression als ausdrückliche Testannahme ergänzt.
 tradition: occult
 traits: []
 type: spellcasting-progression
 ---
 
-Spontane okkulte Progression; Progression als explizite Playtest-Annahme ergänzt.
+Spontane okkulte Progression; Progression als ausdrückliche Testannahme ergänzt.

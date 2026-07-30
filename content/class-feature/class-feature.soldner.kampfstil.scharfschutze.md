@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kämpfst aus der Distanz mit Präzision.
 traits:
   - trait.class-option
   - trait.class-option.soldner.kampfstil

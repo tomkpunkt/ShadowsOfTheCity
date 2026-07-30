@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Magische Robe ist Ausrüstung mit einem Preis von 400 GP und einer Last von 1.
 traits:
   - trait.legacy
 type: equipment

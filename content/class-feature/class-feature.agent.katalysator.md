@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du verstehst es, Situationen zu deinen Gunsten zu verändern.
 traits:
   - trait.legacy
 type: class-feature

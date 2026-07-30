@@ -36,6 +36,7 @@ size: medium
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Orks sind die Kinder des Zorns und der Ausdauer.
 traits: []
 type: ancestry
 ---

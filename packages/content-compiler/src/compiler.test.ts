@@ -95,6 +95,40 @@ describe("compileContent", () => {
     });
   });
 
+  it("validates internal Markdown entity references", async () => {
+    const contentDirectory = await createFixture({
+      "athletics.md": skill().replace(
+        "Klettern, Springen und Schwimmen.",
+        "Klettern, Springen und Schwimmen. Siehe [[skill.science|Wissenschaft]]."
+      ),
+      "science.md": skill("skill.science").replace("name: Athletik", "name: Wissenschaft")
+    });
+
+    const result = await compileContent({ contentDirectory });
+
+    expect(result.report.valid).toBe(true);
+  });
+
+  it("rejects unresolved internal Markdown entity references", async () => {
+    const contentDirectory = await createFixture({
+      "athletics.md": skill().replace(
+        "Klettern, Springen und Schwimmen.",
+        "Klettern, Springen und Schwimmen. Siehe [[skill.missing|Unbekannt]]."
+      )
+    });
+
+    await expect(compileContent({ contentDirectory })).rejects.toMatchObject({
+      report: {
+        issues: expect.arrayContaining([
+          expect.objectContaining({
+            code: "UNRESOLVED_REFERENCE",
+            entityId: "skill.athletics"
+          })
+        ])
+      }
+    });
+  });
+
   it("rejects references to the wrong entity type", async () => {
     const contentDirectory = await createFixture({
       "skill.md": skill(),

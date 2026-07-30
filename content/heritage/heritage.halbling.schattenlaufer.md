@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist Teil einer jener Halblingsfamilien, die zwischen den Welten handeln – manchmal wörtlich.
 traits:
   - trait.ancestry
 type: heritage

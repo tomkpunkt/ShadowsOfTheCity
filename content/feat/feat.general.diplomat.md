@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Diplomat gewährt den im Altbestand beschriebenen Effekt: Gesellschaft, Einfluss."
 traits:
   - trait.general
 type: feat
 ---
 
-Gesellschaft, Einfluss
+Diplomat gewährt den im Altbestand beschriebenen Effekt: Gesellschaft, Einfluss.

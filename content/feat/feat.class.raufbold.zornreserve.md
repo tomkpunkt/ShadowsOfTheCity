@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du 50 % TP verlierst, erhältst +1 auf Schaden für 1 Minute.
 traits:
   - trait.legacy
 type: feat

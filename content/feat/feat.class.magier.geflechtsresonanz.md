@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst einmal pro Tag einen Zauber, der dich betrifft, reflektieren (Willenswurf SG 20).
 traits:
   - trait.legacy
 type: feat

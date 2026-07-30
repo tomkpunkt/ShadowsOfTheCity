@@ -25,6 +25,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erfüllst ein Objekt mit hellem, magischem Licht.
 target:
   count: 1
   kind: object

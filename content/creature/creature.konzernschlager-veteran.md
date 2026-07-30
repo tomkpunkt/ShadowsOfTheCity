@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Stufe: 1 - TP: 50 (10d8 + 10) - RK: 15 (Verbesserte Schutzweste) - Fertigkeiten: +2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Erweiterter Konzernschutz"
 traits:
   - trait.humanoid
   - trait.legacy

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst einen misslungenen Rettungswurf wiederholen (1/Tag).
 traits:
   - trait.legacy
 type: feat

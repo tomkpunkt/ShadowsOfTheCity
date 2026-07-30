@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Name ist in den geheimen Archiven der Welt vermerkt.
 traits:
   - trait.legacy
 type: class-feature

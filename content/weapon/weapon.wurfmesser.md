@@ -24,6 +24,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wurfmesser ist eine Waffe und verursacht 1d4 Schaden.
 traits:
   - trait.legacy
 type: weapon

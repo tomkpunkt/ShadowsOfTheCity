@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Nähe verändert die Welt.
 traits:
   - trait.legacy
 type: class-feature

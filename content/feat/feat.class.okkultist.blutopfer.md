@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1W4 TP opfern, um +1 auf einen Zauberwurf zu erhalten.
 traits:
   - trait.legacy
 type: feat

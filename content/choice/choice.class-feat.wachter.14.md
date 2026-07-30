@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_waechter.md
-name: Wächter-Feat Stufe 14
+name: Wächter-Talent Stufe 14
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Wächter-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Wächter-Feat.
+Wähle ein verfügbares Wächter-Talent.

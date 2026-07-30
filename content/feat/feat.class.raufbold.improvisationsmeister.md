@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst +2 auf Angriffe mit improvisierten Waffen.
 traits:
   - trait.legacy
 type: feat

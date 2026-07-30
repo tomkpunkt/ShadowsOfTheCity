@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Erste Hilfe unter Druck ohne Malus durchführen.
 traits:
   - trait.legacy
 type: feat

@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wissenschaft ist eine Fertigkeit mit Intelligenz als typischem Attribut.
 traits: []
 type: skill
 ---

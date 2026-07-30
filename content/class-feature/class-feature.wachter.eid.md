@@ -18,6 +18,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du legst einen Eid ab, der deine Pflicht und Macht bestimmt.
 traits:
   - trait.legacy
 type: class-feature

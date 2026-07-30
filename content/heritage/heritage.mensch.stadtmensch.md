@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist in dicht besiedelten Gebieten aufgewachsen.
 traits:
   - trait.ancestry
 type: heritage

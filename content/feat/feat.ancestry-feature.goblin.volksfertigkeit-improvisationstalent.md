@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst aus Schrott ein Werkzeug oder eine Waffe machen.
 traits:
   - trait.ancestry
 type: feat

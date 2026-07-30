@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist an grelles Licht gewöhnt.
 traits:
   - trait.ancestry
 type: feat

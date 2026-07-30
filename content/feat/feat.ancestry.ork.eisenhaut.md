@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Haut ist hart und widerstandsfähig.
 traits:
   - trait.ancestry
 type: feat

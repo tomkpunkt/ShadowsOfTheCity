@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du einen Gegner triffst, erhält dieser –1 auf Angriffswürfe für 1 Runde.
 traits:
   - trait.legacy
 type: feat

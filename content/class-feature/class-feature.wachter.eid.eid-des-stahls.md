@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du vertraust allein auf die Waffe in deiner Hand.
 traits:
   - trait.class-option
   - trait.class-option.wachter.eid

@@ -32,6 +32,7 @@ size: medium
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Die Menschen sind die zahlreichste, aber zugleich vielfältigste Spezies der bekannten Welt.
 traits: []
 type: ancestry
 ---

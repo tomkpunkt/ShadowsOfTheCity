@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst einem Verbündeten +1 auf Initiative geben (1/Tag).
 traits:
   - trait.legacy
 type: feat

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Das Schicksal scheint dir gewogen zu sein.
 traits:
   - trait.ancestry
 type: feat

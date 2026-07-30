@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst während eines Kampfes ein Gerät in 3 Aktionen reparieren.
 traits:
   - trait.legacy
 type: feat

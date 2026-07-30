@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 1/Tag eine Zone instabiler Magie erschaffen (20 Fuß, 1 Minute).
 traits:
   - trait.legacy
 type: feat

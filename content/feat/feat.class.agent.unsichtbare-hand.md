@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: +1 auf alle Würfe, die soziale Manipulation oder Ablenkung betreffen.
 traits:
   - trait.legacy
 type: feat

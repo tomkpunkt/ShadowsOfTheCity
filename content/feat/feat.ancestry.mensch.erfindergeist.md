@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst einen situativen Bonus von +1 auf alle Handwerkswürfe für technische Geräte oder improvisierte Ausrüstung.
 traits:
   - trait.ancestry
 type: feat

@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Improvisierter Kämpfer gewährt den im Altbestand beschriebenen Effekt: Keine Mali improvisierte Waffen."
 traits:
   - trait.general
 type: feat
 ---
 
-Keine Mali improvisierte Waffen
+Improvisierter Kämpfer gewährt den im Altbestand beschriebenen Effekt: Keine Mali improvisierte Waffen.

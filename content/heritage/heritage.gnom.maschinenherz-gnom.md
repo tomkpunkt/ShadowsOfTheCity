@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Körper enthält kleine Implantate oder kybermagische Mechanismen.
 traits:
   - trait.ancestry
 type: heritage

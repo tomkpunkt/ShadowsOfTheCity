@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du hast gelernt, aus jedem Schlag zu lernen.
 traits:
   - trait.legacy
 type: class-feature

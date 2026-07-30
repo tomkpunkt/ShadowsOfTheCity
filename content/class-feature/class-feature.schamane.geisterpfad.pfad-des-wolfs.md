@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du folgst dem Ruf der Jagd und der Gemeinschaft.
 traits:
   - trait.class-option
   - trait.class-option.schamane.geisterpfad

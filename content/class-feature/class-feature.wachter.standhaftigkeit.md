@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist selbst unter Schmerz und Blutverlust unbeirrbar.
 traits:
   - trait.legacy
 type: class-feature

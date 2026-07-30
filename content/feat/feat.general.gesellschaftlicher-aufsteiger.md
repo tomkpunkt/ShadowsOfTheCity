@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Gesellschaftlicher Aufsteiger gewährt den im Altbestand beschriebenen Effekt: +1 Beeindrucken."
 traits:
   - trait.general
 type: feat
 ---
 
-+1 Beeindrucken
+Gesellschaftlicher Aufsteiger gewährt den im Altbestand beschriebenen Effekt: +1 Beeindrucken.

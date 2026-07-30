@@ -16,6 +16,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Tarnkleidung gewährt einen Gegenstandsbonus von +1 auf die Rüstungsklasse.
 traits:
   - trait.legacy
 type: armor

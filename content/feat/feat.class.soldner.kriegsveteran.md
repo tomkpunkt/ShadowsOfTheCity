@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du ignorierst Mali durch Verwundung oder Erschöpfung für 1 Minute.
 traits:
   - trait.legacy
 type: feat

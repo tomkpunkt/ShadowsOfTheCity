@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst die Macht deines Geistes vollständig entfesseln.
 traits:
   - trait.legacy
 type: class-feature

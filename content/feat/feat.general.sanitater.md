@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Sanitäter gewährt den im Altbestand beschriebenen Effekt: Erste Hilfe, Wundbehandlung."
 traits:
   - trait.general
 type: feat
 ---
 
-Erste Hilfe, Wundbehandlung
+Sanitäter gewährt den im Altbestand beschriebenen Effekt: Erste Hilfe, Wundbehandlung.

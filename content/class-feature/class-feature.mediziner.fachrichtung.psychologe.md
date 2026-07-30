@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du heilst den Geist, nicht den Körper.
 traits:
   - trait.class-option
   - trait.class-option.mediziner.fachrichtung

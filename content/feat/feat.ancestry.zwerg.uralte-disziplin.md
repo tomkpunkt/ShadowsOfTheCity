@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine innere Ruhe macht dich widerstandsfähig gegen geistige Beeinflussung.
 traits:
   - trait.ancestry
 type: feat

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst +1 auf Zähigkeit, wenn du verwundet bist.
 traits:
   - trait.legacy
 type: feat

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du Schaden durch eigene Zauber erleidest, reduziere ihn um 1 pro Zaubergrad.
 traits:
   - trait.legacy
 type: feat

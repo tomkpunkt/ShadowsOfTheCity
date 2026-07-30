@@ -1,0 +1,2668 @@
+{
+  "schemaVersion": 1,
+  "catalogHash": "50b469737ff7da4e512593653726a2dea97a4f644bd52607d0bb505f7f89f312",
+  "summary": {
+    "classes": 9,
+    "fullyAudited": 9,
+    "incomplete": 0,
+    "maximumLevel": 20,
+    "errors": 0
+  },
+  "classes": [
+    {
+      "classId": "class.agent",
+      "name": "Agent",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.agent.deckname",
+            "class-feature.agent.spionageausbildung",
+            "class-feature.agent.vorgehensweise",
+            "class-feature.agent.vorgehensweise.attentater",
+            "class-feature.agent.vorgehensweise.infiltrator",
+            "class-feature.agent.vorgehensweise.manipulator"
+          ],
+          "choices": [
+            "choice.agent.vorgehensweise",
+            "choice.class-feat.agent.1",
+            "choice.class-skills.agent"
+          ],
+          "feats": [
+            "choice.class-feat.agent.1"
+          ],
+          "skills": [
+            "choice.class-skills.agent"
+          ],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.2"
+          ],
+          "feats": [
+            "choice.class-feat.agent.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.agent.schnelle-reaktion"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.4"
+          ],
+          "feats": [
+            "choice.class-feat.agent.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.6"
+          ],
+          "feats": [
+            "choice.class-feat.agent.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.agent.kalter-verstand"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.8"
+          ],
+          "feats": [
+            "choice.class-feat.agent.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.10"
+          ],
+          "feats": [
+            "choice.class-feat.agent.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.agent.unauffalligkeit"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.12"
+          ],
+          "feats": [
+            "choice.class-feat.agent.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.14"
+          ],
+          "feats": [
+            "choice.class-feat.agent.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.agent.katalysator"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.16"
+          ],
+          "feats": [
+            "choice.class-feat.agent.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.agent.18"
+          ],
+          "feats": [
+            "choice.class-feat.agent.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.agent.phantom"
+          ],
+          "choices": [
+            "choice.class-feat.agent.20"
+          ],
+          "feats": [
+            "choice.class-feat.agent.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.ingenieur",
+      "name": "Ingenieur",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.ingenieur.fachrichtung",
+            "class-feature.ingenieur.fachrichtung.chemietechnik",
+            "class-feature.ingenieur.fachrichtung.elektronik",
+            "class-feature.ingenieur.fachrichtung.maschinenbau",
+            "class-feature.ingenieur.fachrichtung.werkstattgeneralist",
+            "class-feature.ingenieur.tuftlergeist",
+            "class-feature.ingenieur.werkbank"
+          ],
+          "choices": [
+            "choice.class-feat.ingenieur.1",
+            "choice.class-skills.ingenieur",
+            "choice.ingenieur.fachrichtung"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.1"
+          ],
+          "skills": [
+            "choice.class-skills.ingenieur"
+          ],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.2"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.ingenieur.improvisation"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.4"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.6"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.ingenieur.feldtechniker"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.8"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.10"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.ingenieur.konstrukteursblick"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.12"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.14"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.ingenieur.technische-meisterleistung"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.16"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.ingenieur.18"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.ingenieur.genie-des-goldes"
+          ],
+          "choices": [
+            "choice.class-feat.ingenieur.20"
+          ],
+          "feats": [
+            "choice.class-feat.ingenieur.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.magier",
+      "name": "Magier",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.magier.arkanes-studium",
+            "class-feature.magier.schule-der-magie",
+            "class-feature.magier.schule-der-magie.schule-der-elemente",
+            "class-feature.magier.schule-der-magie.schule-der-erkenntnis",
+            "class-feature.magier.schule-der-magie.schule-der-schatten",
+            "class-feature.magier.schule-der-magie.schule-des-schutzes",
+            "class-feature.magier.zauberbuch"
+          ],
+          "choices": [
+            "choice.class-feat.magier.1",
+            "choice.class-skills.magier",
+            "choice.class-spells.magier",
+            "choice.magier.schule-der-magie"
+          ],
+          "feats": [
+            "choice.class-feat.magier.1"
+          ],
+          "skills": [
+            "choice.class-skills.magier"
+          ],
+          "spells": [
+            "choice.class-spells.magier"
+          ],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.2"
+          ],
+          "feats": [
+            "choice.class-feat.magier.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.magier.arkaner-fokus"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.4"
+          ],
+          "feats": [
+            "choice.class-feat.magier.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.6"
+          ],
+          "feats": [
+            "choice.class-feat.magier.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.magier.zaubererweiterung"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.8"
+          ],
+          "feats": [
+            "choice.class-feat.magier.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.10"
+          ],
+          "feats": [
+            "choice.class-feat.magier.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.magier.geflechtverstandnis"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.12"
+          ],
+          "feats": [
+            "choice.class-feat.magier.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.14"
+          ],
+          "feats": [
+            "choice.class-feat.magier.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.magier.arkane-meisterschaft"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.16"
+          ],
+          "feats": [
+            "choice.class-feat.magier.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.magier.18"
+          ],
+          "feats": [
+            "choice.class-feat.magier.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.magier.huter-des-wissens"
+          ],
+          "choices": [
+            "choice.class-feat.magier.20"
+          ],
+          "feats": [
+            "choice.class-feat.magier.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.mediziner",
+      "name": "Mediziner",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.mediziner.erste-hilfe",
+            "class-feature.mediziner.fachrichtung",
+            "class-feature.mediziner.fachrichtung.chirurg",
+            "class-feature.mediziner.fachrichtung.feldarzt",
+            "class-feature.mediziner.fachrichtung.forscher",
+            "class-feature.mediziner.fachrichtung.psychologe",
+            "class-feature.mediziner.medizinische-ausbildung"
+          ],
+          "choices": [
+            "choice.class-feat.mediziner.1",
+            "choice.class-skills.mediziner",
+            "choice.mediziner.fachrichtung"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.1"
+          ],
+          "skills": [
+            "choice.class-skills.mediziner"
+          ],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.2"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.mediziner.schnelle-stabilisierung"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.4"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.6"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.mediziner.medizinische-prazision"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.8"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.10"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.mediziner.erweiterte-diagnostik"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.12"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.14"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.mediziner.lebensretter"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.16"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.mediziner.18"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.mediziner.heilgenie"
+          ],
+          "choices": [
+            "choice.class-feat.mediziner.20"
+          ],
+          "feats": [
+            "choice.class-feat.mediziner.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.okkultist",
+      "name": "Okkultist",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.okkultist.okkultes-wissen",
+            "class-feature.okkultist.pfad-der-macht",
+            "class-feature.okkultist.pfad-der-macht.blutpakt",
+            "class-feature.okkultist.pfad-der-macht.geisterruf",
+            "class-feature.okkultist.pfad-der-macht.runenpfad",
+            "class-feature.okkultist.pfad-der-macht.schattenpakt",
+            "class-feature.okkultist.ritualmagie"
+          ],
+          "choices": [
+            "choice.class-feat.okkultist.1",
+            "choice.class-skills.okkultist",
+            "choice.class-spells.okkultist",
+            "choice.okkultist.pfad-der-macht"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.1"
+          ],
+          "skills": [
+            "choice.class-skills.okkultist"
+          ],
+          "spells": [
+            "choice.class-spells.okkultist"
+          ],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.2"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.okkultist.okkulte-prasenz"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.4"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.6"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.okkultist.verbotene-kraft"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.8"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.10"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.okkultist.seelenanker"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.12"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.14"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.okkultist.ruf-der-tiefe"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.16"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.okkultist.18"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.okkultist.verbotener-aufstieg"
+          ],
+          "choices": [
+            "choice.class-feat.okkultist.20"
+          ],
+          "feats": [
+            "choice.class-feat.okkultist.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.raufbold",
+      "name": "Raufbold",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.raufbold.improvisation",
+            "class-feature.raufbold.strassenkampf",
+            "class-feature.raufbold.zahigkeit"
+          ],
+          "choices": [
+            "choice.class-feat.raufbold.1",
+            "choice.class-skills.raufbold"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.1"
+          ],
+          "skills": [
+            "choice.class-skills.raufbold"
+          ],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.2"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.raufbold.kampfinstinkt"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.4"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.6"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.raufbold.widerstandskraft"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.8"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.10"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.raufbold.instinktschlag"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.12"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.14"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.raufbold.unzerbrechlich"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.16"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.raufbold.18"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.raufbold.strassenlegende"
+          ],
+          "choices": [
+            "choice.class-feat.raufbold.20"
+          ],
+          "feats": [
+            "choice.class-feat.raufbold.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.schamane",
+      "name": "Schamane",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.schamane.ahnenverbindung",
+            "class-feature.schamane.geisterpfad",
+            "class-feature.schamane.geisterpfad.pfad-der-erde",
+            "class-feature.schamane.geisterpfad.pfad-der-flamme",
+            "class-feature.schamane.geisterpfad.pfad-des-geistes",
+            "class-feature.schamane.geisterpfad.pfad-des-sturms",
+            "class-feature.schamane.geisterpfad.pfad-des-wolfs"
+          ],
+          "choices": [
+            "choice.class-feat.schamane.1",
+            "choice.class-skills.schamane",
+            "choice.class-spells.schamane",
+            "choice.schamane.geisterpfad"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.1"
+          ],
+          "skills": [
+            "choice.class-skills.schamane"
+          ],
+          "spells": [
+            "choice.class-spells.schamane"
+          ],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.2"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.schamane.totemritual"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.4"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.6"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.schamane.ahnensegen"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.8"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.10"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.schamane.naturverbundenheit"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.12"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.14"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.schamane.grosser-ruf"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.16"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.schamane.18"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.schamane.wachter-der-ahnen"
+          ],
+          "choices": [
+            "choice.class-feat.schamane.20"
+          ],
+          "feats": [
+            "choice.class-feat.schamane.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.soldner",
+      "name": "Söldner",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.soldner.kampfstil",
+            "class-feature.soldner.kampfstil.frontkampfer",
+            "class-feature.soldner.kampfstil.scharfschutze",
+            "class-feature.soldner.kampfstil.wachter",
+            "class-feature.soldner.soldnerisches-training"
+          ],
+          "choices": [
+            "choice.class-feat.soldner.1",
+            "choice.class-skills.soldner",
+            "choice.soldner.kampfstil"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.1"
+          ],
+          "skills": [
+            "choice.class-skills.soldner"
+          ],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.2"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.soldner.erfahrener-kampfer"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.4"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.6"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.soldner.unnachgiebig"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.8"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.10"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.soldner.kriegsinstinkt"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.12"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.14"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.soldner.veteran-des-goldes"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.16"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.soldner.18"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.soldner.legende-des-krieges"
+          ],
+          "choices": [
+            "choice.class-feat.soldner.20"
+          ],
+          "feats": [
+            "choice.class-feat.soldner.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "classId": "class.wachter",
+      "name": "Wächter",
+      "maximumLevel": 20,
+      "support": "playtest-through-maximum",
+      "errors": [],
+      "levels": [
+        {
+          "level": 1,
+          "automaticFeatures": [
+            "class-feature.wachter.eid",
+            "class-feature.wachter.eid.eid-der-ordnung",
+            "class-feature.wachter.eid.eid-des-lichts",
+            "class-feature.wachter.eid.eid-des-stahls",
+            "class-feature.wachter.wachterhaltung"
+          ],
+          "choices": [
+            "choice.class-feat.wachter.1",
+            "choice.class-skills.wachter",
+            "choice.wachter.eid"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.1"
+          ],
+          "skills": [
+            "choice.class-skills.wachter"
+          ],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 2,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.2"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.2"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 3,
+          "automaticFeatures": [
+            "class-feature.wachter.schutzreaktion"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 4,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.4"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.4"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 5,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 6,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.6"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.6"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 7,
+          "automaticFeatures": [
+            "class-feature.wachter.standhaftigkeit"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 8,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.8"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.8"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 9,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 10,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.10"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.10"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 11,
+          "automaticFeatures": [
+            "class-feature.wachter.heiliger-schwur"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 12,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.12"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.12"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 13,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 14,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.14"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.14"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 15,
+          "automaticFeatures": [
+            "class-feature.wachter.eiserne-prasenz"
+          ],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 16,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.16"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.16"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 17,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 18,
+          "automaticFeatures": [],
+          "choices": [
+            "choice.class-feat.wachter.18"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.18"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 19,
+          "automaticFeatures": [],
+          "choices": [],
+          "feats": [],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        },
+        {
+          "level": 20,
+          "automaticFeatures": [
+            "class-feature.wachter.letzter-schild"
+          ],
+          "choices": [
+            "choice.class-feat.wachter.20"
+          ],
+          "feats": [
+            "choice.class-feat.wachter.20"
+          ],
+          "skills": [],
+          "spells": [],
+          "proficiencyChanges": [],
+          "resources": [],
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

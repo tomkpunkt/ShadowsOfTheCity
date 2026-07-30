@@ -53,6 +53,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Ingenieure sind die Architekten des Fortschritts – pragmatische Denker und Tüftler, die aus begrenzten Mitteln das Maximum herausholen.
 trainedSkillChoices: 4
 traits: []
 type: class

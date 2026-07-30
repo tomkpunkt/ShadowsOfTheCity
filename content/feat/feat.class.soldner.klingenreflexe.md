@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du im Nahkampf angegriffen wirst, kannst du sofort 1 Schritt zurückweichen.
 traits:
   - trait.legacy
 type: feat

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst zwei Fraktionen gleichzeitig loyal erscheinen, ohne Malus auf Täuschung.
 traits:
   - trait.legacy
 type: feat

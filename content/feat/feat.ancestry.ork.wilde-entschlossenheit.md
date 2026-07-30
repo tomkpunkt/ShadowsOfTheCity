@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Ork Du erhältst einen +2 Bonus auf Rettungswürfe gegen Furcht."
 traits:
   - trait.ancestry
 type: feat

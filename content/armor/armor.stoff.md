@@ -16,6 +16,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Stoff gewährt einen Gegenstandsbonus von +0 auf die Rüstungsklasse.
 traits:
   - trait.legacy
 type: armor

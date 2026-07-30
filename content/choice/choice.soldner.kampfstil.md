@@ -27,6 +27,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle eine Option für Kampfstil.
 traits: []
 type: choice
 ---

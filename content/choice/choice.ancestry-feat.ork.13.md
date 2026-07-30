@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/orks_zeitalter_des_goldes.md
-name: Ork-Feat Stufe 13
+name: Ork-Talent Stufe 13
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Ork-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Ork-Feat.
+Wähle ein verfügbares Ork-Talent.

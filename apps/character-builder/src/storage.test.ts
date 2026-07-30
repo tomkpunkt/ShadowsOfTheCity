@@ -66,15 +66,17 @@ describe("character storage", () => {
       expect.objectContaining({
         fromCatalogHash: "b".repeat(64),
         toCatalogHash: hash,
-        conflicts: expect.arrayContaining(["Unbekannte ID: ancestry.unknown"])
+        conflicts: expect.arrayContaining([
+          "Gespeicherte Auswahl 1 konnte im aktuellen Katalog nicht zugeordnet werden."
+        ])
       })
     ]);
     expect(imported.conflicts).toEqual(
       expect.arrayContaining([
-        expect.stringContaining("Katalog abweichend"),
-        "Unbekannte ID: ancestry.unknown",
-        "Unbekannte ID: choice.unknown",
-        "Unbekannte ID: feat.unknown"
+        "Der importierte Charakter verwendet einen abweichenden Katalogstand.",
+        "Gespeicherte Auswahl 1 konnte im aktuellen Katalog nicht zugeordnet werden.",
+        "Gespeicherte Auswahl 2 konnte im aktuellen Katalog nicht zugeordnet werden.",
+        "Gespeicherte Auswahl 3 konnte im aktuellen Katalog nicht zugeordnet werden."
       ])
     );
   });
@@ -88,7 +90,9 @@ describe("character storage", () => {
     const imported = importCharacter(serializeCharacter(character), catalog);
 
     expect(imported.character.catalogHash).toBe(hash);
-    expect(imported.conflicts).toEqual([expect.stringContaining("Katalog migriert")]);
+    expect(imported.conflicts).toEqual([
+      "Der Charakter wurde auf den aktuellen Katalogstand migriert."
+    ]);
     expect(imported.character.migrations).toHaveLength(1);
   });
 });

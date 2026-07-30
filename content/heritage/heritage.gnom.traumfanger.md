@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du besitzt die Fähigkeit, durch deine Träume Wissen zu empfangen.
 traits:
   - trait.ancestry
 type: heritage

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du hast gelernt, der Angst in all ihren Formen zu widerstehen.
 traits:
   - trait.ancestry
 type: feat

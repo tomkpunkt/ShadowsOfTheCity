@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Werkzeuge aus Müll herstellen (SG 15).
 traits:
   - trait.legacy
 type: feat

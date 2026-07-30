@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Werkzeuge, Waffen oder Geräte improvisieren, auch wenn dir Materialien fehlen.
 traits:
   - trait.legacy
 type: class-feature

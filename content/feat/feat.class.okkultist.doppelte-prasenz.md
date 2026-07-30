@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst mit Geistern kommunizieren, die dich sehen, ohne zu sprechen.
 traits:
   - trait.legacy
 type: feat

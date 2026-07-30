@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du hast gelernt, dich unsichtbar zu machen – in Menschenmengen oder Schatten.
 traits:
   - trait.ancestry
 type: heritage

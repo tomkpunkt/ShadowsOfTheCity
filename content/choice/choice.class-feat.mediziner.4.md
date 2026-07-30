@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_mediziner.md
-name: Mediziner-Feat Stufe 4
+name: Mediziner-Talent Stufe 4
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Mediziner-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Mediziner-Feat.
+Wähle ein verfügbares Mediziner-Talent.

@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Name ist Legende unter Soldaten und Söldnern.
 traits:
   - trait.legacy
 type: class-feature

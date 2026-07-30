@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: playtest
+summary: Akademiker wurde für einen vollständigen Charakterbau aus den sozialen Rollen des Altbestands abgeleitet.
 trainedSkillIds:
   - skill.science
 traits: []

@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen.
 traits:
   - trait.ancestry
 type: heritage

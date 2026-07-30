@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Geist ist nahezu unerschütterlich.
 traits:
   - trait.ancestry
 type: feat

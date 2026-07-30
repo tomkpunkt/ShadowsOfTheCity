@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst eine Konstruktion erschaffen, die über dein normales Können hinausgeht.
 traits:
   - trait.legacy
 type: class-feature

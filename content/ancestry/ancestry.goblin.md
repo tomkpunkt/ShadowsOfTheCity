@@ -36,6 +36,7 @@ size: small
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: Goblins sind die Schattenarbeiter und Überlebenskünstler der modernen Welt.
 traits: []
 type: ancestry
 ---

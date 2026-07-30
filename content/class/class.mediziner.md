@@ -54,6 +54,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Mediziner sind jene, die zwischen Leben und Tod verhandeln – mit Skalpell, Verband und Wissen statt mit Gebeten oder Magie.
 trainedSkillChoices: 4
 traits: []
 type: class

@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_schamane.md
-name: Schamane-Feat Stufe 20
+name: Schamane-Talent Stufe 20
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Schamane-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Schamane-Feat.
+Wähle ein verfügbares Schamane-Talent.

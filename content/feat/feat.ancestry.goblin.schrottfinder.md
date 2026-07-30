@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Goblin Du kannst überall etwas Nützliches entdecken."
 traits:
   - trait.ancestry
 type: feat

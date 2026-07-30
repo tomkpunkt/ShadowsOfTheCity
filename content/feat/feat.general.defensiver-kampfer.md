@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Defensiver Kämpfer ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Verteidigung zu verbessern und sich besser vor Angriffen zu schützen.
 traits:
   - trait.general
 type: feat

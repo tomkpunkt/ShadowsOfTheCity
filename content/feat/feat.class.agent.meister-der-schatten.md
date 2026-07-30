@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst permanent Dunkelsicht und +2 auf Heimlichkeit.
 traits:
   - trait.legacy
 type: feat

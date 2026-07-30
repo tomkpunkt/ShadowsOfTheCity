@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Geräte oder Waffen anderer Spieler stabilisieren (+1 auf Angriff oder SG).
 traits:
   - trait.legacy
 type: feat

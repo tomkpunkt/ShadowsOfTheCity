@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du trägst noch das alte Erbe der Naturmagie in dir.
 traits:
   - trait.ancestry
 type: heritage

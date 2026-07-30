@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du verschmilzt mit der Umwelt.
 traits:
   - trait.legacy
 type: feat

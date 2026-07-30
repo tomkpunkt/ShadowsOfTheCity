@@ -20,6 +20,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du rufst Geister vergangener Krieger oder Heiler.
 traits:
   - trait.legacy
 type: feat

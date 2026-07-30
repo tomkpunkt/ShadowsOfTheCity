@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Athletischer Kampfstil kombiniert körperliche Stärke mit Kampftechnik, um Gegner durch physische Manipulation zu überwältigen.
 traits:
   - trait.general
 type: feat

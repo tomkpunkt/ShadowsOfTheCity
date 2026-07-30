@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Deine Geräte halten doppelt so lange, bevor sie versagen.
 traits:
   - trait.legacy
 type: feat

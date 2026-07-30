@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_magier.md
-name: Magier-Feat Stufe 2
+name: Magier-Talent Stufe 2
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Magier-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Magier-Feat.
+Wähle ein verfügbares Magier-Talent.

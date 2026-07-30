@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Menschlicher NPC (Straßenschläger-Lehrling), chaotisch böse - Stufe: 1/4 (50 EP) - TP: 20 (4d8 + 4) - RK: 12 (Lederjacke) - Geschwindigkeit: 30 Fuß - Stärke: 13 (+1) | Geschicklichkeit: 12 (+1) | Konstitution: 12"
 traits:
   - trait.humanoid
   - trait.legacy

@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Zähigkeit ist eine grundlegende Überlebensfähigkeit, die es Charakteren ermöglicht, mehr Schaden zu ertragen und länger im Kampf zu bestehen.
 traits:
   - trait.general
 type: feat

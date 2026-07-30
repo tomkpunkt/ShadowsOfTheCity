@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Gnom Deine Kreativität lässt dich blitzschnell Lösungen finden."
 traits:
   - trait.ancestry
 type: feat

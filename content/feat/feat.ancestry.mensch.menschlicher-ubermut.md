@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Einmal pro Tag kannst du dich nach einem verpatzten Angriffswurf oder Rettungswurf sofort erneut würfeln.
 traits:
   - trait.ancestry
 type: feat

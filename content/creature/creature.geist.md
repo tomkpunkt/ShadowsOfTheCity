@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Undead (Geist), chaotisch böse - Stufe: 1 (200 EP) - TP: 40 (8d8 + 8) - RK: 16 (Geisterhaftigkeit) - Fertigkeiten: Heimlichkeit +8, Täuschen +6 - Spezialfähigkeiten: Phasenwandlung, Geisterhaftigkeit - Schwächen:"
 traits:
   - trait.humanoid
   - trait.legacy

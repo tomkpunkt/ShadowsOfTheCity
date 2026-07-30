@@ -21,9 +21,10 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Wissenschaftler gewährt den im Altbestand beschriebenen Effekt: Analysen, Forschung."
 traits:
   - trait.general
 type: feat
 ---
 
-Analysen, Forschung
+Wissenschaftler gewährt den im Altbestand beschriebenen Effekt: Analysen, Forschung.

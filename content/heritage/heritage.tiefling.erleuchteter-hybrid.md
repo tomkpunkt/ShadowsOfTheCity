@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist Ergebnis experimenteller Genfusion oder Forschung.
 traits:
   - trait.ancestry
 type: heritage

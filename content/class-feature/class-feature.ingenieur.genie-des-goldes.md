@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Name steht in Lehrbüchern – oder auf schwarzen Listen.
 traits:
   - trait.legacy
 type: class-feature

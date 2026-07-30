@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Gebärdensprache ist eine aus dem Altbestand normalisierte Sprache.
 traits: []
 type: language
 ---

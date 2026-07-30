@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst alle Gegner in 20 Fuß 1W6 Schaden pro Zaubergrad erleiden lassen (1/Tag).
 traits:
   - trait.legacy
 type: feat

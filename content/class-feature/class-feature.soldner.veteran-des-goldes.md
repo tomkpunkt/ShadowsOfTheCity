@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist ein Relikt in einer Welt, die vergessen hat, was Krieg bedeutet.
 traits:
   - trait.legacy
 type: class-feature

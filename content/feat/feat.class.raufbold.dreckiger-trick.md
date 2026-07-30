@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst Sand, Staub oder Blut nutzen, um einen Gegner zu blenden (1/Tag, SG 20).
 traits:
   - trait.legacy
 type: feat

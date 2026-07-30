@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erkennst feindliche Taktiken.
 traits:
   - trait.legacy
 type: feat

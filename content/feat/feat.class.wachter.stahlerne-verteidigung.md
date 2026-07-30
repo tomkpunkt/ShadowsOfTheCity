@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: +1 AC, solange du Rüstung trägst.
 traits:
   - trait.legacy
 type: feat

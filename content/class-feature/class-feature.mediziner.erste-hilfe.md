@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst eine Aktion aufwenden, um einen Verbündeten innerhalb von 5 Fuß zu stabilisieren (SG 15).
 traits:
   - trait.legacy
 type: class-feature

@@ -22,13 +22,14 @@ legacy:
   notes: []
   paths:
     - classes/klasse_raufbold.md
-name: Raufbold-Feat Stufe 1
+name: Raufbold-Talent Stufe 1
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Raufbold-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Raufbold-Feat.
+Wähle ein verfügbares Raufbold-Talent.

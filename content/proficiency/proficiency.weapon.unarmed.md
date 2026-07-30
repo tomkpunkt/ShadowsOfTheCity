@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Unbewaffnet verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 traits: []
 type: proficiency
 ---

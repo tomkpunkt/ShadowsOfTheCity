@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du darfst bei Täuschung 1W20 erneut würfeln (1/Tag).
 traits:
   - trait.legacy
 type: feat

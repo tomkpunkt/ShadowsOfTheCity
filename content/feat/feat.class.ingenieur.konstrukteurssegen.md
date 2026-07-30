@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Alle Geräte, die du herstellst, erhalten +1 auf Haltbarkeit.
 traits:
   - trait.legacy
 type: feat

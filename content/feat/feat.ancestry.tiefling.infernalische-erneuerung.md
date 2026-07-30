@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du auf 0 Trefferpunkte fällst, kannst du einmal pro Tag sofort 1W6 + deinen Konstitutionsmodifikator Trefferpunkte zurückerlangen.
 traits:
   - trait.ancestry
 type: feat

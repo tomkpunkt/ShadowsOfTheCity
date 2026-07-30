@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du trägst das Erbe eines uralten Dämons oder einer magischen Katastrophe.
 traits:
   - trait.ancestry
 type: heritage

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Elf Dein Auftreten ist makellos."
 traits:
   - trait.ancestry
 type: feat

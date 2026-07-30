@@ -27,6 +27,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du berührst eine Kreatur und heilst ihre Wunden durch göttliche oder natürliche Magie.
 target:
   count: 1
   kind: creature

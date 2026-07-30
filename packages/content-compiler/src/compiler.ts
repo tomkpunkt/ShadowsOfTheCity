@@ -78,6 +78,35 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
 const issuePath = (pathParts: PropertyKey[]): string =>
   pathParts.map((part) => String(part)).join(".");
 
+const deriveSummary = (name: string, markdown: string): string => {
+  const prose = markdown
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(
+      (line) =>
+        line.length > 0 &&
+        line !== "---" &&
+        !line.startsWith("#") &&
+        !line.startsWith("|") &&
+        !line.startsWith(">") &&
+        !/^\*{0,2}Quelle:/i.test(line)
+    )
+    .map((line) =>
+      line
+        .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, "$2 $1")
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+        .replace(/[`*_]/g, "")
+    )
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const firstSentence = prose.match(/^.{20,220}?[.!?](?:\s|$)/)?.[0]?.trim();
+  const summary = firstSentence ?? prose.slice(0, 220).trim();
+  return summary.length >= 20
+    ? summary
+    : `${name}: ${summary || "Inhalt aus dem bestehenden Regelwerk."}`;
+};
+
 const parseEntityFile = async (
   file: string,
   contentDirectory: string
@@ -130,6 +159,10 @@ const parseEntityFile = async (
 
   const validation = ContentEntitySchema.safeParse({
     ...parsedMatter.data,
+    summary:
+      typeof parsedMatter.data["summary"] === "string"
+        ? parsedMatter.data["summary"]
+        : deriveSummary(String(parsedMatter.data["name"] ?? "Entität"), parsedMatter.content),
     description: parsedMatter.content.trim()
   });
   if (!validation.success) {
@@ -186,6 +219,14 @@ const addPotentialReferences = (value: unknown, references: Set<string>, key?: s
 export const collectReferences = (entity: ContentEntity): string[] => {
   const references = new Set<string>();
   addPotentialReferences(entity, references);
+  for (const match of entity.description.matchAll(
+    /\[\[([a-z][a-z0-9]*(?:[.-][a-z0-9]+)*)(?:\|[^\]]+)?\]\]/g
+  )) {
+    const id = match[1];
+    if (id !== undefined) {
+      references.add(id);
+    }
+  }
   references.delete(entity.id);
   return [...references].sort((left, right) => left.localeCompare(right));
 };

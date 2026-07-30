@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst 2 Zauber pro Runde wirken, solange einer ein Cantrip ist.
 traits:
   - trait.legacy
 type: feat

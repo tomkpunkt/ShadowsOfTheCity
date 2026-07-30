@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du erhältst Resistenz 3 gegen Gifte und Krankheit sowie +1 auf Rettungswürfe gegen Erschöpfung oder Hunger.
 traits:
   - trait.ancestry
 type: feat

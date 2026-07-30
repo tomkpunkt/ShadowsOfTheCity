@@ -23,13 +23,14 @@ legacy:
   notes: []
   paths:
     - races/elfen_zeitalter_des_goldes.md
-name: Elf-Feat Stufe 9
+name: Elf-Talent Stufe 9
 references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wähle ein verfügbares Elf-Talent.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Elf-Feat.
+Wähle ein verfügbares Elf-Talent.

@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Taktiker ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Verbündeten im Kampf zu unterstützen und taktische Vorteile zu schaffen.
 traits:
   - trait.general
 type: feat

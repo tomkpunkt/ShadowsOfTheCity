@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du kritischen Schaden erleidest, erhältst du bis zum Ende deines nächsten Zuges +2 auf Schadenswürfe.
 traits:
   - trait.ancestry
 type: feat

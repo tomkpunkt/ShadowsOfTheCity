@@ -20,6 +20,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Menschlicher NPC (Krimineller), chaotisch böse - Stufe: 1/2 (100 EP) - TP: 30 (6d8 + 6) - RK: 14 (Tarnkleidung) - Fertigkeiten: Heimlichkeit +6, Einschüchtern +4 - Spezialfähigkeiten: Diebstahl, Erpressung - Aktio"
 traits:
   - trait.humanoid
   - trait.legacy

@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst eine einfache Maschine oder Vorrichtung in der halben üblichen Zeit reparieren oder modifizieren.
 traits:
   - trait.ancestry
 type: feat

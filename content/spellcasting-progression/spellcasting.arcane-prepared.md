@@ -39,9 +39,10 @@ slotsByLevel:
     - 2
 source: legacy.world-rules
 status: legacy
+summary: Vorbereitete arkane Progression; Progression als ausdrückliche Testannahme ergänzt.
 tradition: arcane
 traits: []
 type: spellcasting-progression
 ---
 
-Vorbereitete arkane Progression; Progression als explizite Playtest-Annahme ergänzt.
+Vorbereitete arkane Progression; Progression als ausdrückliche Testannahme ergänzt.

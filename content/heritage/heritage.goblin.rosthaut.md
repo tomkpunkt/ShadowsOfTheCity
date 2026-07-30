@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Körper ist widerstandsfähiger als gewöhnlich.
 traits:
   - trait.ancestry
 type: heritage

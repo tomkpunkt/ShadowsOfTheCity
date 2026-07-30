@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Verbesserte Wahrnehmung ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Umgebung besser zu beobachten und wichtige Details zu erkennen.
 traits:
   - trait.general
 type: feat

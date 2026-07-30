@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Name ist Legende in der Medizin.
 traits:
   - trait.legacy
 type: class-feature

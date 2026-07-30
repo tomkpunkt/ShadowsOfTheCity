@@ -23,6 +23,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Gewehr ist eine Waffe und verursacht 1d8 Schaden.
 traits:
   - trait.legacy
 type: weapon

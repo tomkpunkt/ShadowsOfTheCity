@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: "Voraussetzung: Halbling Du bewegst dich mit bemerkenswerter Leichtigkeit."
 traits:
   - trait.ancestry
 type: feat

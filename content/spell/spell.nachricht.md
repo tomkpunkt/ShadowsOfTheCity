@@ -27,6 +27,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du sendest eine kurze Nachricht direkt in den Geist einer Kreatur.
 target:
   count: 1
   kind: creature

@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du lernst, deine Macht zu verstärken – zum Preis deiner Vitalität.
 traits:
   - trait.legacy
 type: class-feature

@@ -21,6 +21,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Ork (Ork-Schläger-Lehrling), chaotisch böse - Stufe: 1/2 (100 EP) - TP: 30 (6d8 + 6) - RK: 13 (Lederjacke + natürliche Rüstung) - Geschwindigkeit: 30 Fuß - Stärke: 15 (+2) | Geschicklichkeit: 12 (+1) | Konstitutio"
 traits:
   - trait.humanoid
   - trait.legacy

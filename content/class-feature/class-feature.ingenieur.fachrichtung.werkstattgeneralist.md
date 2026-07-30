@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist in allem bewandert, aber in nichts spezialisiert.
 traits:
   - trait.class-option
   - trait.class-option.ingenieur.fachrichtung

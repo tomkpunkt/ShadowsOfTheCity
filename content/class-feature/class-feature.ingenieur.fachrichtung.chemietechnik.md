@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist Alchemist der Moderne.
 traits:
   - trait.class-option
   - trait.class-option.ingenieur.fachrichtung

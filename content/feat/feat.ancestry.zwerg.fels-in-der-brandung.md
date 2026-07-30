@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du bist nahezu unerschütterlich.
 traits:
   - trait.ancestry
 type: feat

@@ -292,6 +292,7 @@ const BaseEntityShape = {
   name: z.string().min(1),
   source: EntityIdSchema,
   status: ContentStatusSchema,
+  summary: z.string().min(20).default("Inhalt aus dem bestehenden Regelwerk."),
   description: z.string(),
   traits: z.array(EntityIdSchema).default([]),
   references: z.array(EntityIdSchema).default([]),

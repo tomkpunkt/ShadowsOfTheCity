@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Dein Körper reagiert schneller als dein Verstand.
 traits:
   - trait.legacy
 type: class-feature

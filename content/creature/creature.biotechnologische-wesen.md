@@ -19,6 +19,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Monstrosität (Biotech), neutral - Stufe: 1 (200 EP) - TP: 50 (10d8 + 10) - RK: 16 (Natürliche Rüstung) - Fertigkeiten: Überleben +6, Wissenschaft +6 - Spezialfähigkeiten: Genetische Anpassung, Regeneration - Schwä"
 traits:
   - trait.humanoid
   - trait.legacy

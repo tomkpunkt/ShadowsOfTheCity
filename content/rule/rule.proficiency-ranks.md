@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Proficiency-Ränge ist eine verbindliche Compilerannahme aus dem Review.
 traits: []
 type: rule
 value:

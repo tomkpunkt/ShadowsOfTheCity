@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Wenn du den Schildblock nutzt, reduziere zusätzlichen Schaden um 2.
 traits:
   - trait.legacy
 type: feat

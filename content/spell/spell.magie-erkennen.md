@@ -25,6 +25,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du spürst die Präsenz aktiver Magie in deiner Umgebung.
 target:
   area:
     shape: emanation

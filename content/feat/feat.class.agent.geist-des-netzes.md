@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst in jeder großen Stadt Informationen in einem Tag finden, unabhängig von SG.
 traits:
   - trait.legacy
 type: feat

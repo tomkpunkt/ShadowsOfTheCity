@@ -21,6 +21,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Der Beruf des Arztes ist eine Spezialisierung, die es Charakteren ermöglicht, medizinische Behandlung durchzuführen und Verletzungen zu heilen.
 traits:
   - trait.general
 type: feat

@@ -20,6 +20,7 @@ schemaVersion: 1
 source: legacy.world-rules
 speed: 30
 status: legacy
+summary: "- Typ: Ork (Ork-Schläger-Veteran), chaotisch böse - Stufe: 2 (400 EP) - TP: 55 (11d8 + 11) - RK: 15 (Verstärkte Lederjacke + natürliche Rüstung) - Geschwindigkeit: 30 Fuß - Stärke: 18 (+4) | Geschicklichkeit: 14 (+2) | K"
 traits:
   - trait.humanoid
   - trait.legacy

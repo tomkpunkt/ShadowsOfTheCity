@@ -36,6 +36,7 @@ size: medium
 source: legacy.world-rules
 speed: 20
 status: legacy
+summary: Zwerge sind das Fundament der industriellen Welt des Zeitalters des Goldes.
 traits: []
 type: ancestry
 ---

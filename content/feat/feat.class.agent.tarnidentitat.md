@@ -19,6 +19,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du kannst zwei verschiedene Decknamen gleichzeitig führen.
 traits:
   - trait.legacy
 type: feat

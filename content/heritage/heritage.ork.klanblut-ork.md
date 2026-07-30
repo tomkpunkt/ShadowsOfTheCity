@@ -17,6 +17,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Du entstammst einem stolzen Kriegerklan.
 traits:
   - trait.ancestry
 type: heritage

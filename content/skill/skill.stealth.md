@@ -10,6 +10,7 @@ references: []
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
+summary: Heimlichkeit ist eine Fertigkeit mit Geschicklichkeit als typischem Attribut.
 traits: []
 type: skill
 ---

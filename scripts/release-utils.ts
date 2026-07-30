@@ -45,7 +45,12 @@ export const normalizeReleaseTextFiles = async (directory: string): Promise<void
       continue;
     }
     const source = await readFile(file, "utf8");
-    await writeFile(file, source.replace(/\r\n?/g, "\n"), "utf8");
+    const lineNormalized = source.replace(/\r\n?/g, "\n");
+    const normalized =
+      path.extname(file).toLowerCase() === ".html"
+        ? lineNormalized.replace(/\n[ \t]*\n/g, "\n")
+        : lineNormalized;
+    await writeFile(file, normalized, "utf8");
   }
 };
 

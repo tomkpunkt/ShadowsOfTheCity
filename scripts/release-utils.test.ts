@@ -47,7 +47,7 @@ describe("release utilities", () => {
     const root = await mkdtemp(path.join(tmpdir(), "sotc-release-text-"));
     temporaryDirectories.push(root);
     const binary = Buffer.from([0x00, 0x0d, 0x0a, 0xff]);
-    await writeFile(path.join(root, "index.html"), "first\r\nsecond\rthird\n");
+    await writeFile(path.join(root, "index.html"), "first\r\n\r\nsecond\rthird\n");
     await writeFile(path.join(root, "asset.png"), binary);
 
     await normalizeReleaseTextFiles(root);

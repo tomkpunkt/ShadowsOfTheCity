@@ -473,6 +473,57 @@ Offene Punkte:
 Den geprüften Commit veröffentlichen und per Pull Request gegen `main`
 begutachten lassen.
 
+## Masterauftrag: Testbuild 0.1.0
+
+| Phase | Status | Ziel | Ergebnis |
+|:--|:--|:--|:--|
+| 0 - Ausgangszustand | complete | reproduzierbare technische Baseline | 737 Entitäten, 410 Text-Effekte, 8 strukturierte Effekte, 52 Unit- und 16 E2E-Tests dokumentiert |
+| 1 - Legacy-Inventar | complete | jeder Altbestand mit Zielstatus | 18 Bestände mit Strategie und Entfernungskriterium in `docs/review/05-legacy-inventory.md` |
+| 2 - Regelmodell | active | vollständige formale Regeltypen | bestehendes Modell und reale Lücken erfasst |
+| 3 - Ausdrucksmodell | pending | ein rekursiver Prädikatvertrag | noch offen |
+| 4 - Effektformalisierung | pending | zentrale Charakterwirkungen ausführbar | noch offen |
+| 5 - Systemkonventionen | pending | explizite, testbare globale Regeln | noch offen |
+| 6 - Rules Engine | pending | deterministische vollständige Auswertung | noch offen |
+| 7 - Legacy-Charaktere | pending | versionierte verlustarme Migration | noch offen |
+| 8 - Builder-Integration | pending | UI ohne eigene Regelberechnung | noch offen |
+| 9 - Contenthärtung | pending | Templates, Versionierung und CLI | noch offen |
+| 10 - Bereinigung | pending | unnötigen Parallelbestand entfernen | noch offen |
+| 11 - Architektur | pending | Abhängigkeitsrichtung automatisiert sichern | noch offen |
+| 12 - Laufzeit und Build | pending | klare Fehlergrenzen und reproduzierbarer Build | noch offen |
+| 13 - Teststrategie | pending | Effekte, reale Builds und E2E vollständig prüfen | noch offen |
+| 14 - Release 0.1.0 | pending | ZIP, Prüfsummen und Buildbericht | noch offen |
+| 15 - CI | pending | vollständiger Release-Vertrag | noch offen |
+| 16 - Dokumentation | pending | Nutzer-, Authoring- und Architekturdokumente | noch offen |
+| 17 - Abschlussprüfung | pending | alle Kommandos und manuelle Prüfung | noch offen |
+
+### Phase 0 und 1
+
+Geänderte Dateien:
+
+- `docs/review/04-v0.1-baseline.md`
+- `docs/review/05-legacy-inventory.md`
+- `docs/implementation-progress.md`
+
+Entscheidungen:
+
+- Legacy-Markdown bleibt ausschließlich als reproduzierbare Provenienz und
+  Migrationsquelle erhalten.
+- Der produktive Datenpfad beginnt bei `content/`; die Anwendung lädt keine
+  Rohquellen.
+- Die bestehende Character-Version 1 wird migriert und nicht still ersetzt.
+- Text-Effekte erhalten einen expliziten Umsetzungsstatus.
+
+Prüfungen:
+
+- `npm run verify`: 52 Unit-/Integrationstests und 16 Browserprüfungen erfolgreich
+- Git-Status, Branch, Katalog-Hash, Entitätstypen und Effektknoten inventarisiert
+- Browserimporte in der Rules Engine und Rohcontentimporte in der UI geprüft
+
+Offene Punkte:
+
+- Phase 2 beginnt mit Schema-Version 2, Character-Format 2 und dem erweiterten
+  Effekt- und Ausdrucksmodell.
+
 ## Folgeauftrag: Redaktion und Ausrüstungskatalog
 
 | Phase | Status | Ergebnis | Prüfungen | Offene Entscheidungen |

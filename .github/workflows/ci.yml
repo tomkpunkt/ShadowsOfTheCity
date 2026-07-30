@@ -13,7 +13,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - name: Check out repository
@@ -34,7 +34,40 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Verify repository
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Validate content
+        run: npm run content:validate
+
+      - name: Compile content
+        run: npm run content:compile
+
+      - name: Verify generated content
+        run: npm run content:verify-generated
+
+      - name: Verify architecture and templates
+        run: npm run architecture:audit && npm run content:templates
+
+      - name: Run unit and integration tests
+        run: npm run test
+
+      - name: Run browser tests
+        run: npm run test:e2e
+
+      - name: Build application
+        run: npm run build
+
+      - name: Build release candidate
+        run: npm run release:build
+
+      - name: Verify release candidate
+        run: npm run release:verify
+
+      - name: Verify repository contract
         run: npm run verify
 
       - name: Upload Playwright report

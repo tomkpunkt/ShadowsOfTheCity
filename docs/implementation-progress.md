@@ -489,12 +489,12 @@ begutachten lassen.
 | 9 - Contenthärtung | complete | Templates, Versionierung und CLI | 12 kompilierbare Vorlagen, verlustsicherer Custom-Pfad und vier Authoring-Kommandos |
 | 10 - Bereinigung | complete | unnötigen Parallelbestand entfernen | alte Produktpfade entfernt oder mit belegter Migrationsfunktion ausdrücklich erhalten |
 | 11 - Architektur | complete | Abhängigkeitsrichtung automatisiert sichern | `architecture:audit` blockiert verbotene Imports zwischen Shared, Compiler, Engine und UI |
-| 12 - Laufzeit und Build | pending | klare Fehlergrenzen und reproduzierbarer Build | noch offen |
-| 13 - Teststrategie | pending | Effekte, reale Builds und E2E vollständig prüfen | noch offen |
-| 14 - Release 0.1.0 | pending | ZIP, Prüfsummen und Buildbericht | noch offen |
-| 15 - CI | pending | vollständiger Release-Vertrag | noch offen |
-| 16 - Dokumentation | pending | Nutzer-, Authoring- und Architekturdokumente | noch offen |
-| 17 - Abschlussprüfung | pending | alle Kommandos und manuelle Prüfung | noch offen |
+| 12 - Laufzeit und Build | complete | klare Fehlergrenzen und reproduzierbarer Build | Katalog-, Import-, Engine- und Kompatibilitätsfehler sichtbar; stabiler Produktionsbuild ohne Source Maps |
+| 13 - Teststrategie | complete | Effekte, reale Builds und E2E vollständig prüfen | 75 Unit-/Integrationstests, fünf reale Charaktere und 18 Browserprüfungen |
+| 14 - Release 0.1.0 | complete | ZIP, Prüfsummen und Buildbericht | deterministisches Laufzeit-ZIP mit SHA-256, Metadaten und Quellenhinweisen |
+| 15 - CI | complete | vollständiger Release-Vertrag | alle Pflichtkommandos als sichtbare GitHub-Actions-Schritte |
+| 16 - Dokumentation | complete | Nutzer-, Authoring- und Architekturdokumente | README, Changelog, Fach- und Release-Dokumentation auf 0.1.0 aktualisiert |
+| 17 - Abschlussprüfung | active | alle Kommandos und manuelle Prüfung | vollständige Schlusskette und finaler Bericht laufen |
 
 ### Phase 0 und 1
 
@@ -555,6 +555,110 @@ Offene Punkte:
 
 - Phase 6: blockierte Entitäten in allen Auswahlwegen abweisen und die
   erweiterte Engine-Ausgabe mit realen Charakteren abnehmen.
+
+### Phase 6 bis 8
+
+Status: `complete`
+
+Geänderte Bereiche:
+
+- `packages/rules-engine/src/`
+- `packages/shared/src/schemas.ts`
+- `apps/character-builder/src/`
+- `docs/character-format.md`
+- `docs/legacy-migration.md`
+
+Entscheidungen und Ergebnis:
+
+- Die Engine erzeugt einen vollständigen, erklärbaren `CalculatedCharacter`
+  ohne React-, DOM- oder Storage-Abhängigkeit.
+- Format 0, 1 und 2 werden verlustarm auf Character-Format 2 migriert.
+- Zehn Legacy-Aliase werden zentral aufgelöst; Konflikte und unbekannte Werte
+  bleiben erhalten.
+- Der Builder verwendet ausschließlich Enginewerte und zeigt für jeden
+  Arbeitsbereich `valid`, `incomplete`, `invalid`, `blocked` oder
+  `not-relevant`.
+
+Prüfungen:
+
+- Engine-, Prädikat-, Effekt-, Storage-, UI- und Browsertests
+- vollständiger Import-/Export-/Reload-Workflow
+- Architekturprüfung auf Browserimporte und UI-Regellogik
+
+Offene Punkte:
+
+- keine technischen Blocker; zwei fachliche Entscheidungs-IDs bleiben bewusst
+  gesperrt.
+
+### Phase 9 bis 11
+
+Status: `complete`
+
+Geänderte Bereiche:
+
+- `content/templates/`
+- `packages/content-compiler/src/`
+- `scripts/audit-architecture.ts`
+- `docs/review/07-cleanup-report.md`
+- `docs/architecture.md`
+- `docs/content-authoring.md`
+
+Entscheidungen und Ergebnis:
+
+- Zwölf Templates werden separat kompiliert und gelangen nicht in den
+  Produktkatalog.
+- `content/custom`, Templates und Alias-Tabelle bleiben bei Migrationen
+  verlustfrei erhalten.
+- Eine CLI deckt Anlage, Dateivalidierung, Erklärung und Referenzanalyse ab.
+- Eine automatisierte Architekturprüfung erzwingt die kanonische
+  Abhängigkeitsrichtung.
+- Parallele Produktpfade wurden entfernt oder als notwendige
+  Migrationsprovenienz begründet.
+
+Prüfungen:
+
+- `npm run content:templates`
+- alle vier Content-CLI-Kommandos
+- `npm run architecture:audit`
+- Migration, Kompilierung und bytegenauer Generated-Check
+
+Offene Punkte:
+
+- keine.
+
+### Phase 12 bis 16
+
+Status: `complete`
+
+Geänderte Bereiche:
+
+- `scripts/build-release.ts`, `release-utils.ts`, `verify-release.ts`
+- `.github/workflows/ci.yml`
+- `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`
+- `docs/testing.md`, `docs/release-process.md`, weitere Fachdokumente
+- `apps/character-builder/src/legacy-regression.test.ts`
+
+Entscheidungen und Ergebnis:
+
+- Release-ZIPs werden stabil sortiert, mit fester Archivzeit und ohne
+  plattformabhängige Metadaten erzeugt.
+- Release-Verifikation prüft Prüfsumme, Versionen, Katalogmetadaten,
+  Pflichtdateien und verbotene Pfade.
+- Fünf reale Charakterprofile decken Kampf, Zauber, Technik, Sozial/Skill und
+  Legacy-Import ab.
+- CI führt alle Pflichtkommandos und den vollständigen Repository-Vertrag als
+  sichtbare Schritte aus.
+
+Prüfungen:
+
+- 75 Unit-/Integrationstests
+- 18 Playwright-Prüfungen
+- Production- und Release-Build
+- `npm run release:verify`
+
+Offene Punkte:
+
+- Phase 17 dokumentiert den finalen Voll- und Sichttest.
 
 ## Folgeauftrag: Redaktion und Ausrüstungskatalog
 

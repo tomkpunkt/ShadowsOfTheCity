@@ -72,6 +72,28 @@ Geschwindigkeit, Bulk und Ressourcen verwenden dieses Format.
 
 Gesamtpriorität ist `invalid`, danach `blocked`, `incomplete`, `valid`.
 
+## Formale Regeltypen
+
+Version 0.1.0 wertet folgende geschlossene Effektfamilien aus:
+
+- `value` und `derived` für feste, additive, ersetzende, begrenzte und
+  abgeleitete Werte
+- `proficiency-rule` für Setzen, Mindestwert und rangweise Steigerung
+- `grant` für Talente, Merkmale, Zauber, Gegenstände, Sprachen, Choices und
+  Aktionen
+- `resource-rule` und `movement` für Kapazitäten, Erholung und Bewegungsarten
+- `action` für Aktionen, Reaktionen, freie Aktionen und Aktivitäten
+- `attack-rule` für Angriff, Schaden, Würfel, Schadensart, Traits, Reichweite,
+  Kapazität, Nachladen und kritische Zusatzeffekte
+- `spellcasting-rule` für Tradition, Attribut, Zugriff, bekannte oder
+  vorbereitete Zauber, Repertoire und Plätze
+- `conditional` mit demselben rekursiven Prädikatmodell wie Voraussetzungen
+
+Die Ausgabe umfasst Identität, Abschnittsstatus, Werte, Kompetenzen, Grants,
+Choices, Zauber, Angriffe, Inventar, Ressourcen, Issues und Erklärungen. Jede
+Liste und jeder Effekt wird stabil nach fachlicher Priorität und Quell-ID
+geordnet.
+
 ## Legacy-Text
 
 Effekte mit `machineReadable: false` werden gesammelt, aber nicht als

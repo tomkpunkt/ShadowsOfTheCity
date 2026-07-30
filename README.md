@@ -1,177 +1,133 @@
 # Shadows of the City
 
-Ein Pen&Paper Rollenspiel, das das Pathfinder2e Universum in ein modernes Setting erweitert.
+Ein datengetriebener Character Builder für eine Cyberpunk-/Urban-Fantasy-
+Rollenspieladaption mit Pathfinder-2e-naher Regelstruktur.
 
-## Projektübersicht
+## Projektstatus
 
-**Shadows of the City** ist ein Tabletop-Rollenspiel, das Elemente von Urban Fantasy, Noir-Detektivgeschichten und übernatürlicher Intrige kombiniert. Das Spiel ist darauf ausgelegt, sowohl One-Shot-Abenteuer als auch langfristige Kampagnen in einem reichhaltig detaillierten urbanen Setting zu unterstützen.
+Version `0.1.0` ist ein reproduzierbarer Testbuild. Der vollständige Katalog
+enthält 737 Entitäten, davon 724 aktive und 13 fachlich gesperrte Entwürfe.
+Charakterwerte werden ausschließlich durch die frameworkfreie Rules Engine
+berechnet; der Builder zeigt Herkunftsnachweise, offene Entscheidungen,
+Voraussetzungsfehler und Katalogkompatibilität an.
 
-## Aktueller Projektstand
+Der Testbuild unterstützt:
 
-### ✅ Implementierte Inhalte
+- Charaktere von Stufe 1 bis 20 mit Abstammung, Herkunft, Hintergrund und Klasse
+- Attribute, Fertigkeiten, Kompetenzen, Talente, Klassenmerkmale und Choices
+- Zauberprogression, Ausrüstung, Angriffe, Trefferpunkte, RK, Rettungswürfe und
+  Wahrnehmung
+- automatische Neuberechnung und Erhalt ungültig gewordener Entscheidungen
+- Local Storage, JSON-Import/-Export und Migration alter Charakterformate
+- Charakterübersicht und druckbaren Charakterbogen
+- Kompendium, Suche, Filter und begründete gesperrte Optionen
 
-#### **Klassen** (`classes/`) - **9 Klassen**
-- **Söldner** - Professionelle Kämpfer für Geld und Aufträge
-- **Wächter** - Disziplinierte Verteidiger mit moralischen Prinzipien  
-- **Agent** - Geheimdienstler und Infiltratoren
-- **Magier** - Intellektuelle Zauberwirker mit wissenschaftlichem Ansatz
-- **Okkultist** - Zauberwirker des Verbotenen mit Ritualen und Pakten
-- **Schamane** - Spirituelle Praktiker mit Naturverbindung
-- **Raufbold** - Straßenkämpfer und Untergrundkrieger
-- **Ingenieur** - Technische Erfinder und Handwerker
-- **Mediziner** - Heiler und medizinische Spezialisten
+## Voraussetzungen
 
-#### **Rassen** (`races/`) - **8 Rassen**
-- **Elfen** - Magische Aristokraten mit langer Lebensspanne
-- **Menschen** - Vielseitige Technologie-Träger
-- **Zwerge** - Industrielle Meister und Handwerker
-- **Orks** - Starke Arbeiterklasse mit klanbasierter Kultur
-- **Halblinge** - Geschickte Händler und Überlebenskünstler
-- **Gnome** - Erfinder und Technomagier
-- **Goblins** - Anpassungsfähige Untergrundbewohner
-- **Tieflinge** - Dämonisch beeinflusste Außenseiter
+- Node.js 22 oder neuer
+- npm
+- Chromium für Browserprüfungen
 
-#### **Lore** (`lore/`)
-- **Welt-Timeline** - Chronologie von Jahr -2000 bis 1990
-- **Mächte der Welt** - Konzerne, Organisationen und Staaten im Jahr 1990
+## Installation und Entwicklung
 
-#### **Regeln** (`rules/`) - **Kernmechaniken implementiert**
-- **Kernmechaniken** - Grundlegende Spielmechaniken und Attribute
-- **Kampfsystem** - Initiative, Aktionen und Schaden
-- **Magiesystem** - Magie im Schatten und Zauberstufen
-- **Technologie** - Moderne Ausrüstung und Fertigkeiten
-- **Soziale Mechaniken** - Rassenhierarchie und Konzern-Politik
-
-#### **Bestiary** (`bestiary/`) - **Kreaturen und NPCs implementiert**
-- **Bestiary-Übersicht** - Kreaturentypen und Schwierigkeitsgrade
-- **Menschliche NPCs** - Konzernangestellte, Geheimdienstler, Polizisten, Kriminelle
-- **Magische Wesen** - Geister, Dämonen, Elementare
-- **Technologische Kreaturen** - KI-Systeme, Roboter, Cyborgs
-- **Hybride Wesen** - Magitech-Konstrukte, Biotechnologische Wesen
-
-#### **Ausrüstung** (`gear/`) - **Waffen und Ausrüstung implementiert**
-- **Ausrüstungsübersicht** - Waffen, Rüstung und Ausrüstung
-- **Nahkampfwaffen** - Einfache, kriegerische und zweihändige Waffen
-- **Fernkampfwaffen** - Projektilwaffen und traditionelle Waffen
-- **Magische Waffen** - Verzauberte Waffen und Artefakte
-- **Rüstung** - Leichte, mittlere und schwere Rüstung
-- **Technologie** - Kommunikation, Überwachung und Transport
-
-#### **Zauber** (`spells/`) - **14 Zauber**
-- **Feuerball** - Zerstörerischer Feuerzauber mit Explosionspotential
-- **Schutzschild** - Defensiver Zauber gegen physische Angriffe
-- **Unsichtbarkeit** - Versteckzauber für Spione und Agenten
-- **Heilung** - Wiederherstellung von Trefferpunkten und Krankheiten
-- **Gedankenlesen** - Mentale Invasion und Informationsgewinnung
-- **Blitzschlag** - Elektrischer Angriffszauber mit Ketteneffekt
-- **Benommenheit** - Mentaler Verwirrungszauber (Cantrip)
-- **Flamme Erschaffen** - Feuer-Cantrip für Elementarschule
-- **Magie Erkennen** - Magieerkennungs-Cantrip
-- **Magie Aufheben** - Anti-Magie-Zauber für fortgeschrittene Magier
-- **Licht** - Beleuchtungs-Cantrip
-- **Nachricht** - Telepathische Kommunikation
-- **Gedankenkontrolle** - Mentale Dominationszauber
-- **Teleportation** - Fernreisezauber für hohe Stufen
-
-## Die Welt: Zeitalter des Goldes (1990)
-
-### **Geschichtlicher Hintergrund**
-
-Die Welt von Shadows of the City durchlebte mehrere Zeitalter:
-
-- **Ära der Dämmerung** (-2000 bis -1): Ursprüngliche Magie, Verwandlung von Elfen zu Orks durch die Dunkelheit
-- **Jahr 0**: Sieg der vereinten Völker über die Dunkelheit, Beginn der Zeitrechnung
-- **Zeitalter des Lichts** (0-1500): Wiederaufbau, elfische Führung, Institutionalisierung von Wissen
-- **Stellare Konjunktion** (1500): Magie-Flut über alle Völker
-- **Dunkles Zeitalter** (1500-1700): Hexenverfolgung, elfischer Rückzug
-- **Zeitalter der Vernunft** (1700-1900): Aufklärung, Technologie, Industrialisierung
-- **Zeitalter der Maschinen** (1900-1949): Industrialisierung, Großer Krieg, Atombombe
-- **Zeitalter der Kontrolle** (1950-1989): Elfische Rückkehr zur Macht, Rat des Gleichgewichts
-- **Zeitalter des Goldes** (1990): Aktuelle Spielzeit
-
-### **Politische Landschaft**
-
-#### **Staaten**
-- **Föderation der Vereinigten Städte (FVS)** - Demokratisch-kapitalistische Supermacht
-- **Das Nordimperium** - Autoritärer Industriestaat mit zentraler Planwirtschaft
-- **Der Südblock** - Föderation unabhängiger Staaten mit schwachen Zentralregierungen
-- **Die Freien Stadtstaaten** - Stadtökonomien und Bankennetzwerke
-
-#### **Organisationen**
-- **Rat des Gleichgewichts** - Geheimbund der Elfenhäuser zur Kontrolle des magischen Geflechts
-- **Ordo Lux Aeterna** - Religiös-politische Institution mit Inquisitionswurzeln
-- **Blutklingen** - Orkische Untergrundbewegung gegen elfische Kontrolle
-- **Die Erleuchteten** - Wissenschaftlich-technomagisches Netzwerk
-- **Kinder der Dunkelheit** - Esoterisch-religiöse Sekte
-
-#### **Industriekomplexe**
-- **Valkor Heavy Industries** - Waffen und Maschinen (Zwergisch)
-- **Auratech Global** - Energie und Biotechnologie (Elfisch)
-- **Helix Dynamics** - KI und Überwachungssysteme
-- **Krag & Sohn Bergbaugesellschaft** - Metalle und Energiekristalle
-- **NovoChem** - Agrartechnologie und Pharma
-
-### **Gesellschaftliche Struktur**
-
-- **Elfen** kontrollieren ~90% des globalen Vermögens, leben in hochgesicherten Turmdistrikten
-- **Menschen** stellen die Mehrheit, verteilen sich über Städte, Suburbs und Land
-- **Orks** sind ausgegrenzt, übernehmen gefährlichste und schmutzigste Arbeiten
-- **Zwerge** dominieren Schwerindustrie und Maschinenbau
-- **Andere Subspecies** existieren randständig oder im Untergrund
-
-### **Das Magische Geflecht**
-
-Das magische Geflecht der Welt ist durch den Atomschlag von 1949 beschädigt. Weitere Atomschläge könnten es irreparabel beschädigen und eine Rückkehr der Dunkelheit begünstigen. Der Rat des Gleichgewichts überwacht und kontrolliert magische Aktivitäten, um das fragile Gleichgewicht zu wahren.
-
-## Spielmechaniken
-
-Das Spiel erweitert Pathfinder2e um moderne Elemente:
-- **Urban Fantasy Setting** mit technologischen und magischen Elementen
-- **Soziale Klassen** und Rassenhierarchien als Spielmechanik
-- **Konzern-Politik** und Geheimdienstoperationen
-- **Magie im Schatten** - versteckte magische Praktiken in einer technologischen Welt
-
-## Projektstruktur
-
-Das Projekt ist modular organisiert mit klarer Trennung der Systeme:
-
-```
-ShadowsOfTheCity/
-├── classes/          # 9 Charakterklassen mit TOC.md
-├── races/            # 8 Spielerrassen mit TOC.md
-├── spells/           # 14 Zauber mit TOC.md (Cantrips bis hohe Stufen)
-├── lore/             # Weltgeschichte und Mächte
-├── rules/            # Spielmechaniken (Kernmechaniken implementiert)
-├── bestiary/         # Kreaturen und NPCs (Bestiary implementiert)
-├── gear/             # Waffen und Ausrüstung (Ausrüstungssystem implementiert)
-└── README.md         # Projektübersicht
+```bash
+git clone https://github.com/tomkpunkt/ShadowsOfTheCity.git
+cd ShadowsOfTheCity
+npm ci
+npx playwright install chromium
+npm run dev
 ```
 
-## Entwicklung
+Der Entwicklungsserver kompiliert den Content vor dem Start und beobachtet
+Änderungen unter `content/`. Standardmäßig ist die Anwendung unter
+`http://127.0.0.1:5173` erreichbar.
 
-Das Projekt folgt einem modularen, dokumentationsgetriebenen Entwicklungsansatz:
-- **Modularität**: Jedes System ist als unabhängiges Modul mit klaren Schnittstellen konzipiert
-- **Dokumentation**: Jeder Ordner enthält umfassende TOC.md-Dateien und Strukturdefinitionen
-- **Konsistenz**: Alle Klassen, Rassen und Zauber folgen einem einheitlichen Schema (siehe `classes/TOC.md`, `races/TOC.md`, `spells/TOC.md`)
-- **Balance**: Spielmechaniken sind sorgfältig ausbalanciert für faires und fesselndes Gameplay
-- **Setting-Integration**: Alle Inhalte sind perfekt in das Zeitalter des Goldes (1990) integriert
+## Qualitätssicherung
 
-## Changelog
+```bash
+npm run lint
+npm run typecheck
+npm run content:validate
+npm run content:compile
+npm run content:verify-generated
+npm run test
+npm run test:e2e
+npm run build
+npm run verify
+```
 
-| Version | Datum | Änderungen |
-|:--|:--|:--|
-| 1.1 | [Aktuell] | **Major Update - Kernsysteme implementiert** |
-| | | - **Regeln:** Kernmechaniken, Kampfsystem, Magiesystem, Technologie, Soziale Mechaniken |
-| | | - **Bestiary:** Kreaturentypen, menschliche NPCs, magische Wesen, technologische Kreaturen |
-| | | - **Ausrüstung:** Waffensystem, Rüstungssystem, Technologie, magische Gegenstände |
-| | | - **Bugfixes:** Typo in bestiary/creatues -> creatures korrigiert |
-| 1.0 | [Datum] | Initiale Erstellung mit 9 Klassen |
-| | | - Kampfklassen: Söldner, Wächter, Raufbold |
-| | | - Zauberwirker: Magier, Okkultist, Schamane |
-| | | - Unterstützer: Agent, Ingenieur, Mediziner |
+`npm run verify` ist der vollständige lokale Merge-Vertrag einschließlich
+Migration, Contentaudits, Architekturprüfung, Templates, Build, Browsertests
+und Formatprüfung. Weitere Einzelkommandos stehen in
+[`docs/testing.md`](docs/testing.md).
 
----
+## Content hinzufügen
 
-## Lizenz
+Kanonischer Content liegt als Markdown mit strikt validiertem YAML-Frontmatter
+unter `content/`. Neue handgeschriebene Dateien werden unter `content/custom/`
+angelegt:
 
-Dieses Projekt wird für Bildungs- und persönliche Zwecke entwickelt.
+```bash
+npm run content:new -- --type feat --id feat.example
+npm run content:validate -- --file content/custom/feat/feat.example.md
+npm run content:explain -- --id feat.example
+npm run content:references -- --id feat.example
+npm run content:compile
+```
+
+Zwölf kompilierbare Vorlagen decken Klassen, Klassenmerkmale, Abstammungen,
+Herkünfte, Hintergründe, Fertigkeiten, Talente, Zauber, Waffen, Rüstungen,
+Ausrüstung und Choices ab. Details stehen in
+[`docs/content-authoring.md`](docs/content-authoring.md) und
+[`docs/content-schema.md`](docs/content-schema.md).
+
+## Testbuild 0.1.0
+
+```bash
+npm ci
+npm run release:build
+npm run release:verify
+```
+
+Die Ausgabe liegt in `dist/` und `release/`:
+
+- `release/shadows-of-the-city-0.1.0.zip`
+- `release/shadows-of-the-city-0.1.0-checksums.txt`
+- `release/shadows-of-the-city-0.1.0-build-report.md`
+
+Das ZIP enthält nur Laufzeitdateien, den kompilierten Katalog, Manifest,
+Versions- und Buildinformationen sowie Lizenz-, Quellen- und
+Drittlizenzhinweise. Der genaue Ablauf steht in
+[`docs/release-process.md`](docs/release-process.md).
+
+## Architektur
+
+```text
+content
+  -> packages/shared
+  -> packages/content-compiler
+  -> generated catalog
+  -> packages/rules-engine
+  -> apps/character-builder
+```
+
+`npm run architecture:audit` verhindert verbotene Gegenimporte, Browserzugriffe
+in der Engine und Rohcontentimporte in der UI. Eine Übersicht steht in
+[`docs/architecture.md`](docs/architecture.md).
+
+## Bekannte Einschränkungen
+
+- 381 Textregeln sind nur teilweise strukturiert und 27 reine Anzeigeregeln;
+  ihre situativen Bestandteile werden nicht in permanente Werte eingerechnet.
+- Zwei fachlich ungeklärte Regeln sind mit Entscheidungs-ID blockiert.
+- 13 Entwurfsentitäten sind nicht auswählbar.
+- Balance oberhalb Stufe 1 und Bestiary-Werte aus dem isolierten
+  D&D-5e-Legacybestand benötigen weitere Spieltests.
+- Der Katalog ist für den Offline-Testbuild bewusst vollständig im
+  Web-Bundle enthalten.
+
+## Lizenz und Quellen
+
+Für das Projekt ist derzeit keine Open-Source-Lizenz erklärt. Es gilt der
+Hinweis in [`LICENSE.txt`](LICENSE.txt). Quellen- und Provenienzhinweise stehen
+in [`SOURCES.md`](SOURCES.md).

@@ -1,0 +1,45 @@
+# Changelog
+
+Alle wesentlichen Änderungen dieses Projekts werden hier dokumentiert.
+
+## 0.1.0 - 2026-07-30
+
+### Hinzugefügt
+
+- Deterministische, frameworkfreie Rules Engine für Werte, Kompetenzen, Grants,
+  Ressourcen, Bewegung, Aktionen, Angriffe, Zauber und Bedingungen
+- rekursives Voraussetzungssystem mit `all`, `any` und `not`
+- vollständige Herkunftsnachweise für berechnete Charakterwerte
+- Character-Format 2 mit Katalog-Hash und versionierter Legacy-Migration
+- zentrale Alias-Tabelle für zehn alte IDs
+- vollständig integrierter Character Builder mit Abschnittsstatus,
+  Kompatibilitätsanzeige, Import, Export, Speicherung und Druckansicht
+- zwölf validierte Contentvorlagen und CLI für Anlage, Prüfung, Erklärung und
+  Referenzanalyse
+- reproduzierbarer Testbuild mit ZIP, SHA-256-Prüfsumme und Buildbericht
+- Architektur-, Content-, Unit-, Integrations- und Browserprüfungen in CI
+
+### Geändert
+
+- 737 Entitäten in einen strikt validierten, stabil sortierten Katalog
+  überführt
+- zentrale Charakterwirkungen als 41 strukturierte Regelknoten formalisiert
+- alle 410 verbleibenden Textregeln eindeutig klassifiziert
+- Content-, Compiler-, Speicher- und UI-Fehlergrenzen ohne stille Fallbacks
+  gehärtet
+- produktive Berechnungslogik vollständig aus der UI entfernt
+
+### Entfernt
+
+- parallele produktive Legacy-Datenpfade und alte Charakterrepräsentationen
+- Source Maps, Tests, Screenshots, Caches und Zwischenstände aus dem
+  Release-Artefakt
+- nachweislich tote oder redundante Übergangspfade gemäß Cleanup-Bericht
+
+### Bekannte Einschränkungen
+
+- 381 teilweise strukturierte und 27 reine Anzeigetextregeln bleiben für
+  situative Wirkungen erhalten.
+- Zwei fachliche Regelfragen sind blockiert; 13 Entwurfsentitäten bleiben
+  gesperrt.
+- Balanceentscheidungen oberhalb Stufe 1 benötigen weitere Spieltests.

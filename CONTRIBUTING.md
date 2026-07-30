@@ -42,6 +42,22 @@ generierte Artefakte gehören in denselben Commit. Nutze kein
 `npm audit fix --force`, ohne das daraus entstehende Major-Upgrade separat zu
 prüfen.
 
+## Release-Kandidaten
+
+Ein Release-Kandidat wird ausschließlich aus einem geprüften Commit gebaut:
+
+```bash
+npm ci
+npm run verify
+npm run release:build
+npm run release:verify
+```
+
+`dist/` und `release/` sind generiert und werden nicht committed. Änderungen an
+Version, Katalog, Buildskript oder Release-Metadaten benötigen einen neuen
+Release-Build. Die vollständige Checkliste steht in
+`docs/release-process.md`.
+
 ## Pull Requests
 
 Beschreibe Motivation, fachliche Entscheidungen, Tests und verbleibende

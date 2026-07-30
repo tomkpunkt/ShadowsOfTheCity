@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { readFile, readdir } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const crcTable = Array.from({ length: 256 }, (_, index) => {
@@ -35,6 +35,18 @@ export const listFiles = async (directory: string): Promise<string[]> => {
     })
   );
   return nested.flat().sort((left, right) => left.localeCompare(right));
+};
+
+const releaseTextExtensions = new Set([".css", ".html", ".js", ".json", ".md", ".txt"]);
+
+export const normalizeReleaseTextFiles = async (directory: string): Promise<void> => {
+  for (const file of await listFiles(directory)) {
+    if (!releaseTextExtensions.has(path.extname(file).toLowerCase())) {
+      continue;
+    }
+    const source = await readFile(file, "utf8");
+    await writeFile(file, source.replace(/\r\n?/g, "\n"), "utf8");
+  }
 };
 
 export const createStoredZip = async (

@@ -490,7 +490,7 @@ begutachten lassen.
 | 10 - Bereinigung | complete | unnötigen Parallelbestand entfernen | alte Produktpfade entfernt oder mit belegter Migrationsfunktion ausdrücklich erhalten |
 | 11 - Architektur | complete | Abhängigkeitsrichtung automatisiert sichern | `architecture:audit` blockiert verbotene Imports zwischen Shared, Compiler, Engine und UI |
 | 12 - Laufzeit und Build | complete | klare Fehlergrenzen und reproduzierbarer Build | Katalog-, Import-, Engine- und Kompatibilitätsfehler sichtbar; stabiler Produktionsbuild ohne Source Maps |
-| 13 - Teststrategie | complete | Effekte, reale Builds und E2E vollständig prüfen | 75 Unit-/Integrationstests, fünf reale Charaktere und 18 Browserprüfungen |
+| 13 - Teststrategie | complete | Effekte, reale Builds und E2E vollständig prüfen | 76 Unit-/Integrationstests, fünf reale Charaktere und 18 Browserprüfungen |
 | 14 - Release 0.1.0 | complete | ZIP, Prüfsummen und Buildbericht | deterministisches Laufzeit-ZIP mit SHA-256, Metadaten und Quellenhinweisen |
 | 15 - CI | complete | vollständiger Release-Vertrag | alle Pflichtkommandos als sichtbare GitHub-Actions-Schritte |
 | 16 - Dokumentation | complete | Nutzer-, Authoring- und Architekturdokumente | README, Changelog, Fach- und Release-Dokumentation auf 0.1.0 aktualisiert |
@@ -651,7 +651,7 @@ Entscheidungen und Ergebnis:
 
 Prüfungen:
 
-- 75 Unit-/Integrationstests
+- 76 Unit-/Integrationstests
 - 18 Playwright-Prüfungen
 - Production- und Release-Build
 - `npm run release:verify`
@@ -686,7 +686,7 @@ Prüfungen:
 - Produktionsaudit mit 0 Schwachstellen
 - alle im Masterauftrag genannten Einzelkommandos
 - `npm run verify`
-- 75 Unit-/Integrationstests und 18 E2E-Prüfungen
+- 76 Unit-/Integrationstests und 18 E2E-Prüfungen
 - manuelle Sichtprüfung von Desktop-, Mobile-, Konflikt- und Katalogzuständen
 - `npm run release:build` und `npm run release:verify`
 

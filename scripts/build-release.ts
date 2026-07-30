@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 import { APP_VERSION, CHARACTER_FORMAT_VERSION, SCHEMA_VERSION } from "@sotc/shared";
 
-import { createStoredZip, sha256File } from "./release-utils.js";
+import { createStoredZip, normalizeReleaseTextFiles, sha256File } from "./release-utils.js";
 
 const execFileAsync = promisify(execFile);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -116,6 +116,7 @@ await writeFile(
   "utf8"
 );
 
+await normalizeReleaseTextFiles(dist);
 await writeFile(archivePath, await createStoredZip(dist, `shadows-of-the-city-${APP_VERSION}`));
 const checksum = await sha256File(archivePath);
 await writeFile(
@@ -136,7 +137,7 @@ await writeFile(
     `- Strukturierte Regeln: ${String(structuredRules)}\n` +
     `- Verbleibende Textregeln: ${String(textRules)}\n` +
     `- Blockierte Textregeln: ${String(blockedRules)}\n` +
-    `- Tests: Build-Pipeline mit Typecheck und 75 Unit-/Integrationstests erfolgreich\n` +
+    `- Tests: Build-Pipeline mit Typecheck und 76 Unit-/Integrationstests erfolgreich\n` +
     `- Build: statische Webanwendung erfolgreich\n` +
     `- Bekannte Einschränkungen: situative Textregeln werden angezeigt, aber nicht permanent eingerechnet; 13 Entwurfsentitäten bleiben gesperrt.\n`,
   "utf8"

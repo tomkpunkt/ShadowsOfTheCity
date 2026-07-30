@@ -1,0 +1,11 @@
+Shadows of the City - License Notice
+
+No open-source license has been declared for the original game text, setting,
+content catalog, application code, or visual design in this repository.
+
+All rights are reserved by their respective rights holders. No permission to
+copy, modify, publish, distribute, sublicense, or sell the project is granted
+by this notice.
+
+Third-party software remains subject to its own licenses. The release build
+contains a generated THIRD_PARTY_NOTICES.txt based on package-lock.json.

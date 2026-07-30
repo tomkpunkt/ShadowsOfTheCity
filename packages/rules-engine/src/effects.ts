@@ -253,14 +253,11 @@ export const applyEffect = (
           accumulator.grantedActionIds.add(effect.id);
           return;
       }
+      return;
     case "resource-rule": {
       const current = context.resources.get(effect.resourceId) ?? 0;
       const operation =
-        effect.operation === "set"
-          ? "set"
-          : effect.operation === "add"
-            ? "add"
-            : effect.operation;
+        effect.operation === "set" ? "set" : effect.operation === "add" ? "add" : effect.operation;
       const next = applyValueOperation(current, operation, effect.value);
       context.resources.set(effect.resourceId, next);
       accumulator.resourceChanges.push({

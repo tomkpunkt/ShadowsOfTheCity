@@ -8,7 +8,11 @@
     "check-generated": "tsx src/cli.ts check-generated",
     "migrate": "tsx src/migrate.ts",
     "migrate:verify": "tsx src/verify-migration.ts",
+    "new": "tsx src/cli.ts new",
+    "explain": "tsx src/cli.ts explain",
+    "references": "tsx src/cli.ts references",
     "report": "tsx src/cli.ts report",
+    "templates": "tsx src/cli.ts templates",
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "validate": "tsx src/cli.ts validate"

@@ -1,8 +1,8 @@
-import { readFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { compileContent, stableStringify } from "./compiler.js";
+import { collectReferences, compileContent, stableStringify } from "./compiler.js";
 import { ContentValidationError, type ValidationIssue } from "./validation.js";
 
 const packageDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -32,6 +32,14 @@ const printSummary = (result: {
 };
 
 const command = process.argv[2] ?? "validate";
+const argument = (name: string): string | undefined => {
+  const direct = process.argv.find((value) => value.startsWith(`${name}=`));
+  if (direct !== undefined) {
+    return direct.slice(name.length + 1);
+  }
+  const index = process.argv.indexOf(name);
+  return index < 0 ? undefined : process.argv[index + 1];
+};
 
 try {
   if (command === "report") {
@@ -81,12 +89,75 @@ try {
       );
     }
     console.log(`Generated catalog is current (${result.catalog.contentHash}).`);
+  } else if (command === "new") {
+    const type = argument("--type");
+    const id = argument("--id");
+    if (type === undefined || id === undefined) {
+      throw new Error("Usage: content:new -- --type feat --id feat.example");
+    }
+    const templatePath = path.join(contentDirectory, "templates", `${type}.md`);
+    const source = await readFile(templatePath, "utf8");
+    const marker = `id: template.${type}`;
+    if (!source.includes(marker)) {
+      throw new Error(`Template ${type}.md does not contain ${marker}.`);
+    }
+    const target = path.join(contentDirectory, "custom", type, `${id}.md`);
+    await mkdir(path.dirname(target), { recursive: true });
+    await writeFile(target, source.replace(marker, `id: ${id}`), {
+      encoding: "utf8",
+      flag: "wx"
+    });
+    console.log(`Created ${path.relative(repositoryRoot, target)} from ${type}.md.`);
+  } else if (command === "templates") {
+    const result = await compileContent({
+      contentDirectory,
+      includeTemplates: true
+    });
+    const templateFiles = result.manifest.sourceFiles.filter((file) =>
+      file.startsWith("templates/")
+    );
+    if (templateFiles.length !== 12) {
+      throw new Error(`Expected 12 valid templates, found ${String(templateFiles.length)}.`);
+    }
+    console.log(`Validated ${String(templateFiles.length)} content templates.`);
+  } else if (command === "explain" || command === "references") {
+    const id = argument("--id");
+    if (id === undefined) {
+      throw new Error(`Usage: content:${command} -- --id feat.example`);
+    }
+    const result = await compileContent({ contentDirectory });
+    const entity = result.catalog.entities.find((candidate) => candidate.id === id);
+    if (entity === undefined) {
+      throw new Error(`Unknown content ID: ${id}`);
+    }
+    if (command === "explain") {
+      console.log(stableStringify(entity).trimEnd());
+    } else {
+      const outgoing = collectReferences(entity);
+      const incoming = result.catalog.entities
+        .filter((candidate) => collectReferences(candidate).includes(id))
+        .map((candidate) => candidate.id)
+        .sort((left, right) => left.localeCompare(right));
+      console.log(`Outgoing (${String(outgoing.length)}): ${outgoing.join(", ") || "-"}`);
+      console.log(`Incoming (${String(incoming.length)}): ${incoming.join(", ") || "-"}`);
+    }
   } else if (command === "compile" || command === "validate") {
     const result = await compileContent({
       contentDirectory,
       outputDirectory,
       writeOutput: command === "compile"
     });
+    const requestedFile = argument("--file");
+    if (requestedFile !== undefined) {
+      const relative = path
+        .relative(contentDirectory, path.resolve(repositoryRoot, requestedFile))
+        .split(path.sep)
+        .join("/");
+      if (!result.manifest.sourceFiles.includes(relative)) {
+        throw new Error(`Validated file is outside the content catalog: ${requestedFile}`);
+      }
+      console.log(`Validated file: ${relative}`);
+    }
     printSummary(result);
   } else {
     throw new Error(`Unknown command: ${command}`);

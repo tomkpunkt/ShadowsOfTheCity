@@ -1,5 +1,27 @@
 # Content Authoring
 
+## Vorlagen und CLI
+
+Neue handgeschriebene Inhalte liegen unter `content/custom/<typ>/`. Sie werden
+vom normalen Compiler gelesen und durch `content:migrate` erhalten.
+
+```bash
+npm run content:new -- --type feat --id feat.example
+npm run content:validate -- --file content/custom/feat/feat.example.md
+npm run content:explain -- --id feat.example
+npm run content:references -- --id feat.example
+npm run content:templates
+```
+
+`content:new` kopiert eine der zwölf geprüften Vorlagen aus
+`content/templates/`. Vorlagen sind kein Produktinhalt: Der normale Katalog
+überspringt sie, `content:templates` kompiliert sie jedoch gemeinsam mit allen
+737 realen Entitäten. Eine bereits vorhandene Zieldatei wird nie überschrieben.
+
+Vor dem Aktivieren müssen `summary`, `rulesText`, Voraussetzungen, Effekte,
+Klassifikation und Referenzen redaktionell geprüft werden. Aktive Inhalte
+benötigen mindestens `editorialStatus: reviewed`.
+
 ## Arbeitsablauf
 
 1. Lege eine Markdown-Datei im passenden Unterordner von `content/` an.

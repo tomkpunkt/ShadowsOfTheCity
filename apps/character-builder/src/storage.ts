@@ -59,7 +59,7 @@ export interface CharacterReadResult {
   sourceFormatVersion: number | "unknown";
 }
 
-export interface ImportResult extends CharacterReadResult {}
+export type ImportResult = CharacterReadResult;
 
 export interface StorageLike {
   getItem(key: string): string | null;

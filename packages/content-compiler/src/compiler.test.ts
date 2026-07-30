@@ -78,6 +78,20 @@ describe("compileContent", () => {
     expect(firstCatalog).toBe(secondCatalog);
   });
 
+  it("excludes templates from the product catalog unless explicitly requested", async () => {
+    const contentDirectory = await createFixture({
+      "skills/athletics.md": skill(),
+      "templates/invalid.md": "This is intentionally not a content entity."
+    });
+
+    const product = await compileContent({ contentDirectory });
+
+    expect(product.report.filesScanned).toBe(1);
+    await expect(
+      compileContent({ contentDirectory, includeTemplates: true })
+    ).rejects.toBeInstanceOf(ContentValidationError);
+  });
+
   it("rejects a missing required field", async () => {
     const contentDirectory = await createFixture({
       "invalid.md": skill().replace("attribute: strength\n", "")

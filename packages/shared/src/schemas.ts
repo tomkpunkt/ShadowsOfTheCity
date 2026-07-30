@@ -189,13 +189,7 @@ export const RuleAutomationSchema = z.enum([
   "duplicate"
 ]);
 
-export const ValueOperationSchema = z.enum([
-  "set",
-  "add",
-  "minimum",
-  "maximum",
-  "replace"
-]);
+export const ValueOperationSchema = z.enum(["set", "add", "minimum", "maximum", "replace"]);
 
 const ValueTargetSchema = z.enum([
   ...ModifierTargetSchema.options,
@@ -261,15 +255,7 @@ const StructuredProficiencyEffectSchema = z
 const GrantEffectSchema = z
   .object({
     kind: z.literal("grant"),
-    grantType: z.enum([
-      "feat",
-      "feature",
-      "spell",
-      "item",
-      "language",
-      "choice",
-      "action"
-    ]),
+    grantType: z.enum(["feat", "feature", "spell", "item", "language", "choice", "action"]),
     id: EntityIdSchema,
     quantity: z.number().int().positive().default(1)
   })
@@ -321,7 +307,10 @@ const AttackRuleEffectSchema = z
     selector: EntityIdSchema.optional(),
     attackModifier: z.number().optional(),
     damageModifier: z.number().optional(),
-    damageDice: z.string().regex(/^\d+d(?:4|6|8|10|12)$/).optional(),
+    damageDice: z
+      .string()
+      .regex(/^\d+d(?:4|6|8|10|12)$/)
+      .optional(),
     damageType: EntityIdSchema.optional(),
     weaponTraitId: EntityIdSchema.optional(),
     range: z.number().positive().optional(),
@@ -542,9 +531,7 @@ export const CharacterDocumentSchema = z
     attributeBoosts: z.array(AttributeIdSchema),
     inventoryIds: z.array(EntityIdSchema),
     equippedItemIds: z.array(EntityIdSchema).default([]),
-    options: z
-      .record(EntityIdSchema, z.union([z.string(), z.number(), z.boolean()]))
-      .default({}),
+    options: z.record(EntityIdSchema, z.union([z.string(), z.number(), z.boolean()])).default({}),
     notes: z.string().optional(),
     migrations: z.array(CharacterMigrationSchema).default([]),
     legacyValues: z.record(z.string(), z.unknown()).default({})

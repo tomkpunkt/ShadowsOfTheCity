@@ -486,9 +486,9 @@ begutachten lassen.
 | 6 - Rules Engine | complete | deterministische vollständige Auswertung | Werte, Proficiencies, Grants, Choices, Zauber, Angriffe, Inventar, Ressourcen, Issues und Erklärungen |
 | 7 - Legacy-Charaktere | complete | versionierte verlustarme Migration | Format 0/1/2, 10 Aliase, Konflikterhalt und vier Kompatibilitätszustände unit- und browsergetestet |
 | 8 - Builder-Integration | complete | UI ohne eigene Regelberechnung | Engine-Abschnittsstatus, Kompatibilität, v2-Speicherung, Ausrüstung und Blockerhinweise integriert |
-| 9 - Contenthärtung | pending | Templates, Versionierung und CLI | noch offen |
-| 10 - Bereinigung | pending | unnötigen Parallelbestand entfernen | noch offen |
-| 11 - Architektur | pending | Abhängigkeitsrichtung automatisiert sichern | noch offen |
+| 9 - Contenthärtung | complete | Templates, Versionierung und CLI | 12 kompilierbare Vorlagen, verlustsicherer Custom-Pfad und vier Authoring-Kommandos |
+| 10 - Bereinigung | complete | unnötigen Parallelbestand entfernen | alte Produktpfade entfernt oder mit belegter Migrationsfunktion ausdrücklich erhalten |
+| 11 - Architektur | complete | Abhängigkeitsrichtung automatisiert sichern | `architecture:audit` blockiert verbotene Imports zwischen Shared, Compiler, Engine und UI |
 | 12 - Laufzeit und Build | pending | klare Fehlergrenzen und reproduzierbarer Build | noch offen |
 | 13 - Teststrategie | pending | Effekte, reale Builds und E2E vollständig prüfen | noch offen |
 | 14 - Release 0.1.0 | pending | ZIP, Prüfsummen und Buildbericht | noch offen |

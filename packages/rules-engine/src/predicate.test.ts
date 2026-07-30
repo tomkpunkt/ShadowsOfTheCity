@@ -107,9 +107,7 @@ describe("predicate evaluation", () => {
   });
 
   it("returns expected and actual values for failed upper bounds", () => {
-    expect(
-      evaluatePredicate({ characterLevel: { lte: 4 } }, context)
-    ).toMatchObject({
+    expect(evaluatePredicate({ characterLevel: { lte: 4 } }, context)).toMatchObject({
       met: false,
       failures: [{ code: "LEVEL_TOO_HIGH", expected: 4, actual: 5 }]
     });

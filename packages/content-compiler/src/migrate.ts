@@ -198,6 +198,27 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
   return children.flat().sort((left, right) => left.localeCompare(right));
 };
 
+const readPreservedFiles = async (
+  directory: string
+): Promise<Array<{ relativePath: string; source: string }>> => {
+  const entries = await readdir(directory, { withFileTypes: true }).catch(() => []);
+  const nested = await Promise.all(
+    entries.map(async (entry): Promise<Array<{ relativePath: string; source: string }>> => {
+      const absolutePath = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        return (await readPreservedFiles(absolutePath)).map((file) => ({
+          relativePath: path.join(entry.name, file.relativePath),
+          source: file.source
+        }));
+      }
+      return entry.isFile()
+        ? [{ relativePath: entry.name, source: await readFile(absolutePath, "utf8") }]
+        : [];
+    })
+  );
+  return nested.flat().sort((left, right) => left.relativePath.localeCompare(right.relativePath));
+};
+
 const allEntities: ContentEntity[] = [];
 const entitiesById = new Map<string, ContentEntity>();
 const manifestByPath = new Map<string, ManifestSource>();
@@ -518,23 +539,25 @@ const addEntity = (
     summary = `${input.name}: ${summary}`;
   }
   const sourceRulesText = typeof input["rulesText"] === "string" ? input["rulesText"] : body.trim();
-  const candidate = applyFormalization(ContentEntitySchema.parse({
-    schemaVersion: SCHEMA_VERSION,
-    source: sourceId,
-    status: "legacy",
-    traits: [],
-    references: [],
-    ...input,
-    summary,
-    rulesText: sourceRulesText.length >= 20 ? sourceRulesText : summary,
-    editorialStatus:
-      typeof input["editorialStatus"] === "string" ? input["editorialStatus"] : "reviewed",
-    description: body.trim(),
-    legacy: {
-      paths: normalizedPaths,
-      notes: options.warnings ?? []
-    }
-  }));
+  const candidate = applyFormalization(
+    ContentEntitySchema.parse({
+      schemaVersion: SCHEMA_VERSION,
+      source: sourceId,
+      status: "legacy",
+      traits: [],
+      references: [],
+      ...input,
+      summary,
+      rulesText: sourceRulesText.length >= 20 ? sourceRulesText : summary,
+      editorialStatus:
+        typeof input["editorialStatus"] === "string" ? input["editorialStatus"] : "reviewed",
+      description: body.trim(),
+      legacy: {
+        paths: normalizedPaths,
+        notes: options.warnings ?? []
+      }
+    })
+  );
   if (entitiesById.has(candidate.id)) {
     throw new Error(`Migration produced duplicate ID ${candidate.id}`);
   }
@@ -595,10 +618,7 @@ const parseLevel = (value: string, fallback = 1): number => {
 
 const textEffect = (
   text: string,
-  classification:
-    | "partially-structured"
-    | "display-only"
-    | "requires-rules-decision",
+  classification: "partially-structured" | "display-only" | "requires-rules-decision",
   decisionId?: string
 ): Record<string, unknown> => ({
   kind: "text",
@@ -3041,6 +3061,12 @@ Entscheidung im Manifest stehen.
 const run = async (): Promise<void> => {
   const aliasesPath = path.join(contentDirectory, "legacy-aliases.json");
   const aliasesSource = await readFile(aliasesPath, "utf8").catch(() => "{}\n");
+  const preservedDirectories = await Promise.all(
+    ["templates", "custom"].map(async (name) => ({
+      name,
+      files: await readPreservedFiles(path.join(contentDirectory, name))
+    }))
+  );
   const sourceFiles = await findMarkdownFiles(repositoryRoot);
   const documents = await Promise.all(
     sourceFiles.map(async (absolutePath) => {
@@ -3069,6 +3095,13 @@ const run = async (): Promise<void> => {
   await rm(resolvedContent, { recursive: true, force: true });
   await mkdir(resolvedContent, { recursive: true });
   await writeFile(aliasesPath, aliasesSource, "utf8");
+  for (const directory of preservedDirectories) {
+    for (const file of directory.files) {
+      const target = path.join(resolvedContent, directory.name, file.relativePath);
+      await mkdir(path.dirname(target), { recursive: true });
+      await writeFile(target, file.source, "utf8");
+    }
+  }
   await Promise.all(
     allEntities.sort((left, right) => left.id.localeCompare(right.id)).map(writeEntity)
   );

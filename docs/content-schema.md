@@ -1,5 +1,27 @@
 # Content-Schema
 
+## Regelknoten in 0.1.0
+
+Das weiterhin rückwärtskompatible Content-Schema 1 unterstützt ein einziges
+rekursives Prädikatmodell mit `all`, `any`, `not` sowie Stufen-, Attribut-,
+Kompetenz-, Identitäts-, Trait-, Talent-, Merkmal-, Zauber-, Gegenstands-,
+Ausrüstungs-, Choice-, Options- und Ressourcenbedingungen.
+
+Neue Inhalte verwenden bevorzugt:
+
+- `value` für Setzen, Ersetzen, Addieren, Minimum und Maximum,
+- `derived` für nachvollziehbare Ableitungen,
+- `proficiency-rule` für `set`, `at-least` und `increase`,
+- `grant` für Talente, Merkmale, Zauber, Gegenstände, Sprachen, Choices und
+  Aktionen,
+- `resource-rule`, `movement`, `action`, `attack-rule` und
+  `spellcasting-rule` für ihre jeweiligen Domänen,
+- `conditional` mit demselben Prädikatmodell.
+
+Ein `text`-Effekt benötigt genau eine Automationsklassifikation.
+`requires-rules-decision` benötigt zusätzlich eine syntaktisch gültige
+`decisionId`. Entscheidungs-IDs sind keine Katalogreferenzen.
+
 ## Geltungsbereich
 
 Der kanonische Authoring-Layer liegt unter `content/`. Jede Markdown-Datei

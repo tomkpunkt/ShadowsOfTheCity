@@ -287,10 +287,7 @@ export const evaluatePredicate = (input: unknown, context: EngineContext): Predi
       : failure(
           predicate,
           "MISSING_PREVIOUS_CHOICE",
-          `Benötigt eine frühere Auswahl in ${idName(
-            context,
-            predicate.previousChoice.choiceId
-          )}.`,
+          `Benötigt eine frühere Auswahl in ${idName(context, predicate.previousChoice.choiceId)}.`,
           predicate.previousChoice.optionId
         );
   }

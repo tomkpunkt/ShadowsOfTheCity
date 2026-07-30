@@ -22,6 +22,7 @@ export interface CompileOptions {
   contentDirectory: string;
   outputDirectory?: string;
   writeOutput?: boolean;
+  includeTemplates?: boolean;
 }
 
 export interface CompileResult {
@@ -171,12 +172,14 @@ const parseEntityFile = async (
   }
 
   const migratedData = migrateContentData(parsedMatter.data);
+  const migratedName =
+    typeof migratedData["name"] === "string" ? migratedData["name"] : "Content entity";
   const validation = ContentEntitySchema.safeParse({
     ...migratedData,
     summary:
       typeof migratedData["summary"] === "string"
         ? migratedData["summary"]
-        : deriveSummary(String(migratedData["name"] ?? "Entität"), parsedMatter.content),
+        : deriveSummary(migratedName, parsedMatter.content),
     description: parsedMatter.content.trim()
   });
   if (!validation.success) {
@@ -210,12 +213,7 @@ const readAliases = async (
   try {
     input = JSON.parse(await readFile(aliasFile, "utf8")) as unknown;
   } catch (error) {
-    if (
-      error !== null &&
-      typeof error === "object" &&
-      "code" in error &&
-      error.code === "ENOENT"
-    ) {
+    if (error !== null && typeof error === "object" && "code" in error && error.code === "ENOENT") {
       return { aliases: {}, issues: [] };
     }
     return {
@@ -246,7 +244,11 @@ const readAliases = async (
   const aliases: Record<string, string> = {};
   const issues: ValidationIssue[] = [];
   for (const [alias, target] of Object.entries(input)) {
-    if (!EntityIdSchema.safeParse(alias).success || !EntityIdSchema.safeParse(target).success) {
+    if (
+      typeof target !== "string" ||
+      !EntityIdSchema.safeParse(alias).success ||
+      !EntityIdSchema.safeParse(target).success
+    ) {
       issues.push({
         code: "INVALID_LEGACY_ALIAS_ID",
         severity: "error",
@@ -613,7 +615,13 @@ const countTypes = (entities: ContentEntity[]): Record<string, number> =>
   );
 
 export const compileContent = async (options: CompileOptions): Promise<CompileResult> => {
-  const files = await findMarkdownFiles(options.contentDirectory);
+  const templatesDirectory = path.join(options.contentDirectory, "templates");
+  const files = (await findMarkdownFiles(options.contentDirectory)).filter((file) =>
+    options.includeTemplates === true &&
+    (file === templatesDirectory || file.startsWith(`${templatesDirectory}${path.sep}`))
+      ? true
+      : !file.startsWith(`${templatesDirectory}${path.sep}`)
+  );
   const parseResults = await Promise.all(
     files.map((file) => parseEntityFile(file, options.contentDirectory))
   );

@@ -1,5 +1,20 @@
 # Architektur
 
+Die erlaubte Abhängigkeitsrichtung lautet:
+
+```text
+Legacy- und Custom-Content
+  -> gemeinsame Schemas
+  -> Content Compiler
+  -> generierter Katalog
+  -> Rules Engine
+  -> Character Builder
+```
+
+`npm run architecture:audit` prüft produktive TypeScript-Importe auf
+Gegenrichtungen. Insbesondere darf die Rules Engine keine React-, Browser-,
+Compiler- oder UI-Abhängigkeit besitzen; die UI darf keinen Rohcontent laden.
+
 ## Schichten
 
 ```mermaid

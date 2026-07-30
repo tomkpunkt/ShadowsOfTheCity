@@ -47,11 +47,29 @@ import {
   attributeLabels,
   formatContentStatus,
   formatEntityType,
+  formatItemAvailability,
+  formatItemCategory,
+  formatItemOrigin,
+  formatItemQuality,
+  formatItemSubcategory,
   formatRequirementFailure,
   formatSave,
+  formatTechnologyLevel,
   formatValidationIssue,
   validationStateLabels
 } from "./i18n/de.js";
+import {
+  countActiveItemFilters,
+  emptyItemFilters,
+  isItemEntity,
+  itemMatchesFilters,
+  sortItems,
+  uniqueItemValues,
+  type ItemCatalogFilters,
+  type ItemEntity,
+  type ItemGrouping,
+  type ItemSort
+} from "./item-catalog.js";
 import {
   downloadCharacter,
   importCharacter,
@@ -251,6 +269,172 @@ const SearchBar = ({
     )}
   </div>
 );
+
+const ItemCatalogControls = ({
+  items,
+  filters,
+  onFiltersChange,
+  sort,
+  onSortChange,
+  grouping,
+  onGroupingChange,
+  subgroupByTechnology,
+  onSubgroupByTechnologyChange
+}: {
+  items: ItemEntity[];
+  filters: ItemCatalogFilters;
+  onFiltersChange: (filters: ItemCatalogFilters) => void;
+  sort: ItemSort;
+  onSortChange: (sort: ItemSort) => void;
+  grouping: ItemGrouping;
+  onGroupingChange: (grouping: ItemGrouping) => void;
+  subgroupByTechnology: boolean;
+  onSubgroupByTechnologyChange: (value: boolean) => void;
+}) => {
+  const categories = uniqueItemValues(items, "category");
+  const subcategories = uniqueItemValues(items, "subcategory");
+  const technologies = uniqueItemValues(items, "technologyLevel");
+  const availabilities = uniqueItemValues(items, "availability");
+  const qualities = uniqueItemValues(items, "quality");
+  const origins = [...new Set(items.flatMap((item) => item.origins))].sort((left, right) =>
+    formatItemOrigin(left).localeCompare(formatItemOrigin(right), "de")
+  );
+  const traits = [
+    ...new Set(items.flatMap((item) => item.traits.filter((trait) => trait !== "trait.legacy")))
+  ].sort((left, right) => entityName(left).localeCompare(entityName(right), "de"));
+  const setFilter = (key: keyof ItemCatalogFilters, value: string): void => {
+    onFiltersChange({ ...filters, [key]: value });
+  };
+  const select = (
+    label: string,
+    key: keyof ItemCatalogFilters,
+    values: string[],
+    formatter: (value: string) => string
+  ): ReactNode =>
+    values.length === 0 ? null : (
+      <label>
+        <span>{label}</span>
+        <select
+          aria-label={label}
+          value={filters[key]}
+          onChange={(event) => setFilter(key, event.target.value)}
+        >
+          <option value="all">Alle</option>
+          {values.map((value) => (
+            <option key={value} value={value}>
+              {formatter(value)}
+            </option>
+          ))}
+        </select>
+      </label>
+    );
+  return (
+    <div className="catalog-controls" data-testid="item-catalog-controls">
+      <div className="catalog-controls__selectors">
+        {select("Hauptkategorie", "category", categories, (value) =>
+          formatItemCategory(value as ItemEntity["category"])
+        )}
+        {select("Unterkategorie", "subcategory", subcategories, (value) =>
+          formatItemSubcategory(value as ItemEntity["subcategory"])
+        )}
+        {select("Technologieniveau", "technologyLevel", technologies, (value) =>
+          formatTechnologyLevel(value as ItemEntity["technologyLevel"])
+        )}
+        {select("Verfügbarkeit", "availability", availabilities, (value) =>
+          formatItemAvailability(value as ItemEntity["availability"])
+        )}
+        {select("Herkunft", "origin", origins, (value) =>
+          formatItemOrigin(value as ItemEntity["origins"][number])
+        )}
+        {select("Qualität", "quality", qualities, (value) =>
+          formatItemQuality(value as NonNullable<ItemEntity["quality"]>)
+        )}
+        {select("Merkmal", "trait", traits, entityName)}
+        {items.length === 0 ? null : (
+          <>
+            <label>
+              <span>Stufe von</span>
+              <input
+                aria-label="Mindeststufe"
+                type="number"
+                min="0"
+                value={filters.minLevel}
+                onChange={(event) => setFilter("minLevel", event.target.value)}
+              />
+            </label>
+            <label>
+              <span>Stufe bis</span>
+              <input
+                aria-label="Höchststufe"
+                type="number"
+                min="0"
+                value={filters.maxLevel}
+                onChange={(event) => setFilter("maxLevel", event.target.value)}
+              />
+            </label>
+            <label>
+              <span>Preis bis</span>
+              <input
+                aria-label="Höchstpreis"
+                type="number"
+                min="0"
+                value={filters.maxPrice}
+                onChange={(event) => setFilter("maxPrice", event.target.value)}
+              />
+            </label>
+            <label>
+              <span>Last bis</span>
+              <input
+                aria-label="Höchstlast"
+                type="number"
+                min="0"
+                step="0.1"
+                value={filters.maxBulk}
+                onChange={(event) => setFilter("maxBulk", event.target.value)}
+              />
+            </label>
+          </>
+        )}
+      </div>
+      <div className="catalog-controls__view">
+        <label>
+          <span>Sortierung</span>
+          <select
+            aria-label="Sortierung"
+            value={sort}
+            onChange={(event) => onSortChange(event.target.value as ItemSort)}
+          >
+            <option value="name">Name</option>
+            <option value="level">Stufe</option>
+            <option value="price-asc">Preis aufsteigend</option>
+            <option value="price-desc">Preis absteigend</option>
+            <option value="bulk">Last</option>
+          </select>
+        </label>
+        <label>
+          <span>Gruppierung</span>
+          <select
+            aria-label="Gruppierung"
+            value={grouping}
+            onChange={(event) => onGroupingChange(event.target.value as ItemGrouping)}
+          >
+            <option value="category">Hauptkategorie</option>
+            <option value="subcategory">Unterkategorie</option>
+            <option value="none">Keine</option>
+          </select>
+        </label>
+        <label className="catalog-controls__toggle">
+          <input
+            type="checkbox"
+            checked={subgroupByTechnology}
+            onChange={(event) => onSubgroupByTechnologyChange(event.target.checked)}
+          />
+          Nach Technologie unterteilen
+        </label>
+      </div>
+    </div>
+  );
+};
 
 const EntitySelection = ({
   title,
@@ -1050,15 +1234,114 @@ const EquipmentSelection = ({
 }) => {
   const [search, setSearch] = useState("");
   const [type, setType] = useState("all");
-  const visible = candidates.filter(
-    (entity) =>
-      (type === "all" || entity.type === type) &&
-      searchableEntityText(entity, (id) => entities.get(id)?.name).includes(
-        search.toLocaleLowerCase("de")
-      )
+  const [filters, setFilters] = useState<ItemCatalogFilters>(emptyItemFilters);
+  const [sort, setSort] = useState<ItemSort>("name");
+  const [grouping, setGrouping] = useState<ItemGrouping>("category");
+  const [subgroupByTechnology, setSubgroupByTechnology] = useState(false);
+  const items = candidates.filter(isItemEntity).filter((entity) => entity.status !== "draft");
+  const visible = sortItems(
+    items.filter(
+      (entity) =>
+        (type === "all" || entity.type === type) &&
+        itemMatchesFilters(entity, filters) &&
+        searchableEntityText(entity, (id) => entities.get(id)?.name).includes(
+          search.toLocaleLowerCase("de")
+        )
+    ),
+    sort
   );
+  const activeFilters =
+    countActiveItemFilters(filters) + Number(type !== "all") + Number(search.length > 0);
+  const reset = (): void => {
+    setSearch("");
+    setType("all");
+    setFilters(emptyItemFilters());
+  };
+  const cards = (groupItems: ItemEntity[]): ReactNode => (
+    <div className="entity-grid">
+      {groupItems.map((entity) => (
+        <EntityCard
+          key={entity.id}
+          entity={entity}
+          selected={selectedIds.includes(entity.id)}
+          onSelect={() => onToggle(entity.id)}
+          onDetails={() => onDetails(entity.id)}
+        />
+      ))}
+    </div>
+  );
+  const grouped =
+    grouping === "none"
+      ? cards(visible)
+      : [
+          ...new Set(
+            visible.map((item) => (grouping === "category" ? item.category : item.subcategory))
+          )
+        ]
+          .sort((left, right) =>
+            (grouping === "category"
+              ? formatItemCategory(left as ItemEntity["category"])
+              : formatItemSubcategory(left as ItemEntity["subcategory"])
+            ).localeCompare(
+              grouping === "category"
+                ? formatItemCategory(right as ItemEntity["category"])
+                : formatItemSubcategory(right as ItemEntity["subcategory"]),
+              "de"
+            )
+          )
+          .map((groupValue) => {
+            const categoryItems = visible.filter((item) =>
+              grouping === "category"
+                ? item.category === groupValue
+                : item.subcategory === groupValue
+            );
+            return (
+              <section
+                className="catalog-group"
+                key={groupValue}
+                data-category={grouping === "category" ? groupValue : undefined}
+                data-subcategory={grouping === "subcategory" ? groupValue : undefined}
+              >
+                <header>
+                  <h3>
+                    {grouping === "category"
+                      ? formatItemCategory(groupValue as ItemEntity["category"])
+                      : formatItemSubcategory(groupValue as ItemEntity["subcategory"])}
+                  </h3>
+                  <span>{categoryItems.length}</span>
+                </header>
+                {subgroupByTechnology
+                  ? [...new Set(categoryItems.map((item) => item.technologyLevel))]
+                      .sort((left, right) =>
+                        formatTechnologyLevel(left).localeCompare(
+                          formatTechnologyLevel(right),
+                          "de"
+                        )
+                      )
+                      .map((technology) => {
+                        const technologyItems = categoryItems.filter(
+                          (item) => item.technologyLevel === technology
+                        );
+                        return (
+                          <section
+                            className="catalog-subgroup"
+                            key={technology}
+                            data-technology={technology}
+                          >
+                            <h4>
+                              {formatTechnologyLevel(technology)}
+                              <span>{technologyItems.length}</span>
+                            </h4>
+                            {cards(technologyItems)}
+                          </section>
+                        );
+                      })
+                  : cards(categoryItems)}
+              </section>
+            );
+          });
   return (
-    <section className="workspace-section">
+    <section className="workspace-section" data-testid="equipment-catalog">
       <header className="section-heading">
         <div>
           <h2>Ausrüstung</h2>
@@ -1070,14 +1353,7 @@ const EquipmentSelection = ({
         <SearchBar
           value={search}
           onChange={setSearch}
-          onReset={
-            search.length === 0 && type === "all"
-              ? undefined
-              : () => {
-                  setSearch("");
-                  setType("all");
-                }
-          }
+          onReset={activeFilters === 0 ? undefined : reset}
         />
         <div className="segmented-control">
           {[
@@ -1097,17 +1373,27 @@ const EquipmentSelection = ({
           ))}
         </div>
       </div>
-      <div className="entity-grid">
-        {visible.map((entity) => (
-          <EntityCard
-            key={entity.id}
-            entity={entity}
-            selected={selectedIds.includes(entity.id)}
-            onSelect={() => onToggle(entity.id)}
-            onDetails={() => onDetails(entity.id)}
-          />
-        ))}
-      </div>
+      <ItemCatalogControls
+        items={items}
+        filters={filters}
+        onFiltersChange={setFilters}
+        sort={sort}
+        onSortChange={setSort}
+        grouping={grouping}
+        onGroupingChange={setGrouping}
+        subgroupByTechnology={subgroupByTechnology}
+        onSubgroupByTechnologyChange={setSubgroupByTechnology}
+      />
+      {activeFilters === 0 ? null : (
+        <div className="active-filters">
+          <Filter size={15} />
+          {String(activeFilters)} aktive {activeFilters === 1 ? "Eingrenzung" : "Eingrenzungen"}
+        </div>
+      )}
+      <div className="catalog-groups">{grouped}</div>
+      {visible.length === 0 ? (
+        <p className="empty-state">Keine Gegenstände entsprechen den gewählten Filtern.</p>
+      ) : null}
     </section>
   );
 };
@@ -1117,21 +1403,121 @@ const Compendium = ({ onDetails }: { onDetails: (id: string) => void }) => {
   const [type, setType] = useState<ContentEntity["type"] | "all">("all");
   const [status, setStatus] = useState<ContentEntity["status"] | "all">("all");
   const [limit, setLimit] = useState(96);
+  const [itemFilters, setItemFilters] = useState<ItemCatalogFilters>(emptyItemFilters);
+  const [itemSort, setItemSort] = useState<ItemSort>("name");
+  const [itemGrouping, setItemGrouping] = useState<ItemGrouping>("none");
+  const [subgroupByTechnology, setSubgroupByTechnology] = useState(false);
+  const itemCandidates = catalog.entities.filter(isItemEntity);
+  const itemFilterCount = countActiveItemFilters(itemFilters);
   const normalizedSearch = search.toLocaleLowerCase("de");
-  const visible = catalog.entities.filter(
+  const matching = catalog.entities.filter(
     (entity) =>
       (type === "all" || entity.type === type) &&
       (status === "all" || entity.status === status) &&
+      (itemFilterCount === 0 ||
+        (isItemEntity(entity) && itemMatchesFilters(entity, itemFilters))) &&
       searchableEntityText(entity, (id) => entities.get(id)?.name).includes(normalizedSearch)
   );
+  const visible =
+    matching.every(isItemEntity) && matching.length > 0 ? sortItems(matching, itemSort) : matching;
   const activeFilters =
-    Number(type !== "all") + Number(status !== "all") + Number(search.length > 0);
+    Number(type !== "all") + Number(status !== "all") + Number(search.length > 0) + itemFilterCount;
   const reset = (): void => {
     setSearch("");
     setType("all");
     setStatus("all");
+    setItemFilters(emptyItemFilters());
     setLimit(96);
   };
+  const displayed = visible.slice(0, limit);
+  const renderCards = (values: ContentEntity[]): ReactNode => (
+    <div className="entity-grid">
+      {values.map((entity) => (
+        <EntityCard
+          key={entity.id}
+          entity={entity}
+          selected={false}
+          showSelect={false}
+          onSelect={() => undefined}
+          onDetails={() => onDetails(entity.id)}
+        />
+      ))}
+    </div>
+  );
+  const groupedContent =
+    itemGrouping === "none"
+      ? renderCards(displayed)
+      : [
+          ...[
+            ...new Set(
+              displayed
+                .filter(isItemEntity)
+                .map((entity) =>
+                  itemGrouping === "category" ? entity.category : entity.subcategory
+                )
+            )
+          ].map((groupValue) => {
+            const categoryItems = displayed
+              .filter(isItemEntity)
+              .filter((entity) =>
+                itemGrouping === "category"
+                  ? entity.category === groupValue
+                  : entity.subcategory === groupValue
+              );
+            return (
+              <section
+                className="catalog-group"
+                key={groupValue}
+                data-category={itemGrouping === "category" ? groupValue : undefined}
+                data-subcategory={itemGrouping === "subcategory" ? groupValue : undefined}
+              >
+                <header>
+                  <h3>
+                    {itemGrouping === "category"
+                      ? formatItemCategory(groupValue as ItemEntity["category"])
+                      : formatItemSubcategory(groupValue as ItemEntity["subcategory"])}
+                  </h3>
+                  <span>{categoryItems.length}</span>
+                </header>
+                {subgroupByTechnology
+                  ? [...new Set(categoryItems.map((item) => item.technologyLevel))].map(
+                      (technology) => (
+                        <section
+                          className="catalog-subgroup"
+                          key={technology}
+                          data-technology={technology}
+                        >
+                          <h4>
+                            {formatTechnologyLevel(technology)}
+                            <span>
+                              {
+                                categoryItems.filter((item) => item.technologyLevel === technology)
+                                  .length
+                              }
+                            </span>
+                          </h4>
+                          {renderCards(
+                            categoryItems.filter((item) => item.technologyLevel === technology)
+                          )}
+                        </section>
+                      )
+                    )
+                  : renderCards(categoryItems)}
+              </section>
+            );
+          }),
+          ...(displayed.some((entity) => !isItemEntity(entity))
+            ? [
+                <section className="catalog-group" key="other">
+                  <header>
+                    <h3>Weitere Inhalte</h3>
+                    <span>{displayed.filter((entity) => !isItemEntity(entity)).length}</span>
+                  </header>
+                  {renderCards(displayed.filter((entity) => !isItemEntity(entity)))}
+                </section>
+              ]
+            : [])
+        ];
   return (
     <section className="workspace-section compendium" data-testid="compendium">
       <header className="section-heading">
@@ -1193,24 +1579,27 @@ const Compendium = ({ onDetails }: { onDetails: (id: string) => void }) => {
           </select>
         </label>
       </div>
+      <ItemCatalogControls
+        items={itemCandidates}
+        filters={itemFilters}
+        onFiltersChange={(value) => {
+          setItemFilters(value);
+          setLimit(96);
+        }}
+        sort={itemSort}
+        onSortChange={setItemSort}
+        grouping={itemGrouping}
+        onGroupingChange={setItemGrouping}
+        subgroupByTechnology={subgroupByTechnology}
+        onSubgroupByTechnologyChange={setSubgroupByTechnology}
+      />
       {activeFilters > 0 ? (
         <div className="active-filters">
           <Filter size={15} />
           {String(activeFilters)} aktive {activeFilters === 1 ? "Eingrenzung" : "Eingrenzungen"}
         </div>
       ) : null}
-      <div className="entity-grid">
-        {visible.slice(0, limit).map((entity) => (
-          <EntityCard
-            key={entity.id}
-            entity={entity}
-            selected={false}
-            showSelect={false}
-            onSelect={() => undefined}
-            onDetails={() => onDetails(entity.id)}
-          />
-        ))}
-      </div>
+      <div className="catalog-groups">{groupedContent}</div>
       {visible.length === 0 ? (
         <p className="empty-state">Keine Einträge entsprechen den gewählten Filtern.</p>
       ) : null}

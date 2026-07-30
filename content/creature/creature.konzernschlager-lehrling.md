@@ -1,9 +1,11 @@
 ---
 armorClass: 13
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "- Stufe: 1/4 - TP: 20 (4d8 + 4) - RK: 13 (Schutzweste) - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernschutz"
+examples: []
 hp: 20
 id: creature.konzernschlager-lehrling
 legacy:
@@ -16,6 +18,15 @@ legacySystem: dnd5e
 level: 0
 name: Konzernschläger-Lehrling
 references: []
+rulesText: "- **Stufe:** 1/4\r
+
+  - **TP:** 20 (4d8 + 4)\r
+
+  - **RK:** 13 (Schutzweste)\r
+
+  - **Fertigkeiten:** -2 auf alle Fertigkeitswürfe\r
+
+  - **Spezialfähigkeiten:** Begrenzter Konzernschutz"
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

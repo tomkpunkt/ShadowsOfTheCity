@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.zwerg
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Voraussetzung: Zwerg Du erhältst Resistenz 2 gegen Gift und Krankheit. Wenn du eine Mahlzeit oder ein Getränk zu dir nimmst, das andere krank machen würde, erleidest du keine negativen Effekte."
+examples: []
 id: feat.ancestry.zwerg.eisenmagen
 legacy:
   notes: []
@@ -16,6 +18,9 @@ prerequisites:
   - ancestry:
       id: ancestry.zwerg
 references: []
+rulesText: "*Voraussetzung:* Zwerg  \r
+
+  Du erhältst Resistenz 2 gegen Gift und Krankheit. Wenn du eine Mahlzeit oder ein Getränk zu dir nimmst, das andere krank machen würde, erleidest du keine negativen Effekte."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

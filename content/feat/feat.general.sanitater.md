@@ -1,9 +1,11 @@
 ---
 category: profession
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Erste Hilfe, Wundbehandlung
+examples: []
 id: feat.general.sanitater
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 12
           id: wisdom
 references: []
+rulesText: "Sanitäter gewährt den im Altbestand beschriebenen Effekt: Erste Hilfe, Wundbehandlung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

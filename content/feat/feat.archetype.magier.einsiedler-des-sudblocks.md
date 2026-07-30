@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du hast das Studium der Magie fern der Welt betrieben. Du erhältst +1 auf Überleben und Weisheitssaves gegen mentale Effekte. Einmal pro Tag kannst du Detect Magic und Light ohne Komponenten wirken.
+examples: []
 id: feat.archetype.magier.einsiedler-des-sudblocks
 legacy:
   notes:
@@ -17,6 +19,11 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: "Du hast das Studium der Magie fern der Welt betrieben.  \r
+
+  Du erhältst +1 auf Überleben und Weisheitssaves gegen mentale Effekte.  \r
+
+  Einmal pro Tag kannst du *Detect Magic* und *Light* ohne Komponenten wirken."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

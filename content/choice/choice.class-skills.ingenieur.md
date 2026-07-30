@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.ingenieur
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.ingenieur
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_ingenieur.md
 name: Ingenieur-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Ingenieur.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

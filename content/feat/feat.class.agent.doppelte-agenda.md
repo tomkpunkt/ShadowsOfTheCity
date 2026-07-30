@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst zwei Fraktionen gleichzeitig loyal erscheinen, ohne Malus auf Täuschung.
+examples: []
 id: feat.class.agent.doppelte-agenda
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: Du kannst zwei Fraktionen gleichzeitig loyal erscheinen, ohne Malus auf Täuschung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

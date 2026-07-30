@@ -1,6 +1,17 @@
 import type { ContentEntity } from "@sotc/shared";
 
-import { formatEntityReference, formatEntityType, formatTradition } from "./i18n/de.js";
+import {
+  formatEntityReference,
+  formatEntityType,
+  formatItemAvailability,
+  formatItemCategory,
+  formatItemOrigin,
+  formatItemQuality,
+  formatItemSubcategory,
+  formatTechnologyLevel,
+  formatTradition
+} from "./i18n/de.js";
+import { isItemEntity } from "./item-catalog.js";
 
 export const entityLevel = (entity: ContentEntity): number | undefined =>
   "level" in entity && typeof entity.level === "number"
@@ -18,6 +29,11 @@ export const entityMeta = (entity: ContentEntity): string[] => {
   if ("traditions" in entity) {
     meta.push(...entity.traditions.map(formatTradition));
   }
+  if (isItemEntity(entity)) {
+    meta.push(formatItemCategory(entity.category));
+    meta.push(formatItemSubcategory(entity.subcategory));
+    meta.push(formatTechnologyLevel(entity.technologyLevel));
+  }
   return meta;
 };
 
@@ -28,10 +44,25 @@ export const searchableEntityText = (
   [
     entity.name,
     entity.summary,
+    entity.rulesText,
+    entity.flavorText,
+    entity.usageNotes,
+    entity.limitations,
+    ...entity.examples,
     entity.description,
     formatEntityType(entity.type),
     entity.source,
-    ...entity.traits.map((id) => formatEntityReference(id, resolveName))
+    ...entity.traits.map((id) => formatEntityReference(id, resolveName)),
+    ...(isItemEntity(entity)
+      ? [
+          formatItemCategory(entity.category),
+          formatItemSubcategory(entity.subcategory),
+          formatTechnologyLevel(entity.technologyLevel),
+          formatItemAvailability(entity.availability),
+          ...entity.origins.map(formatItemOrigin),
+          ...(entity.quality === undefined ? [] : [formatItemQuality(entity.quality)])
+        ]
+      : [])
   ]
     .join(" ")
     .toLocaleLowerCase("de");

@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.tiefling
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Körper kanalisiert Hitze und Schmerz. Du erhältst Resistenz 5 gegen Feuer und Immunität gegen Hitzeerschöpfung.
+examples: []
 id: feat.ancestry.tiefling.blut-der-asche
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.tiefling
 references: []
+rulesText: Dein Körper kanalisiert Hitze und Schmerz. Du erhältst Resistenz 5 gegen Feuer und Immunität gegen Hitzeerschöpfung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

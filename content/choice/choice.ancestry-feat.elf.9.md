@@ -18,6 +18,8 @@ choice:
     - ancestry:
         id: ancestry.elf
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.ancestry-feat.elf.9
 legacy:
   notes: []
@@ -25,12 +27,13 @@ legacy:
     - races/elfen_zeitalter_des_goldes.md
 name: Elf-Talent Stufe 9
 references: []
+rulesText: Wähle auf Stufe 9 ein verfügbares Elf-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Elf-Talent.
+summary: Wähle auf Stufe 9 ein verfügbares Elf-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Elf-Talent.
+Wähle auf Stufe 9 ein verfügbares Elf-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

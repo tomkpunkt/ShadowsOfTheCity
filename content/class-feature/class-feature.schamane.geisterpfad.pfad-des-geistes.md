@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist Medium zwischen den Welten. - Du erhältst Fertigkeitstraining in Diplomatie oder Einschüchtern. - Du kannst einmal pro Tag Speak with Spirits oder Detect Magic wirken. ---
+examples: []
 id: class-feature.schamane.geisterpfad.pfad-des-geistes
 legacy:
   notes: []
@@ -14,10 +16,19 @@ level: 1
 name: Pfad des Geistes
 prerequisites: []
 references: []
+rulesText: "Du bist Medium zwischen den Welten.  \r
+
+  - Du erhältst Fertigkeitstraining in Diplomatie oder Einschüchtern.  \r
+
+  - Du kannst einmal pro Tag *Speak with Spirits* oder *Detect Magic* wirken.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Du bist Medium zwischen den Welten.
+summary: "Pfad des Geistes: Du bist Medium zwischen den Welten."
 traits:
   - trait.class-option
   - trait.class-option.schamane.geisterpfad

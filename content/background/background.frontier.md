@@ -3,10 +3,13 @@ boosts:
   - constitution
   - wisdom
 choiceIds: []
+editorialStatus: rewritten
 effects:
   - kind: skill-training
     rank: trained
     skillId: skill.survival
+examples: []
+flavorText: Jenseits kontrollierter Bezirke hast du gelernt, Wetter, Spuren und knappe Vorräte ernster zu nehmen als offizielle Karten.
 freeBoosts: 1
 grantedFeatIds: []
 id: background.frontier
@@ -17,10 +20,14 @@ legacy:
     - rules/social_mechanics.md
 name: Grenzgänger
 references: []
+rulesText: |-
+  ## Spielwerte
+
+  Der Hintergrund bietet Attributsverbesserungen für Konstitution und Weisheit sowie eine freie Attributsverbesserung. Du erhältst den Kompetenzrang geübt in Überleben.
 schemaVersion: 1
 source: legacy.world-rules
 status: playtest
-summary: Grenzgänger wurde für einen vollständigen Charakterbau aus den sozialen Rollen des Altbestands abgeleitet.
+summary: Als Grenzgänger bleibst du fern sicherer Infrastruktur orientiert und widerstandsfähig, wenn Versorgung, Schutz und klare Wege fehlen.
 trainedSkillIds:
   - skill.survival
 traits: []

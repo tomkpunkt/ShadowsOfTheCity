@@ -1,9 +1,11 @@
 ---
 category: profession
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Gesellschaft, Einfluss
+examples: []
 id: feat.general.diplomat
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 15
           id: charisma
 references: []
+rulesText: "Diplomat gewährt den im Altbestand beschriebenen Effekt: Gesellschaft, Einfluss."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

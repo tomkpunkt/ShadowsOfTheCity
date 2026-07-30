@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.elf
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du stammst aus einem Haus, das im Schatten lebt – moralisch oder physisch. Du erhältst Resistenz 2 gegen mentale Effekte, aber einen Malus von −1 auf Diplomatie gegenüber anderen Elfen. ---
+examples: []
 id: heritage.elf.verfallener-erbe
 legacy:
   notes: []
@@ -14,6 +16,11 @@ prerequisites:
   - ancestry:
       id: ancestry.elf
 references: []
+rulesText: "Du stammst aus einem Haus, das im Schatten lebt – moralisch oder physisch. Du erhältst Resistenz 2 gegen mentale Effekte, aber einen Malus von −1 auf Diplomatie gegenüber anderen Elfen.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

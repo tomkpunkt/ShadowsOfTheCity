@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.schamane
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.schamane
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_schamane.md
 name: Schamane-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Schamane.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

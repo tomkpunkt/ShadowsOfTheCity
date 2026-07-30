@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.tiefling
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du kannst andere mit bloßen Worten beeinflussen. Du erhältst Fertigkeitstraining in Diplomatie oder Täuschung und kannst den Zauber Charm einmal pro Tag wirken (Attribut: Charisma)."
+examples: []
 id: feat.ancestry.tiefling.hollisches-flustern
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.tiefling
 references: []
+rulesText: "Du kannst andere mit bloßen Worten beeinflussen. Du erhältst Fertigkeitstraining in Diplomatie oder Täuschung und kannst den Zauber *Charm* einmal pro Tag wirken (Attribut: Charisma)."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

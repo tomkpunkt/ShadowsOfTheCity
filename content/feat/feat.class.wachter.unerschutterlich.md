@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst einen misslungenen Rettungswurf wiederholen (1/Tag).
+examples: []
 id: feat.class.wachter.unerschutterlich
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: Du kannst einen misslungenen Rettungswurf wiederholen (1/Tag).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

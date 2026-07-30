@@ -18,6 +18,8 @@ choice:
     - ancestry:
         id: ancestry.gnom
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.ancestry-feat.gnom.5
 legacy:
   notes: []
@@ -25,12 +27,13 @@ legacy:
     - races/gnome_zeitalter_des_goldes.md
 name: Gnom-Talent Stufe 5
 references: []
+rulesText: Wähle auf Stufe 5 ein verfügbares Gnom-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Gnom-Talent.
+summary: Wähle auf Stufe 5 ein verfügbares Gnom-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Gnom-Talent.
+Wähle auf Stufe 5 ein verfügbares Gnom-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

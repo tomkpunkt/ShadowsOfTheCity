@@ -13,6 +13,8 @@ choiceIds:
   - choice.class-feat.agent.18
   - choice.class-feat.agent.20
   - choice.class-skills.agent
+editorialStatus: reviewed
+examples: []
 featureIds:
   - class-feature.agent.deckname
   - class-feature.agent.spionageausbildung
@@ -51,6 +53,321 @@ legacy:
     - classes/klasse_agent.md
 name: Agent
 references: []
+rulesText: "# **Agent**\r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Flavortext**\r
+
+  > „Wahrheit ist relativ. Ich verkaufe die Version, die am längsten überlebt.“\r
+
+  \r
+
+  Agenten sind die Schatten zwischen den Fronten. Sie dienen keinem Banner, sondern der Information – und der Kunst, sie zu kontrollieren. Ob Spione der Föderation, Beobachter des Rates des Gleichgewichts oder freie Auftragsagenten, sie operieren dort, wo Politik, Lüge und Blut sich mischen.  \r
+
+  Im Zeitalter des Goldes (1990 n. 0) sind Agenten die unsichtbare Hand, die Kriege verhindert oder entfacht. Sie sind Späher, Infiltratoren, Attentäter – und manchmal Retter.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Übersicht**\r
+
+  Agenten sind **geschickte, kühle und analytische Kämpfer**, die auf Heimlichkeit, Täuschung und präzise Angriffe setzen.  \r
+
+  Während der Söldner die offene Gewalt beherrscht, nutzt der Agent den Schatten, die Sprache und den Moment.  \r
+
+  Ihre Loyalität ist fließend, ihre Methoden unorthodox – doch ihr Erfolg spricht für sich.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Rolle im Spiel**\r
+
+  Der Agent ist ein **Taktiker, Späher und Manipulator**. Er kombiniert Heimlichkeit mit Präzision, kann sowohl im Nah- als auch im Fernkampf effektiv agieren und glänzt besonders außerhalb direkter Gefechte – in sozialen oder verdeckten Situationen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Schlüsselattribut**\r
+
+  **Geschicklichkeit** (für Aktionen und Angriffe)  \r
+
+  Sekundär: **Charisma** (Manipulation, Täuschung) oder **Intelligenz** (Analyse).\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Trefferpunkte**\r
+
+  8 plus dein Konstitutionsmodifikator\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Anfangsproficiencies**\r
+
+  | Kategorie | Grad |\r
+
+  |:--|:--|\r
+
+  | **Rüstung** | Leichte Rüstung |\r
+
+  | **Waffen** | Einfache Waffen, Handfeuerwaffen, Dolche, Kurzschwerter |\r
+
+  | **Rettungswürfe** | Reflex (Experte), Willen (Geübt), Zähigkeit (Geübt) |\r
+
+  | **Fertigkeiten** | Wahrnehmung (Experte) |\r
+
+  | **Fertigkeiten pro Stufe** | 5 + INT-Modifikator |\r
+
+  | **Klassenmerkmal** | Deckname, Spionageausbildung, Vorgehensweise |\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Klassenmerkmale**\r
+
+  \r
+
+  ### **Deckname**\r
+
+  Du arbeitest selten unter deinem echten Namen.  \r
+
+  **Effekt:** Du kannst in sozialen Situationen oder Behörden mit einem falschen Namen auftreten. Solange du dich erfolgreich tarnst (Täuschung gegen SG 15 + Stufe des Ziels), erhältst du +1 auf Diplomatie und Gesellschaft.  \r
+
+  Wirst du enttarnt, erhältst du für 24 Stunden –1 auf diese Proben.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Spionageausbildung**\r
+
+  Du erhältst Fertigkeitstraining in **Heimlichkeit**, **Täuschung** und **Gesellschaft**.  \r
+
+  Wenn du bereits in einer dieser Fertigkeiten trainiert bist, wähle eine andere.  \r
+
+  Zusätzlich erhältst du bei jeder sozialen Interaktion +1 auf Würfe, wenn du Informationen verschleiern oder erlangen willst.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Vorgehensweise (1. Stufe)**\r
+
+  Wähle eine Spezialisierung deines Handelns.\r
+
+  \r
+
+  #### **Infiltrator**\r
+
+  Du schleichst, beobachtest und schlägst lautlos zu.  \r
+
+  - Du erhältst Dunkelsicht (wenn du sie bereits besitzt, +1 auf Wahrnehmung).  \r
+
+  - Wenn du einen Gegner überraschst, erhältst du +1 auf den ersten Angriffswurf dieser Runde.  \r
+
+  \r
+
+  #### **Manipulator**\r
+
+  Du nutzt Worte statt Waffen.  \r
+
+  - Du erhältst Fertigkeitstraining in Diplomatie und Täuschung (oder Expertenrang, falls trainiert).  \r
+
+  - Einmal pro Stunde kannst du eine misslungene soziale Probe wiederholen.  \r
+
+  \r
+
+  #### **Attentäter**\r
+
+  Du bist der stille Tod.  \r
+
+  - Du erhältst den Feat *Sneak Attack* (+1W6 Schaden gegen überraschte oder unvorbereitete Gegner).  \r
+
+  - Wenn du aus dem Hinterhalt angreifst, erhält dein Ziel –2 auf Initiative im nächsten Kampf.  \r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Schnelle Reaktion (3. Stufe)**\r
+
+  Du reagierst blitzschnell auf Bedrohungen.  \r
+
+  Du erhältst +2 auf Initiative und kannst in der ersten Runde eines Kampfes eine Bewegung von bis zu 10 Fuß als freie Aktion ausführen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Kalter Verstand (7. Stufe)**\r
+
+  Dein Geist ist scharf und unerschütterlich.  \r
+
+  Einmal pro Tag kannst du einen Willenswurf wiederholen.  \r
+
+  Bei Erfolg auf eine Täuschungsprobe gegenüber einer Behörde oder Machtperson wird sie automatisch als kritischer Erfolg gewertet.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Unauffälligkeit (11. Stufe)**\r
+
+  Du wirst zur Schattenfigur.  \r
+
+  Wenn du dich in einer Stadt oder Menschenmenge bewegst, erhältst du +2 auf Heimlichkeitsproben und kannst dich doppelt so schnell verbergen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Katalysator (15. Stufe)**\r
+
+  Du verstehst es, Situationen zu deinen Gunsten zu verändern.  \r
+
+  Einmal pro Tag kannst du eine Probe eines Verbündeten um +2 modifizieren, wenn du anwesend bist und einen plausiblen Einfluss nimmst (z. B. Ablenkung, Bestechung, Unterstützung).\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Phantom (20. Stufe)**\r
+
+  Du bist Legende und Gerücht zugleich. Niemand weiß, ob du überhaupt existierst.  \r
+
+  - Du kannst dich in urbaner Umgebung ohne Wurf verbergen (solange du nicht beobachtet wirst).  \r
+
+  - Du bist immun gegen magische Wahrheits- oder Erkennungseffekte.  \r
+
+  - Einmal pro Tag kannst du einen Angriff gegen dich automatisch verfehlen lassen.  \r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Klassen-Feats**\r
+
+  \r
+
+  | Stufe | Name | Effekt |\r
+
+  |:--|:--|:--|\r
+
+  | **1** | Lautloser Schritt | Du kannst dich selbst bei schneller Bewegung verstecken. |\r
+
+  | **2** | Verhörspezialist | +2 auf Diplomatie und Einschüchtern bei Informationsgewinn. |\r
+
+  | **4** | Schattenlinie | In Dunkelheit erhältst du +1 auf AC und Heimlichkeit. |\r
+
+  | **6** | Perfekte Lüge | Du darfst bei Täuschung 1W20 erneut würfeln (1/Tag). |\r
+
+  | **8** | Improvisierter Angriff | Du erleidest keinen Malus auf Angriffe mit improvisierten Waffen. |\r
+
+  | **10** | Tarnidentität | Du kannst zwei verschiedene Decknamen gleichzeitig führen. |\r
+
+  | **12** | Unsichtbare Hand | +1 auf alle Würfe, die soziale Manipulation oder Ablenkung betreffen. |\r
+
+  | **14** | Doppelte Agenda | Du kannst zwei Fraktionen gleichzeitig loyal erscheinen, ohne Malus auf Täuschung. |\r
+
+  | **16** | Schwarzes Dossier | Einmal pro Tag kannst du Informationen enthüllen, die einem Ziel –2 auf Willenswürfe geben. |\r
+
+  | **18** | Meister der Schatten | Du erhältst permanent Dunkelsicht und +2 auf Heimlichkeit. |\r
+
+  | **20** | Geist des Netzes | Du kannst in jeder großen Stadt Informationen in einem Tag finden, unabhängig von SG. |\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Archetypen**\r
+
+  \r
+
+  ### **Informationsbroker**\r
+
+  Du handelst mit Wissen und Gerüchten.  \r
+
+  Einmal pro Tag kannst du eine Probe auf Gesellschaft oder Täuschung wiederholen.  \r
+
+  Bei Erfolg erfährst du ein relevantes Detail über eine Organisation oder Person.\r
+
+  \r
+
+  ### **Attentäter**\r
+
+  Deine Spezialisierung liegt im lautlosen Töten.  \r
+
+  Du erhältst +1W6 zusätzlichen Schaden bei Angriffen aus dem Hinterhalt.  \r
+
+  Wenn dein Angriff einen Gegner auf 0 TP reduziert, kannst du dich sofort wieder verbergen.\r
+
+  \r
+
+  ### **Doppelagent**\r
+
+  Du arbeitest für mehr als eine Macht.  \r
+
+  Du kannst einmal pro Woche eine verdeckte Agenda wechseln, ohne Loyalitätsmalus zu erleiden.  \r
+
+  Du erhältst +2 auf Täuschung gegen Organisationen oder Behörden.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  Agenten sind die unsichtbaren Werkzeuge der Mächte. Sie manipulieren, retten, verraten und verschwinden.  \r
+
+  Im Spiel sind sie Meister subtiler Kontrolle – flexibel, geheimnisvoll und gefährlich.  \r
+
+  Sie passen in jede Kampagne, die Intrige, Täuschung und kalte Professionalität verlangt."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

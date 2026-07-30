@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "50b469737ff7da4e512593653726a2dea97a4f644bd52607d0bb505f7f89f312",
+  "catalogHash": "427f9dfc8f4ecec665ed08d9ee714d34a3f14659dcb1d2f462dd62a1622431ae",
   "summary": {
-    "entities": 734,
-    "reachable": 734,
+    "entities": 737,
+    "reachable": 737,
     "selectable": 356,
-    "automatic": 298,
+    "automatic": 301,
     "informational": 80,
     "allowlisted": 0,
     "unreachable": 0,
@@ -27,7 +27,7 @@
       "skill": 19,
       "spell": 14,
       "spellcasting-progression": 3,
-      "trait": 27,
+      "trait": 30,
       "weapon": 40
     }
   },
@@ -8621,7 +8621,7 @@
       "type": "equipment",
       "name": "Artefakt",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.equipment.magic",
@@ -8688,6 +8688,7 @@
       "status": "selectable",
       "references": [
         "trait.item.equipment.technology",
+        "trait.item.silent",
         "trait.legacy"
       ],
       "referencedBy": [],
@@ -8751,6 +8752,7 @@
       "status": "selectable",
       "references": [
         "trait.item.equipment.technology",
+        "trait.item.traceable",
         "trait.legacy"
       ],
       "referencedBy": [],
@@ -8898,6 +8900,7 @@
       "status": "selectable",
       "references": [
         "trait.item.equipment.technology",
+        "trait.item.traceable",
         "trait.legacy"
       ],
       "referencedBy": [],
@@ -9129,6 +9132,7 @@
       "status": "selectable",
       "references": [
         "trait.item.equipment.technology",
+        "trait.item.traceable",
         "trait.legacy"
       ],
       "referencedBy": [],
@@ -16384,6 +16388,34 @@
       "allowlisted": false
     },
     {
+      "id": "trait.item.concealable",
+      "type": "trait",
+      "name": "Verbergbar",
+      "source": "legacy.world-rules",
+      "contentStatus": "legacy",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [
+        "weapon.1-pistole",
+        "weapon.blitzpistole",
+        "weapon.dolch",
+        "weapon.elektroschock-stab",
+        "weapon.messer",
+        "weapon.pistole",
+        "weapon.revolver",
+        "weapon.wurfmesser"
+      ],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Automatisch oder als Referenz vergeben",
+        "Verbergbar"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
       "id": "trait.item.equipment.clothing",
       "type": "trait",
       "name": "Kleidung",
@@ -16466,6 +16498,53 @@
         "Builder",
         "Automatisch oder als Referenz vergeben",
         "Technologie"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "trait.item.silent",
+      "type": "trait",
+      "name": "Leise",
+      "source": "legacy.world-rules",
+      "contentStatus": "legacy",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [
+        "equipment.fahrrad",
+        "weapon.1-bogen",
+        "weapon.bogen",
+        "weapon.eisbogen"
+      ],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Automatisch oder als Referenz vergeben",
+        "Leise"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "trait.item.traceable",
+      "type": "trait",
+      "name": "Rückverfolgbar",
+      "source": "legacy.world-rules",
+      "contentStatus": "legacy",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [
+        "equipment.kamera",
+        "equipment.mikrofon",
+        "equipment.telefon"
+      ],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Automatisch oder als Referenz vergeben",
+        "Rückverfolgbar"
       ],
       "detailDisplayable": true,
       "ruleEffect": "none",
@@ -17059,6 +17138,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.silent",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17103,6 +17183,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17144,7 +17225,7 @@
       "type": "weapon",
       "name": "+1 Waffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17166,7 +17247,7 @@
       "type": "weapon",
       "name": "+2 Waffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17188,7 +17269,7 @@
       "type": "weapon",
       "name": "+3 Waffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17257,6 +17338,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17276,7 +17358,7 @@
       "type": "weapon",
       "name": "Blitzwaffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17301,6 +17383,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.silent",
         "trait.item.weapon.ranged",
         "trait.legacy",
         "trait.weapon-group.projectile"
@@ -17320,7 +17403,7 @@
       "type": "weapon",
       "name": "Dämonenjäger",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17345,6 +17428,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17367,6 +17451,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.silent",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17386,7 +17471,7 @@
       "type": "weapon",
       "name": "Eiswaffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17411,6 +17496,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17430,7 +17516,7 @@
       "type": "weapon",
       "name": "Erdwaffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17474,7 +17560,7 @@
       "type": "weapon",
       "name": "Feuerwaffe",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17496,7 +17582,7 @@
       "type": "weapon",
       "name": "Geisterjäger",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17606,7 +17692,7 @@
       "type": "weapon",
       "name": "Konstruktjäger",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17653,6 +17739,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.simple",
         "trait.legacy",
         "trait.weapon-group.blade"
@@ -17675,6 +17762,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.ranged",
         "trait.legacy",
         "trait.weapon-group.projectile"
@@ -17719,6 +17807,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.ranged",
         "trait.legacy",
         "trait.weapon-group.projectile"
@@ -17804,7 +17893,7 @@
       "type": "weapon",
       "name": "Seelenfänger",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.item.weapon.simple",
@@ -17873,6 +17962,7 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [
+        "trait.item.concealable",
         "trait.item.weapon.ranged",
         "trait.legacy",
         "trait.weapon-group.projectile"

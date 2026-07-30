@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst 1/Tag einen Gegner mit einem Geisterruf in Furcht versetzen (SG 20).
+examples: []
 id: feat.class.schamane.ahnenschrei
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.schamane
 references: []
+rulesText: Du kannst 1/Tag einen Gegner mit einem Geisterruf in Furcht versetzen (SG 20).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

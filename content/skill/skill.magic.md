@@ -1,5 +1,7 @@
 ---
 attribute: intelligence
+editorialStatus: rewritten
+examples: []
 id: skill.magic
 legacy:
   notes: []
@@ -7,12 +9,13 @@ legacy:
     - rules/core_mechanics.md
 name: Magie
 references: []
+rulesText: Setze Magie für breit angelegte Analyse übernatürlicher Vorgänge ein, wenn weder eine eindeutig arkane noch religiöse Tradition allein zuständig ist.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Magie ist eine Fertigkeit mit Intelligenz als typischem Attribut.
+summary: Magie nutzt Intelligenz, um allgemeine übernatürliche Phänomene, Zauberwirkungen und Störungen des Geflechts zu untersuchen.
 traits: []
 type: skill
 ---
 
-Kanonischer Skill für Magie.
+Setze Magie für breit angelegte Analyse übernatürlicher Vorgänge ein, wenn weder eine eindeutig arkane noch religiöse Tradition allein zuständig ist.

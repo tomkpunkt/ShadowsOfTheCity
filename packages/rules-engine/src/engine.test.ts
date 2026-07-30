@@ -274,6 +274,11 @@ const catalog = {
       priceGp: 10,
       bulk: 1,
       hands: 0,
+      category: "armor",
+      subcategory: "light-armor",
+      technologyLevel: "archaic",
+      availability: "common",
+      origins: ["civilian"],
       categoryId: "trait.item.armor.light",
       itemBonus: 1,
       dexterityCap: 4
@@ -292,6 +297,11 @@ const catalog = {
       priceGp: 1,
       bulk: 1,
       hands: 1,
+      category: "weapon",
+      subcategory: "melee-weapon",
+      technologyLevel: "archaic",
+      availability: "common",
+      origins: ["civilian"],
       categoryId: "trait.item.weapon.simple",
       groupId: "trait.weapon-group.blunt",
       damage: {

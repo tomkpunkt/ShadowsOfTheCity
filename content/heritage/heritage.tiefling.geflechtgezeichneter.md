@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.tiefling
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Körper reagiert sensibel auf magische Felder. Du erhältst Fertigkeitstraining in Arkane Kunde und kannst einmal pro Stunde erkennen, ob ein Gebiet magisch instabil ist (SG 15).
+examples: []
 id: heritage.tiefling.geflechtgezeichneter
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.tiefling
 references: []
+rulesText: Dein Körper reagiert sensibel auf magische Felder. Du erhältst Fertigkeitstraining in Arkane Kunde und kannst einmal pro Stunde erkennen, ob ein Gebiet magisch instabil ist (SG 15).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

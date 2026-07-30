@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.okkultist
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du Schaden durch eigene Zauber erleidest, reduziere ihn um 1 pro Zaubergrad.
+examples: []
 id: feat.class.okkultist.blutmagie
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.okkultist
 references: []
+rulesText: Wenn du Schaden durch eigene Zauber erleidest, reduziere ihn um 1 pro Zaubergrad.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

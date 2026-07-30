@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.mediziner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst kritische Verletzungen in der halben Zeit behandeln.
+examples: []
 id: feat.class.mediziner.meister-der-chirurgie
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.mediziner
 references: []
+rulesText: Du kannst kritische Verletzungen in der halben Zeit behandeln.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

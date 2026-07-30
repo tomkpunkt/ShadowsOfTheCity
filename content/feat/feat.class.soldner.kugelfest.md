@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Resistenz 3 gegen Schusswaffenschaden.
+examples: []
 id: feat.class.soldner.kugelfest
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: Resistenz 3 gegen Schusswaffenschaden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

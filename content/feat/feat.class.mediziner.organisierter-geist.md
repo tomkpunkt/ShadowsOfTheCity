@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.mediziner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +2 auf Medizin in chaotischen Situationen.
+examples: []
 id: feat.class.mediziner.organisierter-geist
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.mediziner
 references: []
+rulesText: +2 auf Medizin in chaotischen Situationen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

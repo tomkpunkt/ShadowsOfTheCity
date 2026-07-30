@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Einmal pro Stunde kannst du 1W8 + CHA-Mod TP wiederherstellen.
+examples: []
 id: feat.class.wachter.heilende-beruhrung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: Einmal pro Stunde kannst du 1W8 + CHA-Mod TP wiederherstellen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,9 +1,11 @@
 ---
 category: skill
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 Beeindrucken
+examples: []
 id: feat.general.gesellschaftlicher-aufsteiger
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 14
           id: charisma
 references: []
+rulesText: "Gesellschaftlicher Aufsteiger gewährt den im Altbestand beschriebenen Effekt: +1 Beeindrucken."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

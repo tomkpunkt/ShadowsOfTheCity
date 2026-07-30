@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: language.gnomish
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
 name: Gnomisch
 rarity: common
 references: []
+rulesText: Gnomisch ist eine aus dem Altbestand normalisierte Sprache.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.mediziner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du erhältst +1 auf Handwerksproben bei Operationen.
+examples: []
 id: feat.class.mediziner.saubere-schnitte
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.mediziner
 references: []
+rulesText: Du erhältst +1 auf Handwerksproben bei Operationen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

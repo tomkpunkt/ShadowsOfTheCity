@@ -1,5 +1,7 @@
 ---
 attribute: intelligence
+editorialStatus: rewritten
+examples: []
 id: skill.science
 legacy:
   notes: []
@@ -7,12 +9,13 @@ legacy:
     - rules/core_mechanics.md
 name: Wissenschaft
 references: []
+rulesText: Setze Wissenschaft für Analyse, Forschung und die Interpretation messbarer Phänomene ein. Die Fertigkeit deckt keine praktische Reparatur technischer Geräte ab.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wissenschaft ist eine Fertigkeit mit Intelligenz als typischem Attribut.
+summary: Wissenschaft nutzt Intelligenz, um naturwissenschaftliche Befunde auszuwerten, Hypothesen zu prüfen und Laborergebnisse einzuordnen.
 traits: []
 type: skill
 ---
 
-Kanonischer Skill für Wissenschaft.
+Setze Wissenschaft für Analyse, Forschung und die Interpretation messbarer Phänomene ein. Die Fertigkeit deckt keine praktische Reparatur technischer Geräte ab.

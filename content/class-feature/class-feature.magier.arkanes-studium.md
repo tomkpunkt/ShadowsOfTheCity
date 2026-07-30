@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du hast jahrelang das Geflecht studiert. Du erhältst Fertigkeitstraining in Arkane Kunde und Wissenschaft. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle eine andere Wissensfertigkeit. Zusätzlich kannst du die Präsenz aktiver Magie in einem Umkreis von 30 Fuß automatisch spüren. ---
+examples: []
 id: class-feature.magier.arkanes-studium
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 1
 name: Arkanes Studium
 prerequisites: []
 references: []
+rulesText: "Du hast jahrelang das Geflecht studiert.  \r
+
+  Du erhältst Fertigkeitstraining in **Arkane Kunde** und **Wissenschaft**. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle eine andere Wissensfertigkeit.  \r
+
+  Zusätzlich kannst du die Präsenz aktiver Magie in einem Umkreis von 30 Fuß automatisch spüren.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

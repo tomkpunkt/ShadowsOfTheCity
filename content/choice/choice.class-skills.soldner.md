@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.soldner
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.soldner
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_soeldner.md
 name: Söldner-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Söldner.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

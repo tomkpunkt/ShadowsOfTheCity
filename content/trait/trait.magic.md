@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.magic
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Magisch
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Magisch."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -3,6 +3,8 @@ additionalLanguagesFromIntelligence: true
 boosts:
   - dexterity
   - charisma
+editorialStatus: reviewed
+examples: []
 featIds:
   - feat.ancestry.goblin.schrottfinder
   - feat.ancestry.goblin.lichtschrecken
@@ -31,6 +33,215 @@ legacy:
     - races/goblins_zeitalter_des_goldes.md
 name: Goblin
 references: []
+rulesText: "# **Goblin**\r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Übersicht**\r
+
+  Goblins sind die Schattenarbeiter und Überlebenskünstler der modernen Welt. Sie sind klein, flink und von einer beinahe unheimlichen Energie erfüllt.  \r
+
+  Einst als primitive Plünderer gefürchtet, haben sich Goblins im Zeitalter des Goldes (ca. 1990 n. 0) zu einer eigenständigen, urbanen Kultur entwickelt. Sie leben in verlassenen Fabriken, Kanalnetzen und Schrottstädten – und machen das, was niemand sonst kann oder will.  \r
+
+  Ob als Schrottsammler, Hacker, Techniker oder Saboteure: Goblins verstehen es, Chaos in Funktion zu verwandeln.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Physische Beschreibung**\r
+
+  Goblins sind kleinwüchsige Humanoide mit einer Größe zwischen 80 und 110 Zentimetern. Ihre Hautfarben reichen von graugrün über rostbraun bis blassblau, ihre Augen leuchten oft in Gelb- oder Orangetönen.  \r
+
+  Ihre Körper sind drahtig, ihre Bewegungen schnell und nervös. Goblins altern rasch – selten werden sie älter als 60 Jahre –, doch sie leben doppelt so intensiv.  \r
+
+  Viele Goblins schmücken sich mit Metallteilen, Tätowierungen oder improvisierten Implantaten, die sie in Werkstätten oder Ruinen finden.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Gesellschaft**\r
+
+  Goblins leben am Rand der Städte – in Tunneln, alten Industriegebäuden und auf gigantischen Schrottfeldern. Dort errichten sie ihre **Kolonien**, lose organisierte Gemeinschaften, in denen Erfindungsgeist und Anarchie herrschen.  \r
+
+  Hier gilt nur eine Regel: Wer etwas baut, gehört dazu.  \r
+
+  Ihre Kultur basiert auf Recycling, Improvisation und unkonventionellen Ideen. Viele Goblins arbeiten heimlich für zwergische oder menschliche Firmen, wo sie als „unsichtbare Experten“ gelten.  \r
+
+  Andere schließen sich Untergrundgruppen wie den **Erleuchteten** oder orkischen **Blutklingen** an, um gegen die herrschenden Systeme zu kämpfen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Gesinnung und Religion**\r
+
+  Goblins haben selten festen Glauben – sie beten zu „den Funken“, kleinen Göttern der Erfindung, die in kaputten Maschinen wohnen sollen.  \r
+
+  Einige Goblins verehren auch die Idee des **Zerfalls** – dass alles, was zerstört wird, Platz für Neues schafft.  \r
+
+  Sie sind meist chaotisch-neutral oder chaotisch-gut, doch ihr moralischer Kompass richtet sich weniger nach Gesetzen als nach Gelegenheit und Loyalität zu ihrer Kolonie.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Namen**\r
+
+  Goblins bevorzugen kurze, zischende oder klickende Namen, oft ergänzt durch selbstgewählte Spitznamen.  \r
+
+  **Beispiele:**  \r
+
+  **Männlich:** Skrik, Drek, Mung, Vark, Pex, Jarrik  \r
+
+  **Weiblich:** Zilla, Trix, Kaggra, Limm, Orri, Neka  \r
+
+  **Kolonienamen:** Schrottnest, Funkenheim, Rosthafen, Tiefgang, Glimmfeld\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volksmerkmale**\r
+
+  \r
+
+  | Merkmal | Wert |\r
+
+  |:--|:--|\r
+
+  | **Trefferpunkte** | 6 |\r
+
+  | **Größe** | Klein |\r
+
+  | **Bewegung** | 25 Fuß |\r
+
+  | **Attributsverbesserungen** | Geschicklichkeit, Intelligenz, 1 frei |\r
+
+  | **Attributsfehler** | Weisheit |\r
+
+  | **Sprachen** | Goblinisch, Gemeinsprache; zusätzliche Sprachen abhängig vom Intelligenzmodifikator |\r
+
+  | **Merkmale** | Goblinisch, Humanoid |\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Volksfertigkeit – Improvisationstalent**\r
+
+  Du kannst aus Schrott ein Werkzeug oder eine Waffe machen.  \r
+
+  **Effekt:** Wenn du improvisierte Gegenstände verwendest, erhältst du keinen Malus auf Angriffe oder Handwerksproben damit. Zusätzlich erhältst du einen +1 Bonus auf Würfe zum Reparieren oder Basteln.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volks-Feats**\r
+
+  \r
+
+  ### **1. Stufe – Schrottfinder**\r
+
+  *Voraussetzung:* Goblin  \r
+
+  Du kannst überall etwas Nützliches entdecken. Einmal pro Stunde kannst du eine Handwerksprobe ablegen (SG 15), um ein einfaches Werkzeug, Ersatzteil oder 1W6 GP an brauchbarem Material zu finden.\r
+
+  \r
+
+  ### **5. Stufe – Lichtschrecken**\r
+
+  Du bist an grelles Licht gewöhnt. Du ignorierst Blendung durch künstliches oder magisches Licht und erhältst Dunkelsicht.\r
+
+  \r
+
+  ### **9. Stufe – Tüftlerinstinkt**\r
+
+  Du kannst eine einfache Maschine oder Vorrichtung in der halben üblichen Zeit reparieren oder modifizieren. Wenn du improvisierte Sprengsätze oder Fallen baust, erhalten sie +1 auf Angriffs- oder SG-Würfe.\r
+
+  \r
+
+  ### **13. Stufe – Chaosmeister**\r
+
+  Dein Erfindungsgeist kennt keine Grenzen. Einmal pro Tag kannst du einen misslungenen Handwerkswurf automatisch in einen Erfolg verwandeln – das Ergebnis ist jedoch unvorhersehbar und kann kleine Nebenwirkungen haben.\r
+
+  \r
+
+  ### **17. Stufe – Schrottgott**\r
+
+  Du bist eins mit dem Lärm und der Bewegung der Welt. Du erhältst Resistenz 5 gegen Feuer- und Elektrizitätsschaden und kannst einmal pro Tag *Mending* oder *Tanglefoot* wirken (Attribut: Intelligenz).\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volksherkünfte (Heritages)**\r
+
+  \r
+
+  ### **Schrottplatz-Goblin**\r
+
+  Du bist zwischen Metall und Maschinen aufgewachsen. Du erhältst Resistenz 2 gegen Feuer und Immunität gegen Rauchinhalation.\r
+
+  \r
+
+  ### **Tunnelratte**\r
+
+  Du bewegst dich mühelos durch enge Räume. Du kannst dich durch Felder von beengtem Gelände ohne Malus bewegen und erhältst +1 auf Wahrnehmung in Dunkelheit.\r
+
+  \r
+
+  ### **Rosthaut**\r
+
+  Dein Körper ist widerstandsfähiger als gewöhnlich. Du erhältst Resistenz 2 gegen Säure- und Korrosionsschaden.\r
+
+  \r
+
+  ### **Lichtfänger**\r
+
+  Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.\r
+
+  \r
+
+  ### **Sprengfunken** *(selten)*\r
+
+  Dein Blut reagiert auf Hitze und Energie. Einmal pro Tag kannst du beim Einsatz von Feuer oder Elektrizität zusätzlichen Schaden in Höhe deines Stufenbonus verursachen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  Goblins sind Überlebende des Fortschritts – rastlos, brillant und gefährlich unberechenbar. Sie leben im Lärm der Maschinen, lachen über ihre eigene Zerstörung und erschaffen Schönheit aus Schrott.  \r
+
+  Im Spiel verkörpern sie Chaos, Kreativität und unbeugsame Freiheit – die Funken des Wahnsinns, die die Welt am Laufen halten."
 schemaVersion: 1
 size: small
 source: legacy.world-rules

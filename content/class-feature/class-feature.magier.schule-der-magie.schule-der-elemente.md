@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kanalisiert rohe Energie. - Du erhältst den Cantrip Produce Flame oder Electric Arc. - Wenn du einen Zauber wirkst, der Schaden verursacht, erhältst +1 auf den Schadenswurf.
+examples: []
 id: class-feature.magier.schule-der-magie.schule-der-elemente
 legacy:
   notes: []
@@ -14,6 +16,11 @@ level: 1
 name: Schule der Elemente
 prerequisites: []
 references: []
+rulesText: "Du kanalisiert rohe Energie.  \r
+
+  - Du erhältst den Cantrip *Produce Flame* oder *Electric Arc*.  \r
+
+  - Wenn du einen Zauber wirkst, der Schaden verursacht, erhältst +1 auf den Schadenswurf."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

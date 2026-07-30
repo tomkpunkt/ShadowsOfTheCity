@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: language.orcish
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
 name: Orkisch
 rarity: common
 references: []
+rulesText: Orkisch ist eine aus dem Altbestand normalisierte Sprache.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

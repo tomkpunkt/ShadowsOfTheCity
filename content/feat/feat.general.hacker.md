@@ -1,9 +1,11 @@
 ---
 category: profession
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Digitale Netzwerke
+examples: []
 id: feat.general.hacker
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 15
           id: intelligence
 references: []
+rulesText: "Hacker gewährt den im Altbestand beschriebenen Effekt: Digitale Netzwerke."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

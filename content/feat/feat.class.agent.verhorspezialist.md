@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +2 auf Diplomatie und Einschüchtern bei Informationsgewinn.
+examples: []
 id: feat.class.agent.verhorspezialist
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: +2 auf Diplomatie und Einschüchtern bei Informationsgewinn.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

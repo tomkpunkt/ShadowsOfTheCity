@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du ignorierst schwieriges Gelände durch Wind oder Wasser.
+examples: []
 id: feat.class.schamane.sturmlaufer
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.schamane
 references: []
+rulesText: Du ignorierst schwieriges Gelände durch Wind oder Wasser.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

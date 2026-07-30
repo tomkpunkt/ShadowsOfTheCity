@@ -1,9 +1,11 @@
 ---
 armorClass: 14
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "- Stufe: 1/2 - TP: 30 (6d8 + 6) - RK: 14 (Tarnkleidung) - Fertigkeiten: -2 auf alle Fertigkeitswürfe - Spezialfähigkeiten: Begrenzter Konzernzugang"
+examples: []
 hp: 30
 id: creature.konzernagent-lehrling
 legacy:
@@ -16,6 +18,15 @@ legacySystem: dnd5e
 level: 0
 name: Konzernagent-Lehrling
 references: []
+rulesText: "- **Stufe:** 1/2\r
+
+  - **TP:** 30 (6d8 + 6)\r
+
+  - **RK:** 14 (Tarnkleidung)\r
+
+  - **Fertigkeiten:** -2 auf alle Fertigkeitswürfe\r
+
+  - **Spezialfähigkeiten:** Begrenzter Konzernzugang"
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

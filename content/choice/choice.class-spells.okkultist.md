@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.okkultist
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-spells.okkultist
 legacy:
   notes:
@@ -25,6 +27,7 @@ legacy:
     - classes/klasse_okkultist.md
 name: Okkultist-Zauber
 references: []
+rulesText: Wähle Zauber aus der occult-Tradition.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

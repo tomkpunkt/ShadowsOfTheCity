@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.item.armor.heavy
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - gear/equipment/equipment_overview.md
 name: Schwere Rüstung
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Schwere Rüstung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

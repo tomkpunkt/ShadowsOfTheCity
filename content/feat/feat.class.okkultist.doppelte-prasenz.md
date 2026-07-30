@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.okkultist
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst mit Geistern kommunizieren, die dich sehen, ohne zu sprechen.
+examples: []
 id: feat.class.okkultist.doppelte-prasenz
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.okkultist
 references: []
+rulesText: Du kannst mit Geistern kommunizieren, die dich sehen, ohne zu sprechen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

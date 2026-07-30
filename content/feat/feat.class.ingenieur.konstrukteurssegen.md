@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Alle Geräte, die du herstellst, erhalten +1 auf Haltbarkeit.
+examples: []
 id: feat.class.ingenieur.konstrukteurssegen
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: Alle Geräte, die du herstellst, erhalten +1 auf Haltbarkeit.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

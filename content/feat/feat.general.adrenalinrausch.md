@@ -1,9 +1,11 @@
 ---
 category: general
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +10 Fuß Bewegung 1x/Kampf
+examples: []
 id: feat.general.adrenalinrausch
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 13
           id: dexterity
 references: []
+rulesText: "Adrenalinrausch gewährt den im Altbestand beschriebenen Effekt: +10 Fuß Bewegung 1x/Kampf."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

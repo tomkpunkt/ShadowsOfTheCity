@@ -1,5 +1,7 @@
 ---
 category: spellcasting
+editorialStatus: reviewed
+examples: []
 id: proficiency.spell.primal
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Naturzauber
 references: []
+rulesText: Naturzauber verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.ancestry
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Abstammung
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Abstammung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

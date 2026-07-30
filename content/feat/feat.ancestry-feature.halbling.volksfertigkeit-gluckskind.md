@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.halbling
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Das Schicksal scheint dir gewogen zu sein. Effekt: Einmal pro Tag kannst du einen fehlgeschlagenen Angriffswurf oder Rettungswurf wiederholen. Du musst das zweite Ergebnis verwenden. ---"
+examples: []
 id: feat.ancestry-feature.halbling.volksfertigkeit-gluckskind
 legacy:
   notes: []
@@ -16,6 +18,13 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: "Das Schicksal scheint dir gewogen zu sein.  \r
+
+  **Effekt:** Einmal pro Tag kannst du einen fehlgeschlagenen Angriffswurf oder Rettungswurf wiederholen. Du musst das zweite Ergebnis verwenden.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

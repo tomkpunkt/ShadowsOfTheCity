@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.halbling
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist es gewohnt, dich im Schatten der Großen zu bewegen. Du erhältst einen +1 Bonus auf Heimlichkeit und Diplomatie, wenn du versuchst, unbemerkt zu bleiben oder Konflikte zu vermeiden.
+examples: []
 id: feat.ancestry.halbling.unauffallig
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: Du bist es gewohnt, dich im Schatten der Großen zu bewegen. Du erhältst einen +1 Bonus auf Heimlichkeit und Diplomatie, wenn du versuchst, unbemerkt zu bleiben oder Konflikte zu vermeiden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

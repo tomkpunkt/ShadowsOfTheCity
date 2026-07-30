@@ -1,9 +1,11 @@
 ---
 category: general
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +2 Wahrnehmung
+examples: []
 id: feat.general.verbesserte-wahrnehmung
 legacy:
   notes: []
@@ -18,6 +20,253 @@ prerequisites:
           gte: 13
           id: wisdom
 references: []
+rulesText: "# Verbesserte Wahrnehmung\r
+
+  \r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Flavortext**\r
+
+  \r
+
+  > „Die Augen sehen, aber die Wahrnehmung erkennt.\"\r
+
+  \r
+
+  Verbesserte Wahrnehmung ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Umgebung besser zu beobachten und wichtige Details zu erkennen. In der urbanen Welt des Zeitalters des Goldes, wo Überwachung und Verstecken alltäglich sind, ist diese Fähigkeit von unschätzbarem Wert.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Übersicht**\r
+
+  \r
+
+  Verbesserte Wahrnehmung erhöht die Fähigkeit eines Charakters, seine Umgebung zu beobachten und wichtige Informationen zu sammeln. Diese Fähigkeit ist besonders nützlich für Spione, Ermittler und alle, die auf Details angewiesen sind.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Mechanische Details**\r
+
+  \r
+
+  ### **Voraussetzungen**\r
+
+  - **Stufe:** 1+\r
+
+  - **Weisheit:** 13+\r
+
+  \r
+
+  ### **Effekt**\r
+
+  - **Wahrnehmung:** +2 auf alle Wahrnehmungswürfe\r
+
+  - **Stapelbar:** Nein (nur einmal erhältlich)\r
+
+  \r
+
+  ### **Anwendungsbereiche**\r
+
+  - **Beobachten:** Personen und Objekte erkennen\r
+
+  - **Lauschen:** Geräusche und Gespräche hören\r
+
+  - **Spurenlesen:** Fußspuren und Anzeichen verfolgen\r
+
+  - **Verstecken:** Versteckte Personen oder Objekte finden\r
+
+  - **Überwachung:** Kameras und Sensoren bemerken\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Spielmechanische Auswirkungen**\r
+
+  \r
+
+  ### **Vorteile**\r
+
+  - **Frühwarnung:** Gefahren früher erkennen\r
+
+  - **Informationen:** Mehr Details über die Umgebung\r
+
+  - **Verstecken:** Versteckte Gegner leichter finden\r
+
+  - **Ermittlung:** Wichtige Hinweise nicht übersehen\r
+
+  - **Überleben:** Fallen und Gefahren rechtzeitig bemerken\r
+
+  \r
+
+  ### **Nachteile**\r
+
+  - **Feat-Slot:** Verbraucht einen wertvollen Feat-Slot\r
+
+  - **Spezialisierung:** Fokussiert auf Wahrnehmung statt andere Fähigkeiten\r
+
+  - **Abhängigkeit:** Wirkt nur bei Wahrnehmungswürfen\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Synergien**\r
+
+  \r
+
+  ### **Gute Kombinationen**\r
+
+  - **Ermittler-Beruf:** Verstärkt die Ermittlungsfähigkeiten\r
+
+  - **Hacker/Informationsbroker:** Kombiniert mit technischer Wahrnehmung\r
+
+  - **Agent:** Spionage und Infiltration\r
+
+  - **Wissenschaftler:** Analytische Beobachtung\r
+
+  \r
+
+  ### **Klassenempfehlungen**\r
+
+  - **Agent:** Spione brauchen scharfe Wahrnehmung\r
+
+  - **Ermittler:** Professionelle Ermittler profitieren am meisten\r
+
+  - **Wissenschaftler:** Forscher brauchen detaillierte Beobachtung\r
+
+  - **Mediziner:** Ärzte müssen Details erkennen\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Taktische Anwendung**\r
+
+  \r
+
+  ### **Kampf**\r
+
+  - **Initiative:** Frühere Erkennung von Gefahren\r
+
+  - **Verstecken:** Versteckte Gegner finden\r
+
+  - **Taktik:** Schlachtfeld besser überblicken\r
+
+  - **Überraschung:** Überraschungsangriffe vermeiden\r
+
+  \r
+
+  ### **Außerhalb des Kampfes**\r
+
+  - **Ermittlung:** Wichtige Hinweise finden\r
+
+  - **Spionage:** Überwachung und Verstecken bemerken\r
+
+  - **Navigation:** Richtungen und Wege erkennen\r
+
+  - **Sozial:** Körpersprache und Verhalten beobachten\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Fluff und Hintergrund**\r
+
+  \r
+
+  ### **Charakterkonzepte**\r
+
+  - **Ermittler:** Professioneller Detektiv oder Polizist\r
+
+  - **Spion:** Geheimdienstler mit scharfen Sinnen\r
+
+  - **Wissenschaftler:** Forscher mit analytischem Blick\r
+
+  - **Überlebenskünstler:** Jemand, der auf Details angewiesen ist\r
+
+  \r
+
+  ### **Geschichtliche Integration**\r
+
+  - **Polizei:** Ermittler und Detektive haben diese Fähigkeit\r
+
+  - **Geheimdienst:** Agenten und Spione\r
+
+  - **Konzerne:** Sicherheitskräfte und Überwachungsspezialisten\r
+
+  - **Wissenschaft:** Forscher und Analytiker\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Regeltechnische Details**\r
+
+  \r
+
+  ### **Interaktionen**\r
+
+  - **Wahrnehmungsfertigkeit:** Verstärkt alle Wahrnehmungswürfe\r
+
+  - **Magie Erkennen:** Hilft bei der Erkennung magischer Effekte\r
+
+  - **Technologie:** Unterstützt bei der Erkennung technischer Geräte\r
+
+  - **Soziale Situationen:** Hilft bei der Beobachtung von Verhalten\r
+
+  \r
+
+  ### **Spezialfälle**\r
+
+  - **Schwierige Bedingungen:** Funktioniert auch bei schlechter Sicht\r
+
+  - **Verstecken:** Gegner haben -2 auf Heimlichkeit gegen diesen Charakter\r
+
+  - **Überraschung:** Reduziert die Chance auf Überraschungsangriffe\r
+
+  - **Ermittlung:** Erhöht die Chance, wichtige Hinweise zu finden\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  \r
+
+  Verbesserte Wahrnehmung ist eine der wichtigsten Fähigkeiten im Zeitalter des Goldes. In einer Welt voller Überwachung, Verstecken und Intrigen ist die Fähigkeit, Details zu erkennen und wichtige Informationen zu sammeln, oft der Schlüssel zum Erfolg.\r
+
+  \r
+
+  Diese Fähigkeit repräsentiert nicht nur scharfe Sinne, sondern auch die Fähigkeit, Muster zu erkennen und wichtige Informationen von unwichtigen zu unterscheiden. Charaktere mit verbesserter Wahrnehmung haben gelernt, ihre Umgebung systematisch zu beobachten und nichts zu übersehen."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

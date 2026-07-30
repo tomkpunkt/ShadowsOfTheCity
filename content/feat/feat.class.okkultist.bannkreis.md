@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.okkultist
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst 1/Tag einen Schutzkreis gegen eine Kreaturenart ziehen (SG 20).
+examples: []
 id: feat.class.okkultist.bannkreis
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.okkultist
 references: []
+rulesText: Du kannst 1/Tag einen Schutzkreis gegen eine Kreaturenart ziehen (SG 20).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

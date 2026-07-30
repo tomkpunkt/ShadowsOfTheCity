@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst Geister, Illusionen und magische Auren sehen.
+examples: []
 id: feat.class.schamane.geisterblick
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.schamane
 references: []
+rulesText: Du kannst Geister, Illusionen und magische Auren sehen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

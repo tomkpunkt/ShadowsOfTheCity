@@ -1,9 +1,11 @@
 ---
 armorClass: 15
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "- Typ: Ork (Ork-Schläger-Veteran), chaotisch böse - Stufe: 2 (400 EP) - TP: 55 (11d8 + 11) - RK: 15 (Verstärkte Lederjacke + natürliche Rüstung) - Geschwindigkeit: 30 Fuß - Stärke: 18 (+4) | Geschicklichkeit: 14 (+2) | Konstitution: 16 (+3) | Intelligenz: 10 (+0) | Weisheit: 13 (+1) | Charisma: 15 (+2) - Rettungswürfe: Stärke +6, Konstitution +6 - Fertigkeiten: Einschüchtern +5, Athletik +6, Wahrnehmung +4, Überleben +4 - Sinne: Dunkelsicht 60 Fuß, Passive Wahrnehmung 14 - Sprachen: Orkisch, Deutsch, Straßenslang - Spezialfähigkeiten: Erweiterte Territoriale Kontrolle, Aggressive Haltung, Gang-Mentalität, Ork-Stärke, Wutausbruch - Aktionen: Kampfhammer, Faust, Schlagstock, Einschüchtern, Verstärkung rufen"
+examples: []
 hp: 55
 id: creature.ork-schlager-veteran
 legacy:
@@ -16,6 +18,29 @@ legacySystem: dnd5e
 level: 2
 name: Ork-Schläger-Veteran
 references: []
+rulesText: "- **Typ:** Ork (Ork-Schläger-Veteran), chaotisch böse\r
+
+  - **Stufe:** 2 (400 EP)\r
+
+  - **TP:** 55 (11d8 + 11)\r
+
+  - **RK:** 15 (Verstärkte Lederjacke + natürliche Rüstung)\r
+
+  - **Geschwindigkeit:** 30 Fuß\r
+
+  - **Stärke:** 18 (+4) | **Geschicklichkeit:** 14 (+2) | **Konstitution:** 16 (+3) | **Intelligenz:** 10 (+0) | **Weisheit:** 13 (+1) | **Charisma:** 15 (+2)\r
+
+  - **Rettungswürfe:** Stärke +6, Konstitution +6\r
+
+  - **Fertigkeiten:** Einschüchtern +5, Athletik +6, Wahrnehmung +4, Überleben +4\r
+
+  - **Sinne:** Dunkelsicht 60 Fuß, Passive Wahrnehmung 14\r
+
+  - **Sprachen:** Orkisch, Deutsch, Straßenslang\r
+
+  - **Spezialfähigkeiten:** Erweiterte Territoriale Kontrolle, Aggressive Haltung, Gang-Mentalität, Ork-Stärke, Wutausbruch\r
+
+  - **Aktionen:** Kampfhammer, Faust, Schlagstock, Einschüchtern, Verstärkung rufen"
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

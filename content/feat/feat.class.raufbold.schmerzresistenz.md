@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du Schaden erleidest, reduziere ihn um 1 pro 5 Stufen.
+examples: []
 id: feat.class.raufbold.schmerzresistenz
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: Wenn du Schaden erleidest, reduziere ihn um 1 pro 5 Stufen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

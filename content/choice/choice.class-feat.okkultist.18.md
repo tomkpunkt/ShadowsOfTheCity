@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.okkultist
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-feat.okkultist.18
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_okkultist.md
 name: Okkultist-Talent Stufe 18
 references: []
+rulesText: Wähle auf Stufe 18 ein verfügbares Okkultist-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Okkultist-Talent.
+summary: Wähle auf Stufe 18 ein verfügbares Okkultist-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Okkultist-Talent.
+Wähle auf Stufe 18 ein verfügbares Okkultist-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

@@ -472,3 +472,17 @@ Offene Punkte:
 
 Den geprüften Commit veröffentlichen und per Pull Request gegen `main`
 begutachten lassen.
+
+## Folgeauftrag: Redaktion und Ausrüstungskatalog
+
+| Phase | Status | Ergebnis | Prüfungen | Offene Entscheidungen |
+|:--|:--|:--|:--|:--|
+| 1 - Redaktionsstandard | complete | Rollen, Pflichtfelder, Terminologie, Status und Taxonomie in `docs/content-editorial-standard.md` definiert | Schemaabgleich und Beispiele geprüft | keine |
+| 2 - Qualitätsinventar | complete | Einzelbewertung für 737 Entitäten; 0 Blocker und 0 identische Kurztexte | `npm run editorial:quality` | 12 gesperrte Regelentscheidungen |
+| 3 - Ausrüstungstaxonomie | complete | 80 Gegenstände nach Kategorie, Unterkategorie, Technik, Verfügbarkeit und Herkunft klassifiziert | `npm run equipment:classification` | Qualität mangels belastbarer Quelle nicht gesetzt |
+| 4 - Referenzgruppen | complete | 19 Fertigkeiten, 8 Hintergründe und 68 aktive Gegenstände neu gefasst | Migration, Validation, Audit und Diffprüfung | keine |
+| 5 - weitere Entitäten | complete | 630 Entitäten einzeln geprüft; alle aktiven Inhalte mindestens `reviewed` | Status-, Text- und Duplikatprüfung | keine aktiven Kernlücken |
+| 6 - Maschinenlesbarkeit | complete | 737 Regeltexte nach tatsächlicher Relevanz klassifiziert | `npm run machine-readability:audit` | 12 fachlich ungeklärte Entwürfe |
+| 7 - Katalog-UI | complete | vollständige Filter, Sortierung, Gruppierung, Karten- und Detaildarstellung in Kompendium und Ausrüstung | Typecheck, Unit- und E2E-Tests | keine |
+| 8 - Tests und visuelle Prüfung | complete | 52 Unit-/Integrationstests, 16 E2E-Prüfungen und 13 neue Screenshots | Desktop 1440 × 900, Mobil 390 × 844 | keine |
+| 9 - Abschlussprüfung | complete | Berichte 10 bis 14 und reproduzierbare npm-Kommandos erstellt | `npm run verify` vollständig erfolgreich | keine |

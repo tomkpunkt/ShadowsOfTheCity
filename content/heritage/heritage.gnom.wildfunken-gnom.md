@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.gnom
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du trägst noch das alte Erbe der Naturmagie in dir. Du erhältst den Cantrip Tanglefoot als angeborene arkane Fähigkeit (Attribut: Charisma)."
+examples: []
 id: heritage.gnom.wildfunken-gnom
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.gnom
 references: []
+rulesText: "Du trägst noch das alte Erbe der Naturmagie in dir. Du erhältst den Cantrip *Tanglefoot* als angeborene arkane Fähigkeit (Attribut: Charisma)."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

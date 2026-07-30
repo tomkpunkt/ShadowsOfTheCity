@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.schamane
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.schamane.geisterpfad
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_schamane.md
 name: Geisterpfad wählen
 references: []
+rulesText: Wähle für Schamane eine Option der Klassenfunktion Geisterpfad.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Geisterpfad.
+summary: Wähle für Schamane eine Option der Klassenfunktion Geisterpfad.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Geisterpfad.
+Wähle für Schamane eine Option der Klassenfunktion Geisterpfad.

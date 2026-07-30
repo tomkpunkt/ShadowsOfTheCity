@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst zwei verschiedene Cantrips gleichzeitig vorbereiten.
+examples: []
 id: feat.class.magier.doppelte-formel
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: Du kannst zwei verschiedene Cantrips gleichzeitig vorbereiten.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

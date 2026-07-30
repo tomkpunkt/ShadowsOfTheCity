@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.soldner
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-feat.soldner.12
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_soeldner.md
 name: Söldner-Talent Stufe 12
 references: []
+rulesText: Wähle auf Stufe 12 ein verfügbares Söldner-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Söldner-Talent.
+summary: Wähle auf Stufe 12 ein verfügbares Söldner-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Söldner-Talent.
+Wähle auf Stufe 12 ein verfügbares Söldner-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

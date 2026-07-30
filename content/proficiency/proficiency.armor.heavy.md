@@ -1,5 +1,7 @@
 ---
 category: armor
+editorialStatus: reviewed
+examples: []
 id: proficiency.armor.heavy
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Schwere Rüstung
 references: []
+rulesText: Schwere Rüstung verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

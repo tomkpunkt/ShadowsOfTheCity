@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.magier
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-feat.magier.10
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_magier.md
 name: Magier-Talent Stufe 10
 references: []
+rulesText: Wähle auf Stufe 10 ein verfügbares Magier-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Magier-Talent.
+summary: Wähle auf Stufe 10 ein verfügbares Magier-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Magier-Talent.
+Wähle auf Stufe 10 ein verfügbares Magier-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.okkultist
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.okkultist.pfad-der-macht
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_okkultist.md
 name: Pfad der Macht wählen
 references: []
+rulesText: Wähle für Okkultist eine Option der Klassenfunktion Pfad der Macht.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Pfad der Macht.
+summary: Wähle für Okkultist eine Option der Klassenfunktion Pfad der Macht.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Pfad der Macht.
+Wähle für Okkultist eine Option der Klassenfunktion Pfad der Macht.

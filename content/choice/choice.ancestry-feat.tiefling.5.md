@@ -18,6 +18,8 @@ choice:
     - ancestry:
         id: ancestry.tiefling
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.ancestry-feat.tiefling.5
 legacy:
   notes: []
@@ -25,12 +27,13 @@ legacy:
     - races/tieflinge_zeitalter_des_goldes.md
 name: Tiefling-Talent Stufe 5
 references: []
+rulesText: Wähle auf Stufe 5 ein verfügbares Tiefling-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Tiefling-Talent.
+summary: Wähle auf Stufe 5 ein verfügbares Tiefling-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Tiefling-Talent.
+Wähle auf Stufe 5 ein verfügbares Tiefling-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

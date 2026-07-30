@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst zwei verschiedene Decknamen gleichzeitig führen.
+examples: []
 id: feat.class.agent.tarnidentitat
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: Du kannst zwei verschiedene Decknamen gleichzeitig führen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

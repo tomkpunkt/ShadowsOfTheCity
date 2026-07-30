@@ -1,6 +1,8 @@
 ---
 castingAttribute: intelligence
 classId: class.magier
+editorialStatus: reviewed
+examples: []
 id: spellcasting.arcane-prepared
 legacy:
   notes:
@@ -15,6 +17,7 @@ proficiencyByLevel:
   "19": legendary
   "7": expert
 references: []
+rulesText: Vorbereitete arkane Progression; Progression als ausdrückliche Testannahme ergänzt.
 schemaVersion: 1
 slotsByLevel:
   "1":

@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.mediziner
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.mediziner.fachrichtung
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_mediziner.md
 name: Fachrichtung wählen
 references: []
+rulesText: Wähle für Mediziner eine Option der Klassenfunktion Fachrichtung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Fachrichtung.
+summary: Wähle für Mediziner eine Option der Klassenfunktion Fachrichtung.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Fachrichtung.
+Wähle für Mediziner eine Option der Klassenfunktion Fachrichtung.

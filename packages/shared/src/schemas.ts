@@ -285,6 +285,59 @@ export const ActionCostSchema = z.union([
   z.object({ kind: z.enum(["reaction", "free", "passive", "exploration", "downtime"]) }).strict()
 ]);
 
+export const EditorialStatusSchema = z.enum([
+  "migrated",
+  "reviewed",
+  "rewritten",
+  "needs-rules-decision"
+]);
+
+export const TechnologyLevelSchema = z.enum([
+  "archaic",
+  "conventional",
+  "low-tech",
+  "high-tech",
+  "experimental",
+  "biotech",
+  "arcane",
+  "magitech"
+]);
+
+export const ItemAvailabilitySchema = z.enum([
+  "common",
+  "registered",
+  "licensed",
+  "restricted",
+  "military",
+  "illegal",
+  "black-market",
+  "unique"
+]);
+
+export const ItemQualitySchema = z.enum([
+  "improvised",
+  "poor",
+  "standard",
+  "professional",
+  "premium",
+  "military",
+  "prototype",
+  "masterwork"
+]);
+
+export const ItemOriginSchema = z.enum([
+  "civilian",
+  "industrial",
+  "medical",
+  "corporate",
+  "governmental",
+  "military",
+  "criminal",
+  "street",
+  "occult",
+  "otherworldly"
+]);
+
 const BaseEntityShape = {
   schemaVersion: z.literal(SCHEMA_VERSION),
   id: EntityIdSchema,
@@ -293,6 +346,12 @@ const BaseEntityShape = {
   source: EntityIdSchema,
   status: ContentStatusSchema,
   summary: z.string().min(20).default("Inhalt aus dem bestehenden Regelwerk."),
+  flavorText: z.string().min(20).optional(),
+  rulesText: z.string().min(20).default("Regeltext aus dem bestehenden Regelwerk."),
+  usageNotes: z.string().min(20).optional(),
+  limitations: z.string().min(20).optional(),
+  examples: z.array(z.string().min(20)).default([]),
+  editorialStatus: EditorialStatusSchema.default("migrated"),
   description: z.string(),
   traits: z.array(EntityIdSchema).default([]),
   references: z.array(EntityIdSchema).default([]),
@@ -448,12 +507,25 @@ const ItemFields = {
   level: z.number().int().min(0).max(30),
   priceGp: z.number().nonnegative(),
   bulk: z.number().nonnegative(),
-  hands: z.number().int().min(0).max(2)
+  hands: z.number().int().min(0).max(2),
+  technologyLevel: TechnologyLevelSchema,
+  availability: ItemAvailabilitySchema,
+  quality: ItemQualitySchema.optional(),
+  origins: z.array(ItemOriginSchema).min(1)
 };
 
 const WeaponSchema = BaseEntitySchema.extend({
   type: z.literal("weapon"),
   ...ItemFields,
+  category: z.literal("weapon"),
+  subcategory: z.enum([
+    "melee-weapon",
+    "ranged-weapon",
+    "firearm",
+    "energy-weapon",
+    "thrown-weapon",
+    "magical-weapon"
+  ]),
   categoryId: EntityIdSchema,
   groupId: EntityIdSchema,
   damage: z
@@ -478,6 +550,15 @@ const WeaponSchema = BaseEntitySchema.extend({
 const ArmorSchema = BaseEntitySchema.extend({
   type: z.literal("armor"),
   ...ItemFields,
+  category: z.enum(["armor", "protective-clothing"]),
+  subcategory: z.enum([
+    "light-armor",
+    "medium-armor",
+    "heavy-armor",
+    "camouflage-clothing",
+    "environmental-suit",
+    "magical-protection"
+  ]),
   categoryId: EntityIdSchema,
   itemBonus: z.number().int().min(0),
   dexterityCap: z.number().int().min(0)
@@ -486,6 +567,32 @@ const ArmorSchema = BaseEntitySchema.extend({
 const EquipmentSchema = BaseEntitySchema.extend({
   type: z.literal("equipment"),
   ...ItemFields,
+  category: z.enum([
+    "protective-clothing",
+    "medical",
+    "tool",
+    "electronics",
+    "communication",
+    "surveillance",
+    "magical-item",
+    "vehicle",
+    "everyday",
+    "service"
+  ]),
+  subcategory: z.enum([
+    "clothing",
+    "medical-supply",
+    "crafting-material",
+    "computer",
+    "sensor",
+    "communication-device",
+    "surveillance-device",
+    "ritual-tool",
+    "arcane-focus",
+    "vehicle",
+    "transit-service",
+    "protective-suit"
+  ]),
   categoryId: EntityIdSchema,
   effects: z.array(EffectSchema).default([])
 }).strict();
@@ -538,6 +645,8 @@ const ResourceSchema = BaseEntitySchema.extend({
 const CyberwareSchema = BaseEntitySchema.extend({
   type: z.literal("cyberware"),
   ...ItemFields,
+  category: z.literal("cyberware"),
+  subcategory: z.enum(["implant", "neural-interface", "prosthetic", "bioware"]),
   slot: z.enum(["head", "eyes", "torso", "arms", "hands", "legs", "skin", "neural"]),
   strain: z.number().nonnegative(),
   effects: z.array(EffectSchema).default([])

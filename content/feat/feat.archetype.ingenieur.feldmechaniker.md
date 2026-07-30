@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist Spezialist für schnelle Reparaturen. Einmal pro Stunde kannst du eine beschädigte Maschine oder Waffe um 1W8 TP reparieren. Wenn du eine Maschine während eines Kampfes stabilisierst, erhält sie Resistenz 2 gegen Schaden.
+examples: []
 id: feat.archetype.ingenieur.feldmechaniker
 legacy:
   notes:
@@ -17,6 +19,11 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: "Du bist Spezialist für schnelle Reparaturen.  \r
+
+  Einmal pro Stunde kannst du eine beschädigte Maschine oder Waffe um 1W8 TP reparieren.  \r
+
+  Wenn du eine Maschine während eines Kampfes stabilisierst, erhält sie Resistenz 2 gegen Schaden."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

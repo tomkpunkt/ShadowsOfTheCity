@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Deine unbewaffneten Schläge verursachen +1W6 zusätzlichen Schaden.
+examples: []
 id: feat.class.raufbold.knochenbrecher
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: Deine unbewaffneten Schläge verursachen +1W6 zusätzlichen Schaden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

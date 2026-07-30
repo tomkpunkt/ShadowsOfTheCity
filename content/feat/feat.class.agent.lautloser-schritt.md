@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst dich selbst bei schneller Bewegung verstecken.
+examples: []
 id: feat.class.agent.lautloser-schritt
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: Du kannst dich selbst bei schneller Bewegung verstecken.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.agent
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.agent.vorgehensweise
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_agent.md
 name: Vorgehensweise wählen
 references: []
+rulesText: Wähle für Agent eine Option der Klassenfunktion Vorgehensweise.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Vorgehensweise.
+summary: Wähle für Agent eine Option der Klassenfunktion Vorgehensweise.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Vorgehensweise.
+Wähle für Agent eine Option der Klassenfunktion Vorgehensweise.

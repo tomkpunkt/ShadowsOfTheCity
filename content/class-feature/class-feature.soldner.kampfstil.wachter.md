@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist Verteidiger und Schildträger. - Erhalte den Feat Shield Block. - Wenn du erfolgreich einen Verbündeten verteidigst, erhält dieser bis zum Ende deines nächsten Zuges +1 AC. ---
+examples: []
 id: class-feature.soldner.kampfstil.wachter
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 1
 name: Wächter
 prerequisites: []
 references: []
+rulesText: "Du bist Verteidiger und Schildträger.  \r
+
+  - Erhalte den Feat *Shield Block*.  \r
+
+  - Wenn du erfolgreich einen Verbündeten verteidigst, erhält dieser bis zum Ende deines nächsten Zuges +1 AC.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

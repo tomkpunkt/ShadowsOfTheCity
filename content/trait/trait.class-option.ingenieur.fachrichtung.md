@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.class-option.ingenieur.fachrichtung
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - classes/klasse_ingenieur.md
 name: "Ingenieur: Fachrichtung"
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Ingenieur: Fachrichtung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

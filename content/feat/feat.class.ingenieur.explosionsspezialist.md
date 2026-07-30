@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst sichere Brandmischungen herstellen (+1 auf Schaden, SG 20).
+examples: []
 id: feat.class.ingenieur.explosionsspezialist
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: Du kannst sichere Brandmischungen herstellen (+1 auf Schaden, SG 20).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

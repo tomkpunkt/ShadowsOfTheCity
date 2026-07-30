@@ -15,6 +15,13 @@ type ContentStatus = ContentEntity["status"];
 type ActionCost = Extract<ContentEntity, { type: "spell" }>["actions"];
 type Range = Extract<ContentEntity, { type: "spell" }>["range"];
 type ChoiceKind = Extract<ContentEntity, { type: "choice" }>["choice"]["kind"];
+type ItemEntity = Extract<ContentEntity, { type: "weapon" | "armor" | "equipment" | "cyberware" }>;
+type ItemCategory = ItemEntity["category"];
+type ItemSubcategory = ItemEntity["subcategory"];
+type TechnologyLevel = ItemEntity["technologyLevel"];
+type ItemAvailability = ItemEntity["availability"];
+type ItemQuality = NonNullable<ItemEntity["quality"]>;
+type ItemOrigin = ItemEntity["origins"][number];
 
 const exhaustiveLabel = <T extends string>(
   labels: Record<T, string>,
@@ -102,6 +109,104 @@ export const traditionLabels = {
   primal: "Naturmagisch"
 } as const;
 
+export const itemCategoryLabels: Record<ItemCategory, string> = {
+  weapon: "Waffe",
+  armor: "Rüstung",
+  "protective-clothing": "Schutzkleidung",
+  medical: "Medizin",
+  tool: "Werkzeug",
+  electronics: "Elektronik",
+  communication: "Kommunikation",
+  surveillance: "Überwachung",
+  "magical-item": "Magischer Gegenstand",
+  vehicle: "Fahrzeug",
+  everyday: "Alltagsgegenstand",
+  service: "Dienstleistung",
+  cyberware: "Cyberware"
+};
+
+export const itemSubcategoryLabels: Record<ItemSubcategory, string> = {
+  "melee-weapon": "Nahkampfwaffe",
+  "ranged-weapon": "Fernkampfwaffe",
+  firearm: "Schusswaffe",
+  "energy-weapon": "Energiewaffe",
+  "thrown-weapon": "Wurfwaffe",
+  "magical-weapon": "Magische Waffe",
+  "light-armor": "Leichte Rüstung",
+  "medium-armor": "Mittelschwere Rüstung",
+  "heavy-armor": "Schwere Rüstung",
+  "camouflage-clothing": "Tarnkleidung",
+  "environmental-suit": "Umweltanzug",
+  "magical-protection": "Magischer Schutz",
+  clothing: "Kleidung",
+  "medical-supply": "Medizinischer Bedarf",
+  "crafting-material": "Handwerksmaterial",
+  computer: "Computer",
+  sensor: "Sensor",
+  "communication-device": "Kommunikationsgerät",
+  "surveillance-device": "Überwachungsgerät",
+  "ritual-tool": "Ritualwerkzeug",
+  "arcane-focus": "Arkaner Fokus",
+  vehicle: "Fahrzeug",
+  "transit-service": "Verkehrsdienst",
+  "protective-suit": "Schutzanzug",
+  implant: "Implantat",
+  "neural-interface": "Neuralschnittstelle",
+  prosthetic: "Prothese",
+  bioware: "Bioware"
+};
+
+export const technologyLevelLabels: Record<TechnologyLevel, string> = {
+  archaic: "Archaisch",
+  conventional: "Konventionell",
+  "low-tech": "Low-Tech",
+  "high-tech": "High-Tech",
+  experimental: "Experimentell",
+  biotech: "Biotechnologisch",
+  arcane: "Arkan",
+  magitech: "Arkanotechnisch"
+};
+
+export const itemAvailabilityLabels: Record<ItemAvailability, string> = {
+  common: "Frei verfügbar",
+  registered: "Registrierungspflichtig",
+  licensed: "Lizenzpflichtig",
+  restricted: "Eingeschränkt",
+  military: "Militärisch kontrolliert",
+  illegal: "Illegal",
+  "black-market": "Schwarzmarkt",
+  unique: "Einzigartig"
+};
+
+export const itemQualityLabels: Record<ItemQuality, string> = {
+  improvised: "Improvisiert",
+  poor: "Minderwertig",
+  standard: "Standard",
+  professional: "Professionell",
+  premium: "Premium",
+  military: "Militärqualität",
+  prototype: "Prototyp",
+  masterwork: "Meisterarbeit"
+};
+
+export const itemOriginLabels: Record<ItemOrigin, string> = {
+  civilian: "Zivil",
+  industrial: "Industrie",
+  medical: "Medizin",
+  corporate: "Konzern",
+  governmental: "Behörde",
+  military: "Militär",
+  criminal: "Kriminell",
+  street: "Straße",
+  occult: "Okkult",
+  otherworldly: "Andersweltlich"
+};
+
+const damageTypeLabels: Record<string, string> = {
+  "damage.bludgeoning": "Wuchtschaden",
+  "damage.piercing": "Stichschaden"
+};
+
 export const formatEntityType = (type: EntityType): string =>
   exhaustiveLabel(entityTypeLabels, type, "Entitätstyp");
 
@@ -119,6 +224,27 @@ export const formatSave = (save: SaveId): string =>
 
 export const formatTradition = (tradition: keyof typeof traditionLabels): string =>
   exhaustiveLabel(traditionLabels, tradition, "Zaubertradition");
+
+export const formatItemCategory = (value: ItemCategory): string =>
+  exhaustiveLabel(itemCategoryLabels, value, "Gegenstandskategorie");
+
+export const formatItemSubcategory = (value: ItemSubcategory): string =>
+  exhaustiveLabel(itemSubcategoryLabels, value, "Gegenstandsunterkategorie");
+
+export const formatTechnologyLevel = (value: TechnologyLevel): string =>
+  exhaustiveLabel(technologyLevelLabels, value, "Technologieniveau");
+
+export const formatItemAvailability = (value: ItemAvailability): string =>
+  exhaustiveLabel(itemAvailabilityLabels, value, "Verfügbarkeit");
+
+export const formatItemQuality = (value: ItemQuality): string =>
+  exhaustiveLabel(itemQualityLabels, value, "Qualität");
+
+export const formatItemOrigin = (value: ItemOrigin): string =>
+  exhaustiveLabel(itemOriginLabels, value, "Herkunft");
+
+export const formatDamageType = (value: string): string =>
+  damageTypeLabels[value] ?? "Nicht lokalisierte Schadensart";
 
 export const formatActionCost = (actions: ActionCost): string => {
   if (actions.kind === "fixed") {

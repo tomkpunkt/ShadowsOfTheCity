@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.class-option.agent.vorgehensweise
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - classes/klasse_agent.md
 name: "Agent: Vorgehensweise"
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Agent: Vorgehensweise."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

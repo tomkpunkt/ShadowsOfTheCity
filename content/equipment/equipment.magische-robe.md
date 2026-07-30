@@ -1,10 +1,14 @@
 ---
+availability: licensed
 bulk: 1
+category: magical-item
 categoryId: trait.item.equipment.clothing
+editorialStatus: rewritten
 effects:
   - kind: text
     machineReadable: false
     text: +2 Magie, +2 Fokus
+examples: []
 hands: 0
 id: equipment.magische-robe
 legacy:
@@ -13,12 +17,17 @@ legacy:
     - gear/equipment/equipment_overview.md
 level: 0
 name: Magische Robe
+origins:
+  - occult
 priceGp: 400
 references: []
+rulesText: "Magische Robe: +2 Magie, +2 Fokus Der Quellenpreis beträgt 400 GS; die vorläufig migrierte Last beträgt 1."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Magische Robe ist Ausrüstung mit einem Preis von 400 GP und einer Last von 1.
+subcategory: clothing
+summary: Eine magische Robe unterstützt Magie und Konzentrationsfokus jeweils mit +2, solange sie als rituelle Kleidung getragen wird.
+technologyLevel: arcane
 traits:
   - trait.legacy
 type: equipment

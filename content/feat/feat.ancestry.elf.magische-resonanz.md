@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.elf
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du spürst die Schwingungen des Geflechts. Du erhältst Fertigkeitstraining in Arkane Kunde. Wenn du bereits trainiert bist, erhältst du stattdessen Expertenrang.
+examples: []
 id: feat.ancestry.elf.magische-resonanz
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.elf
 references: []
+rulesText: Du spürst die Schwingungen des Geflechts. Du erhältst Fertigkeitstraining in Arkane Kunde. Wenn du bereits trainiert bist, erhältst du stattdessen Expertenrang.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

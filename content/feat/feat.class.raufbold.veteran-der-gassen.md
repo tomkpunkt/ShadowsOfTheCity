@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst 1 Fehlschlag pro Tag wiederholen.
+examples: []
 id: feat.class.raufbold.veteran-der-gassen
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: Du kannst 1 Fehlschlag pro Tag wiederholen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

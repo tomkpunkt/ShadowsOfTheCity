@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.goblin
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bewegst dich mühelos durch enge Räume. Du kannst dich durch Felder von beengtem Gelände ohne Malus bewegen und erhältst +1 auf Wahrnehmung in Dunkelheit.
+examples: []
 id: heritage.goblin.tunnelratte
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.goblin
 references: []
+rulesText: Du bewegst dich mühelos durch enge Räume. Du kannst dich durch Felder von beengtem Gelände ohne Malus bewegen und erhältst +1 auf Wahrnehmung in Dunkelheit.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

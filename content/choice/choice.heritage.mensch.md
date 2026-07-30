@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.mensch
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.mensch
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/mensch_zeitalter_des_goldes.md
 name: Mensch-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Mensch.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

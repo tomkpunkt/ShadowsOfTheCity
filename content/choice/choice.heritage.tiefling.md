@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.tiefling
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.tiefling
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/tieflinge_zeitalter_des_goldes.md
 name: Tiefling-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Tiefling.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

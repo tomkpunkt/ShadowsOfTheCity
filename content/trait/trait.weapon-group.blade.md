@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.weapon-group.blade
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - gear/equipment/equipment_overview.md
 name: Klingen
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Klingen."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

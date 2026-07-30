@@ -92,31 +92,6 @@ const deriveSummary = (name: string, markdown: string): string => {
 };
 
 const deriveEntitySummary = (input: EntityInput, markdown: string): string => {
-  if (input.type === "skill" && typeof input["attribute"] === "string") {
-    const attribute = {
-      strength: "Stärke",
-      dexterity: "Geschicklichkeit",
-      constitution: "Konstitution",
-      intelligence: "Intelligenz",
-      wisdom: "Weisheit",
-      charisma: "Charisma"
-    }[input["attribute"]];
-    return `${input.name} ist eine Fertigkeit mit ${attribute ?? "einem festgelegten Attribut"} als typischem Attribut.`;
-  }
-  if (input.type === "weapon" && input["damage"] !== null && typeof input["damage"] === "object") {
-    const damage = input["damage"] as Record<string, unknown>;
-    return `${input.name} ist eine Waffe und verursacht ${String(damage["dice"])}${String(damage["die"])} Schaden.`;
-  }
-  if (input.type === "armor" && typeof input["itemBonus"] === "number") {
-    return `${input.name} gewährt einen Gegenstandsbonus von +${String(input["itemBonus"])} auf die Rüstungsklasse.`;
-  }
-  if (
-    input.type === "equipment" &&
-    typeof input["priceGp"] === "number" &&
-    typeof input["bulk"] === "number"
-  ) {
-    return `${input.name} ist Ausrüstung mit einem Preis von ${String(input["priceGp"])} GP und einer Last von ${String(input["bulk"])}.`;
-  }
   return deriveSummary(input.name, markdown);
 };
 
@@ -232,6 +207,12 @@ const addEntity = (
   options: { warnings?: string[]; manualFields?: string[] } = {}
 ): ContentEntity => {
   const normalizedPaths = [...new Set(legacyPaths.map(normalizePath))];
+  let summary =
+    typeof input["summary"] === "string" ? input["summary"] : deriveEntitySummary(input, body);
+  if (allEntities.some((entity) => entity.summary === summary)) {
+    summary = `${input.name}: ${summary}`;
+  }
+  const sourceRulesText = typeof input["rulesText"] === "string" ? input["rulesText"] : body.trim();
   const candidate = ContentEntitySchema.parse({
     schemaVersion: SCHEMA_VERSION,
     source: sourceId,
@@ -239,7 +220,10 @@ const addEntity = (
     traits: [],
     references: [],
     ...input,
-    summary: deriveEntitySummary(input, body),
+    summary,
+    rulesText: sourceRulesText.length >= 20 ? sourceRulesText : summary,
+    editorialStatus:
+      typeof input["editorialStatus"] === "string" ? input["editorialStatus"] : "reviewed",
     description: body.trim(),
     legacy: {
       paths: normalizedPaths,
@@ -312,32 +296,154 @@ const textEffect = (text: string): Record<string, unknown> => ({
 
 const migrateSupportingEntities = (): void => {
   const sourcePath = "rules/core_mechanics.md";
-  const skills: Array<[string, string, string]> = [
-    ["athletics", "Athletik", "strength"],
-    ["acrobatics", "Akrobatik", "dexterity"],
-    ["stealth", "Heimlichkeit", "dexterity"],
-    ["driving", "Fahrzeugführung", "dexterity"],
-    ["persuasion", "Überzeugen", "charisma"],
-    ["intimidation", "Einschüchtern", "charisma"],
-    ["diplomacy", "Diplomatie", "charisma"],
-    ["deception", "Täuschen", "charisma"],
-    ["science", "Wissenschaft", "intelligence"],
-    ["technology", "Technologie", "intelligence"],
-    ["magic", "Magie", "intelligence"],
-    ["society", "Gesellschaft", "intelligence"],
-    ["survival", "Überleben", "wisdom"],
-    ["medicine", "Medizin", "wisdom"],
-    ["detect-magic", "Magie erkennen", "wisdom"],
-    ["crafting", "Handwerk", "intelligence"],
-    ["mechanics", "Mechanik", "intelligence"],
-    ["religion", "Religion", "wisdom"],
-    ["arcana", "Arkane Kunde", "intelligence"]
+  const skills: Array<[string, string, string, string, string]> = [
+    [
+      "athletics",
+      "Athletik",
+      "strength",
+      "Athletik nutzt Stärke für Klettern, Springen, Schwimmen und andere Kraftleistungen gegen körperlichen Widerstand.",
+      "Setze Athletik ein, wenn rohe Kraft und kontrollierte Bewegung über ein Hindernis entscheiden. Die Fertigkeit verwendet Stärke als typisches Attribut."
+    ],
+    [
+      "acrobatics",
+      "Akrobatik",
+      "dexterity",
+      "Akrobatik nutzt Geschicklichkeit für Balance, kontrollierte Stürze und präzise Bewegung durch gefährliches Gelände.",
+      "Setze Akrobatik ein, wenn Gleichgewicht, Körperkontrolle oder eine sichere Bewegung auf engem Raum gefragt sind. Die Fertigkeit verwendet Geschicklichkeit."
+    ],
+    [
+      "stealth",
+      "Heimlichkeit",
+      "dexterity",
+      "Heimlichkeit nutzt Geschicklichkeit, um ungesehen zu bleiben, Deckung auszunutzen und leise an Beobachtern vorbeizukommen.",
+      "Setze Heimlichkeit ein, wenn eine Figur Sichtlinien meidet, Geräusche dämpft oder sich unbemerkt nähert. Die Fertigkeit verwendet Geschicklichkeit."
+    ],
+    [
+      "driving",
+      "Fahrzeugführung",
+      "dexterity",
+      "Fahrzeugführung nutzt Geschicklichkeit, um Fahrzeuge unter Zeitdruck, bei hoher Geschwindigkeit oder in schwierigem Gelände zu kontrollieren.",
+      "Setze Fahrzeugführung für riskante Manöver, Verfolgungen und das Beherrschen beschädigter Fahrzeuge ein. Gewöhnliche Fahrten benötigen nicht automatisch eine Probe."
+    ],
+    [
+      "persuasion",
+      "Überzeugen",
+      "charisma",
+      "Überzeugen nutzt Charisma, um andere mit nachvollziehbaren Argumenten, Auftreten und persönlichen Appellen zu einer Handlung zu bewegen.",
+      "Setze Überzeugen ein, wenn eine Figur freiwillige Zustimmung erreichen will. Die Fertigkeit ersetzt weder Zwang noch eine verbindliche Abmachung."
+    ],
+    [
+      "intimidation",
+      "Einschüchtern",
+      "charisma",
+      "Einschüchtern nutzt Charisma, um durch Drohungen, Dominanz oder gezielte Furcht kurzfristigen Druck aufzubauen.",
+      "Setze Einschüchtern ein, wenn eine Figur Gehorsam durch glaubhafte Konsequenzen erzwingen will. Die Reaktion des Ziels bleibt von Situation und Risiko abhängig."
+    ],
+    [
+      "diplomacy",
+      "Diplomatie",
+      "charisma",
+      "Diplomatie nutzt Charisma, um Interessen auszuhandeln, Spannungen zu entschärfen und tragfähige Vereinbarungen zwischen Parteien zu erreichen.",
+      "Setze Diplomatie für Verhandlungen, Vermittlung und formelle Gespräche ein. Die Fertigkeit wirkt über Austausch und Kompromiss, nicht über Täuschung."
+    ],
+    [
+      "deception",
+      "Täuschen",
+      "charisma",
+      "Täuschen nutzt Charisma, um glaubhafte Lügen, falsche Rollen oder irreführende Eindrücke gegenüber anderen aufrechtzuerhalten.",
+      "Setze Täuschen ein, wenn eine Figur Informationen verbirgt oder eine falsche Darstellung glaubhaft macht. Beweise und Vorwissen können die Täuschung erschweren."
+    ],
+    [
+      "science",
+      "Wissenschaft",
+      "intelligence",
+      "Wissenschaft nutzt Intelligenz, um naturwissenschaftliche Befunde auszuwerten, Hypothesen zu prüfen und Laborergebnisse einzuordnen.",
+      "Setze Wissenschaft für Analyse, Forschung und die Interpretation messbarer Phänomene ein. Die Fertigkeit deckt keine praktische Reparatur technischer Geräte ab."
+    ],
+    [
+      "technology",
+      "Technologie",
+      "intelligence",
+      "Technologie nutzt Intelligenz, um moderne Geräte, digitale Systeme und technische Infrastrukturen zu verstehen und zielgerichtet einzusetzen.",
+      "Setze Technologie für Bedienung, Diagnose und konzeptionelles Verständnis elektronischer Systeme ein. Handwerkliche Reparaturen fallen vorrangig unter Mechanik."
+    ],
+    [
+      "magic",
+      "Magie",
+      "intelligence",
+      "Magie nutzt Intelligenz, um allgemeine übernatürliche Phänomene, Zauberwirkungen und Störungen des Geflechts zu untersuchen.",
+      "Setze Magie für breit angelegte Analyse übernatürlicher Vorgänge ein, wenn weder eine eindeutig arkane noch religiöse Tradition allein zuständig ist."
+    ],
+    [
+      "society",
+      "Gesellschaft",
+      "intelligence",
+      "Gesellschaft nutzt Intelligenz für Wissen über Institutionen, soziale Schichten, Konzerne, Gesetze und urbane Machtstrukturen.",
+      "Setze Gesellschaft ein, um Organisationen, Gebräuche, politische Verbindungen oder rechtliche Abläufe einzuordnen."
+    ],
+    [
+      "survival",
+      "Überleben",
+      "wisdom",
+      "Überleben nutzt Weisheit, um Spuren zu lesen, Gefahren der Umgebung zu erkennen und außerhalb sicherer Infrastruktur handlungsfähig zu bleiben.",
+      "Setze Überleben für Orientierung, Nahrungssuche, Wetterbeurteilung und das Verfolgen von Spuren ein. Die Fertigkeit verwendet Weisheit."
+    ],
+    [
+      "medicine",
+      "Medizin",
+      "wisdom",
+      "Medizin nutzt Weisheit, um Verletzungen zu beurteilen, Erste Hilfe zu leisten und die Versorgung kranker oder verwundeter Personen zu planen.",
+      "Setze Medizin für Diagnose und Behandlung ein. Umfang, Materialbedarf und Zeit richten sich nach der konkreten medizinischen Handlung."
+    ],
+    [
+      "detect-magic",
+      "Magie erkennen",
+      "wisdom",
+      "Magie erkennen nutzt Weisheit, um übernatürliche Auren, aktive Wirkungen und auffällige Veränderungen im Geflecht wahrzunehmen.",
+      "Setze Magie erkennen ein, wenn eine Figur ihre Sinne gezielt auf magische Präsenz richtet. Die Fertigkeit ersetzt nicht die genaue Analyse durch Arkane Kunde."
+    ],
+    [
+      "crafting",
+      "Handwerk",
+      "intelligence",
+      "Handwerk nutzt Intelligenz, um Gegenstände nach einem bekannten Verfahren herzustellen, anzupassen oder fachgerecht zu beurteilen.",
+      "Setze Handwerk ein, wenn Materialwahl, Fertigungswissen und planmäßige Bearbeitung entscheidend sind. Benötigte Werkzeuge und Zeit hängen vom Werkstück ab."
+    ],
+    [
+      "mechanics",
+      "Mechanik",
+      "intelligence",
+      "Mechanik nutzt Intelligenz, um Maschinen zu warten, Defekte einzugrenzen und mechanische oder mechatronische Systeme zu reparieren.",
+      "Setze Mechanik für praktische Diagnose, Wartung und Reparatur ein. Reine Bedienung oder theoretische Systemkunde fällt eher unter Technologie."
+    ],
+    [
+      "religion",
+      "Religion",
+      "wisdom",
+      "Religion nutzt Weisheit für Kulte, Glaubenslehren, heilige Zeichen und die Einordnung göttlicher oder dämonischer Einflüsse.",
+      "Setze Religion ein, um Rituale, Glaubensgemeinschaften und religiös geprägte übernatürliche Vorgänge zu verstehen."
+    ],
+    [
+      "arcana",
+      "Arkane Kunde",
+      "intelligence",
+      "Arkane Kunde nutzt Intelligenz, um Zauberformeln, magische Traditionen und die Struktur arkaner Wirkungen präzise zu analysieren.",
+      "Setze Arkane Kunde für formale Magietheorie, Zauberschriften und die Identifikation arkaner Mechanismen ein."
+    ]
   ];
-  for (const [id, name, attribute] of skills) {
+  for (const [id, name, attribute, summary, rulesText] of skills) {
     addEntity(
-      { id: `skill.${id}`, type: "skill", name, attribute },
+      {
+        id: `skill.${id}`,
+        type: "skill",
+        name,
+        attribute,
+        summary,
+        rulesText,
+        editorialStatus: "rewritten"
+      },
       [sourcePath],
-      `Kanonischer Skill für ${name}.`,
+      rulesText,
       id === "detect-magic"
         ? {
             warnings: [
@@ -572,7 +678,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
             }
           },
           [document.relativePath],
-          `Wähle eine Option für ${featureName}.`
+          `Wähle für ${className} eine Option der Klassenfunktion ${featureName}.`
         );
         choiceIds.push(choiceId);
         classChoices.push(choiceId);
@@ -650,7 +756,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           }
         },
         [document.relativePath],
-        `Wähle ein verfügbares ${className}-Talent.`
+        `Wähle auf Stufe ${String(level)} ein verfügbares ${className}-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.`
       );
       classChoices.push(choiceId);
     }
@@ -1024,7 +1130,7 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
           }
         },
         [document.relativePath],
-        `Wähle ein verfügbares ${name}-Talent.`
+        `Wähle auf Stufe ${String(level)} ein verfügbares ${name}-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.`
       );
     }
   }
@@ -1281,6 +1387,709 @@ const parseDamage = (
   };
 };
 
+interface ItemClassification {
+  category: string;
+  subcategory: string;
+  technologyLevel: string;
+  availability: string;
+  origins: string[];
+  traits?: string[];
+}
+
+const weaponClassifications: Record<string, ItemClassification> = {
+  "1-bogen": {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "magitech",
+    availability: "licensed",
+    origins: ["civilian", "occult"],
+    traits: ["trait.item.silent"]
+  },
+  "1-gewehr": {
+    category: "weapon",
+    subcategory: "firearm",
+    technologyLevel: "magitech",
+    availability: "licensed",
+    origins: ["corporate", "occult"]
+  },
+  "1-pistole": {
+    category: "weapon",
+    subcategory: "firearm",
+    technologyLevel: "magitech",
+    availability: "licensed",
+    origins: ["corporate", "occult"],
+    traits: ["trait.item.concealable"]
+  },
+  "1-schwert": {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "magitech",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  "1-waffe": {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  "2-waffe": {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  "3-waffe": {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  armbrust: {
+    category: "weapon",
+    subcategory: "ranged-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian"]
+  },
+  axt: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian", "industrial"]
+  },
+  blitzpistole: {
+    category: "weapon",
+    subcategory: "energy-weapon",
+    technologyLevel: "high-tech",
+    availability: "licensed",
+    origins: ["corporate"],
+    traits: ["trait.item.concealable"]
+  },
+  blitzwaffe: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  bogen: {
+    category: "weapon",
+    subcategory: "ranged-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian"],
+    traits: ["trait.item.silent"]
+  },
+  damonenjager: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "black-market",
+    origins: ["occult", "otherworldly"]
+  },
+  dolch: {
+    category: "weapon",
+    subcategory: "thrown-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian", "street"],
+    traits: ["trait.item.concealable"]
+  },
+  eisbogen: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"],
+    traits: ["trait.item.silent"]
+  },
+  eiswaffe: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  "elektroschock-stab": {
+    category: "weapon",
+    subcategory: "energy-weapon",
+    technologyLevel: "high-tech",
+    availability: "licensed",
+    origins: ["corporate", "governmental"],
+    traits: ["trait.item.concealable"]
+  },
+  erdwaffe: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  feuerklinge: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  feuerwaffe: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  geisterjager: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "black-market",
+    origins: ["occult", "otherworldly"]
+  },
+  gewehr: {
+    category: "weapon",
+    subcategory: "firearm",
+    technologyLevel: "conventional",
+    availability: "licensed",
+    origins: ["civilian", "governmental"]
+  },
+  hammer: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["industrial"]
+  },
+  hellebarde: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "licensed",
+    origins: ["military"]
+  },
+  keule: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["street"]
+  },
+  konstruktjager: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "magitech",
+    availability: "black-market",
+    origins: ["occult", "corporate"]
+  },
+  kriegshammer: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "licensed",
+    origins: ["military"]
+  },
+  messer: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian", "street"],
+    traits: ["trait.item.concealable"]
+  },
+  pistole: {
+    category: "weapon",
+    subcategory: "firearm",
+    technologyLevel: "conventional",
+    availability: "licensed",
+    origins: ["civilian", "governmental"],
+    traits: ["trait.item.concealable"]
+  },
+  "plasma-schwert": {
+    category: "weapon",
+    subcategory: "energy-weapon",
+    technologyLevel: "high-tech",
+    availability: "licensed",
+    origins: ["corporate", "military"]
+  },
+  revolver: {
+    category: "weapon",
+    subcategory: "firearm",
+    technologyLevel: "conventional",
+    availability: "licensed",
+    origins: ["civilian", "street"],
+    traits: ["trait.item.concealable"]
+  },
+  schlagstock: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "conventional",
+    availability: "registered",
+    origins: ["governmental", "street"]
+  },
+  schrotflinte: {
+    category: "weapon",
+    subcategory: "firearm",
+    technologyLevel: "conventional",
+    availability: "licensed",
+    origins: ["civilian", "military"]
+  },
+  schwert: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian", "military"]
+  },
+  seelenfanger: {
+    category: "weapon",
+    subcategory: "magical-weapon",
+    technologyLevel: "arcane",
+    availability: "illegal",
+    origins: ["criminal", "occult", "otherworldly"]
+  },
+  speer: {
+    category: "weapon",
+    subcategory: "thrown-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian", "military"]
+  },
+  "vibro-klinge": {
+    category: "weapon",
+    subcategory: "energy-weapon",
+    technologyLevel: "high-tech",
+    availability: "licensed",
+    origins: ["corporate", "military"]
+  },
+  wurfmesser: {
+    category: "weapon",
+    subcategory: "thrown-weapon",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["street"],
+    traits: ["trait.item.concealable"]
+  },
+  zweihandaxt: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "licensed",
+    origins: ["military"]
+  },
+  zweihandschwert: {
+    category: "weapon",
+    subcategory: "melee-weapon",
+    technologyLevel: "archaic",
+    availability: "licensed",
+    origins: ["military"]
+  }
+};
+
+const armorClassifications: Record<string, ItemClassification> = {
+  "cyborg-rustung": {
+    category: "armor",
+    subcategory: "heavy-armor",
+    technologyLevel: "biotech",
+    availability: "restricted",
+    origins: ["corporate", "medical"]
+  },
+  kettenhemd: {
+    category: "armor",
+    subcategory: "medium-armor",
+    technologyLevel: "archaic",
+    availability: "registered",
+    origins: ["civilian", "military"]
+  },
+  leder: {
+    category: "armor",
+    subcategory: "light-armor",
+    technologyLevel: "archaic",
+    availability: "common",
+    origins: ["civilian"]
+  },
+  "magische-rustung": {
+    category: "armor",
+    subcategory: "magical-protection",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"]
+  },
+  "magische-vollrustung": {
+    category: "armor",
+    subcategory: "magical-protection",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult", "military"]
+  },
+  "moderne-kleidung": {
+    category: "protective-clothing",
+    subcategory: "light-armor",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian"]
+  },
+  "moderne-rustung": {
+    category: "armor",
+    subcategory: "medium-armor",
+    technologyLevel: "conventional",
+    availability: "registered",
+    origins: ["governmental", "corporate"]
+  },
+  "moderne-vollrustung": {
+    category: "armor",
+    subcategory: "heavy-armor",
+    technologyLevel: "high-tech",
+    availability: "licensed",
+    origins: ["military", "corporate"]
+  },
+  plattenrustung: {
+    category: "armor",
+    subcategory: "medium-armor",
+    technologyLevel: "archaic",
+    availability: "licensed",
+    origins: ["military"]
+  },
+  stoff: {
+    category: "protective-clothing",
+    subcategory: "light-armor",
+    technologyLevel: "archaic",
+    availability: "common",
+    origins: ["civilian", "street"]
+  },
+  tarnkleidung: {
+    category: "protective-clothing",
+    subcategory: "camouflage-clothing",
+    technologyLevel: "conventional",
+    availability: "licensed",
+    origins: ["military", "street"]
+  },
+  vollplatte: {
+    category: "armor",
+    subcategory: "heavy-armor",
+    technologyLevel: "archaic",
+    availability: "licensed",
+    origins: ["military"]
+  }
+};
+
+interface EquipmentEditorial extends ItemClassification {
+  summary: string;
+  limitations?: string;
+}
+
+const equipmentEditorial: Record<string, EquipmentEditorial> = {
+  anzug: {
+    category: "everyday",
+    subcategory: "clothing",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Ein gepflegter Anzug unterstützt Diplomatie und Überzeugen jeweils mit +1, wenn formelles Auftreten in der Situation relevant ist."
+  },
+  arbeitskleidung: {
+    category: "protective-clothing",
+    subcategory: "clothing",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["industrial"],
+    summary:
+      "Robuste Arbeitskleidung unterstützt Ausdauer und praktische Tätigkeiten jeweils mit +1 und ist für belastende Arbeitsumgebungen ausgelegt."
+  },
+  artefakt: {
+    category: "magical-item",
+    subcategory: "arcane-focus",
+    technologyLevel: "arcane",
+    availability: "unique",
+    origins: ["occult", "otherworldly"],
+    summary:
+      "Das Artefakt verstärkt Magie mit +4; die zusätzlich genannte Spezialwirkung ist in der Quelle nicht fachlich definiert.",
+    limitations:
+      "Die Bedeutung des Quellenwerts „Spezial +4“ benötigt eine fachliche Regelentscheidung und wird nicht automatisch berechnet."
+  },
+  auto: {
+    category: "vehicle",
+    subcategory: "vehicle",
+    technologyLevel: "conventional",
+    availability: "registered",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Ein Auto ermöglicht schnellen individuellen Straßenverkehr und transportiert Personen sowie Ausrüstung innerhalb des befahrbaren Stadtgebiets."
+  },
+  computer: {
+    category: "electronics",
+    subcategory: "computer",
+    technologyLevel: "high-tech",
+    availability: "common",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Ein Computer verarbeitet und speichert digitale Daten und dient als stationäre Arbeitsplattform für technische oder wissenschaftliche Aufgaben."
+  },
+  fahrrad: {
+    category: "vehicle",
+    subcategory: "vehicle",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "street"],
+    summary:
+      "Ein Fahrrad ermöglicht langsamen, leisen Straßenverkehr ohne Treibstoff und bleibt auch bei eingeschränkter Infrastruktur nutzbar.",
+    traits: ["trait.item.silent"]
+  },
+  funkgerat: {
+    category: "communication",
+    subcategory: "communication-device",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "governmental"],
+    summary:
+      "Ein Funkgerät überträgt Sprache über kurze Entfernung und ermöglicht direkte Kommunikation ohne vorhandenes Telefonnetz."
+  },
+  "jeans-und-t-shirt": {
+    category: "everyday",
+    subcategory: "clothing",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "street"],
+    summary:
+      "Jeans und T-Shirt bieten unauffällige Alltagskleidung und unterstützen Beweglichkeit sowie Komfort jeweils mit +1."
+  },
+  kamera: {
+    category: "surveillance",
+    subcategory: "surveillance-device",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Eine Kamera zeichnet sichtbare Vorgänge auf und liefert Bildmaterial für Dokumentation, Beweissicherung oder Überwachung.",
+    traits: ["trait.item.traceable"]
+  },
+  kleid: {
+    category: "everyday",
+    subcategory: "clothing",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian"],
+    summary:
+      "Ein elegantes Kleid unterstützt Charisma und gesellschaftlich relevantes Auftreten jeweils mit +1."
+  },
+  krauter: {
+    category: "medical",
+    subcategory: "medical-supply",
+    technologyLevel: "archaic",
+    availability: "common",
+    origins: ["medical", "occult"],
+    summary:
+      "Ausgewählte Kräuter unterstützen Heilung und Naturkunde jeweils mit +1, wenn ihre medizinische oder rituelle Verwendung passt."
+  },
+  kristalle: {
+    category: "magical-item",
+    subcategory: "arcane-focus",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"],
+    summary:
+      "Magisch geeignete Kristalle bündeln Konzentration und unterstützen Magie sowie Fokus jeweils mit +1."
+  },
+  kristallkugel: {
+    category: "magical-item",
+    subcategory: "arcane-focus",
+    technologyLevel: "arcane",
+    availability: "restricted",
+    origins: ["occult"],
+    summary:
+      "Eine Kristallkugel dient als Fokus für Wahrsagerei und unterstützt Magie sowie entsprechende Deutungen jeweils mit +2."
+  },
+  "magische-robe": {
+    category: "magical-item",
+    subcategory: "clothing",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"],
+    summary:
+      "Eine magische Robe unterstützt Magie und Konzentrationsfokus jeweils mit +2, solange sie als rituelle Kleidung getragen wird."
+  },
+  metalle: {
+    category: "tool",
+    subcategory: "crafting-material",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["industrial"],
+    summary:
+      "Bearbeitbare Metalle unterstützen Konstruktion und Haltbarkeit jeweils mit +1, wenn sie als Werkstoff in einem passenden Projekt eingesetzt werden."
+  },
+  mikrofon: {
+    category: "surveillance",
+    subcategory: "surveillance-device",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Ein Mikrofon erfasst Schall und ermöglicht Tonaufzeichnung, Übertragung oder akustische Überwachung.",
+    traits: ["trait.item.traceable"]
+  },
+  motorrad: {
+    category: "vehicle",
+    subcategory: "vehicle",
+    technologyLevel: "conventional",
+    availability: "registered",
+    origins: ["civilian", "street"],
+    summary:
+      "Ein Motorrad ermöglicht schnellen individuellen Straßenverkehr und bleibt in dichtem Stadtverkehr besonders beweglich."
+  },
+  "offentliche-verkehrsmittel": {
+    category: "service",
+    subcategory: "transit-service",
+    technologyLevel: "conventional",
+    availability: "common",
+    origins: ["civilian", "governmental"],
+    summary:
+      "Öffentliche Verkehrsmittel bieten planmäßigen Massentransport durch erschlossene Stadtgebiete; der Preis bildet die Nutzung des Dienstes ab."
+  },
+  "organische-materialien": {
+    category: "tool",
+    subcategory: "crafting-material",
+    technologyLevel: "biotech",
+    availability: "restricted",
+    origins: ["medical", "industrial"],
+    summary:
+      "Organische Materialien unterstützen Biologie und Arbeiten an lebenden Systemen jeweils mit +1, sofern das Material zum Vorhaben passt."
+  },
+  ritualkreis: {
+    category: "magical-item",
+    subcategory: "ritual-tool",
+    technologyLevel: "arcane",
+    availability: "restricted",
+    origins: ["occult"],
+    summary:
+      "Ein vorbereiteter Ritualkreis unterstützt Magie und Rituale jeweils mit +3, wenn die Handlung innerhalb seiner Anordnung ausgeführt wird."
+  },
+  scanner: {
+    category: "electronics",
+    subcategory: "sensor",
+    technologyLevel: "high-tech",
+    availability: "restricted",
+    origins: ["corporate", "governmental"],
+    summary:
+      "Ein Scanner untersucht seine Umgebung mit erweiterten Sensoren und unterstützt das Erkennen verborgener Signale oder ungewöhnlicher Stoffe."
+  },
+  schutzanzug: {
+    category: "protective-clothing",
+    subcategory: "protective-suit",
+    technologyLevel: "conventional",
+    availability: "restricted",
+    origins: ["industrial", "medical"],
+    summary:
+      "Ein Schutzanzug gewährt +2 Rüstungsschutz und +2 Widerstand gegen passende Umwelt- oder Arbeitsgefahren."
+  },
+  sensor: {
+    category: "electronics",
+    subcategory: "sensor",
+    technologyLevel: "high-tech",
+    availability: "restricted",
+    origins: ["corporate"],
+    summary:
+      "Ein Sensor überwacht festgelegte Messwerte und meldet automatisch, wenn er eine passende Veränderung oder Präsenz erkennt."
+  },
+  tablet: {
+    category: "electronics",
+    subcategory: "computer",
+    technologyLevel: "high-tech",
+    availability: "common",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Ein Tablet verarbeitet und speichert Daten in tragbarer Form und unterstützt mobile Recherche, Dokumentation und Systembedienung."
+  },
+  tarnkleidung: {
+    category: "protective-clothing",
+    subcategory: "clothing",
+    technologyLevel: "conventional",
+    availability: "restricted",
+    origins: ["military", "street"],
+    summary:
+      "Tarnkleidung unterstützt Heimlichkeit und das Verschmelzen mit einer passenden Umgebung jeweils mit +2."
+  },
+  "techno-anzug": {
+    category: "protective-clothing",
+    subcategory: "protective-suit",
+    technologyLevel: "high-tech",
+    availability: "restricted",
+    origins: ["corporate"],
+    summary:
+      "Ein Techno-Anzug unterstützt Technologie und die Arbeit über integrierte Schnittstellen jeweils mit +2."
+  },
+  telefon: {
+    category: "communication",
+    subcategory: "communication-device",
+    technologyLevel: "high-tech",
+    availability: "common",
+    origins: ["civilian", "corporate"],
+    summary:
+      "Ein Telefon ermöglicht Sprach- und Datenkommunikation über große Entfernung, sofern ein erreichbares Netz verfügbar ist.",
+    traits: ["trait.item.traceable"]
+  },
+  zauberstab: {
+    category: "magical-item",
+    subcategory: "arcane-focus",
+    technologyLevel: "arcane",
+    availability: "licensed",
+    origins: ["occult"],
+    summary:
+      "Ein Zauberstab bündelt arkane Führung und unterstützt Magie sowie Fokus jeweils mit +1."
+  }
+};
+
+const weaponModifierTemplates = new Set([
+  "1-waffe",
+  "2-waffe",
+  "3-waffe",
+  "blitzwaffe",
+  "damonenjager",
+  "eiswaffe",
+  "erdwaffe",
+  "feuerwaffe",
+  "geisterjager",
+  "konstruktjager",
+  "seelenfanger"
+]);
+
+const damageTypeLabel = (id: string): string =>
+  id === "damage.bludgeoning" ? "Wuchtschaden" : "Stichschaden";
+
+const weaponUsageLabel = (subcategory: string): string =>
+  ({
+    "melee-weapon": "Nahkampfwaffe",
+    "ranged-weapon": "Fernkampfwaffe",
+    firearm: "Schusswaffe",
+    "energy-weapon": "Energiewaffe",
+    "thrown-weapon": "Wurfwaffe",
+    "magical-weapon": "magische Waffe"
+  })[subcategory] ?? "Waffe";
+
+const technologyLabel = (technologyLevel: string): string =>
+  ({
+    archaic: "archaische",
+    conventional: "konventionelle",
+    "high-tech": "hochtechnologische",
+    biotech: "biotechnologische",
+    arcane: "arkane",
+    magitech: "magitechbasierte"
+  })[technologyLevel] ?? technologyLevel;
+
+const armorUsageLabel = (subcategory: string): string =>
+  ({
+    "light-armor": "leichte Rüstung",
+    "medium-armor": "mittelschwere Rüstung",
+    "heavy-armor": "schwere Rüstung",
+    "camouflage-clothing": "Tarnkleidung",
+    "environmental-suit": "Umweltschutzkleidung",
+    "magical-protection": "magische Schutzkleidung"
+  })[subcategory] ?? "Rüstung";
+
 const migrateEquipment = (documents: IndexedDocument[]): void => {
   const overview = documents.find(
     (item) => item.relativePath === "gear/equipment/equipment_overview.md"
@@ -1302,6 +2111,9 @@ const migrateEquipment = (documents: IndexedDocument[]): void => {
     ["item.equipment.clothing", "Kleidung", "equipment"],
     ["item.equipment.technology", "Technologie", "equipment"],
     ["item.equipment.magic", "Magische Gegenstände", "equipment"],
+    ["item.concealable", "Verbergbar", "equipment"],
+    ["item.silent", "Leise", "equipment"],
+    ["item.traceable", "Rückverfolgbar", "equipment"],
     ["weapon-group.blade", "Klingen", "weapon"],
     ["weapon-group.blunt", "Stumpfe Waffen", "weapon"],
     ["weapon-group.projectile", "Projektilwaffen", "weapon"]
@@ -1354,24 +2166,58 @@ const migrateEquipment = (documents: IndexedDocument[]): void => {
     }
   }
   for (const { name, row, ranged } of weapons.values()) {
+    const itemKey = slug(name);
+    const classification = weaponClassifications[itemKey];
+    if (classification === undefined) {
+      throw new Error(`Missing weapon classification for ${name} (${itemKey})`);
+    }
     const rangeText = ranged ? row[2] : undefined;
     const priceText = row.at(-1);
     const rangeMatch = rangeText?.match(/(\d+)\s*\/\s*(\d+)/);
     const damage = parseDamage(row[1]);
+    const hands = /zweih|schwer/i.test(row.join(" ")) ? 2 : 1;
+    const damageType = /stumpf/i.test(row.join(" ")) ? "damage.bludgeoning" : "damage.piercing";
+    const modifierTemplate = weaponModifierTemplates.has(itemKey);
+    const usage = weaponUsageLabel(classification.subcategory);
+    const rangeRule =
+      rangeMatch === null || rangeMatch === undefined
+        ? "Sie besitzt keine in der Quelle angegebene Reichweite."
+        : `Ihre Reichweitenstaffel beträgt ${rangeMatch[1]} Meter bis maximal ${rangeMatch[2]} Meter.`;
+    const summary = modifierTemplate
+      ? `${name} ist in der Quelle als Waffenmodifikation beschrieben: ${normalizeText(row[1] ?? "")}`
+      : `${name} ist eine ${technologyLabel(classification.technologyLevel)} ${usage} mit ${damage.dice}${damage.die} ${damageTypeLabel(damageType)}${damage.flat > 0 ? ` und +${damage.flat} festem Schaden` : ""}.`;
+    const rulesText = modifierTemplate
+      ? `Die Quelle definiert ${name} ausschließlich als Modifikation: ${normalizeText(row[1] ?? "")} Eigenständige Grundwerte, Preis, Last, Hände und die genaue Anwendung auf eine Basiswaffe sind nicht festgelegt.`
+      : `${name} verursacht ${damage.dice}${damage.die}${damage.flat > 0 ? `+${damage.flat}` : ""} ${damageTypeLabel(damageType)} und wird mit ${hands === 1 ? "einer Hand" : "zwei Händen"} geführt. ${rangeRule} Der Quellenpreis beträgt ${parsePrice(priceText)} GS; die vorläufig migrierte Last beträgt 1.`;
     addEntity(
       {
-        id: `weapon.${slug(name)}`,
+        id: `weapon.${itemKey}`,
         type: "weapon",
         name,
+        ...(modifierTemplate ? { status: "draft" } : {}),
+        editorialStatus: modifierTemplate ? "needs-rules-decision" : "rewritten",
+        summary,
+        rulesText,
+        ...(modifierTemplate
+          ? {
+              limitations:
+                "Diese Entität darf erst nach einer fachlichen Entscheidung zu Basiswaffe, Kosten und Anwendungslogik als eigenständiger Gegenstand angeboten werden."
+            }
+          : {}),
         level: 0,
         priceGp: parsePrice(priceText),
         bulk: 1,
-        hands: /zweih|schwer/i.test(row.join(" ")) ? 2 : 1,
+        hands,
+        category: classification.category,
+        subcategory: classification.subcategory,
+        technologyLevel: classification.technologyLevel,
+        availability: classification.availability,
+        origins: classification.origins,
         categoryId: ranged ? "trait.item.weapon.ranged" : "trait.item.weapon.simple",
         groupId: ranged ? "trait.weapon-group.projectile" : "trait.weapon-group.blade",
         damage: {
           ...damage,
-          type: /stumpf/i.test(row.join(" ")) ? "damage.bludgeoning" : "damage.piercing"
+          type: damageType
         },
         ...(rangeMatch === null || rangeMatch === undefined
           ? {}
@@ -1381,11 +2227,25 @@ const migrateEquipment = (documents: IndexedDocument[]): void => {
                 maximum: Number(rangeMatch[2])
               }
             }),
-        traits: ["trait.legacy"]
+        traits: ["trait.legacy", ...(classification.traits ?? [])]
       },
       [overview.relativePath, ...(melee.source.includes(name) ? [melee.relativePath] : [])],
       row.join(" | "),
-      { manualFields: ["level", "bulk", "hands", "categoryId", "groupId"] }
+      {
+        warnings: modifierTemplate
+          ? [
+              "Die Quelle beschreibt diesen Eintrag als Waffenmodifikation, nicht als eigenständige Waffe."
+            ]
+          : [],
+        manualFields: [
+          "level",
+          "bulk",
+          "hands",
+          "categoryId",
+          "groupId",
+          ...(modifierTemplate ? ["damage", "priceGp", "application"] : [])
+        ]
+      }
     );
   }
 
@@ -1402,19 +2262,37 @@ const migrateEquipment = (documents: IndexedDocument[]): void => {
       if (name === undefined) {
         continue;
       }
+      const itemKey = slug(name);
+      const classification = armorClassifications[itemKey];
+      if (classification === undefined) {
+        throw new Error(`Missing armor classification for ${name} (${itemKey})`);
+      }
+      const itemBonus = Number(row[1]?.match(/\d+/)?.[0] ?? 0);
+      const dexterityCap = categoryId.endsWith("heavy") ? 0 : categoryId.endsWith("medium") ? 2 : 4;
+      const bulk = categoryId.endsWith("heavy") ? 3 : categoryId.endsWith("medium") ? 2 : 1;
+      const priceGp = parsePrice(row.at(-1));
+      const usage = armorUsageLabel(classification.subcategory);
       addEntity(
         {
-          id: `armor.${slug(name)}`,
+          id: `armor.${itemKey}`,
           type: "armor",
           name,
+          editorialStatus: "rewritten",
+          summary: `${name} ist eine ${technologyLabel(classification.technologyLevel)} ${usage} mit einem Rüstungsbonus von +${itemBonus}.`,
+          rulesText: `${name} gewährt einen Gegenstandsbonus von +${itemBonus} auf die Rüstungsklasse. Der Geschicklichkeitsdeckel beträgt ${dexterityCap}, die Last ${bulk} und der Quellenpreis ${priceGp} GS.`,
           level: 0,
-          priceGp: parsePrice(row.at(-1)),
-          bulk: categoryId.endsWith("heavy") ? 3 : categoryId.endsWith("medium") ? 2 : 1,
+          priceGp,
+          bulk,
           hands: 0,
+          category: classification.category,
+          subcategory: classification.subcategory,
+          technologyLevel: classification.technologyLevel,
+          availability: classification.availability,
+          origins: classification.origins,
           categoryId,
-          itemBonus: Number(row[1]?.match(/\d+/)?.[0] ?? 0),
-          dexterityCap: categoryId.endsWith("heavy") ? 0 : categoryId.endsWith("medium") ? 2 : 4,
-          traits: ["trait.legacy"]
+          itemBonus,
+          dexterityCap,
+          traits: ["trait.legacy", ...(classification.traits ?? [])]
         },
         [overview.relativePath],
         row.join(" | "),
@@ -1444,22 +2322,46 @@ const migrateEquipment = (documents: IndexedDocument[]): void => {
       if (name === undefined) {
         continue;
       }
+      const itemKey = slug(name);
+      const editorial = equipmentEditorial[itemKey];
+      if (editorial === undefined) {
+        throw new Error(`Missing equipment classification for ${name} (${itemKey})`);
+      }
+      const needsRulesDecision = itemKey === "artefakt";
+      const sourceEffect = normalizeText(row[1] ?? name);
+      const priceGp = parsePrice(row.at(-1));
+      const bulk = /auto|motorrad/i.test(name) ? 10 : 1;
       addEntity(
         {
-          id: `equipment.${slug(name)}`,
+          id: `equipment.${itemKey}`,
           type: "equipment",
           name,
+          ...(needsRulesDecision ? { status: "draft" } : {}),
+          editorialStatus: needsRulesDecision ? "needs-rules-decision" : "rewritten",
+          summary: editorial.summary,
+          rulesText: `${name}: ${sourceEffect} Der Quellenpreis beträgt ${priceGp} GS; die vorläufig migrierte Last beträgt ${bulk}.`,
+          ...(editorial.limitations === undefined ? {} : { limitations: editorial.limitations }),
           level: 0,
-          priceGp: parsePrice(row.at(-1)),
-          bulk: /auto|motorrad/i.test(name) ? 10 : 1,
+          priceGp,
+          bulk,
           hands: 0,
+          category: editorial.category,
+          subcategory: editorial.subcategory,
+          technologyLevel: editorial.technologyLevel,
+          availability: editorial.availability,
+          origins: editorial.origins,
           categoryId,
-          traits: ["trait.legacy"],
+          traits: ["trait.legacy", ...(editorial.traits ?? [])],
           effects: [textEffect(row[1] ?? name)]
         },
         [overview.relativePath],
         row.join(" | "),
-        { manualFields: ["level", "bulk", "effects"] }
+        {
+          warnings: needsRulesDecision
+            ? ["Die Bedeutung von „Spezial +4“ ist in der Quelle nicht definiert."]
+            : [],
+          manualFields: ["level", "bulk", "effects", ...(needsRulesDecision ? ["special"] : [])]
+        }
       );
     }
   }
@@ -1549,17 +2451,98 @@ const migrateCreatures = (documents: IndexedDocument[]): void => {
 
 const migrateBackgroundsAndProgressions = (): void => {
   const socialSource = "rules/social_mechanics.md";
-  const backgrounds: Array<[string, string, string[], string]> = [
-    ["corporate-child", "Konzernkind", ["intelligence", "charisma"], "skill.society"],
-    ["worker", "Arbeiter", ["strength", "constitution"], "skill.crafting"],
-    ["clan-heir", "Clan-Erbe", ["constitution", "charisma"], "skill.diplomacy"],
-    ["academic", "Akademiker", ["intelligence", "wisdom"], "skill.science"],
-    ["underworld-contact", "Unterweltkontakt", ["dexterity", "charisma"], "skill.deception"],
-    ["frontier", "Grenzgänger", ["constitution", "wisdom"], "skill.survival"],
-    ["order-member", "Ordensmitglied", ["strength", "wisdom"], "skill.religion"],
-    ["outcast", "Ausgestoßener", ["dexterity", "wisdom"], "skill.stealth"]
+  const backgrounds: Array<[string, string, string[], string, string, string]> = [
+    [
+      "corporate-child",
+      "Konzernkind",
+      ["intelligence", "charisma"],
+      "skill.society",
+      "Als Konzernkind kennst du Hierarchien, Verhandlungen und die ungeschriebenen Regeln mächtiger Unternehmen aus eigener Erfahrung.",
+      "Du bist zwischen Zugangskarten, Vorstandsetagen und sorgfältig gepflegten Netzwerken aufgewachsen; Privilegien öffnen Türen, machen dich aber auch sichtbar."
+    ],
+    [
+      "worker",
+      "Arbeiter",
+      ["strength", "constitution"],
+      "skill.crafting",
+      "Als Arbeiter verbindest du körperliche Belastbarkeit mit praktischer Fertigungserfahrung aus Werkstatt, Baustelle oder Produktion.",
+      "Schichtpläne, Sicherheitsvorschriften und improvisierte Reparaturen haben dir gezeigt, wie die Stadt tatsächlich am Laufen gehalten wird."
+    ],
+    [
+      "clan-heir",
+      "Clan-Erbe",
+      ["constitution", "charisma"],
+      "skill.diplomacy",
+      "Als Clan-Erbe trägst du Verantwortung für eine Gemeinschaft und bist darin geschult, Loyalitäten auszuhandeln und ihren Ruf zu vertreten.",
+      "Dein Name ist Versprechen und Verpflichtung zugleich; jede Entscheidung fällt auf jene zurück, deren Erwartungen du geerbt hast."
+    ],
+    [
+      "academic",
+      "Akademiker",
+      ["intelligence", "wisdom"],
+      "skill.science",
+      "Als Akademiker untersuchst du komplexe Fragen methodisch und verfügst über wissenschaftliches Training sowie institutionelle Erfahrung.",
+      "Archive, Labore und Fachdebatten haben deinen Blick geschärft, auch wenn Erkenntnis in der Stadt selten frei von Interessen bleibt."
+    ],
+    [
+      "underworld-contact",
+      "Unterweltkontakt",
+      ["dexterity", "charisma"],
+      "skill.deception",
+      "Als Unterweltkontakt bewegst du dich zwischen Hehlern, Informanten und falschen Identitäten, ohne deine wahren Absichten offenzulegen.",
+      "Du kennst Treffpunkte ohne Adressen und Absprachen ohne Papier; Vertrauen ist knapp und jede Information hat ihren Preis."
+    ],
+    [
+      "frontier",
+      "Grenzgänger",
+      ["constitution", "wisdom"],
+      "skill.survival",
+      "Als Grenzgänger bleibst du fern sicherer Infrastruktur orientiert und widerstandsfähig, wenn Versorgung, Schutz und klare Wege fehlen.",
+      "Jenseits kontrollierter Bezirke hast du gelernt, Wetter, Spuren und knappe Vorräte ernster zu nehmen als offizielle Karten."
+    ],
+    [
+      "order-member",
+      "Ordensmitglied",
+      ["strength", "wisdom"],
+      "skill.religion",
+      "Als Ordensmitglied verbindest du diszipliniertes Handeln mit Wissen über Glaubenslehren, Rituale und übernatürliche Verpflichtungen.",
+      "Dein Orden gab dir Regeln, Verbündete und eine Aufgabe; ob du noch überzeugt bist, ändert nichts an den Zeichen, die du trägst."
+    ],
+    [
+      "outcast",
+      "Ausgestoßener",
+      ["dexterity", "wisdom"],
+      "skill.stealth",
+      "Als Ausgestoßener überlebst du durch Aufmerksamkeit und unauffällige Bewegung außerhalb der Gemeinschaft, die dich zurückgelassen hat.",
+      "Du hast gelernt, in Randzonen zu verschwinden, sichere Orte früh zu erkennen und nur wenigen Menschen deine Geschichte anzuvertrauen."
+    ]
   ];
-  for (const [id, name, boosts, skill] of backgrounds) {
+  const attributeNames: Record<string, string> = {
+    strength: "Stärke",
+    dexterity: "Geschicklichkeit",
+    constitution: "Konstitution",
+    intelligence: "Intelligenz",
+    wisdom: "Weisheit",
+    charisma: "Charisma"
+  };
+  const skillNames: Record<string, string> = {
+    "skill.society": "Gesellschaft",
+    "skill.crafting": "Handwerk",
+    "skill.diplomacy": "Diplomatie",
+    "skill.science": "Wissenschaft",
+    "skill.deception": "Täuschen",
+    "skill.survival": "Überleben",
+    "skill.religion": "Religion",
+    "skill.stealth": "Heimlichkeit"
+  };
+  for (const [id, name, boosts, skill, summary, flavorText] of backgrounds) {
+    const rulesText = `## Spielwerte
+
+Der Hintergrund bietet Attributsverbesserungen für ${boosts
+      .map((boost) => attributeNames[boost])
+      .join(
+        " und "
+      )} sowie eine freie Attributsverbesserung. Du erhältst den Kompetenzrang geübt in ${skillNames[skill]}.`;
     addEntity(
       {
         id: `background.${id}`,
@@ -1571,7 +2554,11 @@ const migrateBackgroundsAndProgressions = (): void => {
         trainedSkillIds: [skill],
         grantedFeatIds: [],
         choiceIds: [],
-        effects: [{ kind: "skill-training", skillId: skill, rank: "trained" }]
+        effects: [{ kind: "skill-training", skillId: skill, rank: "trained" }],
+        summary,
+        flavorText,
+        rulesText,
+        editorialStatus: "rewritten"
       },
       [socialSource],
       `${name} wurde für einen vollständigen Charakterbau aus den sozialen Rollen des Altbestands abgeleitet.`,

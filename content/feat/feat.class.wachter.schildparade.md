@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du den Schildblock nutzt, reduziere zusätzlichen Schaden um 2.
+examples: []
 id: feat.class.wachter.schildparade
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: Wenn du den Schildblock nutzt, reduziere zusätzlichen Schaden um 2.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

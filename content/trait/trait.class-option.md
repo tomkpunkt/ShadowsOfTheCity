@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.class-option
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Klassenoption
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Klassenoption."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

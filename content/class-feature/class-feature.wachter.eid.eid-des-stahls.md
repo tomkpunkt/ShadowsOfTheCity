@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du vertraust allein auf die Waffe in deiner Hand. - Du erhältst den Feat Power Attack. - Wenn du einen Gegner besiegst, erhältst bis zum Ende deines nächsten Zuges +1 auf Angriffswürfe. ---
+examples: []
 id: class-feature.wachter.eid.eid-des-stahls
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 1
 name: Eid des Stahls
 prerequisites: []
 references: []
+rulesText: "Du vertraust allein auf die Waffe in deiner Hand.  \r
+
+  - Du erhältst den Feat *Power Attack*.  \r
+
+  - Wenn du einen Gegner besiegst, erhältst bis zum Ende deines nächsten Zuges +1 auf Angriffswürfe.  \r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

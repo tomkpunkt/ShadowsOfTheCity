@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst Sand, Staub oder Blut nutzen, um einen Gegner zu blenden (1/Tag, SG 20).
+examples: []
 id: feat.class.raufbold.dreckiger-trick
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: Du kannst Sand, Staub oder Blut nutzen, um einen Gegner zu blenden (1/Tag, SG 20).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

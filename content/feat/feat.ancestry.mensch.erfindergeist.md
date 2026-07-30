@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.mensch
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du erhältst einen situativen Bonus von +1 auf alle Handwerkswürfe für technische Geräte oder improvisierte Ausrüstung. Wenn du innerhalb einer Stunde eine Reparatur oder Konstruktion beendest, halbiert sich die benötigte Zeit.
+examples: []
 id: feat.ancestry.mensch.erfindergeist
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.mensch
 references: []
+rulesText: Du erhältst einen situativen Bonus von +1 auf alle Handwerkswürfe für technische Geräte oder improvisierte Ausrüstung. Wenn du innerhalb einer Stunde eine Reparatur oder Konstruktion beendest, halbiert sich die benötigte Zeit.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

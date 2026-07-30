@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist immun gegen Magieunterdrückung und Zauberresistenz.
+examples: []
 id: feat.class.magier.meister-des-geflechts
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: Du bist immun gegen Magieunterdrückung und Zauberresistenz.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

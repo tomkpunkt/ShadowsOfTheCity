@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.agent
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.agent
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_agent.md
 name: Agent-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Agent.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

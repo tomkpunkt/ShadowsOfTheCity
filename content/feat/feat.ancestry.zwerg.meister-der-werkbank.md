@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.zwerg
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist im Umgang mit Maschinen und Werkzeugen unschlagbar. Du erhältst Fertigkeitstraining in Handwerk (oder Expertenrang, falls bereits trainiert) und einen Bonus von +1 auf Reparaturproben.
+examples: []
 id: feat.ancestry.zwerg.meister-der-werkbank
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.zwerg
 references: []
+rulesText: Du bist im Umgang mit Maschinen und Werkzeugen unschlagbar. Du erhältst Fertigkeitstraining in Handwerk (oder Expertenrang, falls bereits trainiert) und einen Bonus von +1 auf Reparaturproben.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du schützt eine Person, nicht eine Idee. Wenn du die Aktion Verteidigen auf denselben Verbündeten anwendest, erhält dieser Resistenz 3 gegen physischen Schaden.
+examples: []
 id: feat.archetype.wachter.konigswachter
 legacy:
   notes:
@@ -17,6 +19,9 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: "Du schützt eine Person, nicht eine Idee.  \r
+
+  Wenn du die Aktion *Verteidigen* auf denselben Verbündeten anwendest, erhält dieser Resistenz 3 gegen physischen Schaden."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

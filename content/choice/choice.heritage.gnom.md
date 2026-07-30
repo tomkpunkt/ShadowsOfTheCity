@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.gnom
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.gnom
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/gnome_zeitalter_des_goldes.md
 name: Gnom-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Gnom.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

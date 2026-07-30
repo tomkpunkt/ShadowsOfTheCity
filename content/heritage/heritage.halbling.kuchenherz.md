@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.halbling
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Deine Familie ist bekannt für Nahrung, Heiltränke oder Getränke. Du erhältst Fertigkeitstraining in Handwerk (Alchemie oder Kochkunst) und einen +1 Bonus auf Proben zum Herstellen von Nahrungsmitteln oder Heilmitteln.
+examples: []
 id: heritage.halbling.kuchenherz
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: Deine Familie ist bekannt für Nahrung, Heiltränke oder Getränke. Du erhältst Fertigkeitstraining in Handwerk (Alchemie oder Kochkunst) und einen +1 Bonus auf Proben zum Herstellen von Nahrungsmitteln oder Heilmitteln.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

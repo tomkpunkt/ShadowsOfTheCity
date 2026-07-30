@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.item.equipment.clothing
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - gear/equipment/equipment_overview.md
 name: Kleidung
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Kleidung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.zwerg
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist nahezu unerschütterlich. Wenn du einen kritischen Erfolg bei einem Rettungswurf erzielst, erleidest du keinerlei Effekte. Wenn du einen Erfolg erzielst, zählt er als kritischer Erfolg. ---
+examples: []
 id: feat.ancestry.zwerg.fels-in-der-brandung
 legacy:
   notes: []
@@ -16,6 +18,11 @@ prerequisites:
   - ancestry:
       id: ancestry.zwerg
 references: []
+rulesText: "Du bist nahezu unerschütterlich. Wenn du einen kritischen Erfolg bei einem Rettungswurf erzielst, erleidest du keinerlei Effekte. Wenn du einen Erfolg erzielst, zählt er als kritischer Erfolg.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

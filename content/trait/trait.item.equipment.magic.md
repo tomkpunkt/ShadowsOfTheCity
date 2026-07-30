@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.item.equipment.magic
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - gear/equipment/equipment_overview.md
 name: Magische Gegenstände
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Magische Gegenstände."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

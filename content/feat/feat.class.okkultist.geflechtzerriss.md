@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.okkultist
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst 1/Tag eine Zone instabiler Magie erschaffen (20 Fuß, 1 Minute).
+examples: []
 id: feat.class.okkultist.geflechtzerriss
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.okkultist
 references: []
+rulesText: Du kannst 1/Tag eine Zone instabiler Magie erschaffen (20 Fuß, 1 Minute).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

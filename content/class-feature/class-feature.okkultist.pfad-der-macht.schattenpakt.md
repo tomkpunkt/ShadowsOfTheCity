@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.okkultist
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du hast einen Vertrag mit einem Wesen aus der Dunkelheit geschlossen. - Du erhältst Dunkelsicht. - Du kannst einmal pro Tag Fear wirken (Attribut: Charisma)."
+examples: []
 id: class-feature.okkultist.pfad-der-macht.schattenpakt
 legacy:
   notes: []
@@ -14,6 +16,11 @@ level: 1
 name: Schattenpakt
 prerequisites: []
 references: []
+rulesText: "Du hast einen Vertrag mit einem Wesen aus der Dunkelheit geschlossen.  \r
+
+  - Du erhältst Dunkelsicht.  \r
+
+  - Du kannst einmal pro Tag *Fear* wirken (Attribut: Charisma)."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

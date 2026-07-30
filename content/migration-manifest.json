@@ -16,7 +16,7 @@
     "skill": 19,
     "spell": 14,
     "spellcasting-progression": 3,
-    "trait": 27,
+    "trait": 30,
     "weapon": 40
   },
   "decisions": [
@@ -42,7 +42,7 @@
     "weapon": 40
   },
   "generatedAt": "deterministic-from-repository",
-  "generatedEntityCount": 734,
+  "generatedEntityCount": 737,
   "schemaVersion": 1,
   "sourceCount": 64,
   "sources": [
@@ -951,9 +951,12 @@
         "trait.item.armor.heavy",
         "trait.item.armor.light",
         "trait.item.armor.medium",
+        "trait.item.concealable",
         "trait.item.equipment.clothing",
         "trait.item.equipment.magic",
         "trait.item.equipment.technology",
+        "trait.item.silent",
+        "trait.item.traceable",
         "trait.item.weapon.magic",
         "trait.item.weapon.martial",
         "trait.item.weapon.ranged",
@@ -1003,16 +1006,23 @@
         "weapon.zweihandschwert"
       ],
       "manualFields": [
+        "application",
         "bulk",
         "categoryId",
+        "damage",
         "dexterityCap",
         "effects",
         "groupId",
         "hands",
-        "level"
+        "level",
+        "priceGp",
+        "special"
       ],
       "path": "gear/equipment/equipment_overview.md",
-      "warnings": []
+      "warnings": [
+        "Die Bedeutung von „Spezial +4“ ist in der Quelle nicht definiert.",
+        "Die Quelle beschreibt diesen Eintrag als Waffenmodifikation, nicht als eigenständige Waffe."
+      ]
     },
     {
       "entityIds": [
@@ -1044,14 +1054,19 @@
         "weapon.zweihandschwert"
       ],
       "manualFields": [
+        "application",
         "bulk",
         "categoryId",
+        "damage",
         "groupId",
         "hands",
-        "level"
+        "level",
+        "priceGp"
       ],
       "path": "gear/weapons/melee/melee_weapons.md",
-      "warnings": []
+      "warnings": [
+        "Die Quelle beschreibt diesen Eintrag als Waffenmodifikation, nicht als eigenständige Waffe."
+      ]
     },
     {
       "entityIds": [],

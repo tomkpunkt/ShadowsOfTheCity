@@ -1,6 +1,8 @@
 ---
 additionalLanguagesFromIntelligence: true
 boosts: []
+editorialStatus: reviewed
+examples: []
 featIds:
   - feat.ancestry.mensch.vielseitig
   - feat.ancestry.mensch.stahlerner-wille
@@ -27,6 +29,211 @@ legacy:
     - races/mensch_zeitalter_des_goldes.md
 name: Mensch
 references: []
+rulesText: "# **Mensch**\r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Übersicht**\r
+
+  Die Menschen sind die zahlreichste, aber zugleich vielfältigste Spezies der bekannten Welt. Sie bewohnen die Megastädte der Föderation, die verfallenen Industriezentren des Nordimperiums und die weiten Ebenen des Südblocks. Ihre Anpassungsfähigkeit und ihr Streben nach Fortschritt haben sie zu Erfindern, Führern, Kriegern und Opportunisten zugleich gemacht.  \r
+
+  Im Zeitalter des Goldes (ca. 1990 n. 0) haben Menschen alle Schichten der Gesellschaft durchdrungen – von den Turmdistrikten der Reichen bis zu den Ruinen der Armen. Zwischen elfischer Arroganz, orkischer Wut und zwergischer Disziplin behaupten sie sich mit reiner Willenskraft.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Physische Beschreibung**\r
+
+  Menschen sind in ihrer Erscheinung so variabel wie in ihrer Kultur. Hautfarbe, Haarstruktur, Größe und Statur variieren von Region zu Region. Ihre Lebensspanne beträgt etwa 70 bis 90 Jahre, doch ihr Einfluss überdauert Generationen.  \r
+
+  Magie tritt bei Menschen nur äußerst selten auf – etwa 1 von einer Million besitzt eine angeborene Verbindung zum Geflecht. Trotzdem sind sie es, die die größten Maschinen, die mächtigsten Nationen und die gefährlichsten Waffen geschaffen haben.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Gesellschaft**\r
+
+  Die menschliche Gesellschaft spiegelt die Spannungen ihrer Welt wider:  \r
+
+  - In den **Türmen der Föderation** leben Banker, Technokraten und Politiker, oft von elfischen Beratern umgeben.  \r
+
+  - In den **Suburbs** und **Arbeiterzonen** herrscht Überwachung, Armut und der Traum vom Aufstieg.  \r
+
+  - Im **Südblock** kämpfen Söldner, Schmuggler und Idealisten um Ressourcen, während orkische Clans und menschliche Rebellengruppen Bündnisse schließen.  \r
+
+  \r
+
+  Menschen definieren sich weniger über Herkunft als über Ambition. Sie sind getrieben vom Wunsch nach Bedeutung – oder nach dem bloßen Überleben.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Gesinnung und Religion**\r
+
+  Menschliche Kulturen umfassen das gesamte Spektrum moralischer Ausrichtungen. In den reichen Zonen herrscht Pragmatismus und Korruption, während im Untergrund fanatische Sekten und Widerstandsbewegungen gedeihen.  \r
+
+  Viele Menschen folgen der Kirche des **Ordo Lux Aeterna**, andere beten still zu vergessenen Göttern – oder an keine überhaupt. Für viele ist der Glaube durch Technik ersetzt worden.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Namen**\r
+
+  Menschliche Namen sind globalisiert: alte Traditionen vermischen sich mit modernen Formen.  \r
+
+  **Beispiele:**  \r
+
+  **Männlich:** David, Arion, Mikhail, Junpei, Karim, Lukas  \r
+
+  **Weiblich:** Mara, Elara, Yuna, Sofia, Asha, Leona  \r
+
+  **Nachnamen:** werden häufig nach Herkunft oder Beruf gebildet – z. B. “Keller”, “Ashford”, “Tanaka”, “Velasquez”, “Dubois”.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volksmerkmale**\r
+
+  \r
+
+  | Merkmal | Wert |\r
+
+  |:--|:--|\r
+
+  | **Trefferpunkte** | 8 |\r
+
+  | **Größe** | Mittelgroß |\r
+
+  | **Bewegung** | 25 Fuß |\r
+
+  | **Attributsverbesserungen** | Zwei frei wählbare Attributsverbesserungen |\r
+
+  | **Attributsfehler** | Keine |\r
+
+  | **Sprachen** | Gemeinsprache; zusätzliche Sprachen abhängig von Intelligenzmodifikator (z. B. Elfenisch, Zwergisch, Orkisch, Südblock-Pidgin) |\r
+
+  | **Merkmale** | Menschisch, Humanoid |\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Volksfertigkeit – Anpassungsfähig**\r
+
+  Menschen sind dafür bekannt, sich blitzschnell an neue Situationen anzupassen.  \r
+
+  **Effekt:** Du erhältst auf der 1. Stufe einen zusätzlichen Fertigkeits-Fehlerpunkt, den du für ein beliebiges Volks- oder Klassenmerkmal verwenden kannst, für das du die Voraussetzungen erfüllst.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volks-Feats**\r
+
+  \r
+
+  ### **1. Stufe – Vielseitig**\r
+
+  *Voraussetzung:* Mensch  \r
+
+  Du kannst deine Erfahrung auf unzählige Weise anwenden. Du erhältst einen zusätzlichen **Klassen- oder Fertigkeits-Feat** deiner Wahl.\r
+
+  \r
+
+  ### **5. Stufe – Stählerner Wille**\r
+
+  Du hast gelernt, der Angst in all ihren Formen zu widerstehen. Du erhältst einen +1 Statusbonus auf Willenswürfe gegen Furcht.\r
+
+  \r
+
+  ### **9. Stufe – Erfindergeist**\r
+
+  Du erhältst einen situativen Bonus von +1 auf alle Handwerkswürfe für technische Geräte oder improvisierte Ausrüstung. Wenn du innerhalb einer Stunde eine Reparatur oder Konstruktion beendest, halbiert sich die benötigte Zeit.\r
+
+  \r
+
+  ### **13. Stufe – Menschlicher Übermut**\r
+
+  Einmal pro Tag kannst du dich nach einem verpatzten Angriffswurf oder Rettungswurf sofort erneut würfeln. Du musst das zweite Ergebnis verwenden.\r
+
+  \r
+
+  ### **17. Stufe – Überlebenskünstler**\r
+
+  Du bist ein Produkt der harten Zeiten. Du erhältst Resistenz 5 gegen Blutungs-, Krankheit- und Gifteffekte.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volksherkünfte (Heritages)**\r
+
+  \r
+
+  ### **Stadtmensch**\r
+
+  Du bist in dicht besiedelten Gebieten aufgewachsen. Du erhältst einen Bonus von +1 auf Wahrnehmungs- und Diplomatieproben in urbaner Umgebung.\r
+
+  \r
+
+  ### **Grenzbewohner**\r
+
+  Du kennst dich in unwirtlichen Regionen aus. Du ignorierst schwieriges Gelände natürlichen Ursprungs und erhältst einen Bonus von +1 auf Überlebenswürfe.\r
+
+  \r
+
+  ### **Industriekind**\r
+
+  Du bist in Fabriken oder Werkstätten großgeworden. Du erhältst Fertigkeitstraining in Handwerk und Immunität gegen einfache Gifte oder Rauch.\r
+
+  \r
+
+  ### **Verdrängter**\r
+
+  Du hast gelernt, dich unsichtbar zu machen – in Menschenmengen oder Schatten. Du erhältst einen Bonus von +1 auf Heimlichkeit und Täuschung.\r
+
+  \r
+
+  ### **Magiergezeichneter** *(selten)*\r
+
+  Dein Blut trägt Spuren alter Magie. Einmal pro Tag kannst du einen arkane oder göttlichen Cantrip wirken (Wurf + Intelligenz oder Charisma, je nach Wahl).\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  Menschen sind die Träger des Wandels. Wo Elfen das Alte bewahren und Zwerge das Bewährte perfektionieren, erschaffen Menschen das Neue – oft ohne Rücksicht auf Folgen. Sie sind Hoffnungsträger, Zerstörer, Pioniere und Rebellen in einem."
 schemaVersion: 1
 size: medium
 source: legacy.world-rules

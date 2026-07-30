@@ -24,19 +24,19 @@ bleibt dadurch reproduzierbar.
 | `skill` | 19 |
 | `spell` | 14 |
 | `spellcasting-progression` | 3 |
-| `trait` | 27 |
+| `trait` | 30 |
 | `weapon` | 40 |
 
 ## Automatisierte Qualitätszahlen
 
-- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 734
+- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 737
 - Leere Beschreibungen: 0
-- Alttexte mit weniger als 40 Klartextzeichen: 208
+- Alttexte mit weniger als 40 Klartextzeichen: 42
 - Verdächtige technische Labels: 0
 - Sichtbare Platzhaltermuster: 0
 - Entitäten mit Markdown-Struktur: 139
 - Entitäten mit nicht maschinenlesbarer Textregel: 410
-- Katalogfelder, die vor diesem Auftrag nicht in der generischen Detailansicht sichtbar waren: 56
+- Katalogfelder, die vor diesem Auftrag nicht in der generischen Detailansicht sichtbar waren: 65
 
 ## UI-Ausgangslage
 
@@ -56,6 +56,7 @@ bleibt dadurch reproduzierbar.
 - `appliesTo`
 - `armorClass`
 - `attribute`
+- `availability`
 - `boosts`
 - `bulk`
 - `castingAttribute`
@@ -68,9 +69,12 @@ bleibt dadurch reproduzierbar.
 - `defense`
 - `dexterityCap`
 - `duration`
+- `editorialStatus`
 - `effects`
+- `examples`
 - `featIds`
 - `featureIds`
+- `flavorText`
 - `flaws`
 - `freeBoosts`
 - `grantedFeatIds`
@@ -87,7 +91,9 @@ bleibt dadurch reproduzierbar.
 - `languageIds`
 - `legacy`
 - `legacySystem`
+- `limitations`
 - `mode`
+- `origins`
 - `prerequisites`
 - `priceGp`
 - `proficiencyByLevel`
@@ -95,13 +101,16 @@ bleibt dadurch reproduzierbar.
 - `rarity`
 - `references`
 - `repertoireByLevel`
+- `rulesText`
 - `schemaVersion`
 - `size`
 - `slotsByLevel`
 - `speed`
 - `spellcastingProgressionId`
+- `subcategory`
 - `summary`
 - `target`
+- `technologyLevel`
 - `tradition`
 - `trainedSkillChoices`
 - `trainedSkillIds`

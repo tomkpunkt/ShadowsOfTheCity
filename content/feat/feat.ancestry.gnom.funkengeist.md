@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.gnom
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Voraussetzung: Gnom Deine Kreativität lässt dich blitzschnell Lösungen finden. Du kannst einmal pro Stunde eine Handwerks- oder Wissensprobe wiederholen. Du musst das zweite Ergebnis verwenden."
+examples: []
 id: feat.ancestry.gnom.funkengeist
 legacy:
   notes: []
@@ -16,6 +18,9 @@ prerequisites:
   - ancestry:
       id: ancestry.gnom
 references: []
+rulesText: "*Voraussetzung:* Gnom  \r
+
+  Deine Kreativität lässt dich blitzschnell Lösungen finden. Du kannst einmal pro Stunde eine Handwerks- oder Wissensprobe wiederholen. Du musst das zweite Ergebnis verwenden."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

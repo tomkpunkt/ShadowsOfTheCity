@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Deine Geräte halten doppelt so lange, bevor sie versagen.
+examples: []
 id: feat.class.ingenieur.stabiler-aufbau
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: Deine Geräte halten doppelt so lange, bevor sie versagen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

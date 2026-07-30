@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.mediziner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du heilst den Geist, nicht den Körper. - Du erhältst Fertigkeitstraining in Diplomatie und Einschüchtern. - Du kannst einmal pro Tag Calm Emotions wirken. - Wenn du einen Verbündeten nach einem Furchteffekt beruhigst, erhält dieser +2 auf den nächsten Willenswurf. ---
+examples: []
 id: class-feature.mediziner.fachrichtung.psychologe
 legacy:
   notes: []
@@ -14,6 +16,17 @@ level: 1
 name: Psychologe
 prerequisites: []
 references: []
+rulesText: "Du heilst den Geist, nicht den Körper.  \r
+
+  - Du erhältst Fertigkeitstraining in Diplomatie und Einschüchtern.  \r
+
+  - Du kannst einmal pro Tag *Calm Emotions* wirken.  \r
+
+  - Wenn du einen Verbündeten nach einem Furchteffekt beruhigst, erhält dieser +2 auf den nächsten Willenswurf.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

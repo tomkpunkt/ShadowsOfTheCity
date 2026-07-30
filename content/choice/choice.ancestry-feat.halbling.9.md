@@ -18,6 +18,8 @@ choice:
     - ancestry:
         id: ancestry.halbling
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.ancestry-feat.halbling.9
 legacy:
   notes: []
@@ -25,12 +27,13 @@ legacy:
     - races/halblinge_zeitalter_des_goldes.md
 name: Halbling-Talent Stufe 9
 references: []
+rulesText: Wähle auf Stufe 9 ein verfügbares Halbling-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Halbling-Talent.
+summary: Wähle auf Stufe 9 ein verfügbares Halbling-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Halbling-Talent.
+Wähle auf Stufe 9 ein verfügbares Halbling-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

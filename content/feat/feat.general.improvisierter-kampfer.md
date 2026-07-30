@@ -1,9 +1,11 @@
 ---
 category: general
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Keine Mali improvisierte Waffen
+examples: []
 id: feat.general.improvisierter-kampfer
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 12
           id: strength
 references: []
+rulesText: "Improvisierter Kämpfer gewährt den im Altbestand beschriebenen Effekt: Keine Mali improvisierte Waffen."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

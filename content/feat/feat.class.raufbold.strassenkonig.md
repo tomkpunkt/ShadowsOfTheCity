@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 auf Einschüchtern und Diplomatie in städtischen Umgebungen.
+examples: []
 id: feat.class.raufbold.strassenkonig
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: +1 auf Einschüchtern und Diplomatie in städtischen Umgebungen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

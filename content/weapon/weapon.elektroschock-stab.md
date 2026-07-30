@@ -1,11 +1,15 @@
 ---
+availability: licensed
 bulk: 1
+category: weapon
 categoryId: trait.item.weapon.simple
 damage:
   dice: 1
   die: d4
   flat: 1
   type: damage.piercing
+editorialStatus: rewritten
+examples: []
 groupId: trait.weapon-group.blade
 hands: 1
 id: weapon.elektroschock-stab
@@ -16,14 +20,21 @@ legacy:
     - gear/weapons/melee/melee_weapons.md
 level: 0
 name: Elektroschock-Stab
+origins:
+  - corporate
+  - governmental
 priceGp: 150
 references: []
+rulesText: Elektroschock-Stab verursacht 1d4+1 Stichschaden und wird mit einer Hand geführt. Sie besitzt keine in der Quelle angegebene Reichweite. Der Quellenpreis beträgt 150 GS; die vorläufig migrierte Last beträgt 1.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Elektroschock-Stab ist eine Waffe und verursacht 1d4 Schaden.
+subcategory: energy-weapon
+summary: Elektroschock-Stab ist eine hochtechnologische Energiewaffe mit 1d4 Stichschaden und +1 festem Schaden.
+technologyLevel: high-tech
 traits:
   - trait.legacy
+  - trait.item.concealable
 type: weapon
 ---
 

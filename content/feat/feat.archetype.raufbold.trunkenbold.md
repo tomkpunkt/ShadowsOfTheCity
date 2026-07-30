@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Kampfstil ist chaotisch, aber effektiv. Du erhältst Resistenz 2 gegen Schaden, solange du alkoholisiert bist. Einmal pro Tag kannst du einen Angriff mit einem Bonus von +2 durchführen, wenn du vorher getrunken hast. ---
+examples: []
 id: feat.archetype.raufbold.trunkenbold
 legacy:
   notes:
@@ -17,6 +19,15 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: "Dein Kampfstil ist chaotisch, aber effektiv.  \r
+
+  Du erhältst Resistenz 2 gegen Schaden, solange du alkoholisiert bist.  \r
+
+  Einmal pro Tag kannst du einen Angriff mit einem Bonus von +2 durchführen, wenn du vorher getrunken hast.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

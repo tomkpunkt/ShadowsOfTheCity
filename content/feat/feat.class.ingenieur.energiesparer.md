@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Materialien halten doppelt so lange.
+examples: []
 id: feat.class.ingenieur.energiesparer
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: Materialien halten doppelt so lange.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

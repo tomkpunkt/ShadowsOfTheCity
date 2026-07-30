@@ -1,7 +1,11 @@
 ---
+availability: common
 bulk: 1
+category: protective-clothing
 categoryId: trait.item.armor.light
 dexterityCap: 4
+editorialStatus: rewritten
+examples: []
 hands: 0
 id: armor.moderne-kleidung
 itemBonus: 1
@@ -11,12 +15,17 @@ legacy:
     - gear/equipment/equipment_overview.md
 level: 0
 name: Moderne Kleidung
+origins:
+  - civilian
 priceGp: 100
 references: []
+rulesText: Moderne Kleidung gewährt einen Gegenstandsbonus von +1 auf die Rüstungsklasse. Der Geschicklichkeitsdeckel beträgt 4, die Last 1 und der Quellenpreis 100 GS.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Moderne Kleidung gewährt einen Gegenstandsbonus von +1 auf die Rüstungsklasse.
+subcategory: light-armor
+summary: Moderne Kleidung ist eine konventionelle leichte Rüstung mit einem Rüstungsbonus von +1.
+technologyLevel: conventional
 traits:
   - trait.legacy
 type: armor

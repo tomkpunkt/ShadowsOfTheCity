@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du heilst 1W8 TP, wenn du einen Gegner mit einem kritischen Treffer besiegst.
+examples: []
 id: feat.class.soldner.bluthand
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: Du heilst 1W8 TP, wenn du einen Gegner mit einem kritischen Treffer besiegst.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

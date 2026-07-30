@@ -1,9 +1,11 @@
 ---
 armorClass: 12
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "# Straßenschläger Quelle: Welt-Regelwerk (Zeitalter des Goldes) --- ## Flavortext > „Hier auf der Straße regieren wir. Und wenn du nicht zahlst, dann lernen wir dich das auf die harte Tour.\" Straßenschläger sind die lokalen Schläger und Gangster der Stadtviertel. Sie kontrollieren ihre Territorien durch Gewalt und Einschüchterung und sind darauf spezialisiert, Schutzgelder einzutreiben, Konkurrenten einzuschüchtern und die Ordnung in ihren Gebieten aufrechtzuerhalten. Sie sind weniger organisiert als Konzernschläger, aber dafür umso brutaler. --- ## Statistiken <div style=\"background-color: #f4e4bc; color: #3d2817; font-family: 'Times New Roman', serif; padding: 15px; border-radius: 5px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\"> <div style=\"text-align: center; margin-bottom: 10px;\"> <h1 style=\"font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 0; color: #3d2817; letter-spacing: 1px;\">STRAßENSCHLÄGER</h1> <p style=\"font-size: 14px; margin: 5px 0; color: #3d2817;\">[Straßenschläger]</p> <p style=\"font-size: 12px; font-style: italic; margin: 5px 0; color: #3d2817;\">Menschlicher NPC (Straßenschläger), chaotisch böse</p> </div> <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\"> <div style=\"line-height: 1.6;\"> <p style=\"margin: 5px 0;\"><strong>Rüstungsklasse</strong> 13 (Lederjacke)</p> <p style=\"margin: 5px 0;\"><strong>Trefferpunkte</strong> 30 (6d8 + 6)</p> <p style=\"margin: 5px 0;\"><strong>Geschwindigkeit</strong> 30 Fuß</p> </div> <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\"> <div style=\"display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin: 10px 0;\"> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">STR</p> <p style=\"margin: 5px 0;\">15 (+2)</p> </div> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">GES</p> <p style=\"margin: 5px 0;\">14 (+2)</p> </"
+examples: []
 hp: 20
 id: creature.strassenschlager
 legacy:
@@ -17,6 +19,403 @@ legacySystem: dnd5e
 level: 0
 name: Straßenschläger
 references: []
+rulesText: "# Straßenschläger\r
+
+  \r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Flavortext**\r
+
+  \r
+
+  > „Hier auf der Straße regieren wir. Und wenn du nicht zahlst, dann lernen wir dich das auf die harte Tour.\"\r
+
+  \r
+
+  Straßenschläger sind die lokalen Schläger und Gangster der Stadtviertel. Sie kontrollieren ihre Territorien durch Gewalt und Einschüchterung und sind darauf spezialisiert, Schutzgelder einzutreiben, Konkurrenten einzuschüchtern und die Ordnung in ihren Gebieten aufrechtzuerhalten. Sie sind weniger organisiert als Konzernschläger, aber dafür umso brutaler.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Statistiken**\r
+
+  \r
+
+  <div style=\"background-color: #f4e4bc; color: #3d2817; font-family: 'Times New Roman', serif; padding: 15px; border-radius: 5px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\">\r
+
+  \r
+
+  <div style=\"text-align: center; margin-bottom: 10px;\">\r
+
+  \  <h1 style=\"font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 0; color: #3d2817; letter-spacing: 1px;\">STRAßENSCHLÄGER</h1>\r
+
+  \  <p style=\"font-size: 14px; margin: 5px 0; color: #3d2817;\">[Straßenschläger]</p>\r
+
+  \  <p style=\"font-size: 12px; font-style: italic; margin: 5px 0; color: #3d2817;\">Menschlicher NPC (Straßenschläger), chaotisch böse</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Rüstungsklasse</strong> 13 (Lederjacke)</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Trefferpunkte</strong> 30 (6d8 + 6)</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Geschwindigkeit</strong> 30 Fuß</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin: 10px 0;\">\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">STR</p>\r
+
+  \    <p style=\"margin: 5px 0;\">15 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">GES</p>\r
+
+  \    <p style=\"margin: 5px 0;\">14 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">KON</p>\r
+
+  \    <p style=\"margin: 5px 0;\">14 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">INT</p>\r
+
+  \    <p style=\"margin: 5px 0;\">10 (+0)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">WEI</p>\r
+
+  \    <p style=\"margin: 5px 0;\">12 (+1)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">CHA</p>\r
+
+  \    <p style=\"margin: 5px 0;\">13 (+1)</p>\r
+
+  \  </div>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Rettungswürfe</strong> Stärke +4, Konstitution +4</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Fertigkeiten</strong> Einschüchtern +3, Athletik +4, Wahrnehmung +3, Überleben +3</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Sinne</strong> Passive Wahrnehmung 13</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Sprachen</strong> Deutsch, Straßenslang</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Schwierigkeitsgrad</strong> 1/2 (100 EP)</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Territoriale Kontrolle.</strong> Der Straßenschläger erhält einen +2 Bonus auf alle Fertigkeitswürfe in seinem bekannten Territorium.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Straßenschläger-Instinkt.</strong> Der Straßenschläger kann als Bonusaktion versuchen, ein Ziel einzuschüchtern. Das Ziel muss einen SG 13 Weisheitsrettungswurf bestehen oder für 1 Minute verängstigt sein.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Gang-Mentalität.</strong> Der Straßenschläger erhält einen +1 Bonus auf alle Angriffe, wenn er sich in der Nähe von anderen Straßenschlägern befindet.</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <h3 style=\"font-size: 16px; font-weight: bold; text-transform: uppercase; margin: 10px 0 5px 0; color: #3d2817;\">Aktionen</h3>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Mehrfachangriff.</strong> Der Straßenschläger kann zwei Aktionen verwenden: eine mit seinem Messer und eine mit seiner Faust.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Messer.</strong> <em>Nahkampfangriff:</em> +4 zum Treffen, Reichweite 5 Fuß, ein Ziel. <em>Treffer:</em> 5 (1d4 + 2) Stichschaden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Faust.</strong> <em>Nahkampfangriff:</em> +4 zum Treffen, Reichweite 5 Fuß, ein Ziel. <em>Treffer:</em> 4 (1d4 + 2) Wuchtschaden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Schlagstock.</strong> <em>Nahkampfangriff:</em> +4 zum Treffen, Reichweite 5 Fuß, ein Ziel. <em>Treffer:</em> 5 (1d6 + 2) Wuchtschaden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Einschüchtern.</strong> Der Straßenschläger kann versuchen, ein Ziel einzuschüchtern. Das Ziel muss einen SG 13 Weisheitsrettungswurf bestehen oder für 1 Minute verängstigt sein.</p>\r
+
+  </div>\r
+
+  \r
+
+  </div>\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Legendenaktionen**\r
+
+  \r
+
+  Der Straßenschläger kann 1 Legendenaktion verwenden, wobei er aus den unten stehenden Optionen wählt. Nur eine Legendenaktionsoption kann auf einmal verwendet werden und nur am Ende des Zuges einer anderen Kreatur. Der Straßenschläger erhält verbrauchte Legendenaktionen zu Beginn seines Zuges zurück.\r
+
+  \r
+
+  **Verstärkung rufen.** Der Straßenschläger kontaktiert andere Gang-Mitglieder. Diese erscheinen in 1d4 Runden.\r
+
+  \r
+
+  **Wutausbruch.** Der Straßenschläger wird wütend und erhält einen +2 Bonus auf alle Angriffe und Schaden für die nächste Runde.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Umweltfaktoren**\r
+
+  \r
+
+  ### **Straßenviertel**\r
+
+  - **Bonus:** +2 auf Einschüchtern und Überleben\r
+
+  - **Zugang:** Lokale Informationen und Unterstützung\r
+
+  - **Sicherheit:** Gang-Schutz\r
+
+  \r
+
+  ### **Fremde Gebiete**\r
+
+  - **Nachteil:** -2 auf alle Fertigkeitswürfe\r
+
+  - **Zugang:** Keine lokalen Ressourcen\r
+
+  - **Sicherheit:** Kein Gang-Schutz\r
+
+  \r
+
+  ### **Konzerngebiete**\r
+
+  - **Nachteil:** -3 auf alle Fertigkeitswürfe\r
+
+  - **Zugang:** Keine Ressourcen\r
+
+  - **Sicherheit:** Feindliche Sicherheitskräfte\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Variationen**\r
+
+  \r
+
+  ### **Straßenschläger-Lehrling**\r
+
+  - **Typ:** Menschlicher NPC (Straßenschläger-Lehrling), chaotisch böse\r
+
+  - **Stufe:** 1/4 (50 EP)\r
+
+  - **TP:** 20 (4d8 + 4)\r
+
+  - **RK:** 12 (Lederjacke)\r
+
+  - **Geschwindigkeit:** 30 Fuß\r
+
+  - **Stärke:** 13 (+1) | **Geschicklichkeit:** 12 (+1) | **Konstitution:** 12 (+1) | **Intelligenz:** 9 (-1) | **Weisheit:** 11 (+0) | **Charisma:** 12 (+1)\r
+
+  - **Rettungswürfe:** Stärke +3, Konstitution +3\r
+
+  - **Fertigkeiten:** Einschüchtern +2, Athletik +3, Wahrnehmung +2\r
+
+  - **Sinne:** Passive Wahrnehmung 12\r
+
+  - **Sprachen:** Deutsch, Straßenslang\r
+
+  - **Spezialfähigkeiten:** Begrenzte Territoriale Kontrolle, Gang-Mentalität\r
+
+  - **Aktionen:** Messer, Faust, Einschüchtern\r
+
+  \r
+
+  ### **Straßenschläger-Veteran**\r
+
+  - **Typ:** Menschlicher NPC (Straßenschläger-Veteran), chaotisch böse\r
+
+  - **Stufe:** 1 (200 EP)\r
+
+  - **TP:** 45 (9d8 + 9)\r
+
+  - **RK:** 14 (Verstärkte Lederjacke)\r
+
+  - **Geschwindigkeit:** 30 Fuß\r
+
+  - **Stärke:** 16 (+3) | **Geschicklichkeit:** 15 (+2) | **Konstitution:** 15 (+2) | **Intelligenz:** 11 (+0) | **Weisheit:** 13 (+1) | **Charisma:** 14 (+2)\r
+
+  - **Rettungswürfe:** Stärke +5, Konstitution +5\r
+
+  - **Fertigkeiten:** Einschüchtern +4, Athletik +5, Wahrnehmung +4, Überleben +4\r
+
+  - **Sinne:** Passive Wahrnehmung 14\r
+
+  - **Sprachen:** Deutsch, Straßenslang\r
+
+  - **Spezialfähigkeiten:** Erweiterte Territoriale Kontrolle, Straßenschläger-Instinkt, Gang-Mentalität\r
+
+  - **Aktionen:** Messer, Faust, Schlagstock, Einschüchtern, Verstärkung rufen\r
+
+  \r
+
+  ### **Straßenschläger-Chef**\r
+
+  - **Typ:** Menschlicher NPC (Straßenschläger-Chef), chaotisch böse\r
+
+  - **Stufe:** 2 (400 EP)\r
+
+  - **TP:** 60 (12d8 + 12)\r
+
+  - **RK:** 15 (Schwere Lederjacke)\r
+
+  - **Geschwindigkeit:** 30 Fuß\r
+
+  - **Stärke:** 17 (+3) | **Geschicklichkeit:** 16 (+3) | **Konstitution:** 16 (+3) | **Intelligenz:** 12 (+1) | **Weisheit:** 14 (+2) | **Charisma:** 15 (+2)\r
+
+  - **Rettungswürfe:** Stärke +6, Konstitution +6, Charisma +5\r
+
+  - **Fertigkeiten:** Einschüchtern +5, Athletik +6, Wahrnehmung +5, Überleben +5, Täuschen +5\r
+
+  - **Sinne:** Passive Wahrnehmung 15\r
+
+  - **Sprachen:** Deutsch, Straßenslang, Englisch\r
+
+  - **Spezialfähigkeiten:** Vollständige Territoriale Kontrolle, Straßenschläger-Instinkt, Gang-Mentalität, Kommando\r
+
+  - **Aktionen:** Messer, Faust, Schlagstock, Pistole, Einschüchtern, Kommando\r
+
+  - **Legendenaktionen:** Verstärkung rufen, Wutausbruch, Kommando\r
+
+  \r
+
+  ### **Straßenschläger-Boss**\r
+
+  - **Typ:** Menschlicher NPC (Straßenschläger-Boss), chaotisch böse\r
+
+  - **Stufe:** 3 (600 EP)\r
+
+  - **TP:** 80 (16d8 + 16)\r
+
+  - **RK:** 16 (Schwere Lederjacke + Schild)\r
+
+  - **Geschwindigkeit:** 30 Fuß\r
+
+  - **Stärke:** 18 (+4) | **Geschicklichkeit:** 17 (+3) | **Konstitution:** 17 (+3) | **Intelligenz:** 13 (+1) | **Weisheit:** 15 (+2) | **Charisma:** 16 (+3)\r
+
+  - **Rettungswürfe:** Stärke +7, Konstitution +7, Charisma +6\r
+
+  - **Fertigkeiten:** Einschüchtern +6, Athletik +7, Wahrnehmung +6, Überleben +6, Täuschen +6, Überzeugen +6\r
+
+  - **Sinne:** Passive Wahrnehmung 16\r
+
+  - **Sprachen:** Deutsch, Straßenslang, Englisch\r
+
+  - **Spezialfähigkeiten:** Vollständige Territoriale Kontrolle, Straßenschläger-Instinkt, Gang-Mentalität, Kommando, Boss-Aura\r
+
+  - **Aktionen:** Messer, Faust, Schlagstock, Pistole, Einschüchtern, Kommando, Boss-Aura\r
+
+  - **Legendenaktionen:** Verstärkung rufen, Wutausbruch, Kommando, Boss-Aura\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  \r
+
+  Straßenschläger sind die lokalen Schläger und Gangster der Stadtviertel. Sie kontrollieren ihre Territorien durch Gewalt und Einschüchterung und sind darauf spezialisiert, Schutzgelder einzutreiben, Konkurrenten einzuschüchtern und die Ordnung in ihren Gebieten aufrechtzuerhalten.\r
+
+  \r
+
+  Sie repräsentieren die brutale Seite der Straßenkriminalität und können sowohl als Verbündete als auch als gefährliche Gegner fungieren. Ihre wahre Stärke liegt in ihrer territorialen Kontrolle und ihrer Fähigkeit, durch Gewalt und Einschüchterung ihre Ziele zu erreichen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Anmerkungen**\r
+
+  \r
+
+  - **Schwächen:** Schlechte soziale Fertigkeiten, Abhängigkeit von territorialer Kontrolle\r
+
+  - **Widerstände:** Normale menschliche Widerstände\r
+
+  - **Immunitäten:** Keine\r
+
+  - **Besondere Regeln:** Straßenschläger verlieren ihre Spezialfähigkeiten, wenn sie sich außerhalb ihres Territoriums befinden"
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

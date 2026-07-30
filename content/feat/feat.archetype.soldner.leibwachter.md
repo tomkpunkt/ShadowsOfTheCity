@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist Spezialist im Schutz anderer. Wenn du die Aktion Verteidigen auf einen Verbündeten anwendest, erhält dieser zusätzlich Resistenz 2 gegen physischen Schaden.
+examples: []
 id: feat.archetype.soldner.leibwachter
 legacy:
   notes:
@@ -17,6 +19,9 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: "Du bist Spezialist im Schutz anderer.  \r
+
+  Wenn du die Aktion *Verteidigen* auf einen Verbündeten anwendest, erhält dieser zusätzlich Resistenz 2 gegen physischen Schaden."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

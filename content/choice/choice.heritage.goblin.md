@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.goblin
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.goblin
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/goblins_zeitalter_des_goldes.md
 name: Goblin-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Goblin.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

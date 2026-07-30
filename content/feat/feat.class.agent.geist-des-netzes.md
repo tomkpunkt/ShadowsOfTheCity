@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst in jeder großen Stadt Informationen in einem Tag finden, unabhängig von SG.
+examples: []
 id: feat.class.agent.geist-des-netzes
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: Du kannst in jeder großen Stadt Informationen in einem Tag finden, unabhängig von SG.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

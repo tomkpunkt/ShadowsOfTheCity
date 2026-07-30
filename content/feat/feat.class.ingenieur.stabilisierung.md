@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst Geräte oder Waffen anderer Spieler stabilisieren (+1 auf Angriff oder SG).
+examples: []
 id: feat.class.ingenieur.stabilisierung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: Du kannst Geräte oder Waffen anderer Spieler stabilisieren (+1 auf Angriff oder SG).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

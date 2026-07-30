@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.mediziner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du stirbst, kannst du 1W6 TP zurückgewinnen (1/Tag).
+examples: []
 id: feat.class.mediziner.lebenswille
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.mediziner
 references: []
+rulesText: Wenn du stirbst, kannst du 1W6 TP zurückgewinnen (1/Tag).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

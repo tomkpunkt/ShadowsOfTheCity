@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst Rituale doppelt so schnell ausführen.
+examples: []
 id: feat.class.magier.ritualist
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: Du kannst Rituale doppelt so schnell ausführen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

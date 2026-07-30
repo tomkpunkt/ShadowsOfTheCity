@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.halbling
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.halbling
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/halblinge_zeitalter_des_goldes.md
 name: Halbling-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Halbling.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

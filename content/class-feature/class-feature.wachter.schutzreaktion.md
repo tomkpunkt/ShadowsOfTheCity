@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Wenn ein Verbündeter innerhalb von 5 Fuß von dir angegriffen wird, kannst du als Reaktion versuchen, den Schlag abzufangen. Würfle einen Reflexwurf gegen SG des Angriffs: bei Erfolg nimmst du die Hälfte des Schadens auf dich. ---"
+examples: []
 id: class-feature.wachter.schutzreaktion
 legacy:
   notes: []
@@ -14,6 +16,13 @@ level: 3
 name: Schutzreaktion
 prerequisites: []
 references: []
+rulesText: "Wenn ein Verbündeter innerhalb von 5 Fuß von dir angegriffen wird, kannst du als Reaktion versuchen, den Schlag abzufangen.  \r
+
+  Würfle einen Reflexwurf gegen SG des Angriffs: bei Erfolg nimmst du die Hälfte des Schadens auf dich.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

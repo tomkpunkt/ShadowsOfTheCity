@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.ork
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du spürst Gefahr, bevor sie dich erreicht. Du erhältst einen +1 Situationsbonus auf Initiative und Wahrnehmungswürfe gegen versteckte Feinde.
+examples: []
 id: feat.ancestry.ork.blutiger-instinkt
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.ork
 references: []
+rulesText: Du spürst Gefahr, bevor sie dich erreicht. Du erhältst einen +1 Situationsbonus auf Initiative und Wahrnehmungswürfe gegen versteckte Feinde.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

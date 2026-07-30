@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: rule.actions-per-turn
 key: rule.actions-per-turn
 legacy:
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Aktionen pro Zug
 references: []
+rulesText: Aktionen pro Zug ist eine verbindliche Compilerannahme aus dem Review.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du erhältst +1 auf AC gegen magische Angriffe.
+examples: []
 id: feat.class.magier.arkaner-schild
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: Du erhältst +1 auf AC gegen magische Angriffe.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

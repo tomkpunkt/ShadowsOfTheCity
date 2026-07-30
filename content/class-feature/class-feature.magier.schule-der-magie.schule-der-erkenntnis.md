@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du suchst Wissen über Macht. - Du erhältst den Cantrip Detect Magic. - Du erhältst +1 auf Arkane Kunde und Wahrnehmung.
+examples: []
 id: class-feature.magier.schule-der-magie.schule-der-erkenntnis
 legacy:
   notes: []
@@ -14,6 +16,11 @@ level: 1
 name: Schule der Erkenntnis
 prerequisites: []
 references: []
+rulesText: "Du suchst Wissen über Macht.  \r
+
+  - Du erhältst den Cantrip *Detect Magic*.  \r
+
+  - Du erhältst +1 auf Arkane Kunde und Wahrnehmung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

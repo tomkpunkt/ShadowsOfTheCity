@@ -1,13 +1,13 @@
 # Builder-Reichweite
 
-Automatischer Stand für Katalog `50b469737ff7da4e512593653726a2dea97a4f644bd52607d0bb505f7f89f312`.
+Automatischer Stand für Katalog `427f9dfc8f4ecec665ed08d9ee714d34a3f14659dcb1d2f462dd62a1622431ae`.
 
 ## Ergebnis
 
-- 734 Entitäten geprüft
-- 734 im Builder oder Kompendium erreichbar
+- 737 Entitäten geprüft
+- 737 im Builder oder Kompendium erreichbar
 - 356 auswählbar
-- 298 automatisch oder durch eine Auswahl eingebunden
+- 301 automatisch oder durch eine Auswahl eingebunden
 - 80 informativ im Kompendium
 - 0 ausdrücklich ausgenommen
 - 0 blockierende Befunde
@@ -30,7 +30,7 @@ Automatischer Stand für Katalog `50b469737ff7da4e512593653726a2dea97a4f644bd526
 | `skill` | 19 | 19 | 19 | 0 | 0 | 0 |
 | `spell` | 14 | 14 | 14 | 0 | 0 | 0 |
 | `spellcasting-progression` | 3 | 3 | 0 | 3 | 0 | 0 |
-| `trait` | 27 | 27 | 0 | 24 | 3 | 0 |
+| `trait` | 30 | 30 | 0 | 27 | 3 | 0 |
 | `weapon` | 40 | 40 | 40 | 0 | 0 | 0 |
 
 ## Prüfvertrag

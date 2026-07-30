@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: language.infernal
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
 name: Infernalisch
 rarity: common
 references: []
+rulesText: Infernalisch ist eine aus dem Altbestand normalisierte Sprache.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

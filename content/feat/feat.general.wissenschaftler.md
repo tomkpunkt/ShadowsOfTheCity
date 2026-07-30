@@ -1,9 +1,11 @@
 ---
 category: profession
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Analysen, Forschung
+examples: []
 id: feat.general.wissenschaftler
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 16
           id: intelligence
 references: []
+rulesText: "Wissenschaftler gewährt den im Altbestand beschriebenen Effekt: Analysen, Forschung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

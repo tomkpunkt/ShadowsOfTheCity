@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Deine Wahrnehmung von Gefahr ist fast übernatürlich. Du erhältst +2 auf Initiativewürfe und Wahrnehmung gegen Überraschungsangriffe. ---
+examples: []
 id: class-feature.soldner.kriegsinstinkt
 legacy:
   notes: []
@@ -14,6 +16,13 @@ level: 11
 name: Kriegsinstinkt
 prerequisites: []
 references: []
+rulesText: "Deine Wahrnehmung von Gefahr ist fast übernatürlich.  \r
+
+  Du erhältst +2 auf Initiativewürfe und Wahrnehmung gegen Überraschungsangriffe.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

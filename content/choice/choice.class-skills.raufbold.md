@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.raufbold
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.raufbold
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_raufbold.md
 name: Raufbold-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Raufbold.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

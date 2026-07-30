@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du webst Energie in Schilde und Barrieren. - Du erhältst den Cantrip Shield. - Du erhältst +1 auf Rettungswürfe gegen magische Effekte. ---
+examples: []
 id: class-feature.magier.schule-der-magie.schule-des-schutzes
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 1
 name: Schule des Schutzes
 prerequisites: []
 references: []
+rulesText: "Du webst Energie in Schilde und Barrieren.  \r
+
+  - Du erhältst den Cantrip *Shield*.  \r
+
+  - Du erhältst +1 auf Rettungswürfe gegen magische Effekte.  \r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

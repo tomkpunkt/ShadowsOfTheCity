@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.elf
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist in den gläsernen Türmen der Elfenhäuser geboren. Du erhältst einen Bonus von +1 auf Gesellschaft und Diplomatie. Wenn du dich in einer Umgebung mit moderner Technologie befindest, ignorierst du Ablenkungs-Mali durch Lärm oder Licht.
+examples: []
 id: heritage.elf.hochhaus-erbe
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.elf
 references: []
+rulesText: Du bist in den gläsernen Türmen der Elfenhäuser geboren. Du erhältst einen Bonus von +1 auf Gesellschaft und Diplomatie. Wenn du dich in einer Umgebung mit moderner Technologie befindest, ignorierst du Ablenkungs-Mali durch Lärm oder Licht.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

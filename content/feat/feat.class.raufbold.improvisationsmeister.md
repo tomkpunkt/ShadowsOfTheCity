@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du erhältst +2 auf Angriffe mit improvisierten Waffen.
+examples: []
 id: feat.class.raufbold.improvisationsmeister
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: Du erhältst +2 auf Angriffe mit improvisierten Waffen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

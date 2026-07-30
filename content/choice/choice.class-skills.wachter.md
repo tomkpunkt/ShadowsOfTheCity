@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.wachter
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.wachter
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_waechter.md
 name: Wächter-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Wächter.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

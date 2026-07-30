@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst einmal pro Tag einen Zauber, der dich betrifft, reflektieren (Willenswurf SG 20).
+examples: []
 id: feat.class.magier.geflechtsresonanz
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: Du kannst einmal pro Tag einen Zauber, der dich betrifft, reflektieren (Willenswurf SG 20).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

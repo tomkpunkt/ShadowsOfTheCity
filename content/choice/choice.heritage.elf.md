@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.elf
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.elf
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/elfen_zeitalter_des_goldes.md
 name: Elf-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Elf.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

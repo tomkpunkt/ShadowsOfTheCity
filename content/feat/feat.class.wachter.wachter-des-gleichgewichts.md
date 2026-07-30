@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du kannst einmal pro Tag zwischen Leben und Tod wählen: Einen Gefallenen retten oder einen Gegner endgültig bannen."
+examples: []
 id: feat.class.wachter.wachter-des-gleichgewichts
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: "Du kannst einmal pro Tag zwischen Leben und Tod wählen: Einen Gefallenen retten oder einen Gegner endgültig bannen."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.zwerg
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Zwerge sind zäh und unerschütterlich. Effekt: Du erhältst einen +1 Situationsbonus auf Rettungswürfe gegen Gifte, Krankheiten und Effekte, die dich zu Boden werfen oder verschieben würden. ---"
+examples: []
 id: feat.ancestry-feature.zwerg.volksfertigkeit-standhaft
 legacy:
   notes: []
@@ -16,6 +18,13 @@ prerequisites:
   - ancestry:
       id: ancestry.zwerg
 references: []
+rulesText: "Zwerge sind zäh und unerschütterlich.  \r
+
+  **Effekt:** Du erhältst einen +1 Situationsbonus auf Rettungswürfe gegen Gifte, Krankheiten und Effekte, die dich zu Boden werfen oder verschieben würden.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Einmal pro Tag kannst du Informationen enthüllen, die einem Ziel –2 auf Willenswürfe geben.
+examples: []
 id: feat.class.agent.schwarzes-dossier
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: Einmal pro Tag kannst du Informationen enthüllen, die einem Ziel –2 auf Willenswürfe geben.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

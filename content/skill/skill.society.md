@@ -1,5 +1,7 @@
 ---
 attribute: intelligence
+editorialStatus: rewritten
+examples: []
 id: skill.society
 legacy:
   notes: []
@@ -7,12 +9,13 @@ legacy:
     - rules/core_mechanics.md
 name: Gesellschaft
 references: []
+rulesText: Setze Gesellschaft ein, um Organisationen, Gebräuche, politische Verbindungen oder rechtliche Abläufe einzuordnen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Gesellschaft ist eine Fertigkeit mit Intelligenz als typischem Attribut.
+summary: Gesellschaft nutzt Intelligenz für Wissen über Institutionen, soziale Schichten, Konzerne, Gesetze und urbane Machtstrukturen.
 traits: []
 type: skill
 ---
 
-Kanonischer Skill für Gesellschaft.
+Setze Gesellschaft ein, um Organisationen, Gebräuche, politische Verbindungen oder rechtliche Abläufe einzuordnen.

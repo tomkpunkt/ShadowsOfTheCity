@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.ingenieur
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-feat.ingenieur.1
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_ingenieur.md
 name: Ingenieur-Talent Stufe 1
 references: []
+rulesText: Wähle auf Stufe 1 ein verfügbares Ingenieur-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Ingenieur-Talent.
+summary: Wähle auf Stufe 1 ein verfügbares Ingenieur-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Ingenieur-Talent.
+Wähle auf Stufe 1 ein verfügbares Ingenieur-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

@@ -1,5 +1,7 @@
 ---
 attribute: wisdom
+editorialStatus: rewritten
+examples: []
 id: skill.medicine
 legacy:
   notes: []
@@ -7,12 +9,13 @@ legacy:
     - rules/core_mechanics.md
 name: Medizin
 references: []
+rulesText: Setze Medizin für Diagnose und Behandlung ein. Umfang, Materialbedarf und Zeit richten sich nach der konkreten medizinischen Handlung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Medizin ist eine Fertigkeit mit Weisheit als typischem Attribut.
+summary: Medizin nutzt Weisheit, um Verletzungen zu beurteilen, Erste Hilfe zu leisten und die Versorgung kranker oder verwundeter Personen zu planen.
 traits: []
 type: skill
 ---
 
-Kanonischer Skill für Medizin.
+Setze Medizin für Diagnose und Behandlung ein. Umfang, Materialbedarf und Zeit richten sich nach der konkreten medizinischen Handlung.

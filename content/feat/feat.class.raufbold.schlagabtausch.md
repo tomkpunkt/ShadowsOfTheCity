@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.raufbold
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du getroffen wirst, kannst du sofort einen Gegenangriff ausführen.
+examples: []
 id: feat.class.raufbold.schlagabtausch
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.raufbold
 references: []
+rulesText: Wenn du getroffen wirst, kannst du sofort einen Gegenangriff ausführen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

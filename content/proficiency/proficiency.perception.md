@@ -1,6 +1,8 @@
 ---
 attribute: wisdom
 category: perception
+editorialStatus: reviewed
+examples: []
 id: proficiency.perception
 legacy:
   notes: []
@@ -8,6 +10,7 @@ legacy:
     - rules/core_mechanics.md
 name: Wahrnehmung
 references: []
+rulesText: Wahrnehmung verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.mensch
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist ein Produkt der harten Zeiten. Du erhältst Resistenz 5 gegen Blutungs-, Krankheit- und Gifteffekte. ---
+examples: []
 id: feat.ancestry.mensch.uberlebenskunstler
 legacy:
   notes: []
@@ -16,6 +18,11 @@ prerequisites:
   - ancestry:
       id: ancestry.mensch
 references: []
+rulesText: "Du bist ein Produkt der harten Zeiten. Du erhältst Resistenz 5 gegen Blutungs-, Krankheit- und Gifteffekte.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

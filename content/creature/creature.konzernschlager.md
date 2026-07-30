@@ -1,9 +1,11 @@
 ---
 armorClass: 13
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "# Konzernschläger Quelle: Welt-Regelwerk (Zeitalter des Goldes) --- ## Flavortext > „Manchmal braucht man jemanden, der die schmutzige Arbeit erledigt. Wir sind die Faust des Konzerns.\" Konzernschläger sind die muskulösen Vollstrecker der großen Konzerne. Sie sind darauf spezialisiert, durch rohe Gewalt und Einschüchterung die Interessen ihrer Arbeitgeber durchzusetzen. Obwohl sie weniger subtil sind als andere Konzernangestellte, sind sie effektive Werkzeuge für direkte Konfrontationen. --- ## Statistiken <div style=\"background-color: #f4e4bc; color: #3d2817; font-family: 'Times New Roman', serif; padding: 15px; border-radius: 5px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\"> <div style=\"text-align: center; margin-bottom: 10px;\"> <h1 style=\"font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 0; color: #3d2817; letter-spacing: 1px;\">KONZERNSCHLÄGER</h1> <p style=\"font-size: 14px; margin: 5px 0; color: #3d2817;\">[Konzernschläger]</p> <p style=\"font-size: 12px; font-style: italic; margin: 5px 0; color: #3d2817;\">Menschlicher NPC (Konzernschläger), neutral böse</p> </div> <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\"> <div style=\"line-height: 1.6;\"> <p style=\"margin: 5px 0;\"><strong>Rüstungsklasse</strong> 14 (Schutzweste)</p> <p style=\"margin: 5px 0;\"><strong>Trefferpunkte</strong> 35 (7d8 + 7)</p> <p style=\"margin: 5px 0;\"><strong>Geschwindigkeit</strong> 30 Fuß</p> </div> <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\"> <div style=\"display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin: 10px 0;\"> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">STR</p> <p style=\"margin: 5px 0;\">16 (+3)</p> </div> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">GES</p> <p style=\"margin: 5px 0;\">14 (+2)</p> </div> <div> <p style=\"font-weight: bold; text-transform: u"
+examples: []
 hp: 20
 id: creature.konzernschlager
 legacy:
@@ -17,6 +19,329 @@ legacySystem: dnd5e
 level: 0
 name: Konzernschläger
 references: []
+rulesText: "# Konzernschläger\r
+
+  \r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Flavortext**\r
+
+  \r
+
+  > „Manchmal braucht man jemanden, der die schmutzige Arbeit erledigt. Wir sind die Faust des Konzerns.\"\r
+
+  \r
+
+  Konzernschläger sind die muskulösen Vollstrecker der großen Konzerne. Sie sind darauf spezialisiert, durch rohe Gewalt und Einschüchterung die Interessen ihrer Arbeitgeber durchzusetzen. Obwohl sie weniger subtil sind als andere Konzernangestellte, sind sie effektive Werkzeuge für direkte Konfrontationen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Statistiken**\r
+
+  \r
+
+  <div style=\"background-color: #f4e4bc; color: #3d2817; font-family: 'Times New Roman', serif; padding: 15px; border-radius: 5px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\">\r
+
+  \r
+
+  <div style=\"text-align: center; margin-bottom: 10px;\">\r
+
+  \  <h1 style=\"font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 0; color: #3d2817; letter-spacing: 1px;\">KONZERNSCHLÄGER</h1>\r
+
+  \  <p style=\"font-size: 14px; margin: 5px 0; color: #3d2817;\">[Konzernschläger]</p>\r
+
+  \  <p style=\"font-size: 12px; font-style: italic; margin: 5px 0; color: #3d2817;\">Menschlicher NPC (Konzernschläger), neutral böse</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Rüstungsklasse</strong> 14 (Schutzweste)</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Trefferpunkte</strong> 35 (7d8 + 7)</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Geschwindigkeit</strong> 30 Fuß</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin: 10px 0;\">\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">STR</p>\r
+
+  \    <p style=\"margin: 5px 0;\">16 (+3)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">GES</p>\r
+
+  \    <p style=\"margin: 5px 0;\">14 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">KON</p>\r
+
+  \    <p style=\"margin: 5px 0;\">14 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">INT</p>\r
+
+  \    <p style=\"margin: 5px 0;\">10 (+0)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">WEI</p>\r
+
+  \    <p style=\"margin: 5px 0;\">12 (+1)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">CHA</p>\r
+
+  \    <p style=\"margin: 5px 0;\">13 (+1)</p>\r
+
+  \  </div>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Rettungswürfe</strong> Stärke +5, Konstitution +4</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Fertigkeiten</strong> Einschüchtern +3, Athletik +5, Wahrnehmung +3</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Sinne</strong> Passive Wahrnehmung 13</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Sprachen</strong> Deutsch, Englisch</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Schwierigkeitsgrad</strong> 1/2 (100 EP)</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Konzernschutz.</strong> Der Konzernschläger erhält einen +2 Bonus auf alle Rettungswürfe gegen Einschüchterung und Verwirrung, solange er im Auftrag seines Konzerns handelt.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Schutzweste.</strong> Der Konzernschläger trägt eine leichte Schutzweste, die ihm einen +1 Bonus auf die Rüstungsklasse gibt.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Einschüchterungsexperte.</strong> Der Konzernschläger kann als Bonusaktion versuchen, ein Ziel einzuschüchtern. Das Ziel muss einen SG 13 Weisheitsrettungswurf bestehen oder für 1 Minute verängstigt sein.</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <h3 style=\"font-size: 16px; font-weight: bold; text-transform: uppercase; margin: 10px 0 5px 0; color: #3d2817;\">Aktionen</h3>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Mehrfachangriff.</strong> Der Konzernschläger kann zwei Aktionen verwenden: eine mit seinem Schlagstock und eine mit seiner Faust.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Schlagstock.</strong> <em>Nahkampfangriff:</em> +5 zum Treffen, Reichweite 5 Fuß, ein Ziel. <em>Treffer:</em> 6 (1d6 + 3) Wuchtschaden. Das Ziel muss einen SG 13 Konstitutionsrettungswurf bestehen oder für 1 Runde betäubt sein.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Faust.</strong> <em>Nahkampfangriff:</em> +5 zum Treffen, Reichweite 5 Fuß, ein Ziel. <em>Treffer:</em> 5 (1d4 + 3) Wuchtschaden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Pistole.</strong> <em>Fernkampfangriff:</em> +4 zum Treffen, Reichweite 30/120 Fuß, ein Ziel. <em>Treffer:</em> 6 (1d6 + 2) Projektilschaden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Einschüchtern.</strong> Der Konzernschläger kann versuchen, ein Ziel einzuschüchtern. Das Ziel muss einen SG 13 Weisheitsrettungswurf bestehen oder für 1 Minute verängstigt sein.</p>\r
+
+  </div>\r
+
+  \r
+
+  </div>\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Legendenaktionen**\r
+
+  \r
+
+  Der Konzernschläger kann 1 Legendenaktion verwenden, wobei er aus den unten stehenden Optionen wählt. Nur eine Legendenaktionsoption kann auf einmal verwendet werden und nur am Ende des Zuges einer anderen Kreatur. Der Konzernschläger erhält verbrauchte Legendenaktionen zu Beginn seines Zuges zurück.\r
+
+  \r
+
+  **Verstärkung rufen.** Der Konzernschläger kontaktiert andere Konzernschläger oder Sicherheitskräfte. Diese erscheinen in 1d4 Runden.\r
+
+  \r
+
+  **Wutausbruch.** Der Konzernschläger wird wütend und erhält einen +2 Bonus auf alle Angriffe und Schaden für die nächste Runde.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Umweltfaktoren**\r
+
+  \r
+
+  ### **Konzerngebäude**\r
+
+  - **Bonus:** +2 auf Einschüchtern und Athletik\r
+
+  - **Zugang:** Konzernressourcen und Unterstützung\r
+
+  - **Sicherheit:** Schutz durch Konzernsicherheit\r
+
+  \r
+
+  ### **Öffentliche Bereiche**\r
+
+  - **Normal:** Standard-Fertigkeitswürfe\r
+
+  - **Zugang:** Begrenzte Ressourcen\r
+
+  - **Sicherheit:** Abhängig von lokaler Sicherheit\r
+
+  \r
+
+  ### **Feindliche Gebiete**\r
+
+  - **Nachteil:** -2 auf alle Fertigkeitswürfe\r
+
+  - **Zugang:** Keine Konzernressourcen\r
+
+  - **Sicherheit:** Kein Konzernschutz\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Variationen**\r
+
+  \r
+
+  ### **Konzernschläger-Lehrling**\r
+
+  - **Stufe:** 1/4\r
+
+  - **TP:** 20 (4d8 + 4)\r
+
+  - **RK:** 13 (Schutzweste)\r
+
+  - **Fertigkeiten:** -2 auf alle Fertigkeitswürfe\r
+
+  - **Spezialfähigkeiten:** Begrenzter Konzernschutz\r
+
+  \r
+
+  ### **Konzernschläger-Veteran**\r
+
+  - **Stufe:** 1\r
+
+  - **TP:** 50 (10d8 + 10)\r
+
+  - **RK:** 15 (Verbesserte Schutzweste)\r
+
+  - **Fertigkeiten:** +2 auf alle Fertigkeitswürfe\r
+
+  - **Spezialfähigkeiten:** Erweiterter Konzernschutz\r
+
+  \r
+
+  ### **Konzernschläger-Chef**\r
+
+  - **Stufe:** 2\r
+
+  - **TP:** 70 (14d8 + 14)\r
+
+  - **RK:** 16 (Schwere Schutzweste)\r
+
+  - **Fertigkeiten:** +4 auf alle Fertigkeitswürfe\r
+
+  - **Spezialfähigkeiten:** Vollständiger Konzernschutz, Kommando\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  \r
+
+  Konzernschläger sind die muskulösen Vollstrecker der großen Konzerne. Sie sind darauf spezialisiert, durch rohe Gewalt und Einschüchterung die Interessen ihrer Arbeitgeber durchzusetzen. Obwohl sie weniger subtil sind als andere Konzernangestellte, sind sie effektive Werkzeuge für direkte Konfrontationen.\r
+
+  \r
+
+  Sie repräsentieren die brutale Seite des Konzernkapitalismus und können sowohl als Verbündete als auch als gefährliche Gegner fungieren. Ihre wahre Stärke liegt in ihrer physischen Präsenz und ihrer Fähigkeit, durch Einschüchterung und Gewalt ihre Ziele zu erreichen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Anmerkungen**\r
+
+  \r
+
+  - **Schwächen:** Schlechte soziale Fertigkeiten, Abhängigkeit von Konzernunterstützung\r
+
+  - **Widerstände:** Normale menschliche Widerstände\r
+
+  - **Immunitäten:** Keine\r
+
+  - **Besondere Regeln:** Konzernschläger verlieren ihre Spezialfähigkeiten, wenn sie nicht im Auftrag ihres Konzerns handeln"
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

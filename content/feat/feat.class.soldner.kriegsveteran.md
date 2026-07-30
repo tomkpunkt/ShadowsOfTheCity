@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du ignorierst Mali durch Verwundung oder Erschöpfung für 1 Minute.
+examples: []
 id: feat.class.soldner.kriegsveteran
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: Du ignorierst Mali durch Verwundung oder Erschöpfung für 1 Minute.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

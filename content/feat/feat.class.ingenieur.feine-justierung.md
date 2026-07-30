@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.ingenieur
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 auf alle Würfe für Gerätekonstruktion oder Reparatur.
+examples: []
 id: feat.class.ingenieur.feine-justierung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.ingenieur
 references: []
+rulesText: +1 auf alle Würfe für Gerätekonstruktion oder Reparatur.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

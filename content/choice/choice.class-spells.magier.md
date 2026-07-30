@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.magier
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-spells.magier
 legacy:
   notes:
@@ -25,6 +27,7 @@ legacy:
     - classes/klasse_magier.md
 name: Magier-Zauber
 references: []
+rulesText: Wähle Zauber aus der arcane-Tradition.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

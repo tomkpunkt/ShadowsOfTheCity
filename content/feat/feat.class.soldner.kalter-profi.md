@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst bei einem Angriffswurf 1W20 erneut würfeln, wenn du einen kritischen Fehlschlag erzielst (1/Tag).
+examples: []
 id: feat.class.soldner.kalter-profi
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: Du kannst bei einem Angriffswurf 1W20 erneut würfeln, wenn du einen kritischen Fehlschlag erzielst (1/Tag).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

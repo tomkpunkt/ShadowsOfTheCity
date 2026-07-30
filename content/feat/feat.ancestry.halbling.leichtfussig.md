@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.halbling
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Voraussetzung: Halbling Du bewegst dich mit bemerkenswerter Leichtigkeit. Du kannst dich durch das Feld eines Verbündeten bewegen, ohne Bewegungsstrafen zu erleiden."
+examples: []
 id: feat.ancestry.halbling.leichtfussig
 legacy:
   notes: []
@@ -16,6 +18,9 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: "*Voraussetzung:* Halbling  \r
+
+  Du bewegst dich mit bemerkenswerter Leichtigkeit. Du kannst dich durch das Feld eines Verbündeten bewegen, ohne Bewegungsstrafen zu erleiden."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

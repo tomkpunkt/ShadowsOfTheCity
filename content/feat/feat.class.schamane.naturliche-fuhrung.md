@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +2 auf Diplomatie gegen Tiere oder Naturgeister.
+examples: []
 id: feat.class.schamane.naturliche-fuhrung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.schamane
 references: []
+rulesText: +2 auf Diplomatie gegen Tiere oder Naturgeister.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -18,6 +18,8 @@ choice:
     - ancestry:
         id: ancestry.ork
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.ancestry-feat.ork.13
 legacy:
   notes: []
@@ -25,12 +27,13 @@ legacy:
     - races/orks_zeitalter_des_goldes.md
 name: Ork-Talent Stufe 13
 references: []
+rulesText: Wähle auf Stufe 13 ein verfügbares Ork-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Ork-Talent.
+summary: Wähle auf Stufe 13 ein verfügbares Ork-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Ork-Talent.
+Wähle auf Stufe 13 ein verfügbares Ork-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

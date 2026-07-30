@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.goblin
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.
+examples: []
 id: heritage.goblin.lichtfanger
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.goblin
 references: []
+rulesText: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

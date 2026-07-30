@@ -1,6 +1,8 @@
 ---
 castingAttribute: wisdom
 classId: class.schamane
+editorialStatus: reviewed
+examples: []
 id: spellcasting.primal-prepared
 legacy:
   notes:
@@ -15,6 +17,7 @@ proficiencyByLevel:
   "19": legendary
   "7": expert
 references: []
+rulesText: Vorbereitete Naturprogression; Progression als ausdrückliche Testannahme ergänzt.
 schemaVersion: 1
 slotsByLevel:
   "1":

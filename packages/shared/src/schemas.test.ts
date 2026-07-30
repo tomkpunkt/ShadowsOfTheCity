@@ -79,4 +79,60 @@ describe("ContentEntitySchema", () => {
 
     expect(result.success).toBe(false);
   });
+
+  it("validates the closed multidimensional item taxonomy", () => {
+    const result = ContentEntitySchema.safeParse({
+      schemaVersion: 1,
+      id: "equipment.test-scanner",
+      type: "equipment",
+      name: "Testscanner",
+      source: "source.core",
+      status: "canonical",
+      summary: "Der Testscanner erfasst technische Signale in seiner unmittelbaren Umgebung.",
+      rulesText:
+        "Der Scanner zeigt vorhandene technische Signale an, verändert aber keine Spielwerte.",
+      description: "Ein technisches Prüfgerät.",
+      editorialStatus: "reviewed",
+      category: "electronics",
+      subcategory: "sensor",
+      technologyLevel: "high-tech",
+      availability: "restricted",
+      origins: ["corporate", "governmental"],
+      level: 1,
+      priceGp: 100,
+      bulk: 1,
+      hands: 1,
+      categoryId: "trait.item.equipment.technology",
+      effects: []
+    });
+
+    expect(result.success).toBe(true);
+  });
+
+  it("rejects open-ended item classification values", () => {
+    const result = ContentEntitySchema.safeParse({
+      schemaVersion: 1,
+      id: "equipment.special",
+      type: "equipment",
+      name: "Spezialgerät",
+      source: "source.core",
+      status: "draft",
+      summary: "Ein nicht klassifizierter Testgegenstand für die Schemaabsicherung.",
+      rulesText: "Dieser Testeintrag besitzt absichtlich eine ungültige Sammelkategorie.",
+      description: "Test",
+      category: "special",
+      subcategory: "special",
+      technologyLevel: "future",
+      availability: "rare",
+      origins: ["unknown"],
+      level: 0,
+      priceGp: 0,
+      bulk: 0,
+      hands: 0,
+      categoryId: "trait.test",
+      effects: []
+    });
+
+    expect(result.success).toBe(false);
+  });
 });

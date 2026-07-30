@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +2 auf Rettungswürfe gegen Gifte, Krankheiten und Erschöpfung.
+examples: []
 id: feat.class.soldner.eisenkorper
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: +2 auf Rettungswürfe gegen Gifte, Krankheiten und Erschöpfung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

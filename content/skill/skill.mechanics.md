@@ -1,5 +1,7 @@
 ---
 attribute: intelligence
+editorialStatus: rewritten
+examples: []
 id: skill.mechanics
 legacy:
   notes: []
@@ -7,12 +9,13 @@ legacy:
     - rules/core_mechanics.md
 name: Mechanik
 references: []
+rulesText: Setze Mechanik für praktische Diagnose, Wartung und Reparatur ein. Reine Bedienung oder theoretische Systemkunde fällt eher unter Technologie.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Mechanik ist eine Fertigkeit mit Intelligenz als typischem Attribut.
+summary: Mechanik nutzt Intelligenz, um Maschinen zu warten, Defekte einzugrenzen und mechanische oder mechatronische Systeme zu reparieren.
 traits: []
 type: skill
 ---
 
-Kanonischer Skill für Mechanik.
+Setze Mechanik für praktische Diagnose, Wartung und Reparatur ein. Reine Bedienung oder theoretische Systemkunde fällt eher unter Technologie.

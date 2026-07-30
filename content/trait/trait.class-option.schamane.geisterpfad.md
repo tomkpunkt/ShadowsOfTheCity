@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.class-option.schamane.geisterpfad
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - classes/klasse_schamane.md
 name: "Schamane: Geisterpfad"
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Schamane: Geisterpfad."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

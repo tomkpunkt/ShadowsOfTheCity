@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.gnom
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Körper enthält kleine Implantate oder kybermagische Mechanismen. Du erhältst Resistenz 2 gegen elektrische Effekte und Immunität gegen Erschöpfung durch Überlastung.
+examples: []
 id: heritage.gnom.maschinenherz-gnom
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.gnom
 references: []
+rulesText: Dein Körper enthält kleine Implantate oder kybermagische Mechanismen. Du erhältst Resistenz 2 gegen elektrische Effekte und Immunität gegen Erschöpfung durch Überlastung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

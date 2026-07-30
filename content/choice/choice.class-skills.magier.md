@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.magier
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.magier
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_magier.md
 name: Magier-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Magier.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

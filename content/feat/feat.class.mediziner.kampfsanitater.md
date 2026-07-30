@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.mediziner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst dich während der Heilung bewegen, ohne die Aktion zu verlieren.
+examples: []
 id: feat.class.mediziner.kampfsanitater
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.mediziner
 references: []
+rulesText: Du kannst dich während der Heilung bewegen, ohne die Aktion zu verlieren.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

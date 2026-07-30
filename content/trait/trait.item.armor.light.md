@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.item.armor.light
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - gear/equipment/equipment_overview.md
 name: Leichte Rüstung
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Leichte Rüstung."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

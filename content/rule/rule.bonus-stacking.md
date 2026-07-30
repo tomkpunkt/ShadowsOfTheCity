@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: rule.bonus-stacking
 key: rule.bonus-stacking
 legacy:
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Bonus-Stapelung
 references: []
+rulesText: Bonus-Stapelung ist eine verbindliche Compilerannahme aus dem Review.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

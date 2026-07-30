@@ -3,6 +3,8 @@ additionalLanguagesFromIntelligence: true
 boosts:
   - dexterity
   - wisdom
+editorialStatus: reviewed
+examples: []
 featIds:
   - feat.ancestry.halbling.leichtfussig
   - feat.ancestry.halbling.unauffallig
@@ -31,6 +33,209 @@ legacy:
     - races/halblinge_zeitalter_des_goldes.md
 name: Halbling
 references: []
+rulesText: "# **Halbling**\r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Übersicht**\r
+
+  Halblinge sind die stillen Überlebenskünstler des Zeitalters des Goldes. Sie stammen aus einfachen Gemeinschaften, die inmitten von Städten, Feldern oder Fabrikvierteln gedeihen. Während Elfen herrschen, Menschen streben und Orks kämpfen, leben Halblinge – bescheiden, findig und unscheinbar.  \r
+
+  Trotz ihrer geringen Größe spielen sie eine große Rolle in der alltäglichen Welt. Viele Halblinge führen kleine Betriebe, handeln mit seltenen Gütern oder arbeiten in Forschungs- und Agrarkonzernen wie **NovoChem**, ohne dabei je im Rampenlicht zu stehen. Ihre größte Stärke ist Anpassung: Sie überleben, wo andere untergehen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Physische Beschreibung**\r
+
+  Halblinge sind klein, kaum größer als ein Kind – zwischen 90 Zentimetern und 1,10 Metern – und von leichtem, geschmeidigem Körperbau. Ihre Gesichter strahlen Wärme aus, ihre Augen verraten Neugier und Lebensfreude.  \r
+
+  Sie altern etwas schneller als Menschen und werden selten älter als 100 Jahre. Ihre Bewegungen sind leise, ihre Reflexe erstaunlich präzise. Trotz ihrer zierlichen Gestalt sind sie zäh und widerstandsfähig – Meister darin, sich durch die Risse der Welt zu schlängeln.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Gesellschaft**\r
+
+  Halblinge leben meist in Gemeinschaften, die auf Vertrauen und Gegenseitigkeit beruhen. Sie meiden Machtspiele, bevorzugen Stabilität und Zusammenarbeit.  \r
+
+  In der modernen Welt haben sie sich in vielen Bereichen etabliert – als **Händler, Logistiker, Heiler und Botaniker**. Manche Familien besitzen kleine Handelsimperien, andere führen geheime Netzwerke zwischen Städten.  \r
+
+  Ihr Einfluss ist leise, aber tief. Selbst große Konzerne und Organisationen wissen: Wo Halblinge sind, funktioniert der Alltag.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Gesinnung und Religion**\r
+
+  Halblinge sind meist gutmütig und gemeinschaftsorientiert. Sie verehren Schutzgötter, Hausgeister und das Prinzip der **Beständigkeit**.  \r
+
+  In manchen Regionen haben sie sich dem **Pfad der Saat** verschrieben – einer Philosophie, die Wachstum, Fürsorge und Balance zwischen Natur und Technik lehrt.  \r
+
+  Einige moderne Halblinge deuten diese Lehre pragmatisch: Wer Ordnung und Nahrung sichert, dient dem Gleichgewicht.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Namen**\r
+
+  Halblingnamen sind bodenständig, freundlich und meist leicht auszusprechen. Nachnamen beschreiben oft Beruf, Herkunft oder eine Familiengeschichte.  \r
+
+  **Beispiele:**  \r
+
+  **Männlich:** Tobin, Lerris, Milo, Dalen, Harg, Finnel  \r
+
+  **Weiblich:** Rina, Sella, Marra, Dory, Liala, Fenna  \r
+
+  **Familiennamen:** Ackerwind, Pfeifrauch, Grünlaub, Dornfeld, Novari, Lichttal\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volksmerkmale**\r
+
+  \r
+
+  | Merkmal | Wert |\r
+
+  |:--|:--|\r
+
+  | **Trefferpunkte** | 6 |\r
+
+  | **Größe** | Klein |\r
+
+  | **Bewegung** | 25 Fuß |\r
+
+  | **Attributsverbesserungen** | Geschicklichkeit, Weisheit, 1 frei |\r
+
+  | **Attributsfehler** | Stärke |\r
+
+  | **Sprachen** | Gemeinsprache, Halblingisch; zusätzliche Sprachen abhängig vom Intelligenzmodifikator |\r
+
+  | **Merkmale** | Halblingisch, Humanoid |\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ### **Volksfertigkeit – Glückskind**\r
+
+  Das Schicksal scheint dir gewogen zu sein.  \r
+
+  **Effekt:** Einmal pro Tag kannst du einen fehlgeschlagenen Angriffswurf oder Rettungswurf wiederholen. Du musst das zweite Ergebnis verwenden.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volks-Feats**\r
+
+  \r
+
+  ### **1. Stufe – Leichtfüßig**\r
+
+  *Voraussetzung:* Halbling  \r
+
+  Du bewegst dich mit bemerkenswerter Leichtigkeit. Du kannst dich durch das Feld eines Verbündeten bewegen, ohne Bewegungsstrafen zu erleiden.\r
+
+  \r
+
+  ### **5. Stufe – Unauffällig**\r
+
+  Du bist es gewohnt, dich im Schatten der Großen zu bewegen. Du erhältst einen +1 Bonus auf Heimlichkeit und Diplomatie, wenn du versuchst, unbemerkt zu bleiben oder Konflikte zu vermeiden.\r
+
+  \r
+
+  ### **9. Stufe – Gemeinschaftsgeist**\r
+
+  Wenn du einem Verbündeten hilfst, erhält dieser zusätzlich +1 auf den entsprechenden Wurf. Wenn du den Helfen-Wurf kritisch bestehst, steigt der Bonus stattdessen auf +3.\r
+
+  \r
+
+  ### **13. Stufe – Zäher Überlebender**\r
+
+  Du erhältst Resistenz 3 gegen Gifte und Krankheit sowie +1 auf Rettungswürfe gegen Erschöpfung oder Hunger.\r
+
+  \r
+
+  ### **17. Stufe – Glück des Überlebenden**\r
+
+  Wenn du Schaden erleidest, der dich auf 0 Trefferpunkte reduzieren würde, kannst du einmal pro Tag einen Konstitutionswurf (SG 15) ablegen. Bei Erfolg bleibst du mit 1 TP stehen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Volksherkünfte (Heritages)**\r
+
+  \r
+
+  ### **Feldkind**\r
+
+  Du bist in ländlicher Umgebung aufgewachsen. Du erhältst Fertigkeitstraining in Überleben und einen +1 Bonus auf Wahrnehmungswürfe in der Natur.\r
+
+  \r
+
+  ### **Stadtstreuner**\r
+
+  Du kennst jede Gasse deiner Heimatstadt. Du erhältst Fertigkeitstraining in Heimlichkeit und Diebeskunst.\r
+
+  \r
+
+  ### **Küchenherz**\r
+
+  Deine Familie ist bekannt für Nahrung, Heiltränke oder Getränke. Du erhältst Fertigkeitstraining in Handwerk (Alchemie oder Kochkunst) und einen +1 Bonus auf Proben zum Herstellen von Nahrungsmitteln oder Heilmitteln.\r
+
+  \r
+
+  ### **Kollektivnachkomme**\r
+
+  Du stammst aus einer Familie, die gemeinsam alles teilt. Du erhältst +1 auf Diplomatie und Willenswürfe gegen Furcht, solange du dich in Anwesenheit eines Verbündeten befindest.\r
+
+  \r
+
+  ### **Schattenläufer** *(selten)*\r
+
+  Du bist Teil einer jener Halblingsfamilien, die zwischen den Welten handeln – manchmal wörtlich. Du erhältst Dunkelsicht und kannst einmal pro Tag *Message* wirken (Attribut: Charisma).\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  Halblinge sind Herz und Atem der Welt – unscheinbar, aber unverzichtbar. Wo andere nach Macht streben, suchen sie nach Gemeinschaft und Frieden.  \r
+
+  Im Spiel verkörpern sie Hoffnung, Zusammenhalt und das stille Wissen, dass auch das Kleinste Großes bewirken kann."
 schemaVersion: 1
 size: small
 source: legacy.world-rules

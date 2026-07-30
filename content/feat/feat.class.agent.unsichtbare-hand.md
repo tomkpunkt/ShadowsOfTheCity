@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 auf alle Würfe, die soziale Manipulation oder Ablenkung betreffen.
+examples: []
 id: feat.class.agent.unsichtbare-hand
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: +1 auf alle Würfe, die soziale Manipulation oder Ablenkung betreffen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

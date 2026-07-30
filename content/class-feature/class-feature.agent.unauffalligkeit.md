@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du wirst zur Schattenfigur. Wenn du dich in einer Stadt oder Menschenmenge bewegst, erhältst du +2 auf Heimlichkeitsproben und kannst dich doppelt so schnell verbergen. ---
+examples: []
 id: class-feature.agent.unauffalligkeit
 legacy:
   notes: []
@@ -14,6 +16,13 @@ level: 11
 name: Unauffälligkeit
 prerequisites: []
 references: []
+rulesText: "Du wirst zur Schattenfigur.  \r
+
+  Wenn du dich in einer Stadt oder Menschenmenge bewegst, erhältst du +2 auf Heimlichkeitsproben und kannst dich doppelt so schnell verbergen.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

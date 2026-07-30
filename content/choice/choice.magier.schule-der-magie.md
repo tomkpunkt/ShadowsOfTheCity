@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.magier
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.magier.schule-der-magie
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_magier.md
 name: Schule der Magie wählen
 references: []
+rulesText: Wähle für Magier eine Option der Klassenfunktion Schule der Magie.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Schule der Magie.
+summary: Wähle für Magier eine Option der Klassenfunktion Schule der Magie.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Schule der Magie.
+Wähle für Magier eine Option der Klassenfunktion Schule der Magie.

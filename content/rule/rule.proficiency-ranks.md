@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: rule.proficiency-ranks
 key: rule.proficiency-ranks
 legacy:
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Proficiency-Ränge
 references: []
+rulesText: Proficiency-Ränge ist eine verbindliche Compilerannahme aus dem Review.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,6 +1,8 @@
 ---
 castingAttribute: charisma
 classId: class.okkultist
+editorialStatus: reviewed
+examples: []
 id: spellcasting.occult-spontaneous
 legacy:
   notes:
@@ -36,6 +38,7 @@ repertoireByLevel:
     - 3
     - 3
     - 2
+rulesText: Spontane okkulte Progression; Progression als ausdrückliche Testannahme ergänzt.
 schemaVersion: 1
 slotsByLevel:
   "1":

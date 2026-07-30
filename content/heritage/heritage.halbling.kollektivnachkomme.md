@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.halbling
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du stammst aus einer Familie, die gemeinsam alles teilt. Du erhältst +1 auf Diplomatie und Willenswürfe gegen Furcht, solange du dich in Anwesenheit eines Verbündeten befindest.
+examples: []
 id: heritage.halbling.kollektivnachkomme
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: Du stammst aus einer Familie, die gemeinsam alles teilt. Du erhältst +1 auf Diplomatie und Willenswürfe gegen Furcht, solange du dich in Anwesenheit eines Verbündeten befindest.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

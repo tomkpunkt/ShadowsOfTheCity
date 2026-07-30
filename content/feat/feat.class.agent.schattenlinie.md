@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: In Dunkelheit erhältst du +1 auf AC und Heimlichkeit.
+examples: []
 id: feat.class.agent.schattenlinie
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.agent
 references: []
+rulesText: In Dunkelheit erhältst du +1 auf AC und Heimlichkeit.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

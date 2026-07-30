@@ -1,10 +1,14 @@
 ---
+availability: common
 bulk: 1
+category: everyday
 categoryId: trait.item.equipment.clothing
+editorialStatus: rewritten
 effects:
   - kind: text
     machineReadable: false
     text: +1 Charisma, +1 Eleganz
+examples: []
 hands: 0
 id: equipment.kleid
 legacy:
@@ -13,12 +17,17 @@ legacy:
     - gear/equipment/equipment_overview.md
 level: 0
 name: Kleid
+origins:
+  - civilian
 priceGp: 75
 references: []
+rulesText: "Kleid: +1 Charisma, +1 Eleganz Der Quellenpreis beträgt 75 GS; die vorläufig migrierte Last beträgt 1."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Kleid ist Ausrüstung mit einem Preis von 75 GP und einer Last von 1.
+subcategory: clothing
+summary: Ein elegantes Kleid unterstützt Charisma und gesellschaftlich relevantes Auftreten jeweils mit +1.
+technologyLevel: conventional
 traits:
   - trait.legacy
 type: equipment

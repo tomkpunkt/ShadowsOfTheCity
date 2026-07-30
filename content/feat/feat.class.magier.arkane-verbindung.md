@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst über dein Geflecht mit einem bekannten Magier kommunizieren.
+examples: []
 id: feat.class.magier.arkane-verbindung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: Du kannst über dein Geflecht mit einem bekannten Magier kommunizieren.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

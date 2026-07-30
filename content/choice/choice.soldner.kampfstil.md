@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.soldner
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.soldner.kampfstil
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_soeldner.md
 name: Kampfstil wählen
 references: []
+rulesText: Wähle für Söldner eine Option der Klassenfunktion Kampfstil.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Kampfstil.
+summary: Wähle für Söldner eine Option der Klassenfunktion Kampfstil.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Kampfstil.
+Wähle für Söldner eine Option der Klassenfunktion Kampfstil.

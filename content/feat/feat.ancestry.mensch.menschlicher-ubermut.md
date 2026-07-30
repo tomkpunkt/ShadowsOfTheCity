@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.mensch
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Einmal pro Tag kannst du dich nach einem verpatzten Angriffswurf oder Rettungswurf sofort erneut würfeln. Du musst das zweite Ergebnis verwenden.
+examples: []
 id: feat.ancestry.mensch.menschlicher-ubermut
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.mensch
 references: []
+rulesText: Einmal pro Tag kannst du dich nach einem verpatzten Angriffswurf oder Rettungswurf sofort erneut würfeln. Du musst das zweite Ergebnis verwenden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

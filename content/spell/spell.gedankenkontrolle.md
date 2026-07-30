@@ -6,10 +6,12 @@ defense:
   kind: save
   save: will
 duration: Siehe Legacy-Beschreibung
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: '# Gedankenkontrolle Quelle: Welt-Regelwerk (Zeitalter des Goldes) --- ## Spell-Info | Tradition | Rang | Zeit | Reichweite | Ziel | Dauer | |:--|:--|:--|:--|:--|:--| | Occult | 4 | 2 Aktionen | 60 Fuß | 1 Kreatur | 1 Minute | --- ## Beschreibung Du dringst in den Geist einer Kreatur ein und übernimmst die Kontrolle über ihre Handlungen. Zauberwurf: Willenswurf gegen deinen Zauber-SG Effekt: Du übernimmst die Kontrolle über das Ziel und kannst es dazu bringen, einfache Aktionen auszuführen. Widerstand: Das Ziel kann einen Willenswurf gegen deinen Zauber-SG machen, um dem Effekt zu widerstehen. --- ## Höhere Ränge - Rang 5: Dauer 2 Minuten, du kannst komplexere Aktionen ausführen lassen - Rang 6: Dauer 3 Minuten, du kannst das Ziel dazu bringen, sich selbst zu verletzen - Rang 7: Dauer 4 Minuten, du kannst das Ziel dazu bringen, andere anzugreifen --- ## Besondere Regeln - Geflecht-Empfindlichkeit: Kreaturen mit starkem magischen Geflecht (Elfen, einige Menschen) sind schwerer zu kontrollieren und erhalten +2 auf ihren Willenswurf. - Technologische Abwehr: Moderne Gehirn-Computer-Schnittstellen können die Gedankenkontrolle stören oder umleiten. --- ## Flavortext > „Die Macht, die Gedanken beherrscht – ein gefährliches Wissen in den Händen derer, die das Geflecht verstehen." Mind Control ist einer der gefährlichsten Zauber für Magier. Er ermöglicht es ihnen, die Gedanken und Handlungen ihrer Gegner zu kontrollieren, aber er ist auch moralisch fragwürdig und kann schwerwiegende Konsequenzen haben.'
+examples: []
 heightened: []
 id: spell.gedankenkontrolle
 legacy:
@@ -25,6 +27,81 @@ range:
   value: 30
 rank: 4
 references: []
+rulesText: "# **Gedankenkontrolle**\r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Spell-Info**\r
+
+  | **Tradition** | **Rang** | **Zeit** | **Reichweite** | **Ziel** | **Dauer** |\r
+
+  |:--|:--|:--|:--|:--|:--|\r
+
+  | Occult | 4 | 2 Aktionen | 60 Fuß | 1 Kreatur | 1 Minute |\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung**\r
+
+  Du dringst in den Geist einer Kreatur ein und übernimmst die Kontrolle über ihre Handlungen.\r
+
+  \r
+
+  **Zauberwurf:** Willenswurf gegen deinen Zauber-SG\r
+
+  **Effekt:** Du übernimmst die Kontrolle über das Ziel und kannst es dazu bringen, einfache Aktionen auszuführen.\r
+
+  **Widerstand:** Das Ziel kann einen Willenswurf gegen deinen Zauber-SG machen, um dem Effekt zu widerstehen.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Höhere Ränge**\r
+
+  - **Rang 5:** Dauer 2 Minuten, du kannst komplexere Aktionen ausführen lassen\r
+
+  - **Rang 6:** Dauer 3 Minuten, du kannst das Ziel dazu bringen, sich selbst zu verletzen\r
+
+  - **Rang 7:** Dauer 4 Minuten, du kannst das Ziel dazu bringen, andere anzugreifen\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Besondere Regeln**\r
+
+  - **Geflecht-Empfindlichkeit:** Kreaturen mit starkem magischen Geflecht (Elfen, einige Menschen) sind schwerer zu kontrollieren und erhalten +2 auf ihren Willenswurf.\r
+
+  - **Technologische Abwehr:** Moderne Gehirn-Computer-Schnittstellen können die Gedankenkontrolle stören oder umleiten.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Flavortext**\r
+
+  > „Die Macht, die Gedanken beherrscht – ein gefährliches Wissen in den Händen derer, die das Geflecht verstehen.\"\r
+
+  \r
+
+  Mind Control ist einer der gefährlichsten Zauber für Magier. Er ermöglicht es ihnen, die Gedanken und Handlungen ihrer Gegner zu kontrollieren, aber er ist auch moralisch fragwürdig und kann schwerwiegende Konsequenzen haben."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

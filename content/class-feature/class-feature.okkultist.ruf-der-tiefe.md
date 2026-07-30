@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.okkultist
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Die Dunkelheit antwortet deinem Willen. Einmal pro Tag kannst du Summon Entity oder Banish wirken. Wenn du ein beschworenes Wesen kontrollierst, erhält es +1 auf Angriffe, solange du Schaden erleidest. ---
+examples: []
 id: class-feature.okkultist.ruf-der-tiefe
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 15
 name: Ruf der Tiefe
 prerequisites: []
 references: []
+rulesText: "Die Dunkelheit antwortet deinem Willen.  \r
+
+  Einmal pro Tag kannst du *Summon Entity* oder *Banish* wirken.  \r
+
+  Wenn du ein beschworenes Wesen kontrollierst, erhält es +1 auf Angriffe, solange du Schaden erleidest.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

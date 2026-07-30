@@ -15,6 +15,9 @@
     "content:compile": "npm run compile --workspace @sotc/content-compiler",
     "content:check-generated": "npm run check-generated --workspace @sotc/content-compiler",
     "content:quality": "tsx scripts/audit-content-quality.ts",
+    "editorial:quality": "tsx scripts/audit-editorial-quality.ts",
+    "equipment:classification": "tsx scripts/audit-equipment-classification.ts",
+    "machine-readability:audit": "tsx scripts/audit-machine-readability.ts",
     "content:reachability": "tsx scripts/audit-builder-reachability.ts",
     "content:migrate": "npm run migrate --workspace @sotc/content-compiler",
     "content:migration:verify": "npm run migrate:verify --workspace @sotc/content-compiler",
@@ -29,7 +32,7 @@
     "test:watch": "vitest",
     "progression:audit": "tsx scripts/audit-class-progression.ts",
     "typecheck": "npm run typecheck --workspaces --if-present && tsc --noEmit -p scripts/tsconfig.json",
-    "verify": "npm run lint && npm run content:migration:verify && npm run content:check-generated && npm run content:quality && npm run content:reachability && npm run progression:audit && npm run build && npm run test:e2e && npm run format:check"
+    "verify": "npm run lint && npm run content:migration:verify && npm run content:check-generated && npm run content:quality && npm run editorial:quality && npm run equipment:classification && npm run machine-readability:audit && npm run content:reachability && npm run progression:audit && npm run build && npm run test:e2e && npm run format:check"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",

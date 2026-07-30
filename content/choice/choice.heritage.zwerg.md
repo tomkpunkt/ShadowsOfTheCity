@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.zwerg
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.zwerg
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/zwerge_zeitalter_des_goldes.md
 name: Zwerg-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Zwerg.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

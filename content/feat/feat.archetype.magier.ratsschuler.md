@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du wurdest in einem elfischen Zirkel des Gleichgewichts ausgebildet. Du erhältst Fertigkeitstraining in Diplomatie und Arkane Kunde. Wenn du einen Zauber wirkst, der Gleichgewicht oder Stabilität betrifft, erhältst +1 auf den SG. ---
+examples: []
 id: feat.archetype.magier.ratsschuler
 legacy:
   notes:
@@ -17,6 +19,15 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: "Du wurdest in einem elfischen Zirkel des Gleichgewichts ausgebildet.  \r
+
+  Du erhältst Fertigkeitstraining in Diplomatie und Arkane Kunde.  \r
+
+  Wenn du einen Zauber wirkst, der Gleichgewicht oder Stabilität betrifft, erhältst +1 auf den SG.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,5 +1,7 @@
 ---
 category: weapon
+editorialStatus: reviewed
+examples: []
 id: proficiency.weapon.unarmed
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Unbewaffnet
 references: []
+rulesText: Unbewaffnet verwendet die fünf Ränge untrainiert, geübt, Experte, Meister und legendär.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

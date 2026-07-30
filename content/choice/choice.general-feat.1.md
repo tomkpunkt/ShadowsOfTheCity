@@ -14,6 +14,8 @@ choice:
   min: 1
   prerequisites: []
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.general-feat.1
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - rules/core_mechanics.md
 name: Allgemeines Talent Stufe 1
 references: []
+rulesText: Wähle auf Stufe 1 ein allgemeines Talent.
 schemaVersion: 1
 source: legacy.world-rules
 status: playtest

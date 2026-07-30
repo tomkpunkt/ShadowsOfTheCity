@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du konzentrierst dich auf das Leben. Du erhältst Fertigkeitstraining in Medizin und +2 auf Heilungszauber. Wenn du erfolgreich stabilisierst, heilt das Ziel 1W4 zusätzliche TP.
+examples: []
 id: feat.archetype.schamane.heilpfad-wachter
 legacy:
   notes:
@@ -17,6 +19,11 @@ prerequisites:
   - class:
       id: class.schamane
 references: []
+rulesText: "Du konzentrierst dich auf das Leben.  \r
+
+  Du erhältst Fertigkeitstraining in Medizin und +2 auf Heilungszauber.  \r
+
+  Wenn du erfolgreich stabilisierst, heilt das Ziel 1W4 zusätzliche TP."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

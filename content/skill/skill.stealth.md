@@ -1,5 +1,7 @@
 ---
 attribute: dexterity
+editorialStatus: rewritten
+examples: []
 id: skill.stealth
 legacy:
   notes: []
@@ -7,12 +9,13 @@ legacy:
     - rules/core_mechanics.md
 name: Heimlichkeit
 references: []
+rulesText: Setze Heimlichkeit ein, wenn eine Figur Sichtlinien meidet, Geräusche dämpft oder sich unbemerkt nähert. Die Fertigkeit verwendet Geschicklichkeit.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Heimlichkeit ist eine Fertigkeit mit Geschicklichkeit als typischem Attribut.
+summary: Heimlichkeit nutzt Geschicklichkeit, um ungesehen zu bleiben, Deckung auszunutzen und leise an Beobachtern vorbeizukommen.
 traits: []
 type: skill
 ---
 
-Kanonischer Skill für Heimlichkeit.
+Setze Heimlichkeit ein, wenn eine Figur Sichtlinien meidet, Geräusche dämpft oder sich unbemerkt nähert. Die Fertigkeit verwendet Geschicklichkeit.

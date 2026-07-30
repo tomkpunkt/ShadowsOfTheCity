@@ -15,6 +15,8 @@ choice:
     - ancestry:
         id: ancestry.ork
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.heritage.ork
 legacy:
   notes: []
@@ -22,6 +24,7 @@ legacy:
     - races/orks_zeitalter_des_goldes.md
 name: Ork-Herkunft
 references: []
+rulesText: Wähle eine Herkunft für Ork.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

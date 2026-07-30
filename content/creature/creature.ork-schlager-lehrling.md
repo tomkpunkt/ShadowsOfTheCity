@@ -1,9 +1,11 @@
 ---
 armorClass: 13
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "- Typ: Ork (Ork-Schläger-Lehrling), chaotisch böse - Stufe: 1/2 (100 EP) - TP: 30 (6d8 + 6) - RK: 13 (Lederjacke + natürliche Rüstung) - Geschwindigkeit: 30 Fuß - Stärke: 15 (+2) | Geschicklichkeit: 12 (+1) | Konstitution: 14 (+2) | Intelligenz: 8 (-1) | Weisheit: 11 (+0) | Charisma: 13 (+1) - Rettungswürfe: Stärke +4, Konstitution +4 - Fertigkeiten: Einschüchtern +3, Athletik +4, Wahrnehmung +2 - Sinne: Dunkelsicht 60 Fuß, Passive Wahrnehmung 12 - Sprachen: Orkisch, Deutsch, Straßenslang - Spezialfähigkeiten: Begrenzte Territoriale Kontrolle, Gang-Mentalität, Ork-Stärke - Aktionen: Kampfhammer, Faust, Einschüchtern"
+examples: []
 hp: 30
 id: creature.ork-schlager-lehrling
 legacy:
@@ -17,6 +19,29 @@ legacySystem: dnd5e
 level: 0
 name: Ork-Schläger-Lehrling
 references: []
+rulesText: "- **Typ:** Ork (Ork-Schläger-Lehrling), chaotisch böse\r
+
+  - **Stufe:** 1/2 (100 EP)\r
+
+  - **TP:** 30 (6d8 + 6)\r
+
+  - **RK:** 13 (Lederjacke + natürliche Rüstung)\r
+
+  - **Geschwindigkeit:** 30 Fuß\r
+
+  - **Stärke:** 15 (+2) | **Geschicklichkeit:** 12 (+1) | **Konstitution:** 14 (+2) | **Intelligenz:** 8 (-1) | **Weisheit:** 11 (+0) | **Charisma:** 13 (+1)\r
+
+  - **Rettungswürfe:** Stärke +4, Konstitution +4\r
+
+  - **Fertigkeiten:** Einschüchtern +3, Athletik +4, Wahrnehmung +2\r
+
+  - **Sinne:** Dunkelsicht 60 Fuß, Passive Wahrnehmung 12\r
+
+  - **Sprachen:** Orkisch, Deutsch, Straßenslang\r
+
+  - **Spezialfähigkeiten:** Begrenzte Territoriale Kontrolle, Gang-Mentalität, Ork-Stärke\r
+
+  - **Aktionen:** Kampfhammer, Faust, Einschüchtern"
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

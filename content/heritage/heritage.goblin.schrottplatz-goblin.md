@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.goblin
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist zwischen Metall und Maschinen aufgewachsen. Du erhältst Resistenz 2 gegen Feuer und Immunität gegen Rauchinhalation.
+examples: []
 id: heritage.goblin.schrottplatz-goblin
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.goblin
 references: []
+rulesText: Du bist zwischen Metall und Maschinen aufgewachsen. Du erhältst Resistenz 2 gegen Feuer und Immunität gegen Rauchinhalation.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.ork
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du entstammst einem stolzen Kriegerklan. Du erhältst Fertigkeitstraining in Einschüchtern und Athletik.
+examples: []
 id: heritage.ork.klanblut-ork
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.ork
 references: []
+rulesText: Du entstammst einem stolzen Kriegerklan. Du erhältst Fertigkeitstraining in Einschüchtern und Athletik.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: rule.reaction-per-round
 key: rule.reaction-per-round
 legacy:
@@ -7,6 +9,7 @@ legacy:
     - rules/core_mechanics.md
 name: Reaktionen pro Runde
 references: []
+rulesText: Reaktionen pro Runde ist eine verbindliche Compilerannahme aus dem Review.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

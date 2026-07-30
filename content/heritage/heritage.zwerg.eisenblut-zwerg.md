@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.zwerg
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Clan ist für seine Härte bekannt. Du erhältst Resistenz 2 gegen Feuer- und Hitzeschaden.
+examples: []
 id: heritage.zwerg.eisenblut-zwerg
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.zwerg
 references: []
+rulesText: Dein Clan ist für seine Härte bekannt. Du erhältst Resistenz 2 gegen Feuer- und Hitzeschaden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

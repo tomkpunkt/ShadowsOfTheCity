@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.soldner
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du im Nahkampf angegriffen wirst, kannst du sofort 1 Schritt zurückweichen.
+examples: []
 id: feat.class.soldner.klingenreflexe
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.soldner
 references: []
+rulesText: Wenn du im Nahkampf angegriffen wirst, kannst du sofort 1 Schritt zurückweichen.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

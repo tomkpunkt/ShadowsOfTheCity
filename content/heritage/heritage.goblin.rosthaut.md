@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.goblin
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Körper ist widerstandsfähiger als gewöhnlich. Du erhältst Resistenz 2 gegen Säure- und Korrosionsschaden.
+examples: []
 id: heritage.goblin.rosthaut
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.goblin
 references: []
+rulesText: Dein Körper ist widerstandsfähiger als gewöhnlich. Du erhältst Resistenz 2 gegen Säure- und Korrosionsschaden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

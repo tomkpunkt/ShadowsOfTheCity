@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Alle Verbündeten im Umkreis von 20 Fuß erhalten +1 auf Rettungswürfe.
+examples: []
 id: feat.class.wachter.licht-der-hoffnung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: Alle Verbündeten im Umkreis von 20 Fuß erhalten +1 auf Rettungswürfe.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

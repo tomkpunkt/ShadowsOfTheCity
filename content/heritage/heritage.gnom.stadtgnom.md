@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.gnom
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist in Laboren und Forschungszentren groß geworden. Du erhältst Fertigkeitstraining in Handwerk oder Gesellschaft und einen Bonus von +1 auf Würfe in urbaner Umgebung.
+examples: []
 id: heritage.gnom.stadtgnom
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.gnom
 references: []
+rulesText: Du bist in Laboren und Forschungszentren groß geworden. Du erhältst Fertigkeitstraining in Handwerk oder Gesellschaft und einen Bonus von +1 auf Würfe in urbaner Umgebung.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

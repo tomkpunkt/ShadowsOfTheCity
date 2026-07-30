@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 AC, solange du Rüstung trägst.
+examples: []
 id: feat.class.wachter.stahlerne-verteidigung
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: +1 AC, solange du Rüstung trägst.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

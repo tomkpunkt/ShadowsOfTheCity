@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.schamane
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kannst 1/Tag direkt mit dem Geflecht sprechen (freie Vision oder Weissagung).
+examples: []
 id: feat.class.schamane.stimme-der-welt
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.schamane
 references: []
+rulesText: Du kannst 1/Tag direkt mit dem Geflecht sprechen (freie Vision oder Weissagung).
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

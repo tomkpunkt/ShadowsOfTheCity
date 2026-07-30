@@ -1,9 +1,11 @@
 ---
 category: profession
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Kampferprobung, Initiative
+examples: []
 id: feat.general.soldner
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 14
           id: strength
 references: []
+rulesText: "Söldner gewährt den im Altbestand beschriebenen Effekt: Kampferprobung, Initiative."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

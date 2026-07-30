@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.wachter
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Wenn du einen Verbündeten verteidigst, erhält dieser Resistenz 2 gegen Schaden.
+examples: []
 id: feat.class.wachter.schutz-des-schwachen
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.wachter
 references: []
+rulesText: Wenn du einen Verbündeten verteidigst, erhält dieser Resistenz 2 gegen Schaden.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

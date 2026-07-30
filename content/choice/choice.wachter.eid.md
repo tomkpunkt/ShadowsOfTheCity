@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.wachter
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.wachter.eid
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_waechter.md
 name: Eid wählen
 references: []
+rulesText: Wähle für Wächter eine Option der Klassenfunktion Eid.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle eine Option für Eid.
+summary: Wähle für Wächter eine Option der Klassenfunktion Eid.
 traits: []
 type: choice
 ---
 
-Wähle eine Option für Eid.
+Wähle für Wächter eine Option der Klassenfunktion Eid.

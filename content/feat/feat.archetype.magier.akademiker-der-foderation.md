@@ -1,10 +1,12 @@
 ---
 category: archetype
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist Gelehrter einer Universität oder Forschungsanstalt. Du erhältst Fertigkeitstraining in Wissenschaft und Gesellschaft. Einmal pro Woche kannst du auf Bibliotheksressourcen zugreifen, um eine Wissensprobe automatisch erfolgreich zu machen.
+examples: []
 id: feat.archetype.magier.akademiker-der-foderation
 legacy:
   notes:
@@ -17,6 +19,11 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: "Du bist Gelehrter einer Universität oder Forschungsanstalt.  \r
+
+  Du erhältst Fertigkeitstraining in Wissenschaft und Gesellschaft.  \r
+
+  Einmal pro Woche kannst du auf Bibliotheksressourcen zugreifen, um eine Wissensprobe automatisch erfolgreich zu machen."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

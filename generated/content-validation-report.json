@@ -16,11 +16,11 @@
     "skill": 19,
     "spell": 14,
     "spellcasting-progression": 3,
-    "trait": 27,
+    "trait": 30,
     "weapon": 40
   },
-  "entitiesParsed": 734,
-  "filesScanned": 734,
+  "entitiesParsed": 737,
+  "filesScanned": 737,
   "issues": [],
   "valid": true
 }

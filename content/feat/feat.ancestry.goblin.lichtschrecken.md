@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.goblin
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du bist an grelles Licht gewöhnt. Du ignorierst Blendung durch künstliches oder magisches Licht und erhältst Dunkelsicht.
+examples: []
 id: feat.ancestry.goblin.lichtschrecken
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.goblin
 references: []
+rulesText: Du bist an grelles Licht gewöhnt. Du ignorierst Blendung durch künstliches oder magisches Licht und erhältst Dunkelsicht.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

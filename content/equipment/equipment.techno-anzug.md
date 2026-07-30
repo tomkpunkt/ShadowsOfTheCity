@@ -1,10 +1,14 @@
 ---
+availability: restricted
 bulk: 1
+category: protective-clothing
 categoryId: trait.item.equipment.clothing
+editorialStatus: rewritten
 effects:
   - kind: text
     machineReadable: false
     text: +2 Technologie, +2 Interface
+examples: []
 hands: 0
 id: equipment.techno-anzug
 legacy:
@@ -13,12 +17,17 @@ legacy:
     - gear/equipment/equipment_overview.md
 level: 0
 name: Techno-Anzug
+origins:
+  - corporate
 priceGp: 500
 references: []
+rulesText: "Techno-Anzug: +2 Technologie, +2 Interface Der Quellenpreis beträgt 500 GS; die vorläufig migrierte Last beträgt 1."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Techno-Anzug ist Ausrüstung mit einem Preis von 500 GP und einer Last von 1.
+subcategory: protective-suit
+summary: Ein Techno-Anzug unterstützt Technologie und die Arbeit über integrierte Schnittstellen jeweils mit +2.
+technologyLevel: high-tech
 traits:
   - trait.legacy
 type: equipment

@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.halbling
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du bist Teil einer jener Halblingsfamilien, die zwischen den Welten handeln – manchmal wörtlich. Du erhältst Dunkelsicht und kannst einmal pro Tag Message wirken (Attribut: Charisma). ---"
+examples: []
 id: heritage.halbling.schattenlaufer
 legacy:
   notes: []
@@ -14,6 +16,11 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: "Du bist Teil einer jener Halblingsfamilien, die zwischen den Welten handeln – manchmal wörtlich. Du erhältst Dunkelsicht und kannst einmal pro Tag *Message* wirken (Attribut: Charisma).\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

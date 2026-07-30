@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.goblin
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du bist eins mit dem Lärm und der Bewegung der Welt. Du erhältst Resistenz 5 gegen Feuer- und Elektrizitätsschaden und kannst einmal pro Tag Mending oder Tanglefoot wirken (Attribut: Intelligenz). ---"
+examples: []
 id: feat.ancestry.goblin.schrottgott
 legacy:
   notes: []
@@ -16,6 +18,11 @@ prerequisites:
   - ancestry:
       id: ancestry.goblin
 references: []
+rulesText: "Du bist eins mit dem Lärm und der Bewegung der Welt. Du erhältst Resistenz 5 gegen Feuer- und Elektrizitätsschaden und kannst einmal pro Tag *Mending* oder *Tanglefoot* wirken (Attribut: Intelligenz).\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

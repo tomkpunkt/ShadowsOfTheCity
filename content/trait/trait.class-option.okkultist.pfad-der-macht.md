@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.class-option.okkultist.pfad-der-macht
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - classes/klasse_okkultist.md
 name: "Okkultist: Pfad der Macht"
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Okkultist: Pfad der Macht."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

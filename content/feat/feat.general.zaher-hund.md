@@ -1,9 +1,11 @@
 ---
 category: general
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 Angriff/Schaden <50% TP
+examples: []
 id: feat.general.zaher-hund
 legacy:
   notes:
@@ -18,6 +20,7 @@ prerequisites:
           gte: 15
           id: constitution
 references: []
+rulesText: "Zäher Hund gewährt den im Altbestand beschriebenen Effekt: +1 Angriff/Schaden <50% TP."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

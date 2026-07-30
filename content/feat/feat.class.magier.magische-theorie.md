@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +1 auf Würfe mit Arkane Kunde.
+examples: []
 id: feat.class.magier.magische-theorie
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: +1 auf Würfe mit Arkane Kunde.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

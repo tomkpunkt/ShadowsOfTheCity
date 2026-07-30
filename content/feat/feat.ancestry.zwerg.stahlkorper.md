@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.zwerg
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Deine Haut ist hart wie Metall. Du erhältst Resistenz 3 gegen physische Schäden (außer Energie). Wenn du Rüstung trägst, erhöht sich deine Schadensresistenz um +1.
+examples: []
 id: feat.ancestry.zwerg.stahlkorper
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - ancestry:
       id: ancestry.zwerg
 references: []
+rulesText: Deine Haut ist hart wie Metall. Du erhältst Resistenz 3 gegen physische Schäden (außer Energie). Wenn du Rüstung trägst, erhöht sich deine Schadensresistenz um +1.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

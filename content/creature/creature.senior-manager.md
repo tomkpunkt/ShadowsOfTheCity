@@ -1,9 +1,11 @@
 ---
 armorClass: 12
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "# Senior Manager Quelle: Welt-Regelwerk (Zeitalter des Goldes) > „Ich habe die Erfahrung und die Macht. Vertrauen Sie mir, ich weiß, was ich tue.\" Senior Manager sind erfahrene Konzernangestellte, die bereits eine beträchtliche Position in der Hierarchie erreicht haben. Sie haben mehr Zugang zu Ressourcen und Informationen als ihre Junior-Kollegen und sind Meister der sozialen Manipulation und des politischen Spiels. --- ## Statistiken <div style=\"background-color: #f4e4bc; color: #3d2817; font-family: 'Times New Roman', serif; padding: 15px; border-radius: 5px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\"> <div style=\"text-align: center; margin-bottom: 10px;\"> <h1 style=\"font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 0; color: #3d2817; letter-spacing: 1px;\">SENIOR MANAGER</h1> <p style=\"font-size: 14px; margin: 5px 0; color: #3d2817;\">[Senior Manager]</p> <p style=\"font-size: 12px; font-style: italic; margin: 5px 0; color: #3d2817;\">Menschlicher NPC (Konzernangestellter), neutral böse</p> </div> <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\"> <div style=\"line-height: 1.6;\"> <p style=\"margin: 5px 0;\"><strong>Rüstungsklasse</strong> 16 (Anzug + Schutzweste)</p> <p style=\"margin: 5px 0;\"><strong>Trefferpunkte</strong> 30 (6d8 + 6)</p> <p style=\"margin: 5px 0;\"><strong>Geschwindigkeit</strong> 25 Fuß</p> </div> <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\"> <div style=\"display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin: 10px 0;\"> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">STR</p> <p style=\"margin: 5px 0;\">10 (+0)</p> </div> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">GES</p> <p style=\"margin: 5px 0;\">12 (+1)</p> </div> <div> <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">KON</p> <p style=\"m"
+examples: []
 hp: 20
 id: creature.senior-manager
 legacy:
@@ -17,6 +19,253 @@ legacySystem: dnd5e
 level: 0
 name: Senior Manager
 references: []
+rulesText: "# Senior Manager\r
+
+  \r
+
+  **Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r
+
+  \r
+
+  > „Ich habe die Erfahrung und die Macht. Vertrauen Sie mir, ich weiß, was ich tue.\"\r
+
+  \r
+
+  Senior Manager sind erfahrene Konzernangestellte, die bereits eine beträchtliche Position in der Hierarchie erreicht haben. Sie haben mehr Zugang zu Ressourcen und Informationen als ihre Junior-Kollegen und sind Meister der sozialen Manipulation und des politischen Spiels.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Statistiken**\r
+
+  \r
+
+  <div style=\"background-color: #f4e4bc; color: #3d2817; font-family: 'Times New Roman', serif; padding: 15px; border-radius: 5px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\">\r
+
+  \r
+
+  <div style=\"text-align: center; margin-bottom: 10px;\">\r
+
+  \  <h1 style=\"font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 0; color: #3d2817; letter-spacing: 1px;\">SENIOR MANAGER</h1>\r
+
+  \  <p style=\"font-size: 14px; margin: 5px 0; color: #3d2817;\">[Senior Manager]</p>\r
+
+  \  <p style=\"font-size: 12px; font-style: italic; margin: 5px 0; color: #3d2817;\">Menschlicher NPC (Konzernangestellter), neutral böse</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Rüstungsklasse</strong> 16 (Anzug + Schutzweste)</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Trefferpunkte</strong> 30 (6d8 + 6)</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Geschwindigkeit</strong> 25 Fuß</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin: 10px 0;\">\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">STR</p>\r
+
+  \    <p style=\"margin: 5px 0;\">10 (+0)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">GES</p>\r
+
+  \    <p style=\"margin: 5px 0;\">12 (+1)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">KON</p>\r
+
+  \    <p style=\"margin: 5px 0;\">14 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">INT</p>\r
+
+  \    <p style=\"margin: 5px 0;\">17 (+3)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">WEI</p>\r
+
+  \    <p style=\"margin: 5px 0;\">14 (+2)</p>\r
+
+  \  </div>\r
+
+  \  <div>\r
+
+  \    <p style=\"font-weight: bold; text-transform: uppercase; margin: 5px 0; font-size: 12px;\">CHA</p>\r
+
+  \    <p style=\"margin: 5px 0;\">19 (+4)</p>\r
+
+  \  </div>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Rettungswürfe</strong> Willen +4, Reflex +1, Zähigkeit +2</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Fertigkeiten</strong> Diplomatie +8, Überzeugen +6, Einschüchtern +6, Täuschen +6, Wissenschaft +6, Technologie +6</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Sinne</strong> Passive Wahrnehmung 12</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Sprachen</strong> Deutsch, Englisch, Konzernsprache</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Schwierigkeitsgrad</strong> 1/2 (100 EP)</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Erweiterter Konzernzugang.</strong> Der Senior Manager hat Zugang zu vielen exklusiven Bereichen und Informationen. Er erhält einen +2 Bonus auf alle Fertigkeitswürfe in Konzerngebäuden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Bürokratie.</strong> Der Senior Manager kann Aktionen von Gegnern um 1 Runde verzögern, indem er bürokratische Hürden errichtet. Dies funktioniert nur bei legalen Aktionen.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Erfahrenheit.</strong> Der Senior Manager erhält einen +2 Bonus auf alle Fertigkeitswürfe.</p>\r
+
+  </div>\r
+
+  \r
+
+  <hr style=\"border: none; border-top: 1px solid #3d2817; margin: 10px 0;\">\r
+
+  \r
+
+  <div style=\"line-height: 1.6;\">\r
+
+  \  <h3 style=\"font-size: 16px; font-weight: bold; text-transform: uppercase; margin: 10px 0 5px 0; color: #3d2817;\">Aktionen</h3>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Mehrfachangriff.</strong> Der Senior Manager kann zwei Aktionen verwenden: eine mit seinem Taser und eine mit seiner Pistole.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Taser.</strong> <em>Nahkampfangriff:</em> +4 zum Treffen, Reichweite 5 Fuß, ein Ziel. <em>Treffer:</em> 4 (1d4 + 1) Elektroschaden. Das Ziel muss einen SG 13 Konstitutionsrettungswurf bestehen oder für 1 Runde gelähmt sein.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Pistole.</strong> <em>Fernkampfangriff:</em> +4 zum Treffen, Reichweite 30/120 Fuß, ein Ziel. <em>Treffer:</em> 5 (1d6 + 1) Projektilschaden.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Einschüchtern.</strong> Der Senior Manager kann versuchen, ein Ziel einzuschüchtern. Das Ziel muss einen SG 15 Weisheitsrettungswurf bestehen oder für 1 Minute verängstigt sein.</p>\r
+
+  \  <p style=\"margin: 5px 0;\"><strong>Überzeugen.</strong> Der Senior Manager kann versuchen, ein Ziel zu überzeugen. Das Ziel muss einen SG 15 Weisheitsrettungswurf bestehen oder für 1 Stunde charmiert sein.</p>\r
+
+  </div>\r
+
+  \r
+
+  </div>\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Legendenaktionen**\r
+
+  \r
+
+  Der Senior Manager kann 1 Legendenaktion verwenden, wobei er aus den unten stehenden Optionen wählt. Nur eine Legendenaktionsoption kann auf einmal verwendet werden und nur am Ende des Zuges einer anderen Kreatur. Der Senior Manager erhält verbrauchte Legendenaktionen zu Beginn seines Zuges zurück.\r
+
+  \r
+
+  **Ressourcenmobilisierung.** Der Senior Manager kann zusätzliche Ausrüstung oder Unterstützung beschaffen. Dies ist abhängig von der Konzernhierarchie und Verfügbarkeit.\r
+
+  \r
+
+  **Hilfe rufen.** Der Senior Manager kontaktiert Sicherheitskräfte oder Verbündete. Diese erscheinen in 1d4 Runden.\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Umweltfaktoren**\r
+
+  \r
+
+  ### **Konzerngebäude**\r
+
+  - **Bonus:** +2 auf alle Fertigkeitswürfe\r
+
+  - **Zugang:** Viele exklusive Bereiche und Informationen\r
+
+  - **Sicherheit:** Schutz durch Konzernsicherheit\r
+
+  \r
+
+  ### **Öffentliche Bereiche**\r
+
+  - **Normal:** Standard-Fertigkeitswürfe\r
+
+  - **Zugang:** Moderate Ressourcen\r
+
+  - **Sicherheit:** Abhängig von lokaler Sicherheit\r
+
+  \r
+
+  ### **Feindliche Gebiete**\r
+
+  - **Nachteil:** -2 auf alle Fertigkeitswürfe\r
+
+  - **Zugang:** Begrenzte Konzernressourcen\r
+
+  - **Sicherheit:** Minimaler Konzernschutz\r
+
+  \r
+
+  ---\r
+
+  \r
+
+  ## **Beschreibung im Spiel**\r
+
+  \r
+
+  Senior Manager sind erfahrene Konzernangestellte, die bereits eine beträchtliche Position in der Hierarchie erreicht haben. Sie haben mehr Zugang zu Ressourcen und Informationen als ihre Junior-Kollegen und sind Meister der sozialen Manipulation und des politischen Spiels.\r
+
+  \r
+
+  Sie repräsentieren die mittlere Ebene der Konzernbürokratie und sind gefährliche Gegner, die die Macht großer Konzerne hinter sich haben. Ihre wahre Stärke liegt nicht in physischer Gewalt, sondern in ihrer Fähigkeit, die Regeln und Hierarchien der Gesellschaft zu ihrem Vorteil zu nutzen."
 schemaVersion: 1
 source: legacy.world-rules
 speed: 30

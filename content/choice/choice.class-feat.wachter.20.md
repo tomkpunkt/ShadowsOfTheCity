@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.wachter
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-feat.wachter.20
 legacy:
   notes: []
@@ -24,12 +26,13 @@ legacy:
     - classes/klasse_waechter.md
 name: Wächter-Talent Stufe 20
 references: []
+rulesText: Wähle auf Stufe 20 ein verfügbares Wächter-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Wächter-Talent.
+summary: Wähle auf Stufe 20 ein verfügbares Wächter-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Wächter-Talent.
+Wähle auf Stufe 20 ein verfügbares Wächter-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

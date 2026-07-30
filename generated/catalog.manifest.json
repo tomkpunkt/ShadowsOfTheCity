@@ -1,5 +1,5 @@
 {
-  "contentHash": "50b469737ff7da4e512593653726a2dea97a4f644bd52607d0bb505f7f89f312",
+  "contentHash": "427f9dfc8f4ecec665ed08d9ee714d34a3f14659dcb1d2f462dd62a1622431ae",
   "countsByType": {
     "ancestry": 8,
     "armor": 12,
@@ -17,10 +17,10 @@
     "skill": 19,
     "spell": 14,
     "spellcasting-progression": 3,
-    "trait": 27,
+    "trait": 30,
     "weapon": 40
   },
-  "entityCount": 734,
+  "entityCount": 737,
   "schemaVersion": 1,
   "sourceFiles": [
     "ancestry/ancestry.elf.md",
@@ -705,9 +705,12 @@
     "trait/trait.item.armor.heavy.md",
     "trait/trait.item.armor.light.md",
     "trait/trait.item.armor.medium.md",
+    "trait/trait.item.concealable.md",
     "trait/trait.item.equipment.clothing.md",
     "trait/trait.item.equipment.magic.md",
     "trait/trait.item.equipment.technology.md",
+    "trait/trait.item.silent.md",
+    "trait/trait.item.traceable.md",
     "trait/trait.item.weapon.magic.md",
     "trait/trait.item.weapon.martial.md",
     "trait/trait.item.weapon.ranged.md",

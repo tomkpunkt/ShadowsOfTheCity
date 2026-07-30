@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du erhältst Fertigkeitstraining in Heimlichkeit, Täuschung und Gesellschaft. Wenn du bereits in einer dieser Fertigkeiten trainiert bist, wähle eine andere. Zusätzlich erhältst du bei jeder sozialen Interaktion +1 auf Würfe, wenn du Informationen verschleiern oder erlangen willst. ---
+examples: []
 id: class-feature.agent.spionageausbildung
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 1
 name: Spionageausbildung
 prerequisites: []
 references: []
+rulesText: "Du erhältst Fertigkeitstraining in **Heimlichkeit**, **Täuschung** und **Gesellschaft**.  \r
+
+  Wenn du bereits in einer dieser Fertigkeiten trainiert bist, wähle eine andere.  \r
+
+  Zusätzlich erhältst du bei jeder sozialen Interaktion +1 auf Würfe, wenn du Informationen verschleiern oder erlangen willst.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

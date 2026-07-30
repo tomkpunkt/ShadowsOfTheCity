@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.mediziner
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.mediziner
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_mediziner.md
 name: Mediziner-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Mediziner.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

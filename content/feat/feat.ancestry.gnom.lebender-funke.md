@@ -1,10 +1,12 @@
 ---
 ancestryId: ancestry.gnom
 category: ancestry
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Dein Geist ist mit dem Geflecht selbst verbunden. Du erhältst Resistenz 5 gegen elektrische und mentale Effekte. Wenn du Detect Magic wirkst, erkennst du zusätzlich technologische Signaturen. ---
+examples: []
 id: feat.ancestry.gnom.lebender-funke
 legacy:
   notes: []
@@ -16,6 +18,11 @@ prerequisites:
   - ancestry:
       id: ancestry.gnom
 references: []
+rulesText: "Dein Geist ist mit dem Geflecht selbst verbunden. Du erhältst Resistenz 5 gegen elektrische und mentale Effekte. Wenn du *Detect Magic* wirkst, erkennst du zusätzlich technologische Signaturen.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

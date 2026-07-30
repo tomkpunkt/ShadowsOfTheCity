@@ -18,6 +18,8 @@ choice:
     - ancestry:
         id: ancestry.mensch
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.ancestry-feat.mensch.9
 legacy:
   notes: []
@@ -25,12 +27,13 @@ legacy:
     - races/mensch_zeitalter_des_goldes.md
 name: Mensch-Talent Stufe 9
 references: []
+rulesText: Wähle auf Stufe 9 ein verfügbares Mensch-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Wähle ein verfügbares Mensch-Talent.
+summary: Wähle auf Stufe 9 ein verfügbares Mensch-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.
 traits: []
 type: choice
 ---
 
-Wähle ein verfügbares Mensch-Talent.
+Wähle auf Stufe 9 ein verfügbares Mensch-Talent, dessen Stufe nicht über deiner aktuellen Stufe liegt.

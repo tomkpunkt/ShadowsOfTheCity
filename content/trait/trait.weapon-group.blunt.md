@@ -1,5 +1,7 @@
 ---
 appliesTo: []
+editorialStatus: reviewed
+examples: []
 id: trait.weapon-group.blunt
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
     - gear/equipment/equipment_overview.md
 name: Stumpfe Waffen
 references: []
+rulesText: "Aus dem Altbestand migriertes Merkmal: Stumpfe Waffen."
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

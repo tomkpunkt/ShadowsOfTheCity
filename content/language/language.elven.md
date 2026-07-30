@@ -1,4 +1,6 @@
 ---
+editorialStatus: reviewed
+examples: []
 id: language.elven
 legacy:
   notes: []
@@ -7,6 +9,7 @@ legacy:
 name: Elfenisch
 rarity: common
 references: []
+rulesText: Elfenisch ist eine aus dem Altbestand normalisierte Sprache.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

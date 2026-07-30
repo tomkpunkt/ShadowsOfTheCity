@@ -17,6 +17,8 @@ choice:
     - class:
         id: class.schamane
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-spells.schamane
 legacy:
   notes:
@@ -25,6 +27,7 @@ legacy:
     - classes/klasse_schamane.md
 name: Schamane-Zauber
 references: []
+rulesText: Wähle Zauber aus der primal-Tradition.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

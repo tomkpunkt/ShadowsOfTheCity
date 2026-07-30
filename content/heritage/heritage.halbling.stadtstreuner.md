@@ -1,9 +1,11 @@
 ---
 ancestryId: ancestry.halbling
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: Du kennst jede Gasse deiner Heimatstadt. Du erhältst Fertigkeitstraining in Heimlichkeit und Diebeskunst.
+examples: []
 id: heritage.halbling.stadtstreuner
 legacy:
   notes: []
@@ -14,6 +16,7 @@ prerequisites:
   - ancestry:
       id: ancestry.halbling
 references: []
+rulesText: Du kennst jede Gasse deiner Heimatstadt. Du erhältst Fertigkeitstraining in Heimlichkeit und Diebeskunst.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

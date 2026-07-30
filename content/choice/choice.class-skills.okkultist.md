@@ -14,6 +14,8 @@ choice:
     - class:
         id: class.okkultist
   repeatable: false
+editorialStatus: reviewed
+examples: []
 id: choice.class-skills.okkultist
 legacy:
   notes:
@@ -22,6 +24,7 @@ legacy:
     - classes/klasse_okkultist.md
 name: Okkultist-Fertigkeiten
 references: []
+rulesText: Wähle vier geübte Fertigkeiten für Okkultist.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

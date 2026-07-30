@@ -11,12 +11,19 @@ import {
   formatAttribute,
   formatChoiceType,
   formatContentStatus,
+  formatDamageType,
   formatEffect,
   formatEntityReference,
+  formatItemAvailability,
+  formatItemCategory,
+  formatItemOrigin,
+  formatItemQuality,
+  formatItemSubcategory,
   formatPrerequisite,
   formatProficiencyRank,
   formatRange,
   formatSave,
+  formatTechnologyLevel,
   formatTradition
 } from "./i18n/de.js";
 import { MarkdownContent } from "./MarkdownContent.js";
@@ -321,35 +328,62 @@ const SpellDetails = ({ entity }: { entity: Extract<ContentEntity, { type: "spel
 );
 
 const ItemDetails = ({
-  entity
+  entity,
+  onOpenEntity
 }: {
-  entity: Extract<ContentEntity, { type: "weapon" | "armor" | "equipment" }>;
+  entity: Extract<ContentEntity, { type: "weapon" | "armor" | "equipment" | "cyberware" }>;
+  onOpenEntity: (id: string) => void;
 }) => (
-  <DetailGrid>
-    <DetailValue label="Stufe">{entity.level}</DetailValue>
-    <DetailValue label="Preis">{entity.priceGp} GP</DetailValue>
-    <DetailValue label="Last">{entity.bulk}</DetailValue>
-    <DetailValue label="Hände">{entity.hands}</DetailValue>
-    <DetailValue label="Kategorie">
-      {formatEntityReference(entity.categoryId, resolveName)}
-    </DetailValue>
-    {entity.type === "weapon" ? (
-      <>
-        <DetailValue label="Schaden">
-          {entity.damage.dice}
-          {entity.damage.die} {formatEntityReference(entity.damage.type, resolveName)}
-        </DetailValue>
-        <DetailValue label="Gruppe">
-          {formatEntityReference(entity.groupId, resolveName)}
-        </DetailValue>
-      </>
-    ) : entity.type === "armor" ? (
-      <>
-        <DetailValue label="Gegenstandsbonus">+{entity.itemBonus}</DetailValue>
-        <DetailValue label="GE-Limit">{entity.dexterityCap}</DetailValue>
-      </>
-    ) : null}
-  </DetailGrid>
+  <>
+    <DetailGrid>
+      <DetailValue label="Hauptkategorie">{formatItemCategory(entity.category)}</DetailValue>
+      <DetailValue label="Unterkategorie">{formatItemSubcategory(entity.subcategory)}</DetailValue>
+      <DetailValue label="Technologieniveau">
+        {formatTechnologyLevel(entity.technologyLevel)}
+      </DetailValue>
+      <DetailValue label="Verfügbarkeit">{formatItemAvailability(entity.availability)}</DetailValue>
+      <DetailValue label="Herkunft">{entity.origins.map(formatItemOrigin).join(", ")}</DetailValue>
+      {entity.quality === undefined ? null : (
+        <DetailValue label="Qualität">{formatItemQuality(entity.quality)}</DetailValue>
+      )}
+      <DetailValue label="Stufe">{entity.level}</DetailValue>
+      <DetailValue label="Preis">{entity.priceGp} GP</DetailValue>
+      <DetailValue label="Last">{entity.bulk}</DetailValue>
+      <DetailValue label="Hände">{entity.hands}</DetailValue>
+      {entity.type === "weapon" ? (
+        <>
+          <DetailValue label="Schaden">
+            {entity.damage.dice}
+            {entity.damage.die}
+            {entity.damage.flat === 0 ? "" : `+${String(entity.damage.flat)}`}{" "}
+            {formatDamageType(entity.damage.type)}
+          </DetailValue>
+          <DetailValue label="Gruppe">
+            {formatEntityReference(entity.groupId, resolveName)}
+          </DetailValue>
+          {entity.range === undefined ? null : (
+            <DetailValue label="Reichweite">
+              {entity.range.increment}/{entity.range.maximum}
+            </DetailValue>
+          )}
+          {entity.capacity === undefined ? null : (
+            <DetailValue label="Kapazität">{entity.capacity}</DetailValue>
+          )}
+        </>
+      ) : entity.type === "armor" ? (
+        <>
+          <DetailValue label="Gegenstandsbonus">+{entity.itemBonus}</DetailValue>
+          <DetailValue label="GE-Limit">{entity.dexterityCap}</DetailValue>
+        </>
+      ) : entity.type === "cyberware" ? (
+        <>
+          <DetailValue label="Implantatplatz">{entity.slot}</DetailValue>
+          <DetailValue label="Belastung">{entity.strain}</DetailValue>
+        </>
+      ) : null}
+    </DetailGrid>
+    {"effects" in entity ? <Effects effects={entity.effects} onOpenEntity={onOpenEntity} /> : null}
+  </>
 );
 
 const ChoiceDetails = ({
@@ -404,7 +438,8 @@ const TypeDetails = ({
     case "weapon":
     case "armor":
     case "equipment":
-      return <ItemDetails entity={entity} />;
+    case "cyberware":
+      return <ItemDetails entity={entity} onOpenEntity={onOpenEntity} />;
     case "choice":
       return <ChoiceDetails entity={entity} onOpenEntity={onOpenEntity} />;
     case "heritage":
@@ -470,6 +505,9 @@ export const EntityDetails = ({
 }) => (
   <div className="entity-details">
     <p className="entity-details__summary">{entity.summary}</p>
+    {entity.flavorText === undefined ? null : (
+      <p className="entity-details__flavor">{entity.flavorText}</p>
+    )}
     {provenance.length === 0 ? null : (
       <section className="entity-details__provenance">
         <h3>Herkunft im Charakter</h3>
@@ -482,16 +520,44 @@ export const EntityDetails = ({
       </section>
     )}
     <TypeDetails entity={entity} onOpenEntity={onOpenEntity} />
+    <section className="entity-details__section">
+      <h3>Regeltext</h3>
+      <MarkdownContent markdown={entity.rulesText} onOpenEntity={onOpenEntity} />
+    </section>
+    {entity.usageNotes === undefined ? null : (
+      <section className="entity-details__section">
+        <h3>Anwendung</h3>
+        <MarkdownContent markdown={entity.usageNotes} onOpenEntity={onOpenEntity} />
+      </section>
+    )}
+    {entity.limitations === undefined ? null : (
+      <section className="entity-details__section">
+        <h3>Einschränkungen</h3>
+        <MarkdownContent markdown={entity.limitations} onOpenEntity={onOpenEntity} />
+      </section>
+    )}
+    {entity.examples.length === 0 ? null : (
+      <section className="entity-details__section">
+        <h3>Beispiele</h3>
+        <ul className="detail-list">
+          {entity.examples.map((example) => (
+            <li key={example}>{example}</li>
+          ))}
+        </ul>
+      </section>
+    )}
     {hasTextRule(entity) ? (
       <p className="text-rule-notice">
         <AlertCircle size={17} />
         Diese Regel ist derzeit als Textregel hinterlegt und wird nicht automatisch berechnet.
       </p>
     ) : null}
-    <section className="entity-details__section">
-      <h3>Vollständiger Inhalt</h3>
-      <MarkdownContent markdown={entity.description} onOpenEntity={onOpenEntity} />
-    </section>
+    {entity.rulesText.trim() === entity.description.trim() ? null : (
+      <section className="entity-details__section">
+        <h3>Quelltext</h3>
+        <MarkdownContent markdown={entity.description} onOpenEntity={onOpenEntity} />
+      </section>
+    )}
     <footer className="entity-details__footer">
       <span>Quelle</span>
       <strong>

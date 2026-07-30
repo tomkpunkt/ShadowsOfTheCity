@@ -1,5 +1,7 @@
 ---
+availability: licensed
 bulk: 1
+category: weapon
 categoryId: trait.item.weapon.simple
 damage:
   dice: 1
@@ -7,6 +9,8 @@ damage:
   flat: 0
   modifier: strength
   type: damage.piercing
+editorialStatus: rewritten
+examples: []
 groupId: trait.weapon-group.blade
 hands: 2
 id: weapon.zweihandaxt
@@ -17,12 +21,17 @@ legacy:
     - gear/weapons/melee/melee_weapons.md
 level: 0
 name: Zweihandaxt
+origins:
+  - military
 priceGp: 90
 references: []
+rulesText: Zweihandaxt verursacht 1d10 Stichschaden und wird mit zwei Händen geführt. Sie besitzt keine in der Quelle angegebene Reichweite. Der Quellenpreis beträgt 90 GS; die vorläufig migrierte Last beträgt 1.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy
-summary: Zweihandaxt ist eine Waffe und verursacht 1d10 Schaden.
+subcategory: melee-weapon
+summary: Zweihandaxt ist eine archaische Nahkampfwaffe mit 1d10 Stichschaden.
+technologyLevel: archaic
 traits:
   - trait.legacy
 type: weapon

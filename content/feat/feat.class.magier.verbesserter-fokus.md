@@ -1,10 +1,12 @@
 ---
 category: class
 classId: class.magier
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: +2 auf Schadenswürfe von Zaubern deines Spezialgebiets.
+examples: []
 id: feat.class.magier.verbesserter-fokus
 legacy:
   notes: []
@@ -16,6 +18,7 @@ prerequisites:
   - class:
       id: class.magier
 references: []
+rulesText: +2 auf Schadenswürfe von Zaubern deines Spezialgebiets.
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

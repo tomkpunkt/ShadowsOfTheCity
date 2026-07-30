@@ -1,10 +1,12 @@
 ---
 choiceIds: []
 classId: class.agent
+editorialStatus: reviewed
 effects:
   - kind: text
     machineReadable: false
     text: "Du arbeitest selten unter deinem echten Namen. Effekt: Du kannst in sozialen Situationen oder Behörden mit einem falschen Namen auftreten. Solange du dich erfolgreich tarnst (Täuschung gegen SG 15 + Stufe des Ziels), erhältst du +1 auf Diplomatie und Gesellschaft. Wirst du enttarnt, erhältst du für 24 Stunden –1 auf diese Proben. ---"
+examples: []
 id: class-feature.agent.deckname
 legacy:
   notes: []
@@ -14,6 +16,15 @@ level: 1
 name: Deckname
 prerequisites: []
 references: []
+rulesText: "Du arbeitest selten unter deinem echten Namen.  \r
+
+  **Effekt:** Du kannst in sozialen Situationen oder Behörden mit einem falschen Namen auftreten. Solange du dich erfolgreich tarnst (Täuschung gegen SG 15 + Stufe des Ziels), erhältst du +1 auf Diplomatie und Gesellschaft.  \r
+
+  Wirst du enttarnt, erhältst du für 24 Stunden –1 auf diese Proben.\r
+
+  \r
+
+  ---"
 schemaVersion: 1
 source: legacy.world-rules
 status: legacy

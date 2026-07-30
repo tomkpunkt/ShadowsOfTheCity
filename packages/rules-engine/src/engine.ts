@@ -74,7 +74,11 @@ const entityPrerequisites = (entity: ContentEntity): unknown[] => {
 };
 
 const entityLevel = (entity: ContentEntity): number | undefined =>
-  "level" in entity && typeof entity.level === "number" ? entity.level : undefined;
+  "level" in entity && typeof entity.level === "number"
+    ? entity.level
+    : entity.type === "spell"
+      ? entity.rank
+      : undefined;
 
 const entityMatchesChoice = (
   entity: ContentEntity,
@@ -131,10 +135,53 @@ const entityMatchesChoice = (
   return entity.id !== choice.id && !choice.choice.excludes.includes(entity.id);
 };
 
+const predicateOwnerId = (value: unknown, owner: "class" | "ancestry"): string | undefined => {
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const id = predicateOwnerId(item, owner);
+      if (id !== undefined) {
+        return id;
+      }
+    }
+    return undefined;
+  }
+  if (value === null || typeof value !== "object") {
+    return undefined;
+  }
+  const record = value as Record<string, unknown>;
+  const ownerValue = record[owner];
+  if (
+    ownerValue !== null &&
+    typeof ownerValue === "object" &&
+    "id" in ownerValue &&
+    typeof ownerValue.id === "string"
+  ) {
+    return ownerValue.id;
+  }
+  for (const nested of Object.values(record)) {
+    const id = predicateOwnerId(nested, owner);
+    if (id !== undefined) {
+      return id;
+    }
+  }
+  return undefined;
+};
+
 const isRelevantChoice = (
   choice: Extract<ContentEntity, { type: "choice" }>,
   character: CharacterState
 ): boolean => {
+  if (Object.prototype.hasOwnProperty.call(character.choices, choice.id)) {
+    return true;
+  }
+  const requiredClass = predicateOwnerId(choice.choice.prerequisites, "class");
+  const requiredAncestry = predicateOwnerId(choice.choice.prerequisites, "ancestry");
+  if (requiredClass !== undefined && requiredClass !== character.classId) {
+    return false;
+  }
+  if (requiredAncestry !== undefined && requiredAncestry !== character.ancestryId) {
+    return false;
+  }
   const filter = choice.choice.filter;
   if (filter.classId !== undefined && filter.classId !== character.classId) {
     return false;
@@ -152,7 +199,12 @@ const resolveChoice = (
   choice: Extract<ContentEntity, { type: "choice" }>,
   context: EngineContext
 ): ResolvedChoice => {
-  const selectedIds = context.character.choices[choice.id] ?? [];
+  const selectedIds =
+    context.character.choices[choice.id] ??
+    (choice.choice.filter.entityTypes?.includes("heritage") === true &&
+    context.character.heritageId !== undefined
+      ? [context.character.heritageId]
+      : []);
   const choiceFailures = evaluatePredicates(choice.choice.prerequisites, context);
   const options: ChoiceOption[] = [...context.entities.values()]
     .filter((entity) => entityMatchesChoice(entity, choice))
@@ -213,11 +265,12 @@ const issueState = (issues: BuildIssue[]): ValidationState => {
 const addCoreSelectionIssue = (
   issues: BuildIssue[],
   value: string | undefined,
+  id: string,
   label: string
 ): void => {
   if (value === undefined) {
     issues.push({
-      code: `MISSING_${label.toUpperCase()}`,
+      code: `MISSING_${id.toUpperCase()}`,
       state: "incomplete",
       message: `${label} wurde noch nicht gewählt.`
     });
@@ -256,9 +309,9 @@ export const calculateCharacter = (
   const catalog = CatalogSchema.parse(catalogInput);
   const entities = new Map(catalog.entities.map((entity) => [entity.id, entity]));
   const issues: BuildIssue[] = [];
-  addCoreSelectionIssue(issues, character.ancestryId, "ancestry");
-  addCoreSelectionIssue(issues, character.backgroundId, "background");
-  addCoreSelectionIssue(issues, character.classId, "class");
+  addCoreSelectionIssue(issues, character.ancestryId, "ancestry", "Abstammung");
+  addCoreSelectionIssue(issues, character.backgroundId, "background", "Background");
+  addCoreSelectionIssue(issues, character.classId, "class", "Klasse");
   validateSelectionReferences(character, entities, issues);
   if (character.catalogHash !== catalog.contentHash) {
     issues.push({
@@ -398,6 +451,16 @@ export const calculateCharacter = (
   if (background?.type === "background") {
     for (const skillId of background.trainedSkillIds) {
       proficiencyRanks.set(skillId, higherRank(proficiencyRanks.get(skillId), "trained"));
+    }
+  }
+  for (const [choiceId, optionIds] of Object.entries(character.choices)) {
+    const choice = entities.get(choiceId);
+    if (choice?.type === "choice" && choice.choice.kind === "skill") {
+      for (const skillId of optionIds) {
+        if (entities.get(skillId)?.type === "skill") {
+          proficiencyRanks.set(skillId, higherRank(proficiencyRanks.get(skillId), "trained"));
+        }
+      }
     }
   }
 

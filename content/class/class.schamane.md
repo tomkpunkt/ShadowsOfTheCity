@@ -12,6 +12,8 @@ choiceIds:
   - choice.class-feat.schamane.16
   - choice.class-feat.schamane.18
   - choice.class-feat.schamane.20
+  - choice.class-skills.schamane
+  - choice.class-spells.schamane
 featureIds:
   - class-feature.schamane.ahnenverbindung
   - class-feature.schamane.geisterpfad.pfad-des-wolfs

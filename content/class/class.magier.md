@@ -12,6 +12,8 @@ choiceIds:
   - choice.class-feat.magier.16
   - choice.class-feat.magier.18
   - choice.class-feat.magier.20
+  - choice.class-skills.magier
+  - choice.class-spells.magier
 featureIds:
   - class-feature.magier.arkanes-studium
   - class-feature.magier.zauberbuch

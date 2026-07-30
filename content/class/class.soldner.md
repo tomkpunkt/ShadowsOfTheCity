@@ -12,6 +12,7 @@ choiceIds:
   - choice.class-feat.soldner.16
   - choice.class-feat.soldner.18
   - choice.class-feat.soldner.20
+  - choice.class-skills.soldner
 featureIds:
   - class-feature.soldner.soldnerisches-training
   - class-feature.soldner.kampfstil.frontkampfer

@@ -12,6 +12,7 @@ choiceIds:
   - choice.class-feat.wachter.16
   - choice.class-feat.wachter.18
   - choice.class-feat.wachter.20
+  - choice.class-skills.wachter
 featureIds:
   - class-feature.wachter.eid.eid-der-ordnung
   - class-feature.wachter.eid.eid-des-lichts

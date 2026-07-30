@@ -210,11 +210,17 @@ const entityMatchesChoice = (
   ) {
     return false;
   }
-  if ("level" in entity && typeof entity.level === "number") {
-    if (filter.minLevel !== undefined && entity.level < filter.minLevel) {
+  const entityLevel =
+    "level" in entity && typeof entity.level === "number"
+      ? entity.level
+      : entity.type === "spell"
+        ? entity.rank
+        : undefined;
+  if (entityLevel !== undefined) {
+    if (filter.minLevel !== undefined && entityLevel < filter.minLevel) {
       return false;
     }
-    if (filter.maxLevel !== undefined && entity.level > filter.maxLevel) {
+    if (filter.maxLevel !== undefined && entityLevel > filter.maxLevel) {
       return false;
     }
   } else if (filter.minLevel !== undefined || filter.maxLevel !== undefined) {
@@ -326,6 +332,28 @@ const validateEntities = (parsed: ParsedEntity[]): ValidationIssue[] => {
     }
   }
 
+  const requireReferenceType = (
+    candidate: ParsedEntity,
+    reference: string | undefined,
+    expectedType: ContentEntity["type"],
+    field: string
+  ): void => {
+    if (reference === undefined) {
+      return;
+    }
+    const target = byId.get(reference);
+    if (target !== undefined && target.entity.type !== expectedType) {
+      issues.push({
+        code: "REFERENCE_TYPE_MISMATCH",
+        severity: "error",
+        file: candidate.file,
+        entityId: candidate.entity.id,
+        path: field,
+        message: `${field} expects ${expectedType}, but ${reference} is ${target.entity.type}`
+      });
+    }
+  };
+
   for (const candidate of parsed) {
     for (const reference of collectReferences(candidate.entity)) {
       if (!byId.has(reference)) {
@@ -336,6 +364,59 @@ const validateEntities = (parsed: ParsedEntity[]): ValidationIssue[] => {
           entityId: candidate.entity.id,
           message: `Reference does not resolve: ${reference}`
         });
+      }
+    }
+    const entity = candidate.entity;
+    if (entity.type === "class-feature") {
+      requireReferenceType(candidate, entity.classId, "class", "classId");
+      for (const choiceId of entity.choiceIds) {
+        requireReferenceType(candidate, choiceId, "choice", "choiceIds");
+      }
+    }
+    if (entity.type === "heritage") {
+      requireReferenceType(candidate, entity.ancestryId, "ancestry", "ancestryId");
+    }
+    if (entity.type === "feat") {
+      requireReferenceType(candidate, entity.classId, "class", "classId");
+      requireReferenceType(candidate, entity.ancestryId, "ancestry", "ancestryId");
+    }
+    if (entity.type === "spellcasting-progression") {
+      requireReferenceType(candidate, entity.classId, "class", "classId");
+    }
+    if (entity.type === "class") {
+      for (const featureId of entity.featureIds) {
+        requireReferenceType(candidate, featureId, "class-feature", "featureIds");
+      }
+      for (const choiceId of entity.choiceIds) {
+        requireReferenceType(candidate, choiceId, "choice", "choiceIds");
+      }
+      requireReferenceType(
+        candidate,
+        entity.spellcastingProgressionId,
+        "spellcasting-progression",
+        "spellcastingProgressionId"
+      );
+    }
+    if (entity.type === "ancestry") {
+      for (const heritageId of entity.heritageIds) {
+        requireReferenceType(candidate, heritageId, "heritage", "heritageIds");
+      }
+      for (const featId of entity.featIds) {
+        requireReferenceType(candidate, featId, "feat", "featIds");
+      }
+      for (const languageId of entity.languageIds) {
+        requireReferenceType(candidate, languageId, "language", "languageIds");
+      }
+    }
+    if (entity.type === "background") {
+      for (const skillId of entity.trainedSkillIds) {
+        requireReferenceType(candidate, skillId, "skill", "trainedSkillIds");
+      }
+      for (const featId of entity.grantedFeatIds) {
+        requireReferenceType(candidate, featId, "feat", "grantedFeatIds");
+      }
+      for (const choiceId of entity.choiceIds) {
+        requireReferenceType(candidate, choiceId, "choice", "choiceIds");
       }
     }
     if (candidate.entity.type === "choice" && candidate.entity.choice.min > 0) {

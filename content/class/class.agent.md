@@ -12,6 +12,7 @@ choiceIds:
   - choice.class-feat.agent.16
   - choice.class-feat.agent.18
   - choice.class-feat.agent.20
+  - choice.class-skills.agent
 featureIds:
   - class-feature.agent.deckname
   - class-feature.agent.spionageausbildung

@@ -3,7 +3,7 @@
     "ancestry": 8,
     "armor": 12,
     "background": 8,
-    "choice": 115,
+    "choice": 168,
     "class": 9,
     "class-feature": 99,
     "creature": 34,
@@ -19,8 +19,8 @@
     "trait": 27,
     "weapon": 40
   },
-  "entitiesParsed": 681,
-  "filesScanned": 681,
+  "entitiesParsed": 734,
+  "filesScanned": 734,
   "issues": [],
   "valid": true
 }

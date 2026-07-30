@@ -11,6 +11,7 @@ choiceIds:
   - choice.class-feat.raufbold.16
   - choice.class-feat.raufbold.18
   - choice.class-feat.raufbold.20
+  - choice.class-skills.raufbold
 featureIds:
   - class-feature.raufbold.strassenkampf
   - class-feature.raufbold.zahigkeit

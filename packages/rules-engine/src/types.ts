@@ -81,6 +81,12 @@ export interface CharacterState {
   attributeBoosts: AttributeId[];
   inventoryIds: string[];
   notes?: string;
+  migrations?: Array<{
+    fromCatalogHash: string;
+    toCatalogHash: string;
+    migratedAt: string;
+    conflicts: string[];
+  }>;
 }
 
 export interface BreakdownEntry {

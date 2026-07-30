@@ -11,22 +11,26 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run content:compile && npm run build --workspaces --if-present",
+    "build": "npm run content:compile && npm run typecheck && npm run test && npm run build --workspaces --if-present",
     "content:compile": "npm run compile --workspace @sotc/content-compiler",
+    "content:check-generated": "npm run check-generated --workspace @sotc/content-compiler",
     "content:migrate": "npm run migrate --workspace @sotc/content-compiler",
     "content:migration:verify": "npm run migrate:verify --workspace @sotc/content-compiler",
     "content:report": "npm run report --workspace @sotc/content-compiler",
     "content:validate": "npm run validate --workspace @sotc/content-compiler",
+    "dev": "npm run content:compile && npm run dev --workspace @sotc/character-builder",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "test": "vitest run",
+    "test:e2e": "playwright test",
     "test:watch": "vitest",
     "typecheck": "npm run typecheck --workspaces --if-present",
-    "verify": "npm run lint && npm run typecheck && npm run content:validate && npm run content:migration:verify && npm run test && npm run build && npm run format:check"
+    "verify": "npm run lint && npm run content:migration:verify && npm run content:check-generated && npm run build && npm run test:e2e && npm run format:check"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@playwright/test": "^1.62.0",
     "@types/node": "^24.1.0",
     "eslint": "^9.32.0",
     "prettier": "^3.6.2",

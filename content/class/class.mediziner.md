@@ -12,6 +12,7 @@ choiceIds:
   - choice.class-feat.mediziner.16
   - choice.class-feat.mediziner.18
   - choice.class-feat.mediziner.20
+  - choice.class-skills.mediziner
 featureIds:
   - class-feature.mediziner.medizinische-ausbildung
   - class-feature.mediziner.erste-hilfe

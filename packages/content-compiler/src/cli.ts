@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { compileContent } from "./compiler.js";
+import { compileContent, stableStringify } from "./compiler.js";
 import { ContentValidationError, type ValidationIssue } from "./validation.js";
 
 const packageDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -52,6 +52,35 @@ try {
     for (const issue of report.issues) {
       printIssue(issue);
     }
+  } else if (command === "check-generated") {
+    const result = await compileContent({
+      contentDirectory,
+      writeOutput: false
+    });
+    const expectedFiles = new Map([
+      ["catalog.json", stableStringify(result.catalog)],
+      ["catalog.manifest.json", stableStringify(result.manifest)],
+      ["content-validation-report.json", stableStringify(result.report)]
+    ]);
+    const stale: string[] = [];
+    for (const [file, expected] of expectedFiles) {
+      let actual = "";
+      try {
+        actual = await readFile(path.join(outputDirectory, file), "utf8");
+      } catch {
+        stale.push(file);
+        continue;
+      }
+      if (actual !== expected) {
+        stale.push(file);
+      }
+    }
+    if (stale.length > 0) {
+      throw new Error(
+        `Generated catalog is stale: ${stale.join(", ")}. Run npm run content:compile.`
+      );
+    }
+    console.log(`Generated catalog is current (${result.catalog.contentHash}).`);
   } else if (command === "compile" || command === "validate") {
     const result = await compileContent({
       contentDirectory,

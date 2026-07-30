@@ -1,5 +1,5 @@
 {
-  "contentHash": "5413e77576cfd436fc84f42922608fe1a8bb899f191b8bffbeaa7d3765b0154e",
+  "contentHash": "858ad3fd4530a031fe4d43a4402db77574424e0a36578c05a1981700857cf5b6",
   "entities": [
     {
       "additionalLanguagesFromIntelligence": true,
@@ -1031,6 +1031,1766 @@
         ]
       },
       "name": "Vorgehensweise wählen",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.elf.volksfertigkeit-klares-denken"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.elf",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.elf.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.elf"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Elf-Feat.",
+      "id": "choice.ancestry-feat.elf.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/elfen_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Elf-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.elf.volksfertigkeit-klares-denken"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.elf",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.elf.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.elf"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Elf-Feat.",
+      "id": "choice.ancestry-feat.elf.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/elfen_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Elf-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.elf.volksfertigkeit-klares-denken"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.elf",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.elf.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.elf"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Elf-Feat.",
+      "id": "choice.ancestry-feat.elf.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/elfen_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Elf-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.elf.volksfertigkeit-klares-denken"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.elf",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.elf.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.elf"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Elf-Feat.",
+      "id": "choice.ancestry-feat.elf.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/elfen_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Elf-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.elf.volksfertigkeit-klares-denken"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.elf",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.elf.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.elf"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Elf-Feat.",
+      "id": "choice.ancestry-feat.elf.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/elfen_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Elf-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.gnom",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.gnom.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.gnom"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Gnom-Feat.",
+      "id": "choice.ancestry-feat.gnom.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/gnome_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Gnom-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.gnom",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.gnom.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.gnom"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Gnom-Feat.",
+      "id": "choice.ancestry-feat.gnom.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/gnome_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Gnom-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.gnom",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.gnom.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.gnom"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Gnom-Feat.",
+      "id": "choice.ancestry-feat.gnom.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/gnome_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Gnom-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.gnom",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.gnom.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.gnom"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Gnom-Feat.",
+      "id": "choice.ancestry-feat.gnom.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/gnome_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Gnom-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.gnom",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.gnom.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.gnom"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Gnom-Feat.",
+      "id": "choice.ancestry-feat.gnom.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/gnome_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Gnom-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.goblin",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.goblin.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.goblin"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Goblin-Feat.",
+      "id": "choice.ancestry-feat.goblin.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/goblins_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Goblin-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.goblin",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.goblin.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.goblin"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Goblin-Feat.",
+      "id": "choice.ancestry-feat.goblin.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/goblins_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Goblin-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.goblin",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.goblin.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.goblin"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Goblin-Feat.",
+      "id": "choice.ancestry-feat.goblin.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/goblins_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Goblin-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.goblin",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.goblin.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.goblin"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Goblin-Feat.",
+      "id": "choice.ancestry-feat.goblin.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/goblins_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Goblin-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.goblin",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.goblin.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.goblin"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Goblin-Feat.",
+      "id": "choice.ancestry-feat.goblin.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/goblins_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Goblin-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.halbling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.halbling.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.halbling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Halbling-Feat.",
+      "id": "choice.ancestry-feat.halbling.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/halblinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Halbling-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.halbling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.halbling.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.halbling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Halbling-Feat.",
+      "id": "choice.ancestry-feat.halbling.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/halblinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Halbling-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.halbling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.halbling.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.halbling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Halbling-Feat.",
+      "id": "choice.ancestry-feat.halbling.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/halblinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Halbling-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.halbling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.halbling.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.halbling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Halbling-Feat.",
+      "id": "choice.ancestry-feat.halbling.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/halblinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Halbling-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.halbling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.halbling.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.halbling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Halbling-Feat.",
+      "id": "choice.ancestry-feat.halbling.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/halblinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Halbling-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.mensch",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.mensch.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.mensch"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Mensch-Feat.",
+      "id": "choice.ancestry-feat.mensch.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/mensch_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Mensch-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.mensch",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.mensch.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.mensch"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Mensch-Feat.",
+      "id": "choice.ancestry-feat.mensch.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/mensch_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Mensch-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.mensch",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.mensch.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.mensch"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Mensch-Feat.",
+      "id": "choice.ancestry-feat.mensch.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/mensch_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Mensch-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.mensch",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.mensch.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.mensch"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Mensch-Feat.",
+      "id": "choice.ancestry-feat.mensch.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/mensch_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Mensch-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.mensch",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.mensch.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.mensch"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Mensch-Feat.",
+      "id": "choice.ancestry-feat.mensch.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/mensch_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Mensch-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.ork",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.ork.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.ork"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Ork-Feat.",
+      "id": "choice.ancestry-feat.ork.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/orks_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Ork-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.ork",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.ork.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.ork"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Ork-Feat.",
+      "id": "choice.ancestry-feat.ork.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/orks_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Ork-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.ork",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.ork.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.ork"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Ork-Feat.",
+      "id": "choice.ancestry-feat.ork.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/orks_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Ork-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.ork",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.ork.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.ork"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Ork-Feat.",
+      "id": "choice.ancestry-feat.ork.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/orks_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Ork-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.ork",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.ork.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.ork"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Ork-Feat.",
+      "id": "choice.ancestry-feat.ork.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/orks_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Ork-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.tiefling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.tiefling.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.tiefling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Tiefling-Feat.",
+      "id": "choice.ancestry-feat.tiefling.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/tieflinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Tiefling-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.tiefling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.tiefling.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.tiefling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Tiefling-Feat.",
+      "id": "choice.ancestry-feat.tiefling.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/tieflinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Tiefling-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.tiefling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.tiefling.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.tiefling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Tiefling-Feat.",
+      "id": "choice.ancestry-feat.tiefling.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/tieflinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Tiefling-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.tiefling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.tiefling.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.tiefling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Tiefling-Feat.",
+      "id": "choice.ancestry-feat.tiefling.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/tieflinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Tiefling-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.tiefling",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.tiefling.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.tiefling"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Tiefling-Feat.",
+      "id": "choice.ancestry-feat.tiefling.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/tieflinge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Tiefling-Feat Stufe 9",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.zwerg",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.ancestry-feat.zwerg.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.zwerg"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Zwerg-Feat.",
+      "id": "choice.ancestry-feat.zwerg.1",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/zwerge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Zwerg-Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.zwerg",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 13
+        },
+        "id": "choice.ancestry-feat.zwerg.13",
+        "kind": "feat",
+        "level": 13,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.zwerg"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Zwerg-Feat.",
+      "id": "choice.ancestry-feat.zwerg.13",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/zwerge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Zwerg-Feat Stufe 13",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.zwerg",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 17
+        },
+        "id": "choice.ancestry-feat.zwerg.17",
+        "kind": "feat",
+        "level": 17,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.zwerg"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Zwerg-Feat.",
+      "id": "choice.ancestry-feat.zwerg.17",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/zwerge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Zwerg-Feat Stufe 17",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.zwerg",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 5
+        },
+        "id": "choice.ancestry-feat.zwerg.5",
+        "kind": "feat",
+        "level": 5,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.zwerg"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Zwerg-Feat.",
+      "id": "choice.ancestry-feat.zwerg.5",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/zwerge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Zwerg-Feat Stufe 5",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [
+          "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft"
+        ],
+        "filter": {
+          "ancestryId": "ancestry.zwerg",
+          "category": "ancestry",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 9
+        },
+        "id": "choice.ancestry-feat.zwerg.9",
+        "kind": "feat",
+        "level": 9,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [
+          {
+            "ancestry": {
+              "id": "ancestry.zwerg"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle ein verfügbares Zwerg-Feat.",
+      "id": "choice.ancestry-feat.zwerg.9",
+      "legacy": {
+        "notes": [],
+        "paths": [
+          "races/zwerge_zeitalter_des_goldes.md"
+        ]
+      },
+      "name": "Zwerg-Feat Stufe 9",
       "references": [],
       "schemaVersion": 1,
       "source": "legacy.world-rules",
@@ -5201,6 +6961,547 @@
         "effects": [],
         "excludes": [],
         "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.agent",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.agent"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Agent.",
+      "id": "choice.class-skills.agent",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_agent.md"
+        ]
+      },
+      "name": "Agent-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.ingenieur",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.ingenieur"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Ingenieur.",
+      "id": "choice.class-skills.ingenieur",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_ingenieur.md"
+        ]
+      },
+      "name": "Ingenieur-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.magier",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.magier"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Magier.",
+      "id": "choice.class-skills.magier",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_magier.md"
+        ]
+      },
+      "name": "Magier-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.mediziner",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.mediziner"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Mediziner.",
+      "id": "choice.class-skills.mediziner",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_mediziner.md"
+        ]
+      },
+      "name": "Mediziner-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.okkultist",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.okkultist"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Okkultist.",
+      "id": "choice.class-skills.okkultist",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_okkultist.md"
+        ]
+      },
+      "name": "Okkultist-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.raufbold",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.raufbold"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Raufbold.",
+      "id": "choice.class-skills.raufbold",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_raufbold.md"
+        ]
+      },
+      "name": "Raufbold-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.schamane",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.schamane"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Schamane.",
+      "id": "choice.class-skills.schamane",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_schamane.md"
+        ]
+      },
+      "name": "Schamane-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.soldner",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.soldner"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Söldner.",
+      "id": "choice.class-skills.soldner",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_soeldner.md"
+        ]
+      },
+      "name": "Söldner-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "skill"
+          ]
+        },
+        "id": "choice.class-skills.wachter",
+        "kind": "skill",
+        "level": 1,
+        "max": 4,
+        "min": 4,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.wachter"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle vier geübte Fertigkeiten für Wächter.",
+      "id": "choice.class-skills.wachter",
+      "legacy": {
+        "notes": [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        "paths": [
+          "classes/klasse_waechter.md"
+        ]
+      },
+      "name": "Wächter-Fertigkeiten",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "spell"
+          ],
+          "maxLevel": 5,
+          "traditions": [
+            "arcane"
+          ]
+        },
+        "id": "choice.class-spells.magier",
+        "kind": "spell",
+        "level": 1,
+        "max": 10,
+        "min": 0,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.magier"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle Zauber aus der arcane-Tradition.",
+      "id": "choice.class-spells.magier",
+      "legacy": {
+        "notes": [
+          "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel."
+        ],
+        "paths": [
+          "classes/klasse_magier.md"
+        ]
+      },
+      "name": "Magier-Zauber",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "spell"
+          ],
+          "maxLevel": 5,
+          "traditions": [
+            "occult"
+          ]
+        },
+        "id": "choice.class-spells.okkultist",
+        "kind": "spell",
+        "level": 1,
+        "max": 10,
+        "min": 0,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.okkultist"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle Zauber aus der occult-Tradition.",
+      "id": "choice.class-spells.okkultist",
+      "legacy": {
+        "notes": [
+          "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel."
+        ],
+        "paths": [
+          "classes/klasse_okkultist.md"
+        ]
+      },
+      "name": "Okkultist-Zauber",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "entityTypes": [
+            "spell"
+          ],
+          "maxLevel": 5,
+          "traditions": [
+            "primal"
+          ]
+        },
+        "id": "choice.class-spells.schamane",
+        "kind": "spell",
+        "level": 1,
+        "max": 10,
+        "min": 0,
+        "prerequisites": [
+          {
+            "class": {
+              "id": "class.schamane"
+            }
+          }
+        ],
+        "repeatable": false
+      },
+      "description": "Wähle Zauber aus der primal-Tradition.",
+      "id": "choice.class-spells.schamane",
+      "legacy": {
+        "notes": [
+          "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel."
+        ],
+        "paths": [
+          "classes/klasse_schamane.md"
+        ]
+      },
+      "name": "Schamane-Zauber",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "legacy",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "general",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 1
+        },
+        "id": "choice.general-feat.1",
+        "kind": "feat",
+        "level": 1,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 1 ein allgemeines Feat.",
+      "id": "choice.general-feat.1",
+      "legacy": {
+        "notes": [
+          "Der Altbestand definiert keinen vollständigen Feat-Zeitplan; diese Auswahl ist Playtest."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Allgemeines Feat Stufe 1",
+      "references": [],
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
           "ancestryId": "ancestry.elf",
           "entityTypes": [
             "heritage"
@@ -8846,7 +11147,8 @@
         "choice.class-feat.agent.14",
         "choice.class-feat.agent.16",
         "choice.class-feat.agent.18",
-        "choice.class-feat.agent.20"
+        "choice.class-feat.agent.20",
+        "choice.class-skills.agent"
       ],
       "description": "# **Agent**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Wahrheit ist relativ. Ich verkaufe die Version, die am längsten überlebt.“\r\n\r\nAgenten sind die Schatten zwischen den Fronten. Sie dienen keinem Banner, sondern der Information – und der Kunst, sie zu kontrollieren. Ob Spione der Föderation, Beobachter des Rates des Gleichgewichts oder freie Auftragsagenten, sie operieren dort, wo Politik, Lüge und Blut sich mischen.  \r\nIm Zeitalter des Goldes (1990 n. 0) sind Agenten die unsichtbare Hand, die Kriege verhindert oder entfacht. Sie sind Späher, Infiltratoren, Attentäter – und manchmal Retter.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nAgenten sind **geschickte, kühle und analytische Kämpfer**, die auf Heimlichkeit, Täuschung und präzise Angriffe setzen.  \r\nWährend der Söldner die offene Gewalt beherrscht, nutzt der Agent den Schatten, die Sprache und den Moment.  \r\nIhre Loyalität ist fließend, ihre Methoden unorthodox – doch ihr Erfolg spricht für sich.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Agent ist ein **Taktiker, Späher und Manipulator**. Er kombiniert Heimlichkeit mit Präzision, kann sowohl im Nah- als auch im Fernkampf effektiv agieren und glänzt besonders außerhalb direkter Gefechte – in sozialen oder verdeckten Situationen.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Geschicklichkeit** (für Aktionen und Angriffe)  \r\nSekundär: **Charisma** (Manipulation, Täuschung) oder **Intelligenz** (Analyse).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n8 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Leichte Rüstung |\r\n| **Waffen** | Einfache Waffen, Handfeuerwaffen, Dolche, Kurzschwerter |\r\n| **Rettungswürfe** | Reflex (Experte), Willen (Geübt), Zähigkeit (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Experte) |\r\n| **Fertigkeiten pro Stufe** | 5 + INT-Modifikator |\r\n| **Klassenmerkmal** | Deckname, Spionageausbildung, Vorgehensweise |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Deckname**\r\nDu arbeitest selten unter deinem echten Namen.  \r\n**Effekt:** Du kannst in sozialen Situationen oder Behörden mit einem falschen Namen auftreten. Solange du dich erfolgreich tarnst (Täuschung gegen SG 15 + Stufe des Ziels), erhältst du +1 auf Diplomatie und Gesellschaft.  \r\nWirst du enttarnt, erhältst du für 24 Stunden –1 auf diese Proben.\r\n\r\n---\r\n\r\n### **Spionageausbildung**\r\nDu erhältst Fertigkeitstraining in **Heimlichkeit**, **Täuschung** und **Gesellschaft**.  \r\nWenn du bereits in einer dieser Fertigkeiten trainiert bist, wähle eine andere.  \r\nZusätzlich erhältst du bei jeder sozialen Interaktion +1 auf Würfe, wenn du Informationen verschleiern oder erlangen willst.\r\n\r\n---\r\n\r\n### **Vorgehensweise (1. Stufe)**\r\nWähle eine Spezialisierung deines Handelns.\r\n\r\n#### **Infiltrator**\r\nDu schleichst, beobachtest und schlägst lautlos zu.  \r\n- Du erhältst Dunkelsicht (wenn du sie bereits besitzt, +1 auf Wahrnehmung).  \r\n- Wenn du einen Gegner überraschst, erhältst du +1 auf den ersten Angriffswurf dieser Runde.  \r\n\r\n#### **Manipulator**\r\nDu nutzt Worte statt Waffen.  \r\n- Du erhältst Fertigkeitstraining in Diplomatie und Täuschung (oder Expertenrang, falls trainiert).  \r\n- Einmal pro Stunde kannst du eine misslungene soziale Probe wiederholen.  \r\n\r\n#### **Attentäter**\r\nDu bist der stille Tod.  \r\n- Du erhältst den Feat *Sneak Attack* (+1W6 Schaden gegen überraschte oder unvorbereitete Gegner).  \r\n- Wenn du aus dem Hinterhalt angreifst, erhält dein Ziel –2 auf Initiative im nächsten Kampf.  \r\n\r\n---\r\n\r\n### **Schnelle Reaktion (3. Stufe)**\r\nDu reagierst blitzschnell auf Bedrohungen.  \r\nDu erhältst +2 auf Initiative und kannst in der ersten Runde eines Kampfes eine Bewegung von bis zu 10 Fuß als freie Aktion ausführen.\r\n\r\n---\r\n\r\n### **Kalter Verstand (7. Stufe)**\r\nDein Geist ist scharf und unerschütterlich.  \r\nEinmal pro Tag kannst du einen Willenswurf wiederholen.  \r\nBei Erfolg auf eine Täuschungsprobe gegenüber einer Behörde oder Machtperson wird sie automatisch als kritischer Erfolg gewertet.\r\n\r\n---\r\n\r\n### **Unauffälligkeit (11. Stufe)**\r\nDu wirst zur Schattenfigur.  \r\nWenn du dich in einer Stadt oder Menschenmenge bewegst, erhältst du +2 auf Heimlichkeitsproben und kannst dich doppelt so schnell verbergen.\r\n\r\n---\r\n\r\n### **Katalysator (15. Stufe)**\r\nDu verstehst es, Situationen zu deinen Gunsten zu verändern.  \r\nEinmal pro Tag kannst du eine Probe eines Verbündeten um +2 modifizieren, wenn du anwesend bist und einen plausiblen Einfluss nimmst (z. B. Ablenkung, Bestechung, Unterstützung).\r\n\r\n---\r\n\r\n### **Phantom (20. Stufe)**\r\nDu bist Legende und Gerücht zugleich. Niemand weiß, ob du überhaupt existierst.  \r\n- Du kannst dich in urbaner Umgebung ohne Wurf verbergen (solange du nicht beobachtet wirst).  \r\n- Du bist immun gegen magische Wahrheits- oder Erkennungseffekte.  \r\n- Einmal pro Tag kannst du einen Angriff gegen dich automatisch verfehlen lassen.  \r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Lautloser Schritt | Du kannst dich selbst bei schneller Bewegung verstecken. |\r\n| **2** | Verhörspezialist | +2 auf Diplomatie und Einschüchtern bei Informationsgewinn. |\r\n| **4** | Schattenlinie | In Dunkelheit erhältst du +1 auf AC und Heimlichkeit. |\r\n| **6** | Perfekte Lüge | Du darfst bei Täuschung 1W20 erneut würfeln (1/Tag). |\r\n| **8** | Improvisierter Angriff | Du erleidest keinen Malus auf Angriffe mit improvisierten Waffen. |\r\n| **10** | Tarnidentität | Du kannst zwei verschiedene Decknamen gleichzeitig führen. |\r\n| **12** | Unsichtbare Hand | +1 auf alle Würfe, die soziale Manipulation oder Ablenkung betreffen. |\r\n| **14** | Doppelte Agenda | Du kannst zwei Fraktionen gleichzeitig loyal erscheinen, ohne Malus auf Täuschung. |\r\n| **16** | Schwarzes Dossier | Einmal pro Tag kannst du Informationen enthüllen, die einem Ziel –2 auf Willenswürfe geben. |\r\n| **18** | Meister der Schatten | Du erhältst permanent Dunkelsicht und +2 auf Heimlichkeit. |\r\n| **20** | Geist des Netzes | Du kannst in jeder großen Stadt Informationen in einem Tag finden, unabhängig von SG. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Informationsbroker**\r\nDu handelst mit Wissen und Gerüchten.  \r\nEinmal pro Tag kannst du eine Probe auf Gesellschaft oder Täuschung wiederholen.  \r\nBei Erfolg erfährst du ein relevantes Detail über eine Organisation oder Person.\r\n\r\n### **Attentäter**\r\nDeine Spezialisierung liegt im lautlosen Töten.  \r\nDu erhältst +1W6 zusätzlichen Schaden bei Angriffen aus dem Hinterhalt.  \r\nWenn dein Angriff einen Gegner auf 0 TP reduziert, kannst du dich sofort wieder verbergen.\r\n\r\n### **Doppelagent**\r\nDu arbeitest für mehr als eine Macht.  \r\nDu kannst einmal pro Woche eine verdeckte Agenda wechseln, ohne Loyalitätsmalus zu erleiden.  \r\nDu erhältst +2 auf Täuschung gegen Organisationen oder Behörden.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nAgenten sind die unsichtbaren Werkzeuge der Mächte. Sie manipulieren, retten, verraten und verschwinden.  \r\nIm Spiel sind sie Meister subtiler Kontrolle – flexibel, geheimnisvoll und gefährlich.  \r\nSie passen in jede Kampagne, die Intrige, Täuschung und kalte Professionalität verlangt.",
       "featureIds": [
@@ -8916,7 +11218,8 @@
         "choice.class-feat.ingenieur.14",
         "choice.class-feat.ingenieur.16",
         "choice.class-feat.ingenieur.18",
-        "choice.class-feat.ingenieur.20"
+        "choice.class-feat.ingenieur.20",
+        "choice.class-skills.ingenieur"
       ],
       "description": "# **Ingenieur**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Gib mir Schrott, eine Idee und eine Nacht – und ich bau dir, was du brauchst.“\r\n\r\nIngenieure sind die Architekten des Fortschritts – pragmatische Denker und Tüftler, die aus begrenzten Mitteln das Maximum herausholen.  \r\nSie sind keine Magier, aber ihre Maschinen wirken manchmal so. Im Zeitalter des Goldes (1990 n. 0) sind sie das Rückgrat von Industrie, Militär und Forschung.  \r\nOb sie im Auftrag zwergischer Gilden, menschlicher Universitäten oder elfischer Institute arbeiten, eines bleibt gleich: Wenn etwas kaputt ist, finden sie einen Weg, es zu reparieren – oder zu verbessern.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nIngenieure sind **technisch versierte Unterstützer und Erfinder**, die Wissen, Handwerk und Mechanik kombinieren.  \r\nSie verstehen die Prinzipien von Elektronik, Chemie und Mechanik und können daraus Werkzeuge, Waffen oder Apparate herstellen, die in keiner Vorschrift stehen.  \r\nIn einer Welt, in der Magie selten geworden ist, sind Ingenieure die neuen Zauberer – mit Schraubenschlüssel statt Zauberstab.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Ingenieur ist ein **Unterstützer, Taktiker und Handwerker**.  \r\nEr kann Ausrüstung verbessern, improvisierte Lösungen schaffen und Fallen, Sprengstoffe oder Geräte konstruieren.  \r\nEr ist nicht der stärkste Kämpfer, aber der, der dafür sorgt, dass alle anderen länger überleben – und gewinnen.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Intelligenz** (Wissen, Planung, Konstruktion).  \r\nSekundär: **Geschicklichkeit** (Feinarbeit) oder **Konstitution** (körperliche Ausdauer).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n8 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Leichte Rüstung |\r\n| **Waffen** | Einfache Waffen, Werkzeuge als improvisierte Waffen |\r\n| **Rettungswürfe** | Reflex (Experte), Willen (Geübt), Zähigkeit (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 5 + INT-Modifikator |\r\n| **Klassenmerkmal** | Tüftlergeist, Werkbank, Fachrichtung |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Tüftlergeist**\r\nDu bist geübt darin, aus begrenzten Mitteln funktionierende Dinge zu bauen.  \r\nDu erhältst Fertigkeitstraining in **Handwerk** und **Mechanik**.  \r\nWenn du ein Werkzeug oder Gerät reparierst, halbiert sich die Zeit.  \r\nEinmal pro Stunde kannst du improvisierte Materialien im Wert von 1W6 GP finden (SG 15).\r\n\r\n---\r\n\r\n### **Werkbank**\r\nDu besitzt eine persönliche Werkzeugtasche oder mobile Werkbank.  \r\nDu kannst einfache Geräte (bis Stufe 2) oder provisorische Mechanismen bauen, solange du passende Teile hast.  \r\nBeispiele: Funkscanner, Signalverstärker, Gasmesser, primitive Alarmvorrichtungen.  \r\nFür den Bau gilt: **10 Minuten × Stufe des Geräts**, Kosten: 10 % des Materialwerts.\r\n\r\n---\r\n\r\n### **Fachrichtung (1. Stufe)**\r\nWähle deine technische Spezialisierung.\r\n\r\n#### **Maschinenbau**\r\nDu verstehst dich auf Zahnräder, Motoren und Energieübertragung.  \r\n- Du erhältst +1 auf Handwerksproben für Mechanik.  \r\n- Einmal pro Stunde kannst du eine Maschine oder Waffe für 1 Minute +1 auf Angriff oder Schaden geben (z. B. reparierter Generator, Gewehrjustierung).  \r\n\r\n#### **Chemietechnik**\r\nDu bist Alchemist der Moderne.  \r\n- Du erhältst Fertigkeitstraining in Naturkunde oder Wissenschaft.  \r\n- Du kannst einmal pro Stunde ein einfaches chemisches Präparat (z. B. Rauch, Brandgemisch, Neutralisator) herstellen.  \r\n- Bei Explosionen oder chemischen Effekten erhältst du Resistenz 2 gegen Schaden.  \r\n\r\n#### **Elektronik**\r\nDu arbeitest mit Strom, Frequenzen und Schaltkreisen.  \r\n- Du erhältst Fertigkeitstraining in Wissenschaft (Elektrik).  \r\n- Du kannst einfache Schaltungen oder Signalgeräte (z. B. Funk, Sicherungssystem) bauen.  \r\n- Einmal pro Tag kannst du ein Gerät „überladen“, um einen Bonus von +2 auf seinen Effekt zu erzielen (dafür erhält es 1 Stufe Erschöpfung).  \r\n\r\n#### **Werkstattgeneralist**\r\nDu bist in allem bewandert, aber in nichts spezialisiert.  \r\n- Du kannst jedes Gerät einmal pro Tag mit einem zufälligen Bonus (Angriff, Verteidigung, Geschwindigkeit oder Analyse) verbessern.  \r\n- Wenn du eine Probe auf Handwerk oder Mechanik wiederholst, darfst du das bessere Ergebnis behalten.  \r\n\r\n---\r\n\r\n### **Improvisation (3. Stufe)**\r\nDu kannst Werkzeuge, Waffen oder Geräte improvisieren, auch wenn dir Materialien fehlen.  \r\nWenn du improvisierte Ausrüstung verwendest, erleidest du keinen Malus.  \r\nEinmal pro Tag kannst du eine Probe auf Handwerk oder Wissenschaft automatisch als Erfolg werten, wenn du eine kreative Lösung einsetzt.\r\n\r\n---\r\n\r\n### **Feldtechniker (7. Stufe)**\r\nDu bist in der Lage, auch unter widrigen Bedingungen zu arbeiten.  \r\nDu erhältst Resistenz 2 gegen Feuer, Rauch und Elektrizität.  \r\nWenn du in einer Kampf- oder Krisensituation eine Reparatur oder Konstruktion durchführst, halbiert sich die Zeit.\r\n\r\n---\r\n\r\n### **Konstrukteursblick (11. Stufe)**\r\nDu erkennst sofort, wie Dinge funktionieren – oder wie man sie zerstört.  \r\nDu erhältst +2 auf Wahrnehmung und Handwerk, wenn du Geräte, Waffen oder Gebäude untersuchst.  \r\nEinmal pro Stunde kannst du die Schwachstelle eines mechanischen Gegners oder Fahrzeugs aufdecken (+2 auf Angriffe dagegen für 1 Minute).\r\n\r\n---\r\n\r\n### **Technische Meisterleistung (15. Stufe)**\r\nDu kannst eine Konstruktion erschaffen, die über dein normales Können hinausgeht.  \r\nEinmal pro Woche kannst du ein „Meisterwerk“ erschaffen – ein technisches Gerät, das einen magischen Effekt nachahmt (z. B. *Alarm*, *Light*, *Healing Burst*).  \r\nDas Gerät hält 1 Tag, bevor es zerfällt.\r\n\r\n---\r\n\r\n### **Genie des Goldes (20. Stufe)**\r\nDein Name steht in Lehrbüchern – oder auf schwarzen Listen.  \r\nDu erhältst:  \r\n- +2 auf alle Handwerks- und Wissenschaftsproben,  \r\n- Resistenz 5 gegen Feuer und Elektrizität,  \r\n- und kannst einmal pro Tag ein technisches „Wunder“ erschaffen – ein Gerät, das für 1 Minute einen Effekt wie ein Zauber (Stufe 5 oder niedriger) simuliert.  \r\nNach dieser Minute fällt das Gerät auseinander.\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Improvisierter Erfinder | Du kannst Werkzeuge aus Müll herstellen (SG 15). |\r\n| **2** | Stabiler Aufbau | Deine Geräte halten doppelt so lange, bevor sie versagen. |\r\n| **4** | Explosionsspezialist | Du kannst sichere Brandmischungen herstellen (+1 auf Schaden, SG 20). |\r\n| **6** | Feine Justierung | +1 auf alle Würfe für Gerätekonstruktion oder Reparatur. |\r\n| **8** | Notfallbastler | Du kannst während eines Kampfes ein Gerät in 3 Aktionen reparieren. |\r\n| **10** | Energiesparer | Materialien halten doppelt so lange. |\r\n| **12** | Mechatroniker | +1 auf alle Proben für Maschinenbau oder Elektrik. |\r\n| **14** | Stabilisierung | Du kannst Geräte oder Waffen anderer Spieler stabilisieren (+1 auf Angriff oder SG). |\r\n| **16** | Ingenieurslogik | Du kannst 1/Tag eine Probe automatisch bestehen, wenn du genug Zeit (1 Minute) hast. |\r\n| **18** | Konstrukteurssegen | Alle Geräte, die du herstellst, erhalten +1 auf Haltbarkeit. |\r\n| **20** | Meistertechniker | Du kannst 2 Geräte gleichzeitig aktiv halten, ohne Malus. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Feldmechaniker**\r\nDu bist Spezialist für schnelle Reparaturen.  \r\nEinmal pro Stunde kannst du eine beschädigte Maschine oder Waffe um 1W8 TP reparieren.  \r\nWenn du eine Maschine während eines Kampfes stabilisierst, erhält sie Resistenz 2 gegen Schaden.\r\n\r\n### **Chemiker**\r\nDu kombinierst Mechanik und Chemie.  \r\nDu kannst einfache Reagenzien oder Explosivstoffe herstellen (z. B. Rauch, Flamme, Neutralisator).  \r\nEinmal pro Tag kannst du ein Gebräu herstellen, das +2 auf Zähigkeit oder Reflex gewährt (1 Minute).\r\n\r\n### **Waffenmeister der Werkstatt**\r\nDu baust, pflegst und modifizierst Waffen.  \r\nDu erhältst Fertigkeitstraining in Kriegsführung oder Mechanik.  \r\nEinmal pro Tag kannst du eine Waffe so modifizieren, dass sie +1 auf Schaden für 1 Stunde erhält.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nIngenieure sind Problemlöser in einer Welt, die immer komplexer wird.  \r\nSie verstehen, dass Technik die neue Magie ist – und dass Wissen Macht bedeutet.  \r\nIm Spiel verkörpern sie Erfindungsgeist, Realismus und Pragmatismus – die stille Kraft, die den Lauf der Welt bestimmt.",
       "featureIds": [
@@ -8985,7 +11288,9 @@
         "choice.class-feat.magier.14",
         "choice.class-feat.magier.16",
         "choice.class-feat.magier.18",
-        "choice.class-feat.magier.20"
+        "choice.class-feat.magier.20",
+        "choice.class-skills.magier",
+        "choice.class-spells.magier"
       ],
       "description": "# **Magier**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Das Geflecht ist kein Werkzeug – es ist eine Sprache. Wer sie spricht, verändert die Welt.“\r\n\r\nMagier sind die Erben des alten Wissens – jene wenigen, die die Sprache der Magie noch verstehen. In einer Welt, die sich auf Maschinen und Stahl verlässt, sind sie Relikte und zugleich Vorboten.  \r\nEin einziger Zauber kann ganze Städte erschüttern – und deshalb fürchten die Mächte der Welt jeden, der das Geflecht berührt.  \r\nOb an den Universitäten der Föderation, in den Archiven der Elfenhäuser oder als einsame Wanderer, Magier sind Forscher, Lehrer, Ketzer – und die letzten Hüter des wahren Wissens.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nMagier sind **intellektuelle Zauberwirker**, die das magische Geflecht wissenschaftlich untersuchen und manipulieren.  \r\nSie stehen zwischen Vergangenheit und Moderne, zwischen Forschung und Verbot.  \r\nIn der Ära des Goldes sind sie selten, überwacht und zugleich unersetzlich – denn niemand versteht die Risse im Geflecht besser als sie.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Magier ist der **klassische Zauberwirker**. Seine Macht liegt in Vorbereitung, Wissen und Disziplin.  \r\nEr kann mächtige arkane Effekte wirken, Feinde vernichten, Verbündete stärken oder die Realität selbst verändern – solange er das Gleichgewicht wahrt.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Intelligenz** (Zauberwirken, Wissen).  \r\nSekundär: **Weisheit** (Erkenntnis) oder **Charisma** (Überzeugung).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n6 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Keine |\r\n| **Waffen** | Einfache Waffen (Stäbe, Dolche, Schleudern) |\r\n| **Rettungswürfe** | Willen (Experte), Reflex (Geübt), Zähigkeit (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 4 + INT-Modifikator |\r\n| **Klassenmerkmal** | Arkanes Studium, Zauberbuch, Schule der Magie |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Arkanes Studium**\r\nDu hast jahrelang das Geflecht studiert.  \r\nDu erhältst Fertigkeitstraining in **Arkane Kunde** und **Wissenschaft**. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle eine andere Wissensfertigkeit.  \r\nZusätzlich kannst du die Präsenz aktiver Magie in einem Umkreis von 30 Fuß automatisch spüren.\r\n\r\n---\r\n\r\n### **Zauberbuch**\r\nDu besitzt ein persönliches Grimoire, in dem du Zauberformeln, Notizen und Theorien aufzeichnest.  \r\n**Effekt:** Du kannst Zauber aus deinem Buch vorbereiten, indem du 10 Minuten pro Zaubergrad meditierst.  \r\nDu kannst täglich eine Anzahl an Zaubern vorbereiten, die deiner **Stufe + INT-Modifikator** entspricht.  \r\nWenn du dein Zauberbuch verlierst, kannst du es in einer Woche neu rekonstruieren, sofern du Zugang zu Materialien und Notizen hast.\r\n\r\n---\r\n\r\n### **Schule der Magie (1. Stufe)**\r\nWähle deine Spezialisierung innerhalb des Geflechts. Jede Schule bietet einzigartige Boni.\r\n\r\n#### **Schule der Elemente**\r\nDu kanalisiert rohe Energie.  \r\n- Du erhältst den Cantrip *Produce Flame* oder *Electric Arc*.  \r\n- Wenn du einen Zauber wirkst, der Schaden verursacht, erhältst +1 auf den Schadenswurf.\r\n\r\n#### **Schule der Erkenntnis**\r\nDu suchst Wissen über Macht.  \r\n- Du erhältst den Cantrip *Detect Magic*.  \r\n- Du erhältst +1 auf Arkane Kunde und Wahrnehmung.  \r\n\r\n#### **Schule der Schatten**\r\nDu nutzt das Unsichtbare als Waffe.  \r\n- Du erhältst den Cantrip *Daze* oder *Message*.  \r\n- Einmal pro Stunde kannst du dich für 1 Runde teilweise unsichtbar machen (Heimlichkeitsbonus +2).  \r\n\r\n#### **Schule des Schutzes**\r\nDu webst Energie in Schilde und Barrieren.  \r\n- Du erhältst den Cantrip *Shield*.  \r\n- Du erhältst +1 auf Rettungswürfe gegen magische Effekte.  \r\n\r\n---\r\n\r\n### **Arkaner Fokus (3. Stufe)**\r\nDu kannst Magie durch ein Artefakt, einen Ring oder ein Symbol kanalisieren.  \r\nWenn du einen Zauber wirkst, der Schaden oder Heilung verursacht, kannst du einmal pro Runde +1 auf den Effektwurf addieren.  \r\nWenn dein Fokus zerstört wird, kannst du ihn innerhalb einer Stunde neu binden.\r\n\r\n---\r\n\r\n### **Zaubererweiterung (7. Stufe)**\r\nDu lernst, Magie auf neue Weise zu verweben.  \r\nEinmal pro Tag kannst du einen bekannten Zauber spontan auf einen höheren Grad wirken, ohne ihn vorzubereiten.\r\n\r\n---\r\n\r\n### **Geflechtverständnis (11. Stufe)**\r\nDu begreifst die Strömungen des Unsichtbaren.  \r\nDu erhältst Resistenz 2 gegen arkane Effekte und kannst *Detect Magic* unbegrenzt oft wirken.  \r\nAußerdem erkennst du magische Instabilitäten automatisch (SG 15).\r\n\r\n---\r\n\r\n### **Arkane Meisterschaft (15. Stufe)**\r\nDeine Kontrolle über das Geflecht ist nahezu perfekt.  \r\nEinmal pro Tag kannst du einen Zauber ohne Materialkomponenten wirken.  \r\nZauber mit einer Wirkzeit von „1 Minute“ oder weniger kannst du in 3 Aktionen wirken.\r\n\r\n---\r\n\r\n### **Hüter des Wissens (20. Stufe)**\r\nDein Name ist in den geheimen Archiven der Welt vermerkt.  \r\nDu erhältst:  \r\n- Resistenz 5 gegen magischen Schaden,  \r\n- Immunität gegen geistige Kontrolle,  \r\n- und die Fähigkeit, *Dispel Magic* einmal pro Stunde kostenlos zu wirken.\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Arkaner Schild | Du erhältst +1 auf AC gegen magische Angriffe. |\r\n| **2** | Ritualist | Du kannst Rituale doppelt so schnell ausführen. |\r\n| **4** | Magische Theorie | +1 auf Würfe mit Arkane Kunde. |\r\n| **6** | Konzentrationsmeister | Wenn du beim Wirken eines Zaubers Schaden erleidest, +2 auf den Konzentrationswurf. |\r\n| **8** | Doppelte Formel | Du kannst zwei verschiedene Cantrips gleichzeitig vorbereiten. |\r\n| **10** | Arkane Verbindung | Du kannst über dein Geflecht mit einem bekannten Magier kommunizieren. |\r\n| **12** | Verbesserter Fokus | +2 auf Schadenswürfe von Zaubern deines Spezialgebiets. |\r\n| **14** | Geflechtsresonanz | Du kannst einmal pro Tag einen Zauber, der dich betrifft, reflektieren (Willenswurf SG 20). |\r\n| **16** | Zauberfluss | Du kannst 2 Zauber pro Runde wirken, solange einer ein Cantrip ist. |\r\n| **18** | Arkaner Sturm | Du kannst alle Gegner in 20 Fuß 1W6 Schaden pro Zaubergrad erleiden lassen (1/Tag). |\r\n| **20** | Meister des Geflechts | Du bist immun gegen Magieunterdrückung und Zauberresistenz. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Akademiker der Föderation**\r\nDu bist Gelehrter einer Universität oder Forschungsanstalt.  \r\nDu erhältst Fertigkeitstraining in Wissenschaft und Gesellschaft.  \r\nEinmal pro Woche kannst du auf Bibliotheksressourcen zugreifen, um eine Wissensprobe automatisch erfolgreich zu machen.\r\n\r\n### **Einsiedler des Südblocks**\r\nDu hast das Studium der Magie fern der Welt betrieben.  \r\nDu erhältst +1 auf Überleben und Weisheitssaves gegen mentale Effekte.  \r\nEinmal pro Tag kannst du *Detect Magic* und *Light* ohne Komponenten wirken.\r\n\r\n### **Ratsschüler**\r\nDu wurdest in einem elfischen Zirkel des Gleichgewichts ausgebildet.  \r\nDu erhältst Fertigkeitstraining in Diplomatie und Arkane Kunde.  \r\nWenn du einen Zauber wirkst, der Gleichgewicht oder Stabilität betrifft, erhältst +1 auf den SG.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nMagier sind die Brücke zwischen altem Wissen und moderner Vernunft.  \r\nSie sind Forscher, Ketzer, Idealisten und Monsterjäger zugleich.  \r\nIm Spiel verkörpern sie das Streben nach Erkenntnis – und den ewigen Kampf zwischen Macht und Verantwortung.",
       "featureIds": [
@@ -9055,7 +11360,8 @@
         "choice.class-feat.mediziner.14",
         "choice.class-feat.mediziner.16",
         "choice.class-feat.mediziner.18",
-        "choice.class-feat.mediziner.20"
+        "choice.class-feat.mediziner.20",
+        "choice.class-skills.mediziner"
       ],
       "description": "# **Mediziner**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Ich kann dich retten. Wenn du stillhältst.“\r\n\r\nMediziner sind jene, die zwischen Leben und Tod verhandeln – mit Skalpell, Verband und Wissen statt mit Gebeten oder Magie.  \r\nSie sind Ärzte, Sanitäter und Forscher, die sich der Erhaltung des Lebens verschrieben haben – oder zumindest dem Versuch, es zu verstehen.  \r\nIm Zeitalter des Goldes (1990 n. 0) arbeiten sie in Krankenhäusern, auf Schlachtfeldern oder in improvisierten Lazaretten. Manche dienen in den Armeen des Nordimperiums, andere in den mobilen Kliniken der Föderation oder als geheime Forscher für Konzerne wie **Helix Dynamics** oder **NovoChem**.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nMediziner sind **Heiler und Wissensspezialisten**, die auf Biologie, Anatomie und Chemie basieren.  \r\nSie vereinen die Disziplin des Wissenschaftlers mit der Präzision des Chirurgen.  \r\nManche sind Feldärzte, andere Wissenschaftler – alle aber verstehen den schmalen Grat zwischen Heilung und Experiment.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Mediziner ist der **Heiler und Unterstützer** der Gruppe.  \r\nEr kann Wunden schließen, Krankheiten behandeln, Gifte neutralisieren und Körperfunktionen wiederherstellen.  \r\nEr ist weniger ein Kämpfer als ein Überlebensgarant – jemand, der selbst im schlimmsten Chaos einen kühlen Kopf behält.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Weisheit** (Diagnose, Einfühlungsvermögen) oder **Intelligenz** (medizinisches Wissen).  \r\nSekundär: **Geschicklichkeit** (Chirurgie, Präzision).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n8 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Leichte Rüstung |\r\n| **Waffen** | Einfache Waffen, chirurgische Werkzeuge (zählen als Dolche) |\r\n| **Rettungswürfe** | Willen (Experte), Zähigkeit (Geübt), Reflex (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 5 + INT-Modifikator |\r\n| **Klassenmerkmal** | Medizinische Ausbildung, Erste Hilfe, Fachrichtung |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Medizinische Ausbildung**\r\nDu bist ausgebildeter Arzt oder Sanitäter.  \r\nDu erhältst Fertigkeitstraining in **Medizin** und **Wissenschaft (Biologie oder Chemie)**.  \r\nWenn du einen Wurf zur Heilung, Diagnose oder Behandlung von Giften/Krankheiten ablegst, erhältst +1 auf das Ergebnis.  \r\nDu kannst medizinische Ausrüstung improvisieren (z. B. Verband, Schiene, Desinfektionsmittel).\r\n\r\n---\r\n\r\n### **Erste Hilfe**\r\nDu kannst eine Aktion aufwenden, um einen Verbündeten innerhalb von 5 Fuß zu stabilisieren (SG 15).  \r\nBei Erfolg: Der Verbündete stoppt Blutungen oder erhält 1W6 Trefferpunkte.  \r\nBei einem kritischen Erfolg: 1W6 + Weisheitsmodifikator.  \r\nDu kannst diese Fähigkeit pro Ziel nur einmal alle 10 Minuten anwenden.\r\n\r\n---\r\n\r\n### **Fachrichtung (1. Stufe)**\r\nWähle deinen medizinischen Schwerpunkt.\r\n\r\n#### **Feldarzt**\r\nDu arbeitest an der Front – schnell, präzise, unerschütterlich.  \r\n- Du erhältst +1 auf Medizin in stressigen Situationen (Kampf, Chaos).  \r\n- Du kannst Erste Hilfe als eine Aktion anwenden (statt zwei).  \r\n- Du erhältst Resistenz 2 gegen Blutungs- und Erschöpfungseffekte.\r\n\r\n#### **Chirurg**\r\nDu bist Spezialist für Operationen und Präzision.  \r\n- Du erhältst Fertigkeitstraining in Handwerk (Chirurgie).  \r\n- Du kannst einmal pro Stunde eine kritische Wunde (SG 20) behandeln, um 1W8 + WIS-Modifikator TP wiederherzustellen.  \r\n- Wenn du improvisierte Werkzeuge verwendest, erleidest du keinen Malus.\r\n\r\n#### **Forscher**\r\nDu bist Wissenschaftler der Heilkunst.  \r\n- Du erhältst Fertigkeitstraining in Wissenschaft und Naturkunde.  \r\n- Du kannst einmal pro Tag ein Heilserum herstellen (Heilung 1W8 oder +2 auf Zähigkeit für 1 Stunde).  \r\n- Du erhältst +1 auf Würfe gegen Krankheiten und Gifte.\r\n\r\n#### **Psychologe**\r\nDu heilst den Geist, nicht den Körper.  \r\n- Du erhältst Fertigkeitstraining in Diplomatie und Einschüchtern.  \r\n- Du kannst einmal pro Tag *Calm Emotions* wirken.  \r\n- Wenn du einen Verbündeten nach einem Furchteffekt beruhigst, erhält dieser +2 auf den nächsten Willenswurf.\r\n\r\n---\r\n\r\n### **Schnelle Stabilisierung (3. Stufe)**\r\nDu kannst einen sterbenden Verbündeten in einer Aktion stabilisieren.  \r\nWenn du dies tust, erhält das Ziel sofort 1W8 TP.  \r\nEinmal pro Stunde kannst du stattdessen eine Adrenalininjektion einsetzen, um +1 auf Angriff und Schaden für 1 Minute zu gewähren (danach 1W6 Erschöpfungsschaden).\r\n\r\n---\r\n\r\n### **Medizinische Präzision (7. Stufe)**\r\nDu kannst Verletzungen gezielt behandeln.  \r\nWenn du 10 Minuten mit einem Verwundeten verbringst, kann dieser zusätzlich 1W10 TP heilen.  \r\nBei kritischem Erfolg: + Konstitutionsmodifikator.  \r\nWenn du dies auf dich selbst anwendest, halbiert sich die Zeit.\r\n\r\n---\r\n\r\n### **Erweiterte Diagnostik (11. Stufe)**\r\nDu erkennst Symptome, bevor sie auftreten.  \r\nDu erhältst +2 auf Medizin und Wahrnehmung, wenn du Krankheiten, Gifte oder Täuschung erkennst.  \r\nEinmal pro Tag kannst du sofort den Effekt eines Giftes neutralisieren (SG 20).\r\n\r\n---\r\n\r\n### **Lebensretter (15. Stufe)**\r\nDu kannst das Unmögliche möglich machen.  \r\nWenn ein Verbündeter innerhalb von 30 Fuß stirbt, kannst du innerhalb von 1 Runde handeln, um ihn zurückzuholen (SG 25).  \r\nBei Erfolg stabilisiert sich das Ziel auf 1 TP und erhält Resistenz 2 gegen weiteren Schaden für 1 Minute.  \r\nDiese Fähigkeit kann einmal pro Tag eingesetzt werden.\r\n\r\n---\r\n\r\n### **Heilgenie (20. Stufe)**\r\nDein Name ist Legende in der Medizin.  \r\nDu erhältst:  \r\n- +2 auf alle Medizin- und Wissenschaftsproben,  \r\n- Immunität gegen Krankheiten,  \r\n- Resistenz 5 gegen Gifte,  \r\n- und kannst einmal pro Woche ein echtes medizinisches Wunder vollbringen – z. B. die Heilung einer unheilbaren Krankheit oder Wiederherstellung eines verstümmelten Körpers.\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Saubere Schnitte | Du erhältst +1 auf Handwerksproben bei Operationen. |\r\n| **2** | Stabile Hände | Du kannst Erste Hilfe unter Druck ohne Malus durchführen. |\r\n| **4** | Adrenalinschub | Du kannst einem Verbündeten +1 auf Initiative geben (1/Tag). |\r\n| **6** | Schmerzstiller | Du kannst 1W6 Schaden verhindern, wenn du ein Ziel behandelst. |\r\n| **8** | Kampfsanitäter | Du kannst dich während der Heilung bewegen, ohne die Aktion zu verlieren. |\r\n| **10** | Organisierter Geist | +2 auf Medizin in chaotischen Situationen. |\r\n| **12** | Meister der Chirurgie | Du kannst kritische Verletzungen in der halben Zeit behandeln. |\r\n| **14** | Antitoxin | Du kannst 1/Tag einen Trank herstellen, der +2 gegen Gifte gewährt. |\r\n| **16** | Notfalltherapie | Du kannst einen Zauberähnlichen Effekt („Lesser Restoration“) einmal täglich anwenden. |\r\n| **18** | Lebenswille | Wenn du stirbst, kannst du 1W6 TP zurückgewinnen (1/Tag). |\r\n| **20** | Wunderdoktor | Du kannst 1 gefährliche Krankheit oder Zustand pro Tag heilen, unabhängig vom SG. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Feldsanitäter**\r\nDu bist Spezialist in der Erstversorgung.  \r\nDu kannst Erste Hilfe im Kampf anwenden (keine Gelegenheitsangriffe).  \r\nEinmal pro Stunde kannst du 1W8 TP sofort heilen.\r\n\r\n### **Klinikarzt**\r\nDu bist Forscher und Mediziner in einem zivilen Umfeld.  \r\nDu erhältst Fertigkeitstraining in Wissenschaft und Diplomatie.  \r\nEinmal pro Tag kannst du ein Heilmittel herstellen, das +2 auf Zähigkeit und Willen gewährt (1 Stunde).\r\n\r\n### **Seuchenforscher**\r\nDu bist geübt im Umgang mit Krankheiten und biologischen Gefahren.  \r\nDu erhältst Resistenz 2 gegen Krankheiten und +1 auf Proben gegen Gifte.  \r\nEinmal pro Woche kannst du eine Probe auf Wissenschaft (SG 25) ablegen, um den Verlauf einer Krankheit dauerhaft zu beenden.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nMediziner sind das Gewissen und die Hoffnung der modernen Welt. Sie sind keine Zauberer – aber sie können Leben retten, wo selbst Magie versagt.  \r\nIm Spiel verkörpern sie Menschlichkeit, Rationalität und Mut – die letzte Grenze zwischen Leben und Tod, in einer Welt, die beides zu oft missachtet.",
       "featureIds": [
@@ -9125,7 +11431,9 @@
         "choice.class-feat.okkultist.14",
         "choice.class-feat.okkultist.16",
         "choice.class-feat.okkultist.18",
-        "choice.class-feat.okkultist.20"
+        "choice.class-feat.okkultist.20",
+        "choice.class-skills.okkultist",
+        "choice.class-spells.okkultist"
       ],
       "description": "# **Okkultist**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Magie ist kein Werkzeug. Sie ist Hunger, Erinnerung – und Preis zugleich.“\r\n\r\nOkkultisten sind die Grenzgänger zwischen Leben und Tod, Wissenschaft und Aberglaube. Sie rühren an Dinge, die nicht berührt werden sollen, und bezahlen dafür mit Verstand, Blut oder Seele.  \r\nIm Zeitalter des Goldes (1990 n. 0) sind sie die Erben der Hexen, Blutmagier und Ritualisten vergangener Zeitalter – Überreste der Dunklen Ära, in der Magie gefürchtet und vergöttert zugleich war.  \r\nManche suchen Wissen, andere Macht – doch alle wissen: Wenn du das Geflecht berührst, berührt es dich zurück.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nOkkultisten sind **Zauberwirker des Verbotenen**, die ihre Kraft aus Ritualen, Blut, Symbolen und alten Pakten schöpfen.  \r\nSie kombinieren arkanes Wissen mit religiösen oder esoterischen Praktiken.  \r\nIhre Magie ist mächtig, aber gefährlich – für sich selbst und andere.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Okkultist ist ein **Unterstützer und Kontrollzauberwirker** mit Zugriff auf seltene oder verbotene Kräfte.  \r\nEr kann die Realität verzerren, Geister beschwören, Gedanken beeinflussen und Lebenskraft manipulieren.  \r\nSeine Zauber sind oft riskant, aber wirkungsvoll – der Preis für Macht ist stets real.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Charisma** (Willenskraft, Präsenz) oder **Weisheit** (spirituelle Verbindung).  \r\nSekundär: **Konstitution** (Blutmagie, Ausdauer).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n8 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Keine |\r\n| **Waffen** | Einfache Waffen, Dolche, Ritualklingen |\r\n| **Rettungswürfe** | Willen (Experte), Zähigkeit (Geübt), Reflex (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 4 + INT-Modifikator |\r\n| **Klassenmerkmal** | Okkultes Wissen, Ritualmagie, Pfad der Macht |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Okkultes Wissen**\r\nDu kennst die verborgenen Symbole und Sprachen der alten Welt.  \r\nDu erhältst Fertigkeitstraining in **Okkultismus** und **Religion**.  \r\nEinmal pro Stunde kannst du eine Probe auf Arkane Kunde oder Religion wiederholen, wenn sie mit Ritualen, Geistern oder Flüchen zu tun hat.\r\n\r\n---\r\n\r\n### **Ritualmagie**\r\nDu kannst Rituale durchführen, um mächtige, aber gefährliche Effekte zu erzielen.  \r\nEin Ritual dauert mindestens 10 Minuten und erfordert Komponenten im Wert von 1 GP pro Zaubergrad.  \r\nRituale können:  \r\n- Geister beschwören (*Summon Spirit*),  \r\n- Orte segnen oder verfluchen,  \r\n- Erinnerung oder Emotionen verändern (*Suggestion*, *Calm Emotions*).  \r\n\r\nJedes Ritual birgt ein Risiko: Scheitert dein Wurf um 5 oder mehr, erleidest du 1W6 mentalen Schaden pro Zaubergrad.\r\n\r\n---\r\n\r\n### **Pfad der Macht (1. Stufe)**\r\nWähle, welche Quelle dich verändert hat.\r\n\r\n#### **Blutpakt**\r\nDu hast Macht durch Opfer erhalten.  \r\n- Du erhältst Resistenz 2 gegen Blutungs- und Krankheitseffekte.  \r\n- Du kannst 1 Mal pro Tag 1W4 TP opfern, um +1 auf einen Zauberwurf zu erhalten.  \r\n\r\n#### **Geisterruf**\r\nDu bist Medium zwischen den Welten.  \r\n- Du erhältst Fertigkeitstraining in Diplomatie oder Einschüchtern.  \r\n- Einmal pro Tag kannst du *Speak with Dead* wirken.  \r\n\r\n#### **Schattenpakt**\r\nDu hast einen Vertrag mit einem Wesen aus der Dunkelheit geschlossen.  \r\n- Du erhältst Dunkelsicht.  \r\n- Du kannst einmal pro Tag *Fear* wirken (Attribut: Charisma).  \r\n\r\n#### **Runenpfad**\r\nDu beherrschst uralte Zeichen, die Realität beeinflussen.  \r\n- Du erhältst Fertigkeitstraining in Handwerk (Runen).  \r\n- Du kannst einmal pro Stunde eine Rune aktivieren, die +1 auf AC oder Angriffe gewährt (1 Runde).\r\n\r\n---\r\n\r\n### **Okkulte Präsenz (3. Stufe)**\r\nDeine Nähe verändert die Welt.  \r\nDu erhältst +1 auf Einschüchtern und Diplomatie gegen religiöse oder magisch begabte Kreaturen.  \r\nWenn du einen Zauber wirkst, der Furcht oder Kontrolle verursacht, erhalten Ziele –1 auf ihren Rettungswurf.\r\n\r\n---\r\n\r\n### **Verbotene Kraft (7. Stufe)**\r\nDu lernst, deine Macht zu verstärken – zum Preis deiner Vitalität.  \r\nEinmal pro Tag kannst du beim Wirken eines Zaubers 1W8 TP opfern, um +2 auf SG und Schaden des Zaubers zu erhalten.\r\n\r\n---\r\n\r\n### **Seelenanker (11. Stufe)**\r\nDein Geist ist durch Schmerz gestählt.  \r\nDu erhältst Resistenz 2 gegen mentale Effekte und bist immun gegen Furcht 1 Minute pro Tag (freie Aktion, 1/Tag).\r\n\r\n---\r\n\r\n### **Ruf der Tiefe (15. Stufe)**\r\nDie Dunkelheit antwortet deinem Willen.  \r\nEinmal pro Tag kannst du *Summon Entity* oder *Banish* wirken.  \r\nWenn du ein beschworenes Wesen kontrollierst, erhält es +1 auf Angriffe, solange du Schaden erleidest.\r\n\r\n---\r\n\r\n### **Verbotener Aufstieg (20. Stufe)**\r\nDu bist kein Sterblicher mehr, sondern ein Knotenpunkt des Geflechts.  \r\nDu erhältst:  \r\n- Immunität gegen mentale und Furchteffekte,  \r\n- Resistenz 5 gegen magischen Schaden,  \r\n- und kannst einmal pro Tag *Wish* oder ein äquivalentes Ritual ausführen – doch jedes Mal steigt das Risiko, dauerhaft 1 Attributspunkt zu verlieren.\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Blutopfer | Du kannst 1W4 TP opfern, um +1 auf einen Zauberwurf zu erhalten. |\r\n| **2** | Hexensinn | Du spürst aktive Magie und Flüche im Umkreis von 30 Fuß. |\r\n| **4** | Dunkle Bindung | +1 auf Angriffe beschworener Wesen. |\r\n| **6** | Runen der Macht | +1 auf Zauber-SGs, wenn du zuvor ein Ritual vollzogen hast. |\r\n| **8** | Seelenflamme | Du kannst 1W6 Schaden verursachen, wenn du Schaden erleidest (1/Tag). |\r\n| **10** | Blutmagie | Wenn du Schaden durch eigene Zauber erleidest, reduziere ihn um 1 pro Zaubergrad. |\r\n| **12** | Doppelte Präsenz | Du kannst mit Geistern kommunizieren, die dich sehen, ohne zu sprechen. |\r\n| **14** | Bannkreis | Du kannst 1/Tag einen Schutzkreis gegen eine Kreaturenart ziehen (SG 20). |\r\n| **16** | Geisterarmee | Du kannst bis zu 2 beschworene Wesen gleichzeitig kontrollieren. |\r\n| **18** | Verfluchter Wille | Wenn du 0 TP erreichst, kannst du einmal 1W10 TP zurückgewinnen (1/Tag). |\r\n| **20** | Geflechtzerriss | Du kannst 1/Tag eine Zone instabiler Magie erschaffen (20 Fuß, 1 Minute). |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Blutmagier**\r\nDu opferst dich für Macht.  \r\nDu erhältst +1 auf Zauber-SGs, wenn du bei der Vorbereitung 1W6 TP opferst.  \r\nEinmal pro Woche kannst du ein Blutritual durchführen, das dir Resistenz 5 gegen Tod und Krankheit gibt (1 Tag).\r\n\r\n### **Kultist**\r\nDu bist Teil einer Sekte, die Wissen und Macht aus der Dunkelheit zieht.  \r\nDu erhältst Fertigkeitstraining in Religion und Einschüchtern.  \r\nWenn du an einem Ritual mit anderen teilnimmst, erhöht sich dessen Effekt um +1 auf SG oder Schaden.\r\n\r\n### **Grabrufpriester**\r\nDu wandelst zwischen Leben und Tod.  \r\nDu erhältst Fertigkeitstraining in Medizin und Religion.  \r\nEinmal pro Tag kannst du einen gefallenen Verbündeten stabilisieren, ohne Materialkomponenten.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nOkkultisten sind gefährlich, faszinierend und tragisch. Sie nutzen Macht, die kein Mensch begreifen sollte, und zahlen dafür den Preis.  \r\nIm Spiel sind sie ambivalente Figuren – Heiler oder Verderber, Wissende oder Wahnsinnige.  \r\nSie verkörpern die Grenze zwischen Ordnung und Chaos, Leben und Tod – und erinnern daran, dass Wissen immer Opfer verlangt.",
       "featureIds": [
@@ -9194,7 +11502,8 @@
         "choice.class-feat.raufbold.14",
         "choice.class-feat.raufbold.16",
         "choice.class-feat.raufbold.18",
-        "choice.class-feat.raufbold.20"
+        "choice.class-feat.raufbold.20",
+        "choice.class-skills.raufbold"
       ],
       "description": "# **Raufbold**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Ich brauch keine Waffe. Nur Fäuste, Mut – und was zum Trinken danach.“\r\n\r\nRaufbolde sind Kämpfer des Volkes – Söldner ohne Sold, Boxer ohne Bühne, Überlebenskünstler ohne Plan.  \r\nSie kämpfen in den Hinterhöfen der Städte, in den Gräben der Fabriken und auf den staubigen Straßen des Südblocks.  \r\nSie folgen keinem Kodex, keiner Schule, keiner Doktrin – nur dem Instinkt. Wenn Worte nichts mehr nützen, bleibt nur der Schlag. Und darin sind sie Meister.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nDer Raufbold ist ein **Nahkämpfer**, der ohne Waffen kämpft oder mit allem, was ihm in die Hände fällt.  \r\nEr verlässt sich auf rohe Stärke, Zähigkeit und Improvisation.  \r\nWo der Söldner Disziplin hat, hat der Raufbold Überlebenswillen.  \r\nEr ist der geborene Straßenkämpfer – wild, unberechenbar und unkaputtbar.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Raufbold ist der **Nahkampfspezialist** der Gruppe – zäh, stark und unberechenbar.  \r\nEr kann Schaden einstecken und austeilen, improvisierte Waffen einsetzen und in engen Umgebungen glänzen.  \r\nEr ist besonders effektiv in chaotischen, körperbetonten Situationen – Kämpfe in Gassen, Bars, Werkhallen oder Ruinen.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Stärke** (für Nahkampf und Schaden).  \r\nSekundär: **Konstitution** (Zähigkeit) oder **Charisma** (Einschüchterung).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n10 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Keine oder leichte Rüstung |\r\n| **Waffen** | Alle einfachen Waffen, improvisierte Waffen, Fäuste |\r\n| **Rettungswürfe** | Zähigkeit (Experte), Reflex (Geübt), Willen (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 4 + INT-Modifikator |\r\n| **Klassenmerkmal** | Straßenkampf, Zähigkeit, Improvisation |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Straßenkampf**\r\nDu bist im Nahkampf zuhause.  \r\nDu erhältst Fertigkeitstraining in **Athletik** und **Einschüchtern**.  \r\nDeine unbewaffneten Angriffe verursachen 1W6 Schaden (statt 1W4) und gelten als bewaffnet.  \r\nWenn du improvisierte Waffen einsetzt, erleidest du keinen Malus.\r\n\r\n---\r\n\r\n### **Zähigkeit**\r\nDu bist härter als du aussiehst.  \r\nDu erhältst einen Bonus von +1 auf Zähigkeitswürfe und Rettungswürfe gegen Gifte, Krankheiten und Erschöpfung.  \r\nEinmal pro Stunde kannst du 1W6 TP regenerieren, wenn du eine volle Runde nicht kämpfst.\r\n\r\n---\r\n\r\n### **Improvisation (1. Stufe)**\r\nDu kannst aus allem eine Waffe machen.  \r\nWenn du mit einem improvisierten Gegenstand (z. B. Stuhl, Rohr, Flasche) angreifst, erhältst du +1 auf Angriffswürfe und verursachst zusätzlichen Schaden in Höhe deines STÄ-Modifikators.  \r\nDu kannst außerdem jede Runde eine Aktion verwenden, um eine Umgebungssituation zu deinem Vorteil zu nutzen (SG 15; z. B. Licht, Geräusch, Deckung).\r\n\r\n---\r\n\r\n### **Kampfinstinkt (3. Stufe)**\r\nDu erkennst Schwächen und Gelegenheiten.  \r\nWenn du in einer Runde Schaden erleidest, erhältst du im nächsten Zug +1 auf Angriff und Schaden gegen denselben Gegner.  \r\nWenn du einen Gegner zu Boden bringst, erhältst du +2 auf Einschüchtern für 1 Minute.\r\n\r\n---\r\n\r\n### **Widerstandskraft (7. Stufe)**\r\nDu ignorierst Mali durch Erschöpfung 1 und Blutung.  \r\nEinmal pro Tag kannst du 1W8 TP regenerieren, wenn du einen Gegner im Nahkampf besiegst.\r\n\r\n---\r\n\r\n### **Instinktschlag (11. Stufe)**\r\nDein Körper reagiert schneller als dein Verstand.  \r\nEinmal pro Runde kannst du einen unbewaffneten Schlag als Reaktion ausführen, wenn dich jemand im Nahkampf angreift.  \r\nWenn du triffst, erhältst du Resistenz 2 gegen den Schaden dieses Angriffs.\r\n\r\n---\r\n\r\n### **Unzerbrechlich (15. Stufe)**\r\nDu bist das Sinnbild des Überlebens.  \r\nWenn du auf 0 TP fallen würdest, bleibst du bei 1 TP und stehst weiter.  \r\nDu erhältst außerdem Resistenz 3 gegen physischen Schaden und +1 auf Willenswürfe gegen Furcht.\r\n\r\n---\r\n\r\n### **Straßenlegende (20. Stufe)**\r\nDeine Faust ist Geschichte. Dein Name flößt Respekt ein.  \r\nDu erhältst:  \r\n- +2 auf Angriff und Schaden mit unbewaffneten Schlägen,  \r\n- Resistenz 5 gegen physischen Schaden,  \r\n- Immunität gegen Furcht.  \r\nWenn du einen Gegner im Nahkampf besiegst, können schwächere Gegner im Umkreis von 10 Fuß eine Furchtprobe (SG 20) ablegen müssen.\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Schlagabtausch | Wenn du getroffen wirst, kannst du sofort einen Gegenangriff ausführen. |\r\n| **2** | Durchhaltewillen | Du erhältst +1 auf Zähigkeit, wenn du verwundet bist. |\r\n| **4** | Dreckiger Trick | Du kannst Sand, Staub oder Blut nutzen, um einen Gegner zu blenden (1/Tag, SG 20). |\r\n| **6** | Schlaghagel | Du kannst zweimal mit unbewaffnetem Angriff angreifen (–4 Mali). |\r\n| **8** | Schmerzresistenz | Wenn du Schaden erleidest, reduziere ihn um 1 pro 5 Stufen. |\r\n| **10** | Improvisationsmeister | Du erhältst +2 auf Angriffe mit improvisierten Waffen. |\r\n| **12** | Straßenkönig | +1 auf Einschüchtern und Diplomatie in städtischen Umgebungen. |\r\n| **14** | Zornreserve | Wenn du 50 % TP verlierst, erhältst +1 auf Schaden für 1 Minute. |\r\n| **16** | Knochenbrecher | Deine unbewaffneten Schläge verursachen +1W6 zusätzlichen Schaden. |\r\n| **18** | Veteran der Gassen | Du kannst 1 Fehlschlag pro Tag wiederholen. |\r\n| **20** | Fels in der Faust | Du bist immun gegen Niederschlag und Schockeffekte. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Boxchampion**\r\nDu bist in Arenen oder Untergrundringen groß geworden.  \r\nDu erhältst Fertigkeitstraining in Einschüchtern und Athletik.  \r\nEinmal pro Tag kannst du eine Zuschauer- oder Gegnergruppe beeindrucken, was +1 auf Angriffe für 1 Minute verleiht.\r\n\r\n### **Gassenkämpfer**\r\nDu kämpfst mit allem, was du findest.  \r\nDu erhältst +2 auf Improvisationswürfe und kannst improvisierte Waffen als magisch zählen, wenn du sie unter Spannung setzt (z. B. Stromleitung, Hitze).\r\n\r\n### **Trunkenbold**\r\nDein Kampfstil ist chaotisch, aber effektiv.  \r\nDu erhältst Resistenz 2 gegen Schaden, solange du alkoholisiert bist.  \r\nEinmal pro Tag kannst du einen Angriff mit einem Bonus von +2 durchführen, wenn du vorher getrunken hast.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nRaufbolde sind rohe Gewalt in Reinform – das Produkt einer harten Welt.  \r\nSie kämpfen nicht für Ruhm, nicht für Geld, sondern weil sie müssen.  \r\nIm Spiel verkörpern sie Überlebensinstinkt, Rebellion und Authentizität – die Faust des Volkes gegen die Türme der Reichen.",
       "featureIds": [
@@ -9260,7 +11569,9 @@
         "choice.class-feat.schamane.14",
         "choice.class-feat.schamane.16",
         "choice.class-feat.schamane.18",
-        "choice.class-feat.schamane.20"
+        "choice.class-feat.schamane.20",
+        "choice.class-skills.schamane",
+        "choice.class-spells.schamane"
       ],
       "description": "# **Schamane**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Ich spreche mit dem Wind, und der Wind erinnert sich an dich.“\r\n\r\nSchamanen sind die Bewahrer des alten Wissens – Vermittler zwischen Körper und Geist, zwischen den Lebenden und den Ahnen.  \r\nIhre Macht entspringt nicht Büchern oder Maschinen, sondern der Verbindung zur Welt selbst.  \r\nIm Zeitalter des Goldes (1990 n. 0) sind sie selten geworden, meist unter Orks, Halblingen oder isolierten Gemeinschaften zu finden. In einer Zeit, in der Magie fast verschwunden ist, verkörpern sie das, was von ihr bleibt – rein, wild und unerklärlich.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nSchamanen sind **spirituelle Zauberwirker**, die über Natur, Ahnen und Geister wirken.  \r\nSie dienen als Heiler, Führer und Vermittler.  \r\nIhre Magie ist instinktiv, nicht gelernt, und folgt den Stimmen des Geflechts selbst – den letzten Echos der Welt vor der Dunkelheit.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Schamane ist ein **Unterstützer und Heiler**, aber auch ein mächtiger Beschwörer.  \r\nEr verbindet Magie, Instinkt und Glauben zu einem einzigartigen, uralten Stil.  \r\nEr kann Geister rufen, die Natur beeinflussen und Wunden heilen – doch immer im Einklang mit der Balance.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Weisheit** (spirituelle Verbindung, Einsicht).  \r\nSekundär: **Konstitution** (Ausdauer) oder **Charisma** (Ahnenruf).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n8 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Leichte Rüstung |\r\n| **Waffen** | Einfache Waffen, Stäbe, Speere, Schleudern |\r\n| **Rettungswürfe** | Willen (Experte), Zähigkeit (Geübt), Reflex (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 4 + INT-Modifikator |\r\n| **Klassenmerkmal** | Ahnenverbindung, Geisterpfad, Totemritual |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Ahnenverbindung**\r\nDu trägst die Stimmen deiner Ahnen in dir.  \r\nEinmal pro Tag kannst du bei einer Probe auf Überleben, Religion oder Diplomatie +2 hinzufügen, wenn du dich von ihnen leiten lässt.  \r\nDu erhältst Fertigkeitstraining in **Religion** und **Überleben**.\r\n\r\n---\r\n\r\n### **Geisterpfad (1. Stufe)**\r\nWähle, welcher Geist dich leitet. Jeder Pfad bestimmt deine Zauber, Fähigkeiten und deinen Fokus.\r\n\r\n#### **Pfad des Wolfs**\r\nDu folgst dem Ruf der Jagd und der Gemeinschaft.  \r\n- Du erhältst Fertigkeitstraining in Heimlichkeit oder Diplomatie.  \r\n- Wenn du einen Verbündeten heilst, erhält dieser +1 auf Angriffswürfe für 1 Runde.  \r\n\r\n#### **Pfad des Sturms**\r\nDu verkörperst Zorn und Erneuerung.  \r\n- Du erhältst den Cantrip *Electric Arc* oder *Gust*.  \r\n- Wenn du einen Zauber mit Blitz- oder Windschaden wirkst, verursachst +1 Schaden.  \r\n\r\n#### **Pfad der Flamme**\r\nDu ehrst den Kreislauf von Zerstörung und Wiedergeburt.  \r\n- Du erhältst den Cantrip *Produce Flame*.  \r\n- Wenn du einen Gegner mit einem Feuerschaden-Zauber triffst, erhältst 1 TP Heilung.  \r\n\r\n#### **Pfad der Erde**\r\nDu bist fest verwurzelt in der Welt.  \r\n- Du erhältst den Cantrip *Tanglefoot*.  \r\n- Du erhältst Resistenz 2 gegen physische Schäden.  \r\n\r\n#### **Pfad des Geistes**\r\nDu bist Medium zwischen den Welten.  \r\n- Du erhältst Fertigkeitstraining in Diplomatie oder Einschüchtern.  \r\n- Du kannst einmal pro Tag *Speak with Spirits* oder *Detect Magic* wirken.\r\n\r\n---\r\n\r\n### **Totemritual (3. Stufe)**\r\nDu trägst ein Totem oder ein Symbol, das dich mit deinem Geist verbindet.  \r\nWenn du ein Ritual mit einem Totem durchführst, erhältst +1 auf den Zauberwurf und kannst Verbündeten in 10 Fuß +1 auf Willenswürfe gewähren (1 Minute).  \r\nDas Ritual kann 10 Minuten dauern und hat keine Kosten.\r\n\r\n---\r\n\r\n### **Ahnensegen (7. Stufe)**\r\nDeine Ahnen schützen dich.  \r\nEinmal pro Tag kannst du einen misslungenen Willenswurf wiederholen.  \r\nWenn du dies tust, erscheint ein geisterhafter Schimmer um dich.  \r\nAußerdem erhältst du Resistenz 2 gegen mentale Effekte.\r\n\r\n---\r\n\r\n### **Naturverbundenheit (11. Stufe)**\r\nDu bist eins mit deiner Umgebung.  \r\nDu erhältst +2 auf Überleben und Wahrnehmung in der Natur.  \r\nEinmal pro Tag kannst du *Entangle* oder *Water Walk* wirken, ohne Materialien.\r\n\r\n---\r\n\r\n### **Großer Ruf (15. Stufe)**\r\nDu kannst die Macht deines Geistes vollständig entfesseln.  \r\nEinmal pro Tag kannst du eine Manifestation beschwören, die 1 Minute anhält.  \r\n- **Wolf:** Verbündete erhalten +1 auf Schaden.  \r\n- **Sturm:** Gegner in 10 Fuß erleiden 1W6 Elektrizitätsschaden pro 2 Stufen.  \r\n- **Flamme:** Gegner, die dich treffen, erleiden 1W4 Feuerschaden.  \r\n- **Erde:** Du erhältst Resistenz 5 gegen physischen Schaden.  \r\n- **Geist:** Du kannst mit allen Kreaturen in 30 Fuß telepathisch kommunizieren.  \r\n\r\n---\r\n\r\n### **Wächter der Ahnen (20. Stufe)**\r\nDein Geist verschmilzt mit dem deiner Vorfahren.  \r\nDu erhältst:  \r\n- Immunität gegen Furcht und mentale Effekte,  \r\n- Resistenz 5 gegen Elementarschaden,  \r\n- und kannst einmal pro Tag *Resurrect* oder *Nature’s Avatar* wirken, ohne Materialien.  \r\nWenn du stirbst, bleibt dein Geist 1 Minute lang als schützende Präsenz bestehen (+1 auf alle Würfe deiner Verbündeten).\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Totem der Heilung | +1 auf Heilzauber, die du auf andere wirkst. |\r\n| **2** | Geisterblick | Du kannst Geister, Illusionen und magische Auren sehen. |\r\n| **4** | Natürliche Führung | +2 auf Diplomatie gegen Tiere oder Naturgeister. |\r\n| **6** | Ahnenschrei | Du kannst 1/Tag einen Gegner mit einem Geisterruf in Furcht versetzen (SG 20). |\r\n| **8** | Lebende Erde | Wenn du stillstehst, erhältst Resistenz 2 gegen physischen Schaden. |\r\n| **10** | Sturmläufer | Du ignorierst schwieriges Gelände durch Wind oder Wasser. |\r\n| **12** | Flammenbote | +1 auf alle Feuerschaden-Zauber. |\r\n| **14** | Erdenhüter | Du erhältst 1W8 Heilung, wenn du Zauber der Natur wirkst. |\r\n| **16** | Geistwächter | Du kannst 1 Geistwesen dauerhaft an dich binden (Bonus auf Initiative +1). |\r\n| **18** | Ewiger Zyklus | Wenn du stirbst, hinterlässt du eine heilende Aura (1W6 pro Runde, 1 Minute). |\r\n| **20** | Stimme der Welt | Du kannst 1/Tag direkt mit dem Geflecht sprechen (freie Vision oder Weissagung). |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Ahnenrufer**\r\nDu rufst Geister vergangener Krieger oder Heiler.  \r\nEinmal pro Tag kannst du *Summon Spirit* oder *Bless* wirken.  \r\nWenn du einen Geist rufst, erhältst +1 auf Angriff und Schaden für 1 Minute.\r\n\r\n### **Heilpfad-Wächter**\r\nDu konzentrierst dich auf das Leben.  \r\nDu erhältst Fertigkeitstraining in Medizin und +2 auf Heilungszauber.  \r\nWenn du erfolgreich stabilisierst, heilt das Ziel 1W4 zusätzliche TP.\r\n\r\n### **Naturwandler**\r\nDu verschmilzt mit der Umwelt.  \r\nEinmal pro Tag kannst du dich 10 Minuten lang in einen Tiergeist verwandeln (+10 Fuß Bewegung, +2 auf Wahrnehmung).  \r\nDu erhältst +1 auf Heimlichkeit in natürlicher Umgebung.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nSchamanen sind die letzten echten Stimmen der alten Welt. Sie sind weder Magier noch Priester, sondern Brücken zwischen dem, was war, und dem, was kommt.  \r\nIm Spiel verkörpern sie Harmonie, Opfer und Weisheit – aber auch Isolation und den Schmerz des Wissens.  \r\nEin Schamane ist nie nur Zauberwirker – er ist **das Gewissen der Welt**.",
       "featureIds": [
@@ -9330,7 +11641,8 @@
         "choice.class-feat.soldner.14",
         "choice.class-feat.soldner.16",
         "choice.class-feat.soldner.18",
-        "choice.class-feat.soldner.20"
+        "choice.class-feat.soldner.20",
+        "choice.class-skills.soldner"
       ],
       "description": "# **Söldner**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Loyalität ist eine Ware. Ich verkaufe sie an den, der sie sich leisten kann.“\r\n\r\nSöldner sind Männer und Frauen, die gelernt haben, mit Waffen zu leben – und mit ihren Konsequenzen.  \r\nSie kämpfen für Geld, für Stolz, oder weil sie nichts anderes mehr können. In den Schatten der Kriege, in den Ruinen der Städte und auf den Schlachtfeldern des Südblocks sind sie das Rückgrat der modernen Konflikte.  \r\nEin Söldner kann ein ehrenvoller Veteran sein, ein brutaler Straßenkämpfer oder ein kühler Leibwächter. Doch alle teilen dieselbe Wahrheit:  \r\n**Wer bezahlt, bestimmt, wer überlebt.**\r\n\r\n---\r\n\r\n## **Übersicht**\r\nSöldner sind **Frontkämpfer und Überlebenskünstler**, die ihre Stärke, Erfahrung und Disziplin zu Waffen gemacht haben.  \r\nIn einer Welt, in der Loyalität käuflich und Moral verhandelbar ist, sind sie Profis im Töten, Beschützen und Überleben.  \r\nOb in den Kriegen des Nordimperiums, als private Sicherheitskräfte in elfischen Konzernen oder als Gesetzlose im Südblock – sie gehören zu den wenigen, die wissen, was Blut wirklich wert ist.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Söldner ist der physische Mittelpunkt einer Gruppe – robust, gefährlich, direkt.  \r\nEr kann Tanks, Nahkämpfer oder Fernkämpfer sein, je nach Spezialisierung.  \r\nSeine Stärken sind Vielseitigkeit im Kampf, Zähigkeit und die Fähigkeit, in jeder Umgebung zu überleben.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Stärke** (für Nahkampf) oder **Geschicklichkeit** (für Fernkampf).  \r\nSekundär wichtig: **Konstitution** (Überleben) oder **Weisheit** (Taktik).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n10 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Leichte, Mittlere, Schwere Rüstung, Schilde |\r\n| **Waffen** | Alle einfachen und militärischen Waffen |\r\n| **Rettungswürfe** | Zähigkeit (Experte), Reflex (Geübt), Willen (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 3 + INT-Modifikator |\r\n| **Klassenmerkmal** | Söldnerisches Training, Kampfstil |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Söldnerisches Training**\r\nDu bist ausgebildet, dich in jeder Lage zu behaupten.  \r\n**Effekt:** Du erhältst Fertigkeitstraining in **Kriegskunst** und **Überleben**. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle stattdessen eine andere Fertigkeit.  \r\nAußerdem erhältst du einen Situationsbonus von +1 auf Einschüchtern, wenn du bewaffnet bist.\r\n\r\n---\r\n\r\n### **Kampfstil (1. Stufe)**\r\nWähle deinen bevorzugten Kampfansatz.  \r\nJeder Stil gewährt eine einzigartige Fähigkeit und bestimmt deine Entwicklung.\r\n\r\n#### **Frontkämpfer**\r\nDu stürzt dich in den Nahkampf und hältst die Linie.  \r\n- Erhalte den Feat *Power Attack*.  \r\n- Wenn du eine Rüstung trägst, erhältst du +1 AC gegen Nahkampfangriffe.\r\n\r\n#### **Scharfschütze**\r\nDu kämpfst aus der Distanz mit Präzision.  \r\n- Erhalte den Feat *Point-Blank Shot*.  \r\n- Wenn du auf eine stationäre Position zielst (keine Bewegung in dieser Runde), erhältst du +1 auf Angriffswürfe mit Fernkampfwaffen.\r\n\r\n#### **Wächter**\r\nDu bist Verteidiger und Schildträger.  \r\n- Erhalte den Feat *Shield Block*.  \r\n- Wenn du erfolgreich einen Verbündeten verteidigst, erhält dieser bis zum Ende deines nächsten Zuges +1 AC.\r\n\r\n---\r\n\r\n### **Erfahrener Kämpfer (3. Stufe)**\r\nDu hast gelernt, aus jedem Schlag zu lernen.  \r\nWenn du einen Angriff verfehlst, erhältst du bis zu deinem nächsten Zug +1 auf Angriffswürfe gegen dasselbe Ziel.\r\n\r\n---\r\n\r\n### **Unnachgiebig (7. Stufe)**\r\nDeine Willenskraft ist so stark wie dein Körper.  \r\nEinmal pro Tag kannst du einen misslungenen Zähigkeits- oder Willenswurf wiederholen. Du musst das zweite Ergebnis verwenden.\r\n\r\n---\r\n\r\n### **Kriegsinstinkt (11. Stufe)**\r\nDeine Wahrnehmung von Gefahr ist fast übernatürlich.  \r\nDu erhältst +2 auf Initiativewürfe und Wahrnehmung gegen Überraschungsangriffe.\r\n\r\n---\r\n\r\n### **Veteran des Goldes (15. Stufe)**\r\nDu bist ein Relikt in einer Welt, die vergessen hat, was Krieg bedeutet.  \r\nWenn du auf 0 Trefferpunkte fällst, bleibst du stattdessen bei 1 Trefferpunkt (einmal pro Tag).  \r\nZusätzlich kannst du einmal täglich eine misslungene Einschüchterungsprobe automatisch als Erfolg werten.\r\n\r\n---\r\n\r\n### **Legende des Krieges (20. Stufe)**\r\nDein Name ist Legende unter Soldaten und Söldnern.  \r\nDu erhältst:\r\n- Resistenz 5 gegen physischen Schaden,  \r\n- +2 auf Angriffswürfe mit deiner bevorzugten Waffenart,  \r\n- und Immunität gegen Furcht.  \r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Zielsicherer Schlag | Wenn du dich in derselben Runde nicht bewegst, +2 auf den nächsten Angriff. |\r\n| **2** | Eisenkörper | +2 auf Rettungswürfe gegen Gifte, Krankheiten und Erschöpfung. |\r\n| **4** | Drohende Präsenz | Wenn du einen Gegner triffst, erhält dieser –1 auf Angriffswürfe für 1 Runde. |\r\n| **6** | Veteraneninstinkt | Du erkennst feindliche Taktiken. +1 auf Wahrnehmung und Initiative. |\r\n| **8** | Disziplinierter Kämpfer | Einmal pro Runde kannst du den Schaden um 2 reduzieren, wenn du Rüstung trägst. |\r\n| **10** | Klingenreflexe | Wenn du im Nahkampf angegriffen wirst, kannst du sofort 1 Schritt zurückweichen. |\r\n| **12** | Kalter Profi | Du kannst bei einem Angriffswurf 1W20 erneut würfeln, wenn du einen kritischen Fehlschlag erzielst (1/Tag). |\r\n| **14** | Unerbittlicher Sturm | Wenn du einen Gegner zu Boden bringst, erhältst du eine Bonusaktion (Schritt, Angriff oder Einschüchtern). |\r\n| **16** | Bluthand | Du heilst 1W8 TP, wenn du einen Gegner mit einem kritischen Treffer besiegst. |\r\n| **18** | Kugelfest | Resistenz 3 gegen Schusswaffenschaden. |\r\n| **20** | Kriegsveteran | Du ignorierst Mali durch Verwundung oder Erschöpfung für 1 Minute. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Frontsoldat**\r\nEin Veteran der großen Kriege. Du bist auf Disziplin und Formation trainiert.  \r\nErhalte zusätzliche +1 AC, wenn du dich neben einem Verbündeten befindest.\r\n\r\n### **Leibwächter**\r\nDu bist Spezialist im Schutz anderer.  \r\nWenn du die Aktion *Verteidigen* auf einen Verbündeten anwendest, erhält dieser zusätzlich Resistenz 2 gegen physischen Schaden.\r\n\r\n### **Söldnerhauptmann**\r\nDu führst andere im Kampf.  \r\nEinmal pro Tag kannst du allen Verbündeten in 30 Fuß Reichweite einen +1 Bonus auf Angriff und Schaden für 1 Minute verleihen.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nSöldner sind die Realität der 1990er-Kriegswelt: ausgebrannt, bezahlt und gefährlich.  \r\nSie sind keine Helden – aber sie sind die, die überleben.  \r\nIm Spiel verkörpern sie Härte, Pragmatismus und Professionalität – die Kälte jener, die den Preis des Blutes kennen.",
       "featureIds": [
@@ -9398,7 +11710,8 @@
         "choice.class-feat.wachter.14",
         "choice.class-feat.wachter.16",
         "choice.class-feat.wachter.18",
-        "choice.class-feat.wachter.20"
+        "choice.class-feat.wachter.20",
+        "choice.class-skills.wachter"
       ],
       "description": "# **Wächter**\r\n**Quelle:** Welt-Regelwerk (Zeitalter des Goldes)\r\n\r\n---\r\n\r\n## **Flavortext**\r\n> „Wenn niemand mehr für das Richtige kämpft, bleibt nur noch das Schwert der Pflicht.“\r\n\r\nWächter sind die letzten Idealisten in einer Welt der Kompromisse. Sie glauben an Ordnung, Schutz und Verantwortung – selbst dann, wenn niemand mehr an sie glaubt. Ob sie als Stadtwachen, Paladine alter Glaubensrichtungen oder persönliche Leibgardisten elfischer Familien dienen, Wächter stehen zwischen Chaos und Zivilisation.  \r\nIhre Rüstung ist mehr als Metall – sie ist Symbol einer Überzeugung, dass Recht, Pflicht und Ehre mehr bedeuten als Macht.\r\n\r\n---\r\n\r\n## **Übersicht**\r\nWächter sind **disziplinierte Verteidiger**. Sie vereinen Kampfkunst mit moralischer oder ideologischer Stärke.  \r\nWährend Söldner für Geld kämpfen und Agenten für Ziele, kämpfen Wächter für Prinzipien. Manche folgen religiösen Orden wie dem **Ordo Lux Aeterna**, andere schützen Unschuldige aus reinem Pflichtgefühl.\r\n\r\n---\r\n\r\n## **Rolle im Spiel**\r\nDer Wächter ist der **Tank, Beschützer und moralische Anker** einer Gruppe. Er zieht Angriffe auf sich, schützt Verbündete und bringt Stabilität in chaotische Situationen.  \r\nSeine Stärke liegt in seiner Zähigkeit, seiner Disziplin und seiner Fähigkeit, seine Überzeugung zu einer Waffe zu machen.\r\n\r\n---\r\n\r\n## **Schlüsselattribut**\r\n**Konstitution** (Standhaftigkeit) oder **Charisma** (Glaube, Präsenz).  \r\nSekundär: **Stärke** (Nahkampf) oder **Weisheit** (Wahrnehmung, Führung).\r\n\r\n---\r\n\r\n## **Trefferpunkte**\r\n10 plus dein Konstitutionsmodifikator\r\n\r\n---\r\n\r\n## **Anfangsproficiencies**\r\n| Kategorie | Grad |\r\n|:--|:--|\r\n| **Rüstung** | Leichte, Mittlere, Schwere Rüstung, Schilde |\r\n| **Waffen** | Alle einfachen und militärischen Waffen |\r\n| **Rettungswürfe** | Zähigkeit (Experte), Willen (Experte), Reflex (Geübt) |\r\n| **Fertigkeiten** | Wahrnehmung (Geübt) |\r\n| **Fertigkeiten pro Stufe** | 3 + INT-Modifikator |\r\n| **Klassenmerkmal** | Eid, Wächterhaltung, Verteidigungsreaktionen |\r\n\r\n---\r\n\r\n## **Klassenmerkmale**\r\n\r\n### **Eid**\r\nDu legst einen Eid ab, der deine Pflicht und Macht bestimmt.  \r\nWähle eine der folgenden Richtungen:\r\n\r\n#### **Eid der Ordnung**\r\nDu glaubst an Gesetz und Struktur.  \r\n- Erhalte +1 auf Willenswürfe gegen mentale Effekte.  \r\n- Wenn du ein Verbündeten verteidigst, erhält dieser +1 AC.  \r\n\r\n#### **Eid des Lichts**\r\nDu dienst dem Schutz Unschuldiger oder einem göttlichen Prinzip.  \r\n- Du erhältst Fertigkeitstraining in Religion und Medizin.  \r\n- Einmal pro Tag kannst du *Lay on Hands* wirken (Attribut: Charisma).  \r\n\r\n#### **Eid des Stahls**\r\nDu vertraust allein auf die Waffe in deiner Hand.  \r\n- Du erhältst den Feat *Power Attack*.  \r\n- Wenn du einen Gegner besiegst, erhältst bis zum Ende deines nächsten Zuges +1 auf Angriffswürfe.  \r\n\r\n---\r\n\r\n### **Wächterhaltung (1. Stufe)**\r\nDu nimmst eine Position ein, um Verbündete zu schützen.  \r\n**Effekt:** Wenn du die Aktion *Verteidigen* ausführst, erhältst zusätzlich Resistenz 2 gegen physischen Schaden bis zum Beginn deines nächsten Zuges.  \r\nWenn du einen Schild führst, erhöhst du dessen Härte um 2.\r\n\r\n---\r\n\r\n### **Schutzreaktion (3. Stufe)**\r\nWenn ein Verbündeter innerhalb von 5 Fuß von dir angegriffen wird, kannst du als Reaktion versuchen, den Schlag abzufangen.  \r\nWürfle einen Reflexwurf gegen SG des Angriffs: bei Erfolg nimmst du die Hälfte des Schadens auf dich.\r\n\r\n---\r\n\r\n### **Standhaftigkeit (7. Stufe)**\r\nDu bist selbst unter Schmerz und Blutverlust unbeirrbar.  \r\nEinmal pro Tag kannst du einen misslungenen Zähigkeitswurf wiederholen.  \r\nAußerdem ignorierst du Mali durch Erschöpfung 1.\r\n\r\n---\r\n\r\n### **Heiliger Schwur (11. Stufe)**\r\nDein Eid verleiht dir außergewöhnliche Kraft.  \r\nEinmal pro Tag kannst du deinen Eid aktivieren:  \r\n- **Eid der Ordnung:** Du und Verbündete im Umkreis von 10 Fuß erhalten +1 auf AC und Rettungswürfe (1 Minute).  \r\n- **Eid des Lichts:** Du strahlst Licht aus, das Untote und Dämonen in 10 Fuß –1 auf Angriffe gibt.  \r\n- **Eid des Stahls:** Du erhältst +2 auf Schaden für 1 Minute.  \r\n\r\n---\r\n\r\n### **Eiserne Präsenz (15. Stufe)**\r\nDeine bloße Anwesenheit inspiriert Mut.  \r\nAlle Verbündeten im Umkreis von 10 Fuß erhalten +1 auf Willenswürfe gegen Furcht und mentale Effekte.\r\n\r\n---\r\n\r\n### **Letzter Schild (20. Stufe)**\r\nDu bist das Bollwerk, das niemals fällt.  \r\nWenn du auf 0 TP fallen würdest, bleibst du stattdessen bei 1 TP und kannst sofort eine Verteidigungsreaktion ausführen.  \r\nEinmal pro Tag kannst du alle negativen Zustände entfernen, wenn du dich entscheidest, 10 Minuten zu meditieren.\r\n\r\n---\r\n\r\n## **Klassen-Feats**\r\n\r\n| Stufe | Name | Effekt |\r\n|:--|:--|:--|\r\n| **1** | Schildparade | Wenn du den Schildblock nutzt, reduziere zusätzlichen Schaden um 2. |\r\n| **2** | Wachsamkeit | +1 auf Wahrnehmung und Initiative. |\r\n| **4** | Stählerne Verteidigung | +1 AC, solange du Rüstung trägst. |\r\n| **6** | Schutz des Schwachen | Wenn du einen Verbündeten verteidigst, erhält dieser Resistenz 2 gegen Schaden. |\r\n| **8** | Unerbittlich | Wenn du Schaden erleidest, reduziere ihn um 1 pro 5 Stufen. |\r\n| **10** | Heilende Berührung | Einmal pro Stunde kannst du 1W8 + CHA-Mod TP wiederherstellen. |\r\n| **12** | Wille des Eides | Immunität gegen Furcht für 1 Minute (1/Tag). |\r\n| **14** | Eiserne Bastion | +1 auf Zähigkeit, +2 auf AC, wenn du stillstehst. |\r\n| **16** | Unerschütterlich | Du kannst einen misslungenen Rettungswurf wiederholen (1/Tag). |\r\n| **18** | Licht der Hoffnung | Alle Verbündeten im Umkreis von 20 Fuß erhalten +1 auf Rettungswürfe. |\r\n| **20** | Wächter des Gleichgewichts | Du kannst einmal pro Tag zwischen Leben und Tod wählen: Einen Gefallenen retten oder einen Gegner endgültig bannen. |\r\n\r\n---\r\n\r\n## **Archetypen**\r\n\r\n### **Ordenswächter**\r\nDu bist Teil eines heiligen Ordens wie dem *Ordo Lux Aeterna*.  \r\nDu erhältst Fertigkeitstraining in Religion und Einschüchtern.  \r\nWenn du gegen dämonische oder magische Kreaturen kämpfst, erhältst +1 auf Schaden.\r\n\r\n### **Königswächter**\r\nDu schützt eine Person, nicht eine Idee.  \r\nWenn du die Aktion *Verteidigen* auf denselben Verbündeten anwendest, erhält dieser Resistenz 3 gegen physischen Schaden.\r\n\r\n### **Straßenpatrouille**\r\nDu bist Wächter der einfachen Leute.  \r\nDu erhältst +1 auf Wahrnehmung und Diplomatie in städtischen Gebieten und kannst „Bedrohung“ ohne Mali einschätzen.\r\n\r\n---\r\n\r\n## **Beschreibung im Spiel**\r\nWächter verkörpern Pflicht, Loyalität und Opferbereitschaft.  \r\nIn einer Welt der Korruption sind sie jene, die noch an Prinzipien glauben – auch wenn diese Prinzipien sie zerstören.  \r\nIm Spiel sind Wächter der Fels in der Brandung: beständig, aufopfernd, moralisch – und oft das letzte Licht im Dunkel.",
       "featureIds": [

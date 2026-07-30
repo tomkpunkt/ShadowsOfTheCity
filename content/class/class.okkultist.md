@@ -12,6 +12,8 @@ choiceIds:
   - choice.class-feat.okkultist.16
   - choice.class-feat.okkultist.18
   - choice.class-feat.okkultist.20
+  - choice.class-skills.okkultist
+  - choice.class-spells.okkultist
 featureIds:
   - class-feature.okkultist.okkultes-wissen
   - class-feature.okkultist.ritualmagie

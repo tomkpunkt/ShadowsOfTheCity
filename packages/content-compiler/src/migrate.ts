@@ -382,6 +382,39 @@ const migrateSupportingEntities = (): void => {
       `${name} ist eine verbindliche Compilerannahme aus dem Review.`
     );
   }
+
+  addEntity(
+    {
+      id: "choice.general-feat.1",
+      type: "choice",
+      name: "Allgemeines Feat Stufe 1",
+      status: "playtest",
+      choice: {
+        id: "choice.general-feat.1",
+        level: 1,
+        kind: "feat",
+        min: 1,
+        max: 1,
+        filter: {
+          entityTypes: ["feat"],
+          category: "general",
+          maxLevel: 1
+        },
+        prerequisites: [],
+        effects: [],
+        excludes: [],
+        repeatable: false
+      }
+    },
+    [sourcePath],
+    "Wähle auf Stufe 1 ein allgemeines Feat.",
+    {
+      warnings: [
+        "Der Altbestand definiert keinen vollständigen Feat-Zeitplan; diese Auswahl ist Playtest."
+      ],
+      manualFields: ["level", "min", "max"]
+    }
+  );
 };
 
 const classConfig: Record<string, { keyAttributes: string[]; hp: number; spellcasting?: string }> =
@@ -588,6 +621,77 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           manualFields: ["level", "effects"]
         }
       );
+    }
+
+    const skillChoiceId = `choice.class-skills.${slug(className)}`;
+    addEntity(
+      {
+        id: skillChoiceId,
+        type: "choice",
+        name: `${className}-Fertigkeiten`,
+        choice: {
+          id: skillChoiceId,
+          level: 1,
+          kind: "skill",
+          min: 4,
+          max: 4,
+          filter: { entityTypes: ["skill"] },
+          prerequisites: [{ class: { id: classId } }],
+          effects: [],
+          excludes: [],
+          repeatable: false
+        }
+      },
+      [document.relativePath],
+      `Wähle vier geübte Fertigkeiten für ${className}.`,
+      {
+        warnings: [
+          "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
+        ],
+        manualFields: ["min", "max"]
+      }
+    );
+    classChoices.push(skillChoiceId);
+
+    if (config.spellcasting !== undefined) {
+      const tradition = config.spellcasting.includes("arcane")
+        ? "arcane"
+        : config.spellcasting.includes("occult")
+          ? "occult"
+          : "primal";
+      const spellChoiceId = `choice.class-spells.${slug(className)}`;
+      addEntity(
+        {
+          id: spellChoiceId,
+          type: "choice",
+          name: `${className}-Zauber`,
+          choice: {
+            id: spellChoiceId,
+            level: 1,
+            kind: "spell",
+            min: 0,
+            max: 10,
+            filter: {
+              entityTypes: ["spell"],
+              traditions: [tradition],
+              maxLevel: 5
+            },
+            prerequisites: [{ class: { id: classId } }],
+            effects: [],
+            excludes: [],
+            repeatable: false
+          }
+        },
+        [document.relativePath],
+        `Wähle Zauber aus der ${tradition}-Tradition.`,
+        {
+          warnings: [
+            "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel."
+          ],
+          manualFields: ["min", "max"]
+        }
+      );
+      classChoices.push(spellChoiceId);
     }
 
     addEntity(
@@ -837,6 +941,36 @@ const migrateAncestries = (documents: IndexedDocument[]): void => {
       [document.relativePath],
       `Wähle eine Herkunft für ${name}.`
     );
+
+    for (const level of [1, 5, 9, 13, 17]) {
+      const featChoiceId = `choice.ancestry-feat.${slug(name)}.${String(level)}`;
+      addEntity(
+        {
+          id: featChoiceId,
+          type: "choice",
+          name: `${name}-Feat Stufe ${String(level)}`,
+          choice: {
+            id: featChoiceId,
+            level,
+            kind: "feat",
+            min: 1,
+            max: 1,
+            filter: {
+              entityTypes: ["feat"],
+              ancestryId,
+              category: "ancestry",
+              maxLevel: level
+            },
+            prerequisites: [{ ancestry: { id: ancestryId } }],
+            effects: [],
+            excludes: featureIds,
+            repeatable: false
+          }
+        },
+        [document.relativePath],
+        `Wähle ein verfügbares ${name}-Feat.`
+      );
+    }
   }
 };
 

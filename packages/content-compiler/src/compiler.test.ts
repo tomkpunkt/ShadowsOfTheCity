@@ -95,6 +95,33 @@ describe("compileContent", () => {
     });
   });
 
+  it("rejects references to the wrong entity type", async () => {
+    const contentDirectory = await createFixture({
+      "skill.md": skill(),
+      "feature.md": `---
+schemaVersion: 1
+id: class-feature.invalid-owner
+type: class-feature
+name: Falscher Besitzer
+source: source.core
+status: draft
+classId: skill.athletics
+level: 1
+---
+`
+    });
+    await expect(compileContent({ contentDirectory })).rejects.toMatchObject({
+      report: {
+        issues: expect.arrayContaining([
+          expect.objectContaining({
+            code: "REFERENCE_TYPE_MISMATCH",
+            path: "classId"
+          })
+        ])
+      }
+    });
+  });
+
   it("rejects an invalid predicate", async () => {
     const contentDirectory = await createFixture({
       "choice.md": `---
@@ -141,6 +168,32 @@ effects:
     );
   });
 
+  it("rejects levels outside the supported range", async () => {
+    const contentDirectory = await createFixture({
+      "feat.md": `---
+schemaVersion: 1
+id: feat.invalid-level
+type: feat
+name: Zu spÃ¤t
+source: source.core
+status: draft
+category: general
+level: 21
+---
+`
+    });
+    await expect(compileContent({ contentDirectory })).rejects.toMatchObject({
+      report: {
+        issues: expect.arrayContaining([
+          expect.objectContaining({
+            code: "SCHEMA_VALIDATION_FAILED",
+            path: expect.stringContaining("level")
+          })
+        ])
+      }
+    });
+  });
+
   it("rejects a required choice without matching options", async () => {
     const contentDirectory = await createFixture({
       "choice.md": `---
@@ -166,6 +219,56 @@ choice:
       report: {
         issues: expect.arrayContaining([
           expect.objectContaining({ code: "CHOICE_WITHOUT_OPTIONS" })
+        ])
+      }
+    });
+  });
+
+  it("rejects choice dependency cycles", async () => {
+    const choice = (id: string, unlocks: string): string => `---
+schemaVersion: 1
+id: ${id}
+type: choice
+name: ${id}
+source: source.core
+status: draft
+choice:
+  id: ${id}
+  level: 1
+  kind: generic
+  min: 0
+  max: 1
+  effects:
+    - kind: unlock-choice
+      choiceId: ${unlocks}
+---
+`;
+    const contentDirectory = await createFixture({
+      "one.md": choice("choice.one", "choice.two"),
+      "two.md": choice("choice.two", "choice.one")
+    });
+
+    await expect(compileContent({ contentDirectory })).rejects.toMatchObject({
+      report: {
+        issues: expect.arrayContaining([
+          expect.objectContaining({ code: "CHOICE_DEPENDENCY_CYCLE" })
+        ])
+      }
+    });
+  });
+
+  it("rejects unsupported schema versions until an explicit migration runs", async () => {
+    const contentDirectory = await createFixture({
+      "legacy.md": skill().replace("schemaVersion: 1", "schemaVersion: 0")
+    });
+
+    await expect(compileContent({ contentDirectory })).rejects.toMatchObject({
+      report: {
+        issues: expect.arrayContaining([
+          expect.objectContaining({
+            code: "SCHEMA_VALIDATION_FAILED",
+            path: expect.stringContaining("schemaVersion")
+          })
         ])
       }
     });

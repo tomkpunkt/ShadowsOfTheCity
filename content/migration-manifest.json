@@ -3,7 +3,7 @@
     "ancestry": 8,
     "armor": 12,
     "background": 8,
-    "choice": 115,
+    "choice": 168,
     "class": 9,
     "class-feature": 99,
     "creature": 34,
@@ -42,7 +42,7 @@
     "weapon": 40
   },
   "generatedAt": "deterministic-from-repository",
-  "generatedEntityCount": 681,
+  "generatedEntityCount": 734,
   "schemaVersion": 1,
   "sourceCount": 64,
   "sources": [
@@ -201,6 +201,7 @@
         "choice.class-feat.agent.4",
         "choice.class-feat.agent.6",
         "choice.class-feat.agent.8",
+        "choice.class-skills.agent",
         "class-feature.agent.deckname",
         "class-feature.agent.kalter-verstand",
         "class-feature.agent.katalysator",
@@ -229,10 +230,18 @@
         "feat.class.agent.verhorspezialist",
         "trait.class-option.agent.vorgehensweise"
       ],
-      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "max",
+        "min",
+        "trainedSkillChoices"
+      ],
       "path": "classes/klasse_agent.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
       ]
     },
@@ -249,6 +258,7 @@
         "choice.class-feat.ingenieur.4",
         "choice.class-feat.ingenieur.6",
         "choice.class-feat.ingenieur.8",
+        "choice.class-skills.ingenieur",
         "choice.ingenieur.fachrichtung",
         "class-feature.ingenieur.fachrichtung",
         "class-feature.ingenieur.fachrichtung.chemietechnik",
@@ -279,10 +289,18 @@
         "feat.class.ingenieur.stabilisierung",
         "trait.class-option.ingenieur.fachrichtung"
       ],
-      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "max",
+        "min",
+        "trainedSkillChoices"
+      ],
       "path": "classes/klasse_ingenieur.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
       ]
     },
@@ -299,6 +317,8 @@
         "choice.class-feat.magier.4",
         "choice.class-feat.magier.6",
         "choice.class-feat.magier.8",
+        "choice.class-skills.magier",
+        "choice.class-spells.magier",
         "choice.magier.schule-der-magie",
         "class-feature.magier.arkane-meisterschaft",
         "class-feature.magier.arkaner-fokus",
@@ -334,6 +354,8 @@
         "effects",
         "initialProficiencies",
         "level",
+        "max",
+        "min",
         "proficiencyByLevel",
         "slotsByLevel",
         "trainedSkillChoices"
@@ -341,6 +363,8 @@
       "path": "classes/klasse_magier.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
+        "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
         "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
       ]
@@ -358,6 +382,7 @@
         "choice.class-feat.mediziner.4",
         "choice.class-feat.mediziner.6",
         "choice.class-feat.mediziner.8",
+        "choice.class-skills.mediziner",
         "choice.mediziner.fachrichtung",
         "class-feature.mediziner.erste-hilfe",
         "class-feature.mediziner.erweiterte-diagnostik",
@@ -388,10 +413,18 @@
         "feat.class.mediziner.wunderdoktor",
         "trait.class-option.mediziner.fachrichtung"
       ],
-      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "max",
+        "min",
+        "trainedSkillChoices"
+      ],
       "path": "classes/klasse_mediziner.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
       ]
     },
@@ -408,6 +441,8 @@
         "choice.class-feat.okkultist.4",
         "choice.class-feat.okkultist.6",
         "choice.class-feat.okkultist.8",
+        "choice.class-skills.okkultist",
+        "choice.class-spells.okkultist",
         "choice.okkultist.pfad-der-macht",
         "class-feature.okkultist.okkulte-prasenz",
         "class-feature.okkultist.okkultes-wissen",
@@ -443,6 +478,8 @@
         "effects",
         "initialProficiencies",
         "level",
+        "max",
+        "min",
         "proficiencyByLevel",
         "slotsByLevel",
         "trainedSkillChoices"
@@ -450,6 +487,8 @@
       "path": "classes/klasse_okkultist.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
+        "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
         "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
       ]
@@ -467,6 +506,7 @@
         "choice.class-feat.raufbold.4",
         "choice.class-feat.raufbold.6",
         "choice.class-feat.raufbold.8",
+        "choice.class-skills.raufbold",
         "class-feature.raufbold.improvisation",
         "class-feature.raufbold.instinktschlag",
         "class-feature.raufbold.kampfinstinkt",
@@ -491,10 +531,18 @@
         "feat.class.raufbold.veteran-der-gassen",
         "feat.class.raufbold.zornreserve"
       ],
-      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "max",
+        "min",
+        "trainedSkillChoices"
+      ],
       "path": "classes/klasse_raufbold.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
       ]
     },
@@ -511,6 +559,8 @@
         "choice.class-feat.schamane.4",
         "choice.class-feat.schamane.6",
         "choice.class-feat.schamane.8",
+        "choice.class-skills.schamane",
+        "choice.class-spells.schamane",
         "choice.schamane.geisterpfad",
         "class-feature.schamane.ahnensegen",
         "class-feature.schamane.ahnenverbindung",
@@ -546,6 +596,8 @@
         "effects",
         "initialProficiencies",
         "level",
+        "max",
+        "min",
         "proficiencyByLevel",
         "slotsByLevel",
         "trainedSkillChoices"
@@ -553,6 +605,8 @@
       "path": "classes/klasse_schamane.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
+        "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
         "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
       ]
@@ -570,6 +624,7 @@
         "choice.class-feat.soldner.4",
         "choice.class-feat.soldner.6",
         "choice.class-feat.soldner.8",
+        "choice.class-skills.soldner",
         "choice.soldner.kampfstil",
         "class-feature.soldner.erfahrener-kampfer",
         "class-feature.soldner.kampfstil",
@@ -598,10 +653,18 @@
         "feat.class.soldner.zielsicherer-schlag",
         "trait.class-option.soldner.kampfstil"
       ],
-      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "max",
+        "min",
+        "trainedSkillChoices"
+      ],
       "path": "classes/klasse_soeldner.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
       ]
     },
@@ -618,6 +681,7 @@
         "choice.class-feat.wachter.4",
         "choice.class-feat.wachter.6",
         "choice.class-feat.wachter.8",
+        "choice.class-skills.wachter",
         "choice.wachter.eid",
         "class-feature.wachter.eid",
         "class-feature.wachter.eid.eid-der-ordnung",
@@ -646,10 +710,18 @@
         "feat.class.wachter.wille-des-eides",
         "trait.class-option.wachter.eid"
       ],
-      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "max",
+        "min",
+        "trainedSkillChoices"
+      ],
       "path": "classes/klasse_waechter.md",
       "warnings": [
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
       ]
     },
@@ -909,6 +981,11 @@
     {
       "entityIds": [
         "ancestry.elf",
+        "choice.ancestry-feat.elf.1",
+        "choice.ancestry-feat.elf.13",
+        "choice.ancestry-feat.elf.17",
+        "choice.ancestry-feat.elf.5",
+        "choice.ancestry-feat.elf.9",
         "choice.heritage.elf",
         "feat.ancestry-feature.elf.volksfertigkeit-klares-denken",
         "feat.ancestry.elf.aurenleser",
@@ -929,6 +1006,11 @@
     {
       "entityIds": [
         "ancestry.gnom",
+        "choice.ancestry-feat.gnom.1",
+        "choice.ancestry-feat.gnom.13",
+        "choice.ancestry-feat.gnom.17",
+        "choice.ancestry-feat.gnom.5",
+        "choice.ancestry-feat.gnom.9",
         "choice.heritage.gnom",
         "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb",
         "feat.ancestry.gnom.funkengeist",
@@ -949,6 +1031,11 @@
     {
       "entityIds": [
         "ancestry.goblin",
+        "choice.ancestry-feat.goblin.1",
+        "choice.ancestry-feat.goblin.13",
+        "choice.ancestry-feat.goblin.17",
+        "choice.ancestry-feat.goblin.5",
+        "choice.ancestry-feat.goblin.9",
         "choice.heritage.goblin",
         "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent",
         "feat.ancestry.goblin.chaosmeister",
@@ -969,6 +1056,11 @@
     {
       "entityIds": [
         "ancestry.halbling",
+        "choice.ancestry-feat.halbling.1",
+        "choice.ancestry-feat.halbling.13",
+        "choice.ancestry-feat.halbling.17",
+        "choice.ancestry-feat.halbling.5",
+        "choice.ancestry-feat.halbling.9",
         "choice.heritage.halbling",
         "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind",
         "feat.ancestry.halbling.gemeinschaftsgeist",
@@ -989,6 +1081,11 @@
     {
       "entityIds": [
         "ancestry.mensch",
+        "choice.ancestry-feat.mensch.1",
+        "choice.ancestry-feat.mensch.13",
+        "choice.ancestry-feat.mensch.17",
+        "choice.ancestry-feat.mensch.5",
+        "choice.ancestry-feat.mensch.9",
         "choice.heritage.mensch",
         "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig",
         "feat.ancestry.mensch.erfindergeist",
@@ -1009,6 +1106,11 @@
     {
       "entityIds": [
         "ancestry.ork",
+        "choice.ancestry-feat.ork.1",
+        "choice.ancestry-feat.ork.13",
+        "choice.ancestry-feat.ork.17",
+        "choice.ancestry-feat.ork.5",
+        "choice.ancestry-feat.ork.9",
         "choice.heritage.ork",
         "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz",
         "feat.ancestry.ork.blutiger-instinkt",
@@ -1029,6 +1131,11 @@
     {
       "entityIds": [
         "ancestry.tiefling",
+        "choice.ancestry-feat.tiefling.1",
+        "choice.ancestry-feat.tiefling.13",
+        "choice.ancestry-feat.tiefling.17",
+        "choice.ancestry-feat.tiefling.5",
+        "choice.ancestry-feat.tiefling.9",
         "choice.heritage.tiefling",
         "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe",
         "feat.ancestry.tiefling.blick-der-dunkelheit",
@@ -1055,6 +1162,11 @@
     {
       "entityIds": [
         "ancestry.zwerg",
+        "choice.ancestry-feat.zwerg.1",
+        "choice.ancestry-feat.zwerg.13",
+        "choice.ancestry-feat.zwerg.17",
+        "choice.ancestry-feat.zwerg.5",
+        "choice.ancestry-feat.zwerg.9",
         "choice.heritage.zwerg",
         "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft",
         "feat.ancestry.zwerg.eisenmagen",
@@ -1086,6 +1198,7 @@
     },
     {
       "entityIds": [
+        "choice.general-feat.1",
         "language.common",
         "language.draconic",
         "language.dwarven",
@@ -1142,9 +1255,10 @@
         "trait.legacy",
         "trait.magic"
       ],
-      "manualFields": [],
+      "manualFields": ["level", "max", "min"],
       "path": "rules/core_mechanics.md",
       "warnings": [
+        "Der Altbestand definiert keinen vollständigen Feat-Zeitplan; diese Auswahl ist Playtest.",
         "Der alte Wahrnehmungsblock wurde getrennt: Wahrnehmung ist eine eigene Proficiency."
       ]
     },

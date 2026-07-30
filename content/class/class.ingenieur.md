@@ -12,6 +12,7 @@ choiceIds:
   - choice.class-feat.ingenieur.16
   - choice.class-feat.ingenieur.18
   - choice.class-feat.ingenieur.20
+  - choice.class-skills.ingenieur
 featureIds:
   - class-feature.ingenieur.tuftlergeist
   - class-feature.ingenieur.werkbank

@@ -1,0 +1,27 @@
+---
+category: class
+classId: class.ingenieur
+effects:
+  - kind: text
+    machineReadable: false
+    text: Deine Geräte halten doppelt so lange, bevor sie versagen.
+id: feat.class.ingenieur.stabiler-aufbau
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_ingenieur.md
+level: 2
+name: Stabiler Aufbau
+prerequisites:
+  - class:
+      id: class.ingenieur
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.legacy
+type: feat
+---
+
+Deine Geräte halten doppelt so lange, bevor sie versagen.

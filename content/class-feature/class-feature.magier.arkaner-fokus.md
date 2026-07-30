@@ -1,0 +1,29 @@
+---
+choiceIds: []
+classId: class.magier
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du kannst Magie durch ein Artefakt, einen Ring oder ein Symbol kanalisieren. Wenn du einen Zauber wirkst, der Schaden oder Heilung verursacht, kannst du einmal pro Runde +1 auf den Effektwurf addieren. Wenn dein Fokus zerstört wird, kannst du ihn innerhalb einer Stunde neu binden. ---
+id: class-feature.magier.arkaner-fokus
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_magier.md
+level: 3
+name: Arkaner Fokus
+prerequisites: []
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.legacy
+type: class-feature
+---
+
+Du kannst Magie durch ein Artefakt, einen Ring oder ein Symbol kanalisieren.  
+Wenn du einen Zauber wirkst, der Schaden oder Heilung verursacht, kannst du einmal pro Runde +1 auf den Effektwurf addieren.  
+Wenn dein Fokus zerstört wird, kannst du ihn innerhalb einer Stunde neu binden.
+
+---

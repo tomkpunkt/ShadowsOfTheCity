@@ -1,0 +1,30 @@
+---
+ancestryId: ancestry.mensch
+category: ancestry
+effects:
+  - kind: text
+    machineReadable: false
+    text: "Menschen sind dafür bekannt, sich blitzschnell an neue Situationen anzupassen. Effekt: Du erhältst auf der 1. Stufe einen zusätzlichen Fertigkeits-Fehlerpunkt, den du für ein beliebiges Volks- oder Klassenmerkmal verwenden kannst, für das du die Voraussetzungen erfüllst. ---"
+id: feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig
+legacy:
+  notes: []
+  paths:
+    - races/mensch_zeitalter_des_goldes.md
+level: 1
+name: Volksfertigkeit – Anpassungsfähig
+prerequisites:
+  - ancestry:
+      id: ancestry.mensch
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.ancestry
+type: feat
+---
+
+Menschen sind dafür bekannt, sich blitzschnell an neue Situationen anzupassen.  
+**Effekt:** Du erhältst auf der 1. Stufe einen zusätzlichen Fertigkeits-Fehlerpunkt, den du für ein beliebiges Volks- oder Klassenmerkmal verwenden kannst, für das du die Voraussetzungen erfüllst.
+
+---

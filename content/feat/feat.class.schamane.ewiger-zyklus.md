@@ -1,0 +1,27 @@
+---
+category: class
+classId: class.schamane
+effects:
+  - kind: text
+    machineReadable: false
+    text: Wenn du stirbst, hinterlässt du eine heilende Aura (1W6 pro Runde, 1 Minute).
+id: feat.class.schamane.ewiger-zyklus
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_schamane.md
+level: 18
+name: Ewiger Zyklus
+prerequisites:
+  - class:
+      id: class.schamane
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.legacy
+type: feat
+---
+
+Wenn du stirbst, hinterlässt du eine heilende Aura (1W6 pro Runde, 1 Minute).

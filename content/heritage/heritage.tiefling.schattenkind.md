@@ -1,0 +1,25 @@
+---
+ancestryId: ancestry.tiefling
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du bist in Dunkelheit geboren oder mutiert. Du erhältst Dunkelsicht und einen Bonus von +1 auf Heimlichkeitsproben in schwachem Licht.
+id: heritage.tiefling.schattenkind
+legacy:
+  notes: []
+  paths:
+    - races/tieflinge_zeitalter_des_goldes.md
+name: Schattenkind
+prerequisites:
+  - ancestry:
+      id: ancestry.tiefling
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.ancestry
+type: heritage
+---
+
+Du bist in Dunkelheit geboren oder mutiert. Du erhältst Dunkelsicht und einen Bonus von +1 auf Heimlichkeitsproben in schwachem Licht.

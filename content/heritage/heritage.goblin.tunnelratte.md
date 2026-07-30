@@ -1,0 +1,25 @@
+---
+ancestryId: ancestry.goblin
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du bewegst dich mühelos durch enge Räume. Du kannst dich durch Felder von beengtem Gelände ohne Malus bewegen und erhältst +1 auf Wahrnehmung in Dunkelheit.
+id: heritage.goblin.tunnelratte
+legacy:
+  notes: []
+  paths:
+    - races/goblins_zeitalter_des_goldes.md
+name: Tunnelratte
+prerequisites:
+  - ancestry:
+      id: ancestry.goblin
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.ancestry
+type: heritage
+---
+
+Du bewegst dich mühelos durch enge Räume. Du kannst dich durch Felder von beengtem Gelände ohne Malus bewegen und erhältst +1 auf Wahrnehmung in Dunkelheit.

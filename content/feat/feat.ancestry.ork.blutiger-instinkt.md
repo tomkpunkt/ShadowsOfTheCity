@@ -1,0 +1,27 @@
+---
+ancestryId: ancestry.ork
+category: ancestry
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du spürst Gefahr, bevor sie dich erreicht. Du erhältst einen +1 Situationsbonus auf Initiative und Wahrnehmungswürfe gegen versteckte Feinde.
+id: feat.ancestry.ork.blutiger-instinkt
+legacy:
+  notes: []
+  paths:
+    - races/orks_zeitalter_des_goldes.md
+level: 5
+name: Blutiger Instinkt
+prerequisites:
+  - ancestry:
+      id: ancestry.ork
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.ancestry
+type: feat
+---
+
+Du spürst Gefahr, bevor sie dich erreicht. Du erhältst einen +1 Situationsbonus auf Initiative und Wahrnehmungswürfe gegen versteckte Feinde.

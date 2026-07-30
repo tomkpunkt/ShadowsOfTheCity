@@ -1,0 +1,30 @@
+---
+choiceIds: []
+classId: class.schamane
+effects:
+  - kind: text
+    machineReadable: false
+    text: Deine Ahnen schützen dich. Einmal pro Tag kannst du einen misslungenen Willenswurf wiederholen. Wenn du dies tust, erscheint ein geisterhafter Schimmer um dich. Außerdem erhältst du Resistenz 2 gegen mentale Effekte. ---
+id: class-feature.schamane.ahnensegen
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_schamane.md
+level: 7
+name: Ahnensegen
+prerequisites: []
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.legacy
+type: class-feature
+---
+
+Deine Ahnen schützen dich.  
+Einmal pro Tag kannst du einen misslungenen Willenswurf wiederholen.  
+Wenn du dies tust, erscheint ein geisterhafter Schimmer um dich.  
+Außerdem erhältst du Resistenz 2 gegen mentale Effekte.
+
+---

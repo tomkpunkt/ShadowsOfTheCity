@@ -1,0 +1,1304 @@
+{
+  "actualCounts": {
+    "ancestry": 8,
+    "armor": 12,
+    "background": 8,
+    "choice": 115,
+    "class": 9,
+    "class-feature": 99,
+    "creature": 34,
+    "equipment": 28,
+    "feat": 195,
+    "heritage": 40,
+    "language": 10,
+    "proficiency": 16,
+    "rule": 4,
+    "skill": 19,
+    "spell": 14,
+    "spellcasting-progression": 3,
+    "trait": 27,
+    "weapon": 40
+  },
+  "decisions": [
+    "Legacy-Dateien bleiben unverändert; Markdown unter content/ ist der neue kanonische Build-Eingang.",
+    "IDs werden einmalig aus deutschem Anzeigenamen und Eigentümerkontext erzeugt und danach nicht mehr aus Namen abgeleitet.",
+    "Nicht zuverlässig formalisierbare Regeln werden als ausdrücklich nicht maschinenlesbare Text-Effekte markiert.",
+    "Bei widersprüchlichen Zauberrängen gilt vorläufig die Detaildatei.",
+    "Bestiary-Statblocks bleiben als legacySystem=dnd5e isoliert.",
+    "Die Inventarzahl 41 Waffen wurde auf 40 eindeutige Konzepte korrigiert: Seelenfänger steht in beiden Waffenquellen.",
+    "Backgrounds und Zauberprogressionen sind dokumentierte Playtest-Ergänzungen."
+  ],
+  "expectedMinimums": {
+    "ancestry": 8,
+    "armor": 12,
+    "background": 8,
+    "class": 9,
+    "class-feature": 99,
+    "creature": 34,
+    "equipment": 28,
+    "feat": 195,
+    "heritage": 40,
+    "spell": 14,
+    "weapon": 40
+  },
+  "generatedAt": "deterministic-from-repository",
+  "generatedEntityCount": 681,
+  "schemaVersion": 1,
+  "sourceCount": 64,
+  "sources": [
+    {
+      "entityIds": [
+        "creature.biotechnologische-wesen",
+        "creature.cyborg",
+        "creature.damon",
+        "creature.elementar",
+        "creature.geheimdienstler",
+        "creature.geist",
+        "creature.junior-manager",
+        "creature.ki-system",
+        "creature.konzernagent",
+        "creature.konzernangestellter",
+        "creature.konzernschlager",
+        "creature.konzernvorstand",
+        "creature.krimineller",
+        "creature.magitech-konstrukt",
+        "creature.ork-schlager",
+        "creature.ork-schlager-boss",
+        "creature.ork-schlager-chef",
+        "creature.ork-schlager-lehrling",
+        "creature.ork-schlager-veteran",
+        "creature.polizist",
+        "creature.psychische-entitat",
+        "creature.roboter",
+        "creature.senior-manager",
+        "creature.strassenschlager",
+        "creature.strassenschlager-boss",
+        "creature.strassenschlager-chef",
+        "creature.strassenschlager-lehrling",
+        "creature.strassenschlager-veteran"
+      ],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/bestiary_overview.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "bestiary/bestiary_template.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["creature.junior-manager"],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/junior_manager.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": [
+        "creature.konzernagent",
+        "creature.konzernagent-chef",
+        "creature.konzernagent-lehrling",
+        "creature.konzernagent-veteran"
+      ],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/konzernagent.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": [
+        "creature.junior-manager",
+        "creature.konzernangestellter",
+        "creature.konzernvorstand",
+        "creature.senior-manager"
+      ],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/konzernangestellter.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": [
+        "creature.konzernschlager",
+        "creature.konzernschlager-chef",
+        "creature.konzernschlager-lehrling",
+        "creature.konzernschlager-veteran"
+      ],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/konzernschlaeger.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": ["creature.konzernvorstand"],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/konzernvorstand.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert."
+      ]
+    },
+    {
+      "entityIds": [
+        "creature.ork-schlager",
+        "creature.ork-schlager-boss",
+        "creature.ork-schlager-chef",
+        "creature.ork-schlager-lehrling",
+        "creature.ork-schlager-veteran"
+      ],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/ork_schlaeger.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": ["creature.senior-manager"],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/senior_manager.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert."
+      ]
+    },
+    {
+      "entityIds": [
+        "creature.strassenschlager",
+        "creature.strassenschlager-boss",
+        "creature.strassenschlager-chef",
+        "creature.strassenschlager-lehrling",
+        "creature.strassenschlager-veteran"
+      ],
+      "manualFields": ["effects", "level"],
+      "path": "bestiary/humanoid/strassenschlaeger.md",
+      "warnings": [
+        "Der Statblock stammt aus einem D&D-5e-ähnlichen System und ist noch nicht auf SotC-Balance migriert.",
+        "Ein gebrochener Herausforderungsgrad wurde vorläufig auf Stufe 0 abgebildet."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.agent.vorgehensweise",
+        "choice.class-feat.agent.1",
+        "choice.class-feat.agent.10",
+        "choice.class-feat.agent.12",
+        "choice.class-feat.agent.14",
+        "choice.class-feat.agent.16",
+        "choice.class-feat.agent.18",
+        "choice.class-feat.agent.2",
+        "choice.class-feat.agent.20",
+        "choice.class-feat.agent.4",
+        "choice.class-feat.agent.6",
+        "choice.class-feat.agent.8",
+        "class-feature.agent.deckname",
+        "class-feature.agent.kalter-verstand",
+        "class-feature.agent.katalysator",
+        "class-feature.agent.phantom",
+        "class-feature.agent.schnelle-reaktion",
+        "class-feature.agent.spionageausbildung",
+        "class-feature.agent.unauffalligkeit",
+        "class-feature.agent.vorgehensweise",
+        "class-feature.agent.vorgehensweise.attentater",
+        "class-feature.agent.vorgehensweise.infiltrator",
+        "class-feature.agent.vorgehensweise.manipulator",
+        "class.agent",
+        "feat.archetype.agent.attentater",
+        "feat.archetype.agent.doppelagent",
+        "feat.archetype.agent.informationsbroker",
+        "feat.class.agent.doppelte-agenda",
+        "feat.class.agent.geist-des-netzes",
+        "feat.class.agent.improvisierter-angriff",
+        "feat.class.agent.lautloser-schritt",
+        "feat.class.agent.meister-der-schatten",
+        "feat.class.agent.perfekte-luge",
+        "feat.class.agent.schattenlinie",
+        "feat.class.agent.schwarzes-dossier",
+        "feat.class.agent.tarnidentitat",
+        "feat.class.agent.unsichtbare-hand",
+        "feat.class.agent.verhorspezialist",
+        "trait.class-option.agent.vorgehensweise"
+      ],
+      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "path": "classes/klasse_agent.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.ingenieur.1",
+        "choice.class-feat.ingenieur.10",
+        "choice.class-feat.ingenieur.12",
+        "choice.class-feat.ingenieur.14",
+        "choice.class-feat.ingenieur.16",
+        "choice.class-feat.ingenieur.18",
+        "choice.class-feat.ingenieur.2",
+        "choice.class-feat.ingenieur.20",
+        "choice.class-feat.ingenieur.4",
+        "choice.class-feat.ingenieur.6",
+        "choice.class-feat.ingenieur.8",
+        "choice.ingenieur.fachrichtung",
+        "class-feature.ingenieur.fachrichtung",
+        "class-feature.ingenieur.fachrichtung.chemietechnik",
+        "class-feature.ingenieur.fachrichtung.elektronik",
+        "class-feature.ingenieur.fachrichtung.maschinenbau",
+        "class-feature.ingenieur.fachrichtung.werkstattgeneralist",
+        "class-feature.ingenieur.feldtechniker",
+        "class-feature.ingenieur.genie-des-goldes",
+        "class-feature.ingenieur.improvisation",
+        "class-feature.ingenieur.konstrukteursblick",
+        "class-feature.ingenieur.technische-meisterleistung",
+        "class-feature.ingenieur.tuftlergeist",
+        "class-feature.ingenieur.werkbank",
+        "class.ingenieur",
+        "feat.archetype.ingenieur.chemiker",
+        "feat.archetype.ingenieur.feldmechaniker",
+        "feat.archetype.ingenieur.waffenmeister-der-werkstatt",
+        "feat.class.ingenieur.energiesparer",
+        "feat.class.ingenieur.explosionsspezialist",
+        "feat.class.ingenieur.feine-justierung",
+        "feat.class.ingenieur.improvisierter-erfinder",
+        "feat.class.ingenieur.ingenieurslogik",
+        "feat.class.ingenieur.konstrukteurssegen",
+        "feat.class.ingenieur.mechatroniker",
+        "feat.class.ingenieur.meistertechniker",
+        "feat.class.ingenieur.notfallbastler",
+        "feat.class.ingenieur.stabiler-aufbau",
+        "feat.class.ingenieur.stabilisierung",
+        "trait.class-option.ingenieur.fachrichtung"
+      ],
+      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "path": "classes/klasse_ingenieur.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.magier.1",
+        "choice.class-feat.magier.10",
+        "choice.class-feat.magier.12",
+        "choice.class-feat.magier.14",
+        "choice.class-feat.magier.16",
+        "choice.class-feat.magier.18",
+        "choice.class-feat.magier.2",
+        "choice.class-feat.magier.20",
+        "choice.class-feat.magier.4",
+        "choice.class-feat.magier.6",
+        "choice.class-feat.magier.8",
+        "choice.magier.schule-der-magie",
+        "class-feature.magier.arkane-meisterschaft",
+        "class-feature.magier.arkaner-fokus",
+        "class-feature.magier.arkanes-studium",
+        "class-feature.magier.geflechtverstandnis",
+        "class-feature.magier.huter-des-wissens",
+        "class-feature.magier.schule-der-magie",
+        "class-feature.magier.schule-der-magie.schule-der-elemente",
+        "class-feature.magier.schule-der-magie.schule-der-erkenntnis",
+        "class-feature.magier.schule-der-magie.schule-der-schatten",
+        "class-feature.magier.schule-der-magie.schule-des-schutzes",
+        "class-feature.magier.zauberbuch",
+        "class-feature.magier.zaubererweiterung",
+        "class.magier",
+        "feat.archetype.magier.akademiker-der-foderation",
+        "feat.archetype.magier.einsiedler-des-sudblocks",
+        "feat.archetype.magier.ratsschuler",
+        "feat.class.magier.arkane-verbindung",
+        "feat.class.magier.arkaner-schild",
+        "feat.class.magier.arkaner-sturm",
+        "feat.class.magier.doppelte-formel",
+        "feat.class.magier.geflechtsresonanz",
+        "feat.class.magier.konzentrationsmeister",
+        "feat.class.magier.magische-theorie",
+        "feat.class.magier.meister-des-geflechts",
+        "feat.class.magier.ritualist",
+        "feat.class.magier.verbesserter-fokus",
+        "feat.class.magier.zauberfluss",
+        "spellcasting.arcane-prepared",
+        "trait.class-option.magier.schule-der-magie"
+      ],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "proficiencyByLevel",
+        "slotsByLevel",
+        "trainedSkillChoices"
+      ],
+      "path": "classes/klasse_magier.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
+        "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.mediziner.1",
+        "choice.class-feat.mediziner.10",
+        "choice.class-feat.mediziner.12",
+        "choice.class-feat.mediziner.14",
+        "choice.class-feat.mediziner.16",
+        "choice.class-feat.mediziner.18",
+        "choice.class-feat.mediziner.2",
+        "choice.class-feat.mediziner.20",
+        "choice.class-feat.mediziner.4",
+        "choice.class-feat.mediziner.6",
+        "choice.class-feat.mediziner.8",
+        "choice.mediziner.fachrichtung",
+        "class-feature.mediziner.erste-hilfe",
+        "class-feature.mediziner.erweiterte-diagnostik",
+        "class-feature.mediziner.fachrichtung",
+        "class-feature.mediziner.fachrichtung.chirurg",
+        "class-feature.mediziner.fachrichtung.feldarzt",
+        "class-feature.mediziner.fachrichtung.forscher",
+        "class-feature.mediziner.fachrichtung.psychologe",
+        "class-feature.mediziner.heilgenie",
+        "class-feature.mediziner.lebensretter",
+        "class-feature.mediziner.medizinische-ausbildung",
+        "class-feature.mediziner.medizinische-prazision",
+        "class-feature.mediziner.schnelle-stabilisierung",
+        "class.mediziner",
+        "feat.archetype.mediziner.feldsanitater",
+        "feat.archetype.mediziner.klinikarzt",
+        "feat.archetype.mediziner.seuchenforscher",
+        "feat.class.mediziner.adrenalinschub",
+        "feat.class.mediziner.antitoxin",
+        "feat.class.mediziner.kampfsanitater",
+        "feat.class.mediziner.lebenswille",
+        "feat.class.mediziner.meister-der-chirurgie",
+        "feat.class.mediziner.notfalltherapie",
+        "feat.class.mediziner.organisierter-geist",
+        "feat.class.mediziner.saubere-schnitte",
+        "feat.class.mediziner.schmerzstiller",
+        "feat.class.mediziner.stabile-hande",
+        "feat.class.mediziner.wunderdoktor",
+        "trait.class-option.mediziner.fachrichtung"
+      ],
+      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "path": "classes/klasse_mediziner.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.okkultist.1",
+        "choice.class-feat.okkultist.10",
+        "choice.class-feat.okkultist.12",
+        "choice.class-feat.okkultist.14",
+        "choice.class-feat.okkultist.16",
+        "choice.class-feat.okkultist.18",
+        "choice.class-feat.okkultist.2",
+        "choice.class-feat.okkultist.20",
+        "choice.class-feat.okkultist.4",
+        "choice.class-feat.okkultist.6",
+        "choice.class-feat.okkultist.8",
+        "choice.okkultist.pfad-der-macht",
+        "class-feature.okkultist.okkulte-prasenz",
+        "class-feature.okkultist.okkultes-wissen",
+        "class-feature.okkultist.pfad-der-macht",
+        "class-feature.okkultist.pfad-der-macht.blutpakt",
+        "class-feature.okkultist.pfad-der-macht.geisterruf",
+        "class-feature.okkultist.pfad-der-macht.runenpfad",
+        "class-feature.okkultist.pfad-der-macht.schattenpakt",
+        "class-feature.okkultist.ritualmagie",
+        "class-feature.okkultist.ruf-der-tiefe",
+        "class-feature.okkultist.seelenanker",
+        "class-feature.okkultist.verbotene-kraft",
+        "class-feature.okkultist.verbotener-aufstieg",
+        "class.okkultist",
+        "feat.archetype.okkultist.blutmagier",
+        "feat.archetype.okkultist.grabrufpriester",
+        "feat.archetype.okkultist.kultist",
+        "feat.class.okkultist.bannkreis",
+        "feat.class.okkultist.blutmagie",
+        "feat.class.okkultist.blutopfer",
+        "feat.class.okkultist.doppelte-prasenz",
+        "feat.class.okkultist.dunkle-bindung",
+        "feat.class.okkultist.geflechtzerriss",
+        "feat.class.okkultist.geisterarmee",
+        "feat.class.okkultist.hexensinn",
+        "feat.class.okkultist.runen-der-macht",
+        "feat.class.okkultist.seelenflamme",
+        "feat.class.okkultist.verfluchter-wille",
+        "spellcasting.occult-spontaneous",
+        "trait.class-option.okkultist.pfad-der-macht"
+      ],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "proficiencyByLevel",
+        "slotsByLevel",
+        "trainedSkillChoices"
+      ],
+      "path": "classes/klasse_okkultist.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
+        "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.raufbold.1",
+        "choice.class-feat.raufbold.10",
+        "choice.class-feat.raufbold.12",
+        "choice.class-feat.raufbold.14",
+        "choice.class-feat.raufbold.16",
+        "choice.class-feat.raufbold.18",
+        "choice.class-feat.raufbold.2",
+        "choice.class-feat.raufbold.20",
+        "choice.class-feat.raufbold.4",
+        "choice.class-feat.raufbold.6",
+        "choice.class-feat.raufbold.8",
+        "class-feature.raufbold.improvisation",
+        "class-feature.raufbold.instinktschlag",
+        "class-feature.raufbold.kampfinstinkt",
+        "class-feature.raufbold.strassenkampf",
+        "class-feature.raufbold.strassenlegende",
+        "class-feature.raufbold.unzerbrechlich",
+        "class-feature.raufbold.widerstandskraft",
+        "class-feature.raufbold.zahigkeit",
+        "class.raufbold",
+        "feat.archetype.raufbold.boxchampion",
+        "feat.archetype.raufbold.gassenkampfer",
+        "feat.archetype.raufbold.trunkenbold",
+        "feat.class.raufbold.dreckiger-trick",
+        "feat.class.raufbold.durchhaltewillen",
+        "feat.class.raufbold.fels-in-der-faust",
+        "feat.class.raufbold.improvisationsmeister",
+        "feat.class.raufbold.knochenbrecher",
+        "feat.class.raufbold.schlagabtausch",
+        "feat.class.raufbold.schlaghagel",
+        "feat.class.raufbold.schmerzresistenz",
+        "feat.class.raufbold.strassenkonig",
+        "feat.class.raufbold.veteran-der-gassen",
+        "feat.class.raufbold.zornreserve"
+      ],
+      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "path": "classes/klasse_raufbold.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.schamane.1",
+        "choice.class-feat.schamane.10",
+        "choice.class-feat.schamane.12",
+        "choice.class-feat.schamane.14",
+        "choice.class-feat.schamane.16",
+        "choice.class-feat.schamane.18",
+        "choice.class-feat.schamane.2",
+        "choice.class-feat.schamane.20",
+        "choice.class-feat.schamane.4",
+        "choice.class-feat.schamane.6",
+        "choice.class-feat.schamane.8",
+        "choice.schamane.geisterpfad",
+        "class-feature.schamane.ahnensegen",
+        "class-feature.schamane.ahnenverbindung",
+        "class-feature.schamane.geisterpfad",
+        "class-feature.schamane.geisterpfad.pfad-der-erde",
+        "class-feature.schamane.geisterpfad.pfad-der-flamme",
+        "class-feature.schamane.geisterpfad.pfad-des-geistes",
+        "class-feature.schamane.geisterpfad.pfad-des-sturms",
+        "class-feature.schamane.geisterpfad.pfad-des-wolfs",
+        "class-feature.schamane.grosser-ruf",
+        "class-feature.schamane.naturverbundenheit",
+        "class-feature.schamane.totemritual",
+        "class-feature.schamane.wachter-der-ahnen",
+        "class.schamane",
+        "feat.archetype.schamane.ahnenrufer",
+        "feat.archetype.schamane.heilpfad-wachter",
+        "feat.archetype.schamane.naturwandler",
+        "feat.class.schamane.ahnenschrei",
+        "feat.class.schamane.erdenhuter",
+        "feat.class.schamane.ewiger-zyklus",
+        "feat.class.schamane.flammenbote",
+        "feat.class.schamane.geisterblick",
+        "feat.class.schamane.geistwachter",
+        "feat.class.schamane.lebende-erde",
+        "feat.class.schamane.naturliche-fuhrung",
+        "feat.class.schamane.stimme-der-welt",
+        "feat.class.schamane.sturmlaufer",
+        "feat.class.schamane.totem-der-heilung",
+        "spellcasting.primal-prepared",
+        "trait.class-option.schamane.geisterpfad"
+      ],
+      "manualFields": [
+        "effects",
+        "initialProficiencies",
+        "level",
+        "proficiencyByLevel",
+        "slotsByLevel",
+        "trainedSkillChoices"
+      ],
+      "path": "classes/klasse_schamane.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
+        "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.soldner.1",
+        "choice.class-feat.soldner.10",
+        "choice.class-feat.soldner.12",
+        "choice.class-feat.soldner.14",
+        "choice.class-feat.soldner.16",
+        "choice.class-feat.soldner.18",
+        "choice.class-feat.soldner.2",
+        "choice.class-feat.soldner.20",
+        "choice.class-feat.soldner.4",
+        "choice.class-feat.soldner.6",
+        "choice.class-feat.soldner.8",
+        "choice.soldner.kampfstil",
+        "class-feature.soldner.erfahrener-kampfer",
+        "class-feature.soldner.kampfstil",
+        "class-feature.soldner.kampfstil.frontkampfer",
+        "class-feature.soldner.kampfstil.scharfschutze",
+        "class-feature.soldner.kampfstil.wachter",
+        "class-feature.soldner.kriegsinstinkt",
+        "class-feature.soldner.legende-des-krieges",
+        "class-feature.soldner.soldnerisches-training",
+        "class-feature.soldner.unnachgiebig",
+        "class-feature.soldner.veteran-des-goldes",
+        "class.soldner",
+        "feat.archetype.soldner.frontsoldat",
+        "feat.archetype.soldner.leibwachter",
+        "feat.archetype.soldner.soldnerhauptmann",
+        "feat.class.soldner.bluthand",
+        "feat.class.soldner.disziplinierter-kampfer",
+        "feat.class.soldner.drohende-prasenz",
+        "feat.class.soldner.eisenkorper",
+        "feat.class.soldner.kalter-profi",
+        "feat.class.soldner.klingenreflexe",
+        "feat.class.soldner.kriegsveteran",
+        "feat.class.soldner.kugelfest",
+        "feat.class.soldner.unerbittlicher-sturm",
+        "feat.class.soldner.veteraneninstinkt",
+        "feat.class.soldner.zielsicherer-schlag",
+        "trait.class-option.soldner.kampfstil"
+      ],
+      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "path": "classes/klasse_soeldner.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+      ]
+    },
+    {
+      "entityIds": [
+        "choice.class-feat.wachter.1",
+        "choice.class-feat.wachter.10",
+        "choice.class-feat.wachter.12",
+        "choice.class-feat.wachter.14",
+        "choice.class-feat.wachter.16",
+        "choice.class-feat.wachter.18",
+        "choice.class-feat.wachter.2",
+        "choice.class-feat.wachter.20",
+        "choice.class-feat.wachter.4",
+        "choice.class-feat.wachter.6",
+        "choice.class-feat.wachter.8",
+        "choice.wachter.eid",
+        "class-feature.wachter.eid",
+        "class-feature.wachter.eid.eid-der-ordnung",
+        "class-feature.wachter.eid.eid-des-lichts",
+        "class-feature.wachter.eid.eid-des-stahls",
+        "class-feature.wachter.eiserne-prasenz",
+        "class-feature.wachter.heiliger-schwur",
+        "class-feature.wachter.letzter-schild",
+        "class-feature.wachter.schutzreaktion",
+        "class-feature.wachter.standhaftigkeit",
+        "class-feature.wachter.wachterhaltung",
+        "class.wachter",
+        "feat.archetype.wachter.konigswachter",
+        "feat.archetype.wachter.ordenswachter",
+        "feat.archetype.wachter.strassenpatrouille",
+        "feat.class.wachter.eiserne-bastion",
+        "feat.class.wachter.heilende-beruhrung",
+        "feat.class.wachter.licht-der-hoffnung",
+        "feat.class.wachter.schildparade",
+        "feat.class.wachter.schutz-des-schwachen",
+        "feat.class.wachter.stahlerne-verteidigung",
+        "feat.class.wachter.unerbittlich",
+        "feat.class.wachter.unerschutterlich",
+        "feat.class.wachter.wachsamkeit",
+        "feat.class.wachter.wachter-des-gleichgewichts",
+        "feat.class.wachter.wille-des-eides",
+        "trait.class-option.wachter.eid"
+      ],
+      "manualFields": ["effects", "initialProficiencies", "level", "trainedSkillChoices"],
+      "path": "classes/klasse_waechter.md",
+      "warnings": [
+        "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
+        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+      ]
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "classes/TOC.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.athletischer-kampfstil"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_athletischer_kampfstil.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.arzt"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_beruf_arzt.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.mechaniker"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_beruf_mechaniker.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.defensiver-kampfer"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_defensiver_kaempfer.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.netzwerker"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_netzwerker.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.reflextraining"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_reflextraining.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.schattendealer"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_schattendealer.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.schnelle-erholung"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_schnelle_erholung.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.taktiker"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_taktiker.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.verbesserte-wahrnehmung"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_verbesserte_wahrnehmung.md",
+      "warnings": []
+    },
+    {
+      "entityIds": ["feat.general.zahigkeit"],
+      "manualFields": ["effects"],
+      "path": "feats/feat_zaehigkeit.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "feat.general.adrenalinrausch",
+        "feat.general.arzt",
+        "feat.general.athletischer-kampfstil",
+        "feat.general.defensiver-kampfer",
+        "feat.general.diplomat",
+        "feat.general.doppelleben",
+        "feat.general.gesellschaftlicher-aufsteiger",
+        "feat.general.hacker",
+        "feat.general.improvisierter-kampfer",
+        "feat.general.mechaniker",
+        "feat.general.netzwerker",
+        "feat.general.reflextraining",
+        "feat.general.sanitater",
+        "feat.general.schattendealer",
+        "feat.general.schnelle-erholung",
+        "feat.general.soldner",
+        "feat.general.taktiker",
+        "feat.general.verbesserte-wahrnehmung",
+        "feat.general.wissenschaftler",
+        "feat.general.zaher-hund",
+        "feat.general.zahigkeit"
+      ],
+      "manualFields": ["effects"],
+      "path": "feats/feats_overview.md",
+      "warnings": ["Für dieses Katalog-Feat existiert keine Detaildatei."]
+    },
+    {
+      "entityIds": [
+        "armor.cyborg-rustung",
+        "armor.kettenhemd",
+        "armor.leder",
+        "armor.magische-rustung",
+        "armor.magische-vollrustung",
+        "armor.moderne-kleidung",
+        "armor.moderne-rustung",
+        "armor.moderne-vollrustung",
+        "armor.plattenrustung",
+        "armor.stoff",
+        "armor.tarnkleidung",
+        "armor.vollplatte",
+        "equipment.anzug",
+        "equipment.arbeitskleidung",
+        "equipment.artefakt",
+        "equipment.auto",
+        "equipment.computer",
+        "equipment.fahrrad",
+        "equipment.funkgerat",
+        "equipment.jeans-und-t-shirt",
+        "equipment.kamera",
+        "equipment.kleid",
+        "equipment.krauter",
+        "equipment.kristalle",
+        "equipment.kristallkugel",
+        "equipment.magische-robe",
+        "equipment.metalle",
+        "equipment.mikrofon",
+        "equipment.motorrad",
+        "equipment.offentliche-verkehrsmittel",
+        "equipment.organische-materialien",
+        "equipment.ritualkreis",
+        "equipment.scanner",
+        "equipment.schutzanzug",
+        "equipment.sensor",
+        "equipment.tablet",
+        "equipment.tarnkleidung",
+        "equipment.techno-anzug",
+        "equipment.telefon",
+        "equipment.zauberstab",
+        "trait.item.armor.heavy",
+        "trait.item.armor.light",
+        "trait.item.armor.medium",
+        "trait.item.equipment.clothing",
+        "trait.item.equipment.magic",
+        "trait.item.equipment.technology",
+        "trait.item.weapon.magic",
+        "trait.item.weapon.martial",
+        "trait.item.weapon.ranged",
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade",
+        "trait.weapon-group.blunt",
+        "trait.weapon-group.projectile",
+        "weapon.1-bogen",
+        "weapon.1-gewehr",
+        "weapon.1-pistole",
+        "weapon.1-schwert",
+        "weapon.1-waffe",
+        "weapon.2-waffe",
+        "weapon.3-waffe",
+        "weapon.armbrust",
+        "weapon.axt",
+        "weapon.blitzpistole",
+        "weapon.blitzwaffe",
+        "weapon.bogen",
+        "weapon.damonenjager",
+        "weapon.dolch",
+        "weapon.eisbogen",
+        "weapon.eiswaffe",
+        "weapon.elektroschock-stab",
+        "weapon.erdwaffe",
+        "weapon.feuerklinge",
+        "weapon.feuerwaffe",
+        "weapon.geisterjager",
+        "weapon.gewehr",
+        "weapon.hammer",
+        "weapon.hellebarde",
+        "weapon.keule",
+        "weapon.konstruktjager",
+        "weapon.kriegshammer",
+        "weapon.messer",
+        "weapon.pistole",
+        "weapon.plasma-schwert",
+        "weapon.revolver",
+        "weapon.schlagstock",
+        "weapon.schrotflinte",
+        "weapon.schwert",
+        "weapon.seelenfanger",
+        "weapon.speer",
+        "weapon.vibro-klinge",
+        "weapon.wurfmesser",
+        "weapon.zweihandaxt",
+        "weapon.zweihandschwert"
+      ],
+      "manualFields": [
+        "bulk",
+        "categoryId",
+        "dexterityCap",
+        "effects",
+        "groupId",
+        "hands",
+        "level"
+      ],
+      "path": "gear/equipment/equipment_overview.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "weapon.1-waffe",
+        "weapon.2-waffe",
+        "weapon.3-waffe",
+        "weapon.axt",
+        "weapon.blitzwaffe",
+        "weapon.damonenjager",
+        "weapon.dolch",
+        "weapon.eiswaffe",
+        "weapon.elektroschock-stab",
+        "weapon.erdwaffe",
+        "weapon.feuerwaffe",
+        "weapon.geisterjager",
+        "weapon.hammer",
+        "weapon.hellebarde",
+        "weapon.keule",
+        "weapon.konstruktjager",
+        "weapon.kriegshammer",
+        "weapon.messer",
+        "weapon.plasma-schwert",
+        "weapon.schlagstock",
+        "weapon.schwert",
+        "weapon.seelenfanger",
+        "weapon.speer",
+        "weapon.vibro-klinge",
+        "weapon.zweihandaxt",
+        "weapon.zweihandschwert"
+      ],
+      "manualFields": ["bulk", "categoryId", "groupId", "hands", "level"],
+      "path": "gear/weapons/melee/melee_weapons.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "lore/maechte_der_welt_1990.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "lore/welt_timeline.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.elf",
+        "choice.heritage.elf",
+        "feat.ancestry-feature.elf.volksfertigkeit-klares-denken",
+        "feat.ancestry.elf.aurenleser",
+        "feat.ancestry.elf.erhabene-prasenz",
+        "feat.ancestry.elf.ewige-konzentration",
+        "feat.ancestry.elf.magische-resonanz",
+        "feat.ancestry.elf.stille-herrschaft",
+        "heritage.elf.hochhaus-erbe",
+        "heritage.elf.magienachkomme",
+        "heritage.elf.verborgener-wachter",
+        "heritage.elf.verfallener-erbe",
+        "heritage.elf.waldhuter-der-dammerung"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/elfen_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.gnom",
+        "choice.heritage.gnom",
+        "feat.ancestry-feature.gnom.volksfertigkeit-erforschungstrieb",
+        "feat.ancestry.gnom.funkengeist",
+        "feat.ancestry.gnom.lebender-funke",
+        "feat.ancestry.gnom.mechanische-eingebung",
+        "feat.ancestry.gnom.resonanzverstand",
+        "feat.ancestry.gnom.technomant",
+        "heritage.gnom.erleuchteter-nachkomme",
+        "heritage.gnom.maschinenherz-gnom",
+        "heritage.gnom.stadtgnom",
+        "heritage.gnom.traumfanger",
+        "heritage.gnom.wildfunken-gnom"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/gnome_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.goblin",
+        "choice.heritage.goblin",
+        "feat.ancestry-feature.goblin.volksfertigkeit-improvisationstalent",
+        "feat.ancestry.goblin.chaosmeister",
+        "feat.ancestry.goblin.lichtschrecken",
+        "feat.ancestry.goblin.schrottfinder",
+        "feat.ancestry.goblin.schrottgott",
+        "feat.ancestry.goblin.tuftlerinstinkt",
+        "heritage.goblin.lichtfanger",
+        "heritage.goblin.rosthaut",
+        "heritage.goblin.schrottplatz-goblin",
+        "heritage.goblin.sprengfunken",
+        "heritage.goblin.tunnelratte"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/goblins_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.halbling",
+        "choice.heritage.halbling",
+        "feat.ancestry-feature.halbling.volksfertigkeit-gluckskind",
+        "feat.ancestry.halbling.gemeinschaftsgeist",
+        "feat.ancestry.halbling.gluck-des-uberlebenden",
+        "feat.ancestry.halbling.leichtfussig",
+        "feat.ancestry.halbling.unauffallig",
+        "feat.ancestry.halbling.zaher-uberlebender",
+        "heritage.halbling.feldkind",
+        "heritage.halbling.kollektivnachkomme",
+        "heritage.halbling.kuchenherz",
+        "heritage.halbling.schattenlaufer",
+        "heritage.halbling.stadtstreuner"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/halblinge_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.mensch",
+        "choice.heritage.mensch",
+        "feat.ancestry-feature.mensch.volksfertigkeit-anpassungsfahig",
+        "feat.ancestry.mensch.erfindergeist",
+        "feat.ancestry.mensch.menschlicher-ubermut",
+        "feat.ancestry.mensch.stahlerner-wille",
+        "feat.ancestry.mensch.uberlebenskunstler",
+        "feat.ancestry.mensch.vielseitig",
+        "heritage.mensch.grenzbewohner",
+        "heritage.mensch.industriekind",
+        "heritage.mensch.magiergezeichneter",
+        "heritage.mensch.stadtmensch",
+        "heritage.mensch.verdrangter"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/mensch_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.ork",
+        "choice.heritage.ork",
+        "feat.ancestry-feature.ork.volksfertigkeit-blutresonanz",
+        "feat.ancestry.ork.blutiger-instinkt",
+        "feat.ancestry.ork.eisenhaut",
+        "feat.ancestry.ork.rachsuchtiger-zorn",
+        "feat.ancestry.ork.ungebrochener-wille",
+        "feat.ancestry.ork.wilde-entschlossenheit",
+        "heritage.ork.ahnenrufer",
+        "heritage.ork.grenzlaufer-ork",
+        "heritage.ork.industrie-ork",
+        "heritage.ork.klanblut-ork",
+        "heritage.ork.schattengeborener"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/orks_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.tiefling",
+        "choice.heritage.tiefling",
+        "feat.ancestry-feature.tiefling.volksfertigkeit-damonisches-erbe",
+        "feat.ancestry.tiefling.blick-der-dunkelheit",
+        "feat.ancestry.tiefling.blut-der-asche",
+        "feat.ancestry.tiefling.hollisches-flustern",
+        "feat.ancestry.tiefling.infernalische-erneuerung",
+        "feat.ancestry.tiefling.schattenresonanz",
+        "heritage.tiefling.aschegeborener",
+        "heritage.tiefling.erleuchteter-hybrid",
+        "heritage.tiefling.geflechtgezeichneter",
+        "heritage.tiefling.schattenkind",
+        "heritage.tiefling.verdammter-erbe"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/tieflinge_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "races/TOC.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "ancestry.zwerg",
+        "choice.heritage.zwerg",
+        "feat.ancestry-feature.zwerg.volksfertigkeit-standhaft",
+        "feat.ancestry.zwerg.eisenmagen",
+        "feat.ancestry.zwerg.fels-in-der-brandung",
+        "feat.ancestry.zwerg.meister-der-werkbank",
+        "feat.ancestry.zwerg.stahlkorper",
+        "feat.ancestry.zwerg.uralte-disziplin",
+        "heritage.zwerg.bergclan-zwerg",
+        "heritage.zwerg.eisenblut-zwerg",
+        "heritage.zwerg.maschinengeborener",
+        "heritage.zwerg.runenschmied",
+        "heritage.zwerg.stadtzwerg"
+      ],
+      "manualFields": ["attribute boosts and flaws", "effects"],
+      "path": "races/zwerge_zeitalter_des_goldes.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "README.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [],
+      "manualFields": [],
+      "path": "regelwerk_outline.md",
+      "warnings": []
+    },
+    {
+      "entityIds": [
+        "language.common",
+        "language.draconic",
+        "language.dwarven",
+        "language.elven",
+        "language.gnomish",
+        "language.goblin",
+        "language.halfling",
+        "language.infernal",
+        "language.orcish",
+        "language.sign",
+        "proficiency.armor.heavy",
+        "proficiency.armor.light",
+        "proficiency.armor.medium",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.spell.arcane",
+        "proficiency.spell.occult",
+        "proficiency.spell.primal",
+        "proficiency.weapon.firearm",
+        "proficiency.weapon.martial",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed",
+        "rule.actions-per-turn",
+        "rule.bonus-stacking",
+        "rule.proficiency-ranks",
+        "rule.reaction-per-round",
+        "skill.acrobatics",
+        "skill.arcana",
+        "skill.athletics",
+        "skill.crafting",
+        "skill.deception",
+        "skill.detect-magic",
+        "skill.diplomacy",
+        "skill.driving",
+        "skill.intimidation",
+        "skill.magic",
+        "skill.mechanics",
+        "skill.medicine",
+        "skill.persuasion",
+        "skill.religion",
+        "skill.science",
+        "skill.society",
+        "skill.stealth",
+        "skill.survival",
+        "skill.technology",
+        "trait.ancestry",
+        "trait.class-option",
+        "trait.general",
+        "trait.humanoid",
+        "trait.legacy",
+        "trait.magic"
+      ],
+      "manualFields": [],
+      "path": "rules/core_mechanics.md",
+      "warnings": [
+        "Der alte Wahrnehmungsblock wurde getrennt: Wahrnehmung ist eine eigene Proficiency."
+      ]
+    },
+    {
+      "entityIds": [
+        "background.academic",
+        "background.clan-heir",
+        "background.corporate-child",
+        "background.frontier",
+        "background.order-member",
+        "background.outcast",
+        "background.underworld-contact",
+        "background.worker"
+      ],
+      "manualFields": ["boosts", "trainedSkillIds"],
+      "path": "rules/social_mechanics.md",
+      "warnings": [
+        "Neu ergänzter Playtest-Background; im Altbestand existieren keine formalen Backgrounds."
+      ]
+    },
+    {
+      "entityIds": ["spell.benommenheit"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_benommenheit.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.blitzschlag"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_blitzschlag.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.feuerball"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_feuerball.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.flamme-erschaffen"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_flamme_erschaffen.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.gedankenkontrolle"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_gedankenkontrolle.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.gedankenlesen"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_gedankenlesen.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.heilung"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_heilung.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.licht"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_licht.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.magie-aufheben"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_magie_aufheben.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.magie-erkennen"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_magie_erkennen.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.nachricht"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_nachricht.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.schutzschild"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_schutzschild.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.teleportation"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_teleportation.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": ["spell.unsichtbarkeit"],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/spell_unsichtbarkeit.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    },
+    {
+      "entityIds": [
+        "spell.benommenheit",
+        "spell.blitzschlag",
+        "spell.feuerball",
+        "spell.flamme-erschaffen",
+        "spell.gedankenkontrolle",
+        "spell.gedankenlesen",
+        "spell.heilung",
+        "spell.licht",
+        "spell.magie-aufheben",
+        "spell.magie-erkennen",
+        "spell.nachricht",
+        "spell.schutzschild",
+        "spell.teleportation",
+        "spell.unsichtbarkeit"
+      ],
+      "manualFields": ["duration", "effects", "heightened"],
+      "path": "spells/TOC.md",
+      "warnings": [
+        "Bei Rangkonflikten gilt vorläufig die Detaildatei; Dauer und Höhenstufen bleiben Freitext."
+      ]
+    }
+  ]
+}

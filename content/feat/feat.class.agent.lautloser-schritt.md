@@ -1,0 +1,27 @@
+---
+category: class
+classId: class.agent
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du kannst dich selbst bei schneller Bewegung verstecken.
+id: feat.class.agent.lautloser-schritt
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_agent.md
+level: 1
+name: Lautloser Schritt
+prerequisites:
+  - class:
+      id: class.agent
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.legacy
+type: feat
+---
+
+Du kannst dich selbst bei schneller Bewegung verstecken.

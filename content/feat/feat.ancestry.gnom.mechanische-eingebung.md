@@ -1,0 +1,27 @@
+---
+ancestryId: ancestry.gnom
+category: ancestry
+effects:
+  - kind: text
+    machineReadable: false
+    text: Einmal pro Tag kannst du eine fehlgeschlagene Handwerks- oder Wissensprobe automatisch als Erfolg werten. Dies gilt nur, wenn du mindestens 10 Minuten an dem Gegenstand oder Thema gearbeitet hast.
+id: feat.ancestry.gnom.mechanische-eingebung
+legacy:
+  notes: []
+  paths:
+    - races/gnome_zeitalter_des_goldes.md
+level: 13
+name: Mechanische Eingebung
+prerequisites:
+  - ancestry:
+      id: ancestry.gnom
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.ancestry
+type: feat
+---
+
+Einmal pro Tag kannst du eine fehlgeschlagene Handwerks- oder Wissensprobe automatisch als Erfolg werten. Dies gilt nur, wenn du mindestens 10 Minuten an dem Gegenstand oder Thema gearbeitet hast.

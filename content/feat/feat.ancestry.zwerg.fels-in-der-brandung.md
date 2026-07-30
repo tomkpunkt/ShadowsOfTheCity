@@ -1,0 +1,29 @@
+---
+ancestryId: ancestry.zwerg
+category: ancestry
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du bist nahezu unerschütterlich. Wenn du einen kritischen Erfolg bei einem Rettungswurf erzielst, erleidest du keinerlei Effekte. Wenn du einen Erfolg erzielst, zählt er als kritischer Erfolg. ---
+id: feat.ancestry.zwerg.fels-in-der-brandung
+legacy:
+  notes: []
+  paths:
+    - races/zwerge_zeitalter_des_goldes.md
+level: 17
+name: Fels in der Brandung
+prerequisites:
+  - ancestry:
+      id: ancestry.zwerg
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.ancestry
+type: feat
+---
+
+Du bist nahezu unerschütterlich. Wenn du einen kritischen Erfolg bei einem Rettungswurf erzielst, erleidest du keinerlei Effekte. Wenn du einen Erfolg erzielst, zählt er als kritischer Erfolg.
+
+---

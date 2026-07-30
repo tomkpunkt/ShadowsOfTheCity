@@ -1,0 +1,29 @@
+---
+choiceIds: []
+classId: class.mediziner
+effects:
+  - kind: text
+    machineReadable: false
+    text: Du bist Spezialist für Operationen und Präzision. - Du erhältst Fertigkeitstraining in Handwerk (Chirurgie). - Du kannst einmal pro Stunde eine kritische Wunde (SG 20) behandeln, um 1W8 + WIS-Modifikator TP wiederherzustellen. - Wenn du improvisierte Werkzeuge verwendest, erleidest du keinen Malus.
+id: class-feature.mediziner.fachrichtung.chirurg
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_mediziner.md
+level: 1
+name: Chirurg
+prerequisites: []
+references: []
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+traits:
+  - trait.class-option
+  - trait.class-option.mediziner.fachrichtung
+type: class-feature
+---
+
+Du bist Spezialist für Operationen und Präzision.  
+- Du erhältst Fertigkeitstraining in Handwerk (Chirurgie).  
+- Du kannst einmal pro Stunde eine kritische Wunde (SG 20) behandeln, um 1W8 + WIS-Modifikator TP wiederherzustellen.  
+- Wenn du improvisierte Werkzeuge verwendest, erleidest du keinen Malus.

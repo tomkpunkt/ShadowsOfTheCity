@@ -30,6 +30,7 @@
     "content:templates": "tsx packages/content-compiler/src/cli.ts templates",
     "content:validate": "tsx packages/content-compiler/src/cli.ts validate",
     "dev": "npm run content:compile && npm run dev --workspace @sotc/character-builder",
+    "dev:e2e": "npm run content:compile && npm run dev --workspace @sotc/character-builder -- --port 4173 --strictPort",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",

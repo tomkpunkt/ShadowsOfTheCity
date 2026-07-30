@@ -11,7 +11,7 @@ validen Zustand ist.
 | 2 - Datenmodell | complete | Versioniertes Zod-Modell für 24 Entitätstypen, Prädikate, Effekte und Choices |
 | 3 - Migration | complete | 64 Quellen reproduzierbar auf 681 validierte Entitäten migriert |
 | 4 - Content Compiler | complete | Deterministischer Katalog, Referenzprüfung, Hash und harte Fehler |
-| 5 - Rules Engine | pending | |
+| 5 - Rules Engine | complete | Frameworkfreie Neuberechnung, Prädikate, Effekte, Choices und Herkunftsnachweise |
 | 6 - Character Builder | pending | |
 | 7 - Speicherung/Import/Export | pending | |
 | 8 - Start- und Build-Aktualisierung | pending | |
@@ -188,7 +188,47 @@ Offene Punkte:
 
 - keine für Phase 4; zusätzliche Grenzfalltests folgen gesammelt in Phase 9.
 
+## Phase 5 - Rules Engine
+
+Status: `complete`
+
+Bearbeitete Dateien:
+
+- `packages/rules-engine/src/types.ts`
+- `packages/rules-engine/src/predicate.ts`
+- `packages/rules-engine/src/effects.ts`
+- `packages/rules-engine/src/engine.ts`
+- `packages/rules-engine/src/engine.test.ts`
+- `docs/rules-engine.md`
+
+Entscheidungen:
+
+- Die Engine verwendet keine React-, DOM- oder Storage-APIs.
+- Sämtliche Neuberechnungen sind reine Funktionen aus Katalog und
+  Charakterentscheidungen.
+- Ungültig gewordene Entscheidungen bleiben mit konkreten Requirement-Failures
+  erhalten.
+- Typisierte Boni stapeln pro Typ nur als stärkster Bonus und stärkste Strafe;
+  untypisierte Beiträge stapeln.
+- Numerische Ergebnisse einschließlich Zauberplätzen und Ressourcen enthalten
+  Herkunftsnachweise.
+
+Ausgeführte Prüfungen:
+
+- Level-1-Charakter und Levelaufstieg berechnet
+- Attribute, TP, RK, Skills, Saves, Zauberwerte und Waffenwerte geprüft
+- automatische Features und vorbereitete Zauberprogression geprüft
+- ungültige abhängige Auswahl samt Ist-/Soll-Begründung geprüft
+- Katalog-Hash-Konflikt ohne Datenverlust geprüft
+- deterministische Neuberechnung geprüft
+- 8 Rules-Engine-Tests erfolgreich
+
+Offene Punkte:
+
+- Content-basierte Regressionstests mit mehreren realen Builds folgen in
+  Phase 9.
+
 ## Nächster konkreter Schritt
 
-Frameworkunabhängige Rules Engine mit typisierten Prädikaten, Effektanwendung,
-Choice-Auflösung, Validierungszuständen und Herkunftsnachweisen implementieren.
+Responsive React-/Vite-Anwendung erstellen, die ausschließlich den kompilierten
+Katalog und die Rules Engine verwendet.

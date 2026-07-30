@@ -4,11 +4,14 @@ import "@testing-library/jest-dom/vitest";
 
 import { cleanup, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { App } from "./App.js";
 
-afterEach(cleanup);
+afterEach(() => {
+  cleanup();
+  vi.restoreAllMocks();
+});
 
 describe("Character Builder", () => {
   beforeEach(() => {
@@ -91,5 +94,31 @@ describe("Character Builder", () => {
     ).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Zurücksetzen" }));
     expect(screen.getByLabelText("Inhaltstyp")).toHaveValue("all");
+  });
+
+  it("places the save indicator before status and starts a confirmed new character", async () => {
+    const user = userEvent.setup();
+    const confirmSpy = vi.spyOn(window, "confirm").mockReturnValue(true);
+    render(<App />);
+
+    const toolbarStatus = document.querySelector(".topbar__status");
+    expect(toolbarStatus?.children[0]).toHaveClass("save-indicator");
+    expect(toolbarStatus?.children[1]).toHaveClass("status");
+
+    await user.click(screen.getByRole("button", { name: "Abstammung" }));
+    const elfCard = screen.getByText("Elf", { selector: "strong" }).closest("article");
+    expect(elfCard).not.toBeNull();
+    await user.click(within(elfCard as HTMLElement).getByRole("button", { name: "Auswählen" }));
+
+    await user.click(screen.getByRole("button", { name: "Neuen Charakter anlegen" }));
+
+    expect(confirmSpy).toHaveBeenCalledOnce();
+    expect(screen.getByRole("heading", { level: 1, name: "Übersicht" })).toBeInTheDocument();
+    expect(
+      screen.getByText("Neuer Charakter", { selector: ".sidebar__character strong" })
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText("Elf", { selector: ".identity-band strong" })
+    ).not.toBeInTheDocument();
   });
 });

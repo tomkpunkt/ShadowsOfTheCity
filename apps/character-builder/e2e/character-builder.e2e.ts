@@ -25,6 +25,21 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
+test("creates a new character from the toolbar after confirmation", async ({ page }) => {
+  await page.goto("/");
+  await openStep(page, "ancestry");
+  await selectEntity(page, "ancestry.elf");
+
+  page.once("dialog", (dialog) => dialog.accept());
+  await page.getByTitle("Neuen Charakter anlegen").click();
+
+  await expect(page.getByRole("heading", { level: 1, name: "Übersicht" })).toBeVisible();
+  await expect(page.locator(".sidebar__character strong")).toHaveText("Neuer Charakter");
+  await expect(page.locator('[data-step-id="ancestry"] .sidebar__state')).toHaveClass(
+    /sidebar__state--incomplete/
+  );
+});
+
 test("builds and persists a complete level-one wizard", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator(".topbar .status--incomplete")).toBeVisible();

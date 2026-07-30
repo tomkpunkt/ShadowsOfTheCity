@@ -24,6 +24,7 @@ import {
   Sparkles,
   Swords,
   Upload,
+  UserRoundPlus,
   UserRoundCog,
   WandSparkles,
   X
@@ -72,6 +73,7 @@ import {
 } from "./item-catalog.js";
 import {
   downloadCharacter,
+  emptyCharacter,
   importCharacter,
   loadCharacter,
   saveCharacter,
@@ -643,6 +645,18 @@ export const App = () => {
     setCharacter((current) => ({ ...current, ...patch }));
   };
 
+  const createNewCharacter = (): void => {
+    if (!window.confirm("Aktuellen Charakter verwerfen und einen neuen Charakter anlegen?")) {
+      return;
+    }
+    setCharacter(emptyCharacter(catalog.contentHash));
+    setActiveStep("overview");
+    setDetailId(undefined);
+    setImportConflicts([]);
+    setCompatibility("compatible");
+    setSaved(false);
+  };
+
   const updateChoice = (choiceId: string, optionId: string, maximum: number): void => {
     setCharacter((current) => {
       const selected = current.choices[choiceId] ?? [];
@@ -1116,12 +1130,17 @@ export const App = () => {
           </select>
         </label>
         <div className="topbar__status">
-          <StatusPill state={result.state} />
           <span className={saved ? "save-indicator is-visible" : "save-indicator"}>
             Gespeichert
           </span>
+          <StatusPill state={result.state} />
         </div>
         <div className="topbar__actions">
+          <AppButton
+            icon={UserRoundPlus}
+            title="Neuen Charakter anlegen"
+            onClick={createNewCharacter}
+          />
           <AppButton
             icon={Save}
             title="Lokal speichern"

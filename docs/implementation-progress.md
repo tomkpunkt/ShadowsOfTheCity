@@ -494,7 +494,7 @@ begutachten lassen.
 | 14 - Release 0.1.0 | complete | ZIP, Prüfsummen und Buildbericht | deterministisches Laufzeit-ZIP mit SHA-256, Metadaten und Quellenhinweisen |
 | 15 - CI | complete | vollständiger Release-Vertrag | alle Pflichtkommandos als sichtbare GitHub-Actions-Schritte |
 | 16 - Dokumentation | complete | Nutzer-, Authoring- und Architekturdokumente | README, Changelog, Fach- und Release-Dokumentation auf 0.1.0 aktualisiert |
-| 17 - Abschlussprüfung | active | alle Kommandos und manuelle Prüfung | vollständige Schlusskette und finaler Bericht laufen |
+| 17 - Abschlussprüfung | complete | alle Kommandos und manuelle Prüfung | frische Installation, vollständiger Verify-Vertrag, visuelle Abnahme und Releaseprüfung erfolgreich |
 
 ### Phase 0 und 1
 
@@ -659,6 +659,40 @@ Prüfungen:
 Offene Punkte:
 
 - Phase 17 dokumentiert den finalen Voll- und Sichttest.
+
+### Phase 17
+
+Status: `complete`
+
+Geänderte Bereiche:
+
+- `playwright.config.ts` und `package.json`
+- erzeugte Auditberichte und visuelle Referenzbilder
+- `docs/review/08-v0.1-final-verification.md`
+- `docs/implementation-progress.md`
+
+Entscheidungen und Ergebnis:
+
+- Projektmetadokumente werden nicht als Legacy-Regelquellen indiziert.
+- Der Playwright-Webserver besitzt ein eigenes, aus sauberer Installation
+  funktionierendes Startkommando.
+- Die finale Releaseprüfung läuft gegen den vollständigen realen Katalog.
+- Der nicht blockierende Bundle-Hinweis und die ausschließlich im
+  Entwicklungswerkzeugpfad liegenden Audit-Hinweise sind offen dokumentiert.
+
+Prüfungen:
+
+- `npm ci`
+- Produktionsaudit mit 0 Schwachstellen
+- alle im Masterauftrag genannten Einzelkommandos
+- `npm run verify`
+- 75 Unit-/Integrationstests und 18 E2E-Prüfungen
+- manuelle Sichtprüfung von Desktop-, Mobile-, Konflikt- und Katalogzuständen
+- `npm run release:build` und `npm run release:verify`
+
+Offene Punkte:
+
+- keine technischen Blocker für Testbuild 0.1.0.
 
 ## Folgeauftrag: Redaktion und Ausrüstungskatalog
 

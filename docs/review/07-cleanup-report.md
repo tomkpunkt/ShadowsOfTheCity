@@ -44,7 +44,7 @@ vorgenommen.
 - `npm run lint`
 - `npm run typecheck`
 - `npm run content:templates`
-- `npm run test` mit 73 Tests
+- `npm run test` mit 75 Tests
 - `npm run test:e2e` mit 18 Browsertests
 
 Der Architektur-Audit blockiert UI-Importe in Compiler oder Engine,

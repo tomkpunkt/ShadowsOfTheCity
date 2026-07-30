@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "427f9dfc8f4ecec665ed08d9ee714d34a3f14659dcb1d2f462dd62a1622431ae",
+  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
   "summary": {
     "textRules": 737,
     "entitiesWithTextRules": 737,
     "explicitTextEffects": 410,
-    "entitiesWithMachineRules": 8,
+    "entitiesWithMachineRules": 27,
     "classifications": {
       "character-value": 101,
       "combat-value": 102,
       "narrative": 199,
-      "prerequisite": 32,
+      "prerequisite": 31,
       "selection": 188,
       "situational-text-rule": 103,
-      "unresolved": 12
+      "unresolved": 13
     },
     "newlyFormalizedRules": 0,
-    "unresolved": 12
+    "unresolved": 13
   },
   "records": [
     {
@@ -2026,7 +2026,7 @@
       "textEffectCount": 1,
       "classification": "combat-value",
       "text": "Du reagierst blitzschnell auf Bedrohungen. Du erhältst +2 auf Initiative und kannst in der ersten Runde eines Kampfes eine Bewegung von bis zu 10 Fuß als freie Aktion ausführen. ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Zielwert, Dauer, Stapelung und Auslöser fachlich bestätigen."
     },
     {
@@ -2036,7 +2036,7 @@
       "textEffectCount": 1,
       "classification": "selection",
       "text": "Du erhältst Fertigkeitstraining in **Heimlichkeit**, **Täuschung** und **Gesellschaft**. Wenn du bereits in einer dieser Fertigkeiten trainiert bist, wähle eine andere. Zusätzlich erhältst du bei jeder sozialen Interaktion +1 auf Würfe, wenn du Informationen verschleiern oder erlangen willst. ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
     },
     {
@@ -2086,7 +2086,7 @@
       "textEffectCount": 1,
       "classification": "situational-text-rule",
       "text": "Du nutzt Worte statt Waffen. - Du erhältst Fertigkeitstraining in Diplomatie und Täuschung (oder Expertenrang, falls trainiert). - Einmal pro Stunde kannst du eine misslungene soziale Probe wiederholen.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Nur mit explizitem Trigger- und Geltungsbereichsschema formalisieren."
     },
     {
@@ -2236,7 +2236,7 @@
       "textEffectCount": 1,
       "classification": "selection",
       "text": "Du hast jahrelang das Geflecht studiert. Du erhältst Fertigkeitstraining in **Arkane Kunde** und **Wissenschaft**. Wenn du bereits in einem dieser Bereiche trainiert bist, wähle eine andere Wissensfertigkeit. Zusätzlich kannst du die Präsenz aktiver Magie in einem Umkreis von 30 Fuß automatisch spüren. ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
     },
     {
@@ -2286,7 +2286,7 @@
       "textEffectCount": 1,
       "classification": "narrative",
       "text": "Du suchst Wissen über Macht. - Du erhältst den Cantrip *Detect Magic*. - Du erhältst +1 auf Arkane Kunde und Wahrnehmung.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Als redaktionellen Kontext belassen."
     },
     {
@@ -2306,7 +2306,7 @@
       "textEffectCount": 1,
       "classification": "situational-text-rule",
       "text": "Du webst Energie in Schilde und Barrieren. - Du erhältst den Cantrip *Shield*. - Du erhältst +1 auf Rettungswürfe gegen magische Effekte. ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Nur mit explizitem Trigger- und Geltungsbereichsschema formalisieren."
     },
     {
@@ -2426,7 +2426,7 @@
       "textEffectCount": 1,
       "classification": "situational-text-rule",
       "text": "Du bist ausgebildeter Arzt oder Sanitäter. Du erhältst Fertigkeitstraining in **Medizin** und **Wissenschaft (Biologie oder Chemie)**. Wenn du einen Wurf zur Heilung, Diagnose oder Behandlung von Giften/Krankheiten ablegst, erhältst +1 auf das Ergebnis. Du kannst medizinische Ausrüstung improvisieren (z. B. Verband, Schiene, Desinfektionsmittel). ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Nur mit explizitem Trigger- und Geltungsbereichsschema formalisieren."
     },
     {
@@ -2666,7 +2666,7 @@
       "textEffectCount": 1,
       "classification": "situational-text-rule",
       "text": "Du trägst die Stimmen deiner Ahnen in dir. Einmal pro Tag kannst du bei einer Probe auf Überleben, Religion oder Diplomatie +2 hinzufügen, wenn du dich von ihnen leiten lässt. Du erhältst Fertigkeitstraining in **Religion** und **Überleben**. ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Nur mit explizitem Trigger- und Geltungsbereichsschema formalisieren."
     },
     {
@@ -2826,7 +2826,7 @@
       "textEffectCount": 1,
       "classification": "situational-text-rule",
       "text": "Deine Wahrnehmung von Gefahr ist fast übernatürlich. Du erhältst +2 auf Initiativewürfe und Wahrnehmung gegen Überraschungsangriffe. ---",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Nur mit explizitem Trigger- und Geltungsbereichsschema formalisieren."
     },
     {
@@ -5296,7 +5296,7 @@
       "textEffectCount": 1,
       "classification": "combat-value",
       "text": "Du erkennst feindliche Taktiken. +1 auf Wahrnehmung und Initiative.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Zielwert, Dauer, Stapelung und Auslöser fachlich bestätigen."
     },
     {
@@ -5396,7 +5396,7 @@
       "textEffectCount": 1,
       "classification": "combat-value",
       "text": "+1 auf Wahrnehmung und Initiative.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Zielwert, Dauer, Stapelung und Auslöser fachlich bestätigen."
     },
     {
@@ -5516,7 +5516,7 @@
       "textEffectCount": 1,
       "classification": "prerequisite",
       "text": "# Beruf: Mechaniker **Quelle:** Welt-Regelwerk (Zeitalter des Goldes) --- ## **Flavortext** > „Ein guter Mechaniker kann aus Schrott Gold machen.\" Der Beruf des Mechanikers ist eine Spezialisierung, die es Charakteren ermöglicht, technische Geräte zu reparieren, zu modifizieren und zu verbessern. In der technologischen Welt des Zeitalters des Goldes, wo Maschinen und Technologie allgegenwärtig sind, ist diese Fähigkeit von unschätzbarem Wert. --- ## **Übersicht** Mechaniker ist eine professionelle Spezialisierung, die technische Fähigkeiten und Zugang zu Werkzeugen und Ressourcen bietet. Diese Spezialisierung ist besonders nützlich für Ingenieure, Techniker und alle, die mit Maschinen und Technologie arbeiten. --- ## **Mechanische Details** ### **Voraussetzungen** - **Stufe:** 1+ - **Intelligenz:** 13+ ### **Effekt** - **Fertigkeitstraining:** +2 auf Technologie-Fertigkeitswürfe - **Werkzeugset:** Zugang zu mechanischen Werkzeugen - **Reparatur:** Kann technische Geräte reparieren - **Modifikation:** Kann technische Geräte modifizieren ### **Anwendungsbereiche** - **Reparatur:** Technische Geräte reparieren - **Modifikation:** Technische Geräte verbessern - **Konstruktion:** Einfache technische Geräte konstruieren - **Wartung:** Technische Geräte warten --- ## **Spielmechanische Auswirkungen** ### **Vorteile** - **Technische Kompetenz:** Bessere technische Fähigkeiten - **Werkzeuge:** Zugang zu professionellen Werkzeugen - **Reparatur:** Kann technische Geräte reparieren - **Modifikation:** Kann technische Geräte verbessern ### **Nachteile** - **Spezialisierung:** Fokussiert auf technische Fähigkeiten - **Abhängigkeit:** Benötigt Werkzeuge und Ressourcen - **Zeitaufwand:** Reparaturen und Modifikationen dauern Zeit --- ## **Synergien** ### **Gute Kombinationen** - **Ingenieur-Klasse:** Verstärkt die technischen Fähigkeiten - **Hacker:** Kombiniert mit digitalen Fähigkeiten - **Schmuggler:** Kann technische Geräte modifizieren - **Söldner:** Kann Waffen und Ausrüstung verbessern ### **Klassenempfehlungen** - **Ingenieur:** Professionelle Ingenieure profitieren am meisten - **Agent:** Spione können technische Geräte modifizieren - **Söldner:** Kämpfer können Waffen verbessern - **Schmuggler:** Schmuggler können Fahrzeuge modifizieren --- ## **Taktische Anwendung** ### **Technische Aktivitäten** - **Reparatur:** Technische Geräte reparieren - **Modifikation:** Technische Geräte verbessern - **Konstruktion:** Einfache technische Geräte konstruieren - **Wartung:** Technische Geräte warten ### **Außerhalb des Kampfes** - **Missionen:** Technische Unterstützung für Missionen - **Geschäfte:** Reparaturdienstleistungen anbieten - **Forschung:** Technische Forschung und Entwicklung - **Unterstützung:** Technische Unterstützung für Verbündete --- ## **Fluff und Hintergrund** ### **Charakterkonzepte** - **Ingenieur:** Professioneller Ingenieur mit technischen Fähigkeiten - **Bastler:** Hobbybastler mit technischen Fähigkeiten - **Reparateur:** Professioneller Reparateur - **Erfinder:** Erfinder mit technischen Fähigkeiten ### **Geschichtliche Integration** - **Konzerne:** Konzernangestellte und Techniker - **Militär:** Militäringenieure und Techniker - **Untergrund:** Schmuggler und Kriminelle - **Wissenschaft:** Forscher und Entwickler --- ## **Regeltechnische Details** ### **Interaktionen** - **Intelligenz:** Verstärkt das Intelligenz-Attribut - **Werkzeuge:** Erhöht die Effektivität von Werkzeugen - **Ressourcen:** Benötigt Materialien für Reparaturen - **Zeit:** Reparaturen und Modifikationen dauern Zeit ### **Spezialfälle** - **Werkzeuge:** Benötigt geeignete Werkzeuge - **Materialien:** Benötigt geeignete Materialien - **Zeit:** Reparaturen und Modifikationen dauern Zeit - **Fachwissen:** Benötigt Fachwissen über die Geräte --- ## **Beschreibung im Spiel** Der Beruf des Mechanikers ist eine der wichtigsten Spezialisierungen im Zeitalter des Goldes. In einer Welt voller Technologie, wo Maschinen und Geräte allgegenwärtig sind, ist die Fähigkeit, technische Geräte zu reparieren und zu modifizieren, oft der Schlüssel zum Erfolg. Diese Spezialisierung repräsentiert nicht nur technische Kompetenz, sondern auch die Fähigkeit, praktische Probleme zu lösen und technische Geräte optimal zu nutzen. Charaktere mit der Mechaniker-Spezialisierung haben gelernt, ihre technischen Fähigkeiten optimal einzusetzen und auch komplexe technische Probleme zu lösen.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Gegen das bestehende Voraussetzungsschema abgleichen."
     },
     {
@@ -5536,7 +5536,7 @@
       "textEffectCount": 1,
       "classification": "prerequisite",
       "text": "# Reflextraining **Quelle:** Welt-Regelwerk (Zeitalter des Goldes) --- ## **Flavortext** > „Schnelle Reflexe retten Leben, langsame Reflexe kosten Leben.\" Reflextraining ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Reflexe zu verbessern und schneller auf Gefahren zu reagieren. In der urbanen Welt des Zeitalters des Goldes, wo Überraschungsangriffe und schnelle Aktionen alltäglich sind, ist diese Fähigkeit von unschätzbarem Wert. --- ## **Übersicht** Reflextraining erhöht die Reflexe eines Charakters, wodurch er schneller auf Gefahren reagieren und sich besser vor Überraschungsangriffen schützen kann. Diese Fähigkeit ist besonders nützlich für Spione, Kämpfer und alle, die auf schnelle Reaktionen angewiesen sind. --- ## **Mechanische Details** ### **Voraussetzungen** - **Stufe:** 1+ - **Geschicklichkeit:** 14+ ### **Effekt** - **Reflexwürfe:** +1 auf alle Reflexwürfe - **Stapelbar:** Nein (nur einmal erhältlich) ### **Anwendungsbereiche** - **Überraschungsangriffe:** Schneller reagieren - **Fallen:** Fallen und Gefahren ausweichen - **Explosionen:** Explosionen und Blitze ausweichen - **Magie:** Magische Effekte ausweichen --- ## **Spielmechanische Auswirkungen** ### **Vorteile** - **Frühwarnung:** Gefahren früher erkennen - **Ausweichen:** Schaden durch Ausweichen reduzieren - **Initiative:** Bessere Initiative im Kampf - **Überleben:** Bessere Überlebenschancen bei Gefahren ### **Nachteile** - **Feat-Slot:** Verbraucht einen wertvollen Feat-Slot - **Spezialisierung:** Fokussiert auf Reflexe statt andere Fähigkeiten - **Abhängigkeit:** Wirkt nur bei Reflexwürfen --- ## **Synergien** ### **Gute Kombinationen** - **Verbesserte Wahrnehmung:** Kombiniert Reflexe mit Wahrnehmung - **Agent:** Spione profitieren von schnellen Reflexen - **Hacker:** Techniker brauchen schnelle Reaktionen - **Athletik:** Verstärkt die körperliche Geschicklichkeit ### **Klassenempfehlungen** - **Agent:** Spione brauchen schnelle Reflexe - **Raufbold:** Straßenkämpfer profitieren von schnellen Reaktionen - **Ingenieur:** Techniker brauchen schnelle Reflexe - **Mediziner:** Ärzte müssen schnell reagieren --- ## **Taktische Anwendung** ### **Kampf** - **Initiative:** Frühere Aktionen im Kampf - **Ausweichen:** Schaden durch Ausweichen reduzieren - **Überraschung:** Überraschungsangriffe vermeiden - **Taktik:** Schneller auf sich ändernde Situationen reagieren ### **Außerhalb des Kampfes** - **Fallen:** Fallen und Gefahren ausweichen - **Verfolgung:** Schnell auf Verfolgung reagieren - **Spionage:** Schnell auf Entdeckung reagieren - **Technologie:** Schnell auf technische Probleme reagieren --- ## **Fluff und Hintergrund** ### **Charakterkonzepte** - **Spion:** Geheimdienstler mit schnellen Reflexen - **Athlet:** Sportler mit schnellen Reaktionen - **Techniker:** Ingenieur mit schnellen Reflexen - **Überlebenskünstler:** Jemand, der gelernt hat, schnell zu reagieren ### **Geschichtliche Integration** - **Geheimdienst:** Agenten und Spione - **Konzerne:** Sicherheitskräfte und Techniker - **Untergrund:** Straßenkämpfer und Überlebenskünstler - **Wissenschaft:** Forscher und Ingenieure --- ## **Regeltechnische Details** ### **Interaktionen** - **Geschicklichkeit:** Verstärkt das Geschicklichkeitsattribut - **Initiative:** Verbessert die Initiative im Kampf - **Ausweichen:** Reduziert Schaden durch Ausweichen - **Fallen:** Hilft beim Ausweichen von Fallen ### **Spezialfälle** - **Überraschung:** Reduziert die Chance auf Überraschungsangriffe - **Fallen:** Erhöht die Chance, Fallen zu bemerken - **Explosionen:** Hilft beim Ausweichen von Explosionen - **Magie:** Hilft beim Ausweichen von magischen Effekten --- ## **Beschreibung im Spiel** Reflextraining ist eine der wichtigsten Überlebensfähigkeiten im Zeitalter des Goldes. In einer Welt voller Gefahren, wo Überraschungsangriffe und schnelle Aktionen an der Tagesordnung sind, ist die Fähigkeit, schnell zu reagieren, oft der Unterschied zwischen Leben und Tod. Diese Fähigkeit repräsentiert nicht nur körperliche Geschicklichkeit, sondern auch die Fähigkeit, mental schnell zu reagieren und sich an sich ändernde Situationen anzupassen. Charaktere mit Reflextraining haben gelernt, ihre Reflexe zu schärfen und auch unter extremen Bedingungen schnell zu reagieren.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Gegen das bestehende Voraussetzungsschema abgleichen."
     },
     {
@@ -5596,7 +5596,7 @@
       "textEffectCount": 1,
       "classification": "prerequisite",
       "text": "# Verbesserte Wahrnehmung **Quelle:** Welt-Regelwerk (Zeitalter des Goldes) --- ## **Flavortext** > „Die Augen sehen, aber die Wahrnehmung erkennt.\" Verbesserte Wahrnehmung ist eine Fähigkeit, die es Charakteren ermöglicht, ihre Umgebung besser zu beobachten und wichtige Details zu erkennen. In der urbanen Welt des Zeitalters des Goldes, wo Überwachung und Verstecken alltäglich sind, ist diese Fähigkeit von unschätzbarem Wert. --- ## **Übersicht** Verbesserte Wahrnehmung erhöht die Fähigkeit eines Charakters, seine Umgebung zu beobachten und wichtige Informationen zu sammeln. Diese Fähigkeit ist besonders nützlich für Spione, Ermittler und alle, die auf Details angewiesen sind. --- ## **Mechanische Details** ### **Voraussetzungen** - **Stufe:** 1+ - **Weisheit:** 13+ ### **Effekt** - **Wahrnehmung:** +2 auf alle Wahrnehmungswürfe - **Stapelbar:** Nein (nur einmal erhältlich) ### **Anwendungsbereiche** - **Beobachten:** Personen und Objekte erkennen - **Lauschen:** Geräusche und Gespräche hören - **Spurenlesen:** Fußspuren und Anzeichen verfolgen - **Verstecken:** Versteckte Personen oder Objekte finden - **Überwachung:** Kameras und Sensoren bemerken --- ## **Spielmechanische Auswirkungen** ### **Vorteile** - **Frühwarnung:** Gefahren früher erkennen - **Informationen:** Mehr Details über die Umgebung - **Verstecken:** Versteckte Gegner leichter finden - **Ermittlung:** Wichtige Hinweise nicht übersehen - **Überleben:** Fallen und Gefahren rechtzeitig bemerken ### **Nachteile** - **Feat-Slot:** Verbraucht einen wertvollen Feat-Slot - **Spezialisierung:** Fokussiert auf Wahrnehmung statt andere Fähigkeiten - **Abhängigkeit:** Wirkt nur bei Wahrnehmungswürfen --- ## **Synergien** ### **Gute Kombinationen** - **Ermittler-Beruf:** Verstärkt die Ermittlungsfähigkeiten - **Hacker/Informationsbroker:** Kombiniert mit technischer Wahrnehmung - **Agent:** Spionage und Infiltration - **Wissenschaftler:** Analytische Beobachtung ### **Klassenempfehlungen** - **Agent:** Spione brauchen scharfe Wahrnehmung - **Ermittler:** Professionelle Ermittler profitieren am meisten - **Wissenschaftler:** Forscher brauchen detaillierte Beobachtung - **Mediziner:** Ärzte müssen Details erkennen --- ## **Taktische Anwendung** ### **Kampf** - **Initiative:** Frühere Erkennung von Gefahren - **Verstecken:** Versteckte Gegner finden - **Taktik:** Schlachtfeld besser überblicken - **Überraschung:** Überraschungsangriffe vermeiden ### **Außerhalb des Kampfes** - **Ermittlung:** Wichtige Hinweise finden - **Spionage:** Überwachung und Verstecken bemerken - **Navigation:** Richtungen und Wege erkennen - **Sozial:** Körpersprache und Verhalten beobachten --- ## **Fluff und Hintergrund** ### **Charakterkonzepte** - **Ermittler:** Professioneller Detektiv oder Polizist - **Spion:** Geheimdienstler mit scharfen Sinnen - **Wissenschaftler:** Forscher mit analytischem Blick - **Überlebenskünstler:** Jemand, der auf Details angewiesen ist ### **Geschichtliche Integration** - **Polizei:** Ermittler und Detektive haben diese Fähigkeit - **Geheimdienst:** Agenten und Spione - **Konzerne:** Sicherheitskräfte und Überwachungsspezialisten - **Wissenschaft:** Forscher und Analytiker --- ## **Regeltechnische Details** ### **Interaktionen** - **Wahrnehmungsfertigkeit:** Verstärkt alle Wahrnehmungswürfe - **Magie Erkennen:** Hilft bei der Erkennung magischer Effekte - **Technologie:** Unterstützt bei der Erkennung technischer Geräte - **Soziale Situationen:** Hilft bei der Beobachtung von Verhalten ### **Spezialfälle** - **Schwierige Bedingungen:** Funktioniert auch bei schlechter Sicht - **Verstecken:** Gegner haben -2 auf Heimlichkeit gegen diesen Charakter - **Überraschung:** Reduziert die Chance auf Überraschungsangriffe - **Ermittlung:** Erhöht die Chance, wichtige Hinweise zu finden --- ## **Beschreibung im Spiel** Verbesserte Wahrnehmung ist eine der wichtigsten Fähigkeiten im Zeitalter des Goldes. In einer Welt voller Überwachung, Verstecken und Intrigen ist die Fähigkeit, Details zu erkennen und wichtige Informationen zu sammeln, oft der Schlüssel zum Erfolg. Diese Fähigkeit repräsentiert nicht nur scharfe Sinne, sondern auch die Fähigkeit, Muster zu erkennen und wichtige Informationen von unwichtigen zu unterscheiden. Charaktere mit verbesserter Wahrnehmung haben gelernt, ihre Umgebung systematisch zu beobachten und nichts zu übersehen.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Gegen das bestehende Voraussetzungsschema abgleichen."
     },
     {
@@ -5624,10 +5624,10 @@
       "entityType": "feat",
       "sourceField": "rulesText",
       "textEffectCount": 1,
-      "classification": "prerequisite",
+      "classification": "unresolved",
       "text": "# Zähigkeit **Quelle:** Welt-Regelwerk (Zeitalter des Goldes) --- ## **Flavortext** > „Hartnäckigkeit ist der Schlüssel zum Überleben in den Schatten der Stadt.\" Zähigkeit ist eine grundlegende Überlebensfähigkeit, die es Charakteren ermöglicht, mehr Schaden zu ertragen und länger im Kampf zu bestehen. Diese Fähigkeit ist besonders wertvoll für Kämpfer und alle, die sich regelmäßig in gefährliche Situationen begeben. --- ## **Übersicht** Zähigkeit erhöht die Trefferpunkte eines Charakters dauerhaft, wodurch er mehr Schaden überstehen kann. Diese Fähigkeit ist besonders nützlich für Frontkämpfer und Charaktere, die sich häufig in gefährlichen Situationen befinden. --- ## **Mechanische Details** ### **Voraussetzungen** - **Stufe:** 1+ - **Konstitution:** 13+ ### **Effekt** - **Trefferpunkte:** +1 Trefferpunkt pro Charakterstufe - **Stapelbar:** Nein (nur einmal erhältlich) ### **Berechnung** - **Neue TP-Formel:** (Klassen-TP + Konstitutionsmodifikator + Stufe) × Stufen - **Beispiel:** Ein Charakter der Stufe 5 mit Konstitution 16 (+3) und Klassen-TP 8 erhält: (8 + 3 + 5) × 5 = 80 TP --- ## **Spielmechanische Auswirkungen** ### **Vorteile** - **Überlebensfähigkeit:** Deutlich erhöhte Widerstandsfähigkeit - **Kampfdauer:** Längere Überlebenszeit in Kämpfen - **Risikobereitschaft:** Ermöglicht aggressivere Taktiken - **Gruppenschutz:** Kann als \"Tank\" für die Gruppe fungieren ### **Nachteile** - **Feat-Slot:** Verbraucht einen wertvollen Feat-Slot - **Frühe Investition:** Muss früh gewählt werden für maximale Wirkung - **Spezialisierung:** Fokussiert auf Überleben statt andere Fähigkeiten --- ## **Synergien** ### **Gute Kombinationen** - **Schnelle Erholung:** Verstärkt die Regenerationsfähigkeit - **Zäher Hund:** Synergie mit niedrigen TP-Werten - **Defensiver Kämpfer:** Kombiniert Überleben mit Verteidigung - **Konstitutionsboni:** Verstärkt den Effekt zusätzlich ### **Klassenempfehlungen** - **Söldner:** Frontkämpfer profitieren am meisten - **Wächter:** Defensive Kämpfer nutzen die TP optimal - **Raufbold:** Straßenkämpfer brauchen Überlebensfähigkeit - **Agent:** Spione können riskantere Missionen überstehen --- ## **Taktische Anwendung** ### **Kampf** - **Frontlinie:** Als Hauptziel für Gegner fungieren - **Schutz:** Verbündete vor Schaden schützen - **Durchhaltevermögen:** Lange Kämpfe überstehen - **Risikomanagement:** Gefährliche Manöver wagen ### **Außerhalb des Kampfes** - **Gefährliche Missionen:** Risikoreiche Aufträge übernehmen - **Umweltgefahren:** Gift, Fallen, etc. besser überstehen - **Tortur:** Widerstandsfähigkeit gegen Verhöre - **Extreme Bedingungen:** Hitze, Kälte, Hunger besser ertragen --- ## **Fluff und Hintergrund** ### **Charakterkonzepte** - **Veteran:** Erfahrener Kämpfer mit vielen Narben - **Überlebenskünstler:** Jemand, der schon alles überlebt hat - **Beschützer:** Jemand, der andere beschützen will - **Glückspilz:** Jemand, der immer wieder dem Tod entrinnt ### **Geschichtliche Integration** - **Kriegsveteranen:** Viele Söldner haben diese Fähigkeit - **Slumbewohner:** Orks und andere Unterdrückte entwickeln Zähigkeit - **Konzernangestellte:** Sicherheitskräfte und Bodyguards - **Geheimdienstler:** Agenten, die gefährliche Missionen überstehen --- ## **Regeltechnische Details** ### **Interaktionen** - **Magische Heilung:** Funktioniert normal mit erhöhten TP - **Natürliche Heilung:** Regeneriert proportional zu den erhöhten TP - **Temporäre TP:** Werden zu den erhöhten TP addiert - **TP-Maximum:** Das neue Maximum wird dauerhaft erhöht ### **Spezialfälle** - **TP-Verlust:** Verlorene TP werden normal behandelt - **Bewusstlosigkeit:** Tritt bei 0 TP ein, unabhängig vom Maximum - **Tod:** Tritt bei negativen TP ein, unabhängig vom Maximum - **Regeneration:** Funktioniert normal mit erhöhten TP --- ## **Beschreibung im Spiel** Zähigkeit ist eine der grundlegendsten Überlebensfähigkeiten im Zeitalter des Goldes. In einer Welt voller Gefahren, wo Konzernkriege, magische Anomalien und kriminelle Aktivitäten an der Tagesordnung sind, ist die Fähigkeit, mehr Schaden zu ertragen, oft der Unterschied zwischen Leben und Tod. Diese Fähigkeit repräsentiert nicht nur physische Robustheit, sondern auch mentale Stärke und den Willen zu überleben. Charaktere mit Zähigkeit haben gelernt, Schmerz zu ignorieren und auch unter extremen Bedingungen weiterzukämpfen.",
-      "alreadyHasMachineRule": false,
-      "recommendation": "Gegen das bestehende Voraussetzungsschema abgleichen."
+      "alreadyHasMachineRule": true,
+      "recommendation": "Fachliche Zielgröße und Wirkung entscheiden; bis dahin nicht automatisieren."
     },
     {
       "entityId": "heritage.elf.hochhaus-erbe",
@@ -5636,7 +5636,7 @@
       "textEffectCount": 1,
       "classification": "character-value",
       "text": "Du bist in den gläsernen Türmen der Elfenhäuser geboren. Du erhältst einen Bonus von +1 auf Gesellschaft und Diplomatie. Wenn du dich in einer Umgebung mit moderner Technologie befindest, ignorierst du Ablenkungs-Mali durch Lärm oder Licht.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
     },
     {
@@ -5656,7 +5656,7 @@
       "textEffectCount": 1,
       "classification": "character-value",
       "text": "Du bist Teil des Rates oder eines Sicherheitsordens. Du erhältst Fertigkeitstraining in Heimlichkeit und Wahrnehmung sowie einen Bonus von +1 auf Rettungswürfe gegen Überraschungsangriffe.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
     },
     {
@@ -5676,7 +5676,7 @@
       "textEffectCount": 1,
       "classification": "narrative",
       "text": "Einige Elfen haben ihre alte Verbindung zur Natur bewahrt. Du erhältst Fertigkeitstraining in Überleben und kannst den Zauber *Message* als angeborene arkane Fähigkeit wirken.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Als redaktionellen Kontext belassen."
     },
     {
@@ -5876,7 +5876,7 @@
       "textEffectCount": 1,
       "classification": "character-value",
       "text": "Du hast gelernt, dich unsichtbar zu machen – in Menschenmengen oder Schatten. Du erhältst einen Bonus von +1 auf Heimlichkeit und Täuschung.",
-      "alreadyHasMachineRule": false,
+      "alreadyHasMachineRule": true,
       "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
     },
     {

@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "427f9dfc8f4ecec665ed08d9ee714d34a3f14659dcb1d2f462dd62a1622431ae",
+  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
   "summary": {
     "entities": 737,
-    "activeEntities": 725,
-    "drafts": 12,
+    "activeEntities": 724,
+    "drafts": 13,
     "editorialStatus": {
-      "needs-rules-decision": 12,
-      "reviewed": 630,
+      "needs-rules-decision": 13,
+      "reviewed": 629,
       "rewritten": 95
     },
     "textRuleEntities": 410,
-    "machineRuleEntities": 8,
+    "machineRuleEntities": 27,
     "exactDuplicateGroups": 0,
     "nearSimilarSummaries": 189,
     "averageSummaryLength": 81,
     "medianSummaryLength": 75,
     "summariesBelow80Characters": 392,
-    "manualReviewRequired": 12,
+    "manualReviewRequired": 13,
     "blockers": 0,
     "manualReview": 69
   },
@@ -72,9 +72,9 @@
     },
     "feat": {
       "entities": 195,
-      "reviewed": 195,
+      "reviewed": 194,
       "rewritten": 0,
-      "drafts": 0
+      "drafts": 1
     },
     "heritage": {
       "entities": 40,
@@ -16601,8 +16601,8 @@
         "feats/feats_overview.md",
         "feats/feat_zaehigkeit.md"
       ],
-      "status": "legacy",
-      "editorialStatus": "reviewed",
+      "status": "draft",
+      "editorialStatus": "needs-rules-decision",
       "summaryLength": 141,
       "rulesTextLength": 4510,
       "presentTextFields": [
@@ -16619,7 +16619,7 @@
       "repeatedSummary": false,
       "nearestSimilarSummary": null,
       "semanticReviewHints": [],
-      "manualReviewRequired": false
+      "manualReviewRequired": true
     },
     {
       "id": "heritage.elf.hochhaus-erbe",

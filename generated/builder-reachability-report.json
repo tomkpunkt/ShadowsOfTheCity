@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "427f9dfc8f4ecec665ed08d9ee714d34a3f14659dcb1d2f462dd62a1622431ae",
+  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
   "summary": {
     "entities": 737,
     "reachable": 737,
@@ -4781,7 +4781,7 @@
         "Schnelle Reaktion"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -4793,6 +4793,9 @@
       "status": "automatic",
       "references": [
         "class.agent",
+        "skill.deception",
+        "skill.society",
+        "skill.stealth",
         "trait.legacy"
       ],
       "referencedBy": [
@@ -4805,7 +4808,7 @@
         "Spionageausbildung"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -4916,6 +4919,8 @@
       "status": "selectable",
       "references": [
         "class.agent",
+        "skill.deception",
+        "skill.diplomacy",
         "trait.class-option",
         "trait.class-option.agent.vorgehensweise"
       ],
@@ -4929,7 +4934,7 @@
         "Manipulator"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -5282,6 +5287,8 @@
       "status": "automatic",
       "references": [
         "class.magier",
+        "skill.arcana",
+        "skill.science",
         "trait.legacy"
       ],
       "referencedBy": [
@@ -5294,7 +5301,7 @@
         "Arkanes Studium"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -5404,6 +5411,8 @@
       "status": "selectable",
       "references": [
         "class.magier",
+        "skill.arcana",
+        "spell.magie-erkennen",
         "trait.class-option",
         "trait.class-option.magier.schule-der-magie"
       ],
@@ -5417,7 +5426,7 @@
         "Schule der Erkenntnis"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -5454,6 +5463,7 @@
       "status": "selectable",
       "references": [
         "class.magier",
+        "spell.schutzschild",
         "trait.class-option",
         "trait.class-option.magier.schule-der-magie"
       ],
@@ -5467,7 +5477,7 @@
         "Schule des Schutzes"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -5748,6 +5758,8 @@
       "status": "automatic",
       "references": [
         "class.mediziner",
+        "skill.medicine",
+        "skill.science",
         "trait.legacy"
       ],
       "referencedBy": [
@@ -5760,7 +5772,7 @@
         "Medizinische Ausbildung"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -6329,6 +6341,8 @@
       "status": "automatic",
       "references": [
         "class.schamane",
+        "skill.religion",
+        "skill.survival",
         "trait.legacy"
       ],
       "referencedBy": [
@@ -6341,7 +6355,7 @@
         "Ahnenverbindung"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -6735,7 +6749,7 @@
         "Kriegsinstinkt"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -12863,7 +12877,7 @@
         "Veteraneninstinkt"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13083,7 +13097,7 @@
         "Wachsamkeit"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13327,6 +13341,7 @@
       "contentStatus": "legacy",
       "status": "informational",
       "references": [
+        "skill.technology",
         "trait.general"
       ],
       "referencedBy": [],
@@ -13337,7 +13352,7 @@
         "Mechaniker"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13379,7 +13394,7 @@
         "Reflextraining"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13505,7 +13520,7 @@
         "Verbesserte Wahrnehmung"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13555,7 +13570,7 @@
       "type": "feat",
       "name": "Zähigkeit",
       "source": "legacy.world-rules",
-      "contentStatus": "legacy",
+      "contentStatus": "draft",
       "status": "selectable",
       "references": [
         "trait.general"
@@ -13568,7 +13583,7 @@
         "Zähigkeit"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13580,6 +13595,8 @@
       "status": "selectable",
       "references": [
         "ancestry.elf",
+        "skill.diplomacy",
+        "skill.society",
         "trait.ancestry"
       ],
       "referencedBy": [
@@ -13592,7 +13609,7 @@
         "Hochhaus-Erbe"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13628,6 +13645,8 @@
       "status": "selectable",
       "references": [
         "ancestry.elf",
+        "proficiency.perception",
+        "skill.stealth",
         "trait.ancestry"
       ],
       "referencedBy": [
@@ -13640,7 +13659,7 @@
         "Verborgener Wächter"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -13676,6 +13695,8 @@
       "status": "selectable",
       "references": [
         "ancestry.elf",
+        "skill.survival",
+        "spell.nachricht",
         "trait.ancestry"
       ],
       "referencedBy": [
@@ -13688,7 +13709,7 @@
         "Waldhüter der Dämmerung"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -14156,6 +14177,8 @@
       "status": "selectable",
       "references": [
         "ancestry.mensch",
+        "skill.deception",
+        "skill.stealth",
         "trait.ancestry"
       ],
       "referencedBy": [
@@ -14168,7 +14191,7 @@
         "Verdrängter"
       ],
       "detailDisplayable": true,
-      "ruleEffect": "text-rule",
+      "ruleEffect": "machine-readable",
       "allowlisted": false
     },
     {
@@ -14847,7 +14870,9 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "heritage.elf.verborgener-wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -15151,7 +15176,10 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class-feature.magier.arkanes-studium",
+        "class-feature.magier.schule-der-magie.schule-der-erkenntnis"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -15211,7 +15239,10 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.underworld-contact"
+        "background.underworld-contact",
+        "class-feature.agent.spionageausbildung",
+        "class-feature.agent.vorgehensweise.manipulator",
+        "heritage.mensch.verdrangter"
       ],
       "reachable": true,
       "path": [
@@ -15251,7 +15282,9 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.clan-heir"
+        "background.clan-heir",
+        "class-feature.agent.vorgehensweise.manipulator",
+        "heritage.elf.hochhaus-erbe"
       ],
       "reachable": true,
       "path": [
@@ -15347,7 +15380,9 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class-feature.mediziner.medizinische-ausbildung"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -15386,7 +15421,8 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.order-member"
+        "background.order-member",
+        "class-feature.schamane.ahnenverbindung"
       ],
       "reachable": true,
       "path": [
@@ -15407,7 +15443,9 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.academic"
+        "background.academic",
+        "class-feature.magier.arkanes-studium",
+        "class-feature.mediziner.medizinische-ausbildung"
       ],
       "reachable": true,
       "path": [
@@ -15428,7 +15466,9 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.corporate-child"
+        "background.corporate-child",
+        "class-feature.agent.spionageausbildung",
+        "heritage.elf.hochhaus-erbe"
       ],
       "reachable": true,
       "path": [
@@ -15449,7 +15489,10 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.outcast"
+        "background.outcast",
+        "class-feature.agent.spionageausbildung",
+        "heritage.elf.verborgener-wachter",
+        "heritage.mensch.verdrangter"
       ],
       "reachable": true,
       "path": [
@@ -15470,7 +15513,9 @@
       "status": "selectable",
       "references": [],
       "referencedBy": [
-        "background.frontier"
+        "background.frontier",
+        "class-feature.schamane.ahnenverbindung",
+        "heritage.elf.waldhuter-der-dammerung"
       ],
       "reachable": true,
       "path": [
@@ -15490,7 +15535,9 @@
       "contentStatus": "legacy",
       "status": "selectable",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "feat.general.mechaniker"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -15700,7 +15747,9 @@
       "references": [
         "trait.magic"
       ],
-      "referencedBy": [],
+      "referencedBy": [
+        "class-feature.magier.schule-der-magie.schule-der-erkenntnis"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -15721,7 +15770,9 @@
       "references": [
         "trait.magic"
       ],
-      "referencedBy": [],
+      "referencedBy": [
+        "heritage.elf.waldhuter-der-dammerung"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -15742,7 +15793,9 @@
       "references": [
         "trait.magic"
       ],
-      "referencedBy": [],
+      "referencedBy": [
+        "class-feature.magier.schule-der-magie.schule-des-schutzes"
+      ],
       "reachable": true,
       "path": [
         "Builder",

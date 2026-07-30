@@ -6,7 +6,7 @@ Stand: 30. Juli 2026
 
 Der vollständige Katalog enthält weiterhin 737 Entitäten. 724 sind aktiv und
 13 sind als fachlich ungeklärte Entwürfe blockiert. Der Katalog-Hash lautet
-`5b86828a1740cbf4eafb1017f8b51c3cc7147a140e1ccbe16e4ac49502e08730`.
+`0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b`.
 
 | Kennzahl | Anzahl |
 |:--|--:|

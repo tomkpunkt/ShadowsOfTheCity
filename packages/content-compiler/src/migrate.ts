@@ -172,7 +172,20 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
     entries.map(async (entry): Promise<string[]> => {
       const absolute = path.join(directory, entry.name);
       if (entry.isDirectory()) {
-        if ([".git", "content", "docs", "node_modules", "packages", "apps"].includes(entry.name)) {
+        if (
+          [
+            ".git",
+            "content",
+            "docs",
+            "node_modules",
+            "packages",
+            "apps",
+            "dist",
+            "release",
+            "test-results",
+            "playwright-report"
+          ].includes(entry.name)
+        ) {
           return [];
         }
         return findMarkdownFiles(absolute);
@@ -3026,6 +3039,8 @@ Entscheidung im Manifest stehen.
 };
 
 const run = async (): Promise<void> => {
+  const aliasesPath = path.join(contentDirectory, "legacy-aliases.json");
+  const aliasesSource = await readFile(aliasesPath, "utf8").catch(() => "{}\n");
   const sourceFiles = await findMarkdownFiles(repositoryRoot);
   const documents = await Promise.all(
     sourceFiles.map(async (absolutePath) => {
@@ -3053,6 +3068,7 @@ const run = async (): Promise<void> => {
   }
   await rm(resolvedContent, { recursive: true, force: true });
   await mkdir(resolvedContent, { recursive: true });
+  await writeFile(aliasesPath, aliasesSource, "utf8");
   await Promise.all(
     allEntities.sort((left, right) => left.id.localeCompare(right.id)).map(writeEntity)
   );

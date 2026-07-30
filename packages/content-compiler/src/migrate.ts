@@ -16,6 +16,17 @@ const packageDirectory = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(packageDirectory, "../../..");
 const contentDirectory = path.join(repositoryRoot, "content");
 const sourceId = "legacy.world-rules";
+const legacyRootDirectories = new Set([
+  "bestiary",
+  "classes",
+  "feats",
+  "gear",
+  "lore",
+  "races",
+  "rules",
+  "spells"
+]);
+const legacyRootMarkdownFiles = new Set(["README.md", "regelwerk_outline.md"]);
 
 type EntityInput = Record<string, unknown> & {
   id: string;
@@ -172,6 +183,9 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
     entries.map(async (entry): Promise<string[]> => {
       const absolute = path.join(directory, entry.name);
       if (entry.isDirectory()) {
+        if (directory === repositoryRoot && !legacyRootDirectories.has(entry.name)) {
+          return [];
+        }
         if (
           [
             ".git",
@@ -190,7 +204,9 @@ const findMarkdownFiles = async (directory: string): Promise<string[]> => {
         }
         return findMarkdownFiles(absolute);
       }
-      return entry.isFile() && entry.name.endsWith(".md") && entry.name !== "CONTRIBUTING.md"
+      return entry.isFile() &&
+        entry.name.endsWith(".md") &&
+        (directory !== repositoryRoot || legacyRootMarkdownFiles.has(entry.name))
         ? [absolute]
         : [];
     })

@@ -6,6 +6,7 @@ import {
   applyHealing,
   changeResource,
   emptySessionState,
+  recordActionUse,
   resetResources,
   restoreSpellSlot,
   restoreLimitedAction,
@@ -101,6 +102,14 @@ describe("session state", () => {
       source: "Deckung",
       active: false
     });
+  });
+
+  it("records actions without a structured limit", () => {
+    const once = recordActionUse(emptySessionState(), "action.scan");
+    const twice = recordActionUse(once, "action.scan");
+
+    expect(twice.actionUses["action.scan"]).toBe(2);
+    expect(restoreLimitedAction(twice, "action.scan").actionUses["action.scan"]).toBe(1);
   });
 
   it("keeps item and condition state separate from the build", () => {

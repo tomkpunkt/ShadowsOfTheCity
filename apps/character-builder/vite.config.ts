@@ -71,6 +71,19 @@ export default defineConfig({
     }
   },
   build: {
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.endsWith("generated/catalog.json")) {
+            return "catalog";
+          }
+          if (id.includes("react-markdown") || id.includes("remark-gfm")) {
+            return "markdown";
+          }
+          return undefined;
+        }
+      }
+    }
   }
 });

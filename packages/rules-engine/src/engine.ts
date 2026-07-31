@@ -737,6 +737,12 @@ export const calculateCharacter = (
   const explainedAttributes = Object.fromEntries(
     attributes.map((attribute) => [attribute, sumBreakdown(attributeBreakdowns[attribute])])
   ) as Record<AttributeId, ExplainedValue>;
+  const calculatedAttributeModifiers = Object.fromEntries(
+    attributes.map((attribute) => [
+      attribute,
+      attributeModifier(explainedAttributes[attribute].value)
+    ])
+  ) as Record<AttributeId, number>;
 
   spellSlots = spellSlots.map((slot) => ({
     ...slot,
@@ -1559,6 +1565,7 @@ export const calculateCharacter = (
     expectedAttributeBoosts: expectedFreeBoosts,
     sectionStatuses,
     attributes: explainedAttributes,
+    attributeModifiers: calculatedAttributeModifiers,
     hitPoints,
     temporaryHitPoints,
     armorClass,

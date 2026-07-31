@@ -271,6 +271,20 @@ export const useLimitedAction = (
   };
 };
 
+export const recordActionUse = (
+  sessionInput: CharacterSessionState,
+  actionId: string
+): CharacterSessionState => {
+  const session = validatedSession(sessionInput);
+  return {
+    ...session,
+    actionUses: {
+      ...session.actionUses,
+      [actionId]: (session.actionUses[actionId] ?? 0) + 1
+    }
+  };
+};
+
 export const restoreLimitedAction = (
   sessionInput: CharacterSessionState,
   actionId: string

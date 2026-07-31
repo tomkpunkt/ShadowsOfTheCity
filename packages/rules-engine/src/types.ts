@@ -281,6 +281,7 @@ export interface CalculatedCharacter {
   expectedAttributeBoosts: number;
   sectionStatuses: Record<string, SectionState>;
   attributes: Record<AttributeId, ExplainedValue>;
+  attributeModifiers: Record<AttributeId, number>;
   hitPoints: ExplainedValue;
   armorClass: ExplainedValue;
   perception: ExplainedValue;

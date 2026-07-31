@@ -16,7 +16,6 @@ import {
   PackageOpen,
   PanelLeftClose,
   PanelLeftOpen,
-  Printer,
   RotateCcw,
   Save,
   Search,
@@ -29,20 +28,27 @@ import {
   WandSparkles,
   X
 } from "lucide-react";
-import { useEffect, useMemo, useRef, useState, type ComponentType, type ReactNode } from "react";
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ComponentType,
+  type ReactNode
+} from "react";
 
 import {
   calculateCharacter,
   type AttributeId,
   type CharacterState,
   type ResolvedChoice,
-  type SaveId,
   type ValidationState
 } from "@sotc/rules-engine";
 import { APP_VERSION, type ContentEntity } from "@sotc/shared";
 
 import { catalog, entities, entitiesOfType, entityName } from "./catalog.js";
-import { EntityDetails } from "./EntityDetails.js";
 import { entityMeta, searchableEntityText } from "./entity-presentation.js";
 import {
   attributeLabels,
@@ -54,7 +60,6 @@ import {
   formatItemQuality,
   formatItemSubcategory,
   formatRequirementFailure,
-  formatSave,
   formatTechnologyLevel,
   formatValidationIssue,
   validationStateLabels
@@ -80,6 +85,16 @@ import {
   toggleAttributeBoost,
   type CatalogCompatibility
 } from "./storage.js";
+
+const CharacterSheet = lazy(() =>
+  import("./character-sheet/CharacterSheet.js").then((module) => ({
+    default: module.CharacterSheet
+  }))
+);
+
+const EntityDetails = lazy(() =>
+  import("./EntityDetails.js").then((module) => ({ default: module.EntityDetails }))
+);
 
 type StepId =
   | "overview"
@@ -115,6 +130,16 @@ const steps: Step[] = [
   { id: "review", label: "Abschlussprüfung", icon: Check },
   { id: "sheet", label: "Charakterbogen", icon: BookOpen }
 ];
+
+const activeStepStorageKey = "shadows-of-the-city.ui.active-step";
+
+const loadActiveStep = (): StepId => {
+  if (typeof window === "undefined") {
+    return "overview";
+  }
+  const stored = window.localStorage.getItem(activeStepStorageKey);
+  return steps.some((step) => step.id === stored) ? (stored as StepId) : "overview";
+};
 
 const AppButton = ({
   children,
@@ -597,7 +622,9 @@ const DetailDrawer = ({
           ))}
         </div>
         <div className="detail-drawer__body">
-          <EntityDetails entity={entity} provenance={provenance} onOpenEntity={onOpenEntity} />
+          <Suspense fallback={<p className="lazy-loading">Details werden geladen …</p>}>
+            <EntityDetails entity={entity} provenance={provenance} onOpenEntity={onOpenEntity} />
+          </Suspense>
         </div>
       </>
     )}
@@ -608,7 +635,7 @@ export const App = () => {
   const [initialLoad] = useState(() => loadCharacter(catalog));
   const [characterDocument, setCharacterDocument] = useState(initialLoad.document);
   const character: CharacterState = characterDocument.build;
-  const [activeStep, setActiveStep] = useState<StepId>("overview");
+  const [activeStep, setActiveStep] = useState<StepId>(loadActiveStep);
   const [sidebarOpen, setSidebarOpen] = useState(
     () =>
       typeof window === "undefined" ||
@@ -632,6 +659,10 @@ export const App = () => {
     }, 180);
     return () => window.clearTimeout(timer);
   }, [characterDocument]);
+
+  useEffect(() => {
+    window.localStorage.setItem(activeStepStorageKey, activeStep);
+  }, [activeStep]);
 
   useEffect(() => {
     if (!saved) {
@@ -1100,7 +1131,22 @@ export const App = () => {
   );
 
   const renderSheet = () => (
-    <CharacterSheet character={character} result={result} onPrint={() => window.print()} />
+    <Suspense fallback={<p className="lazy-loading">Charakterbogen wird geladen …</p>}>
+      <CharacterSheet
+        catalog={catalog}
+        document={characterDocument}
+        result={result}
+        onChange={setCharacterDocument}
+        onEdit={(target) => setActiveStep(target ?? "overview")}
+        onDetails={setDetailId}
+        onPrint={() => window.print()}
+        onSave={() => {
+          saveCharacter(characterDocument);
+          setSaved(true);
+        }}
+        onExportJson={() => downloadCharacter(characterDocument)}
+      />
+    </Suspense>
   );
 
   const stepContent: Record<StepId, () => ReactNode> = {
@@ -1267,11 +1313,7 @@ export const App = () => {
             <span>Charakterbau</span>
             <h1>{steps.find((step) => step.id === activeStep)?.label}</h1>
           </div>
-          {activeStep === "sheet" ? (
-            <AppButton icon={Printer} title="Charakterbogen drucken" onClick={() => window.print()}>
-              Drucken
-            </AppButton>
-          ) : (
+          {activeStep === "sheet" ? null : (
             <AppButton
               icon={ChevronRight}
               tone="primary"
@@ -1687,109 +1729,3 @@ const Compendium = ({ onDetails }: { onDetails: (id: string) => void }) => {
     </section>
   );
 };
-
-const CharacterSheet = ({
-  character,
-  result,
-  onPrint
-}: {
-  character: CharacterState;
-  result: ReturnType<typeof calculateCharacter>;
-  onPrint: () => void;
-}) => (
-  <article className="character-sheet">
-    <header>
-      <div>
-        <span>SHADOWS OF THE CITY</span>
-        <h2>{character.name}</h2>
-        <p>
-          Stufe {String(character.level)} · {entityName(character.ancestryId)} ·{" "}
-          {entityName(character.backgroundId)} · {entityName(character.classId)}
-        </p>
-      </div>
-      <button type="button" onClick={onPrint}>
-        <Printer size={18} />
-        Drucken
-      </button>
-    </header>
-    <section className="sheet-vitals">
-      <div>
-        <span>TP</span>
-        <strong>{result.hitPoints.value}</strong>
-      </div>
-      <div>
-        <span>RK</span>
-        <strong>{result.armorClass.value}</strong>
-      </div>
-      <div>
-        <span>Wahrnehmung</span>
-        <strong>+{result.perception.value}</strong>
-      </div>
-      <div>
-        <span>Bewegung</span>
-        <strong>{result.speed.value} Fuß</strong>
-      </div>
-    </section>
-    <section className="sheet-columns">
-      <div>
-        <h3>Attribute</h3>
-        {Object.entries(result.attributes).map(([id, value]) => (
-          <p key={id}>
-            <span>{attributeLabels[id as AttributeId]}</span>
-            <strong>{value.value}</strong>
-          </p>
-        ))}
-      </div>
-      <div>
-        <h3>Rettungswürfe</h3>
-        {Object.entries(result.saves).map(([id, value]) => (
-          <p key={id}>
-            <span>{formatSave(id as SaveId)}</span>
-            <strong>+{value.value}</strong>
-          </p>
-        ))}
-        <h3>SG</h3>
-        <p>
-          <span>Klasse</span>
-          <strong>{result.classDc?.value ?? "–"}</strong>
-        </p>
-        <p>
-          <span>Zauber</span>
-          <strong>{result.spellDc?.value ?? "–"}</strong>
-        </p>
-      </div>
-      <div>
-        <h3>Fertigkeiten</h3>
-        {Object.entries(result.skills)
-          .filter(([, value]) =>
-            value.breakdown.some((entry) => entry.kind === "proficiency" && entry.value > 0)
-          )
-          .map(([id, value]) => (
-            <p key={id}>
-              <span>{entityName(id)}</span>
-              <strong>+{value.value}</strong>
-            </p>
-          ))}
-      </div>
-    </section>
-    <section className="sheet-lists">
-      <div>
-        <h3>Talente und Merkmale</h3>
-        <p>{[...result.featIds, ...result.featureIds].map(entityName).join(" · ") || "–"}</p>
-      </div>
-      <div>
-        <h3>Zauber</h3>
-        <p>{result.spellIds.map(entityName).join(" · ") || "–"}</p>
-      </div>
-      <div>
-        <h3>Ausrüstung</h3>
-        <p>{result.inventoryIds.map(entityName).join(" · ") || "–"}</p>
-      </div>
-    </section>
-    <footer>
-      <Info size={14} />
-      {String(catalog.entities.length)} geprüfte Inhalte · Status{" "}
-      {validationStateLabels[result.state]}
-    </footer>
-  </article>
-);

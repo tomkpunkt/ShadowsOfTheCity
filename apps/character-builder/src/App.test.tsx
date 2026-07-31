@@ -71,7 +71,7 @@ describe("Character Builder", () => {
     await user.click(within(card as HTMLElement).getByRole("button"));
 
     expect(screen.getByRole("heading", { level: 2, name: "Feuerball" })).toBeInTheDocument();
-    expect(screen.getByText("Rang", { selector: "dt" })).toBeInTheDocument();
+    expect(await screen.findByText("Rang", { selector: "dt" })).toBeInTheDocument();
     expect(
       screen.getByText(
         "Diese Regel ist derzeit als Textregel hinterlegt und wird nicht automatisch berechnet."

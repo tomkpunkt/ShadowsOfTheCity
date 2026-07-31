@@ -1,7 +1,8 @@
 import { z } from "zod";
 
 export const SCHEMA_VERSION = 1 as const;
-export const CHARACTER_FORMAT_VERSION = 2 as const;
+export const CHARACTER_FORMAT_VERSION = 3 as const;
+export const SESSION_STATE_VERSION = 1 as const;
 export const APP_VERSION = "0.1.0" as const;
 
 export const EntityIdSchema = z
@@ -514,13 +515,14 @@ const CharacterMigrationSchema = z
   })
   .strict();
 
-export const CharacterDocumentSchema = z
+const IsoDateSchema = z.string().datetime({ offset: true });
+
+const SessionEntryIdSchema = z
+  .string()
+  .regex(/^[a-z0-9][a-z0-9.-]*(?::[a-z0-9-]+)?$/, "Session IDs must use lowercase ASCII segments");
+
+export const CharacterBuildSchema = z
   .object({
-    formatVersion: z.literal(CHARACTER_FORMAT_VERSION),
-    contentSchemaVersion: z.literal(SCHEMA_VERSION),
-    catalogHash: z.string().regex(/^[a-f0-9]{64}$/),
-    createdWithVersion: z.string().regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/),
-    lastSavedWithVersion: z.string().regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/),
     name: z.string(),
     level: z.number().int().min(1).max(20),
     ancestryId: EntityIdSchema.optional(),
@@ -530,25 +532,194 @@ export const CharacterDocumentSchema = z
     choices: z.record(EntityIdSchema, z.array(EntityIdSchema)),
     attributeBoosts: z.array(AttributeIdSchema),
     inventoryIds: z.array(EntityIdSchema),
-    equippedItemIds: z.array(EntityIdSchema).default([]),
     options: z.record(EntityIdSchema, z.union([z.string(), z.number(), z.boolean()])).default({}),
     notes: z.string().optional(),
+    biography: z
+      .object({
+        description: z.string().default(""),
+        appearance: z.string().default(""),
+        personality: z.string().default(""),
+        motivation: z.string().default(""),
+        relationships: z.string().default(""),
+        organizations: z.string().default(""),
+        contacts: z.string().default(""),
+        goals: z.string().default(""),
+        backgroundNotes: z.string().default("")
+      })
+      .strict()
+      .default({
+        description: "",
+        appearance: "",
+        personality: "",
+        motivation: "",
+        relationships: "",
+        organizations: "",
+        contacts: "",
+        goals: "",
+        backgroundNotes: ""
+      })
+  })
+  .strict();
+
+const SessionConditionSchema = z
+  .object({
+    id: SessionEntryIdSchema,
+    conditionId: EntityIdSchema.optional(),
+    name: z.string().min(1),
+    value: z.number().finite().optional(),
+    source: z.string().min(1),
+    duration: z.string().optional(),
+    startedAt: z.string().optional(),
+    note: z.string().optional(),
+    active: z.boolean().default(true)
+  })
+  .strict();
+
+const SessionResourceSchema = z
+  .object({
+    current: z.number().finite(),
+    maximum: z.number().finite().optional(),
+    recovery: z.enum(["never", "encounter", "short-rest", "daily", "manual"]).default("manual"),
+    sourceId: EntityIdSchema.optional(),
+    group: z.string().optional()
+  })
+  .strict();
+
+const SessionItemStateSchema = z
+  .object({
+    quantity: z.number().int().min(0).default(1),
+    equipped: z.boolean().default(false),
+    active: z.boolean().default(false),
+    consumed: z.number().int().min(0).default(0),
+    ammunition: z.number().int().min(0).optional(),
+    location: z.enum(["equipped", "carried", "stowed"]).default("carried"),
+    notes: z.string().optional()
+  })
+  .strict();
+
+const ManualModifierSchema = z
+  .object({
+    id: SessionEntryIdSchema,
+    target: z.enum([
+      "armor-class",
+      "class-dc",
+      "spell-dc",
+      "spell-attack",
+      "perception",
+      "initiative",
+      "speed",
+      "hit-points",
+      "skill",
+      "save",
+      "weapon-attack",
+      "weapon-damage",
+      "attribute-score"
+    ]),
+    selector: EntityIdSchema.optional(),
+    value: z.number().finite(),
+    bonusType: z.enum(["status", "circumstance", "item", "untyped"]),
+    source: z.string().min(1),
+    condition: z.string().optional(),
+    duration: z.string().optional(),
+    note: z.string().optional(),
+    active: z.boolean().default(true)
+  })
+  .strict();
+
+const SessionNoteSchema = z
+  .object({
+    id: SessionEntryIdSchema,
+    title: z.string().min(1),
+    body: z.string(),
+    category: z.string().optional(),
+    createdAt: IsoDateSchema,
+    updatedAt: IsoDateSchema
+  })
+  .strict();
+
+const HpHistoryEntrySchema = z
+  .object({
+    id: SessionEntryIdSchema,
+    kind: z.enum(["damage", "healing", "temporary-hp", "rest", "undo"]),
+    amount: z.number().finite().nonnegative(),
+    previousHp: z.number().finite().nonnegative(),
+    nextHp: z.number().finite().nonnegative(),
+    previousTemporaryHp: z.number().finite().nonnegative(),
+    nextTemporaryHp: z.number().finite().nonnegative(),
+    source: z.string().optional(),
+    createdAt: IsoDateSchema
+  })
+  .strict();
+
+const SessionLogEntrySchema = z
+  .object({
+    id: SessionEntryIdSchema,
+    kind: z.enum(["resource", "spell-slot", "action-use", "item", "condition", "rest", "note"]),
+    label: z.string().min(1),
+    detail: z.string().optional(),
+    createdAt: IsoDateSchema
+  })
+  .strict();
+
+const DiceResultSchema = z
+  .object({
+    id: SessionEntryIdSchema,
+    formula: z.string().min(1),
+    rolls: z.array(z.number().int()),
+    modifier: z.number().finite(),
+    total: z.number().finite(),
+    source: z.string().optional(),
+    createdAt: IsoDateSchema
+  })
+  .strict();
+
+export const CharacterSessionStateSchema = z
+  .object({
+    version: z.literal(SESSION_STATE_VERSION),
+    currentHp: z.number().finite().nonnegative().nullable().default(null),
+    temporaryHp: z.number().finite().nonnegative().default(0),
+    conditions: z.array(SessionConditionSchema).default([]),
+    resources: z.record(EntityIdSchema, SessionResourceSchema).default({}),
+    spellSlotUsage: z
+      .record(z.string().regex(/^[1-9][0-9]*$/), z.number().int().min(0))
+      .default({}),
+    actionUses: z.record(EntityIdSchema, z.number().int().min(0)).default({}),
+    itemStates: z.record(EntityIdSchema, SessionItemStateSchema).default({}),
+    manualModifiers: z.array(ManualModifierSchema).default([]),
+    notes: z.array(SessionNoteSchema).default([]),
+    hpHistory: z.array(HpHistoryEntrySchema).max(100).default([]),
+    log: z.array(SessionLogEntrySchema).max(250).default([]),
+    diceHistory: z.array(DiceResultSchema).max(100).default([]),
+    activeView: z
+      .enum([
+        "overview",
+        "combat",
+        "actions",
+        "skills",
+        "features",
+        "spells",
+        "inventory",
+        "resources",
+        "biography",
+        "export"
+      ])
+      .default("overview")
+  })
+  .strict();
+
+export const CharacterDocumentSchema = z
+  .object({
+    formatVersion: z.literal(CHARACTER_FORMAT_VERSION),
+    contentSchemaVersion: z.literal(SCHEMA_VERSION),
+    catalogHash: z.string().regex(/^[a-f0-9]{64}$/),
+    createdWithVersion: z.string().regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/),
+    lastSavedWithVersion: z.string().regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/),
+    build: CharacterBuildSchema,
+    session: CharacterSessionStateSchema,
     migrations: z.array(CharacterMigrationSchema).default([]),
     legacyValues: z.record(z.string(), z.unknown()).default({})
   })
-  .strict()
-  .superRefine((character, context) => {
-    const inventory = new Set(character.inventoryIds);
-    for (const itemId of character.equippedItemIds) {
-      if (!inventory.has(itemId)) {
-        context.addIssue({
-          code: "custom",
-          path: ["equippedItemIds"],
-          message: `Equipped item is not in inventory: ${itemId}`
-        });
-      }
-    }
-  });
+  .strict();
 
 export const ActionCostSchema = z.union([
   z.object({ kind: z.literal("fixed"), value: z.number().int().min(1).max(3) }).strict(),
@@ -939,7 +1110,7 @@ const CreatureSchema = BaseEntitySchema.extend({
   effects: z.array(EffectSchema).default([])
 }).strict();
 
-const CharacterBuildSchema = BaseEntitySchema.extend({
+const CharacterBuildEntitySchema = BaseEntitySchema.extend({
   type: z.literal("character-build"),
   character: CharacterDocumentSchema
 }).strict();
@@ -967,7 +1138,7 @@ export const ContentEntitySchema = z.discriminatedUnion("type", [
   ResourceSchema,
   CyberwareSchema,
   CreatureSchema,
-  CharacterBuildSchema
+  CharacterBuildEntitySchema
 ]);
 
 export const CatalogSchema = z

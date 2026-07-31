@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 
+import type { CharacterDocument } from "@sotc/shared";
+
 import { calculateCharacter } from "./engine.js";
 import type { CharacterState } from "./types.js";
 
@@ -316,27 +318,74 @@ const catalog = {
   ]
 };
 
-const character = (overrides: Partial<CharacterState> = {}): CharacterState => ({
-  formatVersion: 2,
+const character = (
+  overrides: Partial<CharacterState> = {},
+  documentOverrides: Partial<CharacterDocument> = {}
+): CharacterDocument => ({
+  formatVersion: 3,
   contentSchemaVersion: 1,
   catalogHash: hash,
   createdWithVersion: "0.1.0",
   lastSavedWithVersion: "0.1.0",
-  name: "Ada",
-  level: 1,
-  ancestryId: "ancestry.test",
-  backgroundId: "background.test",
-  classId: "class.test",
-  choices: {
-    "choice.test-feat": ["feat.test.strong"]
+  build: {
+    name: "Ada",
+    level: 1,
+    ancestryId: "ancestry.test",
+    backgroundId: "background.test",
+    classId: "class.test",
+    choices: {
+      "choice.test-feat": ["feat.test.strong"]
+    },
+    attributeBoosts: ["strength", "dexterity"],
+    inventoryIds: ["armor.leather", "weapon.club"],
+    options: {},
+    biography: {
+      description: "",
+      appearance: "",
+      personality: "",
+      motivation: "",
+      relationships: "",
+      organizations: "",
+      contacts: "",
+      goals: "",
+      backgroundNotes: ""
+    },
+    ...overrides
   },
-  attributeBoosts: ["strength", "dexterity"],
-  inventoryIds: ["armor.leather", "weapon.club"],
-  equippedItemIds: ["armor.leather", "weapon.club"],
-  options: {},
+  session: {
+    version: 1,
+    currentHp: null,
+    temporaryHp: 0,
+    conditions: [],
+    resources: {},
+    spellSlotUsage: {},
+    actionUses: {},
+    itemStates: {
+      "armor.leather": {
+        quantity: 1,
+        equipped: true,
+        active: false,
+        consumed: 0,
+        location: "equipped"
+      },
+      "weapon.club": {
+        quantity: 1,
+        equipped: true,
+        active: false,
+        consumed: 0,
+        location: "equipped"
+      }
+    },
+    manualModifiers: [],
+    notes: [],
+    hpHistory: [],
+    log: [],
+    diceHistory: [],
+    activeView: "overview"
+  },
   migrations: [],
   legacyValues: {},
-  ...overrides
+  ...documentOverrides
 });
 
 describe("calculateCharacter", () => {
@@ -425,7 +474,7 @@ describe("calculateCharacter", () => {
   });
 
   it("rejects stale catalog hashes without discarding selections", () => {
-    const result = calculateCharacter(catalog, character({ catalogHash: "b".repeat(64) }));
+    const result = calculateCharacter(catalog, character({}, { catalogHash: "b".repeat(64) }));
 
     expect(result.state).toBe("invalid");
     expect(result.featIds).toContain("feat.test.strong");
@@ -449,6 +498,73 @@ describe("calculateCharacter", () => {
       }
     });
     expect(result.bulk.value).toBe(2);
+  });
+
+  it("applies only equipment activated through the session state", () => {
+    const equipped = calculateCharacter(catalog, character());
+    const document = character();
+    document.session.itemStates["armor.leather"] = {
+      ...document.session.itemStates["armor.leather"]!,
+      equipped: false,
+      location: "carried"
+    };
+    document.session.itemStates["weapon.club"] = {
+      ...document.session.itemStates["weapon.club"]!,
+      equipped: false,
+      location: "carried"
+    };
+    const carried = calculateCharacter(catalog, document);
+
+    expect(carried.armorClass.value).toBeLessThan(equipped.armorClass.value);
+    expect(carried.weaponAttacks["weapon.club"]).toBeUndefined();
+    expect(carried.inventory).toEqual(
+      expect.arrayContaining([expect.objectContaining({ id: "weapon.club", equipped: false })])
+    );
+  });
+
+  it("includes visible session modifiers and current resources in the evaluation", () => {
+    const document = character();
+    document.session.manualModifiers.push({
+      id: "modifier:cover",
+      target: "armor-class",
+      value: 1,
+      bonusType: "circumstance",
+      source: "Deckung",
+      active: true
+    });
+    document.session.resources["resource.focus"] = {
+      current: 0,
+      recovery: "short-rest"
+    };
+
+    const result = calculateCharacter(catalog, document);
+
+    expect(result.armorClass.breakdown).toContainEqual(
+      expect.objectContaining({
+        sourceId: "session.modifier:cover",
+        label: "Deckung",
+        value: 1
+      })
+    );
+    expect(result.session.resources["resource.focus"]).toMatchObject({
+      current: 0,
+      maximum: 1,
+      orphaned: false
+    });
+  });
+
+  it("reports session entries orphaned by a build change", () => {
+    const document = character({ inventoryIds: [] });
+    const result = calculateCharacter(catalog, document);
+
+    expect(result.session.orphanedEntries).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          kind: "item",
+          id: "weapon.club"
+        })
+      ])
+    );
   });
 
   it("replaces a target with a deterministic derived value", () => {

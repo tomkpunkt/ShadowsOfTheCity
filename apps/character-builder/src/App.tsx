@@ -606,7 +606,8 @@ const DetailDrawer = ({
 
 export const App = () => {
   const [initialLoad] = useState(() => loadCharacter(catalog));
-  const [character, setCharacter] = useState<CharacterState>(initialLoad.character);
+  const [characterDocument, setCharacterDocument] = useState(initialLoad.document);
+  const character: CharacterState = characterDocument.build;
   const [activeStep, setActiveStep] = useState<StepId>("overview");
   const [sidebarOpen, setSidebarOpen] = useState(
     () =>
@@ -621,16 +622,16 @@ export const App = () => {
   );
   const [saved, setSaved] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
-  const result = useMemo(() => calculateCharacter(catalog, character), [character]);
+  const result = useMemo(() => calculateCharacter(catalog, characterDocument), [characterDocument]);
   const expectedBoosts = result.expectedAttributeBoosts;
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      saveCharacter(character);
+      saveCharacter(characterDocument);
       setSaved(true);
     }, 180);
     return () => window.clearTimeout(timer);
-  }, [character]);
+  }, [characterDocument]);
 
   useEffect(() => {
     if (!saved) {
@@ -642,14 +643,17 @@ export const App = () => {
 
   const update = (patch: Partial<CharacterState>): void => {
     setSaved(false);
-    setCharacter((current) => ({ ...current, ...patch }));
+    setCharacterDocument((current) => ({
+      ...current,
+      build: { ...current.build, ...patch }
+    }));
   };
 
   const createNewCharacter = (): void => {
     if (!window.confirm("Aktuellen Charakter verwerfen und einen neuen Charakter anlegen?")) {
       return;
     }
-    setCharacter(emptyCharacter(catalog.contentHash));
+    setCharacterDocument(emptyCharacter(catalog.contentHash));
     setActiveStep("overview");
     setDetailId(undefined);
     setImportConflicts([]);
@@ -658,8 +662,8 @@ export const App = () => {
   };
 
   const updateChoice = (choiceId: string, optionId: string, maximum: number): void => {
-    setCharacter((current) => {
-      const selected = current.choices[choiceId] ?? [];
+    setCharacterDocument((current) => {
+      const selected = current.build.choices[choiceId] ?? [];
       const next = selected.includes(optionId)
         ? selected.filter((id) => id !== optionId)
         : maximum === 1
@@ -669,7 +673,10 @@ export const App = () => {
             : selected;
       return {
         ...current,
-        choices: { ...current.choices, [choiceId]: next }
+        build: {
+          ...current.build,
+          choices: { ...current.build.choices, [choiceId]: next }
+        }
       };
     });
   };
@@ -724,7 +731,7 @@ export const App = () => {
   const handleImport = async (file: File): Promise<void> => {
     try {
       const imported = importCharacter(await file.text(), catalog);
-      setCharacter(imported.character);
+      setCharacterDocument(imported.document);
       setImportConflicts(imported.conflicts);
       setCompatibility(imported.compatibility);
       setActiveStep(imported.conflicts.length === 0 ? "overview" : "review");
@@ -994,16 +1001,36 @@ export const App = () => {
       <EquipmentSelection
         candidates={candidates}
         selectedIds={character.inventoryIds}
-        onToggle={(id) =>
-          update({
-            inventoryIds: character.inventoryIds.includes(id)
-              ? character.inventoryIds.filter((itemId) => itemId !== id)
-              : [...character.inventoryIds, id],
-            equippedItemIds: character.inventoryIds.includes(id)
-              ? character.equippedItemIds.filter((itemId) => itemId !== id)
-              : [...character.equippedItemIds, id]
-          })
-        }
+        onToggle={(id) => {
+          setSaved(false);
+          setCharacterDocument((current) => {
+            const selected = current.build.inventoryIds.includes(id);
+            return {
+              ...current,
+              build: {
+                ...current.build,
+                inventoryIds: selected
+                  ? current.build.inventoryIds.filter((itemId) => itemId !== id)
+                  : [...current.build.inventoryIds, id]
+              },
+              session: selected
+                ? current.session
+                : {
+                    ...current.session,
+                    itemStates: {
+                      ...current.session.itemStates,
+                      [id]: current.session.itemStates[id] ?? {
+                        quantity: 1,
+                        equipped: true,
+                        active: false,
+                        consumed: 0,
+                        location: "equipped"
+                      }
+                    }
+                  }
+            };
+          });
+        }}
         onDetails={setDetailId}
       />
     );
@@ -1145,14 +1172,14 @@ export const App = () => {
             icon={Save}
             title="Lokal speichern"
             onClick={() => {
-              saveCharacter(character);
+              saveCharacter(characterDocument);
               setSaved(true);
             }}
           />
           <AppButton
             icon={Download}
             title="JSON exportieren"
-            onClick={() => downloadCharacter(character)}
+            onClick={() => downloadCharacter(characterDocument)}
           />
           <AppButton
             icon={Upload}

@@ -1,4 +1,11 @@
-import { CatalogSchema, CharacterDocumentSchema, type ContentEntity } from "@sotc/shared";
+import {
+  CatalogSchema,
+  CharacterDocumentSchema,
+  CharacterSessionStateSchema,
+  type CharacterSessionState,
+  type CharacterDocument,
+  type ContentEntity
+} from "@sotc/shared";
 
 import {
   applyValueOperation,
@@ -413,11 +420,13 @@ const validateSelectionReferences = (
 
 export const calculateCharacter = (
   catalogInput: unknown,
-  characterInput: CharacterState,
+  documentInput: CharacterDocument,
   options: EngineOptions = {}
 ): CalculatedCharacter => {
   const catalog = CatalogSchema.parse(catalogInput);
-  const character = CharacterDocumentSchema.parse(characterInput);
+  const document = CharacterDocumentSchema.parse(documentInput);
+  const character = document.build;
+  const session = CharacterSessionStateSchema.parse(document.session);
   const entities = new Map(catalog.entities.map((entity) => [entity.id, entity]));
   const issues: BuildIssue[] = [];
   addCoreSelectionIssue(issues, character.ancestryId, "ancestry", "Abstammung");
@@ -435,11 +444,11 @@ export const calculateCharacter = (
       });
     }
   }
-  if (character.catalogHash !== catalog.contentHash) {
+  if (document.catalogHash !== catalog.contentHash) {
     issues.push({
       code: "CATALOG_HASH_MISMATCH",
       state: "invalid",
-      message: `Build-Katalog ${character.catalogHash} stimmt nicht mit ${catalog.contentHash} überein.`
+      message: `Build-Katalog ${document.catalogHash} stimmt nicht mit ${catalog.contentHash} überein.`
     });
   }
 
@@ -595,7 +604,14 @@ export const calculateCharacter = (
   const traitIds = new Set<string>();
   const traditions = new Set<string>();
   const inventoryIds = new Set(character.inventoryIds);
-  const equippedItemIds = new Set(character.equippedItemIds);
+  const equippedItemIds = new Set(
+    character.inventoryIds.filter((id) => {
+      const state = session.itemStates[id];
+      return (
+        state !== undefined && state.quantity > state.consumed && (state.equipped || state.active)
+      );
+    })
+  );
   const selectedOptionIds = new Set(Object.values(character.choices).flat());
   const characterOptions = new Map(Object.entries(character.options));
   const resources = new Map<string, number>();
@@ -666,12 +682,27 @@ export const calculateCharacter = (
     resources
   };
   const accumulator = createAccumulator();
+  for (const modifier of session.manualModifiers.filter((entry) => entry.active)) {
+    accumulator.modifiers.push({
+      sourceId: `session.${modifier.id}`,
+      label: modifier.source,
+      target: modifier.target,
+      ...(modifier.selector === undefined ? {} : { selector: modifier.selector }),
+      bonusType: modifier.bonusType,
+      value: modifier.value
+    });
+  }
+  const activeConditionIds = session.conditions
+    .filter((condition) => condition.active && condition.conditionId !== undefined)
+    .map((condition) => condition.conditionId as string)
+    .filter((id) => entities.get(id)?.type === "condition");
   const sourceQueue = [
     ...(background?.type === "background" ? [background.id] : []),
     ...(heritage?.type === "heritage" ? [heritage.id] : []),
     ...featIds,
     ...featureIds,
-    ...equippedItemIds
+    ...equippedItemIds,
+    ...activeConditionIds
   ].sort();
   const processedSources = new Set<string>();
   while (sourceQueue.length > 0) {
@@ -827,7 +858,7 @@ export const calculateCharacter = (
     character.level
   );
 
-  const armor = character.equippedItemIds
+  const armor = [...equippedItemIds]
     .map((id) => entities.get(id))
     .find(
       (entity): entity is Extract<ContentEntity, { type: "armor" }> => entity?.type === "armor"
@@ -1088,7 +1119,7 @@ export const calculateCharacter = (
     character.level
   );
 
-  const weapons = character.equippedItemIds
+  const weapons = [...equippedItemIds]
     .map((id) => entities.get(id))
     .filter(
       (entity): entity is Extract<ContentEntity, { type: "weapon" }> => entity?.type === "weapon"
@@ -1417,6 +1448,99 @@ export const calculateCharacter = (
     { key: "speed", value: speed },
     { key: "bulk", value: bulk }
   ].sort((left, right) => left.key.localeCompare(right.key));
+  const recoveryFor = (
+    resourceId: string
+  ): CharacterSessionState["resources"][string]["recovery"] => {
+    const resource = entities.get(resourceId);
+    if (resource?.type !== "resource") {
+      return "manual";
+    }
+    return {
+      never: "never",
+      encounter: "encounter",
+      hour: "short-rest",
+      day: "daily",
+      week: "daily"
+    }[resource.refresh] as CharacterSessionState["resources"][string]["recovery"];
+  };
+  const resourceIds = new Set([
+    ...Object.keys(calculatedResources),
+    ...Object.keys(session.resources)
+  ]);
+  const evaluatedResources = Object.fromEntries(
+    [...resourceIds].sort().map((resourceId) => {
+      const configured = session.resources[resourceId];
+      const calculated = calculatedResources[resourceId];
+      const maximum = calculated?.value ?? configured?.maximum ?? 0;
+      return [
+        resourceId,
+        {
+          current: Math.max(0, Math.min(configured?.current ?? maximum, maximum)),
+          maximum,
+          recovery: configured?.recovery ?? recoveryFor(resourceId),
+          ...(configured?.sourceId === undefined ? {} : { sourceId: configured.sourceId }),
+          orphaned: calculated === undefined
+        }
+      ];
+    })
+  );
+  const calculatedActionIds = new Set([
+    ...accumulator.actionGrants.map((action) => action.actionId),
+    ...accumulator.grantedActionIds
+  ]);
+  const slotRanks = new Set(spellSlots.map((slot) => String(slot.rank)));
+  const orphanedEntries: CalculatedCharacter["session"]["orphanedEntries"] = [
+    ...session.conditions
+      .filter(
+        (condition) =>
+          condition.conditionId !== undefined && entities.get(condition.conditionId) === undefined
+      )
+      .map((condition) => ({
+        kind: "condition" as const,
+        id: condition.id,
+        reason: `Die Zustandsquelle ${condition.conditionId ?? condition.name} existiert nicht mehr.`
+      })),
+    ...Object.keys(session.resources)
+      .filter((id) => calculatedResources[id] === undefined)
+      .map((id) => ({
+        kind: "resource" as const,
+        id,
+        reason: "Die Ressource wird vom aktuellen Build nicht mehr bereitgestellt."
+      })),
+    ...Object.keys(session.spellSlotUsage)
+      .filter((rank) => !slotRanks.has(rank))
+      .map((rank) => ({
+        kind: "spell-slot" as const,
+        id: rank,
+        reason: "Dieser Zauberrang ist im aktuellen Build nicht verfügbar."
+      })),
+    ...Object.keys(session.actionUses)
+      .filter((id) => !calculatedActionIds.has(id))
+      .map((id) => ({
+        kind: "action" as const,
+        id,
+        reason: "Die verwendete Aktion wird vom aktuellen Build nicht mehr bereitgestellt."
+      })),
+    ...Object.keys(session.itemStates)
+      .filter((id) => !allInventoryIds.includes(id))
+      .map((id) => ({
+        kind: "item" as const,
+        id,
+        reason: "Der Gegenstand befindet sich nicht mehr im aktuellen Inventar."
+      })),
+    ...session.manualModifiers
+      .filter(
+        (modifier) =>
+          modifier.selector !== undefined &&
+          ["skill", "weapon-attack", "weapon-damage"].includes(modifier.target) &&
+          !entities.has(modifier.selector)
+      )
+      .map((modifier) => ({
+        kind: "modifier" as const,
+        id: modifier.id,
+        reason: `Das Ziel ${modifier.selector ?? modifier.target} existiert nicht mehr.`
+      }))
+  ];
 
   return {
     state,
@@ -1503,6 +1627,22 @@ export const calculateCharacter = (
     },
     explanations,
     resources: calculatedResources,
+    session: {
+      currentHp: Math.max(0, Math.min(session.currentHp ?? hitPoints.value, hitPoints.value)),
+      temporaryHp: session.temporaryHp,
+      conditions: session.conditions,
+      resources: evaluatedResources,
+      spellSlotUsage: Object.fromEntries(
+        Object.entries(session.spellSlotUsage).map(([rank, used]) => [
+          rank,
+          Math.min(used, spellSlots.find((slot) => String(slot.rank) === rank)?.slots.value ?? used)
+        ])
+      ),
+      itemStates: session.itemStates,
+      actionUses: session.actionUses,
+      manualModifiers: session.manualModifiers,
+      orphanedEntries
+    },
     choices: resolvedChoices,
     issues,
     ignoredTextEffects: accumulator.ignoredTextEffects

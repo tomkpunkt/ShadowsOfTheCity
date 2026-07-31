@@ -48,21 +48,37 @@ const catalog: Catalog = {
 };
 
 describe("character storage", () => {
-  it("round-trips a versioned character", () => {
+  it("round-trips a versioned build and session state", () => {
     const storage = memoryStorage();
+    const empty = emptyCharacter(hash);
     const character = {
-      ...emptyCharacter(hash),
-      name: "Nyx",
-      attributeBoosts: ["dexterity" as const],
-      inventoryIds: ["trait.test"],
-      equippedItemIds: [],
-      options: { "option.test": true }
+      ...empty,
+      build: {
+        ...empty.build,
+        name: "Nyx",
+        attributeBoosts: ["dexterity" as const],
+        inventoryIds: ["trait.test"],
+        options: { "option.test": true }
+      },
+      session: {
+        ...empty.session,
+        currentHp: 12,
+        itemStates: {
+          "trait.test": {
+            quantity: 2,
+            equipped: true,
+            active: false,
+            consumed: 0,
+            location: "equipped" as const
+          }
+        }
+      }
     };
 
     saveCharacter(character, storage);
     const loaded = loadCharacter(catalog, storage);
 
-    expect(loaded.character).toEqual(character);
+    expect(loaded.document).toEqual(character);
     expect(loaded.compatibility).toBe("compatible");
     expect(loaded.conflicts).toEqual([]);
   });
@@ -75,30 +91,34 @@ describe("character storage", () => {
 
     const loaded = loadCharacter(catalog, storage);
 
-    expect(loaded.character).toEqual(emptyCharacter(hash));
+    expect(loaded.document).toEqual(emptyCharacter(hash));
     expect(loaded.compatibility).toBe("unreadable");
     expect(loaded.conflicts[0]).toContain("beschädigt");
   });
 
   it("preserves unknown IDs during import and reports every conflict", () => {
+    const empty = emptyCharacter("b".repeat(64));
     const character = {
-      ...emptyCharacter("b".repeat(64)),
-      ancestryId: "ancestry.unknown",
-      choices: {
-        "choice.unknown": ["feat.unknown"]
+      ...empty,
+      build: {
+        ...empty.build,
+        ancestryId: "ancestry.unknown",
+        choices: {
+          "choice.unknown": ["feat.unknown"]
+        }
       }
     };
 
     const imported = importCharacter(serializeCharacter(character), catalog);
 
-    expect(imported.character).toMatchObject({
-      ancestryId: character.ancestryId,
-      choices: character.choices,
-      catalogHash: character.catalogHash
+    expect(imported.document.build).toMatchObject({
+      ancestryId: character.build.ancestryId,
+      choices: character.build.choices
     });
-    expect(imported.character.migrations).toEqual([
+    expect(imported.document.catalogHash).toBe(character.catalogHash);
+    expect(imported.document.migrations).toEqual([
       expect.objectContaining({
-        migrationId: "migration.character.catalog-aliases",
+        migrationId: "migration.character.v3-catalog-aliases",
         fromCatalogHash: "b".repeat(64),
         toCatalogHash: hash
       })
@@ -106,28 +126,32 @@ describe("character storage", () => {
     expect(imported.compatibility).toBe("partially-incompatible");
     expect(imported.conflicts).toEqual(
       expect.arrayContaining([
-        "ancestryId: Unbekannte Legacy-ID ancestry.unknown wurde unverändert erhalten.",
-        "choices.choice.unknown: Unbekannte Legacy-ID choice.unknown wurde unverändert erhalten.",
-        "choices.choice.unknown.0: Unbekannte Legacy-ID feat.unknown wurde unverändert erhalten."
+        "build.ancestryId: Unbekannte Legacy-ID ancestry.unknown wurde unverändert erhalten.",
+        "build.choices.choice.unknown: Unbekannte Legacy-ID choice.unknown wurde unverändert erhalten.",
+        "build.choices.choice.unknown.0: Unbekannte Legacy-ID feat.unknown wurde unverändert erhalten."
       ])
     );
   });
 
   it("migrates the catalog hash when every referenced ID remains valid", () => {
+    const empty = emptyCharacter("b".repeat(64));
     const character = {
-      ...emptyCharacter("b".repeat(64)),
-      name: "Mira"
+      ...empty,
+      build: {
+        ...empty.build,
+        name: "Mira"
+      }
     };
 
     const imported = importCharacter(serializeCharacter(character), catalog);
 
-    expect(imported.character.catalogHash).toBe(hash);
+    expect(imported.document.catalogHash).toBe(hash);
     expect(imported.conflicts).toEqual([]);
     expect(imported.compatibility).toBe("migrated");
-    expect(imported.character.migrations).toHaveLength(1);
+    expect(imported.document.migrations).toHaveLength(1);
   });
 
-  it("migrates format 1 deterministically and equips its inventory", () => {
+  it("migrates format 1 deterministically and moves equipment into the session", () => {
     const imported = importCharacter(
       JSON.stringify({
         formatVersion: 1,
@@ -141,13 +165,81 @@ describe("character storage", () => {
       catalog
     );
 
-    expect(imported.character).toMatchObject({
-      formatVersion: 2,
+    expect(imported.document).toMatchObject({
+      formatVersion: 3,
       contentSchemaVersion: 1,
-      inventoryIds: ["trait.test"],
-      equippedItemIds: ["trait.test"]
+      build: {
+        inventoryIds: ["trait.test"]
+      },
+      session: {
+        itemStates: {
+          "trait.test": {
+            equipped: true
+          }
+        }
+      }
     });
-    expect(imported.character.migrations[0]?.migrationId).toBe("migration.character.v1-to-v2");
+    expect(imported.document.migrations[0]?.migrationId).toBe("migration.character.v1-to-v3");
     expect(imported.sourceFormatVersion).toBe(1);
+  });
+
+  it("migrates format 2 without losing build choices or notes", () => {
+    const imported = importCharacter(
+      JSON.stringify({
+        formatVersion: 2,
+        contentSchemaVersion: 1,
+        catalogHash: hash,
+        createdWithVersion: "0.1.0",
+        lastSavedWithVersion: "0.1.0",
+        name: "Format Zwei",
+        level: 1,
+        choices: {},
+        attributeBoosts: [],
+        inventoryIds: ["trait.test"],
+        equippedItemIds: [],
+        options: {},
+        notes: "Bleibt erhalten",
+        migrations: [],
+        legacyValues: {}
+      }),
+      catalog
+    );
+
+    expect(imported.document.build).toMatchObject({
+      name: "Format Zwei",
+      notes: "Bleibt erhalten",
+      inventoryIds: ["trait.test"]
+    });
+    expect(imported.document.session.itemStates["trait.test"]?.equipped).toBe(false);
+    expect(imported.sourceFormatVersion).toBe(2);
+  });
+
+  it("isolates a malformed session state without discarding a valid build", () => {
+    const character = emptyCharacter(hash);
+    const imported = importCharacter(
+      JSON.stringify({
+        ...character,
+        build: {
+          ...character.build,
+          name: "Gerettete Nyx"
+        },
+        session: {
+          version: 1,
+          currentHp: "defekt"
+        }
+      }),
+      catalog
+    );
+
+    expect(imported.document.build.name).toBe("Gerettete Nyx");
+    expect(imported.document.session.currentHp).toBeNull();
+    expect(imported.document.legacyValues["unreadableSessionState"]).toEqual({
+      version: 1,
+      currentHp: "defekt"
+    });
+    expect(imported.compatibility).toBe("partially-incompatible");
+    expect(imported.conflicts).toContain(
+      "Der Session State war beschädigt und wurde isoliert zurückgesetzt."
+    );
   });
 });

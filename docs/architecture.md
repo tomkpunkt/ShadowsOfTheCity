@@ -22,16 +22,19 @@ flowchart LR
   A["Authoring: content/*.md"] --> B["Zod-Schemas: packages/shared"]
   B --> C["Compiler: packages/content-compiler"]
   C --> D["generated/catalog.json"]
-  D --> E["Rules Engine: packages/rules-engine"]
-  E --> F["React Builder: apps/character-builder"]
+  B --> E["CharacterDocument: Build + Session"]
+  D --> F["Rules Engine: packages/rules-engine"]
+  E --> F
+  F --> G["Creator und Character Sheet"]
 ```
 
 Der Authoring-Layer ist die einzige von Menschen gepflegte Regelquelle. Der
 Compiler liest YAML-Frontmatter und Markdown-Body, validiert Schema,
 Referenzen, Choice-Grenzen und Zyklen und erzeugt einen stabil sortierten
-Katalog samt SHA-256-Hash. Die Rules Engine nimmt nur Katalog und
-`CharacterState` entgegen. Die React-Anwendung definiert keine Klassen, Feats
-oder Formeln selbst.
+Katalog samt SHA-256-Hash. Die Rules Engine nimmt nur Katalog und das
+versionierte `CharacterDocument` mit getrenntem Build und Session State
+entgegen. Creator und Character Sheet verwenden dasselbe ausgewertete Modell.
+Die React-Anwendung definiert keine Klassen, Feats oder Formeln selbst.
 
 ## Pakete
 

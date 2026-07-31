@@ -1,5 +1,5 @@
-import { CatalogSchema, type Catalog } from "@sotc/shared";
-import { calculateCharacter, type AttributeId, type CharacterState } from "@sotc/rules-engine";
+import { CatalogSchema, type Catalog, type CharacterDocument } from "@sotc/shared";
+import { calculateCharacter, type AttributeId } from "@sotc/rules-engine";
 import { describe, expect, it } from "vitest";
 
 import catalogJson from "../../../generated/catalog.json" with { type: "json" };
@@ -8,7 +8,7 @@ import { migrateCharacter } from "./storage.js";
 
 const catalog: Catalog = CatalogSchema.parse(catalogJson);
 
-const completeChoices = (initial: CharacterState): CharacterState => {
+const completeChoices = (initial: CharacterDocument): CharacterDocument => {
   const character = structuredClone(initial);
   for (let pass = 0; pass < 10; pass += 1) {
     const result = calculateCharacter(catalog, character);
@@ -20,7 +20,7 @@ const completeChoices = (initial: CharacterState): CharacterState => {
         .slice(0, missing)
         .map((option) => option.entity.id);
       if (missing > 0 && selection.length === missing) {
-        character.choices[choice.choiceId] = [...choice.selectedIds, ...selection];
+        character.build.choices[choice.choiceId] = [...choice.selectedIds, ...selection];
         changed = true;
       }
     }
@@ -49,12 +49,12 @@ describe("legacy character regression", () => {
       },
       catalog
     );
-    const character = completeChoices(imported.character);
+    const character = completeChoices(imported.document);
     const result = calculateCharacter(catalog, character);
 
     expect(imported.compatibility).toBe("migrated");
-    expect(imported.character.inventoryIds).toEqual(["weapon.schwert"]);
-    expect(imported.character.legacyValues).toEqual({
+    expect(imported.document.build.inventoryIds).toEqual(["weapon.schwert"]);
+    expect(imported.document.legacyValues).toEqual({
       campaignNote: "Aus dem alten Charakterbogen erhalten"
     });
     expect(result.state, result.issues.map((issue) => issue.message).join("\n")).toBe("valid");

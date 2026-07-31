@@ -6,20 +6,23 @@ import type { CharacterState, EngineContext } from "./types.js";
 const hash = "a".repeat(64);
 
 const character: CharacterState = {
-  formatVersion: 2,
-  contentSchemaVersion: 1,
-  catalogHash: hash,
-  createdWithVersion: "0.1.0",
-  lastSavedWithVersion: "0.1.0",
   name: "Effekttest",
   level: 3,
   choices: {},
   attributeBoosts: [],
   inventoryIds: [],
-  equippedItemIds: [],
   options: {},
-  migrations: [],
-  legacyValues: {}
+  biography: {
+    description: "",
+    appearance: "",
+    personality: "",
+    motivation: "",
+    relationships: "",
+    organizations: "",
+    contacts: "",
+    goals: "",
+    backgroundNotes: ""
+  }
 };
 
 const context = (): EngineContext => ({

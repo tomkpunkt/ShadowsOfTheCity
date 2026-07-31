@@ -1,9 +1,10 @@
-import { CatalogSchema, type Catalog } from "@sotc/shared";
+import { CatalogSchema, type Catalog, type CharacterDocument } from "@sotc/shared";
 import { describe, expect, it } from "vitest";
 
 import catalogJson from "../../../generated/catalog.json" with { type: "json" };
 
 import { calculateCharacter } from "./engine.js";
+import { emptySessionState } from "./session.js";
 import type { AttributeId, CalculatedCharacter, CharacterState } from "./types.js";
 
 const catalog: Catalog = CatalogSchema.parse(catalogJson);
@@ -34,11 +35,6 @@ const completeLevelOneCharacter = (
   );
   const freeBoosts = ancestry.freeBoosts + background.freeBoosts;
   const character: CharacterState = {
-    formatVersion: 2,
-    contentSchemaVersion: 1,
-    catalogHash: catalog.contentHash,
-    createdWithVersion: "0.1.0",
-    lastSavedWithVersion: "0.1.0",
     name: `Regression ${classId}`,
     level: 1,
     ancestryId,
@@ -48,14 +44,33 @@ const completeLevelOneCharacter = (
     choices: {},
     attributeBoosts: preferredBoosts.slice(0, freeBoosts),
     inventoryIds: [],
-    equippedItemIds: [],
     options: {},
+    biography: {
+      description: "",
+      appearance: "",
+      personality: "",
+      motivation: "",
+      relationships: "",
+      organizations: "",
+      contacts: "",
+      goals: "",
+      backgroundNotes: ""
+    }
+  };
+  const document: CharacterDocument = {
+    formatVersion: 3,
+    contentSchemaVersion: 1,
+    catalogHash: catalog.contentHash,
+    createdWithVersion: "0.1.0",
+    lastSavedWithVersion: "0.1.0",
+    build: character,
+    session: emptySessionState(),
     migrations: [],
     legacyValues: {}
   };
 
   for (let pass = 0; pass < 10; pass += 1) {
-    const result = calculateCharacter(catalog, character);
+    const result = calculateCharacter(catalog, document);
     let changed = false;
     for (const choice of result.choices) {
       const missing = choice.min - choice.selectedIds.length;
@@ -76,7 +91,7 @@ const completeLevelOneCharacter = (
     }
   }
 
-  return { character, result: calculateCharacter(catalog, character) };
+  return { character, result: calculateCharacter(catalog, document) };
 };
 
 describe("compiled content regression characters", () => {

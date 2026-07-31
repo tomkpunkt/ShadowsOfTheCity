@@ -6,11 +6,6 @@ import type { CharacterState, EngineContext } from "./types.js";
 const hash = "a".repeat(64);
 
 const character: CharacterState = {
-  formatVersion: 2,
-  contentSchemaVersion: 1,
-  catalogHash: hash,
-  createdWithVersion: "0.1.0",
-  lastSavedWithVersion: "0.1.0",
   name: "Prädikattest",
   level: 5,
   ancestryId: "ancestry.test",
@@ -20,10 +15,18 @@ const character: CharacterState = {
   choices: { "choice.test": ["feat.test"] },
   attributeBoosts: [],
   inventoryIds: ["weapon.test", "armor.test"],
-  equippedItemIds: ["weapon.test", "armor.test"],
   options: { "option.stance": "defensive" },
-  migrations: [],
-  legacyValues: {}
+  biography: {
+    description: "",
+    appearance: "",
+    personality: "",
+    motivation: "",
+    relationships: "",
+    organizations: "",
+    contacts: "",
+    goals: "",
+    backgroundNotes: ""
+  }
 };
 
 const context: EngineContext = {
@@ -67,7 +70,7 @@ const context: EngineContext = {
   spellIds: new Set(["spell.test"]),
   traditions: new Set(["arcane"]),
   inventoryIds: new Set(character.inventoryIds),
-  equippedItemIds: new Set(character.equippedItemIds),
+  equippedItemIds: new Set(["weapon.test", "armor.test"]),
   selectedOptionIds: new Set(["feat.test"]),
   characterOptions: new Map(Object.entries(character.options)),
   resources: new Map([["resource.focus", 2]])

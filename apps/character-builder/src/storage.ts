@@ -1,16 +1,26 @@
 import {
   APP_VERSION,
+  CHARACTER_FORMAT_VERSION,
+  CharacterBuildSchema,
   CharacterDocumentSchema,
+  CharacterSessionStateSchema,
   SCHEMA_VERSION,
   type Catalog,
-  type CharacterDocument
+  type CharacterBuild,
+  type CharacterDocument,
+  type CharacterSessionState
 } from "@sotc/shared";
 import { z } from "zod";
 
-import type { AttributeId, CharacterState } from "@sotc/rules-engine";
+import type { AttributeId } from "@sotc/rules-engine";
+import { emptySessionState } from "@sotc/rules-engine";
 
-const storageKey = "shadows-of-the-city.characters.v2";
-const legacyStorageKeys = ["shadows-of-the-city.characters.v1", "shadows-of-the-city.character"];
+const storageKey = "shadows-of-the-city.characters.v3";
+const legacyStorageKeys = [
+  "shadows-of-the-city.characters.v2",
+  "shadows-of-the-city.characters.v1",
+  "shadows-of-the-city.character"
+];
 
 const AttributeSchema = z.enum([
   "strength",
@@ -37,7 +47,22 @@ const LegacyCharacterSchema = z
     equippedItemIds: z.array(z.string()).optional(),
     options: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional(),
     notes: z.string().optional(),
-    migrations: z.array(z.unknown()).optional()
+    migrations: z.array(z.unknown()).optional(),
+    legacyValues: z.record(z.string(), z.unknown()).optional()
+  })
+  .passthrough();
+
+const FormatThreeEnvelopeSchema = z
+  .object({
+    formatVersion: z.literal(3),
+    contentSchemaVersion: z.literal(SCHEMA_VERSION),
+    catalogHash: z.string().regex(/^[a-f0-9]{64}$/),
+    createdWithVersion: z.string(),
+    lastSavedWithVersion: z.string(),
+    build: z.unknown(),
+    session: z.unknown(),
+    migrations: z.array(z.unknown()).default([]),
+    legacyValues: z.record(z.string(), z.unknown()).default({})
   })
   .passthrough();
 
@@ -53,7 +78,7 @@ export type CatalogCompatibility =
   "compatible" | "migrated" | "partially-incompatible" | "unreadable";
 
 export interface CharacterReadResult {
-  character: CharacterState;
+  document: CharacterDocument;
   compatibility: CatalogCompatibility;
   conflicts: string[];
   sourceFormatVersion: number | "unknown";
@@ -76,29 +101,35 @@ const createMigration = (
 ): CharacterDocument["migrations"][number] => ({
   migrationId,
   fromFormatVersion,
-  toFormatVersion: 2,
+  toFormatVersion: CHARACTER_FORMAT_VERSION,
   ...(fromCatalogHash === undefined ? {} : { fromCatalogHash }),
   toCatalogHash: catalog.contentHash,
   conflicts,
   preservedValues
 });
 
-export const emptyCharacter = (catalogHash: string): CharacterState => ({
-  formatVersion: 2,
-  contentSchemaVersion: SCHEMA_VERSION,
-  catalogHash,
-  createdWithVersion: APP_VERSION,
-  lastSavedWithVersion: APP_VERSION,
-  name: "Neuer Charakter",
-  level: 1,
-  choices: {},
-  attributeBoosts: [],
-  inventoryIds: [],
-  equippedItemIds: [],
-  options: {},
-  migrations: [],
-  legacyValues: {}
-});
+const emptyBuild = (): CharacterBuild =>
+  CharacterBuildSchema.parse({
+    name: "Neuer Charakter",
+    level: 1,
+    choices: {},
+    attributeBoosts: [],
+    inventoryIds: [],
+    options: {}
+  });
+
+export const emptyCharacter = (catalogHash: string): CharacterDocument =>
+  CharacterDocumentSchema.parse({
+    formatVersion: CHARACTER_FORMAT_VERSION,
+    contentSchemaVersion: SCHEMA_VERSION,
+    catalogHash,
+    createdWithVersion: APP_VERSION,
+    lastSavedWithVersion: APP_VERSION,
+    build: emptyBuild(),
+    session: emptySessionState(),
+    migrations: [],
+    legacyValues: {}
+  });
 
 const resolveAlias = (id: string, catalog: Catalog): string => {
   const visited = new Set<string>();
@@ -113,13 +144,9 @@ const resolveAlias = (id: string, catalog: Catalog): string => {
   return current;
 };
 
-const migrateIds = (
-  input: z.infer<typeof LegacyCharacterSchema>,
-  catalog: Catalog
-): { values: Omit<CharacterDocument, "migrations" | "legacyValues">; conflicts: string[] } => {
+const resolverFor = (catalog: Catalog, conflicts: string[]) => {
   const knownIds = new Set(catalog.entities.map((entity) => entity.id));
-  const conflicts: string[] = [];
-  const resolve = (value: string | undefined, path: string): string | undefined => {
+  return (value: string | undefined, path: string): string | undefined => {
     if (value === undefined) {
       return undefined;
     }
@@ -130,51 +157,88 @@ const migrateIds = (
     }
     return resolved;
   };
+};
+
+const migrateBuild = (
+  input: CharacterBuild,
+  catalog: Catalog,
+  conflicts: string[]
+): CharacterBuild => {
+  const resolve = resolverFor(catalog, conflicts);
   const choices = Object.fromEntries(
     Object.entries(input.choices).map(([choiceId, selectedIds]) => [
-      resolve(choiceId, `choices.${choiceId}`) ?? choiceId,
-      selectedIds.map((id, index) => resolve(id, `choices.${choiceId}.${String(index)}`) ?? id)
+      resolve(choiceId, `build.choices.${choiceId}`) ?? choiceId,
+      selectedIds.map(
+        (id, index) => resolve(id, `build.choices.${choiceId}.${String(index)}`) ?? id
+      )
     ])
   );
-  const inventoryIds = input.inventoryIds.map(
-    (id, index) => resolve(id, `inventoryIds.${String(index)}`) ?? id
-  );
-  const equippedItemIds = (input.equippedItemIds ?? input.inventoryIds).map(
-    (id, index) => resolve(id, `equippedItemIds.${String(index)}`) ?? id
-  );
-  for (const id of equippedItemIds) {
-    if (!inventoryIds.includes(id)) {
-      inventoryIds.push(id);
-      conflicts.push(`equippedItemIds: ${id} wurde dem Inventar hinzugefügt.`);
-    }
-  }
-  const ancestryId = resolve(input.ancestryId, "ancestryId");
-  const heritageId = resolve(input.heritageId, "heritageId");
-  const backgroundId = resolve(input.backgroundId, "backgroundId");
-  const classId = resolve(input.classId, "classId");
-  return {
-    values: {
-      formatVersion: 2,
-      contentSchemaVersion: SCHEMA_VERSION,
-      catalogHash:
-        conflicts.length === 0 ? catalog.contentHash : (input.catalogHash ?? catalog.contentHash),
-      createdWithVersion: APP_VERSION,
-      lastSavedWithVersion: APP_VERSION,
-      name: input.name,
-      level: input.level,
-      ...(ancestryId === undefined ? {} : { ancestryId }),
-      ...(heritageId === undefined ? {} : { heritageId }),
-      ...(backgroundId === undefined ? {} : { backgroundId }),
-      ...(classId === undefined ? {} : { classId }),
-      choices,
-      attributeBoosts: input.attributeBoosts,
-      inventoryIds,
-      equippedItemIds,
-      options: input.options ?? {},
-      ...(input.notes === undefined ? {} : { notes: input.notes })
-    },
-    conflicts
-  };
+  return CharacterBuildSchema.parse({
+    ...input,
+    ...(input.ancestryId === undefined
+      ? {}
+      : { ancestryId: resolve(input.ancestryId, "build.ancestryId") }),
+    ...(input.heritageId === undefined
+      ? {}
+      : { heritageId: resolve(input.heritageId, "build.heritageId") }),
+    ...(input.backgroundId === undefined
+      ? {}
+      : { backgroundId: resolve(input.backgroundId, "build.backgroundId") }),
+    ...(input.classId === undefined ? {} : { classId: resolve(input.classId, "build.classId") }),
+    choices,
+    inventoryIds: input.inventoryIds.map(
+      (id, index) => resolve(id, `build.inventoryIds.${String(index)}`) ?? id
+    )
+  });
+};
+
+const migrateSession = (
+  input: CharacterSessionState,
+  catalog: Catalog,
+  conflicts: string[]
+): CharacterSessionState => {
+  const resolve = resolverFor(catalog, conflicts);
+  return CharacterSessionStateSchema.parse({
+    ...input,
+    conditions: input.conditions.map((condition, index) => ({
+      ...condition,
+      ...(condition.conditionId === undefined
+        ? {}
+        : {
+            conditionId:
+              resolve(condition.conditionId, `session.conditions.${String(index)}.conditionId`) ??
+              condition.conditionId
+          })
+    })),
+    resources: Object.fromEntries(
+      Object.entries(input.resources).map(([id, state]) => [
+        resolve(id, `session.resources.${id}`) ?? id,
+        state
+      ])
+    ),
+    actionUses: Object.fromEntries(
+      Object.entries(input.actionUses).map(([id, used]) => [
+        resolve(id, `session.actionUses.${id}`) ?? id,
+        used
+      ])
+    ),
+    itemStates: Object.fromEntries(
+      Object.entries(input.itemStates).map(([id, state]) => [
+        resolve(id, `session.itemStates.${id}`) ?? id,
+        state
+      ])
+    ),
+    manualModifiers: input.manualModifiers.map((modifier, index) => ({
+      ...modifier,
+      ...(modifier.selector === undefined
+        ? {}
+        : {
+            selector:
+              resolve(modifier.selector, `session.manualModifiers.${String(index)}.selector`) ??
+              modifier.selector
+          })
+    }))
+  });
 };
 
 const compatibilityFor = (
@@ -192,97 +256,186 @@ const compatibilityFor = (
   return "compatible";
 };
 
-export const migrateCharacter = (input: unknown, catalog: Catalog): CharacterReadResult => {
-  const current = CharacterDocumentSchema.safeParse(input);
-  if (current.success) {
-    const legacy = LegacyCharacterSchema.parse(current.data);
-    const migrated = migrateIds(legacy, catalog);
-    const hashChanged = current.data.catalogHash !== catalog.contentHash;
-    const character = CharacterDocumentSchema.parse({
-      ...current.data,
-      ...migrated.values,
-      createdWithVersion: current.data.createdWithVersion,
-      equippedItemIds: migrated.values.equippedItemIds,
-      options: current.data.options,
-      catalogHash: migrated.conflicts.length === 0 ? catalog.contentHash : current.data.catalogHash,
-      migrations:
-        hashChanged || migrated.conflicts.length > 0
-          ? [
-              ...current.data.migrations,
-              createMigration(
-                "migration.character.catalog-aliases",
-                2,
-                catalog,
-                migrated.conflicts,
-                {},
-                current.data.catalogHash
-              )
-            ]
-          : current.data.migrations,
-      legacyValues: current.data.legacyValues
-    });
-    return {
-      character,
-      compatibility: compatibilityFor(
-        current.data.catalogHash,
-        catalog.contentHash,
-        migrated.conflicts,
-        hashChanged
-      ),
-      conflicts: migrated.conflicts,
-      sourceFormatVersion: 2
-    };
-  }
+const normalizeCurrentDocument = (
+  input: CharacterDocument,
+  catalog: Catalog,
+  additionalConflicts: string[] = [],
+  preservedValues: Record<string, unknown> = {}
+): CharacterReadResult => {
+  const conflicts = [...additionalConflicts];
+  const build = migrateBuild(input.build, catalog, conflicts);
+  const session = migrateSession(input.session, catalog, conflicts);
+  const hashChanged = input.catalogHash !== catalog.contentHash;
+  const changed = hashChanged || conflicts.length > 0;
+  const document = CharacterDocumentSchema.parse({
+    ...input,
+    build,
+    session,
+    catalogHash: conflicts.length === 0 ? catalog.contentHash : input.catalogHash,
+    migrations: changed
+      ? [
+          ...input.migrations,
+          createMigration(
+            "migration.character.v3-catalog-aliases",
+            3,
+            catalog,
+            conflicts,
+            preservedValues,
+            input.catalogHash
+          )
+        ]
+      : input.migrations,
+    legacyValues: {
+      ...input.legacyValues,
+      ...preservedValues
+    }
+  });
+  return {
+    document,
+    compatibility: compatibilityFor(input.catalogHash, catalog.contentHash, conflicts, changed),
+    conflicts,
+    sourceFormatVersion: 3
+  };
+};
 
-  const legacy = LegacyCharacterSchema.parse(input);
-  const sourceFormatVersion = legacy.formatVersion ?? 0;
-  const migrated = migrateIds(legacy, catalog);
-  const knownKeys = new Set(Object.keys(LegacyCharacterSchema.shape));
-  const preservedValues = Object.fromEntries(
-    Object.entries(legacy).filter(([key]) => !knownKeys.has(key))
+const migrateLegacyCharacter = (
+  input: z.infer<typeof LegacyCharacterSchema>,
+  catalog: Catalog
+): CharacterReadResult => {
+  const sourceFormatVersion = input.formatVersion ?? 0;
+  const conflicts: string[] = [];
+  const resolve = resolverFor(catalog, conflicts);
+  const inventoryIds = input.inventoryIds.map(
+    (id, index) => resolve(id, `build.inventoryIds.${String(index)}`) ?? id
   );
-  if (legacy.migrations !== undefined) {
-    preservedValues["legacyMigrations"] = legacy.migrations;
+  const equippedItemIds = (input.equippedItemIds ?? input.inventoryIds).map(
+    (id, index) => resolve(id, `session.itemStates.${String(index)}`) ?? id
+  );
+  for (const id of equippedItemIds) {
+    if (!inventoryIds.includes(id)) {
+      inventoryIds.push(id);
+      conflicts.push(`session.itemStates: ${id} wurde dem Inventar hinzugefügt.`);
+    }
   }
-  const character = CharacterDocumentSchema.parse({
-    ...migrated.values,
+  const build = CharacterBuildSchema.parse({
+    name: input.name,
+    level: input.level,
+    ...(input.ancestryId === undefined
+      ? {}
+      : { ancestryId: resolve(input.ancestryId, "build.ancestryId") }),
+    ...(input.heritageId === undefined
+      ? {}
+      : { heritageId: resolve(input.heritageId, "build.heritageId") }),
+    ...(input.backgroundId === undefined
+      ? {}
+      : { backgroundId: resolve(input.backgroundId, "build.backgroundId") }),
+    ...(input.classId === undefined ? {} : { classId: resolve(input.classId, "build.classId") }),
+    choices: Object.fromEntries(
+      Object.entries(input.choices).map(([choiceId, selectedIds]) => [
+        resolve(choiceId, `build.choices.${choiceId}`) ?? choiceId,
+        selectedIds.map(
+          (id, index) => resolve(id, `build.choices.${choiceId}.${String(index)}`) ?? id
+        )
+      ])
+    ),
+    attributeBoosts: input.attributeBoosts,
+    inventoryIds,
+    options: input.options ?? {},
+    ...(input.notes === undefined ? {} : { notes: input.notes })
+  });
+  const session = CharacterSessionStateSchema.parse({
+    ...emptySessionState(),
+    itemStates: Object.fromEntries(
+      inventoryIds.map((id) => [
+        id,
+        {
+          quantity: 1,
+          equipped: equippedItemIds.includes(id),
+          active: false,
+          consumed: 0,
+          location: equippedItemIds.includes(id) ? "equipped" : "carried"
+        }
+      ])
+    )
+  });
+  const knownKeys = new Set(Object.keys(LegacyCharacterSchema.shape));
+  const preservedValues = {
+    ...Object.fromEntries(Object.entries(input).filter(([key]) => !knownKeys.has(key))),
+    ...(input.legacyValues ?? {})
+  };
+  if (input.migrations !== undefined) {
+    preservedValues["legacyMigrations"] = input.migrations;
+  }
+  const document = CharacterDocumentSchema.parse({
+    formatVersion: 3,
+    contentSchemaVersion: SCHEMA_VERSION,
+    catalogHash:
+      conflicts.length === 0 ? catalog.contentHash : (input.catalogHash ?? catalog.contentHash),
+    createdWithVersion: APP_VERSION,
+    lastSavedWithVersion: APP_VERSION,
+    build,
+    session,
     migrations: [
       createMigration(
-        sourceFormatVersion === 0 ? "migration.character.v0-to-v2" : "migration.character.v1-to-v2",
+        `migration.character.v${String(sourceFormatVersion)}-to-v3`,
         sourceFormatVersion,
         catalog,
-        migrated.conflicts,
+        conflicts,
         preservedValues,
-        legacy.catalogHash
+        input.catalogHash
       )
     ],
     legacyValues: preservedValues
   });
   return {
-    character,
-    compatibility: compatibilityFor(
-      legacy.catalogHash,
-      catalog.contentHash,
-      migrated.conflicts,
-      true
-    ),
-    conflicts: migrated.conflicts,
+    document,
+    compatibility: compatibilityFor(input.catalogHash, catalog.contentHash, conflicts, true),
+    conflicts,
     sourceFormatVersion
   };
 };
 
+export const migrateCharacter = (input: unknown, catalog: Catalog): CharacterReadResult => {
+  const current = CharacterDocumentSchema.safeParse(input);
+  if (current.success) {
+    return normalizeCurrentDocument(current.data, catalog);
+  }
+
+  const envelope = FormatThreeEnvelopeSchema.safeParse(input);
+  if (envelope.success) {
+    const build = CharacterBuildSchema.parse(envelope.data.build);
+    const parsedSession = CharacterSessionStateSchema.safeParse(envelope.data.session);
+    const sessionConflict = parsedSession.success
+      ? []
+      : ["Der Session State war beschädigt und wurde isoliert zurückgesetzt."];
+    const preservedValues = parsedSession.success
+      ? {}
+      : { unreadableSessionState: envelope.data.session };
+    const document = CharacterDocumentSchema.parse({
+      ...envelope.data,
+      build,
+      session: parsedSession.success ? parsedSession.data : emptySessionState(),
+      migrations: [],
+      legacyValues: envelope.data.legacyValues
+    });
+    return normalizeCurrentDocument(document, catalog, sessionConflict, preservedValues);
+  }
+
+  return migrateLegacyCharacter(LegacyCharacterSchema.parse(input), catalog);
+};
+
 export const saveCharacter = (
-  character: CharacterState,
+  document: CharacterDocument,
   storage: StorageLike = window.localStorage
 ): void => {
   const validated = CharacterDocumentSchema.parse({
-    ...character,
+    ...document,
     lastSavedWithVersion: APP_VERSION
   });
   storage.setItem(
     storageKey,
     JSON.stringify({
-      formatVersion: 2,
+      formatVersion: CHARACTER_FORMAT_VERSION,
       active: validated
     })
   );
@@ -297,10 +450,10 @@ export const loadCharacter = (
     .filter((candidate): candidate is { key: string; value: string } => candidate.value !== null);
   if (candidates.length === 0) {
     return {
-      character: emptyCharacter(catalog.contentHash),
+      document: emptyCharacter(catalog.contentHash),
       compatibility: "compatible",
       conflicts: [],
-      sourceFormatVersion: 2
+      sourceFormatVersion: 3
     };
   }
   const candidate = candidates[0]!;
@@ -310,7 +463,7 @@ export const loadCharacter = (
     return migrateCharacter(collection.success ? collection.data.active : parsed, catalog);
   } catch (error) {
     return {
-      character: emptyCharacter(catalog.contentHash),
+      document: emptyCharacter(catalog.contentHash),
       compatibility: "unreadable",
       conflicts: [
         error instanceof Error
@@ -322,19 +475,19 @@ export const loadCharacter = (
   }
 };
 
-export const serializeCharacter = (character: CharacterState): string =>
-  `${JSON.stringify(CharacterDocumentSchema.parse(character), null, 2)}\n`;
+export const serializeCharacter = (document: CharacterDocument): string =>
+  `${JSON.stringify(CharacterDocumentSchema.parse(document), null, 2)}\n`;
 
 export const importCharacter = (source: string, catalog: Catalog): ImportResult =>
   migrateCharacter(JSON.parse(source) as unknown, catalog);
 
-export const downloadCharacter = (character: CharacterState): void => {
-  const blob = new Blob([serializeCharacter(character)], { type: "application/json" });
+export const downloadCharacter = (characterDocument: CharacterDocument): void => {
+  const blob = new Blob([serializeCharacter(characterDocument)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
   anchor.download = `${
-    character.name
+    characterDocument.build.name
       .trim()
       .replace(/[^a-z0-9]+/gi, "-")
       .toLowerCase() || "character"

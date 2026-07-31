@@ -727,7 +727,7 @@ Offene Punkte:
 | 12 - Ressourcen | pending | generisches Ressourcenmodell und Wiederherstellung | – | – | – |
 | 13 - Biografie und Notizen | pending | dauerhafte Biografie und Sitzungsnotizen | – | – | – |
 | 14 - Charakterbearbeitung | pending | Creator-Rücksprung und Session-Konflikte | – | – | – |
-| 15 - Speicherung und Migration | pending | Format 3, Session-Schema, Migration und Recovery | – | – | – |
+| 15 - Speicherung und Migration | active | Format 3, Session-Schema, Migration und Recovery | `packages/shared/src/schemas.ts`, `packages/rules-engine/src/session.ts`, `packages/rules-engine/src/engine.ts`, `apps/character-builder/src/storage.ts`, Tests und Dokumentation | 89 Unit-/Integrationstests, 19 E2E-Tests, Typecheck und Lint erfolgreich | Konfliktoberfläche und kontrollierte Bereinigung verwaister Einträge folgen im neuen Bogen |
 | 16 - Druck und PDF | pending | mehrseitiger A4-Charakterbogen | – | – | – |
 | 17 - Statblock | pending | Web-, Text- und Druckausgabe | – | – | – |
 | 18 - Würfelablage | pending | validierte lokale Würfe und Verlauf | – | – | – |
@@ -769,3 +769,40 @@ Nächster konkreter Arbeitsschritt:
 - Character-Format 3 mit Format-2-Migration implementieren,
 - Rules Engine um kontrollierte Session-Eingaben erweitern,
 - erst danach die neue Character-Sheet-Informationsarchitektur anbinden.
+
+### Phase 15 - Zwischenstand Format 3
+
+Status: `active`
+
+Geänderte Bereiche:
+
+- `packages/shared/src/schemas.ts` und `types.ts`
+- `packages/rules-engine/src/session.ts`, `engine.ts` und Tests
+- `apps/character-builder/src/storage.ts`, `App.tsx` und Migrationstests
+- `docs/character-format.md`, `docs/session-state.md`, `docs/architecture.md`
+
+Architekturentscheidungen:
+
+- `CharacterDocument` besitzt getrennte Objekte `build` und `session`.
+- Die Engine erhält das vollständige Dokument und bleibt die einzige
+  Charakterberechnung.
+- Ausrüstungsaktivierung liegt im Session State.
+- Freie Zustände bleiben rein informativ; nur strukturierte
+  Katalogzustände wirken automatisch.
+- Beschädigte Session-Daten werden isoliert und im Export erhalten.
+- Session-Einträge ohne aktuelle Buildquelle werden nicht gelöscht, sondern im
+  Engine-Ergebnis als verwaist ausgewiesen.
+
+Prüfungen:
+
+- 89 Unit-/Integrationstests erfolgreich
+- 19 bestehende Playwright-Tests erfolgreich
+- Typecheck und ESLint erfolgreich
+- Format-1- und Format-2-Migration, Format-3-Roundtrip und beschädigter
+  Session-State getestet
+
+Offene Punkte:
+
+- verwaiste Einträge im Character Sheet anzeigen und kontrolliert bereinigen,
+- Session-Konflikte nach Creator-Änderungen als eigener Workflow,
+- vollständiger JSON-E2E-Roundtrip mit interaktiven Session-Daten.

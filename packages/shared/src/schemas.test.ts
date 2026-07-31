@@ -131,18 +131,31 @@ describe("EffectSchema", () => {
 
 describe("CharacterDocumentSchema", () => {
   const character = {
-    formatVersion: 2,
+    formatVersion: 3,
     contentSchemaVersion: 1,
     catalogHash: "a".repeat(64),
     createdWithVersion: "0.1.0",
     lastSavedWithVersion: "0.1.0",
-    name: "Ada",
-    level: 1,
-    choices: {},
-    attributeBoosts: [],
-    inventoryIds: ["weapon.test"],
-    equippedItemIds: ["weapon.test"],
-    options: {},
+    build: {
+      name: "Ada",
+      level: 1,
+      choices: {},
+      attributeBoosts: [],
+      inventoryIds: ["weapon.test"],
+      options: {}
+    },
+    session: {
+      version: 1,
+      itemStates: {
+        "weapon.test": {
+          quantity: 1,
+          equipped: true,
+          active: false,
+          consumed: 0,
+          location: "equipped"
+        }
+      }
+    },
     migrations: [],
     legacyValues: {}
   };
@@ -151,11 +164,19 @@ describe("CharacterDocumentSchema", () => {
     expect(CharacterDocumentSchema.safeParse(character).success).toBe(true);
   });
 
-  it("rejects equipped items outside the inventory and unknown fields", () => {
+  it("rejects invalid session quantities and unknown fields", () => {
     expect(
       CharacterDocumentSchema.safeParse({
         ...character,
-        equippedItemIds: ["weapon.other"]
+        session: {
+          ...character.session,
+          itemStates: {
+            "weapon.test": {
+              ...character.session.itemStates["weapon.test"],
+              quantity: -1
+            }
+          }
+        }
       }).success
     ).toBe(false);
     expect(CharacterDocumentSchema.safeParse({ ...character, hiddenRule: true }).success).toBe(

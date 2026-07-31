@@ -1,4 +1,4 @@
-import type { Catalog, CharacterDocument, ContentEntity } from "@sotc/shared";
+import type { Catalog, CharacterBuild, CharacterSessionState, ContentEntity } from "@sotc/shared";
 
 export type AttributeId =
   "strength" | "dexterity" | "constitution" | "intelligence" | "wisdom" | "charisma";
@@ -184,7 +184,7 @@ export type EffectNode =
       decisionId?: string;
     };
 
-export type CharacterState = CharacterDocument;
+export type CharacterState = CharacterBuild;
 
 export interface BreakdownEntry {
   sourceId: string;
@@ -344,6 +344,30 @@ export interface CalculatedCharacter {
   };
   explanations: Array<{ key: string; value: ExplainedValue }>;
   resources: Record<string, ExplainedValue>;
+  session: {
+    currentHp: number;
+    temporaryHp: number;
+    conditions: CharacterSessionState["conditions"];
+    resources: Record<
+      string,
+      {
+        current: number;
+        maximum: number;
+        recovery: CharacterSessionState["resources"][string]["recovery"];
+        sourceId?: string;
+        orphaned: boolean;
+      }
+    >;
+    spellSlotUsage: Record<string, number>;
+    itemStates: CharacterSessionState["itemStates"];
+    actionUses: Record<string, number>;
+    manualModifiers: CharacterSessionState["manualModifiers"];
+    orphanedEntries: Array<{
+      kind: "condition" | "resource" | "spell-slot" | "action" | "item" | "modifier";
+      id: string;
+      reason: string;
+    }>;
+  };
   choices: ResolvedChoice[];
   issues: BuildIssue[];
   ignoredTextEffects: Array<{ sourceId: string; text: string }>;

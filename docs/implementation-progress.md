@@ -825,7 +825,7 @@ folgenden Abschnitt abgeschlossen.
 
 Status: `complete`
 
-- Release-Quellcommit: `03585727e43672b56b37ad0d5e4e0ec44fe4d0b1`
+- Release-Quellcommit: `3ae0549e4a225891e9845e39287ccdda076b9a02`
 - Release-ZIP mit 15 Dateien und SHA-256-Prüfsumme verifiziert
 - `npm ci`, Migration, Validierung, Release-Build und Release-Verify erfolgreich
 - `npm run verify` vollständig erfolgreich

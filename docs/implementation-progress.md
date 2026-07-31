@@ -707,3 +707,65 @@ Offene Punkte:
 | 7 - Katalog-UI | complete | vollständige Filter, Sortierung, Gruppierung, Karten- und Detaildarstellung in Kompendium und Ausrüstung | Typecheck, Unit- und E2E-Tests | keine |
 | 8 - Tests und visuelle Prüfung | complete | 52 Unit-/Integrationstests, 16 E2E-Prüfungen und 13 neue Screenshots | Desktop 1440 × 900, Mobil 390 × 844 | keine |
 | 9 - Abschlussprüfung | complete | Berichte 10 bis 14 und reproduzierbare npm-Kommandos erstellt | `npm run verify` vollständig erfolgreich | keine |
+
+## Masterauftrag: Spielbarer Charakterbogen 0.1.1
+
+| Phase | Status | Ziel | Geänderte Dateien | Prüfungen | Offene Punkte |
+|:--|:--|:--|:--|:--|:--|
+| 0 - Bestandsaufnahme | complete | produktiven Bogen, Modell, Engine, Storage, Druck, Responsive Design und Tests inventarisieren | `docs/review/09-character-sheet-baseline.md`, `docs/implementation-progress.md` | unverändertes `npm run verify`: 77 Unit-/Integrationstests, 19 E2E-Tests, Build und Audits erfolgreich | keine |
+| 1 - Informationsarchitektur | pending | zehn spielbare Hauptbereiche für Desktop und Mobil | – | – | beginnt nach Format-3-Grundlage |
+| 2 - Charakterkopf | pending | permanente Kernwerte und Schnellaktionen | – | – | – |
+| 3 - Übersicht | pending | zentrale Werte, Quellen und Session-Probleme | – | – | – |
+| 4 - Trefferpunkte | pending | Schaden, Heilung, temporäre TP und Undo | – | – | – |
+| 5 - Zustände | pending | Zustände und sichtbare manuelle Modifikatoren | – | – | – |
+| 6 - Kampf | pending | Angriffe, Verteidigung, Reaktionen und Ausrüstung | – | – | – |
+| 7 - Aktionen | pending | datengetriebene Aktionsübersicht und Nutzungen | – | – | – |
+| 8 - Fertigkeiten | pending | sortierbare Fertigkeiten und Proben | – | – | – |
+| 9 - Talente und Merkmale | pending | deduplizierte, gruppierte Detailansicht | – | – | – |
+| 10 - Zauber | pending | Zauberwerte, Listen und Platzverbrauch | – | – | – |
+| 11 - Inventar | pending | Mengen, Ausrüsten, Aktivierung, Munition und Last | – | – | – |
+| 12 - Ressourcen | pending | generisches Ressourcenmodell und Wiederherstellung | – | – | – |
+| 13 - Biografie und Notizen | pending | dauerhafte Biografie und Sitzungsnotizen | – | – | – |
+| 14 - Charakterbearbeitung | pending | Creator-Rücksprung und Session-Konflikte | – | – | – |
+| 15 - Speicherung und Migration | pending | Format 3, Session-Schema, Migration und Recovery | – | – | – |
+| 16 - Druck und PDF | pending | mehrseitiger A4-Charakterbogen | – | – | – |
+| 17 - Statblock | pending | Web-, Text- und Druckausgabe | – | – | – |
+| 18 - Würfelablage | pending | validierte lokale Würfe und Verlauf | – | – | – |
+| 19 - Performance | pending | messbare Entkopplung des Vollkatalogs | – | Baseline: JS 1.920,40 kB / 299,92 kB gzip | Offline-Funktion erhalten |
+| 20 - Barrierefreiheit | pending | Tastatur, Semantik, Fokus und Live-Status | – | – | – |
+| 21 - Designsystem | pending | eigenständige, ruhige Spieloberfläche | – | – | – |
+| 22 - Tests | pending | Unit-, Integration-, E2E- und visuelle Verträge | – | – | – |
+| 23 - Bereinigung | pending | jeweils ein produktiver Pfad | – | – | – |
+| 24 - Dokumentation | pending | Fach-, Architektur- und Betriebsdokumentation | – | – | – |
+| 25 - Release 0.1.1 | pending | Version, ZIP, Prüfsumme und Buildbericht | – | – | – |
+| 26 - Abschlussprüfung | pending | frische Installation, Vollprüfung und manuelle Matrix | – | – | – |
+
+### Phase 0
+
+Status: `complete`
+
+Architekturentscheidungen:
+
+- Format 2 bleibt während der Bestandsaufnahme unverändert.
+- Es wurde keine produktive UI- oder Engine-Änderung vorgenommen.
+- Format 3 wird als getrennte Struktur aus `build` und versioniertem `session`
+  entworfen.
+- Der vorhandene Engine-Pfad bleibt die einzige Charakterberechnung.
+- Druckbogen und Statblock erhalten später eigene View-Modelle aus demselben
+  ausgewerteten Charakter.
+
+Prüfungen und Messwerte:
+
+- `npm run verify` erfolgreich
+- 77 Unit-/Integrationstests erfolgreich
+- 19 Playwright-Tests erfolgreich
+- 737 von 737 Runtime-Entitäten erreichbar
+- JavaScript-Bundle: 1.920,40 kB, 299,92 kB gzip
+- CSS-Bundle: 27,98 kB, 6,17 kB gzip
+
+Nächster konkreter Arbeitsschritt:
+
+- Session-State-Schema und reine Zustandsoperationen entwerfen,
+- Character-Format 3 mit Format-2-Migration implementieren,
+- Rules Engine um kontrollierte Session-Eingaben erweitern,
+- erst danach die neue Character-Sheet-Informationsarchitektur anbinden.

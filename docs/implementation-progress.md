@@ -737,8 +737,8 @@ Offene Punkte:
 | 22 - Tests | complete | Unit-, Integration-, E2E- und visuelle Verträge | Testdateien und Screenshots | 104 Unit/Integration, 21 E2E | keine |
 | 23 - Bereinigung | complete | jeweils ein produktiver Pfad | `App.tsx`, `styles.css` | Suche nach alten Selektoren | keine |
 | 24 - Dokumentation | complete | Fach-, Architektur- und Betriebsdokumentation | `docs/*.md`, README, Changelog | Formatprüfung folgt im Vollvertrag | keine |
-| 25 - Release 0.1.1 | active | Version, ZIP, Prüfsumme und Buildbericht | Manifeste und Releaseskript | Release-Build folgt | Artefakte erzeugen |
-| 26 - Abschlussprüfung | active | frische Installation, Vollprüfung und manuelle Matrix | Abschlussbericht folgt | `npm run verify` folgt | Vollvertrag ausführen |
+| 25 - Release 0.1.1 | complete | Version, ZIP, Prüfsumme und Buildbericht | Manifeste, Releaseskript und `release/` | Release-Build und -Verify erfolgreich | keine |
+| 26 - Abschlussprüfung | complete | frische Installation, Vollprüfung und manuelle Matrix | `docs/review/11-v0.1.1-final-verification.md` | `npm ci`, Release und `npm run verify` erfolgreich | keine |
 
 ### Phase 0
 
@@ -818,8 +818,17 @@ Status: `complete`
 - Katalog als eigener 1.379,01-kB-Chunk
 - alter statischer Bogen und tote CSS-Regeln entfernt
 
-Nächster konkreter Arbeitsschritt:
+Damals nächster Arbeitsschritt: Release und Abschlussprüfung. Beide sind im
+folgenden Abschnitt abgeschlossen.
 
-- Version und Dokumentation committen,
-- Release-Artefakte aus dem festgehaltenen Commit erzeugen,
-- vollständigen Abschlussvertrag und Release-Verifikation ausführen.
+### Phasen 25 und 26 - Abschluss
+
+Status: `complete`
+
+- Release-Quellcommit: `03585727e43672b56b37ad0d5e4e0ec44fe4d0b1`
+- Release-ZIP mit 15 Dateien und SHA-256-Prüfsumme verifiziert
+- `npm ci`, Migration, Validierung, Release-Build und Release-Verify erfolgreich
+- `npm run verify` vollständig erfolgreich
+- 104 Unit-/Integrationstests und 21 E2E-Szenarien erfolgreich
+- Abschlussbericht:
+  `docs/review/11-v0.1.1-final-verification.md`

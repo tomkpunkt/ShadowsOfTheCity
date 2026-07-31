@@ -76,7 +76,14 @@ const catalog = JSON.parse(
   contentHash?: string;
   entities?: unknown[];
 };
-if (catalog.contentHash !== version.catalogHash || catalog.entities?.length !== 737) {
+const manifest = JSON.parse(
+  await readFile(path.join(root, "dist", "catalog", "catalog.manifest.json"), "utf8")
+) as { entityCount?: number; contentHash?: string };
+if (
+  catalog.contentHash !== version.catalogHash ||
+  catalog.contentHash !== manifest.contentHash ||
+  catalog.entities?.length !== manifest.entityCount
+) {
   throw new Error("Release catalog metadata is inconsistent.");
 }
 

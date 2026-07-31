@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
+  "catalogHash": "9139d813135415b87094bad463b8347a4929d823c40e5f1ebaac779b2cec05a5",
   "summary": {
-    "entities": 737,
-    "activeEntities": 724,
+    "entities": 911,
+    "activeEntities": 898,
     "drafts": 13,
     "editorialStatus": {
       "needs-rules-decision": 13,
-      "reviewed": 629,
+      "reviewed": 803,
       "rewritten": 95
     },
     "textRuleEntities": 410,
     "machineRuleEntities": 27,
     "exactDuplicateGroups": 0,
-    "nearSimilarSummaries": 189,
-    "averageSummaryLength": 81,
-    "medianSummaryLength": 75,
-    "summariesBelow80Characters": 392,
+    "nearSimilarSummaries": 287,
+    "averageSummaryLength": 82.2,
+    "medianSummaryLength": 82,
+    "summariesBelow80Characters": 422,
     "manualReviewRequired": 13,
     "blockers": 0,
     "manualReview": 69
@@ -29,8 +29,8 @@
       "drafts": 0
     },
     "armor": {
-      "entities": 12,
-      "reviewed": 12,
+      "entities": 26,
+      "reviewed": 26,
       "rewritten": 12,
       "drafts": 0
     },
@@ -65,8 +65,8 @@
       "drafts": 0
     },
     "equipment": {
-      "entities": 28,
-      "reviewed": 27,
+      "entities": 164,
+      "reviewed": 163,
       "rewritten": 27,
       "drafts": 1
     },
@@ -125,8 +125,8 @@
       "drafts": 0
     },
     "weapon": {
-      "entities": 40,
-      "reviewed": 29,
+      "entities": 64,
+      "reviewed": 53,
       "rewritten": 29,
       "drafts": 11
     }
@@ -681,6 +681,425 @@
       "repeatedSummary": false,
       "nearestSimilarSummary": null,
       "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-ahnenschild-harnisch",
+      "type": "armor",
+      "name": "Ahnenschild-Harnisch",
+      "path": "content/armor/armor.v012-ahnenschild-harnisch.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 75,
+      "rulesTextLength": 150,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-chemieschicht-overall",
+      "type": "armor",
+      "name": "Chemieschicht-Overall",
+      "path": "content/armor/armor.v012-chemieschicht-overall.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 160,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-datennebel-kapuze",
+      "type": "armor",
+      "name": "Datennebel-Kapuze",
+      "path": "content/armor/armor.v012-datennebel-kapuze.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 82,
+      "rulesTextLength": 156,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-gassenschicht",
+      "type": "armor",
+      "name": "Gassenschicht",
+      "path": "content/armor/armor.v012-gassenschicht.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 73,
+      "rulesTextLength": 147,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-klinikschuerze",
+      "type": "armor",
+      "name": "Klinikschuerze",
+      "path": "content/armor/armor.v012-klinikschuerze.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 157,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-konzern-exoweste",
+      "type": "armor",
+      "name": "Konzern-Exoweste",
+      "path": "content/armor/armor.v012-konzern-exoweste.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 72,
+      "rulesTextLength": 146,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-kuriermantel-mit-faserlage",
+      "type": "armor",
+      "name": "Kuriermantel mit Faserlage",
+      "path": "content/armor/armor.v012-kuriermantel-mit-faserlage.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 157,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-nachtmarktjacke",
+      "type": "armor",
+      "name": "Nachtmarktjacke",
+      "path": "content/armor/armor.v012-nachtmarktjacke.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 75,
+      "rulesTextLength": 148,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-nullfeld-poncho",
+      "type": "armor",
+      "name": "Nullfeld-Poncho",
+      "path": "content/armor/armor.v012-nullfeld-poncho.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 77,
+      "rulesTextLength": 151,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-schlackenschutz",
+      "type": "armor",
+      "name": "Schlackenschutz",
+      "path": "content/armor/armor.v012-schlackenschutz.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 68,
+      "rulesTextLength": 142,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-sondereinsatzplatte",
+      "type": "armor",
+      "name": "Sondereinsatzplatte",
+      "path": "content/armor/armor.v012-sondereinsatzplatte.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 73,
+      "rulesTextLength": 148,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-u-bahn-riotweste",
+      "type": "armor",
+      "name": "U-Bahn-Riotweste",
+      "path": "content/armor/armor.v012-u-bahn-riotweste.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 73,
+      "rulesTextLength": 147,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-verhandlungsanzug",
+      "type": "armor",
+      "name": "Verhandlungsanzug",
+      "path": "content/armor/armor.v012-verhandlungsanzug.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 160,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "armor.v012-werkstattpanzer",
+      "type": "armor",
+      "name": "Werkstattpanzer",
+      "path": "content/armor/armor.v012-werkstattpanzer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 72,
+      "rulesTextLength": 146,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic",
+        "use-not-recognized-by-heuristic"
+      ],
       "manualReviewRequired": false
     },
     {
@@ -10964,6 +11383,4232 @@
       "repeatedSummary": false,
       "nearestSimilarSummary": null,
       "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-adrenalsperre",
+      "type": "equipment",
+      "name": "Adrenalsperre",
+      "path": "content/equipment/equipment.v012-adrenalsperre.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 87,
+      "rulesTextLength": 204,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-blutmarker-kit",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-ahnenantenne",
+      "type": "equipment",
+      "name": "Ahnenantenne",
+      "path": "content/equipment/equipment.v012-ahnenantenne.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 200,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-astralprisma",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-archivhandschuhe",
+      "type": "equipment",
+      "name": "Archivhandschuhe",
+      "path": "content/equipment/equipment.v012-archivhandschuhe.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 91,
+      "rulesTextLength": 208,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-dachkletterset",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-arkaner-navigationskern",
+      "type": "equipment",
+      "name": "Arkaner Navigationskern",
+      "path": "content/equipment/equipment.v012-arkaner-navigationskern.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 100,
+      "rulesTextLength": 217,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-astralprisma",
+      "type": "equipment",
+      "name": "Astralprisma",
+      "path": "content/equipment/equipment.v012-astralprisma.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-bannkreide",
+      "type": "equipment",
+      "name": "Bannkreide",
+      "path": "content/equipment/equipment.v012-bannkreide.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 198,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-bannpapier",
+      "type": "equipment",
+      "name": "Bannpapier",
+      "path": "content/equipment/equipment.v012-bannpapier.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 198,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-blendrauch",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-bewegungsfaden",
+      "type": "equipment",
+      "name": "Bewegungsfaden",
+      "path": "content/equipment/equipment.v012-bewegungsfaden.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 103,
+      "rulesTextLength": 220,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-drohnenpult",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-biometrische-sicherung",
+      "type": "equipment",
+      "name": "Biometrische Sicherung",
+      "path": "content/equipment/equipment.v012-biometrische-sicherung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-blendrauch",
+      "type": "equipment",
+      "name": "Blendrauch",
+      "path": "content/equipment/equipment.v012-blendrauch.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 198,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-blutmarker-kit",
+      "type": "equipment",
+      "name": "Blutmarker-Kit",
+      "path": "content/equipment/equipment.v012-blutmarker-kit.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-dachkletterset",
+      "type": "equipment",
+      "name": "Dachkletterset",
+      "path": "content/equipment/equipment.v012-dachkletterset.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 89,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-datenbereinigung",
+      "type": "equipment",
+      "name": "Datenbereinigung",
+      "path": "content/equipment/equipment.v012-datenbereinigung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 96,
+      "rulesTextLength": 213,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-deckidentitaet",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-datenpinsel",
+      "type": "equipment",
+      "name": "Datenpinsel",
+      "path": "content/equipment/equipment.v012-datenpinsel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-datenwurm-karte",
+      "type": "equipment",
+      "name": "Datenwurm-Karte",
+      "path": "content/equipment/equipment.v012-datenwurm-karte.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-deckidentitaet",
+      "type": "equipment",
+      "name": "Deckidentitaet",
+      "path": "content/equipment/equipment.v012-deckidentitaet.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 94,
+      "rulesTextLength": 211,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-dosenkocher",
+      "type": "equipment",
+      "name": "Dosenkocher",
+      "path": "content/equipment/equipment.v012-dosenkocher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-drohnenhalterung",
+      "type": "equipment",
+      "name": "Drohnenhalterung",
+      "path": "content/equipment/equipment.v012-drohnenhalterung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 93,
+      "rulesTextLength": 210,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-fahrzeugscanner",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-drohnenpult",
+      "type": "equipment",
+      "name": "Drohnenpult",
+      "path": "content/equipment/equipment.v012-drohnenpult.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 100,
+      "rulesTextLength": 217,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-drohnenregistrierung",
+      "type": "equipment",
+      "name": "Drohnenregistrierung",
+      "path": "content/equipment/equipment.v012-drohnenregistrierung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 100,
+      "rulesTextLength": 217,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-druckschluessel",
+      "type": "equipment",
+      "name": "Druckschluessel",
+      "path": "content/equipment/equipment.v012-druckschluessel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 207,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-echospeicher",
+      "type": "equipment",
+      "name": "Echospeicher",
+      "path": "content/equipment/equipment.v012-echospeicher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 200,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-einweg-wandsucher",
+      "type": "equipment",
+      "name": "Einweg-Wandsucher",
+      "path": "content/equipment/equipment.v012-einweg-wandsucher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-essenzampulle",
+      "type": "equipment",
+      "name": "Essenzampulle",
+      "path": "content/equipment/equipment.v012-essenzampulle.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-fahrzeugscanner",
+      "type": "equipment",
+      "name": "Fahrzeugscanner",
+      "path": "content/equipment/equipment.v012-fahrzeugscanner.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 92,
+      "rulesTextLength": 209,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-drohnenhalterung",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-falschbild-projektor",
+      "type": "equipment",
+      "name": "Falschbild-Projektor",
+      "path": "content/equipment/equipment.v012-falschbild-projektor.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 109,
+      "rulesTextLength": 228,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-falschsiegel-presse",
+      "type": "equipment",
+      "name": "Falschsiegel-Presse",
+      "path": "content/equipment/equipment.v012-falschsiegel-presse.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 94,
+      "rulesTextLength": 211,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-faltkolben",
+      "type": "equipment",
+      "name": "Faltkolben",
+      "path": "content/equipment/equipment.v012-faltkolben.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 74,
+      "rulesTextLength": 191,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-farbnebel",
+      "type": "equipment",
+      "name": "Farbnebel",
+      "path": "content/equipment/equipment.v012-farbnebel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 80,
+      "rulesTextLength": 197,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-faserhaken-set",
+      "type": "equipment",
+      "name": "Faserhaken-Set",
+      "path": "content/equipment/equipment.v012-faserhaken-set.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 89,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-feinwerkzeugrolle",
+      "type": "equipment",
+      "name": "Feinwerkzeugrolle",
+      "path": "content/equipment/equipment.v012-feinwerkzeugrolle.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 92,
+      "rulesTextLength": 211,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-feldgenerator-pruefer",
+      "type": "equipment",
+      "name": "Feldgenerator-Pruefer",
+      "path": "content/equipment/equipment.v012-feldgenerator-pruefer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 96,
+      "rulesTextLength": 213,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-fieberkapsel",
+      "type": "equipment",
+      "name": "Fieberkapsel",
+      "path": "content/equipment/equipment.v012-fieberkapsel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-fluchfilter",
+      "type": "equipment",
+      "name": "Fluchfilter",
+      "path": "content/equipment/equipment.v012-fluchfilter.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 82,
+      "rulesTextLength": 199,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-fluesterlauf",
+      "type": "equipment",
+      "name": "Fluesterlauf",
+      "path": "content/equipment/equipment.v012-fluesterlauf.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 76,
+      "rulesTextLength": 193,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-funkcode-chip",
+      "type": "equipment",
+      "name": "Funkcode-Chip",
+      "path": "content/equipment/equipment.v012-funkcode-chip.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-funkstille-kapsel",
+      "type": "equipment",
+      "name": "Funkstille-Kapsel",
+      "path": "content/equipment/equipment.v012-funkstille-kapsel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 106,
+      "rulesTextLength": 223,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-geisterkoeder",
+      "type": "equipment",
+      "name": "Geisterkoeder",
+      "path": "content/equipment/equipment.v012-geisterkoeder.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 201,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-geisterkompass",
+      "type": "equipment",
+      "name": "Geisterkompass",
+      "path": "content/equipment/equipment.v012-geisterkompass.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-geistersiegel",
+      "type": "equipment",
+      "name": "Geistersiegel",
+      "path": "content/equipment/equipment.v012-geistersiegel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 77,
+      "rulesTextLength": 194,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-gepanzerter-kleintransporter",
+      "type": "equipment",
+      "name": "Gepanzerter Kleintransporter",
+      "path": "content/equipment/equipment.v012-gepanzerter-kleintransporter.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 105,
+      "rulesTextLength": 222,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-hautfarbener-mantel",
+      "type": "equipment",
+      "name": "Hautfarbener Mantel",
+      "path": "content/equipment/equipment.v012-hautfarbener-mantel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-hohlspitzladung",
+      "type": "equipment",
+      "name": "Hohlspitzladung",
+      "path": "content/equipment/equipment.v012-hohlspitzladung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 79,
+      "rulesTextLength": 198,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-implantat-wartungsvertrag",
+      "type": "equipment",
+      "name": "Implantat-Wartungsvertrag",
+      "path": "content/equipment/equipment.v012-implantat-wartungsvertrag.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 105,
+      "rulesTextLength": 222,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-implantatspuelung",
+      "type": "equipment",
+      "name": "Implantatspuelung",
+      "path": "content/equipment/equipment.v012-implantatspuelung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 91,
+      "rulesTextLength": 208,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kabelspinne",
+      "type": "equipment",
+      "name": "Kabelspinne",
+      "path": "content/equipment/equipment.v012-kabelspinne.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kaltstart-deck",
+      "type": "equipment",
+      "name": "Kaltstart-Deck",
+      "path": "content/equipment/equipment.v012-kaltstart-deck.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 103,
+      "rulesTextLength": 220,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kanalatlas",
+      "type": "equipment",
+      "name": "Kanalatlas",
+      "path": "content/equipment/equipment.v012-kanalatlas.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kartenfalz",
+      "type": "equipment",
+      "name": "Kartenfalz",
+      "path": "content/equipment/equipment.v012-kartenfalz.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kennzeichenleser",
+      "type": "equipment",
+      "name": "Kennzeichenleser",
+      "path": "content/equipment/equipment.v012-kennzeichenleser.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 105,
+      "rulesTextLength": 224,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kennzeichenwechsler",
+      "type": "equipment",
+      "name": "Kennzeichenwechsler",
+      "path": "content/equipment/equipment.v012-kennzeichenwechsler.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 96,
+      "rulesTextLength": 213,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-drohnenhalterung",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-knochenleim",
+      "type": "equipment",
+      "name": "Knochenleim",
+      "path": "content/equipment/equipment.v012-knochenleim.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-knotenleser",
+      "type": "equipment",
+      "name": "Knotenleser",
+      "path": "content/equipment/equipment.v012-knotenleser.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kondensatorzelle",
+      "type": "equipment",
+      "name": "Kondensatorzelle",
+      "path": "content/equipment/equipment.v012-kondensatorzelle.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 80,
+      "rulesTextLength": 197,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-konzernbesucherpass",
+      "type": "equipment",
+      "name": "Konzernbesucherpass",
+      "path": "content/equipment/equipment.v012-konzernbesucherpass.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 99,
+      "rulesTextLength": 218,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kreuzungsorakel",
+      "type": "equipment",
+      "name": "Kreuzungsorakel",
+      "path": "content/equipment/equipment.v012-kreuzungsorakel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kuehlkartusche",
+      "type": "equipment",
+      "name": "Kuehlkartusche",
+      "path": "content/equipment/equipment.v012-kuehlkartusche.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-kurierkoffer",
+      "type": "equipment",
+      "name": "Kurierkoffer",
+      "path": "content/equipment/equipment.v012-kurierkoffer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 87,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-leiterplattenlupe",
+      "type": "equipment",
+      "name": "Leiterplattenlupe",
+      "path": "content/equipment/equipment.v012-leiterplattenlupe.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 92,
+      "rulesTextLength": 209,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-leuchtspurmagazin",
+      "type": "equipment",
+      "name": "Leuchtspurmagazin",
+      "path": "content/equipment/equipment.v012-leuchtspurmagazin.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 204,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-lieferdrohne-brik",
+      "type": "equipment",
+      "name": "Lieferdrohne Brik",
+      "path": "content/equipment/equipment.v012-lieferdrohne-brik.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 94,
+      "rulesTextLength": 211,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-linsenrecorder",
+      "type": "equipment",
+      "name": "Linsenrecorder",
+      "path": "content/equipment/equipment.v012-linsenrecorder.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 103,
+      "rulesTextLength": 220,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-lotreparatur",
+      "type": "equipment",
+      "name": "Lotreparatur",
+      "path": "content/equipment/equipment.v012-lotreparatur.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-magnetisches-schmugglerfach",
+      "type": "equipment",
+      "name": "Magnetisches Schmugglerfach",
+      "path": "content/equipment/equipment.v012-magnetisches-schmugglerfach.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 104,
+      "rulesTextLength": 221,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-medigel-ampulle",
+      "type": "equipment",
+      "name": "Medigel-Ampulle",
+      "path": "content/equipment/equipment.v012-medigel-ampulle.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 204,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-mikrolotstation",
+      "type": "equipment",
+      "name": "Mikrolotstation",
+      "path": "content/equipment/equipment.v012-mikrolotstation.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-mobile-werkbank",
+      "type": "equipment",
+      "name": "Mobile Werkbank",
+      "path": "content/equipment/equipment.v012-mobile-werkbank.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 92,
+      "rulesTextLength": 209,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-mondglaslinse",
+      "type": "equipment",
+      "name": "Mondglaslinse",
+      "path": "content/equipment/equipment.v012-mondglaslinse.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 201,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-nachtkurier-kombi",
+      "type": "equipment",
+      "name": "Nachtkurier-Kombi",
+      "path": "content/equipment/equipment.v012-nachtkurier-kombi.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 94,
+      "rulesTextLength": 211,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-nachtmarktvermittlung",
+      "type": "equipment",
+      "name": "Nachtmarktvermittlung",
+      "path": "content/equipment/equipment.v012-nachtmarktvermittlung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 101,
+      "rulesTextLength": 218,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-nachtsichtclip",
+      "type": "equipment",
+      "name": "Nachtsichtclip",
+      "path": "content/equipment/equipment.v012-nachtsichtclip.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 103,
+      "rulesTextLength": 222,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-nanofaden-klammer",
+      "type": "equipment",
+      "name": "Nanofaden-Klammer",
+      "path": "content/equipment/equipment.v012-nanofaden-klammer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 91,
+      "rulesTextLength": 208,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-nervenkuehler",
+      "type": "equipment",
+      "name": "Nervenkuehler",
+      "path": "content/equipment/equipment.v012-nervenkuehler.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 87,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-netznebel-sender",
+      "type": "equipment",
+      "name": "Netznebel-Sender",
+      "path": "content/equipment/equipment.v012-netznebel-sender.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 105,
+      "rulesTextLength": 222,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-netzwerfer-unterlauf",
+      "type": "equipment",
+      "name": "Netzwerfer-Unterlauf",
+      "path": "content/equipment/equipment.v012-netzwerfer-unterlauf.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 201,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-notfallklinikkonto",
+      "type": "equipment",
+      "name": "Notfallklinikkonto",
+      "path": "content/equipment/equipment.v012-notfallklinikkonto.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 98,
+      "rulesTextLength": 215,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-notfallseil",
+      "type": "equipment",
+      "name": "Notfallseil",
+      "path": "content/equipment/equipment.v012-notfallseil.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-notfalltragetuch",
+      "type": "equipment",
+      "name": "Notfalltragetuch",
+      "path": "content/equipment/equipment.v012-notfalltragetuch.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 207,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-notstromriegel",
+      "type": "equipment",
+      "name": "Notstromriegel",
+      "path": "content/equipment/equipment.v012-notstromriegel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-omenrelais",
+      "type": "equipment",
+      "name": "Omenrelais",
+      "path": "content/equipment/equipment.v012-omenrelais.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 198,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-panzerbrecherpatrone",
+      "type": "equipment",
+      "name": "Panzerbrecherpatrone",
+      "path": "content/equipment/equipment.v012-panzerbrecherpatrone.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 91,
+      "rulesTextLength": 207,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-prisma-zieloptik",
+      "type": "equipment",
+      "name": "Prisma-Zieloptik",
+      "path": "content/equipment/equipment.v012-prisma-zieloptik.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 80,
+      "rulesTextLength": 199,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-probenversiegler",
+      "type": "equipment",
+      "name": "Probenversiegler",
+      "path": "content/equipment/equipment.v012-probenversiegler.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 91,
+      "rulesTextLength": 208,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-pulsleser",
+      "type": "equipment",
+      "name": "Pulsleser",
+      "path": "content/equipment/equipment.v012-pulsleser.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 200,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-quarantanespeicher",
+      "type": "equipment",
+      "name": "Quarantanespeicher",
+      "path": "content/equipment/equipment.v012-quarantanespeicher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 107,
+      "rulesTextLength": 224,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-regenmantelpackung",
+      "type": "equipment",
+      "name": "Regenmantelpackung",
+      "path": "content/equipment/equipment.v012-regenmantelpackung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 89,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-richtmikrofon",
+      "type": "equipment",
+      "name": "Richtmikrofon",
+      "path": "content/equipment/equipment.v012-richtmikrofon.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 102,
+      "rulesTextLength": 221,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-ritualbereitschaft",
+      "type": "equipment",
+      "name": "Ritualbereitschaft",
+      "path": "content/equipment/equipment.v012-ritualbereitschaft.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 98,
+      "rulesTextLength": 215,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-ritualfaden",
+      "type": "equipment",
+      "name": "Ritualfaden",
+      "path": "content/equipment/equipment.v012-ritualfaden.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-ritualsalz",
+      "type": "equipment",
+      "name": "Ritualsalz",
+      "path": "content/equipment/equipment.v012-ritualsalz.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 200,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-ritualtaktgeber",
+      "type": "equipment",
+      "name": "Ritualtaktgeber",
+      "path": "content/equipment/equipment.v012-ritualtaktgeber.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-rohrkamera",
+      "type": "equipment",
+      "name": "Rohrkamera",
+      "path": "content/equipment/equipment.v012-rohrkamera.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-rueckstossgriff",
+      "type": "equipment",
+      "name": "Rueckstossgriff",
+      "path": "content/equipment/equipment.v012-rueckstossgriff.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 79,
+      "rulesTextLength": 196,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-runenakku",
+      "type": "equipment",
+      "name": "Runenakku",
+      "path": "content/equipment/equipment.v012-runenakku.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 80,
+      "rulesTextLength": 197,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-runenfassung",
+      "type": "equipment",
+      "name": "Runenfassung",
+      "path": "content/equipment/equipment.v012-runenfassung.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 76,
+      "rulesTextLength": 193,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schalldaempfer",
+      "type": "equipment",
+      "name": "Schalldaempfer",
+      "path": "content/equipment/equipment.v012-schalldaempfer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 78,
+      "rulesTextLength": 195,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schattenanker",
+      "type": "equipment",
+      "name": "Schattenanker",
+      "path": "content/equipment/equipment.v012-schattenanker.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 201,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schattenlaterne",
+      "type": "equipment",
+      "name": "Schattenlaterne",
+      "path": "content/equipment/equipment.v012-schattenlaterne.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 207,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schleiermaske",
+      "type": "equipment",
+      "name": "Schleiermaske",
+      "path": "content/equipment/equipment.v012-schleiermaske.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schlosslauscher",
+      "type": "equipment",
+      "name": "Schlosslauscher",
+      "path": "content/equipment/equipment.v012-schlosslauscher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 208,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schluesselklon-scanner",
+      "type": "equipment",
+      "name": "Schluesselklon-Scanner",
+      "path": "content/equipment/equipment.v012-schluesselklon-scanner.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 111,
+      "rulesTextLength": 228,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schmugglerwaage",
+      "type": "equipment",
+      "name": "Schmugglerwaage",
+      "path": "content/equipment/equipment.v012-schmugglerwaage.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 207,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schrotadapter",
+      "type": "equipment",
+      "name": "Schrotadapter",
+      "path": "content/equipment/equipment.v012-schrotadapter.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 77,
+      "rulesTextLength": 194,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schutzglyphenband",
+      "type": "equipment",
+      "name": "Schutzglyphenband",
+      "path": "content/equipment/equipment.v012-schutzglyphenband.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-schutzmaskenkit",
+      "type": "equipment",
+      "name": "Schutzmaskenkit",
+      "path": "content/equipment/equipment.v012-schutzmaskenkit.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 209,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-seelenfaden",
+      "type": "equipment",
+      "name": "Seelenfaden",
+      "path": "content/equipment/equipment.v012-seelenfaden.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 82,
+      "rulesTextLength": 199,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-sicheres-schlafabteil",
+      "type": "equipment",
+      "name": "Sicheres Schlafabteil",
+      "path": "content/equipment/equipment.v012-sicheres-schlafabteil.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 101,
+      "rulesTextLength": 220,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-sicherheitskreide",
+      "type": "equipment",
+      "name": "Sicherheitskreide",
+      "path": "content/equipment/equipment.v012-sicherheitskreide.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 92,
+      "rulesTextLength": 209,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-siegelprojektor",
+      "type": "equipment",
+      "name": "Siegelprojektor",
+      "path": "content/equipment/equipment.v012-siegelprojektor.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-signalkaefer",
+      "type": "equipment",
+      "name": "Signalkaefer",
+      "path": "content/equipment/equipment.v012-signalkaefer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 101,
+      "rulesTextLength": 218,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-smart-link-buegel",
+      "type": "equipment",
+      "name": "Smart-Link-Buegel",
+      "path": "content/equipment/equipment.v012-smart-link-buegel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 198,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-sperrschaum",
+      "type": "equipment",
+      "name": "Sperrschaum",
+      "path": "content/equipment/equipment.v012-sperrschaum.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 82,
+      "rulesTextLength": 199,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-spiegellinse",
+      "type": "equipment",
+      "name": "Spiegellinse",
+      "path": "content/equipment/equipment.v012-spiegellinse.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 101,
+      "rulesTextLength": 218,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-spurblocker",
+      "type": "equipment",
+      "name": "Spurblocker",
+      "path": "content/equipment/equipment.v012-spurblocker.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 100,
+      "rulesTextLength": 217,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-spurenspiegel",
+      "type": "equipment",
+      "name": "Spurenspiegel",
+      "path": "content/equipment/equipment.v012-spurenspiegel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-stadtmoped-kestrel",
+      "type": "equipment",
+      "name": "Stadtmoped Kestrel",
+      "path": "content/equipment/equipment.v012-stadtmoped-kestrel.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 95,
+      "rulesTextLength": 212,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-stadtwaffenlizenz",
+      "type": "equipment",
+      "name": "Stadtwaffenlizenz",
+      "path": "content/equipment/equipment.v012-stadtwaffenlizenz.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 97,
+      "rulesTextLength": 216,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-datenbereinigung",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-stimulanzstreifen",
+      "type": "equipment",
+      "name": "Stimulanzstreifen",
+      "path": "content/equipment/equipment.v012-stimulanzstreifen.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 204,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-stoerimpuls-modul",
+      "type": "equipment",
+      "name": "Stoerimpuls-Modul",
+      "path": "content/equipment/equipment.v012-stoerimpuls-modul.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 200,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-stoerstaub",
+      "type": "equipment",
+      "name": "Stoerstaub",
+      "path": "content/equipment/equipment.v012-stoerstaub.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 200,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bannpapier",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-stromlinien-tracker",
+      "type": "equipment",
+      "name": "Stromlinien-Tracker",
+      "path": "content/equipment/equipment.v012-stromlinien-tracker.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 108,
+      "rulesTextLength": 225,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-synthhaut-patch",
+      "type": "equipment",
+      "name": "Synthhaut-Patch",
+      "path": "content/equipment/equipment.v012-synthhaut-patch.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 89,
+      "rulesTextLength": 208,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-taschenmesh",
+      "type": "equipment",
+      "name": "Taschenmesh",
+      "path": "content/equipment/equipment.v012-taschenmesh.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 100,
+      "rulesTextLength": 219,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-taschenwerkbank",
+      "type": "equipment",
+      "name": "Taschenwerkbank",
+      "path": "content/equipment/equipment.v012-taschenwerkbank.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 90,
+      "rulesTextLength": 209,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-tatortstaub",
+      "type": "equipment",
+      "name": "Tatortstaub",
+      "path": "content/equipment/equipment.v012-tatortstaub.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-thermalsucher",
+      "type": "equipment",
+      "name": "Thermalsucher",
+      "path": "content/equipment/equipment.v012-thermalsucher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 77,
+      "rulesTextLength": 196,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-toxinschwamm",
+      "type": "equipment",
+      "name": "Toxinschwamm",
+      "path": "content/equipment/equipment.v012-toxinschwamm.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 86,
+      "rulesTextLength": 203,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-tragetrage",
+      "type": "equipment",
+      "name": "Tragetrage",
+      "path": "content/equipment/equipment.v012-tragetrage.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 202,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-traumapflaster",
+      "type": "equipment",
+      "name": "Traumapflaster",
+      "path": "content/equipment/equipment.v012-traumapflaster.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-adrenalsperre",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-traumarchiv",
+      "type": "equipment",
+      "name": "Traumarchiv",
+      "path": "content/equipment/equipment.v012-traumarchiv.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 82,
+      "rulesTextLength": 199,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-trommelmagazin",
+      "type": "equipment",
+      "name": "Trommelmagazin",
+      "path": "content/equipment/equipment.v012-trommelmagazin.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 78,
+      "rulesTextLength": 195,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-wahrheitsraucher",
+      "type": "equipment",
+      "name": "Wahrheitsraucher",
+      "path": "content/equipment/equipment.v012-wahrheitsraucher.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 87,
+      "rulesTextLength": 206,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-ahnenantenne",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-wandradar",
+      "type": "equipment",
+      "name": "Wandradar",
+      "path": "content/equipment/equipment.v012-wandradar.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 98,
+      "rulesTextLength": 215,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-bewegungsfaden",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-wartungsset",
+      "type": "equipment",
+      "name": "Wartungsset",
+      "path": "content/equipment/equipment.v012-wartungsset.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 75,
+      "rulesTextLength": 192,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-wasserfilter",
+      "type": "equipment",
+      "name": "Wasserfilter",
+      "path": "content/equipment/equipment.v012-wasserfilter.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 87,
+      "rulesTextLength": 204,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "equipment.v012-archivhandschuhe",
+        "score": 0.75
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "equipment.v012-wegzeichen-muenze",
+      "type": "equipment",
+      "name": "Wegzeichen-Muenze",
+      "path": "content/equipment/equipment.v012-wegzeichen-muenze.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 88,
+      "rulesTextLength": 205,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
       "manualReviewRequired": false
     },
     {
@@ -21903,6 +26548,708 @@
       "repeatedSummary": false,
       "nearestSimilarSummary": null,
       "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-aschekatana",
+      "type": "weapon",
+      "name": "Aschekatana",
+      "path": "content/weapon/weapon.v012-aschekatana.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 76,
+      "rulesTextLength": 164,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-drohnengewehr",
+      "type": "weapon",
+      "name": "Drohnengewehr",
+      "path": "content/weapon/weapon.v012-drohnengewehr.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 85,
+      "rulesTextLength": 170,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-echorufbogen",
+      "type": "weapon",
+      "name": "Echorufbogen",
+      "path": "content/weapon/weapon.v012-echorufbogen.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 72,
+      "rulesTextLength": 158,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-faltkarabiner",
+      "type": "weapon",
+      "name": "Faltkarabiner",
+      "path": "content/weapon/weapon.v012-faltkarabiner.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 78,
+      "rulesTextLength": 161,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-funkenmachete",
+      "type": "weapon",
+      "name": "Funkenmachete",
+      "path": "content/weapon/weapon.v012-funkenmachete.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 89,
+      "rulesTextLength": 171,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-gassenklinge",
+      "type": "weapon",
+      "name": "Gassenklinge",
+      "path": "content/weapon/weapon.v012-gassenklinge.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 80,
+      "rulesTextLength": 157,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "weapon.v012-kurierwurfstern",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-glasarmbrust",
+      "type": "weapon",
+      "name": "Glasarmbrust",
+      "path": "content/weapon/weapon.v012-glasarmbrust.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 75,
+      "rulesTextLength": 161,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-hafenschrotflinte",
+      "type": "weapon",
+      "name": "Hafenschrotflinte",
+      "path": "content/weapon/weapon.v012-hafenschrotflinte.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 92,
+      "rulesTextLength": 172,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-industriehammer",
+      "type": "weapon",
+      "name": "Industriehammer",
+      "path": "content/weapon/weapon.v012-industriehammer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 76,
+      "rulesTextLength": 158,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-knochenlanze",
+      "type": "weapon",
+      "name": "Knochenlanze",
+      "path": "content/weapon/weapon.v012-knochenlanze.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 168,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-kurierwurfstern",
+      "type": "weapon",
+      "name": "Kurierwurfstern",
+      "path": "content/weapon/weapon.v012-kurierwurfstern.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 162,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "weapon.v012-gassenklinge",
+        "score": 0.7777777777777778
+      },
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-monofilamentpeitsche",
+      "type": "weapon",
+      "name": "Monofilamentpeitsche",
+      "path": "content/weapon/weapon.v012-monofilamentpeitsche.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 84,
+      "rulesTextLength": 167,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-nadelpistole",
+      "type": "weapon",
+      "name": "Nadelpistole",
+      "path": "content/weapon/weapon.v012-nadelpistole.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 75,
+      "rulesTextLength": 160,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-phasenwerfer",
+      "type": "weapon",
+      "name": "Phasenwerfer",
+      "path": "content/weapon/weapon.v012-phasenwerfer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 95,
+      "rulesTextLength": 177,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-ritualspeer",
+      "type": "weapon",
+      "name": "Ritualspeer",
+      "path": "content/weapon/weapon.v012-ritualspeer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 75,
+      "rulesTextLength": 163,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-runenbeil",
+      "type": "weapon",
+      "name": "Runenbeil",
+      "path": "content/weapon/weapon.v012-runenbeil.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 71,
+      "rulesTextLength": 155,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-schallpistole",
+      "type": "weapon",
+      "name": "Schallpistole",
+      "path": "content/weapon/weapon.v012-schallpistole.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 166,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "weapon.v012-schockfaust",
+        "score": 0.8
+      },
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-schleierdolch",
+      "type": "weapon",
+      "name": "Schleierdolch",
+      "path": "content/weapon/weapon.v012-schleierdolch.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 79,
+      "rulesTextLength": 167,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-schockfaust",
+      "type": "weapon",
+      "name": "Schockfaust",
+      "path": "content/weapon/weapon.v012-schockfaust.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 164,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "weapon.v012-schallpistole",
+        "score": 0.8
+      },
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-schrottwerfer",
+      "type": "weapon",
+      "name": "Schrottwerfer",
+      "path": "content/weapon/weapon.v012-schrottwerfer.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 164,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-signalrevolver",
+      "type": "weapon",
+      "name": "Signalrevolver",
+      "path": "content/weapon/weapon.v012-signalrevolver.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 81,
+      "rulesTextLength": 161,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-spiegelklinge",
+      "type": "weapon",
+      "name": "Spiegelklinge",
+      "path": "content/weapon/weapon.v012-spiegelklinge.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 78,
+      "rulesTextLength": 162,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-teleskopstab",
+      "type": "weapon",
+      "name": "Teleskopstab",
+      "path": "content/weapon/weapon.v012-teleskopstab.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 83,
+      "rulesTextLength": 161,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "weapon.v012-wachturmgewehr",
+      "type": "weapon",
+      "name": "Wachturmgewehr",
+      "path": "content/weapon/weapon.v012-wachturmgewehr.md",
+      "sourceFiles": [],
+      "status": "canonical",
+      "editorialStatus": "reviewed",
+      "summaryLength": 89,
+      "rulesTextLength": 170,
+      "presentTextFields": [
+        "summary",
+        "flavorText",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": false,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": null,
+      "semanticReviewHints": [
+        "use-not-recognized-by-heuristic"
+      ],
       "manualReviewRequired": false
     },
     {

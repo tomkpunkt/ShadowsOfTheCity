@@ -24,6 +24,14 @@ const manifestPath = path.join(contentDirectory, "migration-manifest.json");
 
 const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as MigrationManifest;
 const result = await compileContent({ contentDirectory, writeOutput: false });
+// The migration manifest intentionally tracks only the immutable 64-source legacy baseline.
+const migratedEntities = result.catalog.entities.filter((entity) => !entity.id.includes(".v012-"));
+const migratedCounts = Object.fromEntries(
+  Object.entries(result.report.countsByType).map(([type]) => [
+    type,
+    migratedEntities.filter((entity) => entity.type === type).length
+  ])
+);
 const failures: string[] = [];
 
 if (manifest.sourceCount !== 64 || manifest.sources.length !== 64) {
@@ -34,16 +42,16 @@ if (manifest.sourceCount !== 64 || manifest.sources.length !== 64) {
   );
 }
 
-if (manifest.generatedEntityCount !== result.catalog.entities.length) {
+if (manifest.generatedEntityCount !== migratedEntities.length) {
   failures.push(
     `Manifest says ${String(manifest.generatedEntityCount)} entities, compiler found ${String(
-      result.catalog.entities.length
+      migratedEntities.length
     )}`
   );
 }
 
 for (const [type, minimum] of Object.entries(manifest.expectedMinimums)) {
-  const actual = result.report.countsByType[type] ?? 0;
+  const actual = migratedCounts[type] ?? 0;
   if (actual < minimum) {
     failures.push(`${type}: expected at least ${String(minimum)}, found ${String(actual)}`);
   }

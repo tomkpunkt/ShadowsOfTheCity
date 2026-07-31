@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
+  "catalogHash": "9139d813135415b87094bad463b8347a4929d823c40e5f1ebaac779b2cec05a5",
   "summary": {
-    "textRules": 737,
-    "entitiesWithTextRules": 737,
+    "textRules": 911,
+    "entitiesWithTextRules": 911,
     "explicitTextEffects": 410,
     "entitiesWithMachineRules": 27,
     "classifications": {
-      "character-value": 101,
+      "character-value": 119,
       "combat-value": 102,
-      "narrative": 199,
+      "narrative": 355,
       "prerequisite": 31,
       "selection": 188,
       "situational-text-rule": 103,
@@ -208,6 +208,146 @@
       "text": "Tarnkleidung gewährt einen Gegenstandsbonus von +1 auf die Rüstungsklasse. Der Geschicklichkeitsdeckel beträgt 4, die Last 1 und der Quellenpreis 150 GS.",
       "alreadyHasMachineRule": false,
       "recommendation": "Zielwert, Dauer, Stapelung und Auslöser fachlich bestätigen."
+    },
+    {
+      "entityId": "armor.v012-ahnenschild-harnisch",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Ahnenschild-Harnisch gewaehrt +4 RK, besitzt einen Geschicklichkeitsdeckel von 1, kostet 1100 GS und hat Last 3. Die sichtbare Trageweise ist Bannung.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-chemieschicht-overall",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Chemieschicht-Overall gewaehrt +2 RK, besitzt einen Geschicklichkeitsdeckel von 2, kostet 220 GS und hat Last 1. Die sichtbare Trageweise ist chemischer Schutz.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-datennebel-kapuze",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Datennebel-Kapuze gewaehrt +1 RK, besitzt einen Geschicklichkeitsdeckel von 4, kostet 490 GS und hat Last 1. Die sichtbare Trageweise ist Gegenueberwachung.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-gassenschicht",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Gassenschicht gewaehrt +2 RK, besitzt einen Geschicklichkeitsdeckel von 3, kostet 540 GS und hat Last 1. Die sichtbare Trageweise ist Regeneration.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-klinikschuerze",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Klinikschuerze gewaehrt +1 RK, besitzt einen Geschicklichkeitsdeckel von 3, kostet 180 GS und hat Last 1. Die sichtbare Trageweise ist medizinischer Einsatz.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-konzern-exoweste",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Konzern-Exoweste gewaehrt +5 RK, besitzt einen Geschicklichkeitsdeckel von 0, kostet 950 GS und hat Last 3. Die sichtbare Trageweise ist taktisch.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-kuriermantel-mit-faserlage",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kuriermantel mit Faserlage gewaehrt +1 RK, besitzt einen Geschicklichkeitsdeckel von 4, kostet 120 GS und hat Last 1. Die sichtbare Trageweise ist verborgen.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-nachtmarktjacke",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nachtmarktjacke gewaehrt +1 RK, besitzt einen Geschicklichkeitsdeckel von 3, kostet 75 GS und hat Last 1. Die sichtbare Trageweise ist unauffaellig.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-nullfeld-poncho",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nullfeld-Poncho gewaehrt +2 RK, besitzt einen Geschicklichkeitsdeckel von 3, kostet 700 GS und hat Last 1. Die sichtbare Trageweise ist arkaner Schutz.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-schlackenschutz",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schlackenschutz gewaehrt +2 RK, besitzt einen Geschicklichkeitsdeckel von 2, kostet 310 GS und hat Last 1. Die sichtbare Trageweise ist Hitze.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-sondereinsatzplatte",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Sondereinsatzplatte gewaehrt +6 RK, besitzt einen Geschicklichkeitsdeckel von 0, kostet 1300 GS und hat Last 3. Die sichtbare Trageweise ist schwer.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-u-bahn-riotweste",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "U-Bahn-Riotweste gewaehrt +3 RK, besitzt einen Geschicklichkeitsdeckel von 2, kostet 360 GS und hat Last 1. Die sichtbare Trageweise ist Kontrolle.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-verhandlungsanzug",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Verhandlungsanzug gewaehrt +1 RK, besitzt einen Geschicklichkeitsdeckel von 4, kostet 430 GS und hat Last 1. Die sichtbare Trageweise ist elektronischer Schutz.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "armor.v012-werkstattpanzer",
+      "entityType": "armor",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Werkstattpanzer gewaehrt +3 RK, besitzt einen Geschicklichkeitsdeckel von 1, kostet 260 GS und hat Last 1. Die sichtbare Trageweise ist Reparatur.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
     },
     {
       "entityId": "armor.vollplatte",
@@ -3666,6 +3806,1366 @@
       "textEffectCount": 1,
       "classification": "narrative",
       "text": "Telefon: Langstreckenkommunikation Der Quellenpreis beträgt 200 GS; die vorläufig migrierte Last beträgt 1.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-adrenalsperre",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Adrenalsperre kostet 345 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-ahnenantenne",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Ahnenantenne kostet 455 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-archivhandschuhe",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Archivhandschuhe kostet 670 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-arkaner-navigationskern",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Arkaner Navigationskern kostet 825 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-astralprisma",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Astralprisma kostet 230 GS bei Last 0.1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-bannkreide",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Bannkreide kostet 255 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-bannpapier",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Bannpapier kostet 243 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-bewegungsfaden",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Bewegungsfaden kostet 465 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-biometrische-sicherung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Biometrische Sicherung kostet 345 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-blendrauch",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Blendrauch kostet 143 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-blutmarker-kit",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Blutmarker-Kit kostet 245 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-dachkletterset",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Dachkletterset kostet 420 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-datenbereinigung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Datenbereinigung kostet 335 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-datenpinsel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Datenpinsel kostet 495 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-datenwurm-karte",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Datenwurm-Karte kostet 193 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-deckidentitaet",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Deckidentitaet kostet 210 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-dosenkocher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Dosenkocher kostet 745 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-drohnenhalterung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Drohnenhalterung kostet 800 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-drohnenpult",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Drohnenpult kostet 265 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-drohnenregistrierung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Drohnenregistrierung kostet 385 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-druckschluessel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Druckschluessel kostet 470 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-echospeicher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Echospeicher kostet 305 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-einweg-wandsucher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Einweg-Wandsucher kostet 168 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-essenzampulle",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Essenzampulle kostet 530 GS bei Last 0.1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-fahrzeugscanner",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Fahrzeugscanner kostet 750 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-falschbild-projektor",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Falschbild-Projektor kostet 440 GS bei Last 0.1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-falschsiegel-presse",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Falschsiegel-Presse kostet 220 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-faltkolben",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Faltkolben kostet 495 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-farbnebel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Farbnebel kostet 368 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-faserhaken-set",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Faserhaken-Set kostet 70 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-feinwerkzeugrolle",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Feinwerkzeugrolle kostet 545 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-feldgenerator-pruefer",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Feldgenerator-Pruefer kostet 620 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-fieberkapsel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Fieberkapsel kostet 370 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-fluchfilter",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Fluchfilter kostet 580 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-fluesterlauf",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Fluesterlauf kostet 195 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-funkcode-chip",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Funkcode-Chip kostet 418 GS bei Last 0.1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-funkstille-kapsel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Funkstille-Kapsel kostet 390 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-geisterkoeder",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Geisterkoeder kostet 268 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-geisterkompass",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Geisterkompass kostet 280 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-geistersiegel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Geistersiegel kostet 545 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-gepanzerter-kleintransporter",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Gepanzerter Kleintransporter kostet 700 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-hautfarbener-mantel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Hautfarbener Mantel kostet 370 GS bei Last 0.1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-hohlspitzladung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Hohlspitzladung kostet 270 GS bei Last 0.1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-implantat-wartungsvertrag",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Implantat-Wartungsvertrag kostet 185 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-implantatspuelung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Implantatspuelung kostet 220 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kabelspinne",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kabelspinne kostet 570 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kaltstart-deck",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kaltstart-Deck kostet 290 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kanalatlas",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kanalatlas kostet 720 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kartenfalz",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kartenfalz kostet 695 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kennzeichenleser",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kennzeichenleser kostet 240 GS bei Last 0.1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kennzeichenwechsler",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kennzeichenwechsler kostet 850 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-knochenleim",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Knochenleim kostet 320 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-knotenleser",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Knotenleser kostet 595 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kondensatorzelle",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kondensatorzelle kostet 420 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-konzernbesucherpass",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Konzernbesucherpass kostet 260 GS bei Last 0.1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kreuzungsorakel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kreuzungsorakel kostet 705 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kuehlkartusche",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kuehlkartusche kostet 343 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-kurierkoffer",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kurierkoffer kostet 245 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-leiterplattenlupe",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Leiterplattenlupe kostet 120 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-leuchtspurmagazin",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Leuchtspurmagazin kostet 93 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-lieferdrohne-brik",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Lieferdrohne Brik kostet 675 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-linsenrecorder",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Linsenrecorder kostet 165 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-lotreparatur",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Lotreparatur kostet 318 GS bei Last 0.1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-magnetisches-schmugglerfach",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Magnetisches Schmugglerfach kostet 775 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-medigel-ampulle",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Medigel-Ampulle kostet 18 GS bei Last 0.1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-mikrolotstation",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Mikrolotstation kostet 95 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-mobile-werkbank",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Mobile Werkbank kostet 875 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-mondglaslinse",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Mondglaslinse kostet 505 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-nachtkurier-kombi",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nachtkurier-Kombi kostet 725 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-nachtmarktvermittlung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nachtmarktvermittlung kostet 235 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-nachtsichtclip",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nachtsichtclip kostet 540 GS bei Last 0.1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-nanofaden-klammer",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nanofaden-Klammer kostet 120 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-nervenkuehler",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Nervenkuehler kostet 195 GS bei Last 0.1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-netznebel-sender",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Netznebel-Sender kostet 415 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-netzwerfer-unterlauf",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Netzwerfer-Unterlauf kostet 295 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-notfallklinikkonto",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Notfallklinikkonto kostet 285 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-notfallseil",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Notfallseil kostet 270 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-notfalltragetuch",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Notfalltragetuch kostet 270 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-notstromriegel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Notstromriegel kostet 293 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-omenrelais",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Omenrelais kostet 680 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-panzerbrecherpatrone",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Panzerbrecherpatrone kostet 68 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-prisma-zieloptik",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Prisma-Zieloptik kostet 170 GS bei Last 0.1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-probenversiegler",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Probenversiegler kostet 170 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-pulsleser",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Pulsleser kostet 145 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-quarantanespeicher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Quarantanespeicher kostet 565 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-regenmantelpackung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Regenmantelpackung kostet 443 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-richtmikrofon",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Richtmikrofon kostet 340 GS bei Last 0.1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-ritualbereitschaft",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Ritualbereitschaft kostet 310 GS bei Last 1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-ritualfaden",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Ritualfaden kostet 345 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-ritualsalz",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Ritualsalz kostet 218 GS bei Last 0.1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-ritualtaktgeber",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Ritualtaktgeber kostet 480 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-rohrkamera",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Rohrkamera kostet 295 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-rueckstossgriff",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Rueckstossgriff kostet 220 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-runenakku",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Runenakku kostet 355 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-runenfassung",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Runenfassung kostet 445 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schalldaempfer",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schalldaempfer kostet 395 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schattenanker",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schattenanker kostet 555 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schattenlaterne",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schattenlaterne kostet 370 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schleiermaske",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schleiermaske kostet 330 GS bei Last 0.1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schlosslauscher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schlosslauscher kostet 45 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schluesselklon-scanner",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schluesselklon-Scanner kostet 315 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schmugglerwaage",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schmugglerwaage kostet 520 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schrotadapter",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schrotadapter kostet 520 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schutzglyphenband",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schutzglyphenband kostet 405 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-schutzmaskenkit",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schutzmaskenkit kostet 645 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-seelenfaden",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Seelenfaden kostet 380 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-sicheres-schlafabteil",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Sicheres Schlafabteil kostet 360 GS bei Last 0.1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-sicherheitskreide",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Sicherheitskreide kostet 320 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-siegelprojektor",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Siegelprojektor kostet 630 GS bei Last 0.1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-signalkaefer",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Signalkaefer kostet 215 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-smart-link-buegel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Smart-Link-Buegel kostet 320 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-sperrschaum",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Sperrschaum kostet 393 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-spiegellinse",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Spiegellinse kostet 490 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-spurblocker",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Spurblocker kostet 515 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-spurenspiegel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Spurenspiegel kostet 195 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-stadtmoped-kestrel",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Stadtmoped Kestrel kostet 650 GS bei Last 4. Es dient Transport und Fahrzeugzugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-stadtwaffenlizenz",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Stadtwaffenlizenz kostet 160 GS bei Last 0.1. Es dient sozialer und rechtlicher Zugang; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-stimulanzstreifen",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Stimulanzstreifen kostet 43 GS bei Last 1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-stoerimpuls-modul",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Stoerimpuls-Modul kostet 570 GS bei Last 0.1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-stoerstaub",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Stoerstaub kostet 118 GS bei Last 0.1. Es dient einmalige Vorbereitung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-stromlinien-tracker",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Stromlinien-Tracker kostet 365 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-synthhaut-patch",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Synthhaut-Patch kostet 295 GS bei Last 0.1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-taschenmesh",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Taschenmesh kostet 140 GS bei Last 0.1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-taschenwerkbank",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Taschenwerkbank kostet 445 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-tatortstaub",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Tatortstaub kostet 145 GS bei Last 0.1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-thermalsucher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Thermalsucher kostet 470 GS bei Last 0.1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-toxinschwamm",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Toxinschwamm kostet 170 GS bei Last 1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-tragetrage",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Tragetrage kostet 770 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-traumapflaster",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Traumapflaster kostet 95 GS bei Last 0.1. Es dient fiktionale Erstversorgung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-traumarchiv",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Traumarchiv kostet 605 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-trommelmagazin",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Trommelmagazin kostet 245 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-wahrheitsraucher",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Wahrheitsraucher kostet 430 GS bei Last 0.1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-wandradar",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Wandradar kostet 190 GS bei Last 1. Es dient Informationsgewinn und Gegenueberwachung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-wartungsset",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Wartungsset kostet 595 GS bei Last 1. Es dient Waffenanpassung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-wasserfilter",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Wasserfilter kostet 395 GS bei Last 1. Es dient Reparatur und Infiltration; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "equipment.v012-wegzeichen-muenze",
+      "entityType": "equipment",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Wegzeichen-Muenze kostet 655 GS bei Last 1. Es dient Ritual und Wahrnehmung; Reichweite, Stromversorgung und Gegenmassnahmen richten sich nach der beschriebenen Situation und erzeugen keine neue Kernregel.",
       "alreadyHasMachineRule": false,
       "recommendation": "Als redaktionellen Kontext belassen."
     },
@@ -7348,6 +8848,246 @@
       "text": "Speer verursacht 1d6 Stichschaden und wird mit einer Hand geführt. Sie besitzt keine in der Quelle angegebene Reichweite. Der Quellenpreis beträgt 40 GS; die vorläufig migrierte Last beträgt 1.",
       "alreadyHasMachineRule": false,
       "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-aschekatana",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Aschekatana verursacht 1d10+1 Stichschaden, kostet 1400 GS und hat Last 1. Seine Rolle ist duellistisch; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-drohnengewehr",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Drohnengewehr verursacht 1d10+2 Stichschaden, kostet 1250 GS und hat Last 3. Seine Rolle ist lange Reichweite; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-echorufbogen",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Echorufbogen verursacht 1d6+2 Stichschaden, kostet 520 GS und hat Last 1. Seine Rolle ist lautlos; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-faltkarabiner",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Faltkarabiner verursacht 1d8+2 Stichschaden, kostet 760 GS und hat Last 2. Seine Rolle ist verborgen; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-funkenmachete",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Funkenmachete verursacht 1d8+2 Stichschaden, kostet 680 GS und hat Last 1.5. Seine Rolle ist gegen Technologie; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-gassenklinge",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Gassenklinge verursacht 1d6 Stichschaden, kostet 45 GS und hat Last 1. Seine Rolle ist verborgen; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-glasarmbrust",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Glasarmbrust verursacht 1d8+1 Stichschaden, kostet 610 GS und hat Last 1.5. Seine Rolle ist praezise; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-hafenschrotflinte",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Hafenschrotflinte verursacht 1d8+1 Stichschaden, kostet 380 GS und hat Last 2. Seine Rolle ist kurze Reichweite; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-industriehammer",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Industriehammer verursacht 1d10 Stichschaden, kostet 75 GS und hat Last 2. Seine Rolle ist schwer; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-knochenlanze",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Knochenlanze verursacht 1d8 Stichschaden, kostet 240 GS und hat Last 1.5. Seine Rolle ist durchschlagsstark; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-kurierwurfstern",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Kurierwurfstern verursacht 1d4 Stichschaden, kostet 35 GS und hat Last 0.1. Seine Rolle ist verborgen; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-monofilamentpeitsche",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Monofilamentpeitsche verursacht 1d8+1 Stichschaden, kostet 420 GS und hat Last 1. Seine Rolle ist flexibel; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-nadelpistole",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Nadelpistole verursacht 1d4+1 Stichschaden, kostet 460 GS und hat Last 0.5. Seine Rolle ist lautlos; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-phasenwerfer",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Phasenwerfer verursacht 1d10+3 Stichschaden, kostet 1800 GS und hat Last 2. Seine Rolle ist begrenzte Spezialwirkung; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-ritualspeer",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Ritualspeer verursacht 1d8+1 Stichschaden, kostet 450 GS und hat Last 1.5. Seine Rolle ist gegen Magie; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-runenbeil",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Runenbeil verursacht 1d8+1 Stichschaden, kostet 500 GS und hat Last 1. Seine Rolle ist Bannung; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-schallpistole",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Schallpistole verursacht 1d6+2 Stichschaden, kostet 730 GS und hat Last 1. Seine Rolle ist kontrollierend; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-schleierdolch",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Schleierdolch verursacht 1d4+2 Stichschaden, kostet 320 GS und hat Last 0.5. Seine Rolle ist gegen Geister; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-schockfaust",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Schockfaust verursacht 1d6+1 Stichschaden, kostet 180 GS und hat Last 1. Seine Rolle ist kontrollierend; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-schrottwerfer",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Schrottwerfer verursacht 1d6 Stichschaden, kostet 65 GS und hat Last 2. Seine Rolle ist flaechenwirksam; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-signalrevolver",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Signalrevolver verursacht 1d6+1 Stichschaden, kostet 290 GS und hat Last 1. Seine Rolle ist praezise; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-spiegelklinge",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Spiegelklinge verursacht 1d8+1 Stichschaden, kostet 890 GS und hat Last 1. Seine Rolle ist Taeuschung; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
+    },
+    {
+      "entityId": "weapon.v012-teleskopstab",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "narrative",
+      "text": "Teleskopstab verursacht 1d6 Stichschaden, kostet 110 GS und hat Last 1. Seine Rolle ist unauffaellig; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Als redaktionellen Kontext belassen."
+    },
+    {
+      "entityId": "weapon.v012-wachturmgewehr",
+      "entityType": "weapon",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "character-value",
+      "text": "Wachturmgewehr verursacht 1d12+2 Stichschaden, kostet 980 GS und hat Last 3. Seine Rolle ist lange Reichweite; situative Zusatzeffekte werden nicht automatisch berechnet.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Ziel-ID, Modifikatortyp, Dauer und Stapelung fachlich bestätigen."
     },
     {
       "entityId": "weapon.vibro-klinge",

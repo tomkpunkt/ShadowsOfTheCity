@@ -6,7 +6,7 @@ Rollenspieladaption mit Pathfinder-2e-naher Regelstruktur.
 ## Projektstatus
 
 Version `0.1.1` ist ein reproduzierbarer Testbuild. Der vollständige Katalog
-enthält 737 Entitäten, davon 724 aktive und 13 fachlich gesperrte Entwürfe.
+enthält 911 Entitäten, davon 898 aktive und 13 fachlich gesperrte Entwürfe.
 Charakterwerte werden ausschließlich durch die frameworkfreie Rules Engine
 berechnet; der Builder zeigt Herkunftsnachweise, offene Entscheidungen,
 Voraussetzungsfehler und Katalogkompatibilität an.

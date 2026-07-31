@@ -9,13 +9,13 @@ bleibt dadurch reproduzierbar.
 | Entitätstyp | Anzahl |
 |:--|:--|
 | `ancestry` | 8 |
-| `armor` | 12 |
+| `armor` | 26 |
 | `background` | 8 |
 | `choice` | 168 |
 | `class` | 9 |
 | `class-feature` | 99 |
 | `creature` | 34 |
-| `equipment` | 28 |
+| `equipment` | 164 |
 | `feat` | 195 |
 | `heritage` | 40 |
 | `language` | 10 |
@@ -25,18 +25,18 @@ bleibt dadurch reproduzierbar.
 | `spell` | 14 |
 | `spellcasting-progression` | 3 |
 | `trait` | 30 |
-| `weapon` | 40 |
+| `weapon` | 64 |
 
 ## Automatisierte Qualitätszahlen
 
-- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 737
+- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 911
 - Leere Beschreibungen: 0
 - Alttexte mit weniger als 40 Klartextzeichen: 42
 - Verdächtige technische Labels: 0
 - Sichtbare Platzhaltermuster: 0
 - Entitäten mit Markdown-Struktur: 139
 - Entitäten mit nicht maschinenlesbarer Textregel: 410
-- Katalogfelder, die vor diesem Auftrag nicht in der generischen Detailansicht sichtbar waren: 65
+- Katalogfelder, die vor diesem Auftrag nicht in der generischen Detailansicht sichtbar waren: 66
 
 ## UI-Ausgangslage
 
@@ -59,6 +59,7 @@ bleibt dadurch reproduzierbar.
 - `availability`
 - `boosts`
 - `bulk`
+- `capacity`
 - `castingAttribute`
 - `category`
 - `categoryId`

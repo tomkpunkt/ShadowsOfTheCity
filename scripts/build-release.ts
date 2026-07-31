@@ -158,9 +158,9 @@ await writeFile(
     `- Aktionen mit strukturierten Kosten: ${String(actionCount)}\n` +
     `- Waffen/Angriffsquellen: ${String(attackCount)}\n` +
     `- Zauber: ${String(spellCount)}\n` +
-    `- Tests: 104 Unit-/Integrationstests und 21 E2E-Szenarien erfolgreich\n` +
+    `- Tests: 105 Unit-/Integrationstests und 21 E2E-Szenarien erfolgreich\n` +
     `- Druck und Statblock: getrennte Modelle, A4-Referenzseiten und JSON-Roundtrip geprüft\n` +
-    `- Performance: Startchunk 373,75 kB; Charakterbogen 59,60 kB lazy; Katalog 1.379,01 kB separat\n` +
+    `- Performance: Startchunk 373,75 kB; Charakterbogen 59,60 kB lazy; Katalog 1.550,93 kB separat\n` +
     `- Build: statische Offline-Webanwendung erfolgreich\n` +
     `- Bekannte Einschränkungen: situative Textregeln werden angezeigt, aber nicht permanent eingerechnet; vorbereitete Einzelplätze benötigen strukturierte Katalogdaten; 13 Entwurfsentitäten bleiben gesperrt.\n`,
   "utf8"

@@ -30,7 +30,7 @@ describe("redaktioneller Katalog und Ausrüstungstaxonomie", () => {
   });
 
   it("classifies every item across all required dimensions", () => {
-    expect(items).toHaveLength(80);
+    expect(items).toHaveLength(254);
     for (const item of items) {
       expect(item.category).toBeTruthy();
       expect(item.subcategory).toBeTruthy();

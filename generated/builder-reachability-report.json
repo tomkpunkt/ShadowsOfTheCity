@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
+  "catalogHash": "9139d813135415b87094bad463b8347a4929d823c40e5f1ebaac779b2cec05a5",
   "summary": {
-    "entities": 737,
-    "reachable": 737,
-    "selectable": 356,
+    "entities": 911,
+    "reachable": 911,
+    "selectable": 530,
     "automatic": 301,
     "informational": 80,
     "allowlisted": 0,
@@ -12,13 +12,13 @@
     "errors": 0,
     "byType": {
       "ancestry": 8,
-      "armor": 12,
+      "armor": 26,
       "background": 8,
       "choice": 168,
       "class": 9,
       "class-feature": 99,
       "creature": 34,
-      "equipment": 28,
+      "equipment": 164,
       "feat": 195,
       "heritage": 40,
       "language": 10,
@@ -28,7 +28,7 @@
       "spell": 14,
       "spellcasting-progression": 3,
       "trait": 30,
-      "weapon": 40
+      "weapon": 64
     }
   },
   "errors": [],
@@ -658,6 +658,286 @@
       "path": [
         "Ausrüstung",
         "Tarnkleidung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-ahnenschild-harnisch",
+      "type": "armor",
+      "name": "Ahnenschild-Harnisch",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ahnenschild-Harnisch"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-chemieschicht-overall",
+      "type": "armor",
+      "name": "Chemieschicht-Overall",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Chemieschicht-Overall"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-datennebel-kapuze",
+      "type": "armor",
+      "name": "Datennebel-Kapuze",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Datennebel-Kapuze"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-gassenschicht",
+      "type": "armor",
+      "name": "Gassenschicht",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Gassenschicht"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-klinikschuerze",
+      "type": "armor",
+      "name": "Klinikschuerze",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Klinikschuerze"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-konzern-exoweste",
+      "type": "armor",
+      "name": "Konzern-Exoweste",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Konzern-Exoweste"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-kuriermantel-mit-faserlage",
+      "type": "armor",
+      "name": "Kuriermantel mit Faserlage",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kuriermantel mit Faserlage"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-nachtmarktjacke",
+      "type": "armor",
+      "name": "Nachtmarktjacke",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nachtmarktjacke"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-nullfeld-poncho",
+      "type": "armor",
+      "name": "Nullfeld-Poncho",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nullfeld-Poncho"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-schlackenschutz",
+      "type": "armor",
+      "name": "Schlackenschutz",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schlackenschutz"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-sondereinsatzplatte",
+      "type": "armor",
+      "name": "Sondereinsatzplatte",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Sondereinsatzplatte"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-u-bahn-riotweste",
+      "type": "armor",
+      "name": "U-Bahn-Riotweste",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "U-Bahn-Riotweste"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-verhandlungsanzug",
+      "type": "armor",
+      "name": "Verhandlungsanzug",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Verhandlungsanzug"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "armor.v012-werkstattpanzer",
+      "type": "armor",
+      "name": "Werkstattpanzer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.armor.light"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Werkstattpanzer"
       ],
       "detailDisplayable": true,
       "ruleEffect": "none",
@@ -9160,6 +9440,2744 @@
       "allowlisted": false
     },
     {
+      "id": "equipment.v012-adrenalsperre",
+      "type": "equipment",
+      "name": "Adrenalsperre",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Adrenalsperre"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-ahnenantenne",
+      "type": "equipment",
+      "name": "Ahnenantenne",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ahnenantenne"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-archivhandschuhe",
+      "type": "equipment",
+      "name": "Archivhandschuhe",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Archivhandschuhe"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-arkaner-navigationskern",
+      "type": "equipment",
+      "name": "Arkaner Navigationskern",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Arkaner Navigationskern"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-astralprisma",
+      "type": "equipment",
+      "name": "Astralprisma",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Astralprisma"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-bannkreide",
+      "type": "equipment",
+      "name": "Bannkreide",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Bannkreide"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-bannpapier",
+      "type": "equipment",
+      "name": "Bannpapier",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Bannpapier"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-bewegungsfaden",
+      "type": "equipment",
+      "name": "Bewegungsfaden",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Bewegungsfaden"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-biometrische-sicherung",
+      "type": "equipment",
+      "name": "Biometrische Sicherung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Biometrische Sicherung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-blendrauch",
+      "type": "equipment",
+      "name": "Blendrauch",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Blendrauch"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-blutmarker-kit",
+      "type": "equipment",
+      "name": "Blutmarker-Kit",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Blutmarker-Kit"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-dachkletterset",
+      "type": "equipment",
+      "name": "Dachkletterset",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Dachkletterset"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-datenbereinigung",
+      "type": "equipment",
+      "name": "Datenbereinigung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Datenbereinigung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-datenpinsel",
+      "type": "equipment",
+      "name": "Datenpinsel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Datenpinsel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-datenwurm-karte",
+      "type": "equipment",
+      "name": "Datenwurm-Karte",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Datenwurm-Karte"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-deckidentitaet",
+      "type": "equipment",
+      "name": "Deckidentitaet",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Deckidentitaet"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-dosenkocher",
+      "type": "equipment",
+      "name": "Dosenkocher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Dosenkocher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-drohnenhalterung",
+      "type": "equipment",
+      "name": "Drohnenhalterung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Drohnenhalterung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-drohnenpult",
+      "type": "equipment",
+      "name": "Drohnenpult",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Drohnenpult"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-drohnenregistrierung",
+      "type": "equipment",
+      "name": "Drohnenregistrierung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Drohnenregistrierung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-druckschluessel",
+      "type": "equipment",
+      "name": "Druckschluessel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Druckschluessel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-echospeicher",
+      "type": "equipment",
+      "name": "Echospeicher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Echospeicher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-einweg-wandsucher",
+      "type": "equipment",
+      "name": "Einweg-Wandsucher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Einweg-Wandsucher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-essenzampulle",
+      "type": "equipment",
+      "name": "Essenzampulle",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Essenzampulle"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-fahrzeugscanner",
+      "type": "equipment",
+      "name": "Fahrzeugscanner",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Fahrzeugscanner"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-falschbild-projektor",
+      "type": "equipment",
+      "name": "Falschbild-Projektor",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Falschbild-Projektor"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-falschsiegel-presse",
+      "type": "equipment",
+      "name": "Falschsiegel-Presse",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Falschsiegel-Presse"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-faltkolben",
+      "type": "equipment",
+      "name": "Faltkolben",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Faltkolben"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-farbnebel",
+      "type": "equipment",
+      "name": "Farbnebel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Farbnebel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-faserhaken-set",
+      "type": "equipment",
+      "name": "Faserhaken-Set",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Faserhaken-Set"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-feinwerkzeugrolle",
+      "type": "equipment",
+      "name": "Feinwerkzeugrolle",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Feinwerkzeugrolle"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-feldgenerator-pruefer",
+      "type": "equipment",
+      "name": "Feldgenerator-Pruefer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Feldgenerator-Pruefer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-fieberkapsel",
+      "type": "equipment",
+      "name": "Fieberkapsel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Fieberkapsel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-fluchfilter",
+      "type": "equipment",
+      "name": "Fluchfilter",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Fluchfilter"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-fluesterlauf",
+      "type": "equipment",
+      "name": "Fluesterlauf",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Fluesterlauf"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-funkcode-chip",
+      "type": "equipment",
+      "name": "Funkcode-Chip",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Funkcode-Chip"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-funkstille-kapsel",
+      "type": "equipment",
+      "name": "Funkstille-Kapsel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Funkstille-Kapsel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-geisterkoeder",
+      "type": "equipment",
+      "name": "Geisterkoeder",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Geisterkoeder"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-geisterkompass",
+      "type": "equipment",
+      "name": "Geisterkompass",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Geisterkompass"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-geistersiegel",
+      "type": "equipment",
+      "name": "Geistersiegel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Geistersiegel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-gepanzerter-kleintransporter",
+      "type": "equipment",
+      "name": "Gepanzerter Kleintransporter",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Gepanzerter Kleintransporter"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-hautfarbener-mantel",
+      "type": "equipment",
+      "name": "Hautfarbener Mantel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Hautfarbener Mantel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-hohlspitzladung",
+      "type": "equipment",
+      "name": "Hohlspitzladung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Hohlspitzladung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-implantat-wartungsvertrag",
+      "type": "equipment",
+      "name": "Implantat-Wartungsvertrag",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Implantat-Wartungsvertrag"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-implantatspuelung",
+      "type": "equipment",
+      "name": "Implantatspuelung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Implantatspuelung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kabelspinne",
+      "type": "equipment",
+      "name": "Kabelspinne",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kabelspinne"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kaltstart-deck",
+      "type": "equipment",
+      "name": "Kaltstart-Deck",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kaltstart-Deck"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kanalatlas",
+      "type": "equipment",
+      "name": "Kanalatlas",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kanalatlas"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kartenfalz",
+      "type": "equipment",
+      "name": "Kartenfalz",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kartenfalz"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kennzeichenleser",
+      "type": "equipment",
+      "name": "Kennzeichenleser",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kennzeichenleser"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kennzeichenwechsler",
+      "type": "equipment",
+      "name": "Kennzeichenwechsler",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kennzeichenwechsler"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-knochenleim",
+      "type": "equipment",
+      "name": "Knochenleim",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Knochenleim"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-knotenleser",
+      "type": "equipment",
+      "name": "Knotenleser",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Knotenleser"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kondensatorzelle",
+      "type": "equipment",
+      "name": "Kondensatorzelle",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kondensatorzelle"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-konzernbesucherpass",
+      "type": "equipment",
+      "name": "Konzernbesucherpass",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Konzernbesucherpass"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kreuzungsorakel",
+      "type": "equipment",
+      "name": "Kreuzungsorakel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kreuzungsorakel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kuehlkartusche",
+      "type": "equipment",
+      "name": "Kuehlkartusche",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kuehlkartusche"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-kurierkoffer",
+      "type": "equipment",
+      "name": "Kurierkoffer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kurierkoffer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-leiterplattenlupe",
+      "type": "equipment",
+      "name": "Leiterplattenlupe",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Leiterplattenlupe"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-leuchtspurmagazin",
+      "type": "equipment",
+      "name": "Leuchtspurmagazin",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Leuchtspurmagazin"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-lieferdrohne-brik",
+      "type": "equipment",
+      "name": "Lieferdrohne Brik",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Lieferdrohne Brik"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-linsenrecorder",
+      "type": "equipment",
+      "name": "Linsenrecorder",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Linsenrecorder"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-lotreparatur",
+      "type": "equipment",
+      "name": "Lotreparatur",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Lotreparatur"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-magnetisches-schmugglerfach",
+      "type": "equipment",
+      "name": "Magnetisches Schmugglerfach",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Magnetisches Schmugglerfach"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-medigel-ampulle",
+      "type": "equipment",
+      "name": "Medigel-Ampulle",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Medigel-Ampulle"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-mikrolotstation",
+      "type": "equipment",
+      "name": "Mikrolotstation",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Mikrolotstation"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-mobile-werkbank",
+      "type": "equipment",
+      "name": "Mobile Werkbank",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Mobile Werkbank"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-mondglaslinse",
+      "type": "equipment",
+      "name": "Mondglaslinse",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Mondglaslinse"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-nachtkurier-kombi",
+      "type": "equipment",
+      "name": "Nachtkurier-Kombi",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nachtkurier-Kombi"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-nachtmarktvermittlung",
+      "type": "equipment",
+      "name": "Nachtmarktvermittlung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nachtmarktvermittlung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-nachtsichtclip",
+      "type": "equipment",
+      "name": "Nachtsichtclip",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nachtsichtclip"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-nanofaden-klammer",
+      "type": "equipment",
+      "name": "Nanofaden-Klammer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nanofaden-Klammer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-nervenkuehler",
+      "type": "equipment",
+      "name": "Nervenkuehler",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nervenkuehler"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-netznebel-sender",
+      "type": "equipment",
+      "name": "Netznebel-Sender",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Netznebel-Sender"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-netzwerfer-unterlauf",
+      "type": "equipment",
+      "name": "Netzwerfer-Unterlauf",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Netzwerfer-Unterlauf"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-notfallklinikkonto",
+      "type": "equipment",
+      "name": "Notfallklinikkonto",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Notfallklinikkonto"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-notfallseil",
+      "type": "equipment",
+      "name": "Notfallseil",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Notfallseil"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-notfalltragetuch",
+      "type": "equipment",
+      "name": "Notfalltragetuch",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Notfalltragetuch"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-notstromriegel",
+      "type": "equipment",
+      "name": "Notstromriegel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Notstromriegel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-omenrelais",
+      "type": "equipment",
+      "name": "Omenrelais",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Omenrelais"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-panzerbrecherpatrone",
+      "type": "equipment",
+      "name": "Panzerbrecherpatrone",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Panzerbrecherpatrone"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-prisma-zieloptik",
+      "type": "equipment",
+      "name": "Prisma-Zieloptik",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Prisma-Zieloptik"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-probenversiegler",
+      "type": "equipment",
+      "name": "Probenversiegler",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Probenversiegler"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-pulsleser",
+      "type": "equipment",
+      "name": "Pulsleser",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Pulsleser"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-quarantanespeicher",
+      "type": "equipment",
+      "name": "Quarantanespeicher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Quarantanespeicher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-regenmantelpackung",
+      "type": "equipment",
+      "name": "Regenmantelpackung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Regenmantelpackung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-richtmikrofon",
+      "type": "equipment",
+      "name": "Richtmikrofon",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Richtmikrofon"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-ritualbereitschaft",
+      "type": "equipment",
+      "name": "Ritualbereitschaft",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ritualbereitschaft"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-ritualfaden",
+      "type": "equipment",
+      "name": "Ritualfaden",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ritualfaden"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-ritualsalz",
+      "type": "equipment",
+      "name": "Ritualsalz",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ritualsalz"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-ritualtaktgeber",
+      "type": "equipment",
+      "name": "Ritualtaktgeber",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ritualtaktgeber"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-rohrkamera",
+      "type": "equipment",
+      "name": "Rohrkamera",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Rohrkamera"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-rueckstossgriff",
+      "type": "equipment",
+      "name": "Rueckstossgriff",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Rueckstossgriff"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-runenakku",
+      "type": "equipment",
+      "name": "Runenakku",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Runenakku"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-runenfassung",
+      "type": "equipment",
+      "name": "Runenfassung",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Runenfassung"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schalldaempfer",
+      "type": "equipment",
+      "name": "Schalldaempfer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schalldaempfer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schattenanker",
+      "type": "equipment",
+      "name": "Schattenanker",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schattenanker"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schattenlaterne",
+      "type": "equipment",
+      "name": "Schattenlaterne",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schattenlaterne"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schleiermaske",
+      "type": "equipment",
+      "name": "Schleiermaske",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schleiermaske"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schlosslauscher",
+      "type": "equipment",
+      "name": "Schlosslauscher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schlosslauscher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schluesselklon-scanner",
+      "type": "equipment",
+      "name": "Schluesselklon-Scanner",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schluesselklon-Scanner"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schmugglerwaage",
+      "type": "equipment",
+      "name": "Schmugglerwaage",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schmugglerwaage"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schrotadapter",
+      "type": "equipment",
+      "name": "Schrotadapter",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schrotadapter"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schutzglyphenband",
+      "type": "equipment",
+      "name": "Schutzglyphenband",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schutzglyphenband"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-schutzmaskenkit",
+      "type": "equipment",
+      "name": "Schutzmaskenkit",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schutzmaskenkit"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-seelenfaden",
+      "type": "equipment",
+      "name": "Seelenfaden",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Seelenfaden"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-sicheres-schlafabteil",
+      "type": "equipment",
+      "name": "Sicheres Schlafabteil",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Sicheres Schlafabteil"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-sicherheitskreide",
+      "type": "equipment",
+      "name": "Sicherheitskreide",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Sicherheitskreide"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-siegelprojektor",
+      "type": "equipment",
+      "name": "Siegelprojektor",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Siegelprojektor"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-signalkaefer",
+      "type": "equipment",
+      "name": "Signalkaefer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Signalkaefer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-smart-link-buegel",
+      "type": "equipment",
+      "name": "Smart-Link-Buegel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Smart-Link-Buegel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-sperrschaum",
+      "type": "equipment",
+      "name": "Sperrschaum",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Sperrschaum"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-spiegellinse",
+      "type": "equipment",
+      "name": "Spiegellinse",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Spiegellinse"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-spurblocker",
+      "type": "equipment",
+      "name": "Spurblocker",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Spurblocker"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-spurenspiegel",
+      "type": "equipment",
+      "name": "Spurenspiegel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Spurenspiegel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-stadtmoped-kestrel",
+      "type": "equipment",
+      "name": "Stadtmoped Kestrel",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Stadtmoped Kestrel"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-stadtwaffenlizenz",
+      "type": "equipment",
+      "name": "Stadtwaffenlizenz",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Stadtwaffenlizenz"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-stimulanzstreifen",
+      "type": "equipment",
+      "name": "Stimulanzstreifen",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Stimulanzstreifen"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-stoerimpuls-modul",
+      "type": "equipment",
+      "name": "Stoerimpuls-Modul",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Stoerimpuls-Modul"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-stoerstaub",
+      "type": "equipment",
+      "name": "Stoerstaub",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Stoerstaub"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-stromlinien-tracker",
+      "type": "equipment",
+      "name": "Stromlinien-Tracker",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Stromlinien-Tracker"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-synthhaut-patch",
+      "type": "equipment",
+      "name": "Synthhaut-Patch",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Synthhaut-Patch"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-taschenmesh",
+      "type": "equipment",
+      "name": "Taschenmesh",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Taschenmesh"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-taschenwerkbank",
+      "type": "equipment",
+      "name": "Taschenwerkbank",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Taschenwerkbank"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-tatortstaub",
+      "type": "equipment",
+      "name": "Tatortstaub",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Tatortstaub"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-thermalsucher",
+      "type": "equipment",
+      "name": "Thermalsucher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Thermalsucher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-toxinschwamm",
+      "type": "equipment",
+      "name": "Toxinschwamm",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Toxinschwamm"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-tragetrage",
+      "type": "equipment",
+      "name": "Tragetrage",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Tragetrage"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-traumapflaster",
+      "type": "equipment",
+      "name": "Traumapflaster",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Traumapflaster"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-traumarchiv",
+      "type": "equipment",
+      "name": "Traumarchiv",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Traumarchiv"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-trommelmagazin",
+      "type": "equipment",
+      "name": "Trommelmagazin",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Trommelmagazin"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-wahrheitsraucher",
+      "type": "equipment",
+      "name": "Wahrheitsraucher",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Wahrheitsraucher"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-wandradar",
+      "type": "equipment",
+      "name": "Wandradar",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology",
+        "trait.item.traceable"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Wandradar"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-wartungsset",
+      "type": "equipment",
+      "name": "Wartungsset",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Wartungsset"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-wasserfilter",
+      "type": "equipment",
+      "name": "Wasserfilter",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.technology"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Wasserfilter"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "equipment.v012-wegzeichen-muenze",
+      "type": "equipment",
+      "name": "Wegzeichen-Muenze",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.equipment.magic"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Wegzeichen-Muenze"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
       "id": "equipment.zauberstab",
       "type": "equipment",
       "name": "Zauberstab",
@@ -16404,7 +19422,21 @@
         "armor.leder",
         "armor.moderne-kleidung",
         "armor.stoff",
-        "armor.tarnkleidung"
+        "armor.tarnkleidung",
+        "armor.v012-ahnenschild-harnisch",
+        "armor.v012-chemieschicht-overall",
+        "armor.v012-datennebel-kapuze",
+        "armor.v012-gassenschicht",
+        "armor.v012-klinikschuerze",
+        "armor.v012-konzern-exoweste",
+        "armor.v012-kuriermantel-mit-faserlage",
+        "armor.v012-nachtmarktjacke",
+        "armor.v012-nullfeld-poncho",
+        "armor.v012-schlackenschutz",
+        "armor.v012-sondereinsatzplatte",
+        "armor.v012-u-bahn-riotweste",
+        "armor.v012-verhandlungsanzug",
+        "armor.v012-werkstattpanzer"
       ],
       "reachable": true,
       "path": [
@@ -16512,6 +19544,26 @@
         "equipment.metalle",
         "equipment.organische-materialien",
         "equipment.ritualkreis",
+        "equipment.v012-ahnenantenne",
+        "equipment.v012-astralprisma",
+        "equipment.v012-bannkreide",
+        "equipment.v012-echospeicher",
+        "equipment.v012-essenzampulle",
+        "equipment.v012-fluchfilter",
+        "equipment.v012-geisterkompass",
+        "equipment.v012-kreuzungsorakel",
+        "equipment.v012-mondglaslinse",
+        "equipment.v012-omenrelais",
+        "equipment.v012-ritualtaktgeber",
+        "equipment.v012-runenakku",
+        "equipment.v012-schattenanker",
+        "equipment.v012-schleiermaske",
+        "equipment.v012-schutzglyphenband",
+        "equipment.v012-seelenfaden",
+        "equipment.v012-siegelprojektor",
+        "equipment.v012-traumarchiv",
+        "equipment.v012-wahrheitsraucher",
+        "equipment.v012-wegzeichen-muenze",
         "equipment.zauberstab"
       ],
       "reachable": true,
@@ -16544,7 +19596,123 @@
         "equipment.scanner",
         "equipment.sensor",
         "equipment.tablet",
-        "equipment.telefon"
+        "equipment.telefon",
+        "equipment.v012-adrenalsperre",
+        "equipment.v012-archivhandschuhe",
+        "equipment.v012-arkaner-navigationskern",
+        "equipment.v012-bannpapier",
+        "equipment.v012-bewegungsfaden",
+        "equipment.v012-biometrische-sicherung",
+        "equipment.v012-blendrauch",
+        "equipment.v012-blutmarker-kit",
+        "equipment.v012-dachkletterset",
+        "equipment.v012-datenbereinigung",
+        "equipment.v012-datenpinsel",
+        "equipment.v012-datenwurm-karte",
+        "equipment.v012-deckidentitaet",
+        "equipment.v012-dosenkocher",
+        "equipment.v012-drohnenhalterung",
+        "equipment.v012-drohnenpult",
+        "equipment.v012-drohnenregistrierung",
+        "equipment.v012-druckschluessel",
+        "equipment.v012-einweg-wandsucher",
+        "equipment.v012-fahrzeugscanner",
+        "equipment.v012-falschbild-projektor",
+        "equipment.v012-falschsiegel-presse",
+        "equipment.v012-faltkolben",
+        "equipment.v012-farbnebel",
+        "equipment.v012-faserhaken-set",
+        "equipment.v012-feinwerkzeugrolle",
+        "equipment.v012-feldgenerator-pruefer",
+        "equipment.v012-fieberkapsel",
+        "equipment.v012-fluesterlauf",
+        "equipment.v012-funkcode-chip",
+        "equipment.v012-funkstille-kapsel",
+        "equipment.v012-geisterkoeder",
+        "equipment.v012-geistersiegel",
+        "equipment.v012-gepanzerter-kleintransporter",
+        "equipment.v012-hautfarbener-mantel",
+        "equipment.v012-hohlspitzladung",
+        "equipment.v012-implantat-wartungsvertrag",
+        "equipment.v012-implantatspuelung",
+        "equipment.v012-kabelspinne",
+        "equipment.v012-kaltstart-deck",
+        "equipment.v012-kanalatlas",
+        "equipment.v012-kartenfalz",
+        "equipment.v012-kennzeichenleser",
+        "equipment.v012-kennzeichenwechsler",
+        "equipment.v012-knochenleim",
+        "equipment.v012-knotenleser",
+        "equipment.v012-kondensatorzelle",
+        "equipment.v012-konzernbesucherpass",
+        "equipment.v012-kuehlkartusche",
+        "equipment.v012-kurierkoffer",
+        "equipment.v012-leiterplattenlupe",
+        "equipment.v012-leuchtspurmagazin",
+        "equipment.v012-lieferdrohne-brik",
+        "equipment.v012-linsenrecorder",
+        "equipment.v012-lotreparatur",
+        "equipment.v012-magnetisches-schmugglerfach",
+        "equipment.v012-medigel-ampulle",
+        "equipment.v012-mikrolotstation",
+        "equipment.v012-mobile-werkbank",
+        "equipment.v012-nachtkurier-kombi",
+        "equipment.v012-nachtmarktvermittlung",
+        "equipment.v012-nachtsichtclip",
+        "equipment.v012-nanofaden-klammer",
+        "equipment.v012-nervenkuehler",
+        "equipment.v012-netznebel-sender",
+        "equipment.v012-netzwerfer-unterlauf",
+        "equipment.v012-notfallklinikkonto",
+        "equipment.v012-notfallseil",
+        "equipment.v012-notfalltragetuch",
+        "equipment.v012-notstromriegel",
+        "equipment.v012-panzerbrecherpatrone",
+        "equipment.v012-prisma-zieloptik",
+        "equipment.v012-probenversiegler",
+        "equipment.v012-pulsleser",
+        "equipment.v012-quarantanespeicher",
+        "equipment.v012-regenmantelpackung",
+        "equipment.v012-richtmikrofon",
+        "equipment.v012-ritualbereitschaft",
+        "equipment.v012-ritualfaden",
+        "equipment.v012-ritualsalz",
+        "equipment.v012-rohrkamera",
+        "equipment.v012-rueckstossgriff",
+        "equipment.v012-runenfassung",
+        "equipment.v012-schalldaempfer",
+        "equipment.v012-schattenlaterne",
+        "equipment.v012-schlosslauscher",
+        "equipment.v012-schluesselklon-scanner",
+        "equipment.v012-schmugglerwaage",
+        "equipment.v012-schrotadapter",
+        "equipment.v012-schutzmaskenkit",
+        "equipment.v012-sicheres-schlafabteil",
+        "equipment.v012-sicherheitskreide",
+        "equipment.v012-signalkaefer",
+        "equipment.v012-smart-link-buegel",
+        "equipment.v012-sperrschaum",
+        "equipment.v012-spiegellinse",
+        "equipment.v012-spurblocker",
+        "equipment.v012-spurenspiegel",
+        "equipment.v012-stadtmoped-kestrel",
+        "equipment.v012-stadtwaffenlizenz",
+        "equipment.v012-stimulanzstreifen",
+        "equipment.v012-stoerimpuls-modul",
+        "equipment.v012-stoerstaub",
+        "equipment.v012-stromlinien-tracker",
+        "equipment.v012-synthhaut-patch",
+        "equipment.v012-taschenmesh",
+        "equipment.v012-taschenwerkbank",
+        "equipment.v012-tatortstaub",
+        "equipment.v012-thermalsucher",
+        "equipment.v012-toxinschwamm",
+        "equipment.v012-tragetrage",
+        "equipment.v012-traumapflaster",
+        "equipment.v012-trommelmagazin",
+        "equipment.v012-wandradar",
+        "equipment.v012-wartungsset",
+        "equipment.v012-wasserfilter"
       ],
       "reachable": true,
       "path": [
@@ -16591,7 +19759,25 @@
       "referencedBy": [
         "equipment.kamera",
         "equipment.mikrofon",
-        "equipment.telefon"
+        "equipment.telefon",
+        "equipment.v012-bewegungsfaden",
+        "equipment.v012-drohnenpult",
+        "equipment.v012-falschbild-projektor",
+        "equipment.v012-funkstille-kapsel",
+        "equipment.v012-kaltstart-deck",
+        "equipment.v012-kennzeichenleser",
+        "equipment.v012-linsenrecorder",
+        "equipment.v012-nachtsichtclip",
+        "equipment.v012-netznebel-sender",
+        "equipment.v012-quarantanespeicher",
+        "equipment.v012-richtmikrofon",
+        "equipment.v012-schluesselklon-scanner",
+        "equipment.v012-signalkaefer",
+        "equipment.v012-spiegellinse",
+        "equipment.v012-spurblocker",
+        "equipment.v012-stromlinien-tracker",
+        "equipment.v012-taschenmesh",
+        "equipment.v012-wandradar"
       ],
       "reachable": true,
       "path": [
@@ -16656,6 +19842,19 @@
         "weapon.pistole",
         "weapon.revolver",
         "weapon.schrotflinte",
+        "weapon.v012-drohnengewehr",
+        "weapon.v012-echorufbogen",
+        "weapon.v012-faltkarabiner",
+        "weapon.v012-funkenmachete",
+        "weapon.v012-glasarmbrust",
+        "weapon.v012-hafenschrotflinte",
+        "weapon.v012-kurierwurfstern",
+        "weapon.v012-nadelpistole",
+        "weapon.v012-phasenwerfer",
+        "weapon.v012-schallpistole",
+        "weapon.v012-schrottwerfer",
+        "weapon.v012-signalrevolver",
+        "weapon.v012-wachturmgewehr",
         "weapon.wurfmesser"
       ],
       "reachable": true,
@@ -16707,6 +19906,17 @@
         "weapon.schwert",
         "weapon.seelenfanger",
         "weapon.speer",
+        "weapon.v012-aschekatana",
+        "weapon.v012-gassenklinge",
+        "weapon.v012-industriehammer",
+        "weapon.v012-knochenlanze",
+        "weapon.v012-monofilamentpeitsche",
+        "weapon.v012-ritualspeer",
+        "weapon.v012-runenbeil",
+        "weapon.v012-schleierdolch",
+        "weapon.v012-schockfaust",
+        "weapon.v012-spiegelklinge",
+        "weapon.v012-teleskopstab",
         "weapon.vibro-klinge",
         "weapon.zweihandaxt",
         "weapon.zweihandschwert"
@@ -17123,6 +20333,17 @@
         "weapon.schwert",
         "weapon.seelenfanger",
         "weapon.speer",
+        "weapon.v012-aschekatana",
+        "weapon.v012-gassenklinge",
+        "weapon.v012-industriehammer",
+        "weapon.v012-knochenlanze",
+        "weapon.v012-monofilamentpeitsche",
+        "weapon.v012-ritualspeer",
+        "weapon.v012-runenbeil",
+        "weapon.v012-schleierdolch",
+        "weapon.v012-schockfaust",
+        "weapon.v012-spiegelklinge",
+        "weapon.v012-teleskopstab",
         "weapon.vibro-klinge",
         "weapon.zweihandaxt",
         "weapon.zweihandschwert"
@@ -17171,6 +20392,19 @@
         "weapon.pistole",
         "weapon.revolver",
         "weapon.schrotflinte",
+        "weapon.v012-drohnengewehr",
+        "weapon.v012-echorufbogen",
+        "weapon.v012-faltkarabiner",
+        "weapon.v012-funkenmachete",
+        "weapon.v012-glasarmbrust",
+        "weapon.v012-hafenschrotflinte",
+        "weapon.v012-kurierwurfstern",
+        "weapon.v012-nadelpistole",
+        "weapon.v012-phasenwerfer",
+        "weapon.v012-schallpistole",
+        "weapon.v012-schrottwerfer",
+        "weapon.v012-signalrevolver",
+        "weapon.v012-wachturmgewehr",
         "weapon.wurfmesser"
       ],
       "reachable": true,
@@ -17980,6 +21214,510 @@
       "path": [
         "Ausrüstung",
         "Speer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-aschekatana",
+      "type": "weapon",
+      "name": "Aschekatana",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Aschekatana"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-drohnengewehr",
+      "type": "weapon",
+      "name": "Drohnengewehr",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Drohnengewehr"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-echorufbogen",
+      "type": "weapon",
+      "name": "Echorufbogen",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Echorufbogen"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-faltkarabiner",
+      "type": "weapon",
+      "name": "Faltkarabiner",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Faltkarabiner"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-funkenmachete",
+      "type": "weapon",
+      "name": "Funkenmachete",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Funkenmachete"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-gassenklinge",
+      "type": "weapon",
+      "name": "Gassenklinge",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Gassenklinge"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-glasarmbrust",
+      "type": "weapon",
+      "name": "Glasarmbrust",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Glasarmbrust"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-hafenschrotflinte",
+      "type": "weapon",
+      "name": "Hafenschrotflinte",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Hafenschrotflinte"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-industriehammer",
+      "type": "weapon",
+      "name": "Industriehammer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Industriehammer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-knochenlanze",
+      "type": "weapon",
+      "name": "Knochenlanze",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Knochenlanze"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-kurierwurfstern",
+      "type": "weapon",
+      "name": "Kurierwurfstern",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Kurierwurfstern"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-monofilamentpeitsche",
+      "type": "weapon",
+      "name": "Monofilamentpeitsche",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Monofilamentpeitsche"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-nadelpistole",
+      "type": "weapon",
+      "name": "Nadelpistole",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Nadelpistole"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-phasenwerfer",
+      "type": "weapon",
+      "name": "Phasenwerfer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Phasenwerfer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-ritualspeer",
+      "type": "weapon",
+      "name": "Ritualspeer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Ritualspeer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-runenbeil",
+      "type": "weapon",
+      "name": "Runenbeil",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Runenbeil"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-schallpistole",
+      "type": "weapon",
+      "name": "Schallpistole",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schallpistole"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-schleierdolch",
+      "type": "weapon",
+      "name": "Schleierdolch",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schleierdolch"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-schockfaust",
+      "type": "weapon",
+      "name": "Schockfaust",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schockfaust"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-schrottwerfer",
+      "type": "weapon",
+      "name": "Schrottwerfer",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Schrottwerfer"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-signalrevolver",
+      "type": "weapon",
+      "name": "Signalrevolver",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Signalrevolver"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-spiegelklinge",
+      "type": "weapon",
+      "name": "Spiegelklinge",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Spiegelklinge"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-teleskopstab",
+      "type": "weapon",
+      "name": "Teleskopstab",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.simple",
+        "trait.weapon-group.blade"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Teleskopstab"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "weapon.v012-wachturmgewehr",
+      "type": "weapon",
+      "name": "Wachturmgewehr",
+      "source": "sotc.v0.1.2",
+      "contentStatus": "canonical",
+      "status": "selectable",
+      "references": [
+        "trait.item.weapon.ranged",
+        "trait.weapon-group.projectile"
+      ],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Ausrüstung",
+        "Wachturmgewehr"
       ],
       "detailDisplayable": true,
       "ruleEffect": "none",

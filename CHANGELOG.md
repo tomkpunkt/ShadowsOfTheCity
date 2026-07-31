@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.2 - 2026-07-31
+
+### Hinzugefuegt
+
+- 174 neue, voll klassifizierte Gegenstaende fuer Waffen, Modifikationen,
+  Schutz, Werkzeuge, Elektronik, Medizin, Arkanotechnik, Verbrauch,
+  Fahrzeuge und staedtische Zugaenge
+- verbindlicher Einzelplan sowie Luecken- und Balanceanalyse fuer die
+  Content-Erweiterung
+
+### Geaendert
+
+- der Katalog waechst von 737 auf 911 Runtime-Entitaeten und nutzt
+  ausschliesslich bestehende Content-Schemas und UI-Pfade
+
+### Bekannte Einschraenkungen
+
+- Waffenmodifikationen und Verbrauchsdauern werden sichtbar beschrieben; das
+  bestehende Datenmodell besitzt dafuer keine automatische Slot- oder
+  Zeitverwaltung.
+
 Alle wesentlichen Änderungen dieses Projekts werden hier dokumentiert.
 
 ## 0.1.1 - 2026-07-31

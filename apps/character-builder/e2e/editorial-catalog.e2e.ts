@@ -28,7 +28,7 @@ test("shows arkanotechnical items with localized labels", async ({ page }) => {
 
 test("groups weapons by subcategory with stable counts", async ({ page }) => {
   await openStep(page, "equipment");
-  await page.getByRole("button", { name: "Waffen" }).click();
+  await page.getByRole("button", { name: "Waffen", exact: true }).click();
   await page.getByLabel("Gruppierung").selectOption("subcategory");
 
   await expect(page.locator('[data-subcategory="firearm"] > header')).toContainText("Schusswaffe");

@@ -155,3 +155,17 @@ describe("compiled content regression characters", () => {
     }
   );
 });
+
+describe("v0.1.2 equipment catalog", () => {
+  it("contains the complete reviewed content expansion", () => {
+    const additions = catalog.entities.filter((entity) => entity.id.includes(".v012-"));
+
+    expect(additions).toHaveLength(174);
+    expect(additions.every((entity) => entity.status === "canonical")).toBe(true);
+    expect(additions.every((entity) => entity.editorialStatus === "reviewed")).toBe(true);
+    expect(additions.every((entity) => "technologyLevel" in entity)).toBe(true);
+    expect(entities.get("weapon.v012-gassenklinge")?.type).toBe("weapon");
+    expect(entities.get("armor.v012-kuriermantel-mit-faserlage")?.type).toBe("armor");
+    expect(entities.get("equipment.v012-stadtwaffenlizenz")?.type).toBe("equipment");
+  });
+});

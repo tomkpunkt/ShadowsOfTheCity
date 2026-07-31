@@ -832,3 +832,13 @@ Status: `complete`
 - 104 Unit-/Integrationstests und 21 E2E-Szenarien erfolgreich
 - Abschlussbericht:
   `docs/review/11-v0.1.1-final-verification.md`
+
+## Masterauftrag: Content-Erweiterung 0.1.2
+
+| Phase | Status | Geaenderte Dateien | Neue Entitaeten | Pruefungen | Blocker |
+|:--|:--|:--|--:|:--|:--|
+| 0 - Analyse | complete | `docs/review/12-v0.1.2-content-gap-analysis.md` | 0 | Katalog- und Schema-Inventar | keine |
+| 1 - Plan | complete | `docs/content/v0.1.2-content-plan.md` | 174 geplant | Einzelplanabgleich | keine |
+| 2 bis 14 - Content | complete | `content/v0.1.2/` | 174 | Contentvalidierung, Editorial- und Klassifikationsaudit | keine |
+| 15 - Balance | complete | `docs/review/13-v0.1.2-equipment-balance.md` | 0 | Preis-, Last- und Zugangsvergleich | keine |
+| 16 bis 20 - Integration und Release | complete | Versionen, Tests, Release- und Abschlussbericht | 0 | `npm run verify`, Release-Build und -Verify | keine |

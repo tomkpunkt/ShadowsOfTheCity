@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "0a4d85905617f2a12ff8a4a141fb099410f2910ee4f5c0e6fc992a8698df3c4b",
+  "catalogHash": "9139d813135415b87094bad463b8347a4929d823c40e5f1ebaac779b2cec05a5",
   "summary": {
-    "entities": 737,
+    "entities": 911,
     "byType": {
       "ancestry": 8,
-      "armor": 12,
+      "armor": 26,
       "background": 8,
       "choice": 168,
       "class": 9,
       "class-feature": 99,
       "creature": 34,
-      "equipment": 28,
+      "equipment": 164,
       "feat": 195,
       "heritage": 40,
       "language": 10,
@@ -21,9 +21,9 @@
       "spell": 14,
       "spellcasting-progression": 3,
       "trait": 30,
-      "weapon": 40
+      "weapon": 64
     },
-    "completeDescriptions": 737,
+    "completeDescriptions": 911,
     "emptyDescriptions": 0,
     "shortDescriptions": 42,
     "suspiciousLabels": 0,
@@ -39,8 +39,8 @@
       "internalReferences": 0,
       "embeddedHtml": 7
     },
-    "catalogFields": 75,
-    "fieldsPreviouslyInvisibleInUi": 65,
+    "catalogFields": 76,
+    "fieldsPreviouslyInvisibleInUi": 66,
     "findings": 0,
     "severityCounts": {},
     "blockingFindings": 0
@@ -55,6 +55,7 @@
     "availability",
     "boosts",
     "bulk",
+    "capacity",
     "castingAttribute",
     "category",
     "categoryId",

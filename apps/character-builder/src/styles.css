@@ -1779,7 +1779,6 @@ code {
   .segmented-control {
     overflow-x: auto;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -1850,7 +1849,6 @@ code {
   .section-heading {
     align-items: flex-start;
   }
-
 }
 
 .play-sheet {
@@ -3544,6 +3542,17 @@ code {
   .print-note {
     margin-bottom: 2.5mm;
     break-inside: avoid;
+  }
+
+  .print-writing-lines {
+    display: grid;
+    gap: 7mm;
+    padding-top: 3mm;
+  }
+
+  .print-writing-lines span {
+    display: block;
+    border-bottom: 0.5pt solid #aaaaaa;
   }
 
   .print-statblock {

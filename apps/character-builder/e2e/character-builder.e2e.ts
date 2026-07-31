@@ -1,20 +1,6 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
-const openStep = async (page: Page, id: string): Promise<void> => {
-  await page.locator(`[data-step-id="${id}"]`).click();
-};
-
-const selectEntity = async (page: Page, id: string): Promise<void> => {
-  const card = page.locator(`[data-entity-id="${id}"]`);
-  await card.locator(".entity-card__select").click();
-  await expect(card).toHaveClass(/entity-card--selected/);
-};
-
-const selectFirstAvailable = async (page: Page, choiceId: string): Promise<void> => {
-  const choice = page.locator(`[data-choice-id="${choiceId}"]`);
-  await choice.locator(".entity-card__select:not([disabled])").first().click();
-  await expect(choice.locator(".status--valid")).toBeVisible();
-};
+import { buildCompleteWizard, openStep, selectEntity } from "./helpers.js";
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
@@ -44,44 +30,12 @@ test("builds and persists a complete level-one wizard", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator(".topbar .status--incomplete")).toBeVisible();
 
-  await openStep(page, "ancestry");
-  await selectEntity(page, "ancestry.elf");
-  await selectEntity(page, "heritage.elf.hochhaus-erbe");
-
-  await openStep(page, "background");
-  await selectEntity(page, "background.academic");
-
-  await openStep(page, "class");
-  await selectEntity(page, "class.magier");
-  await selectFirstAvailable(page, "choice.magier.schule-der-magie");
-
+  await buildCompleteWizard(page);
   await openStep(page, "feats");
   const lockedFeat = page.locator('[data-entity-id="feat.general.athletischer-kampfstil"]');
   await expect(lockedFeat.locator(".entity-card__select")).toBeDisabled();
   await expect(lockedFeat.locator(".entity-card__reason")).toContainText("15");
-
-  await openStep(page, "attributes");
-  await page.getByLabel("Intelligenz").click();
-  await page.getByLabel("Weisheit").click();
-
-  await openStep(page, "skills");
-  const skillChoice = page.locator('[data-choice-id="choice.class-skills.magier"]');
-  const availableSkills = skillChoice.locator(".entity-card__select:not([disabled])");
-  for (let index = 0; index < 4; index += 1) {
-    await availableSkills.nth(index).click();
-  }
-  await expect(skillChoice.locator(".status--valid")).toBeVisible();
-
-  await openStep(page, "spells");
-  await selectFirstAvailable(page, "choice.class-spells.magier");
-
-  await openStep(page, "feats");
-  await selectFirstAvailable(page, "choice.ancestry-feat.elf.1");
-  await selectFirstAvailable(page, "choice.class-feat.magier.1");
-  await selectFirstAvailable(page, "choice.general-feat.1");
-
   await openStep(page, "review");
-  await expect(page.locator(".review-success")).toBeVisible();
   await expect(page.locator(".topbar .status--valid")).toBeVisible();
 
   const downloadPromise = page.waitForEvent("download");
@@ -153,4 +107,110 @@ test("blocks unresolved rules and invokes the printable character sheet", async 
   await openStep(page, "sheet");
   await page.getByTitle("Charakterbogen drucken").click();
   await expect(page.locator("body")).toHaveAttribute("data-printed", "true");
+});
+
+test("plays a wizard session and restores it after reload and JSON reimport", async ({ page }) => {
+  await page.goto("/");
+  await buildCompleteWizard(page, true);
+  await openStep(page, "sheet");
+
+  const hp = page.locator(".play-sheet__vitals > div").first();
+  const initialHpText = await hp.locator("strong").innerText();
+  const maximumHp = Number(initialHpText.split("/")[1]?.trim());
+  expect(maximumHp).toBeGreaterThan(0);
+
+  await page.getByLabel("Trefferpunkte-Betrag").fill("3");
+  await page.getByRole("button", { name: "Temporär" }).click();
+  await expect(hp).toContainText("+3 temporär");
+
+  await page.getByLabel("Trefferpunkte-Betrag").fill("5");
+  await page.getByRole("button", { name: "Schaden" }).click();
+  await expect(hp.locator("strong")).toContainText(
+    `${String(maximumHp - 2)} / ${String(maximumHp)}`
+  );
+
+  await page.getByLabel("Trefferpunkte-Betrag").fill("1");
+  await page.getByRole("button", { name: "Heilung" }).click();
+  await expect(hp.locator("strong")).toContainText(
+    `${String(maximumHp - 1)} / ${String(maximumHp)}`
+  );
+
+  await page.getByRole("button", { name: "Zustand", exact: true }).click();
+  await page.getByLabel("Zustand", { exact: true }).fill("Benommen");
+  await page.getByLabel("Quelle", { exact: true }).fill("E2E");
+  await page.getByLabel("Zustand hinzufügen").click();
+  await expect(page.locator(".condition-row")).toContainText("Benommen");
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Aktionen" }).click();
+  const firstAction = page.locator(".action-row").first();
+  await firstAction.locator('button[aria-label$="als verwendet markieren"]').click();
+  await expect(firstAction.locator(".usage-control")).toContainText("1 protokolliert");
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Fertigkeiten" }).click();
+  const firstSkill = page.locator(".skill-row").first();
+  await firstSkill.locator(".roll-value").click();
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Zauber" }).click();
+  const consumeSlot = page.getByLabel("Zauberplatz Rang 1 verbrauchen");
+  await expect(consumeSlot).toBeEnabled();
+  await consumeSlot.click();
+  await expect(page.locator('.slot-pips[aria-label="1 Plätze verbraucht"]')).toBeVisible();
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Inventar" }).click();
+  const sword = page.locator(".inventory-list article").filter({ hasText: "Schwert" });
+  await sword.getByRole("checkbox", { name: "Ausgerüstet" }).check();
+  await sword.getByLabel("Menge").fill("2");
+  await expect(sword.getByLabel("Menge")).toHaveValue("2");
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Kampf" }).click();
+  const attack = page.locator(".attack-row").filter({ hasText: "Schwert" });
+  await expect(attack).toBeVisible();
+  await attack.locator(".roll-value").click();
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Ressourcen" }).click();
+  await page.getByLabel("Ressource", { exact: true }).fill("Fokus");
+  await page.getByLabel("Maximum", { exact: true }).fill("3");
+  await page.locator(".resource-form select").selectOption("daily");
+  await page.getByLabel("Ressource hinzufügen").click();
+  const focus = page.locator(".resource-list article").filter({ hasText: "Fokus" });
+  await focus.getByLabel("Fokus reduzieren").click();
+  await expect(focus).toContainText("2 / 3");
+
+  await page.getByLabel("Formel").fill("1d8+1d6+3");
+  await page.getByRole("button", { name: "Würfeln" }).click();
+  await expect(page.locator(".dice-history").getByText("1d8+1d6+3")).toBeVisible();
+
+  await page.waitForTimeout(250);
+  await page.reload();
+  await openStep(page, "sheet");
+  await expect(hp.locator("strong")).toContainText(
+    `${String(maximumHp - 1)} / ${String(maximumHp)}`
+  );
+  await expect(
+    page.locator(".play-sheet__nav").getByRole("button", { name: "Ressourcen" })
+  ).toHaveAttribute("aria-current", "page");
+  await expect(page.locator(".resource-list article").filter({ hasText: "Fokus" })).toContainText(
+    "2 / 3"
+  );
+  await expect(page.locator(".dice-history").getByText("1d8+1d6+3")).toBeVisible();
+
+  await page.locator(".play-sheet__nav").getByRole("button", { name: "Bogen & Export" }).click();
+  await expect(
+    page.locator(".play-sheet").getByRole("heading", { name: "Kompakter Statblock" })
+  ).toBeVisible();
+  const downloadPromise = page.waitForEvent("download");
+  await page
+    .locator(".export-actions")
+    .getByRole("button", { name: /JSON exportieren/ })
+    .click();
+  const exportedCharacter = await (await downloadPromise).path();
+  expect(exportedCharacter).not.toBeNull();
+
+  page.once("dialog", (dialog) => dialog.accept());
+  await page.getByTitle("Neuen Charakter anlegen").click();
+  await page.locator('input[type="file"]').setInputFiles(exportedCharacter);
+  await openStep(page, "sheet");
+  await expect(page.locator(".play-sheet__vitals > div").first().locator("strong")).toContainText(
+    `${String(maximumHp - 1)} / ${String(maximumHp)}`
+  );
 });

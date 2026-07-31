@@ -213,6 +213,13 @@ export const PrintCharacterSheet = ({
             ))}
           </div>
         </PrintSection>
+        <PrintSection title="Kampfnotizen">
+          <div className="print-writing-lines" aria-hidden="true">
+            {Array.from({ length: 8 }, (_, index) => (
+              <span key={index} />
+            ))}
+          </div>
+        </PrintSection>
       </PrintPage>
 
       <PrintPage printModel={printModel} page="Talente und Merkmale">

@@ -32,7 +32,7 @@ Build 0.1.1 nach Aufteilung:
 
 - Startcode: 373,75 kB, 111,57 kB gzip
 - Katalog: 1.379,01 kB, 137,65 kB gzip
-- Charakterbogen: 58,49 kB, 14,94 kB gzip
+- Charakterbogen: 59,60 kB, 15,11 kB gzip
 - Markdown-Details: 165,31 kB, 50,52 kB gzip
 
 Der Charakterbogen und Markdownrenderer werden erst beim Öffnen geladen.

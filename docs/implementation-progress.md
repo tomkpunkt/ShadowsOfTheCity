@@ -814,7 +814,7 @@ Status: `complete`
 - 104 Unit-/Integrationstests und 21 Playwright-Szenarien erfolgreich
 - zwölf Charakterbogen-Referenzen für Desktop, Mobil, A4 und Statblock
 - Startchunk 373,75 kB statt zuvor 1.920,40 kB
-- Charakterbogen 58,49 kB und Markdowndetails 165,31 kB lazy geladen
+- Charakterbogen 59,60 kB und Markdowndetails 165,31 kB lazy geladen
 - Katalog als eigener 1.379,01-kB-Chunk
 - alter statischer Bogen und tote CSS-Regeln entfernt
 

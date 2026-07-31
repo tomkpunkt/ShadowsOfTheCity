@@ -12,6 +12,12 @@
   Voraussetzungen
 - `packages/rules-engine/src/engine.test.ts`: Formeln, Progression, Choices,
   automatische Grants, Herkunft und Fehlerzustände
+- `packages/rules-engine/src/session.test.ts`: TP, Ressourcen, Rast,
+  Zauberplätze, Aktionsnutzungen, Zustände und Ausrüstung
+- `packages/rules-engine/src/dice.test.ts`: Syntaxgrenzen, sichere Formeln und
+  deterministische Zufallsinjektion
+- `apps/character-builder/src/character-sheet/*.test.ts`: Web-, Druck- und
+  Statblock-Datenmodelle aus dem echten Katalog
 - `packages/rules-engine/src/content-regression.test.ts`: vier vollständige
   Builds aus dem echten Katalog
 - `apps/character-builder/src/legacy-regression.test.ts`: fünfter vollständiger
@@ -59,7 +65,7 @@ selbst oder verwendet einen bereits laufenden Server auf Port 4173.
 
 ## E2E-Vertrag
 
-Die 18 Browserprüfungen decken unter anderem ab:
+Die 21 Browserprüfungen decken unter anderem ab:
 
 - neuen und vollständigen Charakter erstellen
 - frühere Choices ändern, Konflikt erhalten und gezielt korrigieren
@@ -67,8 +73,15 @@ Die 18 Browserprüfungen decken unter anderem ab:
 - Format-1-Charakter importieren und Katalogkompatibilität anzeigen
 - speichern, neu laden, exportieren und reimportieren
 - Charakterbogen und Druckansicht öffnen
+- Schaden, Heilung, temporäre TP, Zustand und Aktionsnutzung anwenden
+- Fertigkeit und Angriff würfeln, Zauberplatz verbrauchen
+- Gegenstand ausrüsten, Menge und Ressource verändern
+- Session State nach Reload und vollständigem JSON-Reimport wiederherstellen
 - Kompendium, Suche, kombinierte Filter und Detailansichten verwenden
 - Desktop- und Mobile-Grenzen ohne Textüberlauf prüfen
+
+Die visuelle Suite erzeugt zusätzlich Desktop-, Mobile-, A4- und
+Statblock-Referenzen `27` bis `38`.
 
 Die visuelle Suite erzeugt dokumentierte Zustände unter
 `docs/review/screenshots/`. Der manuelle Prüfbericht steht in

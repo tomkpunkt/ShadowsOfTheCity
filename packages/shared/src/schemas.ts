@@ -3,7 +3,7 @@ import { z } from "zod";
 export const SCHEMA_VERSION = 1 as const;
 export const CHARACTER_FORMAT_VERSION = 3 as const;
 export const SESSION_STATE_VERSION = 1 as const;
-export const APP_VERSION = "0.1.0" as const;
+export const APP_VERSION = "0.1.1" as const;
 
 export const EntityIdSchema = z
   .string()

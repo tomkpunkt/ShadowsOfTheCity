@@ -5,7 +5,7 @@ Rollenspieladaption mit Pathfinder-2e-naher Regelstruktur.
 
 ## Projektstatus
 
-Version `0.1.0` ist ein reproduzierbarer Testbuild. Der vollständige Katalog
+Version `0.1.1` ist ein reproduzierbarer Testbuild. Der vollständige Katalog
 enthält 737 Entitäten, davon 724 aktive und 13 fachlich gesperrte Entwürfe.
 Charakterwerte werden ausschließlich durch die frameworkfreie Rules Engine
 berechnet; der Builder zeigt Herkunftsnachweise, offene Entscheidungen,
@@ -19,7 +19,10 @@ Der Testbuild unterstützt:
   Wahrnehmung
 - automatische Neuberechnung und Erhalt ungültig gewordener Entscheidungen
 - Local Storage, JSON-Import/-Export und Migration alter Charakterformate
-- Charakterübersicht und druckbaren Charakterbogen
+- interaktiven Charakterbogen mit Kampf, Aktionen, Zaubern, Inventar,
+  Ressourcen, Zuständen, Notizen und lokaler Würfelablage
+- getrennten Build und versionierten Session State mit Format-2-Migration
+- mehrseitigen A4-Druck/PDF, kompakten Statblock und vollständigen JSON-Roundtrip
 - Kompendium, Suche, Filter und begründete gesperrte Optionen
 
 ## Voraussetzungen
@@ -81,7 +84,7 @@ Ausrüstung und Choices ab. Details stehen in
 [`docs/content-authoring.md`](docs/content-authoring.md) und
 [`docs/content-schema.md`](docs/content-schema.md).
 
-## Testbuild 0.1.0
+## Testbuild 0.1.1
 
 ```bash
 npm ci
@@ -91,9 +94,9 @@ npm run release:verify
 
 Die Ausgabe liegt in `dist/` und `release/`:
 
-- `release/shadows-of-the-city-0.1.0.zip`
-- `release/shadows-of-the-city-0.1.0-checksums.txt`
-- `release/shadows-of-the-city-0.1.0-build-report.md`
+- `release/shadows-of-the-city-0.1.1.zip`
+- `release/shadows-of-the-city-0.1.1-checksums.txt`
+- `release/shadows-of-the-city-0.1.1-build-report.md`
 
 Das ZIP enthält nur Laufzeitdateien, den kompilierten Katalog, Manifest,
 Versions- und Buildinformationen sowie Lizenz-, Quellen- und

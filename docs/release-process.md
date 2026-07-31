@@ -30,9 +30,9 @@ erzeugen deshalb byteidentische ZIP-Dateien.
 
 ```text
 dist/
-release/shadows-of-the-city-0.1.0.zip
-release/shadows-of-the-city-0.1.0-checksums.txt
-release/shadows-of-the-city-0.1.0-build-report.md
+release/shadows-of-the-city-0.1.1.zip
+release/shadows-of-the-city-0.1.1-checksums.txt
+release/shadows-of-the-city-0.1.1-build-report.md
 ```
 
 `release:verify` prüft:

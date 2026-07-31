@@ -713,32 +713,32 @@ Offene Punkte:
 | Phase | Status | Ziel | Geänderte Dateien | Prüfungen | Offene Punkte |
 |:--|:--|:--|:--|:--|:--|
 | 0 - Bestandsaufnahme | complete | produktiven Bogen, Modell, Engine, Storage, Druck, Responsive Design und Tests inventarisieren | `docs/review/09-character-sheet-baseline.md`, `docs/implementation-progress.md` | unverändertes `npm run verify`: 77 Unit-/Integrationstests, 19 E2E-Tests, Build und Audits erfolgreich | keine |
-| 1 - Informationsarchitektur | pending | zehn spielbare Hauptbereiche für Desktop und Mobil | – | – | beginnt nach Format-3-Grundlage |
-| 2 - Charakterkopf | pending | permanente Kernwerte und Schnellaktionen | – | – | – |
-| 3 - Übersicht | pending | zentrale Werte, Quellen und Session-Probleme | – | – | – |
-| 4 - Trefferpunkte | pending | Schaden, Heilung, temporäre TP und Undo | – | – | – |
-| 5 - Zustände | pending | Zustände und sichtbare manuelle Modifikatoren | – | – | – |
-| 6 - Kampf | pending | Angriffe, Verteidigung, Reaktionen und Ausrüstung | – | – | – |
-| 7 - Aktionen | pending | datengetriebene Aktionsübersicht und Nutzungen | – | – | – |
-| 8 - Fertigkeiten | pending | sortierbare Fertigkeiten und Proben | – | – | – |
-| 9 - Talente und Merkmale | pending | deduplizierte, gruppierte Detailansicht | – | – | – |
-| 10 - Zauber | pending | Zauberwerte, Listen und Platzverbrauch | – | – | – |
-| 11 - Inventar | pending | Mengen, Ausrüsten, Aktivierung, Munition und Last | – | – | – |
-| 12 - Ressourcen | pending | generisches Ressourcenmodell und Wiederherstellung | – | – | – |
-| 13 - Biografie und Notizen | pending | dauerhafte Biografie und Sitzungsnotizen | – | – | – |
-| 14 - Charakterbearbeitung | pending | Creator-Rücksprung und Session-Konflikte | – | – | – |
-| 15 - Speicherung und Migration | active | Format 3, Session-Schema, Migration und Recovery | `packages/shared/src/schemas.ts`, `packages/rules-engine/src/session.ts`, `packages/rules-engine/src/engine.ts`, `apps/character-builder/src/storage.ts`, Tests und Dokumentation | 89 Unit-/Integrationstests, 19 E2E-Tests, Typecheck und Lint erfolgreich | Konfliktoberfläche und kontrollierte Bereinigung verwaister Einträge folgen im neuen Bogen |
-| 16 - Druck und PDF | pending | mehrseitiger A4-Charakterbogen | – | – | – |
-| 17 - Statblock | pending | Web-, Text- und Druckausgabe | – | – | – |
-| 18 - Würfelablage | pending | validierte lokale Würfe und Verlauf | – | – | – |
-| 19 - Performance | pending | messbare Entkopplung des Vollkatalogs | – | Baseline: JS 1.920,40 kB / 299,92 kB gzip | Offline-Funktion erhalten |
-| 20 - Barrierefreiheit | pending | Tastatur, Semantik, Fokus und Live-Status | – | – | – |
-| 21 - Designsystem | pending | eigenständige, ruhige Spieloberfläche | – | – | – |
-| 22 - Tests | pending | Unit-, Integration-, E2E- und visuelle Verträge | – | – | – |
-| 23 - Bereinigung | pending | jeweils ein produktiver Pfad | – | – | – |
-| 24 - Dokumentation | pending | Fach-, Architektur- und Betriebsdokumentation | – | – | – |
-| 25 - Release 0.1.1 | pending | Version, ZIP, Prüfsumme und Buildbericht | – | – | – |
-| 26 - Abschlussprüfung | pending | frische Installation, Vollprüfung und manuelle Matrix | – | – | – |
+| 1 - Informationsarchitektur | complete | zehn spielbare Hauptbereiche für Desktop und Mobil | `character-sheet/CharacterSheet.tsx`, `styles.css` | Desktop- und Mobile-Referenzen 27 bis 34 | keine |
+| 2 - Charakterkopf | complete | permanente Kernwerte und Schnellaktionen | `CharacterSheet.tsx` | E2E und visuelle Prüfung | keine |
+| 3 - Übersicht | complete | zentrale Werte, Quellen und Session-Probleme | `model.ts`, `CharacterSheet.tsx` | Modelltest und E2E | keine |
+| 4 - Trefferpunkte | complete | Schaden, Heilung, temporäre TP und Undo | `session.ts`, `CharacterSheet.tsx` | Unit- und E2E-Test | keine |
+| 5 - Zustände | complete | Zustände und sichtbare manuelle Modifikatoren | Schema, Engine und Bogen | Unit-, Integrations- und E2E-Test | freie Zustände bleiben informativ |
+| 6 - Kampf | complete | Angriffe, Verteidigung, Reaktionen und Ausrüstung | `CharacterSheet.tsx`, `combat-view.md` | Angriff-, Würfel- und Druckreferenz | strukturierte Varianten nur bei Katalogdaten |
+| 7 - Aktionen | complete | datengetriebene Aktionsübersicht und Nutzungen | `model.ts`, `session.ts`, `actions.md` | Unit- und E2E-Test | keine |
+| 8 - Fertigkeiten | complete | sortierbare Fertigkeiten und Proben | `CharacterSheet.tsx` | E2E-Fertigkeitswurf | keine |
+| 9 - Talente und Merkmale | complete | deduplizierte, durchsuchbare Detailansicht | `model.ts`, `CharacterSheet.tsx` | Modelltest | keine |
+| 10 - Zauber | complete | Zauberwerte, Listen und Platzverbrauch | `CharacterSheet.tsx`, `spell-management.md` | Unit- und E2E-Test | Einzelvorbereitung benötigt Katalogmodell |
+| 11 - Inventar | complete | Mengen, Ausrüsten, Aktivierung, Munition und Last | Engine, Session und Bogen | Integration und E2E | Währungen noch nicht strukturiert |
+| 12 - Ressourcen | complete | generisches Ressourcenmodell und Wiederherstellung | `session.ts`, `CharacterSheet.tsx` | Unit- und E2E-Test | keine Katalogressourcen vorhanden |
+| 13 - Biografie und Notizen | complete | dauerhafte Biografie und Sitzungsnotizen | Schema und Bogen | Schema- und Roundtrip-Test | keine |
+| 14 - Charakterbearbeitung | complete | Creator-Rücksprung und Session-Konflikte | `App.tsx`, `CharacterSheet.tsx` | E2E-Roundtrip | keine |
+| 15 - Speicherung und Migration | complete | Format 3, Session-Schema, Migration und Recovery | Shared, Engine, Storage und Tests | Format-2, Recovery und JSON-E2E | keine |
+| 16 - Druck und PDF | complete | mehrseitiger A4-Charakterbogen | `print-model.ts`, `PrintCharacterSheet.tsx` | Modelltest und Referenzen 35 bis 37 | PDF über Browserdruck |
+| 17 - Statblock | complete | Web-, Text- und Druckausgabe | `statblock.ts` | Modelltest und Referenz 38 | keine |
+| 18 - Würfelablage | complete | validierte lokale Würfe und Verlauf | `dice.ts`, Bogen und Tests | 11 Formeltests und E2E | keine SG-Auswertung |
+| 19 - Performance | complete | messbare Entkopplung des Vollkatalogs | Lazy Imports und Vite-Chunks | Produktionsbuild gemessen | Katalog bleibt größter Chunk |
+| 20 - Barrierefreiheit | complete | Tastatur, Semantik, Fokus und Live-Status | Bogen und CSS | E2E, Lint und manuelle Sichtprüfung | keine |
+| 21 - Designsystem | complete | eigenständige, ruhige Spieloberfläche | `styles.css` | 12 visuelle Referenzen | keine |
+| 22 - Tests | complete | Unit-, Integration-, E2E- und visuelle Verträge | Testdateien und Screenshots | 104 Unit/Integration, 21 E2E | keine |
+| 23 - Bereinigung | complete | jeweils ein produktiver Pfad | `App.tsx`, `styles.css` | Suche nach alten Selektoren | keine |
+| 24 - Dokumentation | complete | Fach-, Architektur- und Betriebsdokumentation | `docs/*.md`, README, Changelog | Formatprüfung folgt im Vollvertrag | keine |
+| 25 - Release 0.1.1 | active | Version, ZIP, Prüfsumme und Buildbericht | Manifeste und Releaseskript | Release-Build folgt | Artefakte erzeugen |
+| 26 - Abschlussprüfung | active | frische Installation, Vollprüfung und manuelle Matrix | Abschlussbericht folgt | `npm run verify` folgt | Vollvertrag ausführen |
 
 ### Phase 0
 
@@ -772,7 +772,7 @@ Nächster konkreter Arbeitsschritt:
 
 ### Phase 15 - Zwischenstand Format 3
 
-Status: `active`
+Status: `complete`
 
 Geänderte Bereiche:
 
@@ -801,8 +801,25 @@ Prüfungen:
 - Format-1- und Format-2-Migration, Format-3-Roundtrip und beschädigter
   Session-State getestet
 
-Offene Punkte:
+Abschluss:
 
-- verwaiste Einträge im Character Sheet anzeigen und kontrolliert bereinigen,
-- Session-Konflikte nach Creator-Änderungen als eigener Workflow,
-- vollständiger JSON-E2E-Roundtrip mit interaktiven Session-Daten.
+- verwaiste Einträge werden angezeigt und kontrolliert entfernt,
+- Creator-Änderungen behalten Session-Daten und melden Konflikte,
+- der vollständige JSON-E2E-Roundtrip enthält interaktive Session-Daten.
+
+### Phasen 1 bis 24 - Abschluss
+
+Status: `complete`
+
+- 104 Unit-/Integrationstests und 21 Playwright-Szenarien erfolgreich
+- zwölf Charakterbogen-Referenzen für Desktop, Mobil, A4 und Statblock
+- Startchunk 373,75 kB statt zuvor 1.920,40 kB
+- Charakterbogen 58,49 kB und Markdowndetails 165,31 kB lazy geladen
+- Katalog als eigener 1.379,01-kB-Chunk
+- alter statischer Bogen und tote CSS-Regeln entfernt
+
+Nächster konkreter Arbeitsschritt:
+
+- Version und Dokumentation committen,
+- Release-Artefakte aus dem festgehaltenen Commit erzeugen,
+- vollständigen Abschlussvertrag und Release-Verifikation ausführen.

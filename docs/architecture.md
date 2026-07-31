@@ -70,3 +70,8 @@ Development kompiliert vor dem Vite-Start und beobachtet Contentänderungen.
 Production kompiliert, prüft Typen und Tests und baut danach die Workspaces.
 `npm run verify` ist der Merge-Vertrag für Code, Content, Migration,
 generierte Dateien, Unit-/Integrationstests, Build, Playwright und Formatierung.
+
+Der Produktionsbuild lädt `CharacterSheet` und `EntityDetails` dynamisch.
+Rollup trennt den vollständigen Katalog und den Markdownrenderer in eigene
+lokale Chunks. Dadurch bleibt der Startcode unabhängig von der Größe des
+Spielbogens; Offline-Betrieb und die kanonische Katalogquelle bleiben erhalten.

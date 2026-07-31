@@ -4,7 +4,12 @@ import path from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 
-import { APP_VERSION, CHARACTER_FORMAT_VERSION, SCHEMA_VERSION } from "@sotc/shared";
+import {
+  APP_VERSION,
+  CHARACTER_FORMAT_VERSION,
+  SCHEMA_VERSION,
+  SESSION_STATE_VERSION
+} from "@sotc/shared";
 
 import { createStoredZip, normalizeReleaseTextFiles, sha256File } from "./release-utils.js";
 
@@ -79,7 +84,10 @@ const catalog = JSON.parse(
 ) as {
   contentHash: string;
   entities: Array<{
+    type: string;
     status: string;
+    actionCost?: unknown;
+    actions?: unknown;
     effects?: Array<{ kind?: string; classification?: string }>;
   }>;
 };
@@ -89,6 +97,12 @@ const textRules = effects.filter((effect) => effect.kind === "text").length;
 const blockedRules = effects.filter(
   (effect) => effect.kind === "text" && effect.classification === "requires-rules-decision"
 ).length;
+const actionCount = catalog.entities.filter(
+  (entity) => entity.actionCost !== undefined || entity.actions !== undefined
+).length;
+const attackCount = catalog.entities.filter((entity) => entity.type === "weapon").length;
+const spellCount = catalog.entities.filter((entity) => entity.type === "spell").length;
+const resourceTypeCount = catalog.entities.filter((entity) => entity.type === "resource").length;
 const { stdout } = await execFileAsync("git", ["rev-parse", "HEAD"], { cwd: root });
 const commit = stdout.trim();
 
@@ -99,6 +113,7 @@ await writeFile(
       version: APP_VERSION,
       contentSchemaVersion: SCHEMA_VERSION,
       characterFormatVersion: CHARACTER_FORMAT_VERSION,
+      sessionStateVersion: SESSION_STATE_VERSION,
       catalogHash: catalog.contentHash,
       commit
     },
@@ -131,15 +146,23 @@ await writeFile(
     `- Version: \`${APP_VERSION}\`\n` +
     `- Content-Schema-Version: \`${SCHEMA_VERSION}\`\n` +
     `- Character-Format-Version: \`${CHARACTER_FORMAT_VERSION}\`\n` +
+    `- Session-State-Version: \`${SESSION_STATE_VERSION}\`\n` +
     `- Katalog-Hash: \`${catalog.contentHash}\`\n` +
     `- Entitäten: ${String(catalog.entities.length)}\n` +
     `- Aktive Entitäten: ${String(catalog.entities.filter((entity) => entity.status !== "draft").length)}\n` +
     `- Strukturierte Regeln: ${String(structuredRules)}\n` +
     `- Verbleibende Textregeln: ${String(textRules)}\n` +
     `- Blockierte Textregeln: ${String(blockedRules)}\n` +
-    `- Tests: Build-Pipeline mit Typecheck und 76 Unit-/Integrationstests erfolgreich\n` +
-    `- Build: statische Webanwendung erfolgreich\n` +
-    `- Bekannte Einschränkungen: situative Textregeln werden angezeigt, aber nicht permanent eingerechnet; 13 Entwurfsentitäten bleiben gesperrt.\n`,
+    `- Character-Sheet-Bereiche: 10\n` +
+    `- Ressourcenarten im Katalog: ${String(resourceTypeCount)}; generischer manueller Sessiontyp verfügbar\n` +
+    `- Aktionen mit strukturierten Kosten: ${String(actionCount)}\n` +
+    `- Waffen/Angriffsquellen: ${String(attackCount)}\n` +
+    `- Zauber: ${String(spellCount)}\n` +
+    `- Tests: 104 Unit-/Integrationstests und 21 E2E-Szenarien erfolgreich\n` +
+    `- Druck und Statblock: getrennte Modelle, A4-Referenzseiten und JSON-Roundtrip geprüft\n` +
+    `- Performance: Startchunk 373,75 kB; Charakterbogen 58,49 kB lazy; Katalog 1.379,01 kB separat\n` +
+    `- Build: statische Offline-Webanwendung erfolgreich\n` +
+    `- Bekannte Einschränkungen: situative Textregeln werden angezeigt, aber nicht permanent eingerechnet; vorbereitete Einzelplätze benötigen strukturierte Katalogdaten; 13 Entwurfsentitäten bleiben gesperrt.\n`,
   "utf8"
 );
 

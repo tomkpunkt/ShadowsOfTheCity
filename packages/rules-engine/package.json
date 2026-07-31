@@ -1,6 +1,6 @@
 {
   "name": "@sotc/rules-engine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "exports": "./src/index.ts",
@@ -9,6 +9,6 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@sotc/shared": "0.1.0"
+    "@sotc/shared": "0.1.1"
   }
 }

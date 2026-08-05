@@ -552,7 +552,8 @@ export const EntityDetails = ({
         Diese Regel ist derzeit als Textregel hinterlegt und wird nicht automatisch berechnet.
       </p>
     ) : null}
-    {entity.rulesText.trim() === entity.description.trim() ? null : (
+    {entity.rulesText.replaceAll("\r\n", "\n").trim() ===
+    entity.description.replaceAll("\r\n", "\n").trim() ? null : (
       <section className="entity-details__section">
         <h3>Quelltext</h3>
         <MarkdownContent markdown={entity.description} onOpenEntity={onOpenEntity} />

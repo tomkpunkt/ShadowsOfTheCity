@@ -1,0 +1,32 @@
+{
+  "name": "@sotc/content-compiler",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "tsx src/cli.ts compile",
+    "check-generated": "tsx src/cli.ts check-generated",
+    "migrate": "tsx src/migrate.ts",
+    "migrate:verify": "tsx src/verify-migration.ts",
+    "new": "tsx src/cli.ts new",
+    "explain": "tsx src/cli.ts explain",
+    "references": "tsx src/cli.ts references",
+    "report": "tsx src/cli.ts report",
+    "templates": "tsx src/cli.ts templates",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "validate": "tsx src/cli.ts validate"
+  },
+  "dependencies": {
+    "@sotc/shared": "0.1.2",
+    "gray-matter": "^4.0.3",
+    "mdast-util-to-string": "^4.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3"
+  }
+}

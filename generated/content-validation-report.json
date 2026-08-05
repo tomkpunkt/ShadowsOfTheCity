@@ -1,0 +1,26 @@
+{
+  "countsByType": {
+    "ancestry": 8,
+    "armor": 26,
+    "background": 8,
+    "choice": 168,
+    "class": 9,
+    "class-feature": 99,
+    "creature": 34,
+    "equipment": 164,
+    "feat": 195,
+    "heritage": 40,
+    "language": 10,
+    "proficiency": 16,
+    "rule": 4,
+    "skill": 19,
+    "spell": 14,
+    "spellcasting-progression": 3,
+    "trait": 30,
+    "weapon": 64
+  },
+  "entitiesParsed": 911,
+  "filesScanned": 911,
+  "issues": [],
+  "valid": true
+}

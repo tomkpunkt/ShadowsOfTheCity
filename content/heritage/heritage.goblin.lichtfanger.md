@@ -1,0 +1,30 @@
+---
+ancestryId: ancestry.goblin
+editorialStatus: reviewed
+effects:
+  - classification: partially-structured
+    kind: text
+    machineReadable: false
+    text: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.
+examples: []
+id: heritage.goblin.lichtfanger
+legacy:
+  notes: []
+  paths:
+    - races/goblins_zeitalter_des_goldes.md
+name: Lichtfänger
+prerequisites:
+  - ancestry:
+      id: ancestry.goblin
+references: []
+rulesText: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+summary: Du besitzt empfindliche Augen, die schwaches Licht besser nutzen.
+traits:
+  - trait.ancestry
+type: heritage
+---
+
+Du besitzt empfindliche Augen, die schwaches Licht besser nutzen. Du erhältst Nachtsicht und einen +1 Bonus auf Wahrnehmung in dämmrigen Bereichen.

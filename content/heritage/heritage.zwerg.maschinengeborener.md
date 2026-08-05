@@ -1,0 +1,30 @@
+---
+ancestryId: ancestry.zwerg
+editorialStatus: reviewed
+effects:
+  - classification: partially-structured
+    kind: text
+    machineReadable: false
+    text: Du bist in Fabriken und Werkstätten groß geworden. Du erhältst Immunität gegen Rauch und Staub sowie Fertigkeitstraining in Mechanik oder Ingenieurwesen.
+examples: []
+id: heritage.zwerg.maschinengeborener
+legacy:
+  notes: []
+  paths:
+    - races/zwerge_zeitalter_des_goldes.md
+name: Maschinengeborener
+prerequisites:
+  - ancestry:
+      id: ancestry.zwerg
+references: []
+rulesText: Du bist in Fabriken und Werkstätten groß geworden. Du erhältst Immunität gegen Rauch und Staub sowie Fertigkeitstraining in Mechanik oder Ingenieurwesen.
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+summary: Du bist in Fabriken und Werkstätten groß geworden.
+traits:
+  - trait.ancestry
+type: heritage
+---
+
+Du bist in Fabriken und Werkstätten groß geworden. Du erhältst Immunität gegen Rauch und Staub sowie Fertigkeitstraining in Mechanik oder Ingenieurwesen.

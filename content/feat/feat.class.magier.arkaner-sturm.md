@@ -1,0 +1,32 @@
+---
+category: class
+classId: class.magier
+editorialStatus: reviewed
+effects:
+  - classification: partially-structured
+    kind: text
+    machineReadable: false
+    text: Du kannst alle Gegner in 20 Fuß 1W6 Schaden pro Zaubergrad erleiden lassen (1/Tag).
+examples: []
+id: feat.class.magier.arkaner-sturm
+legacy:
+  notes: []
+  paths:
+    - classes/klasse_magier.md
+level: 18
+name: Arkaner Sturm
+prerequisites:
+  - class:
+      id: class.magier
+references: []
+rulesText: Du kannst alle Gegner in 20 Fuß 1W6 Schaden pro Zaubergrad erleiden lassen (1/Tag).
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+summary: Du kannst alle Gegner in 20 Fuß 1W6 Schaden pro Zaubergrad erleiden lassen (1/Tag).
+traits:
+  - trait.legacy
+type: feat
+---
+
+Du kannst alle Gegner in 20 Fuß 1W6 Schaden pro Zaubergrad erleiden lassen (1/Tag).

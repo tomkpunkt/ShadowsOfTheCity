@@ -1,0 +1,12 @@
+{
+  "legacy.skill.arkane-kunde": "skill.arcana",
+  "legacy.skill.athletik": "skill.athletics",
+  "legacy.skill.handwerk": "skill.crafting",
+  "legacy.skill.heimlichkeit": "skill.stealth",
+  "legacy.skill.ingenieurwesen": "skill.mechanics",
+  "legacy.skill.magie-entdecken": "skill.detect-magic",
+  "legacy.skill.uberleben": "skill.survival",
+  "legacy.spell.detect-magic": "spell.magie-erkennen",
+  "legacy.spell.message": "spell.nachricht",
+  "legacy.weapon.schwert": "weapon.schwert"
+}

@@ -1,0 +1,32 @@
+---
+ancestryId: ancestry.elf
+category: ancestry
+editorialStatus: reviewed
+effects:
+  - classification: partially-structured
+    kind: text
+    machineReadable: false
+    text: Du bist Meister subtiler Kontrolle. Einmal pro Stunde kannst du eine soziale Probe wiederholen, wenn du versuchst, jemanden zu beeinflussen oder zu täuschen.
+examples: []
+id: feat.ancestry.elf.stille-herrschaft
+legacy:
+  notes: []
+  paths:
+    - races/elfen_zeitalter_des_goldes.md
+level: 5
+name: Stille Herrschaft
+prerequisites:
+  - ancestry:
+      id: ancestry.elf
+references: []
+rulesText: Du bist Meister subtiler Kontrolle. Einmal pro Stunde kannst du eine soziale Probe wiederholen, wenn du versuchst, jemanden zu beeinflussen oder zu täuschen.
+schemaVersion: 1
+source: legacy.world-rules
+status: legacy
+summary: Du bist Meister subtiler Kontrolle.
+traits:
+  - trait.ancestry
+type: feat
+---
+
+Du bist Meister subtiler Kontrolle. Einmal pro Stunde kannst du eine soziale Probe wiederholen, wenn du versuchst, jemanden zu beeinflussen oder zu täuschen.

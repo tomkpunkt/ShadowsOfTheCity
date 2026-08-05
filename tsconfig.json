@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/shared/tsconfig.json"
+    },
+    {
+      "path": "./packages/content-compiler/tsconfig.json"
+    },
+    {
+      "path": "./packages/rules-engine/tsconfig.json"
+    },
+    {
+      "path": "./apps/character-builder/tsconfig.json"
+    }
+  ]
+}

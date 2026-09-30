@@ -1004,6 +1004,21 @@ code {
   line-height: 1.45;
 }
 
+.level-boosts {
+  margin-top: 24px;
+}
+
+.level-boosts h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.level-boosts p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .filter-bar {
   display: flex;
   align-items: center;

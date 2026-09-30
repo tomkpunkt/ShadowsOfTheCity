@@ -52,6 +52,40 @@ legacy:
   paths:
     - classes/klasse_okkultist.md
 name: Okkultist
+proficiencyIncreases:
+  - level: 5
+    proficiencyId: proficiency.perception
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.save.fortitude
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.save.reflex
+    rank: expert
+  - level: 9
+    proficiencyId: proficiency.class-dc
+    rank: expert
+  - level: 9
+    proficiencyId: proficiency.save.will
+    rank: master
+  - level: 11
+    proficiencyId: proficiency.weapon.ranged
+    rank: expert
+  - level: 11
+    proficiencyId: proficiency.weapon.simple
+    rank: expert
+  - level: 11
+    proficiencyId: proficiency.weapon.unarmed
+    rank: expert
+  - level: 13
+    proficiencyId: proficiency.armor.unarmored
+    rank: expert
+  - level: 13
+    proficiencyId: proficiency.perception
+    rank: master
+  - level: 17
+    proficiencyId: proficiency.class-dc
+    rank: master
 references: []
 rulesText: "# **Okkultist**\r
 

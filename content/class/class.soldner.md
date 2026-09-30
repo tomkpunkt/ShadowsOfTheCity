@@ -54,6 +54,64 @@ legacy:
   paths:
     - classes/klasse_soeldner.md
 name: Söldner
+proficiencyIncreases:
+  - level: 5
+    proficiencyId: proficiency.perception
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.save.reflex
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.save.will
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.weapon.martial
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.weapon.ranged
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.weapon.simple
+    rank: expert
+  - level: 5
+    proficiencyId: proficiency.weapon.unarmed
+    rank: expert
+  - level: 9
+    proficiencyId: proficiency.class-dc
+    rank: expert
+  - level: 9
+    proficiencyId: proficiency.save.fortitude
+    rank: master
+  - level: 13
+    proficiencyId: proficiency.armor.heavy
+    rank: expert
+  - level: 13
+    proficiencyId: proficiency.armor.light
+    rank: expert
+  - level: 13
+    proficiencyId: proficiency.armor.medium
+    rank: expert
+  - level: 13
+    proficiencyId: proficiency.armor.unarmored
+    rank: expert
+  - level: 13
+    proficiencyId: proficiency.perception
+    rank: master
+  - level: 13
+    proficiencyId: proficiency.weapon.martial
+    rank: master
+  - level: 13
+    proficiencyId: proficiency.weapon.ranged
+    rank: master
+  - level: 13
+    proficiencyId: proficiency.weapon.simple
+    rank: master
+  - level: 13
+    proficiencyId: proficiency.weapon.unarmed
+    rank: master
+  - level: 17
+    proficiencyId: proficiency.class-dc
+    rank: master
 references: []
 rulesText: "# **Söldner**\r
 

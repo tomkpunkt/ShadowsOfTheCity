@@ -46,7 +46,7 @@ import {
   type ResolvedChoice,
   type ValidationState
 } from "@sotc/rules-engine";
-import { APP_VERSION, type ContentEntity } from "@sotc/shared";
+import { APP_VERSION, ATTRIBUTE_BOOST_LEVELS, type ContentEntity } from "@sotc/shared";
 
 import { catalog, entities, entitiesOfType, entityName } from "./catalog.js";
 import { entityMeta, searchableEntityText } from "./entity-presentation.js";
@@ -963,6 +963,41 @@ export const App = () => {
           );
         })}
       </div>
+      {ATTRIBUTE_BOOST_LEVELS.filter((boostLevel) => boostLevel <= character.level).map(
+        (boostLevel) => {
+          const key = String(boostLevel) as "5";
+          const chosen = character.levelBoosts?.[key] ?? [];
+          return (
+            <div key={boostLevel} className="level-boosts">
+              <h3>Stufe {String(boostLevel)}</h3>
+              <p>{String(chosen.length)} von 4 verschiedenen Attributen gewählt</p>
+              <div className="attribute-editor">
+                {(Object.keys(attributeLabels) as AttributeId[]).map((attribute) => {
+                  const selected = chosen.includes(attribute);
+                  return (
+                    <label key={attribute} className={selected ? "is-selected" : ""}>
+                      <input
+                        type="checkbox"
+                        checked={selected}
+                        onChange={() =>
+                          update({
+                            levelBoosts: {
+                              ...character.levelBoosts,
+                              [key]: toggleAttributeBoost(chosen, attribute, 4)
+                            }
+                          })
+                        }
+                      />
+                      <span>{attributeLabels[attribute]}</span>
+                      <strong>{result.attributes[attribute].value}</strong>
+                    </label>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        }
+      )}
     </section>
   );
 

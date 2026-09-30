@@ -1,4 +1,5 @@
 import {
+  ATTRIBUTE_BOOST_LEVELS,
   CatalogSchema,
   CharacterDocumentSchema,
   CharacterSessionStateSchema,
@@ -542,6 +543,34 @@ export const calculateCharacter = (
   for (const boost of character.attributeBoosts) {
     applyBoost(boost, "character.attribute-boosts", "Freie Attributsverbesserung");
   }
+  const levelBoostIssues: string[] = [];
+  let levelBoostsInvalid = false;
+  for (const boostLevel of ATTRIBUTE_BOOST_LEVELS) {
+    if (boostLevel > character.level) continue;
+    const chosen = character.levelBoosts?.[String(boostLevel) as "5"] ?? [];
+    for (const boost of new Set(chosen)) {
+      applyBoost(
+        boost,
+        `character.level-boost.${String(boostLevel)}`,
+        `Stufe ${String(boostLevel)}: Attributsverbesserung`
+      );
+    }
+    if (new Set(chosen).size !== chosen.length) {
+      levelBoostsInvalid = true;
+      issues.push({
+        code: "DUPLICATE_LEVEL_ATTRIBUTE_BOOSTS",
+        state: "invalid",
+        message: `Stufe ${String(boostLevel)}: Die vier Attributsverbesserungen müssen verschiedene Attribute betreffen.`
+      });
+    } else if (chosen.length < 4) {
+      levelBoostIssues.push(String(boostLevel));
+      issues.push({
+        code: "MISSING_LEVEL_ATTRIBUTE_BOOSTS",
+        state: "incomplete",
+        message: `Stufe ${String(boostLevel)}: ${String(4 - chosen.length)} Attributsverbesserung(en) fehlen.`
+      });
+    }
+  }
   const expectedFreeBoosts =
     (ancestry?.type === "ancestry" ? ancestry.freeBoosts : 0) +
     (background?.type === "background" ? background.freeBoosts : 0);
@@ -580,6 +609,14 @@ export const calculateCharacter = (
       proficiencyRanks.set(id, rank);
     }
     proficiencyRanks.set("proficiency.class-dc", "trained");
+    for (const increase of characterClass.proficiencyIncreases) {
+      if (increase.level <= character.level) {
+        proficiencyRanks.set(
+          increase.proficiencyId,
+          higherRank(proficiencyRanks.get(increase.proficiencyId), increase.rank)
+        );
+      }
+    }
   }
   if (background?.type === "background") {
     for (const skillId of background.trainedSkillIds) {
@@ -1413,12 +1450,18 @@ export const calculateCharacter = (
       .map((choice) => choice.state);
     return states.length === 0 ? "not-relevant" : aggregateSectionState(states);
   };
-  const attributeState: ValidationState =
+  const freeBoostState: ValidationState =
     character.attributeBoosts.length === expectedFreeBoosts
       ? "valid"
       : character.attributeBoosts.length < expectedFreeBoosts
         ? "incomplete"
         : "invalid";
+  const attributeState: ValidationState =
+    freeBoostState === "invalid" || levelBoostsInvalid
+      ? "invalid"
+      : freeBoostState === "incomplete" || levelBoostIssues.length > 0
+        ? "incomplete"
+        : "valid";
   const sectionStatuses: Record<string, SectionState> = {
     overview: state,
     ancestry: aggregateSectionState([

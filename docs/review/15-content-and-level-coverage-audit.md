@@ -99,7 +99,7 @@ noch eine Berechnung:
   „increase“ beim Agenten). Es gibt keine Quelle für Expert, Master oder
   Legendary bei Fertigkeiten, Rettungswürfen, Wahrnehmung, Waffen, Rüstung
   oder Klassen-SG. Die einzige Ausnahme ist die Zauber-Kompetenz (7/15/19).
-- **Fertigkeitssteigerungen und Fertigkeitstalente.** Keine
+- **Fertigkeitssteigerungen und Fertigkeitstalente.** *(Fertigkeitssteigerungen behoben: `skillIncreases` ab Stufe 3 alle zwei Stufen, Auswahl im Builder; Fertigkeitstalente fehlen weiter)* Ursprünglich: Keine
   Auswahl, obwohl 4 Fertigkeitstalente im Katalog stehen.
 - **Allgemeintalente ab Stufe 3.** Nur `choice.general-feat.1` existiert;
   die 10 Allgemeintalente sind auf Stufe 1 (eins auf Stufe 2) beschränkt.

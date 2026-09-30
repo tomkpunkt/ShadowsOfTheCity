@@ -181,6 +181,40 @@ describe("v0.1.2 equipment catalog", () => {
     expect(missing).toEqual([]);
   });
 
+  it("differentiates starting proficiencies per class", () => {
+    const start = (classId: string) => {
+      const entity = entities.get(classId);
+      if (entity?.type !== "class") throw new Error(`Missing class ${classId}`);
+      return entity.initialProficiencies;
+    };
+
+    const soldner = start("class.soldner");
+    expect(soldner.saves).toEqual({ fortitude: "expert", reflex: "trained", will: "trained" });
+    expect(soldner.armor["proficiency.armor.heavy"]).toBe("trained");
+    expect(soldner.weapons["proficiency.weapon.martial"]).toBe("trained");
+
+    const waechter = start("class.wachter");
+    expect(waechter.saves).toEqual({ fortitude: "expert", reflex: "trained", will: "expert" });
+    expect(waechter.armor["proficiency.armor.medium"]).toBe("trained");
+
+    expect(start("class.agent").perception).toBe("expert");
+    expect(start("class.agent").saves.reflex).toBe("expert");
+    expect(start("class.ingenieur").saves.reflex).toBe("expert");
+
+    for (const classId of ["class.magier", "class.okkultist"]) {
+      expect(start(classId).armor).toEqual({ "proficiency.armor.unarmored": "trained" });
+      expect(start(classId).saves.will).toBe("expert");
+    }
+    for (const classId of ["class.mediziner", "class.schamane"]) {
+      expect(start(classId).saves.will).toBe("expert");
+    }
+    expect(start("class.raufbold").saves.fortitude).toBe("expert");
+
+    const classes = catalog.entities.filter((entity) => entity.type === "class");
+    const distinct = new Set(classes.map((entity) => JSON.stringify(entity.initialProficiencies)));
+    expect(distinct.size).toBeGreaterThan(4);
+  });
+
   it("lets a starting Söldner attack trained with a firearm", () => {
     const { character } = completeLevelOneCharacter(
       "ancestry.mensch",

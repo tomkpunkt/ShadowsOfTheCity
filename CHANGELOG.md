@@ -4,6 +4,10 @@
 
 ### Behoben
 
+- Alle Klassen starteten mit identischen Kompetenzen; Startwerte folgen jetzt
+  den Klassentabellen (Expert bei Rettungswuerfen bzw. Wahrnehmung, mittlere
+  und schwere Ruestung sowie kriegerische Waffen fuer Soeldner und Waechter,
+  keine Ruestung fuer Magier und Okkultist)
 - Fernkampfwaffen hatten keine Kompetenz und waren fuer jede Klasse ungeuebt;
   neue Kompetenz `proficiency.weapon.ranged`, alle Klassen starten geuebt
 - Katalog-Hash unabhaengig von Zeilenenden; Attributsverbesserungen ab 18 nur

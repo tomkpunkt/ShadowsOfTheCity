@@ -38,7 +38,7 @@ initialProficiencies:
   saves:
     fortitude: trained
     reflex: trained
-    will: trained
+    will: expert
   skills: {}
   weapons:
     proficiency.weapon.ranged: trained
@@ -49,7 +49,7 @@ keyAttributes:
   - intelligence
 legacy:
   notes:
-    - Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.
+    - Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.
   paths:
     - classes/klasse_mediziner.md
 name: Mediziner

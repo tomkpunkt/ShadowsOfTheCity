@@ -39,7 +39,7 @@ Reaktion oder Nutzungsgrenze. Die Inhalte sind also vorhanden, aber
      `firearm`/`martial` umstellen oder `proficiency.weapon.ranged` anlegen)
      und die Engine per Test absichern, dass jede Waffenkategorie eine
      vorhandene Kompetenz hat.
-2. **Alle Klassen starten mit identischen Kompetenzen.** Einfache Waffen,
+2. **Alle Klassen starten mit identischen Kompetenzen.** *(behoben: Startkompetenzen folgen den Klassentabellen im Altbestand, Regressionstest ergänzt)* Ursprünglich: Einfache Waffen,
    unbewaffnet, leichte Rüstung, alle Rettungswürfe und Wahrnehmung „trained“,
    keine Fertigkeiten. Söldner und Wächter haben keinen Vorteil gegenüber dem
    Magier. Mittlere und schwere Rüstungen kann keine Klasse tragen, ohne

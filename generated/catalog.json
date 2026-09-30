@@ -11,7 +11,7 @@
     "legacy.spell.message": "spell.nachricht",
     "legacy.weapon.schwert": "weapon.schwert"
   },
-  "contentHash": "a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5",
+  "contentHash": "6784712ce9317da3336f4e3079423b82b86a8f989c25a77d4e3daabcbbe450c1",
   "entities": [
     {
       "additionalLanguagesFromIntelligence": true,
@@ -13102,10 +13102,10 @@
           "proficiency.armor.light": "trained",
           "proficiency.armor.unarmored": "trained"
         },
-        "perception": "trained",
+        "perception": "expert",
         "saves": {
           "fortitude": "trained",
-          "reflex": "trained",
+          "reflex": "expert",
           "will": "trained"
         },
         "skills": {},
@@ -13122,7 +13122,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_agent.md"
@@ -13182,7 +13182,7 @@
         "perception": "trained",
         "saves": {
           "fortitude": "trained",
-          "reflex": "trained",
+          "reflex": "expert",
           "will": "trained"
         },
         "skills": {},
@@ -13197,7 +13197,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_ingenieur.md"
@@ -13252,14 +13252,13 @@
       "id": "class.magier",
       "initialProficiencies": {
         "armor": {
-          "proficiency.armor.light": "trained",
           "proficiency.armor.unarmored": "trained"
         },
         "perception": "trained",
         "saves": {
           "fortitude": "trained",
           "reflex": "trained",
-          "will": "trained"
+          "will": "expert"
         },
         "skills": {},
         "weapons": {
@@ -13273,7 +13272,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_magier.md"
@@ -13335,7 +13334,7 @@
         "saves": {
           "fortitude": "trained",
           "reflex": "trained",
-          "will": "trained"
+          "will": "expert"
         },
         "skills": {},
         "weapons": {
@@ -13350,7 +13349,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_mediziner.md"
@@ -13405,14 +13404,13 @@
       "id": "class.okkultist",
       "initialProficiencies": {
         "armor": {
-          "proficiency.armor.light": "trained",
           "proficiency.armor.unarmored": "trained"
         },
         "perception": "trained",
         "saves": {
           "fortitude": "trained",
           "reflex": "trained",
-          "will": "trained"
+          "will": "expert"
         },
         "skills": {},
         "weapons": {
@@ -13426,7 +13424,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_okkultist.md"
@@ -13481,7 +13479,7 @@
         },
         "perception": "trained",
         "saves": {
-          "fortitude": "trained",
+          "fortitude": "expert",
           "reflex": "trained",
           "will": "trained"
         },
@@ -13498,7 +13496,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_raufbold.md"
@@ -13560,7 +13558,7 @@
         "saves": {
           "fortitude": "trained",
           "reflex": "trained",
-          "will": "trained"
+          "will": "expert"
         },
         "skills": {},
         "weapons": {
@@ -13574,7 +13572,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_schamane.md"
@@ -13627,17 +13625,20 @@
       "id": "class.soldner",
       "initialProficiencies": {
         "armor": {
+          "proficiency.armor.heavy": "trained",
           "proficiency.armor.light": "trained",
+          "proficiency.armor.medium": "trained",
           "proficiency.armor.unarmored": "trained"
         },
         "perception": "trained",
         "saves": {
-          "fortitude": "trained",
+          "fortitude": "expert",
           "reflex": "trained",
           "will": "trained"
         },
         "skills": {},
         "weapons": {
+          "proficiency.weapon.martial": "trained",
           "proficiency.weapon.ranged": "trained",
           "proficiency.weapon.simple": "trained",
           "proficiency.weapon.unarmed": "trained"
@@ -13649,7 +13650,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_soeldner.md"
@@ -13701,17 +13702,20 @@
       "id": "class.wachter",
       "initialProficiencies": {
         "armor": {
+          "proficiency.armor.heavy": "trained",
           "proficiency.armor.light": "trained",
+          "proficiency.armor.medium": "trained",
           "proficiency.armor.unarmored": "trained"
         },
         "perception": "trained",
         "saves": {
-          "fortitude": "trained",
+          "fortitude": "expert",
           "reflex": "trained",
-          "will": "trained"
+          "will": "expert"
         },
         "skills": {},
         "weapons": {
+          "proficiency.weapon.martial": "trained",
           "proficiency.weapon.ranged": "trained",
           "proficiency.weapon.simple": "trained",
           "proficiency.weapon.unarmed": "trained"
@@ -13723,7 +13727,7 @@
       ],
       "legacy": {
         "notes": [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         "paths": [
           "classes/klasse_waechter.md"

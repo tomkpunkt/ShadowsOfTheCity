@@ -930,30 +930,89 @@ const migrateSupportingEntities = (): void => {
   );
 };
 
-const classConfig: Record<string, { keyAttributes: string[]; hp: number; spellcasting?: string }> =
-  {
-    agent: { keyAttributes: ["dexterity", "charisma", "intelligence"], hp: 8 },
-    ingenieur: { keyAttributes: ["intelligence"], hp: 8 },
-    magier: {
-      keyAttributes: ["intelligence"],
-      hp: 6,
-      spellcasting: "spellcasting.arcane-prepared"
-    },
-    mediziner: { keyAttributes: ["wisdom", "intelligence"], hp: 8 },
-    okkultist: {
-      keyAttributes: ["charisma"],
-      hp: 6,
-      spellcasting: "spellcasting.occult-spontaneous"
-    },
-    raufbold: { keyAttributes: ["strength", "constitution"], hp: 10 },
-    schamane: {
-      keyAttributes: ["wisdom"],
-      hp: 8,
-      spellcasting: "spellcasting.primal-prepared"
-    },
-    soeldner: { keyAttributes: ["strength", "dexterity"], hp: 10 },
-    waechter: { keyAttributes: ["constitution", "wisdom"], hp: 10 }
-  };
+type Rank = "trained" | "expert";
+
+interface ClassConfig {
+  keyAttributes: string[];
+  hp: number;
+  spellcasting?: string;
+  perception: Rank;
+  saves: { fortitude: Rank; reflex: Rank; will: Rank };
+  martialWeapons?: boolean;
+  armor: "none" | "light" | "heavy";
+}
+
+// Startkompetenzen laut Klassentabellen im Altbestand (classes/klasse_*.md).
+const classConfig: Record<string, ClassConfig> = {
+  agent: {
+    keyAttributes: ["dexterity", "charisma", "intelligence"],
+    hp: 8,
+    perception: "expert",
+    saves: { fortitude: "trained", reflex: "expert", will: "trained" },
+    armor: "light"
+  },
+  ingenieur: {
+    keyAttributes: ["intelligence"],
+    hp: 8,
+    perception: "trained",
+    saves: { fortitude: "trained", reflex: "expert", will: "trained" },
+    armor: "light"
+  },
+  magier: {
+    keyAttributes: ["intelligence"],
+    hp: 6,
+    spellcasting: "spellcasting.arcane-prepared",
+    perception: "trained",
+    saves: { fortitude: "trained", reflex: "trained", will: "expert" },
+    armor: "none"
+  },
+  mediziner: {
+    keyAttributes: ["wisdom", "intelligence"],
+    hp: 8,
+    perception: "trained",
+    saves: { fortitude: "trained", reflex: "trained", will: "expert" },
+    armor: "light"
+  },
+  okkultist: {
+    keyAttributes: ["charisma"],
+    hp: 6,
+    spellcasting: "spellcasting.occult-spontaneous",
+    perception: "trained",
+    saves: { fortitude: "trained", reflex: "trained", will: "expert" },
+    armor: "none"
+  },
+  raufbold: {
+    keyAttributes: ["strength", "constitution"],
+    hp: 10,
+    perception: "trained",
+    saves: { fortitude: "expert", reflex: "trained", will: "trained" },
+    armor: "light"
+  },
+  schamane: {
+    keyAttributes: ["wisdom"],
+    hp: 8,
+    spellcasting: "spellcasting.primal-prepared",
+    perception: "trained",
+    saves: { fortitude: "trained", reflex: "trained", will: "expert" },
+    armor: "light"
+  },
+  soeldner: {
+    keyAttributes: ["strength", "dexterity"],
+    hp: 10,
+    perception: "trained",
+    saves: { fortitude: "expert", reflex: "trained", will: "trained" },
+    martialWeapons: true,
+    armor: "heavy"
+  },
+  waechter: {
+    keyAttributes: ["constitution", "wisdom"],
+    hp: 10,
+    perception: "trained",
+    saves: { fortitude: "expert", reflex: "trained", will: "expert" },
+    martialWeapons: true,
+    armor: "heavy"
+  }
+};
 
 const migrateClasses = (documents: IndexedDocument[]): void => {
   for (const document of documents.filter((item) =>
@@ -1216,17 +1275,24 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
         hpPerLevel: config.hp,
         trainedSkillChoices: 4,
         initialProficiencies: {
-          perception: "trained",
-          saves: { fortitude: "trained", reflex: "trained", will: "trained" },
+          perception: config.perception,
+          saves: config.saves,
           skills: {},
           weapons: {
             "proficiency.weapon.simple": "trained",
             "proficiency.weapon.ranged": "trained",
-            "proficiency.weapon.unarmed": "trained"
+            "proficiency.weapon.unarmed": "trained",
+            ...(config.martialWeapons === true ? { "proficiency.weapon.martial": "trained" } : {})
           },
           armor: {
             "proficiency.armor.unarmored": "trained",
-            "proficiency.armor.light": "trained"
+            ...(config.armor === "none" ? {} : { "proficiency.armor.light": "trained" }),
+            ...(config.armor === "heavy"
+              ? {
+                  "proficiency.armor.medium": "trained",
+                  "proficiency.armor.heavy": "trained"
+                }
+              : {})
           }
         },
         featureIds: features,
@@ -1239,7 +1305,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
       document.source,
       {
         warnings: [
-          "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+          "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen."
         ],
         manualFields: ["initialProficiencies", "trainedSkillChoices"]
       }

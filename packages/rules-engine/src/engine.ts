@@ -509,11 +509,13 @@ export const calculateCharacter = (
     attributes.map((attribute) => [attribute, 10])
   ) as Record<AttributeId, number>;
   const applyBoost = (attribute: AttributeId, sourceId: string, label: string): void => {
-    attributeValues[attribute] += 2;
+    // Ab Wert 18 bringt eine Attributsverbesserung nur noch +1.
+    const gain = attributeValues[attribute] >= 18 ? 1 : 2;
+    attributeValues[attribute] += gain;
     attributeBreakdowns[attribute].push({
       sourceId,
       label,
-      value: 2,
+      value: gain,
       kind: "rule"
     });
   };
@@ -996,8 +998,13 @@ export const calculateCharacter = (
       })
   );
 
+  // Bei mehreren Schlüsselattributen zählt das höchste (erstes bei Gleichstand).
   const keyAttribute =
-    characterClass?.type === "class" ? characterClass.keyAttributes[0] : undefined;
+    characterClass?.type === "class"
+      ? characterClass.keyAttributes.reduce((best, candidate) =>
+          attributeValues[candidate] > attributeValues[best] ? candidate : best
+        )
+      : undefined;
   const classRank = proficiencyRanks.get("proficiency.class-dc") ?? "untrained";
   const classDc =
     keyAttribute === undefined
@@ -1134,7 +1141,10 @@ export const calculateCharacter = (
     weapons.map((weapon) => {
       const proficiencyId = weapon.categoryId.replace("trait.item.", "proficiency.");
       const rank = proficiencyRanks.get(proficiencyId) ?? "untrained";
-      const attackAttribute = weapon.range === undefined ? "strength" : "dexterity";
+      const attackAttribute =
+        weapon.range !== undefined || weapon.damage.modifier === "dexterity"
+          ? "dexterity"
+          : "strength";
       const damageAttribute = weapon.damage.modifier;
       return [
         weapon.id,

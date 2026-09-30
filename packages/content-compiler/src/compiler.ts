@@ -11,6 +11,7 @@ import {
   type ContentEntity
 } from "@sotc/shared";
 import matter from "gray-matter";
+import YAML from "yaml";
 
 import {
   ContentValidationError,
@@ -128,7 +129,7 @@ const parseEntityFile = async (
   const relativeFile = normalizePath(path.relative(contentDirectory, file));
   let source: string;
   try {
-    source = await readFile(file, "utf8");
+    source = (await readFile(file, "utf8")).replace(/\r\n?/g, "\n");
   } catch (error) {
     return {
       issues: [
@@ -144,7 +145,10 @@ const parseEntityFile = async (
 
   let parsedMatter: matter.GrayMatterFile<string>;
   try {
-    parsedMatter = matter(source);
+    parsedMatter = matter(source, {
+      // gray-matter bringt js-yaml 3.x mit (bekannte Schwachstellen); wir parsen mit `yaml`.
+      engines: { yaml: { parse: (input: string): object => (YAML.parse(input) ?? {}) as object } }
+    });
   } catch (error) {
     return {
       issues: [

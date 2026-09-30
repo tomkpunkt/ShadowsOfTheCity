@@ -614,6 +614,72 @@ describe("calculateCharacter", () => {
     );
   });
 
+  it("reduces attribute boosts to +1 from a score of 18", () => {
+    const boosted = structuredClone(catalog);
+    const ancestry = boosted.entities.find((entity) => entity.id === "ancestry.test");
+    if (ancestry !== undefined && "boosts" in ancestry) {
+      ancestry.boosts = ["strength", "strength"];
+      ancestry.freeBoosts = 2;
+    }
+
+    const result = calculateCharacter(
+      boosted,
+      character({ attributeBoosts: ["strength", "strength", "dexterity"] })
+    );
+
+    // 10 +2 +2 (Abstammung) +2 (Background) +2 (frei) = 18, danach nur noch +1.
+    expect(result.attributes.strength.value).toBe(19);
+    expect(result.attributes.strength.breakdown.map((entry) => entry.value)).toEqual([
+      10, 2, 2, 2, 2, 1
+    ]);
+  });
+
+  it("uses dexterity for attacks with weapons that add dexterity to damage", () => {
+    const bowCatalog = structuredClone(catalog);
+    bowCatalog.entities.push({
+      ...structuredClone(bowCatalog.entities.find((entity) => entity.id === "weapon.club")),
+      id: "weapon.bow",
+      name: "Bogen",
+      damage: {
+        dice: 1,
+        die: "d6",
+        type: "damage.piercing",
+        modifier: "dexterity",
+        flat: 0
+      }
+    } as (typeof bowCatalog.entities)[number]);
+    const document = character({ inventoryIds: ["weapon.bow"] });
+    document.session.itemStates = {
+      "weapon.bow": {
+        quantity: 1,
+        equipped: true,
+        active: false,
+        consumed: 0,
+        location: "equipped"
+      }
+    };
+
+    const result = calculateCharacter(bowCatalog, document);
+
+    expect(result.weaponAttacks["weapon.bow"]?.attack.breakdown[0]?.sourceId).toBe(
+      "attribute.dexterity"
+    );
+  });
+
+  it("derives the class DC from the highest key attribute", () => {
+    const keyCatalog = structuredClone(catalog);
+    const characterClass = keyCatalog.entities.find((entity) => entity.id === "class.test");
+    if (characterClass !== undefined && "keyAttributes" in characterClass) {
+      characterClass.keyAttributes = ["dexterity", "strength"];
+    }
+
+    const result = calculateCharacter(keyCatalog, character());
+
+    expect(result.classDc?.breakdown.some((entry) => entry.sourceId === "attribute.strength")).toBe(
+      true
+    );
+  });
+
   it("is deterministic for equal catalog and decisions", () => {
     expect(calculateCharacter(catalog, character())).toEqual(
       calculateCharacter(catalog, character())

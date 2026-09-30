@@ -1,13 +1,13 @@
 # Builder-Reichweite
 
-Automatischer Stand für Katalog `5c5f15d14c64efea91cbed05cd56658fe2623d6572776e46190e0ed801d68b7b`.
+Automatischer Stand für Katalog `a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5`.
 
 ## Ergebnis
 
-- 911 Entitäten geprüft
-- 911 im Builder oder Kompendium erreichbar
+- 912 Entitäten geprüft
+- 912 im Builder oder Kompendium erreichbar
 - 530 auswählbar
-- 301 automatisch oder durch eine Auswahl eingebunden
+- 302 automatisch oder durch eine Auswahl eingebunden
 - 80 informativ im Kompendium
 - 0 ausdrücklich ausgenommen
 - 0 blockierende Befunde
@@ -25,7 +25,7 @@ Automatischer Stand für Katalog `5c5f15d14c64efea91cbed05cd56658fe2623d6572776e
 | `feat` | 195 | 195 | 148 | 8 | 39 | 0 |
 | `heritage` | 40 | 40 | 40 | 0 | 0 | 0 |
 | `language` | 10 | 10 | 0 | 10 | 0 | 0 |
-| `proficiency` | 16 | 16 | 0 | 16 | 0 | 0 |
+| `proficiency` | 17 | 17 | 0 | 17 | 0 | 0 |
 | `rule` | 4 | 4 | 0 | 0 | 4 | 0 |
 | `skill` | 19 | 19 | 19 | 0 | 0 | 0 |
 | `spell` | 14 | 14 | 14 | 0 | 0 | 0 |

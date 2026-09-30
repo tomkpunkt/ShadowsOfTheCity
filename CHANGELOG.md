@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Behoben
+
+- Fernkampfwaffen hatten keine Kompetenz und waren fuer jede Klasse ungeuebt;
+  neue Kompetenz `proficiency.weapon.ranged`, alle Klassen starten geuebt
+- Katalog-Hash unabhaengig von Zeilenenden; Attributsverbesserungen ab 18 nur
+  noch +1; Bogen greifen mit Geschicklichkeit an; Klassen-SG nutzt das hoechste
+  Schluesselattribut
+
 ## 0.1.2 - 2026-07-31
 
 ### Hinzugefuegt

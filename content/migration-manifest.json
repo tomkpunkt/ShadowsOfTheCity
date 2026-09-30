@@ -11,7 +11,7 @@
     "feat": 195,
     "heritage": 40,
     "language": 10,
-    "proficiency": 16,
+    "proficiency": 17,
     "rule": 4,
     "skill": 19,
     "spell": 14,
@@ -42,7 +42,7 @@
     "weapon": 40
   },
   "generatedAt": "deterministic-from-repository",
-  "generatedEntityCount": 737,
+  "generatedEntityCount": 738,
   "schemaVersion": 1,
   "sourceCount": 64,
   "sources": [
@@ -1349,6 +1349,7 @@
         "proficiency.spell.primal",
         "proficiency.weapon.firearm",
         "proficiency.weapon.martial",
+        "proficiency.weapon.ranged",
         "proficiency.weapon.simple",
         "proficiency.weapon.unarmed",
         "rule.actions-per-turn",

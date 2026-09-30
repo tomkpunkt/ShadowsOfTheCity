@@ -11,7 +11,7 @@
     "feat": 195,
     "heritage": 40,
     "language": 10,
-    "proficiency": 16,
+    "proficiency": 17,
     "rule": 4,
     "skill": 19,
     "spell": 14,
@@ -19,8 +19,8 @@
     "trait": 30,
     "weapon": 64
   },
-  "entitiesParsed": 911,
-  "filesScanned": 911,
+  "entitiesParsed": 912,
+  "filesScanned": 912,
   "issues": [],
   "valid": true
 }

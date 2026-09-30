@@ -2,13 +2,13 @@
 
 ## Ergebnis
 
-Der Katalog enthält 911 redaktionelle Regeltexte für 911 Entitäten, darunter 410 ausdrücklich als Text-Effekt modellierte Wirkungen. 27 Entitäten besitzen mindestens einen strukturierten Regeleffekt. In diesem Auftrag wurden bewusst 0 Freitextregeln neu formalisiert: Die Quelle benennt bei vielen Boni weder Stapelungsart noch Dauer oder eindeutige Ziel-ID. Eine Automatisierung wäre daher eine neue Regelentscheidung.
+Der Katalog enthält 912 redaktionelle Regeltexte für 912 Entitäten, darunter 410 ausdrücklich als Text-Effekt modellierte Wirkungen. 27 Entitäten besitzen mindestens einen strukturierten Regeleffekt. In diesem Auftrag wurden bewusst 0 Freitextregeln neu formalisiert: Die Quelle benennt bei vielen Boni weder Stapelungsart noch Dauer oder eindeutige Ziel-ID. Eine Automatisierung wäre daher eine neue Regelentscheidung.
 
 | Klasse | Freitextregeln |
 |:--|:--|
 | character-value | 119 |
 | combat-value | 102 |
-| narrative | 355 |
+| narrative | 356 |
 | prerequisite | 31 |
 | selection | 188 |
 | situational-text-rule | 103 |

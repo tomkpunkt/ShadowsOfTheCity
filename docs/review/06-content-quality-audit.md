@@ -1,11 +1,11 @@
 # Inhaltsqualitätsaudit
 
-Automatischer Stand für Katalog `5c5f15d14c64efea91cbed05cd56658fe2623d6572776e46190e0ed801d68b7b`.
+Automatischer Stand für Katalog `a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5`.
 
 ## Ergebnis
 
-- 911 Entitäten geprüft
-- 911 vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details
+- 912 Entitäten geprüft
+- 912 vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details
 - 42 Alttexte mit weniger als 40 Klartextzeichen
 - 0 leere Beschreibungen
 - 0 sichtbare Platzhalter

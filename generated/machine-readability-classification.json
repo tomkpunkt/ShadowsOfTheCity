@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5",
+  "catalogHash": "dc1dd600b8fdd004ec0b1abb8e7bf31c31019cfcd972f02d523d2c0c1e2c4aa2",
   "summary": {
-    "textRules": 912,
-    "entitiesWithTextRules": 912,
+    "textRules": 927,
+    "entitiesWithTextRules": 927,
     "explicitTextEffects": 410,
     "entitiesWithMachineRules": 27,
     "classifications": {
@@ -11,7 +11,7 @@
       "combat-value": 102,
       "narrative": 356,
       "prerequisite": 31,
-      "selection": 188,
+      "selection": 203,
       "situational-text-rule": 103,
       "unresolved": 13
     },
@@ -1970,6 +1970,56 @@
       "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
     },
     {
+      "entityId": "choice.general-feat.11",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 11 ein allgemeines Talent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.general-feat.15",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 15 ein allgemeines Talent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.general-feat.19",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 19 ein allgemeines Talent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.general-feat.3",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 3 ein allgemeines Talent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.general-feat.7",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 7 ein allgemeines Talent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
       "entityId": "choice.heritage.elf",
       "entityType": "choice",
       "sourceField": "rulesText",
@@ -2096,6 +2146,106 @@
       "textEffectCount": 0,
       "classification": "selection",
       "text": "Wähle für Schamane eine Option der Klassenfunktion Geisterpfad.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.10",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 10 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.12",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 12 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.14",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 14 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.16",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 16 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.18",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 18 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.2",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 2 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.20",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 20 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.4",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 4 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.6",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 6 ein Fertigkeitstalent.",
+      "alreadyHasMachineRule": false,
+      "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
+    },
+    {
+      "entityId": "choice.skill-feat.8",
+      "entityType": "choice",
+      "sourceField": "rulesText",
+      "textEffectCount": 0,
+      "classification": "selection",
+      "text": "Wähle auf Stufe 8 ein Fertigkeitstalent.",
       "alreadyHasMachineRule": false,
       "recommendation": "Gegen bestehende Choice-Filter prüfen und nur eindeutige Kandidatenmengen formalisieren."
     },

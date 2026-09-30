@@ -11,7 +11,7 @@ bleibt dadurch reproduzierbar.
 | `ancestry` | 8 |
 | `armor` | 26 |
 | `background` | 8 |
-| `choice` | 168 |
+| `choice` | 183 |
 | `class` | 9 |
 | `class-feature` | 99 |
 | `creature` | 34 |
@@ -29,14 +29,14 @@ bleibt dadurch reproduzierbar.
 
 ## Automatisierte Qualitätszahlen
 
-- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 912
+- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 927
 - Leere Beschreibungen: 0
 - Alttexte mit weniger als 40 Klartextzeichen: 42
 - Verdächtige technische Labels: 0
 - Sichtbare Platzhaltermuster: 0
 - Entitäten mit Markdown-Struktur: 139
 - Entitäten mit nicht maschinenlesbarer Textregel: 410
-- Katalogfelder, die vor diesem Auftrag nicht in der generischen Detailansicht sichtbar waren: 66
+- Katalogfelder, die vor diesem Auftrag nicht in der generischen Detailansicht sichtbar waren: 67
 
 ## UI-Ausgangslage
 
@@ -98,6 +98,7 @@ bleibt dadurch reproduzierbar.
 - `prerequisites`
 - `priceGp`
 - `proficiencyByLevel`
+- `proficiencyIncreases`
 - `range`
 - `rarity`
 - `references`

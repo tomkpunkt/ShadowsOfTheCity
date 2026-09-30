@@ -292,13 +292,27 @@ const resolveChoice = (
       ? [context.character.heritageId]
       : []);
   const choiceFailures = evaluatePredicates(choice.choice.prerequisites, context);
+  const chosenElsewhere = new Set(
+    Object.entries(context.character.choices)
+      .filter(([otherId]) => otherId !== choice.id)
+      .flatMap(([, ids]) => ids)
+  );
   const options: ChoiceOption[] = [...context.entities.values()]
     .filter((entity) => entityMatchesChoice(entity, choice))
     .map((entity): ChoiceOption => {
       const decisionFailures = rulesDecisionFailures(entity);
       const failures = [
         ...decisionFailures,
-        ...evaluatePredicates(entityPrerequisites(entity), context)
+        ...evaluatePredicates(entityPrerequisites(entity), context),
+        ...(entity.type === "feat" && !choice.choice.repeatable && chosenElsewhere.has(entity.id)
+          ? [
+              {
+                code: "FEAT_ALREADY_CHOSEN",
+                message: `${entity.name} wurde bereits in einer anderen Talentauswahl gewählt.`,
+                predicate: { all: [] }
+              }
+            ]
+          : [])
       ];
       const selected = selectedIds.includes(entity.id);
       return {

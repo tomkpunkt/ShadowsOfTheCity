@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5",
+  "catalogHash": "dc1dd600b8fdd004ec0b1abb8e7bf31c31019cfcd972f02d523d2c0c1e2c4aa2",
   "summary": {
-    "entities": 912,
-    "activeEntities": 899,
+    "entities": 927,
+    "activeEntities": 914,
     "drafts": 13,
     "editorialStatus": {
       "needs-rules-decision": 13,
-      "reviewed": 804,
+      "reviewed": 819,
       "rewritten": 95
     },
     "textRuleEntities": 410,
     "machineRuleEntities": 27,
     "exactDuplicateGroups": 0,
-    "nearSimilarSummaries": 288,
-    "averageSummaryLength": 82.2,
+    "nearSimilarSummaries": 304,
+    "averageSummaryLength": 81.5,
     "medianSummaryLength": 82,
-    "summariesBelow80Characters": 422,
+    "summariesBelow80Characters": 437,
     "manualReviewRequired": 13,
     "blockers": 0,
     "manualReview": 69
@@ -41,8 +41,8 @@
       "drafts": 0
     },
     "choice": {
-      "entities": 168,
-      "reviewed": 168,
+      "entities": 183,
+      "reviewed": 183,
       "rewritten": 0,
       "drafts": 0
     },
@@ -6059,7 +6059,165 @@
       "prerequisiteCount": 0,
       "typedTextContradictionFindings": [],
       "repeatedSummary": false,
-      "nearestSimilarSummary": null,
+      "nearestSimilarSummary": {
+        "entityId": "choice.general-feat.11",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.general-feat.11",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 11",
+      "path": "content/choice/choice.general-feat.11.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 42,
+      "rulesTextLength": 42,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.general-feat.1",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.general-feat.15",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 15",
+      "path": "content/choice/choice.general-feat.15.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 42,
+      "rulesTextLength": 42,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.general-feat.1",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.general-feat.19",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 19",
+      "path": "content/choice/choice.general-feat.19.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 42,
+      "rulesTextLength": 42,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.general-feat.1",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.general-feat.3",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 3",
+      "path": "content/choice/choice.general-feat.3.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.general-feat.1",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.general-feat.7",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 7",
+      "path": "content/choice/choice.general-feat.7.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.general-feat.1",
+        "score": 1
+      },
       "semanticReviewHints": [],
       "manualReviewRequired": false
     },
@@ -6448,6 +6606,316 @@
       "typedTextContradictionFindings": [],
       "repeatedSummary": false,
       "nearestSimilarSummary": null,
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.10",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 10",
+      "path": "content/choice/choice.skill-feat.10.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.12",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.12",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 12",
+      "path": "content/choice/choice.skill-feat.12.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.14",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 14",
+      "path": "content/choice/choice.skill-feat.14.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.16",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 16",
+      "path": "content/choice/choice.skill-feat.16.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.18",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 18",
+      "path": "content/choice/choice.skill-feat.18.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.2",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 2",
+      "path": "content/choice/choice.skill-feat.2.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 40,
+      "rulesTextLength": 40,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.20",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 20",
+      "path": "content/choice/choice.skill-feat.20.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 41,
+      "rulesTextLength": 41,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.4",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 4",
+      "path": "content/choice/choice.skill-feat.4.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 40,
+      "rulesTextLength": 40,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.6",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 6",
+      "path": "content/choice/choice.skill-feat.6.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 40,
+      "rulesTextLength": 40,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
+      "semanticReviewHints": [],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "choice.skill-feat.8",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 8",
+      "path": "content/choice/choice.skill-feat.8.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 40,
+      "rulesTextLength": 40,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": true,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "choice.skill-feat.10",
+        "score": 1
+      },
       "semanticReviewHints": [],
       "manualReviewRequired": false
     },

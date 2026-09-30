@@ -377,4 +377,61 @@ describe("v0.1.2 equipment catalog", () => {
 
     expect(codes(evaluate(3, { "3": ["feat.nonexistent"] }))).toContain("UNKNOWN_SKILL_INCREASE");
   });
+
+  it("offers general feats from level 3 and optional skill feats on even levels", () => {
+    const { character } = completeLevelOneCharacter(
+      "ancestry.mensch",
+      "background.worker",
+      "class.soldner"
+    );
+    const evaluate = (level: number, choices: Record<string, string[]> = {}) =>
+      calculateCharacter(catalog, {
+        formatVersion: 3,
+        contentSchemaVersion: 1,
+        catalogHash: catalog.contentHash,
+        createdWithVersion: "0.1.2",
+        lastSavedWithVersion: "0.1.2",
+        build: { ...character, level, choices: { ...character.choices, ...choices } },
+        session: emptySessionState(),
+        migrations: [],
+        legacyValues: {}
+      });
+    const choiceIds = (level: number) =>
+      evaluate(level)
+        .choices.map((choice) => choice.choiceId)
+        .filter(
+          (id) => id.startsWith("choice.general-feat.") || id.startsWith("choice.skill-feat.")
+        )
+        .sort();
+
+    expect(choiceIds(1)).toEqual(["choice.general-feat.1"]);
+    expect(choiceIds(2)).toEqual(["choice.general-feat.1", "choice.skill-feat.2"]);
+    expect(choiceIds(3)).toEqual([
+      "choice.general-feat.1",
+      "choice.general-feat.3",
+      "choice.skill-feat.2"
+    ]);
+    expect(choiceIds(20)).toHaveLength(6 + 10);
+
+    const slot = (result: CalculatedCharacter, id: string) =>
+      result.choices.find((choice) => choice.choiceId === id);
+    expect(slot(evaluate(3), "choice.general-feat.3")?.state).toBe("incomplete");
+    expect(slot(evaluate(2), "choice.skill-feat.2")?.state).toBe("valid");
+
+    // Ein Talent darf nicht in zwei Auswahlen stehen.
+    const first = character.choices["choice.general-feat.1"]?.[0];
+    if (first === undefined) throw new Error("Fixture has no general feat");
+    const duplicate = evaluate(3, { "choice.general-feat.3": [first] });
+    expect(slot(duplicate, "choice.general-feat.3")?.state).toBe("invalid");
+    expect(slot(duplicate, "choice.general-feat.1")?.state).toBe("invalid");
+
+    const other = slot(evaluate(3), "choice.general-feat.3")?.options.find(
+      (option) => option.status === "available"
+    );
+    if (other === undefined) throw new Error("No available general feat");
+    expect(
+      slot(evaluate(3, { "choice.general-feat.3": [other.entity.id] }), "choice.general-feat.3")
+        ?.state
+    ).toBe("valid");
+  });
 });

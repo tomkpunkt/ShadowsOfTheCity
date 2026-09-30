@@ -896,38 +896,80 @@ const migrateSupportingEntities = (): void => {
     );
   }
 
-  addEntity(
-    {
-      id: "choice.general-feat.1",
-      type: "choice",
-      name: "Allgemeines Talent Stufe 1",
-      status: "playtest",
-      choice: {
-        id: "choice.general-feat.1",
-        level: 1,
-        kind: "feat",
-        min: 1,
-        max: 1,
-        filter: {
-          entityTypes: ["feat"],
-          category: "general",
-          maxLevel: 1
-        },
-        prerequisites: [],
-        effects: [],
-        excludes: [],
-        repeatable: false
+  // Talent-Zeitplan nach Pathfinder 2e: Allgemeintalente auf Stufe 1 (Testinhalt) und
+  // 3, 7, 11, 15, 19; Fertigkeitstalente auf jeder geraden Stufe.
+  const generalFeatLevels = [1, 3, 7, 11, 15, 19];
+  const skillFeatLevels = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+  for (const level of generalFeatLevels) {
+    const id = `choice.general-feat.${String(level)}`;
+    addEntity(
+      {
+        id,
+        type: "choice",
+        name: `Allgemeines Talent Stufe ${String(level)}`,
+        status: "playtest",
+        choice: {
+          id,
+          level,
+          kind: "feat",
+          min: 1,
+          max: 1,
+          filter: {
+            entityTypes: ["feat"],
+            category: "general",
+            maxLevel: level
+          },
+          prerequisites: [],
+          effects: [],
+          excludes: [],
+          repeatable: false
+        }
+      },
+      [sourcePath],
+      `Wähle auf Stufe ${String(level)} ein allgemeines Talent.`,
+      {
+        warnings: [
+          "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
+        ],
+        manualFields: ["level", "min", "max"]
       }
-    },
-    [sourcePath],
-    "Wähle auf Stufe 1 ein allgemeines Talent.",
-    {
-      warnings: [
-        "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
-      ],
-      manualFields: ["level", "min", "max"]
-    }
-  );
+    );
+  }
+  for (const level of skillFeatLevels) {
+    const id = `choice.skill-feat.${String(level)}`;
+    addEntity(
+      {
+        id,
+        type: "choice",
+        name: `Fertigkeitstalent Stufe ${String(level)}`,
+        status: "playtest",
+        choice: {
+          id,
+          level,
+          kind: "feat",
+          min: 0,
+          max: 1,
+          filter: {
+            entityTypes: ["feat"],
+            category: "skill",
+            maxLevel: level
+          },
+          prerequisites: [],
+          effects: [],
+          excludes: [],
+          repeatable: false
+        }
+      },
+      [sourcePath],
+      `Wähle auf Stufe ${String(level)} ein Fertigkeitstalent.`,
+      {
+        warnings: [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        manualFields: ["level", "min", "max"]
+      }
+    );
+  }
 };
 
 type Rank = "trained" | "expert";

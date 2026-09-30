@@ -2,11 +2,11 @@
 
 ## Ergebnis
 
-- Katalog: 912 Entitäten, davon 899 aktiv und 13 Entwürfe.
-- Status: needs-rules-decision 13, reviewed 804, rewritten 95.
+- Katalog: 927 Entitäten, davon 914 aktiv und 13 Entwürfe.
+- Status: needs-rules-decision 13, reviewed 819, rewritten 95.
 - Wortgleiche Zusammenfassungsgruppen: 0.
-- Durchschnittliche/mediane Kurztextlänge: 82.2/82 Zeichen; 422 Kurztexte liegen unter dem Orientierungswert von 80 Zeichen.
-- Ähnlichkeitskandidaten: 288; manuelle Nachprüfung laut Heuristik: 13.
+- Durchschnittliche/mediane Kurztextlänge: 81.5/82 Zeichen; 437 Kurztexte liegen unter dem Orientierungswert von 80 Zeichen.
+- Ähnlichkeitskandidaten: 304; manuelle Nachprüfung laut Heuristik: 13.
 - Blocker: 0; manuell zu prüfende Hinweise: 69.
 
 ## Abdeckung nach Typ
@@ -16,7 +16,7 @@
 | ancestry | 8 | 8 | 0 | 0 |
 | armor | 26 | 26 | 12 | 0 |
 | background | 8 | 8 | 8 | 0 |
-| choice | 168 | 168 | 0 | 0 |
+| choice | 183 | 183 | 0 | 0 |
 | class | 9 | 9 | 0 | 0 |
 | class-feature | 99 | 99 | 0 | 0 |
 | creature | 34 | 34 | 0 | 0 |

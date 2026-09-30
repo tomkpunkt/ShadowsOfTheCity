@@ -1,14 +1,14 @@
 # Builder-Reichweite
 
-Automatischer Stand für Katalog `a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5`.
+Automatischer Stand für Katalog `dc1dd600b8fdd004ec0b1abb8e7bf31c31019cfcd972f02d523d2c0c1e2c4aa2`.
 
 ## Ergebnis
 
-- 912 Entitäten geprüft
-- 912 im Builder oder Kompendium erreichbar
-- 530 auswählbar
-- 302 automatisch oder durch eine Auswahl eingebunden
-- 80 informativ im Kompendium
+- 927 Entitäten geprüft
+- 927 im Builder oder Kompendium erreichbar
+- 535 auswählbar
+- 317 automatisch oder durch eine Auswahl eingebunden
+- 75 informativ im Kompendium
 - 0 ausdrücklich ausgenommen
 - 0 blockierende Befunde
 
@@ -17,12 +17,12 @@ Automatischer Stand für Katalog `a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd
 | `ancestry` | 8 | 8 | 8 | 0 | 0 | 0 |
 | `armor` | 26 | 26 | 26 | 0 | 0 | 0 |
 | `background` | 8 | 8 | 8 | 0 | 0 | 0 |
-| `choice` | 168 | 168 | 0 | 168 | 0 | 0 |
+| `choice` | 183 | 183 | 0 | 183 | 0 | 0 |
 | `class` | 9 | 9 | 9 | 0 | 0 | 0 |
 | `class-feature` | 99 | 99 | 30 | 69 | 0 | 0 |
 | `creature` | 34 | 34 | 0 | 0 | 34 | 0 |
 | `equipment` | 164 | 164 | 164 | 0 | 0 | 0 |
-| `feat` | 195 | 195 | 148 | 8 | 39 | 0 |
+| `feat` | 195 | 195 | 153 | 8 | 34 | 0 |
 | `heritage` | 40 | 40 | 40 | 0 | 0 | 0 |
 | `language` | 10 | 10 | 0 | 10 | 0 | 0 |
 | `proficiency` | 17 | 17 | 0 | 17 | 0 | 0 |

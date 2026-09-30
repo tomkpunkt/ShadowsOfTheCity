@@ -4,6 +4,11 @@
 
 ### Hinzugefuegt
 
+- Fertigkeitssteigerungen nach Pathfinder 2e: ab Stufe 3 alle zwei Stufen eine
+  Steigerung um einen Rang (`skillIncreases`, im Builder unter Fertigkeiten);
+  Expert ab Stufe 3, Master ab Stufe 7, Legendary ab Stufe 15
+### Hinzugefuegt
+
 - Progressionsmodell nach Pathfinder 2e (Remaster) als Standard: je Klasse
   `proficiencyIncreases` (Waffen, Ruestung, Wahrnehmung, Rettungswuerfe,
   Klassen-SG) und vier Attributsverbesserungen auf Stufe 5, 10, 15 und 20

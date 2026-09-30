@@ -1,5 +1,6 @@
 import {
   ATTRIBUTE_BOOST_LEVELS,
+  SKILL_INCREASE_LEVELS,
   CatalogSchema,
   CharacterDocumentSchema,
   CharacterSessionStateSchema,
@@ -632,6 +633,58 @@ export const calculateCharacter = (
         }
       }
     }
+  }
+
+  // Fertigkeitssteigerungen (PF2e): ab Stufe 3 alle 2 Stufen eine Steigerung um einen Rang.
+  // Expert ab Stufe 3, Master ab Stufe 7, Legendary ab Stufe 15.
+  const skillRankSteps: ProficiencyRank[] = [
+    "untrained",
+    "trained",
+    "expert",
+    "master",
+    "legendary"
+  ];
+  const skillRankMinimumLevel: Record<string, number> = {
+    trained: 1,
+    expert: 3,
+    master: 7,
+    legendary: 15
+  };
+  const skillIncreaseIssueLevels: string[] = [];
+  let skillIncreasesInvalid = false;
+  for (const increaseLevel of SKILL_INCREASE_LEVELS) {
+    if (increaseLevel > character.level) continue;
+    const skillId = character.skillIncreases?.[String(increaseLevel) as "3"]?.[0];
+    if (skillId === undefined) {
+      skillIncreaseIssueLevels.push(String(increaseLevel));
+      issues.push({
+        code: "MISSING_SKILL_INCREASE",
+        state: "incomplete",
+        message: `Stufe ${String(increaseLevel)}: Eine Fertigkeitssteigerung fehlt.`
+      });
+      continue;
+    }
+    if (entities.get(skillId)?.type !== "skill") {
+      skillIncreasesInvalid = true;
+      issues.push({
+        code: "UNKNOWN_SKILL_INCREASE",
+        state: "invalid",
+        message: `Stufe ${String(increaseLevel)}: ${skillId} ist keine Fertigkeit.`
+      });
+      continue;
+    }
+    const current = proficiencyRanks.get(skillId) ?? "untrained";
+    const next = skillRankSteps[skillRankSteps.indexOf(current) + 1];
+    if (next === undefined || (skillRankMinimumLevel[next] ?? 99) > increaseLevel) {
+      skillIncreasesInvalid = true;
+      issues.push({
+        code: "SKILL_INCREASE_RANK_TOO_HIGH",
+        state: "invalid",
+        message: `Stufe ${String(increaseLevel)}: ${entities.get(skillId)?.name ?? skillId} kann noch nicht weiter gesteigert werden.`
+      });
+      continue;
+    }
+    proficiencyRanks.set(skillId, next);
   }
 
   const selectedIds = selectedEntityIds(character);
@@ -1474,7 +1527,14 @@ export const calculateCharacter = (
       choiceSectionState(["class-option"])
     ]),
     attributes: attributeState,
-    skills: choiceSectionState(["skill"]),
+    skills: aggregateSectionState([
+      choiceSectionState(["skill"]),
+      skillIncreasesInvalid
+        ? "invalid"
+        : skillIncreaseIssueLevels.length > 0
+          ? "incomplete"
+          : "valid"
+    ]),
     feats: choiceSectionState(["feat"]),
     spells:
       progression?.type === "spellcasting-progression"

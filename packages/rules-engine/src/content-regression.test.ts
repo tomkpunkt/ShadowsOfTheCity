@@ -326,4 +326,55 @@ describe("v0.1.2 equipment catalog", () => {
     const stale = evaluate(4, { "5": chosen });
     expect(stale.attributes.strength.value).toBe(base.attributes.strength.value);
   });
+
+  it("applies and validates skill increases from level 3", () => {
+    const { character } = completeLevelOneCharacter(
+      "ancestry.mensch",
+      "background.worker",
+      "class.soldner"
+    );
+    const trained = Object.values(character.choices)
+      .flat()
+      .filter((id) => entities.get(id)?.type === "skill");
+    const skill = trained[0];
+    if (skill === undefined) throw new Error("Fixture has no trained skill");
+    const evaluate = (level: number, skillIncreases?: Record<string, string[]>) =>
+      calculateCharacter(catalog, {
+        formatVersion: 3,
+        contentSchemaVersion: 1,
+        catalogHash: catalog.contentHash,
+        createdWithVersion: "0.1.2",
+        lastSavedWithVersion: "0.1.2",
+        build: { ...character, level, ...(skillIncreases === undefined ? {} : { skillIncreases }) },
+        session: emptySessionState(),
+        migrations: [],
+        legacyValues: {}
+      });
+    const codes = (result: CalculatedCharacter) => result.issues.map((issue) => issue.code);
+
+    expect(codes(evaluate(2))).not.toContain("MISSING_SKILL_INCREASE");
+    expect(codes(evaluate(3))).toContain("MISSING_SKILL_INCREASE");
+    expect(evaluate(3, { "3": [skill] }).proficiencies[skill]).toBe("expert");
+    expect(codes(evaluate(3, { "3": [skill] }))).not.toContain("MISSING_SKILL_INCREASE");
+
+    // Master erst ab Stufe 7
+    expect(codes(evaluate(5, { "3": [skill], "5": [skill] }))).toContain(
+      "SKILL_INCREASE_RANK_TOO_HIGH"
+    );
+    expect(evaluate(7, { "3": [skill], "5": [], "7": [skill] }).proficiencies[skill]).toBe(
+      "master"
+    );
+
+    // Untrainierte Fertigkeit wird geübt
+    const untrained = catalog.entities.find(
+      (entity) =>
+        entity.type === "skill" &&
+        !trained.includes(entity.id) &&
+        !evaluate(1).proficiencies[entity.id]
+    );
+    if (untrained === undefined) throw new Error("No untrained skill");
+    expect(evaluate(3, { "3": [untrained.id] }).proficiencies[untrained.id]).toBe("trained");
+
+    expect(codes(evaluate(3, { "3": ["feat.nonexistent"] }))).toContain("UNKNOWN_SKILL_INCREASE");
+  });
 });

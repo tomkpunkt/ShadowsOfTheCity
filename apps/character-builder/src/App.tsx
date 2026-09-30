@@ -46,7 +46,12 @@ import {
   type ResolvedChoice,
   type ValidationState
 } from "@sotc/rules-engine";
-import { APP_VERSION, ATTRIBUTE_BOOST_LEVELS, type ContentEntity } from "@sotc/shared";
+import {
+  APP_VERSION,
+  ATTRIBUTE_BOOST_LEVELS,
+  SKILL_INCREASE_LEVELS,
+  type ContentEntity
+} from "@sotc/shared";
 
 import { catalog, entities, entitiesOfType, entityName } from "./catalog.js";
 import { entityMeta, searchableEntityText } from "./entity-presentation.js";
@@ -1001,6 +1006,51 @@ export const App = () => {
     </section>
   );
 
+  const renderSkillIncreases = () => {
+    const levels = SKILL_INCREASE_LEVELS.filter(
+      (increaseLevel) => increaseLevel <= character.level
+    );
+    if (levels.length === 0) return null;
+    const skills = entitiesOfType("skill");
+    return (
+      <section className="workspace-section">
+        <header className="section-heading">
+          <div>
+            <h2>Fertigkeitssteigerungen</h2>
+            <p>Ab Stufe 3 alle 2 Stufen eine Steigerung um einen Rang</p>
+          </div>
+        </header>
+        {levels.map((increaseLevel) => {
+          const key = String(increaseLevel) as "3";
+          const chosen = character.skillIncreases?.[key]?.[0] ?? "";
+          return (
+            <label key={increaseLevel} className="skill-increase">
+              <span>Stufe {String(increaseLevel)}</span>
+              <select
+                value={chosen}
+                onChange={(event) =>
+                  update({
+                    skillIncreases: {
+                      ...character.skillIncreases,
+                      [key]: event.target.value === "" ? [] : [event.target.value]
+                    }
+                  })
+                }
+              >
+                <option value="">Fertigkeit wählen</option>
+                {skills.map((skill) => (
+                  <option key={skill.id} value={skill.id}>
+                    {skill.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          );
+        })}
+      </section>
+    );
+  };
+
   const renderChoices = (kind: string, title: string, subtitle: string) => {
     const choices = choicesByKind(kind);
     return (
@@ -1199,8 +1249,12 @@ export const App = () => {
     ),
     class: renderClass,
     attributes: renderAttributes,
-    skills: () =>
-      renderChoices("skill", "Fertigkeiten", "Wähle die Fertigkeitstrainings deiner Klasse"),
+    skills: () => (
+      <>
+        {renderChoices("skill", "Fertigkeiten", "Wähle die Fertigkeitstrainings deiner Klasse")}
+        {renderSkillIncreases()}
+      </>
+    ),
     feats: renderFeats,
     spells: () => renderChoices("spell", "Zauber", "Verfügbare Zauber nach Tradition und Rang"),
     equipment: renderEquipment,

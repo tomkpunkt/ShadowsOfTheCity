@@ -523,6 +523,8 @@ const SessionEntryIdSchema = z
 
 export const ATTRIBUTE_BOOST_LEVELS = [5, 10, 15, 20] as const;
 export const LevelBoostKeySchema = z.enum(["5", "10", "15", "20"]);
+export const SKILL_INCREASE_LEVELS = [3, 5, 7, 9, 11, 13, 15, 17, 19] as const;
+export const SkillIncreaseKeySchema = z.enum(["3", "5", "7", "9", "11", "13", "15", "17", "19"]);
 
 export const CharacterBuildSchema = z
   .object({
@@ -535,6 +537,9 @@ export const CharacterBuildSchema = z
     choices: z.record(EntityIdSchema, z.array(EntityIdSchema)),
     attributeBoosts: z.array(AttributeIdSchema),
     levelBoosts: z.partialRecord(LevelBoostKeySchema, z.array(AttributeIdSchema).max(4)).optional(),
+    skillIncreases: z
+      .partialRecord(SkillIncreaseKeySchema, z.array(EntityIdSchema).max(1))
+      .optional(),
     inventoryIds: z.array(EntityIdSchema),
     options: z.record(EntityIdSchema, z.union([z.string(), z.number(), z.boolean()])).default({}),
     notes: z.string().optional(),

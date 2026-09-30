@@ -3,7 +3,7 @@
     "ancestry": 8,
     "armor": 12,
     "background": 8,
-    "choice": 168,
+    "choice": 183,
     "class": 9,
     "class-feature": 99,
     "creature": 34,
@@ -42,7 +42,7 @@
     "weapon": 40
   },
   "generatedAt": "deterministic-from-repository",
-  "generatedEntityCount": 738,
+  "generatedEntityCount": 753,
   "schemaVersion": 1,
   "sourceCount": 64,
   "sources": [
@@ -273,9 +273,9 @@
       ],
       "path": "classes/klasse_agent.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
-        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
       ]
     },
     {
@@ -332,9 +332,9 @@
       ],
       "path": "classes/klasse_ingenieur.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
-        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
       ]
     },
     {
@@ -395,10 +395,10 @@
       ],
       "path": "classes/klasse_magier.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
         "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
         "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
       ]
     },
@@ -456,9 +456,9 @@
       ],
       "path": "classes/klasse_mediziner.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
-        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
       ]
     },
     {
@@ -519,10 +519,10 @@
       ],
       "path": "classes/klasse_okkultist.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
         "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
         "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
       ]
     },
@@ -574,9 +574,9 @@
       ],
       "path": "classes/klasse_raufbold.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
-        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
       ]
     },
     {
@@ -637,10 +637,10 @@
       ],
       "path": "classes/klasse_schamane.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
         "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
         "Die genaue Anzahl bekannter oder vorbereiteter Zauber bleibt eine Playtest-Regel.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.",
         "Slot- und Proficiency-Progression benötigt Playtest-Balancing."
       ]
     },
@@ -696,9 +696,9 @@
       ],
       "path": "classes/klasse_soeldner.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
-        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
       ]
     },
     {
@@ -753,9 +753,9 @@
       ],
       "path": "classes/klasse_waechter.md",
       "warnings": [
+        "Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.",
         "Der Altbestand definiert keine Archetyp-Stufe oder Erwerbskosten.",
-        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen.",
-        "Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing."
+        "Der Altbestand nennt klassenabhängige Formeln; vorläufig gelten vier feste Auswahlen."
       ]
     },
     {
@@ -1325,6 +1325,21 @@
     {
       "entityIds": [
         "choice.general-feat.1",
+        "choice.general-feat.11",
+        "choice.general-feat.15",
+        "choice.general-feat.19",
+        "choice.general-feat.3",
+        "choice.general-feat.7",
+        "choice.skill-feat.10",
+        "choice.skill-feat.12",
+        "choice.skill-feat.14",
+        "choice.skill-feat.16",
+        "choice.skill-feat.18",
+        "choice.skill-feat.2",
+        "choice.skill-feat.20",
+        "choice.skill-feat.4",
+        "choice.skill-feat.6",
+        "choice.skill-feat.8",
         "language.common",
         "language.draconic",
         "language.dwarven",
@@ -1390,6 +1405,7 @@
       "path": "rules/core_mechanics.md",
       "warnings": [
         "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt.",
+        "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0).",
         "Der alte Wahrnehmungsblock wurde getrennt: Wahrnehmung ist eine eigene Proficiency."
       ]
     },

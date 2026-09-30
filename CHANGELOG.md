@@ -4,6 +4,12 @@
 
 ### Hinzugefuegt
 
+- Talent-Zeitplan nach Pathfinder 2e: Allgemeintalente auf Stufe 3, 7, 11, 15
+  und 19 sowie ein Fertigkeitstalent auf jeder geraden Stufe (optional, da der
+  Katalog nur vier Fertigkeitstalente enthaelt); ein Talent kann nicht in zwei
+  Auswahlen gewaehlt werden
+### Hinzugefuegt
+
 - Fertigkeitssteigerungen nach Pathfinder 2e: ab Stufe 3 alle zwei Stufen eine
   Steigerung um einen Rang (`skillIncreases`, im Builder unter Fertigkeiten);
   Expert ab Stufe 3, Master ab Stufe 7, Legendary ab Stufe 15

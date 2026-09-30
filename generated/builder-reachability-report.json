@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5",
+  "catalogHash": "dc1dd600b8fdd004ec0b1abb8e7bf31c31019cfcd972f02d523d2c0c1e2c4aa2",
   "summary": {
-    "entities": 912,
-    "reachable": 912,
-    "selectable": 530,
-    "automatic": 302,
-    "informational": 80,
+    "entities": 927,
+    "reachable": 927,
+    "selectable": 535,
+    "automatic": 317,
+    "informational": 75,
     "allowlisted": 0,
     "unreachable": 0,
     "errors": 0,
@@ -14,7 +14,7 @@
       "ancestry": 8,
       "armor": 26,
       "background": 8,
-      "choice": 168,
+      "choice": 183,
       "class": 9,
       "class-feature": 99,
       "creature": 34,
@@ -4602,6 +4602,101 @@
       "allowlisted": false
     },
     {
+      "id": "choice.general-feat.11",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 11",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 11",
+        "Allgemeines Talent Stufe 11"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.general-feat.15",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 15",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 15",
+        "Allgemeines Talent Stufe 15"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.general-feat.19",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 19",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 19",
+        "Allgemeines Talent Stufe 19"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.general-feat.3",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 3",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 3",
+        "Allgemeines Talent Stufe 3"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.general-feat.7",
+      "type": "choice",
+      "name": "Allgemeines Talent Stufe 7",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 7",
+        "Allgemeines Talent Stufe 7"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
       "id": "choice.heritage.elf",
       "type": "choice",
       "name": "Elf-Herkunft",
@@ -4889,6 +4984,196 @@
         "Builder",
         "Choice ab Stufe 1",
         "Geisterpfad wählen"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.10",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 10",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 10",
+        "Fertigkeitstalent Stufe 10"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.12",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 12",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 12",
+        "Fertigkeitstalent Stufe 12"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.14",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 14",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 14",
+        "Fertigkeitstalent Stufe 14"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.16",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 16",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 16",
+        "Fertigkeitstalent Stufe 16"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.18",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 18",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 18",
+        "Fertigkeitstalent Stufe 18"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.2",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 2",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 2",
+        "Fertigkeitstalent Stufe 2"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.20",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 20",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 20",
+        "Fertigkeitstalent Stufe 20"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.4",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 4",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 4",
+        "Fertigkeitstalent Stufe 4"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.6",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 6",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 6",
+        "Fertigkeitstalent Stufe 6"
+      ],
+      "detailDisplayable": true,
+      "ruleEffect": "none",
+      "allowlisted": false
+    },
+    {
+      "id": "choice.skill-feat.8",
+      "type": "choice",
+      "name": "Fertigkeitstalent Stufe 8",
+      "source": "legacy.world-rules",
+      "contentStatus": "playtest",
+      "status": "automatic",
+      "references": [],
+      "referencedBy": [],
+      "reachable": true,
+      "path": [
+        "Builder",
+        "Choice ab Stufe 8",
+        "Fertigkeitstalent Stufe 8"
       ],
       "detailDisplayable": true,
       "ruleEffect": "none",
@@ -7403,7 +7688,17 @@
         "class-feature.agent.vorgehensweise",
         "class-feature.agent.vorgehensweise.attentater",
         "class-feature.agent.vorgehensweise.infiltrator",
-        "class-feature.agent.vorgehensweise.manipulator"
+        "class-feature.agent.vorgehensweise.manipulator",
+        "proficiency.armor.light",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed"
       ],
       "referencedBy": [
         "choice.agent.vorgehensweise",
@@ -7486,7 +7781,17 @@
         "class-feature.ingenieur.konstrukteursblick",
         "class-feature.ingenieur.technische-meisterleistung",
         "class-feature.ingenieur.tuftlergeist",
-        "class-feature.ingenieur.werkbank"
+        "class-feature.ingenieur.werkbank",
+        "proficiency.armor.light",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed"
       ],
       "referencedBy": [
         "choice.class-feat.ingenieur.1",
@@ -7572,6 +7877,15 @@
         "class-feature.magier.schule-der-magie.schule-des-schutzes",
         "class-feature.magier.zauberbuch",
         "class-feature.magier.zaubererweiterung",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed",
         "spellcasting.arcane-prepared"
       ],
       "referencedBy": [
@@ -7658,7 +7972,17 @@
         "class-feature.mediziner.lebensretter",
         "class-feature.mediziner.medizinische-ausbildung",
         "class-feature.mediziner.medizinische-prazision",
-        "class-feature.mediziner.schnelle-stabilisierung"
+        "class-feature.mediziner.schnelle-stabilisierung",
+        "proficiency.armor.light",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed"
       ],
       "referencedBy": [
         "choice.class-feat.mediziner.1",
@@ -7744,6 +8068,15 @@
         "class-feature.okkultist.seelenanker",
         "class-feature.okkultist.verbotene-kraft",
         "class-feature.okkultist.verbotener-aufstieg",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed",
         "spellcasting.occult-spontaneous"
       ],
       "referencedBy": [
@@ -7825,7 +8158,17 @@
         "class-feature.raufbold.strassenlegende",
         "class-feature.raufbold.unzerbrechlich",
         "class-feature.raufbold.widerstandskraft",
-        "class-feature.raufbold.zahigkeit"
+        "class-feature.raufbold.zahigkeit",
+        "proficiency.armor.light",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed"
       ],
       "referencedBy": [
         "choice.class-feat.raufbold.1",
@@ -7906,6 +8249,16 @@
         "class-feature.schamane.naturverbundenheit",
         "class-feature.schamane.totemritual",
         "class-feature.schamane.wachter-der-ahnen",
+        "proficiency.armor.light",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed",
         "spellcasting.primal-prepared"
       ],
       "referencedBy": [
@@ -7990,7 +8343,20 @@
         "class-feature.soldner.legende-des-krieges",
         "class-feature.soldner.soldnerisches-training",
         "class-feature.soldner.unnachgiebig",
-        "class-feature.soldner.veteran-des-goldes"
+        "class-feature.soldner.veteran-des-goldes",
+        "proficiency.armor.heavy",
+        "proficiency.armor.light",
+        "proficiency.armor.medium",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.martial",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed"
       ],
       "referencedBy": [
         "choice.class-feat.soldner.1",
@@ -8070,7 +8436,20 @@
         "class-feature.wachter.letzter-schild",
         "class-feature.wachter.schutzreaktion",
         "class-feature.wachter.standhaftigkeit",
-        "class-feature.wachter.wachterhaltung"
+        "class-feature.wachter.wachterhaltung",
+        "proficiency.armor.heavy",
+        "proficiency.armor.light",
+        "proficiency.armor.medium",
+        "proficiency.armor.unarmored",
+        "proficiency.class-dc",
+        "proficiency.perception",
+        "proficiency.save.fortitude",
+        "proficiency.save.reflex",
+        "proficiency.save.will",
+        "proficiency.weapon.martial",
+        "proficiency.weapon.ranged",
+        "proficiency.weapon.simple",
+        "proficiency.weapon.unarmed"
       ],
       "referencedBy": [
         "choice.class-feat.wachter.1",
@@ -16273,15 +16652,15 @@
       "name": "Doppelleben",
       "source": "legacy.world-rules",
       "contentStatus": "legacy",
-      "status": "informational",
+      "status": "selectable",
       "references": [
         "trait.general"
       ],
       "referencedBy": [],
       "reachable": true,
       "path": [
-        "Kompendium",
-        "feat",
+        "Builder",
+        "Fertigkeitstalent Stufe 10",
         "Doppelleben"
       ],
       "detailDisplayable": true,
@@ -16294,15 +16673,15 @@
       "name": "Gesellschaftlicher Aufsteiger",
       "source": "legacy.world-rules",
       "contentStatus": "legacy",
-      "status": "informational",
+      "status": "selectable",
       "references": [
         "trait.general"
       ],
       "referencedBy": [],
       "reachable": true,
       "path": [
-        "Kompendium",
-        "feat",
+        "Builder",
+        "Fertigkeitstalent Stufe 10",
         "Gesellschaftlicher Aufsteiger"
       ],
       "detailDisplayable": true,
@@ -16379,15 +16758,15 @@
       "name": "Netzwerker",
       "source": "legacy.world-rules",
       "contentStatus": "legacy",
-      "status": "informational",
+      "status": "selectable",
       "references": [
         "trait.general"
       ],
       "referencedBy": [],
       "reachable": true,
       "path": [
-        "Kompendium",
-        "feat",
+        "Builder",
+        "Fertigkeitstalent Stufe 10",
         "Netzwerker"
       ],
       "detailDisplayable": true,
@@ -16442,15 +16821,15 @@
       "name": "Schattendealer",
       "source": "legacy.world-rules",
       "contentStatus": "legacy",
-      "status": "informational",
+      "status": "selectable",
       "references": [
         "trait.general"
       ],
       "referencedBy": [],
       "reachable": true,
       "path": [
-        "Kompendium",
-        "feat",
+        "Builder",
+        "Fertigkeitstalent Stufe 10",
         "Schattendealer"
       ],
       "detailDisplayable": true,
@@ -16568,15 +16947,15 @@
       "name": "Zäher Hund",
       "source": "legacy.world-rules",
       "contentStatus": "legacy",
-      "status": "informational",
+      "status": "selectable",
       "references": [
         "trait.general"
       ],
       "referencedBy": [],
       "reachable": true,
       "path": [
-        "Kompendium",
-        "feat",
+        "Builder",
+        "Allgemeines Talent Stufe 11",
         "Zäher Hund"
       ],
       "detailDisplayable": true,
@@ -17793,7 +18172,10 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17812,7 +18194,15 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.mediziner",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17831,7 +18221,10 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17850,7 +18243,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17869,7 +18272,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17889,6 +18302,15 @@
       "status": "automatic",
       "references": [],
       "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter",
         "heritage.elf.verborgener-wachter"
       ],
       "reachable": true,
@@ -17909,7 +18331,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17928,7 +18360,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -17947,7 +18389,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -18042,7 +18494,10 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -18061,7 +18516,17 @@
       "contentStatus": "playtest",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -18080,7 +18545,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",
@@ -18099,7 +18574,17 @@
       "contentStatus": "legacy",
       "status": "automatic",
       "references": [],
-      "referencedBy": [],
+      "referencedBy": [
+        "class.agent",
+        "class.ingenieur",
+        "class.magier",
+        "class.mediziner",
+        "class.okkultist",
+        "class.raufbold",
+        "class.schamane",
+        "class.soldner",
+        "class.wachter"
+      ],
       "reachable": true,
       "path": [
         "Builder",

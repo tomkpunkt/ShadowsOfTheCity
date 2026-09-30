@@ -101,7 +101,7 @@ noch eine Berechnung:
   oder Klassen-SG. Die einzige Ausnahme ist die Zauber-Kompetenz (7/15/19).
 - **Fertigkeitssteigerungen und Fertigkeitstalente.** *(Fertigkeitssteigerungen behoben: `skillIncreases` ab Stufe 3 alle zwei Stufen, Auswahl im Builder; Fertigkeitstalente fehlen weiter)* Ursprünglich: Keine
   Auswahl, obwohl 4 Fertigkeitstalente im Katalog stehen.
-- **Allgemeintalente ab Stufe 3.** Nur `choice.general-feat.1` existiert;
+- **Allgemeintalente ab Stufe 3.** *(behoben: Auswahlen auf Stufe 3, 7, 11, 15, 19; Fertigkeitstalente auf geraden Stufen, optional wegen nur 4 Talenten im Katalog)* Ursprünglich: Nur `choice.general-feat.1` existiert;
   die 10 Allgemeintalente sind auf Stufe 1 (eins auf Stufe 2) beschränkt.
 - **Zusatzsprachen durch Intelligenz.** `additionalLanguagesFromIntelligence`
   ist an jeder Abstammung gesetzt, wird aber nirgends ausgewertet

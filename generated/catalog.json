@@ -11,7 +11,7 @@
     "legacy.spell.message": "spell.nachricht",
     "legacy.weapon.schwert": "weapon.schwert"
   },
-  "contentHash": "510b825ab90ebd218f41fbc6b26818498f7fb8ac88fe9d653f4745d05704a64b",
+  "contentHash": "dc1dd600b8fdd004ec0b1abb8e7bf31c31019cfcd972f02d523d2c0c1e2c4aa2",
   "entities": [
     {
       "additionalLanguagesFromIntelligence": true,
@@ -8765,6 +8765,211 @@
         "effects": [],
         "excludes": [],
         "filter": {
+          "category": "general",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 11
+        },
+        "id": "choice.general-feat.11",
+        "kind": "feat",
+        "level": 11,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 11 ein allgemeines Talent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.general-feat.11",
+      "legacy": {
+        "notes": [
+          "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Allgemeines Talent Stufe 11",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 11 ein allgemeines Talent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 11 ein allgemeines Talent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "general",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 15
+        },
+        "id": "choice.general-feat.15",
+        "kind": "feat",
+        "level": 15,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 15 ein allgemeines Talent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.general-feat.15",
+      "legacy": {
+        "notes": [
+          "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Allgemeines Talent Stufe 15",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 15 ein allgemeines Talent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 15 ein allgemeines Talent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "general",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 19
+        },
+        "id": "choice.general-feat.19",
+        "kind": "feat",
+        "level": 19,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 19 ein allgemeines Talent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.general-feat.19",
+      "legacy": {
+        "notes": [
+          "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Allgemeines Talent Stufe 19",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 19 ein allgemeines Talent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 19 ein allgemeines Talent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "general",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 3
+        },
+        "id": "choice.general-feat.3",
+        "kind": "feat",
+        "level": 3,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 3 ein allgemeines Talent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.general-feat.3",
+      "legacy": {
+        "notes": [
+          "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Allgemeines Talent Stufe 3",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 3 ein allgemeines Talent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 3 ein allgemeines Talent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "general",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 7
+        },
+        "id": "choice.general-feat.7",
+        "kind": "feat",
+        "level": 7,
+        "max": 1,
+        "min": 1,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 7 ein allgemeines Talent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.general-feat.7",
+      "legacy": {
+        "notes": [
+          "Der Altbestand definiert keinen vollständigen Talent-Zeitplan; diese Auswahl ist ein Testinhalt."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Allgemeines Talent Stufe 7",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 7 ein allgemeines Talent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 7 ein allgemeines Talent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
           "ancestryId": "ancestry.elf",
           "entityTypes": [
             "heritage"
@@ -9344,6 +9549,416 @@
       "source": "legacy.world-rules",
       "status": "legacy",
       "summary": "Wähle für Schamane eine Option der Klassenfunktion Geisterpfad.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 10
+        },
+        "id": "choice.skill-feat.10",
+        "kind": "feat",
+        "level": 10,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 10 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.10",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 10",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 10 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 10 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 12
+        },
+        "id": "choice.skill-feat.12",
+        "kind": "feat",
+        "level": 12,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 12 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.12",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 12",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 12 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 12 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 14
+        },
+        "id": "choice.skill-feat.14",
+        "kind": "feat",
+        "level": 14,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 14 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.14",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 14",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 14 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 14 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 16
+        },
+        "id": "choice.skill-feat.16",
+        "kind": "feat",
+        "level": 16,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 16 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.16",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 16",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 16 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 16 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 18
+        },
+        "id": "choice.skill-feat.18",
+        "kind": "feat",
+        "level": 18,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 18 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.18",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 18",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 18 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 18 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 2
+        },
+        "id": "choice.skill-feat.2",
+        "kind": "feat",
+        "level": 2,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 2 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.2",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 2",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 2 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 2 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 20
+        },
+        "id": "choice.skill-feat.20",
+        "kind": "feat",
+        "level": 20,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 20 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.20",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 20",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 20 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 20 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 4
+        },
+        "id": "choice.skill-feat.4",
+        "kind": "feat",
+        "level": 4,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 4 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.4",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 4",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 4 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 4 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 6
+        },
+        "id": "choice.skill-feat.6",
+        "kind": "feat",
+        "level": 6,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 6 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.6",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 6",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 6 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 6 ein Fertigkeitstalent.",
+      "traits": [],
+      "type": "choice"
+    },
+    {
+      "choice": {
+        "effects": [],
+        "excludes": [],
+        "filter": {
+          "category": "skill",
+          "entityTypes": [
+            "feat"
+          ],
+          "maxLevel": 8
+        },
+        "id": "choice.skill-feat.8",
+        "kind": "feat",
+        "level": 8,
+        "max": 1,
+        "min": 0,
+        "prerequisites": [],
+        "repeatable": false
+      },
+      "description": "Wähle auf Stufe 8 ein Fertigkeitstalent.",
+      "editorialStatus": "reviewed",
+      "examples": [],
+      "id": "choice.skill-feat.8",
+      "legacy": {
+        "notes": [
+          "Der Katalog enthält nur vier Fertigkeitstalente; die Auswahl ist deshalb optional (min 0)."
+        ],
+        "paths": [
+          "rules/core_mechanics.md"
+        ]
+      },
+      "name": "Fertigkeitstalent Stufe 8",
+      "references": [],
+      "rulesText": "Wähle auf Stufe 8 ein Fertigkeitstalent.",
+      "schemaVersion": 1,
+      "source": "legacy.world-rules",
+      "status": "playtest",
+      "summary": "Wähle auf Stufe 8 ein Fertigkeitstalent.",
       "traits": [],
       "type": "choice"
     },

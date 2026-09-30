@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5",
+  "catalogHash": "dc1dd600b8fdd004ec0b1abb8e7bf31c31019cfcd972f02d523d2c0c1e2c4aa2",
   "summary": {
-    "entities": 912,
+    "entities": 927,
     "byType": {
       "ancestry": 8,
       "armor": 26,
       "background": 8,
-      "choice": 168,
+      "choice": 183,
       "class": 9,
       "class-feature": 99,
       "creature": 34,
@@ -23,7 +23,7 @@
       "trait": 30,
       "weapon": 64
     },
-    "completeDescriptions": 912,
+    "completeDescriptions": 927,
     "emptyDescriptions": 0,
     "shortDescriptions": 42,
     "suspiciousLabels": 0,
@@ -39,8 +39,8 @@
       "internalReferences": 0,
       "embeddedHtml": 7
     },
-    "catalogFields": 76,
-    "fieldsPreviouslyInvisibleInUi": 66,
+    "catalogFields": 77,
+    "fieldsPreviouslyInvisibleInUi": 67,
     "findings": 0,
     "severityCounts": {},
     "blockingFindings": 0
@@ -94,6 +94,7 @@
     "prerequisites",
     "priceGp",
     "proficiencyByLevel",
+    "proficiencyIncreases",
     "range",
     "rarity",
     "references",

@@ -128,7 +128,7 @@ const parseEntityFile = async (
   const relativeFile = normalizePath(path.relative(contentDirectory, file));
   let source: string;
   try {
-    source = await readFile(file, "utf8");
+    source = (await readFile(file, "utf8")).replace(/\r\n?/g, "\n");
   } catch (error) {
     return {
       issues: [

@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "catalogHash": "5c5f15d14c64efea91cbed05cd56658fe2623d6572776e46190e0ed801d68b7b",
+  "catalogHash": "a3558b49b14b7e74fd0fcaeca9b8cb406b24430832bfbd030875fec8350412f5",
   "summary": {
-    "entities": 911,
-    "activeEntities": 898,
+    "entities": 912,
+    "activeEntities": 899,
     "drafts": 13,
     "editorialStatus": {
       "needs-rules-decision": 13,
-      "reviewed": 803,
+      "reviewed": 804,
       "rewritten": 95
     },
     "textRuleEntities": 410,
     "machineRuleEntities": 27,
     "exactDuplicateGroups": 0,
-    "nearSimilarSummaries": 287,
+    "nearSimilarSummaries": 288,
     "averageSummaryLength": 82.2,
     "medianSummaryLength": 82,
     "summariesBelow80Characters": 422,
@@ -89,8 +89,8 @@
       "drafts": 0
     },
     "proficiency": {
-      "entities": 16,
-      "reviewed": 16,
+      "entities": 17,
+      "reviewed": 17,
       "rewritten": 0,
       "drafts": 0
     },
@@ -23186,6 +23186,39 @@
       "nearestSimilarSummary": {
         "entityId": "proficiency.weapon.simple",
         "score": 0.8181818181818182
+      },
+      "semanticReviewHints": [
+        "effect-not-recognized-by-heuristic"
+      ],
+      "manualReviewRequired": false
+    },
+    {
+      "id": "proficiency.weapon.ranged",
+      "type": "proficiency",
+      "name": "Fernkampfwaffen",
+      "path": "content/proficiency/proficiency.weapon.ranged.md",
+      "sourceFiles": [
+        "rules/core_mechanics.md"
+      ],
+      "status": "playtest",
+      "editorialStatus": "reviewed",
+      "summaryLength": 91,
+      "rulesTextLength": 91,
+      "presentTextFields": [
+        "summary",
+        "rulesText",
+        "description"
+      ],
+      "concrete": true,
+      "completeSummarySentence": true,
+      "recognizableEffect": false,
+      "recognizableUse": true,
+      "prerequisiteCount": 0,
+      "typedTextContradictionFindings": [],
+      "repeatedSummary": false,
+      "nearestSimilarSummary": {
+        "entityId": "proficiency.armor.unarmored",
+        "score": 0.8
       },
       "semanticReviewHints": [
         "effect-not-recognized-by-heuristic"

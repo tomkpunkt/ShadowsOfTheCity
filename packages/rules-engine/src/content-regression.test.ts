@@ -168,4 +168,49 @@ describe("v0.1.2 equipment catalog", () => {
     expect(entities.get("armor.v012-kuriermantel-mit-faserlage")?.type).toBe("armor");
     expect(entities.get("equipment.v012-stadtwaffenlizenz")?.type).toBe("equipment");
   });
+
+  it("maps every weapon and armor category to an existing proficiency", () => {
+    const missing = catalog.entities
+      .filter((entity) => entity.type === "weapon" || entity.type === "armor")
+      .map((entity) => ({
+        id: entity.id,
+        proficiencyId: entity.categoryId.replace("trait.item.", "proficiency.")
+      }))
+      .filter(({ proficiencyId }) => entities.get(proficiencyId)?.type !== "proficiency");
+
+    expect(missing).toEqual([]);
+  });
+
+  it("lets a starting Söldner attack trained with a firearm", () => {
+    const { character } = completeLevelOneCharacter(
+      "ancestry.mensch",
+      "background.worker",
+      "class.soldner"
+    );
+    const result = calculateCharacter(catalog, {
+      formatVersion: 3,
+      contentSchemaVersion: 1,
+      catalogHash: catalog.contentHash,
+      createdWithVersion: "0.1.2",
+      lastSavedWithVersion: "0.1.2",
+      build: { ...character, inventoryIds: ["weapon.pistole"] },
+      session: {
+        ...emptySessionState(),
+        itemStates: {
+          "weapon.pistole": {
+            quantity: 1,
+            equipped: true,
+            active: false,
+            consumed: 0,
+            location: "equipped"
+          }
+        }
+      },
+      migrations: [],
+      legacyValues: {}
+    });
+
+    expect(result.proficiencies["proficiency.weapon.ranged"]).toBe("trained");
+    expect(result.weaponAttacks["weapon.pistole"]?.attack.breakdown[1]?.value).toBe(3);
+  });
 });

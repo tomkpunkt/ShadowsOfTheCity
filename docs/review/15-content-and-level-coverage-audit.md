@@ -26,7 +26,7 @@ Reaktion oder Nutzungsgrenze. Die Inhalte sind also vorhanden, aber
 
 ## 2. Kritische Fehler in den Daten
 
-1. **Alle Fernkampfwaffen sind für jede Klasse ungeübt.**
+1. **Alle Fernkampfwaffen sind für jede Klasse ungeübt.** *(behoben: neue Kompetenz `proficiency.weapon.ranged`, alle Klassen starten geübt, Regressionstest ergänzt)*
    - Die 20 Fernkampfwaffen (Pistole, Gewehr, Schrotflinte, …) haben die
      Kategorie `trait.item.weapon.ranged`. Die Engine leitet daraus
      `proficiency.weapon.ranged` ab. Diese Kompetenz existiert nicht; es gibt

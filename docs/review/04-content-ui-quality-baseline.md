@@ -19,7 +19,7 @@ bleibt dadurch reproduzierbar.
 | `feat` | 195 |
 | `heritage` | 40 |
 | `language` | 10 |
-| `proficiency` | 16 |
+| `proficiency` | 17 |
 | `rule` | 4 |
 | `skill` | 19 |
 | `spell` | 14 |
@@ -29,7 +29,7 @@ bleibt dadurch reproduzierbar.
 
 ## Automatisierte Qualitätszahlen
 
-- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 911
+- Vollständige sichtbare Beschreibungen aus Kurztext, Regeltext und typisierten Details: 912
 - Leere Beschreibungen: 0
 - Alttexte mit weniger als 40 Klartextzeichen: 42
 - Verdächtige technische Labels: 0

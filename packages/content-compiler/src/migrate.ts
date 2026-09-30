@@ -812,6 +812,7 @@ const migrateSupportingEntities = (): void => {
     ["weapon.simple", "Einfache Waffen", "weapon"],
     ["weapon.martial", "Kriegerische Waffen", "weapon"],
     ["weapon.firearm", "Feuerwaffen", "weapon"],
+    ["weapon.ranged", "Fernkampfwaffen", "weapon"],
     ["weapon.unarmed", "Unbewaffnet", "weapon"],
     ["armor.unarmored", "Ungerüstet", "armor"],
     ["armor.light", "Leichte Rüstung", "armor"],
@@ -1220,6 +1221,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
           skills: {},
           weapons: {
             "proficiency.weapon.simple": "trained",
+            "proficiency.weapon.ranged": "trained",
             "proficiency.weapon.unarmed": "trained"
           },
           armor: {

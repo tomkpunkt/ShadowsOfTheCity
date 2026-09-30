@@ -39,6 +39,7 @@ initialProficiencies:
     will: trained
   skills: {}
   weapons:
+    proficiency.weapon.ranged: trained
     proficiency.weapon.simple: trained
     proficiency.weapon.unarmed: trained
 keyAttributes:

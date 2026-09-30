@@ -74,7 +74,7 @@ describe("legacy character regression", () => {
     expect(result.armorClass.value).toBe(13);
     expect(
       Object.fromEntries(Object.entries(result.saves).map(([save, value]) => [save, value.value]))
-    ).toEqual({ fortitude: 6, reflex: 3, will: 3 });
+    ).toEqual({ fortitude: 8, reflex: 3, will: 3 });
     expect(result.perception.value).toBe(3);
     expect(result.skills["skill.athletics"]?.value).toBe(6);
     expect(result.proficiencies["proficiency.weapon.simple"]).toBe("trained");

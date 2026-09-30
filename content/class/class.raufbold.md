@@ -31,7 +31,7 @@ initialProficiencies:
     proficiency.armor.unarmored: trained
   perception: trained
   saves:
-    fortitude: trained
+    fortitude: expert
     reflex: trained
     will: trained
   skills: {}
@@ -44,7 +44,7 @@ keyAttributes:
   - constitution
 legacy:
   notes:
-    - Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.
+    - Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.
   paths:
     - classes/klasse_raufbold.md
 name: Raufbold

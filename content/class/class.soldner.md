@@ -30,15 +30,18 @@ hpPerLevel: 10
 id: class.soldner
 initialProficiencies:
   armor:
+    proficiency.armor.heavy: trained
     proficiency.armor.light: trained
+    proficiency.armor.medium: trained
     proficiency.armor.unarmored: trained
   perception: trained
   saves:
-    fortitude: trained
+    fortitude: expert
     reflex: trained
     will: trained
   skills: {}
   weapons:
+    proficiency.weapon.martial: trained
     proficiency.weapon.ranged: trained
     proficiency.weapon.simple: trained
     proficiency.weapon.unarmed: trained
@@ -47,7 +50,7 @@ keyAttributes:
   - dexterity
 legacy:
   notes:
-    - Freie Anfangsproficiencies bleiben im Legacy-Text erhalten und benötigen Balancing.
+    - Anfangsproficiencies folgen den Klassentabellen im Altbestand; das Balancing bleibt offen.
   paths:
     - classes/klasse_soeldner.md
 name: Söldner

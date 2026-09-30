@@ -91,10 +91,10 @@ Klassentalent.
 Diese Entscheidungen gehören zu einer Stufe, haben aber weder eine Auswahl
 noch eine Berechnung:
 
-- **Attributsverbesserungen auf 5, 10, 15, 20.** Kein Feld im Charakter,
+- **Attributsverbesserungen auf 5, 10, 15, 20.** *(behoben: `levelBoosts` im Charakter, Auswahl im Builder, Berechnung in der Engine)* Ursprünglich: Kein Feld im Charakter,
   kein Effekt. Ein Charakter von Stufe 20 hat dieselben Attribute wie auf
   Stufe 1.
-- **Kompetenzsteigerungen.** Im gesamten Katalog gibt es nur 22
+- **Kompetenzsteigerungen.** *(teilweise behoben: `proficiencyIncreases` je Klasse für Waffen, Rüstung, Wahrnehmung, Rettungswürfe und Klassen-SG; Fertigkeitssteigerungen fehlen weiter)* Ursprünglich: Im gesamten Katalog gibt es nur 22
   `proficiency-rule`-Effekte und ausschließlich „trained“ (2 mal
   „increase“ beim Agenten). Es gibt keine Quelle für Expert, Master oder
   Legendary bei Fertigkeiten, Rettungswürfen, Wahrnehmung, Waffen, Rüstung

@@ -521,6 +521,9 @@ const SessionEntryIdSchema = z
   .string()
   .regex(/^[a-z0-9][a-z0-9.-]*(?::[a-z0-9-]+)?$/, "Session IDs must use lowercase ASCII segments");
 
+export const ATTRIBUTE_BOOST_LEVELS = [5, 10, 15, 20] as const;
+export const LevelBoostKeySchema = z.enum(["5", "10", "15", "20"]);
+
 export const CharacterBuildSchema = z
   .object({
     name: z.string(),
@@ -531,6 +534,7 @@ export const CharacterBuildSchema = z
     classId: EntityIdSchema.optional(),
     choices: z.record(EntityIdSchema, z.array(EntityIdSchema)),
     attributeBoosts: z.array(AttributeIdSchema),
+    levelBoosts: z.partialRecord(LevelBoostKeySchema, z.array(AttributeIdSchema).max(4)).optional(),
     inventoryIds: z.array(EntityIdSchema),
     options: z.record(EntityIdSchema, z.union([z.string(), z.number(), z.boolean()])).default({}),
     notes: z.string().optional(),
@@ -824,12 +828,21 @@ const InitialProficienciesSchema = z
   })
   .strict();
 
+const ProficiencyIncreaseSchema = z
+  .object({
+    level: z.number().int().min(2).max(20),
+    proficiencyId: EntityIdSchema,
+    rank: ProficiencyRankSchema
+  })
+  .strict();
+
 const ClassSchema = BaseEntitySchema.extend({
   type: z.literal("class"),
   keyAttributes: z.array(AttributeIdSchema).min(1),
   hpPerLevel: z.number().int().min(1),
   trainedSkillChoices: z.number().int().min(0),
   initialProficiencies: InitialProficienciesSchema,
+  proficiencyIncreases: z.array(ProficiencyIncreaseSchema).default([]),
   featureIds: z.array(EntityIdSchema).default([]),
   choiceIds: z.array(EntityIdSchema).default([]),
   spellcastingProgressionId: EntityIdSchema.optional()

@@ -247,4 +247,83 @@ describe("v0.1.2 equipment catalog", () => {
     expect(result.proficiencies["proficiency.weapon.ranged"]).toBe("trained");
     expect(result.weaponAttacks["weapon.pistole"]?.attack.breakdown[1]?.value).toBe(3);
   });
+
+  it("raises proficiencies with level from the class progression", () => {
+    const rankOf = (classId: string, level: number, proficiencyId: string) => {
+      const { character } = completeLevelOneCharacter(
+        "ancestry.mensch",
+        "background.worker",
+        classId
+      );
+      const result = calculateCharacter(catalog, {
+        formatVersion: 3,
+        contentSchemaVersion: 1,
+        catalogHash: catalog.contentHash,
+        createdWithVersion: "0.1.2",
+        lastSavedWithVersion: "0.1.2",
+        build: { ...character, level },
+        session: emptySessionState(),
+        migrations: [],
+        legacyValues: {}
+      });
+      return result.proficiencies[proficiencyId];
+    };
+
+    expect(rankOf("class.soldner", 1, "proficiency.weapon.simple")).toBe("trained");
+    expect(rankOf("class.soldner", 5, "proficiency.weapon.simple")).toBe("expert");
+    expect(rankOf("class.soldner", 13, "proficiency.weapon.simple")).toBe("master");
+    expect(rankOf("class.soldner", 8, "proficiency.save.fortitude")).toBe("expert");
+    expect(rankOf("class.soldner", 9, "proficiency.save.fortitude")).toBe("master");
+    expect(rankOf("class.soldner", 4, "proficiency.save.reflex")).toBe("trained");
+    expect(rankOf("class.soldner", 5, "proficiency.save.reflex")).toBe("expert");
+    expect(rankOf("class.magier", 10, "proficiency.weapon.simple")).toBe("trained");
+    expect(rankOf("class.magier", 11, "proficiency.weapon.simple")).toBe("expert");
+    expect(rankOf("class.magier", 17, "proficiency.class-dc")).toBe("master");
+  });
+
+  it("applies and validates attribute boosts at levels 5, 10, 15 and 20", () => {
+    const { character } = completeLevelOneCharacter(
+      "ancestry.mensch",
+      "background.worker",
+      "class.soldner"
+    );
+    const evaluate = (level: number, levelBoosts?: Record<string, AttributeId[]>) =>
+      calculateCharacter(catalog, {
+        formatVersion: 3,
+        contentSchemaVersion: 1,
+        catalogHash: catalog.contentHash,
+        createdWithVersion: "0.1.2",
+        lastSavedWithVersion: "0.1.2",
+        build: { ...character, level, ...(levelBoosts === undefined ? {} : { levelBoosts }) },
+        session: emptySessionState(),
+        migrations: [],
+        legacyValues: {}
+      });
+
+    const base = evaluate(4);
+    expect(base.issues.some((issue) => issue.code.includes("LEVEL_ATTRIBUTE"))).toBe(false);
+
+    const missing = evaluate(5);
+    expect(missing.issues.map((issue) => issue.code)).toContain("MISSING_LEVEL_ATTRIBUTE_BOOSTS");
+    expect(missing.attributes.strength.value).toBe(base.attributes.strength.value);
+
+    const chosen: AttributeId[] = ["strength", "dexterity", "constitution", "wisdom"];
+    const boosted = evaluate(5, { "5": chosen });
+    expect(boosted.issues.map((issue) => issue.code)).not.toContain(
+      "MISSING_LEVEL_ATTRIBUTE_BOOSTS"
+    );
+    for (const attribute of chosen) {
+      const gain = base.attributes[attribute].value >= 18 ? 1 : 2;
+      expect(boosted.attributes[attribute].value).toBe(base.attributes[attribute].value + gain);
+    }
+    expect(boosted.attributes.charisma.value).toBe(base.attributes.charisma.value);
+
+    const duplicate = evaluate(5, { "5": ["strength", "strength", "wisdom", "charisma"] });
+    expect(duplicate.issues.map((issue) => issue.code)).toContain(
+      "DUPLICATE_LEVEL_ATTRIBUTE_BOOSTS"
+    );
+
+    const stale = evaluate(4, { "5": chosen });
+    expect(stale.attributes.strength.value).toBe(base.attributes.strength.value);
+  });
 });

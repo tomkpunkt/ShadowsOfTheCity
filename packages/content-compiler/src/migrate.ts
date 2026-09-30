@@ -1014,6 +1014,58 @@ const classConfig: Record<string, ClassConfig> = {
   }
 };
 
+type ProficiencyIncrease = { level: number; proficiencyId: string; rank: string };
+
+// Progressionsmodell nach Pathfinder 2e (Remaster), vereinfacht auf wenige Stufen.
+// Waffen: Kampfklassen Expert 5 / Master 13, übrige Klassen Expert 11.
+// Rüstung: Expert 13. Wahrnehmung: Expert 5, Master 13.
+// Rettungswürfe: Geübt -> Expert 5, Expert -> Master 9. Klassen-SG: Expert 9, Master 17.
+const proficiencyIncreasesFor = (config: ClassConfig, fileKey: string): ProficiencyIncrease[] => {
+  const increases: ProficiencyIncrease[] = [];
+  const martial = ["soeldner", "waechter", "raufbold"].includes(fileKey);
+  const weaponIds = [
+    "proficiency.weapon.simple",
+    "proficiency.weapon.ranged",
+    "proficiency.weapon.unarmed",
+    ...(config.martialWeapons === true ? ["proficiency.weapon.martial"] : [])
+  ];
+  for (const proficiencyId of weaponIds) {
+    if (martial) {
+      increases.push({ level: 5, proficiencyId, rank: "expert" });
+      increases.push({ level: 13, proficiencyId, rank: "master" });
+    } else {
+      increases.push({ level: 11, proficiencyId, rank: "expert" });
+    }
+  }
+  if (config.armor !== "none") {
+    const armorIds = [
+      "proficiency.armor.unarmored",
+      "proficiency.armor.light",
+      ...(config.armor === "heavy" ? ["proficiency.armor.medium", "proficiency.armor.heavy"] : [])
+    ];
+    for (const proficiencyId of armorIds) {
+      increases.push({ level: 13, proficiencyId, rank: "expert" });
+    }
+  } else {
+    increases.push({ level: 13, proficiencyId: "proficiency.armor.unarmored", rank: "expert" });
+  }
+  increases.push({ level: 5, proficiencyId: "proficiency.perception", rank: "expert" });
+  increases.push({ level: 13, proficiencyId: "proficiency.perception", rank: "master" });
+  for (const save of ["fortitude", "reflex", "will"] as const) {
+    const proficiencyId = `proficiency.save.${save}`;
+    if (config.saves[save] === "expert") {
+      increases.push({ level: 9, proficiencyId, rank: "master" });
+    } else {
+      increases.push({ level: 5, proficiencyId, rank: "expert" });
+    }
+  }
+  increases.push({ level: 9, proficiencyId: "proficiency.class-dc", rank: "expert" });
+  increases.push({ level: 17, proficiencyId: "proficiency.class-dc", rank: "master" });
+  return increases.sort(
+    (a, b) => a.level - b.level || a.proficiencyId.localeCompare(b.proficiencyId)
+  );
+};
+
 const migrateClasses = (documents: IndexedDocument[]): void => {
   for (const document of documents.filter((item) =>
     item.relativePath.startsWith("classes/klasse_")
@@ -1295,6 +1347,7 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
               : {})
           }
         },
+        proficiencyIncreases: proficiencyIncreasesFor(config, fileKey),
         featureIds: features,
         choiceIds: classChoices,
         ...(config.spellcasting === undefined

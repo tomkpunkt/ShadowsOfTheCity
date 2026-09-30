@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### Hinzugefuegt
+
+- Progressionsmodell nach Pathfinder 2e (Remaster) als Standard: je Klasse
+  `proficiencyIncreases` (Waffen, Ruestung, Wahrnehmung, Rettungswuerfe,
+  Klassen-SG) und vier Attributsverbesserungen auf Stufe 5, 10, 15 und 20
+  (`levelBoosts`, im Builder waehlbar, vier verschiedene Attribute)
+
 ### Behoben
 
 - Alle Klassen starteten mit identischen Kompetenzen; Startwerte folgen jetzt

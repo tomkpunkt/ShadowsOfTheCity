@@ -117,6 +117,23 @@ const slotsAtLevel = (progression: Record<string, number[]>, level: number): num
   return applicable?.[1] ?? [];
 };
 
+const CANTRIPS_KNOWN = 5;
+
+// Grenzen der Zauberauswahl: höchster Rang mit Plätzen und Anzahl bekannter Zauber
+// (Zaubertricks plus Repertoire bei spontanen bzw. Plätze bei vorbereiteten Klassen).
+const spellLimitsAtLevel = (
+  progression: Extract<ContentEntity, { type: "spellcasting-progression" }>,
+  level: number
+): { maxRank: number; maxKnown: number } => {
+  const slots = slotsAtLevel(progression.slotsByLevel, level);
+  const maxRank = slots.reduce((highest, count, index) => (count > 0 ? index + 1 : highest), 0);
+  const known =
+    progression.mode === "spontaneous" && progression.repertoireByLevel !== undefined
+      ? slotsAtLevel(progression.repertoireByLevel, level)
+      : slots;
+  return { maxRank, maxKnown: CANTRIPS_KNOWN + known.reduce((sum, count) => sum + count, 0) };
+};
+
 const entityEffects = (entity: ContentEntity): unknown[] => {
   if ("effects" in entity && Array.isArray(entity.effects)) {
     return entity.effects;
@@ -292,6 +309,21 @@ const resolveChoice = (
       ? [context.character.heritageId]
       : []);
   const choiceFailures = evaluatePredicates(choice.choice.prerequisites, context);
+  const spellProgressionId =
+    choice.choice.kind === "spell"
+      ? (() => {
+          const characterClass = context.entities.get(context.character.classId ?? "");
+          return characterClass?.type === "class"
+            ? characterClass.spellcastingProgressionId
+            : undefined;
+        })()
+      : undefined;
+  const spellProgression =
+    spellProgressionId === undefined ? undefined : context.entities.get(spellProgressionId);
+  const spellLimits =
+    spellProgression?.type === "spellcasting-progression"
+      ? spellLimitsAtLevel(spellProgression, context.character.level)
+      : undefined;
   const chosenElsewhere = new Set(
     Object.entries(context.character.choices)
       .filter(([otherId]) => otherId !== choice.id)
@@ -304,6 +336,17 @@ const resolveChoice = (
       const failures = [
         ...decisionFailures,
         ...evaluatePredicates(entityPrerequisites(entity), context),
+        ...(entity.type === "spell" &&
+        spellLimits !== undefined &&
+        entity.rank > spellLimits.maxRank
+          ? [
+              {
+                code: "SPELL_RANK_TOO_HIGH",
+                message: `${entity.name} hat Rang ${String(entity.rank)}; auf Stufe ${String(context.character.level)} sind Zauber bis Rang ${String(spellLimits.maxRank)} möglich.`,
+                predicate: { all: [] }
+              }
+            ]
+          : []),
         ...(entity.type === "feat" && !choice.choice.repeatable && chosenElsewhere.has(entity.id)
           ? [
               {
@@ -332,6 +375,10 @@ const resolveChoice = (
     })
     .sort((left, right) => left.entity.name.localeCompare(right.entity.name));
 
+  const effectiveMax =
+    spellLimits === undefined
+      ? choice.choice.max
+      : Math.min(choice.choice.max, spellLimits.maxKnown);
   let state: ValidationState = "valid";
   if (choiceFailures.length > 0) {
     state = "blocked";
@@ -344,7 +391,7 @@ const resolveChoice = (
   ) {
     state = "blocked";
   } else if (
-    selectedIds.length > choice.choice.max ||
+    selectedIds.length > effectiveMax ||
     selectedIds.some((id) => !options.some((option) => option.entity.id === id)) ||
     options.some((option) => option.status === "invalid")
   ) {
@@ -355,7 +402,7 @@ const resolveChoice = (
     name: choice.name,
     level: choice.choice.level,
     min: choice.choice.min,
-    max: choice.choice.max,
+    max: effectiveMax,
     selectedIds,
     options,
     state

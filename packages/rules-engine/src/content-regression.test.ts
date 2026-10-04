@@ -434,4 +434,76 @@ describe("v0.1.2 equipment catalog", () => {
         ?.state
     ).toBe("valid");
   });
+
+  it("extends spell slots to level 20 and gates spell choices by rank and count", () => {
+    const slotsFor = (progressionId: string, level: string): number[] => {
+      const progression = entities.get(progressionId);
+      if (progression?.type !== "spellcasting-progression") throw new Error("Missing progression");
+      return progression.slotsByLevel[level] ?? [];
+    };
+    for (const id of [
+      "spellcasting.arcane-prepared",
+      "spellcasting.primal-prepared",
+      "spellcasting.occult-spontaneous"
+    ]) {
+      expect(slotsFor(id, "1")).toEqual([2]);
+      expect(slotsFor(id, "2")).toEqual([3]);
+      expect(slotsFor(id, "3")).toEqual([3, 2]);
+      expect(slotsFor(id, "10")).toEqual([3, 3, 3, 3, 3]);
+      expect(slotsFor(id, "19")).toEqual([3, 3, 3, 3, 3, 3, 3, 3, 3, 1]);
+      expect(slotsFor(id, "20")).toHaveLength(10);
+    }
+
+    const { character } = completeLevelOneCharacter(
+      "ancestry.mensch",
+      "background.worker",
+      "class.magier"
+    );
+    const evaluate = (level: number, choices: Record<string, string[]> = {}) =>
+      calculateCharacter(catalog, {
+        formatVersion: 3,
+        contentSchemaVersion: 1,
+        catalogHash: catalog.contentHash,
+        createdWithVersion: "0.1.2",
+        lastSavedWithVersion: "0.1.2",
+        build: { ...character, level, choices: { ...character.choices, ...choices } },
+        session: emptySessionState(),
+        migrations: [],
+        legacyValues: {}
+      });
+    const spellChoice = (result: CalculatedCharacter) =>
+      result.choices.find((choice) => choice.choiceId === "choice.class-spells.magier");
+
+    // Stufe 1: nur Rang 0 und 1 (5 Zaubertricks plus 2 Plätze = 7 bekannte Zauber)
+    const levelOne = spellChoice(evaluate(1));
+    expect(levelOne?.max).toBe(7);
+    const rankOf = (id: string) => {
+      const spell = entities.get(id);
+      return spell?.type === "spell" ? spell.rank : -1;
+    };
+    const tooHigh = levelOne?.options.find(
+      (option) => option.entity.type === "spell" && option.entity.rank >= 2
+    );
+    expect(tooHigh?.status).toBe("locked");
+    expect(tooHigh?.failures.map((failure) => failure.code)).toContain("SPELL_RANK_TOO_HIGH");
+
+    // Auf Stufe 20 sind alle Ränge verfügbar
+    const levelTwenty = spellChoice(evaluate(20));
+    expect(levelTwenty?.max).toBe(5 + 28);
+    expect(
+      levelTwenty?.options.filter((option) => rankOf(option.entity.id) >= 2).map((o) => o.status)
+    ).not.toContain("locked");
+
+    // Ein zu hoher Rang in der Auswahl macht sie ungültig
+    const highSpell = levelOne?.options.find(
+      (option) => option.entity.type === "spell" && option.entity.rank >= 2
+    );
+    if (highSpell === undefined) throw new Error("No high-rank spell for the tradition");
+    expect(
+      spellChoice(evaluate(1, { "choice.class-spells.magier": [highSpell.entity.id] }))?.state
+    ).toBe("invalid");
+    expect(
+      spellChoice(evaluate(20, { "choice.class-spells.magier": [highSpell.entity.id] }))?.state
+    ).toBe("valid");
+  });
 });

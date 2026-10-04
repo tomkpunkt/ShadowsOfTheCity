@@ -5,13 +5,13 @@ choice:
   filter:
     entityTypes:
       - spell
-    maxLevel: 5
+    maxLevel: 10
     traditions:
       - occult
   id: choice.class-spells.okkultist
   kind: spell
   level: 1
-  max: 10
+  max: 50
   min: 0
   prerequisites:
     - class:

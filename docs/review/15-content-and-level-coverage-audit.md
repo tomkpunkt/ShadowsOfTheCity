@@ -106,11 +106,11 @@ noch eine Berechnung:
 - **Zusatzsprachen durch Intelligenz.** `additionalLanguagesFromIntelligence`
   ist an jeder Abstammung gesetzt, wird aber nirgends ausgewertet
   (abgeleitet: kein Treffer in Engine oder UI).
-- **Zauberauswahl.** Eine Auswahl auf Stufe 1 mit 0 bis 10 Zaubern, unabhängig
+- **Zauberauswahl.** *(teilweise behoben: Rang und Anzahl hängen jetzt von Stufe und Plätzen ab; Zaubertricks bleiben Teil derselben Auswahl, Vorbereitung und Repertoire-Wechsel beim Aufstieg fehlen weiter)* Ursprünglich: Eine Auswahl auf Stufe 1 mit 0 bis 10 Zaubern, unabhängig
   von Zauberplätzen, Zauberrang und Stufe. Spontane und vorbereitete Zauber
   sowie Zaubertricks (Rang 0) sind nicht getrennt; Repertoire-Erweiterung beim
   Aufstieg fehlt.
-- **Zauberplätze ab Stufe 10.** Die Tabelle endet bei Stufe 9 (5 Ränge), höhere
+- **Zauberplätze ab Stufe 10.** *(behoben: Tabelle für Stufe 1 bis 20, Ränge 1 bis 10)* Ursprünglich: Die Tabelle endet bei Stufe 9 (5 Ränge), höhere
   Stufen erben diese Zeile.
 - **Ausrüstungsbudget.** Preise werden angezeigt, es gibt aber kein Startgeld,
   keine Vermögensgrenze nach Stufe und keine Kaufabrechnung

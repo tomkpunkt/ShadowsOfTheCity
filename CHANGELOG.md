@@ -4,6 +4,12 @@
 
 ### Hinzugefuegt
 
+- Zauberprogression bis Stufe 20 nach Pathfinder 2e: Zauberplaetze fuer Rang 1
+  bis 10 auf jeder Stufe (vereinfachtes Repertoire fuer spontane Klassen); die
+  Zauberauswahl erlaubt nur Raenge mit Plaetzen und hoechstens so viele Zauber
+  wie Zaubertricks (5) plus Plaetze bzw. Repertoire
+### Hinzugefuegt
+
 - Talent-Zeitplan nach Pathfinder 2e: Allgemeintalente auf Stufe 3, 7, 11, 15
   und 19 sowie ein Fertigkeitstalent auf jeder geraden Stufe (optional, da der
   Katalog nur vier Fertigkeitstalente enthaelt); ein Talent kann nicht in zwei

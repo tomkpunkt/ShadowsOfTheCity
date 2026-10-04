@@ -644,6 +644,40 @@ const textEffect = (
   ...(decisionId === undefined ? {} : { decisionId })
 });
 
+// Zauberplätze und Repertoire nach Pathfinder 2e (Remaster), Ränge 1 bis 10 auf Stufe 1 bis 20.
+// Ein neuer Rang wird auf Stufe 2*Rang-1 mit 2 Plätzen freigeschaltet und hat danach 3;
+// Rang 10 hat immer einen Platz. Das Repertoire spontaner Klassen wächst um je einen Zauber
+// pro Rang, bis 4 Zauber erreicht sind (vereinfachte Annahme).
+const SPELL_RANKS = 10;
+
+const spellSlotTable = (): Record<string, number[]> => {
+  const table: Record<string, number[]> = {};
+  for (let level = 1; level <= 20; level += 1) {
+    const slots: number[] = [];
+    for (let rank = 1; rank <= SPELL_RANKS; rank += 1) {
+      const unlock = 2 * rank - 1;
+      if (level < unlock) break;
+      slots.push(rank === SPELL_RANKS ? 1 : level === unlock ? 2 : 3);
+    }
+    table[String(level)] = slots;
+  }
+  return table;
+};
+
+const spellRepertoireTable = (): Record<string, number[]> => {
+  const table: Record<string, number[]> = {};
+  for (let level = 1; level <= 20; level += 1) {
+    const known: number[] = [];
+    for (let rank = 1; rank <= SPELL_RANKS; rank += 1) {
+      const unlock = 2 * rank - 1;
+      if (level < unlock) break;
+      known.push(rank === SPELL_RANKS ? 1 : Math.min(2 + (level - unlock), 4));
+    }
+    table[String(level)] = known;
+  }
+  return table;
+};
+
 const migrateSupportingEntities = (): void => {
   const sourcePath = "rules/core_mechanics.md";
   const skills: Array<[string, string, string, string, string]> = [
@@ -1336,11 +1370,11 @@ const migrateClasses = (documents: IndexedDocument[]): void => {
             level: 1,
             kind: "spell",
             min: 0,
-            max: 10,
+            max: 50,
             filter: {
               entityTypes: ["spell"],
               traditions: [tradition],
-              maxLevel: 5
+              maxLevel: 10
             },
             prerequisites: [{ class: { id: classId } }],
             effects: [],
@@ -3128,24 +3162,8 @@ Der Hintergrund bietet Attributsverbesserungen für ${boosts
         mode,
         castingAttribute: attribute,
         proficiencyByLevel: { "1": "trained", "7": "expert", "15": "master", "19": "legendary" },
-        slotsByLevel: {
-          "1": [2],
-          "3": [3, 2],
-          "5": [3, 3, 2],
-          "7": [3, 3, 3, 2],
-          "9": [3, 3, 3, 3, 2]
-        },
-        ...(mode === "spontaneous"
-          ? {
-              repertoireByLevel: {
-                "1": [3],
-                "3": [4, 2],
-                "5": [4, 3, 2],
-                "7": [4, 3, 3, 2],
-                "9": [4, 3, 3, 3, 2]
-              }
-            }
-          : {})
+        slotsByLevel: spellSlotTable(),
+        ...(mode === "spontaneous" ? { repertoireByLevel: spellRepertoireTable() } : {})
       },
       [`classes/klasse_${classId.split(".")[1]}.md`],
       `${name}; Progression als ausdrückliche Testannahme ergänzt.`,
